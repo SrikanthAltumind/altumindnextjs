@@ -9,51 +9,55 @@ import EdTech from "./pages/EdTech"
 import Internet from "./pages/Internet"
 import Career from "./pages/Career"
 import OpenRoles from "./pages/OpenRoles"
+import Portfolio from "./pages/Portfolio"
 
 const router = createBrowserRouter([
   {
-    element:<AppLayout/>,
-    children:[
+    element: <AppLayout />,
+    children: [
       {
-        path:"/",
-        element:<Home/>
+        path: "/",
+        element: <Home />,
       },
       {
-        path:"/contact",
-        element:<Contact/>
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path:"/industries",
-        element:<Industry/>
+        path: "/industries",
+        element: <Industry />,
       },
       {
-        path:"/bfsi-finance",
-        element:<BFSIAndFinance/>
+        path: "/bfsi-finance",
+        element: <BFSIAndFinance />,
       },
       {
-        path:"/healthcare",
-        element:<Healthcare/>
+        path: "/healthcare",
+        element: <Healthcare />,
       },
       {
-        path:"/ed-tech",
-        element:<EdTech/>
+        path: "/ed-tech",
+        element: <EdTech />,
       },
       {
-        path:"/internet",
-        element:<Internet/>
+        path: "/internet",
+        element: <Internet />,
       },
       {
-        path:"/career",
-        element:<Career/>
+        path: "/career",
+        element: <Career />,
       },
       {
-        path:"/career/open-roles",
-        element:<OpenRoles/>
+        path: "/portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "/career/open-roles",
+        element: <OpenRoles />,
       },
     ],
-    
-  }
-])
+  },
+]);
 
 function App() {
   return <RouterProvider router={router}/>

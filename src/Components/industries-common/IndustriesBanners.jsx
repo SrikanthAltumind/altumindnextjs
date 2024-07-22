@@ -31,7 +31,7 @@ useEffect(()=> {
 },[])
 
   return (
-    <div className=' flex justify-center items-center bg-[#e1f0f9] min-h-[280px] text-tertiary'>
+    <div className=' flex justify-center items-center bg-[#e1f0f9] min-h-[280px] text-tertiary w-full'>
         <div className='text-center px-2'>
             <p className='font-raleway w-fit font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue text-3xl md:text-4xl'>
                 {data?.title}

@@ -4,21 +4,32 @@ import IndustriesBanners from "../Components/industries-common/IndustriesBanners
 import IndustryFocusedInsights from "../Components/industries-common/IndustryFocusedInsights"
 import NavigatingKeyChallenges from "../Components/industries-common/NavigatingKeyChallenges"
 import SegmentInFocus from "../Components/industries-common/SegmentInFocus"
+import ServiceOfferrings from "../Components/industries-common/ServiceOfferings"
+import ValueThatMatters from "../Components/industries-common/ValueThatMatters"
 
 const Internet = () => {
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
-      <IndustriesBanners/>
-      <SegmentInFocus/>
-      <NavigatingKeyChallenges/>
-         <div>
-            <p className="font-extrabold text-2xl lg:text-3xl py-2 mb-10 text-center"><span className=" bg-clip-text text-transparent bg-gradient-to-r from-[#0350F6] via-[#5EC7A7] to-[#0350F6]">Cheers from Clients</span></p>
-        <Testimonials/>
-        </div>
-        <IndustryFocusedInsights/>
-        <SubscribeForm/>
+    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28 items-center w-full">
+      <IndustriesBanners />
+      <SegmentInFocus />
+      <div className="w-[70%]">
+        <ValueThatMatters />
+      </div>
+      <ServiceOfferrings />
+
+      <NavigatingKeyChallenges />
+      <div className="w-full">
+        <p className="font-extrabold text-2xl lg:text-3xl py-2 mb-10 text-center w-full">
+          <span className=" bg-clip-text text-transparent bg-gradient-to-r from-[#0350F6] via-[#5EC7A7] to-[#0350F6]">
+            Cheers from Clients
+          </span>
+        </p>
+        <Testimonials />
+      </div>
+      <IndustryFocusedInsights />
+      <SubscribeForm />
     </div>
-  )
+  );
 }
 
 export default Internet
