@@ -1,0 +1,62 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+
+const IndustryFocusedInsights = () => {
+    const [data, setData] = useState()
+    
+    const fetchResourceData = ()=> {
+    const url = `${import.meta.env.VITE_APP_API_URL}api/industry-bfsi-insights?populate=*`
+        axios.get(url)
+        .then(response=> {
+            setData(response?.data)
+        })
+        .catch((err) => {
+            console.log('Error While Fetching Resources',err)
+        })
+
+    }
+
+    useEffect(()=> {
+        fetchResourceData()
+    },[])
+    return (
+      <section id="section8" className="mx-auto w-[90%] max-w-[950px]">
+          <div className="font-raleway font-semibold text-center text-primary dark:text-white">
+            <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-14 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+              Industry-Focused Insights
+            </p> 
+        
+            <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
+                    ${data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}
+                `}>
+            {data?.data?.slice(-3)?.map(card=> (
+            <div key={card?.id} className='w-[250px] sm:w-[31%] max-w-[280px] space-y-3 text-start'>
+                <div className=' w-[250px] h-[180px] sm:w-full  max-w-[280px] md:h-[220px] overflow-hidden'>
+                   <img src={card?.attributes?.image?.data?.attributes?.url} alt={card?.tag} className='h-full w-full hover:scale-105  transition-all'/>
+                </div>
+                <p className='text-xs  lg:text-sm font-medium'>{card?.attributes?.tag}</p>
+                <p className='line-clamp-2 md:text-lg lg:text-xl'>{card?.attributes?.title}</p>
+                <a className='text-sm group flex items-center cursor-pointer gap-1 max-w-max'>
+                            <span className=''>Read Article</span>
+                            <svg className="w-5 h-5 group-hover:translate-x-3 transition-all duration-200 dark:text-white text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                            </svg>
+                        </a>
+                    </div>
+                        
+                ))}
+            </div>
+          </div>
+          <div className='justify-center flex items-center mt-16'>
+          <button className="group text-sm font-semibold font-montserrat  flex items-center gap-1">
+            <span className='border-b border-tertiary dark:border-white dark:text-white'>View all Insights</span>
+            <svg className="w-5 h-5 group-hover:translate-x-3 transition-all duration-200 dark:text-white text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+            </svg>
+          </button>
+          </div>
+      </section>
+    )
+  }
+  
+export default IndustryFocusedInsights
