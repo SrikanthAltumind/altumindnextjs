@@ -1,9 +1,28 @@
-import Search from "../Components/open-roles-components/Search"
+// import Search from "../Components/open-roles-components/Search"
 
+import { useCallback, useEffect, useState } from "react";
 import Dropdown from "../Components/common-components/Dropdown";
+import JobCards from "../Components/Openings/JobCards";
 import { gradientStyle } from "../ReactFunctions";
+import axios from "axios";
+import LoaderSpinner from "../Components/common-components/LoaderSpinner";
+import {debounce} from 'lodash'
 
 const OpenRoles = () => {
+
+  const [jobs, setJobs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [executeDebouncer, setExecuteDebouncer] = useState(false);
+  const [initialJobs, setInitialJobs] = useState([]);
+  let storedJobData;
+  const debouncedSearch = useCallback(
+    debounce(() => {
+      setExecuteDebouncer(true)
+    }, 750),
+    []
+  );
+
   const depart_list = [
     "Marketing",
     "Project Management",
@@ -30,47 +49,120 @@ const OpenRoles = () => {
     "Executive (15+ years)",
   ];
 
-  const jobs = [
-    {
-      id: "2055",
-      title: "Marketing Lead",
-      exp: "2 Years Experience",
-      location: "Bangalore",
-    },
-    {
-      id: "2655",
-      title: "Sales Director",
-      exp: "5+ Years Experience",
-      location: "USA",
-    },
-    {
-      id: "2925",
-      title: "Sr. UI UX Designer",
-      exp: "4 Years Experience",
-      location: "Bangalore",
-    },
-    {
-      id: "2051",
-      title: "Tech Lead",
-      exp: "5 Years Experience",
-      location: "Bangalore",
-    },
-    {
-      id: "2351",
-      title: "Accounts Executive",
-      exp: "2 Years Experience",
-      location: "USA",
-    },
-    {
-      id: "2257",
-      title: "Social Media Intern",
-      exp: "Fresher",
-      location: "Bangalore",
-    },
-  ];
+  const [selections, setSelections] = useState({
+    Department: "",
+    "Job Type": "",
+    Location: "",
+    Experience: "",
+  });
+
+  const handleSelectionChange = (ddName, selectedItem) => {
+    setSelections((prevSelections) => ({
+      ...prevSelections,
+      [ddName]: selectedItem,
+    }));
+  };
+
+  const fetchJobs = () => {
+    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*`)
+      .then((response) => {
+        setJobs(response?.data?.data);
+        setInitialJobs(response?.data?.data)
+      })
+      .catch((error) => {
+        console.log("error while fetching jobs: ", error);
+      });
+  };
+
+  const handleSearch = () => {
+    setLoading(true)
+    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*&filters[$or][0][open_role_department][departmentName][$contains]=${searchTerm}&filters[$or][1][open_role_experience][experienceLevel][$contains]=${searchTerm}&filters[$or][2][open_role_job_type][typeName][$contains]=${searchTerm}&filters[$or][3][open_role_job_location][country][$contains]=${searchTerm}&filters[$or][4][job_title][$contains]=${searchTerm}`)
+    .then((response) => {
+      setJobs(response?.data?.data);
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.log("Error while searching: ", error);
+      setLoading(false);
+    });
+  }
+
+  const fetchFilteredJobs = (url) => {
+    axios.get(url)
+      .then((response) => {
+        console.log("response from filtered jobs: ", response?.data?.data);
+        setJobs(response?.data?.data)
+      })
+      .catch((error) =>{
+      console.log("error while filtering the jobs: ", error)
+    })
+
+  }
+
+
+  useEffect(() => {
+    if (executeDebouncer) {
+      setExecuteDebouncer(false);
+      handleSearch();
+    }
+  }, [executeDebouncer]);
+
+  // useEffect(() => {
+  //   handleSearch()
+  // },[searchTerm])
+
+useEffect(() => {
+  const constructURL = () => {
+    const {
+      Department,
+      "Job Type": JobType,
+      Location,
+      Experience,
+    } = selections;
+    const baseURL = `${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate[open_role_department][populate]=*&populate[open_role_experience]=*&populate[open_role_job_type]=*&populate[open_role_job_location]=*`;
+
+    const filters = [];
+    if (Department)
+      filters.push(
+        `filters[open_role_department][departmentName][$eq]=${encodeURIComponent(
+          Department
+        )}`
+      );
+    if (Experience)
+      filters.push(
+        `filters[open_role_experience][experienceLevel][$eq]=${encodeURIComponent(
+          Experience
+        )}`
+      );
+    if (JobType)
+      filters.push(
+        `filters[open_role_job_type][typeName][$eq]=${encodeURIComponent(
+          JobType
+        )}`
+      );
+    if (Location)
+      filters.push(
+        `filters[open_role_job_location][country][$eq]=${encodeURIComponent(
+          Location
+        )}`
+      );
+
+    return `${baseURL}&${filters.join("&")}`;
+  };
+
+  const apiURL = constructURL();
+  console.log("API URL:", apiURL);
+
+  fetchFilteredJobs(apiURL)
+}, [selections]);
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
 
   return (
-    <div className="w-full flex flex-col gap-5 justify-center items-center p-6 font-raleway">
+    <div className="w-full flex flex-col gap-5 justify-center items-center p-6 font-raleway dark:text-white dark:bg-[#0d1015]">
       <div className="w-full justify-center items-center p-4">
         <div className="flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">
           <label htmlFor="role-search">
@@ -91,54 +183,65 @@ const OpenRoles = () => {
           <input
             id="role-search"
             type="text"
+            value={searchTerm}
             placeholder="Search for jobs.."
-            className="p-1 w-full outline-none"
+            className="p-1 w-full outline-none dark:bg-[#0d1015]"
+            onChange={(e) => {
+              setSearchTerm(e?.target?.value);
+              debouncedSearch();
+            }}
           />
+          {searchTerm?.length > 0 && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="size-8 cursor-pointer"
+              onClick={() => {
+                setSearchTerm("")
+                setJobs(initialJobs);
+              }}
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          )}
         </div>
       </div>
       <div className="flex w-full justify-start items-center">
         <p className="font-semibold capitalize">Filter By</p>
       </div>
       <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative">
-        <Dropdown data={depart_list} ddName={"Department"} />
-        <Dropdown data={job_type} ddName={"Job Type"} />
-        <Dropdown data={location} ddName={"Location"} />
-        <Dropdown data={experience} ddName={"Experience"} />
+        <Dropdown
+          data={depart_list}
+          ddName="Department"
+          selection={selections.Department}
+          onSelectionChange={handleSelectionChange}
+        />
+        <Dropdown
+          data={job_type}
+          ddName="Job Type"
+          selection={selections["Job Type"]}
+          onSelectionChange={handleSelectionChange}
+        />
+        <Dropdown
+          data={location}
+          ddName="Location"
+          selection={selections.Location}
+          onSelectionChange={handleSelectionChange}
+        />
+        <Dropdown
+          data={experience}
+          ddName="Experience"
+          selection={selections.Experience}
+          onSelectionChange={handleSelectionChange}
+        />
       </div>
       <div className="w-full p-4 flex flex-col gap-5 justify-center items-center">
-        <div className="w-full flex-wrap flex justify-evenly gap-8 items-center font-mont">
-          {jobs?.map((job) => (
-            <div
-              key={job?.id}
-              className="w-[35%] min-w-[400px] flex justify-between items-center border-b-2 py-5 border-[#CCCCCC] cursor-pointer group"
-            >
-              <div className="flex flex-col gap-3 items-start justify-start">
-                <div>
-                  <p className="font-medium">{job?.title}</p>
-                </div>
-                <div className="flex items-center justify-start gap-3">
-                  <p className="text-sm">{job?.exp}</p>
-                  <div className="w-2 h-2 rounded-full bg-gray-400" />
-                  <p className="text-sm">{job?.location}</p>
-                </div>
-              </div>
-              <div className="flex justify-center items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-6 group-hover:animate-ping transition-all duration-200 ease-in-out"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          ))}
-        </div>
+        {loading ? <LoaderSpinner /> : <JobCards jobData={jobs} />}
         <div className="w-full flex items-center justify-center p-4">
           <button className="outline-none">
             <p className="underline text-center text-sm font-medium text-[#E42D38] cursor-pointer">
@@ -171,7 +274,7 @@ const OpenRoles = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="size-3 group-hover:animate-ping transition-all duration-200 ease-in-out"
+              className="size-3 group-hover:translate-x-3 transition-all duration-200 ease-in-out"
             >
               <path
                 fillRule="evenodd"

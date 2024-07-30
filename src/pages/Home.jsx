@@ -11,10 +11,10 @@ import SuccessStories from '../Components/home-components/SuccessStories'
 
 const Home = () => {
   return (
-    <div className='dark:bg-darkTheme lg:space-y-28 space-y-24 pt-16'>
+    <div className='dark:bg-darkTheme lg:space-y-24 space-y-24'>
     <DigitalJourney />
-      <SuccessStories />
-      <CorePillars />
+    <SuccessStories />
+    <CorePillars />
     <Affirmations/>
     <Testimonials/>
     <ResourceCenter/>

@@ -38,9 +38,18 @@ function useMenuAnimation(isOpen) {
   return scope;
 }
 
-const Dropdown = ({ ddName, data, selection }) => {
+const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
+
+  const handleSelection = (item) => {
+    if (selection === item) {
+      onSelectionChange(ddName, "");
+    } else {
+      onSelectionChange(ddName, item); 
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="menu" ref={scope}>
@@ -61,7 +70,12 @@ const Dropdown = ({ ddName, data, selection }) => {
       >
         <p className="text-sm font-semibold">{ddName}</p>
         <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-          <svg width="15" height="15" viewBox="0 0 20 20">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 20 20"
+            className="fill-current text-black dark:text-white"
+          >
             <path d="M0 7 L 20 7 L 10 16" />
           </svg>
         </div>
@@ -75,8 +89,16 @@ const Dropdown = ({ ddName, data, selection }) => {
       >
         {data?.map((item, index) => (
           <li className="flex justify-start gap-3 w-full" key={index}>
-            <input type="checkbox" name="" id={item + "cb"} />
-            <label htmlFor={item + "cb"}>{item}</label>
+            <input
+              type="checkbox"
+              name=""
+              id={item + "cb"}
+              checked={selection === item}
+              onChange={() => handleSelection(item)}
+            />
+            <label className="dark:text-black" htmlFor={item + "cb"}>
+              {item}
+            </label>
           </li>
         ))}
       </ul>
