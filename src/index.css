@@ -5,3 +5,5 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.slider-box .slick-dots { top:100% } .slider-box .slick-dots li { width:22% }

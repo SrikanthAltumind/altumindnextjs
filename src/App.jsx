@@ -9,6 +9,10 @@ import EdTech from "./pages/EdTech"
 import Internet from "./pages/Internet"
 import Career from "./pages/Career"
 import OpenRoles from "./pages/OpenRoles"
+import CommunityEngagement from "./pages/CommunityEngagement"
+import LifeAtAltumind from "./pages/LifeAtAltumind"
+import Alliance from "./pages/Alliance"
+import ExperienceDesign from "./pages/ExperienceDesign"
 
 const router = createBrowserRouter([
   {
@@ -49,6 +53,22 @@ const router = createBrowserRouter([
       {
         path:"/career/open-roles",
         element:<OpenRoles/>
+      },
+      {
+        path:"/community-engagement",
+        element:<CommunityEngagement/>
+      },
+      {
+        path:"/life-at-altumind",
+        element:<LifeAtAltumind/>
+      },
+      {
+        path:"/alliance",
+        element:<Alliance/>
+      },
+      {
+        path:"/experience-design",
+        element:<ExperienceDesign/>
       },
     ],
     
