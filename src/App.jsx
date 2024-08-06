@@ -11,6 +11,10 @@ import Career from "./pages/Career"
 import OpenRoles from "./pages/OpenRoles"
 import Portfolio from "./pages/Portfolio"
 import Insights from "./pages/Insights"
+import CommunityEngagement from "./pages/CommunityEngagement"
+import LifeAtAltumind from "./pages/LifeAtAltumind"
+import Alliance from "./pages/Alliance"
+import ExperienceDesign from "./pages/ExperienceDesign"
 
 const router = createBrowserRouter([
   {
@@ -59,6 +63,22 @@ const router = createBrowserRouter([
       {
         path: "/insights",
         element: <Insights />,
+      },
+      {
+        path:"/community-engagement",
+        element:<CommunityEngagement/>
+      },
+      {
+        path:"/life-at-altumind",
+        element:<LifeAtAltumind/>
+      },
+      {
+        path:"/alliance",
+        element:<Alliance/>
+      },
+      {
+        path:"/experience-design",
+        element:<ExperienceDesign/>
       },
     ],
   },
