@@ -1,16 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
 function useMenuAnimation(isOpen) {
-  const [scope, animate] = useAnimate();
+  const scope = useRef(null);
+  const [_, animate] = useAnimate();
 
   useEffect(() => {
-    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+    if (!scope.current) return;
 
     animate(
-      "ul",
+      scope.current.querySelector(".arrow"),
+      { rotate: isOpen ? 180 : 0 },
+      { duration: 0.2 }
+    );
+
+    animate(
+      scope.current.querySelector("ul"),
       {
         clipPath: isOpen
           ? "inset(0% 0% 0% 0% round 10px)"
@@ -24,7 +31,7 @@ function useMenuAnimation(isOpen) {
     );
 
     animate(
-      "li",
+      scope.current.querySelectorAll("li"),
       isOpen
         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
@@ -33,7 +40,7 @@ function useMenuAnimation(isOpen) {
         delay: isOpen ? staggerMenuItems : 0,
       }
     );
-  }, [isOpen]);
+  }, [isOpen, animate]);
 
   return scope;
 }
@@ -46,23 +53,17 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
     if (selection === item) {
       onSelectionChange(ddName, "");
     } else {
-      onSelectionChange(ddName, item); 
+      onSelectionChange(ddName, item);
     }
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    console.log("log from dd: ", data);
+  }, [data]);
+
   return (
     <nav className="menu" ref={scope}>
-      <div
-        style={{
-          position: "fixed",
-          bottom: -210,
-          left: 200,
-          width: 100,
-          height: 100,
-          background: "white",
-        }}
-      />
       <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -85,19 +86,22 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
           pointerEvents: isOpen ? "auto" : "none",
           clipPath: "inset(10% 50% 90% 50% round 10px)",
         }}
-        className="mt-2 bg-white border border-gray-300 p-2 text-sm shadow-md space-y-2 absolute w-[200px] z-2"
+        className="mt-2 bg-white border border-gray-300 p-2 text-sm shadow-md space-y-2 absolute w-[200px] max-h-[300px] overflow-y-auto z-2"
       >
         {data?.map((item, index) => (
-          <li className="flex justify-start gap-3 w-full" key={index}>
+          <li className="flex justify-start gap-3 w-full text-sm font-medium" key={index}>
             <input
               type="checkbox"
-              name=""
-              id={item + "cb"}
-              checked={selection === item}
-              onChange={() => handleSelection(item)}
+              name={item?.attributes?.typeName + "cb"}
+              id={item?.attributes?.typeName + "cb"}
+              checked={selection === item?.attributes?.typeName}
+              onChange={() => handleSelection(item?.attributes?.typeName)}
             />
-            <label className="dark:text-black" htmlFor={item + "cb"}>
-              {item}
+            <label
+              className="dark:text-black"
+              htmlFor={item?.attributes?.typeName + "cb"}
+            >
+              {item?.attributes?.typeName}
             </label>
           </li>
         ))}

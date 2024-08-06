@@ -107,9 +107,6 @@ const OpenRoles = () => {
     }
   }, [executeDebouncer]);
 
-  // useEffect(() => {
-  //   handleSearch()
-  // },[searchTerm])
 
 useEffect(() => {
   const constructURL = () => {

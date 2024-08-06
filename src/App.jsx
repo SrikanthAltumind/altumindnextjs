@@ -10,6 +10,7 @@ import Internet from "./pages/Internet"
 import Career from "./pages/Career"
 import OpenRoles from "./pages/OpenRoles"
 import Portfolio from "./pages/Portfolio"
+import Insights from "./pages/Insights"
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/career/open-roles",
         element: <OpenRoles />,
+      },
+      {
+        path: "/insights",
+        element: <Insights />,
       },
     ],
   },
