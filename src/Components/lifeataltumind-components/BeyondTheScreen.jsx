@@ -68,7 +68,7 @@ const BeyondTheScreen = () => {
             // adaptiveHeight
             ref={(slider) => (sliderRef1 = slider)}
           >
-            {imageData.map((item) => (
+            {imageData?.map((item) => (
               <div key={item?.id}>
                 <img src={item?.attributes?.url} alt={data?.title} />
               </div>
@@ -83,7 +83,7 @@ const BeyondTheScreen = () => {
               swipeToSlide={true}
               arrows={false}
             >
-              { [...imageData.slice(1,), imageData[0]].map(
+              { [...imageData.slice(1,), imageData[0]]?.map(
                     (item, index) => (
                       <div
                         key={item?.id || index}

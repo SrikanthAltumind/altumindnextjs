@@ -4,7 +4,7 @@ import DiscoverRoles from "../Components/career-components/DiscoverRoles"
 import LeadershipVoices from "../Components/career-components/LeadershipVoices"
 import LifeAtAltumind from "../Components/career-components/LifeAtAltumind"
 import WhyJoinAltumind from "../Components/career-components/WhyJoinAltumind"
-import IndustryFocusedInsights from "../Components/industries-common/IndustryFocusedInsights"
+import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 
 const Career = () => {
   return (
@@ -14,7 +14,13 @@ const Career = () => {
     <LifeAtAltumind/>
     <LeadershipVoices/>
     <DiscoverRoles/>
-    <IndustryFocusedInsights/>
+    <section>
+    <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">Altumind Insights</p>
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Stories of Nurturing Innovation and Excellence.</p>
+          </div>
+    <InsightsBlogs/>
+    </section>
     </div>
   )
 }

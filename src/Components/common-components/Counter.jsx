@@ -1,52 +1,41 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // eslint-disable-next-line react/prop-types
-const Counter = ({value,countSpeed, statsRef}) => {
-    const [visible, setVisible] = useState(false)
-    const [count, setCount] = useState(0)
-    
-useEffect(()=> {
+const Counter = ({value,countSpeed,}) => {
+    const [count, setCount] = useState(value)
+    const counterRef = useRef()
+  
+    let counterId
     const handleScroll = ()=> {
-        // eslint-disable-next-line react/prop-types
-        if (statsRef.current) {
-            // eslint-disable-next-line react/prop-types
-            const top = statsRef.current.getBoundingClientRect().top;
-            const isVisible = top <= window.innerHeight;
-            console.log(isVisible)
+        if (counterRef.current) {
+            const top = counterRef.current.getBoundingClientRect().top;
+            const isVisible = top <= window.innerHeight
             if(isVisible){
-                setVisible(isVisible)
+                let increament = 0;
+                counterId = setInterval(() => {
+                    if (increament <= value) {
+                        setCount(increament)
+                        increament += 1;
+                    } else {
+                        clearInterval(counterId);
+                    }
+                }, countSpeed);
+
                 window.removeEventListener('scroll', handleScroll)
             }
 
           }
     }
+useEffect(()=> {
     window.addEventListener('scroll', handleScroll)
 
     return ()=> {
+        clearInterval(counterId)
         window.removeEventListener('scroll', handleScroll)
     }
 },[])
-
-useEffect(()=> {
-    // console.log(visible)
-    let counterId
-    let increament = 0;
-    counterId = setInterval(() => {
-        if (increament < value) {
-            setCount(count=> count+1)
-            increament += 1;
-        } else {
-            clearInterval(counterId);
-        }
-    }, countSpeed);
-
-    return ()=> {
-        clearInterval(counterId)
-        setCount(0)
-    }
-},[visible])
   return (
-    <span>{count}</span>
+    <span ref={counterRef}>{count}</span>
   )
 }
 

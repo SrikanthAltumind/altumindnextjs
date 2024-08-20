@@ -18,7 +18,25 @@ const Banner = () => {
        else if(location.pathname === '/alliance')
         apiUrl = 'api/alliance-banner'
        else if(location.pathname === '/experience-design')
-        apiUrl = 'api/alliance-banner'
+        apiUrl = 'api/service-exp-design-banner'
+      else if(location.pathname === '/ai-automation')
+        apiUrl = 'api/service-ai-automation-banner'
+      else if(location.pathname === '/qa-testing')
+        apiUrl = 'api/service-qa-testing-banner'
+      else if(location.pathname === '/digital-marketing-services')
+        apiUrl = 'api/service-ai-automation-banner'
+        else if(location.pathname === '/technology-engineering')
+        apiUrl = 'api/service-tech-engg-banner'
+      else if(location.pathname === '/data-analytics')
+        apiUrl = 'api/service-data-analytics-banner'
+      else if(location.pathname === '/managed-operations')
+        apiUrl = 'api/service-managed-operation-banner'
+      else if(location.pathname === '/services')
+        apiUrl = 'api/service-root-overview'
+       else if(location.pathname === '/digital-strategy-consulting')
+        apiUrl = 'api/service-digital-strategy-consulting-banner'
+       else if(location.pathname === '/cloud-services')
+        apiUrl = 'api/service-cloud-banner'
 
   const fetchData = () => {
     const url = 
@@ -53,10 +71,19 @@ const Banner = () => {
   }
 
   return (
-    <div className='bg-[#EAF1FF] dark:bg-transparent  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
+    <div className='bg-LightBlue dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
     <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.title}
     </p>
-    <p className='max-w-[450px] text-sm md:text-base  text-black font-medium dark:text-white'>{data?.description}</p>
+    <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-medium dark:text-white'>{data?.description}</p>
+    {
+      location.pathname === '/services' &&
+      <p  className='group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1'>
+      Get Started With Us
+        <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+        </svg>
+      </p>
+    }
   </div>
   )
 }

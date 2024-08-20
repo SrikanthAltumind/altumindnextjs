@@ -1,7 +1,7 @@
-import IndustryFocusedInsights from "../Components/industries-common/IndustryFocusedInsights"
 import BgImageBanner from "../Components/common-components/BgImageBanner"
 import CollaborativeInitiatives from "../Components/community-engagement/CollaborativeInitiatives"
 import Banner from "../Components/common-components/Banner"
+import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 
 const CommunityEngagement = () => {
   return (
@@ -9,7 +9,7 @@ const CommunityEngagement = () => {
     <Banner/>
     <BgImageBanner/>
     <CollaborativeInitiatives/>
-    <IndustryFocusedInsights/>
+    <InsightsBlogs/>
     </div>
   )
 }

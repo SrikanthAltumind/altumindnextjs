@@ -33,9 +33,11 @@ const data = [
   },
   {
     menu : 'Services',
+    url:'/services',
     children : [
       {
         innerMenu : 'Experience Design',
+        url: '/experience-design',
         children : [
           {
             name : 'UI Design'
@@ -216,11 +218,11 @@ const Navbar = () => {
   const {theme} = useContext(ThemeContext)
 
   return (
-    <header className="dark:bg-[#1b305c] relative bg-white z-20 dark:text-white top-0">
-        <nav className="flex justify-between items-center px-2 py-5 sm:px-5 lg:py-0">
+    <header className="dark:bg-[#1b305c] w-full bg-white z-20 h-[70px] dark:text-white top-0 fixed">
+        <nav className="flex justify-between items-center h-full px-2 sm:px-5">
             <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="sm:w-[180px] w-[150px]" />
-            <div className="items-center gap-5 hidden lg:flex ml-auto">
-            <ul className="flex mr-3">
+            <div className="items-center gap-5 hidden lg:flex ml-auto h-full">
+            <ul className="flex mr-3 h-full ">
                 {/* <Link to="/"><li>About us</li></Link>
                 <Link to="/"><li>Services</li></Link>
                 <Link to="/industries"><li>Industries</li></Link>
@@ -239,7 +241,7 @@ const Navbar = () => {
                     onMouseOver={() => setCurrentItem(item?.children ? item : null)}
                     onMouseLeave={() => setCurrentItem(null)}
                     onClick={() => setCurrentItem(null)}
-                    className="py-6 px-4 border-b-4 border-transparent hover:border-secondary"  to={item?.url} key={index}><li className="" >{item?.menu}
+                    className="h-full flex items-center px-4 border-b-4 border-transparent  hover:border-secondary"  to={item?.url} key={index}><li className="" >{item?.menu}
                       {
                        
                         item?.children && currentItem === item &&

@@ -13,6 +13,15 @@ import CommunityEngagement from "./pages/CommunityEngagement"
 import LifeAtAltumind from "./pages/LifeAtAltumind"
 import Alliance from "./pages/Alliance"
 import ExperienceDesign from "./pages/ExperienceDesign"
+import AIandAutomation from "./pages/AIandAutomation"
+import QAandTesting from "./pages/QAandTesting"
+import DigitalMarketingServices from "./pages/DigitalMarketingServices"
+import TechnologyAndEngineering from "./pages/TechnologyAndEngineering"
+import DataAnalytics from "./pages/DataAnalytics"
+import ManagedOperations from "./pages/ManagedOperations"
+import Services from "./pages/Services"
+import DigitalStrategy from './pages/DigitalStrategy'
+import CloudServices from "./pages/CloudServices"
 
 const router = createBrowserRouter([
   {
@@ -69,6 +78,42 @@ const router = createBrowserRouter([
       {
         path:"/experience-design",
         element:<ExperienceDesign/>
+      },
+      {
+        path:"/ai-automation",
+        element:<AIandAutomation/>
+      },
+      {
+        path:"/qa-testing",
+        element:<QAandTesting/>
+      },
+      {
+        path:"/digital-marketing-services",
+        element:<DigitalMarketingServices/>
+      },
+      {
+        path:"/technology-engineering",
+        element:<TechnologyAndEngineering/>
+      },
+      {
+        path:"/data-analytics",
+        element:<DataAnalytics/>
+      },
+      {
+        path:"/managed-operations",
+        element:<ManagedOperations/>
+      },
+      {
+        path:"/services",
+        element:<Services/>
+      },
+      {
+        path:"/digital-strategy-consulting",
+        element:<DigitalStrategy/>
+      },
+      {
+        path:"/cloud-services",
+        element:<CloudServices/>
       },
     ],
     

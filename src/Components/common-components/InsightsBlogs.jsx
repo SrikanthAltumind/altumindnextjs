@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-const IndustryFocusedInsights = () => {
+const InsightsBlogs = () => {
     const [data, setData] = useState()
     
     const fetchResourceData = ()=> {
@@ -20,13 +20,13 @@ const IndustryFocusedInsights = () => {
         fetchResourceData()
     },[])
     return (
-      <section id="section8" className="mx-auto w-[90%] max-w-[950px]">
+      <div  className="mx-auto w-[90%] max-w-[950px]">
           <div className="font-raleway font-semibold text-center text-primary dark:text-white">
-            <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-14 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+            {/* <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-14 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
               Industry-Focused Insights
-            </p> 
+            </p>  */}
         
-            <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
+            <div className={`gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}
                 `}>
             {data?.data?.slice(-3)?.map(card=> (
@@ -55,8 +55,8 @@ const IndustryFocusedInsights = () => {
             </svg>
           </button>
           </div>
-      </section>
+      </div>
     )
   }
   
-export default IndustryFocusedInsights
+export default InsightsBlogs
