@@ -98,12 +98,12 @@ const Testimonials = () => {
                 </div>
 
                 <div className="flex justify-evenly  md:text-left text-center  gap-y-5 text-monserrat flex-col">
-                  <p className="md:w-[85%]  font-medium">
+                  <p className="md:w-[85%] dark:font-normal font-medium">
                     {item?.attributes?.description}
                   </p>
                   <div className="md:text-left text-center">
-                    <p className="font-semibold">-{item?.attributes?.name}</p>
-                    <p className="text-sm">{item?.attributes?.designation}</p>
+                    <p className="dark:font-medium font-semibold">-{item?.attributes?.name}</p>
+                    <p className="text-sm dark:font-light">{item?.attributes?.designation}</p>
                   </div>
                 </div>
               </div>
