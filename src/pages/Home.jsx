@@ -1,5 +1,6 @@
 // import React from 'react'
 
+import LogoMarquee from '../Components/common-components/LogoMarquee'
 import SubscribeForm from '../Components/common-components/SubscribeForm'
 import Testimonials from '../Components/common-components/Testimonials'
 import Affirmations from '../Components/home-components/Affirmations'
@@ -11,11 +12,12 @@ import SuccessStories from '../Components/home-components/SuccessStories'
 
 const Home = () => {
   return (
-    <div className='dark:bg-darkTheme lg:space-y-24 space-y-24'>
+    <div className='dark:bg-darkTheme lg:space-y-24 space-y-24 w-full'>
     <DigitalJourney />
     <SuccessStories />
     <CorePillars />
-    <Affirmations/>
+      <Affirmations />
+      <LogoMarquee />
     <Testimonials/>
     <ResourceCenter/>
     <LifeandCarrer/>

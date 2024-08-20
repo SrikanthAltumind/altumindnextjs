@@ -15,6 +15,7 @@ import CommunityEngagement from "./pages/CommunityEngagement"
 import LifeAtAltumind from "./pages/LifeAtAltumind"
 import Alliance from "./pages/Alliance"
 import ExperienceDesign from "./pages/ExperienceDesign"
+import Testing from "./pages/Testing"
 
 const router = createBrowserRouter([
   {
@@ -65,20 +66,24 @@ const router = createBrowserRouter([
         element: <Insights />,
       },
       {
-        path:"/community-engagement",
-        element:<CommunityEngagement/>
+        path: "/community-engagement",
+        element: <CommunityEngagement />,
       },
       {
-        path:"/life-at-altumind",
-        element:<LifeAtAltumind/>
+        path: "/life-at-altumind",
+        element: <LifeAtAltumind />,
       },
       {
-        path:"/alliance",
-        element:<Alliance/>
+        path: "/alliance",
+        element: <Alliance />,
       },
       {
-        path:"/experience-design",
-        element:<ExperienceDesign/>
+        path: "/experience-design",
+        element: <ExperienceDesign />,
+      },
+      {
+        path: "/testing",
+        element: <Testing />,
       },
     ],
   },

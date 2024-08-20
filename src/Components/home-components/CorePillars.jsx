@@ -261,7 +261,7 @@ const CorePillars = () => {
         transition={{
           duration: 1,
           ease: "linear",
-          type: "spring",
+          // type: "spring",
           stiffness: 35,
         }}
         // variants={staggerContainer}

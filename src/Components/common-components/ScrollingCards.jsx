@@ -1,12 +1,14 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
+
 
 
 const Card = ({ content }) => {
   return (
     <div
       key={content?.id}
-      className={`w-[200px] rounded-md h-[320px] p-2 cursor-pointer bg-[red] transform transition-transform hover:scale-105 mx-3 flex-shrink-0`}
+      className={`w-[200px] rounded-md h-[320px] p-2 mx-3`}
       style={{
         backgroundColor: content?.attributes?.hexvalue,
       }}
@@ -27,20 +29,13 @@ const Card = ({ content }) => {
 
 const ScrollingCards = ({scrollData}) => {
   return (
-    <motion.div
-      className="flex w-[200%] animate-marquee gap-1 "
-      initial={{ x: 0 }}
-      animate={{ x: "-100%" }}
-      transition={{
-        repeat: Infinity,
-        ease: "linear",
-        duration: 40,
-      }}
-    >
-      {scrollData.concat(scrollData)?.map((src, index) => (
-        <Card content={src} key={index + "test"} />
-      ))}
-    </motion.div>
+    <div className="">
+      <Marquee>
+        {scrollData?.map((src, index) => (
+          <Card content={src} key={index + "test"} />
+        ))}
+      </Marquee>
+    </div>
   );
 };
 
