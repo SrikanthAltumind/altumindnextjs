@@ -32,6 +32,9 @@ const SettingUpForSuccess = () => {
       apiUrl = 'api/service-digital-strategy-consulting-benifits?populate=*'
       else if(location.pathname === '/cloud-services')
       apiUrl = 'api/service-cloud-benifits?populate=*'
+          else if(location.pathname === '/mission-and-vision')
+      apiUrl = 'api/our-mission-and-vision-words?populate=*'
+    
 
     const fetchData = () => {
         const url = `${

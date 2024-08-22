@@ -31,6 +31,10 @@ const Overview = () => {
     apiUrl = 'api/service-digital-strategy-consulting-overview?populate=*'
    else if(location.pathname === '/cloud-services')
     apiUrl = 'api/service-cloud-overview?populate=*'
+     else if(location.pathname === '/mission-and-vision')
+    apiUrl = 'api/our-mission-and-vision-future?populate=*'
+       else if(location.pathname === '/leadership')
+    apiUrl = 'api/leadership-force?populate=*'
 
     const fetchData = () => {
         const url = `${

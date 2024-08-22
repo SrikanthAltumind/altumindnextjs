@@ -22,6 +22,8 @@ import ManagedOperations from "./pages/ManagedOperations"
 import Services from "./pages/Services"
 import DigitalStrategy from './pages/DigitalStrategy'
 import CloudServices from "./pages/CloudServices"
+import MissionAndVision from "./pages/MissionAndVision"
+import Leadership from "./pages/Leadership"
 
 const router = createBrowserRouter([
   {
@@ -114,6 +116,14 @@ const router = createBrowserRouter([
       {
         path:"/cloud-services",
         element:<CloudServices/>
+      },
+      {
+        path:"/mission-and-vision",
+        element:<MissionAndVision/>
+      },
+      {
+        path:"/leadership",
+        element:<Leadership/>
       },
     ],
     

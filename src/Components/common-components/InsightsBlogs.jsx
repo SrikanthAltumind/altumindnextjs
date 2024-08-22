@@ -31,7 +31,7 @@ const InsightsBlogs = () => {
                 `}>
             {data?.data?.slice(-3)?.map(card=> (
             <div key={card?.id} className='w-[250px] sm:w-[31%] max-w-[280px] space-y-3 text-start'>
-                <div className=' w-[250px] h-[180px] sm:w-full  max-w-[280px] md:h-[220px] overflow-hidden'>
+                <div className=' w-[250px] h-[180px] sm:w-full  max-w-[280px] md:h-[220px] rounded-xl overflow-hidden'>
                    <img src={card?.attributes?.image?.data?.attributes?.url} alt={card?.tag} className='h-full w-full hover:scale-105  transition-all'/>
                 </div>
                 <p className='text-xs  lg:text-sm font-medium'>{card?.attributes?.tag}</p>

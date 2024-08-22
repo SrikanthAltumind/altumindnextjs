@@ -62,6 +62,18 @@ const services = {
       "Build the foundations for success. Next-Gen Cloud Services for Agility, Scalability, and Success.",
     linkText: "Reach Out Today",
   },
+  MissionAndVision: {
+    heading:
+      "Driven by purpose, fueled by empathy",
+      caption:
+      "We blend technology, data, and creativity to craft solutions that resonate and deliver meaningful impact. If you're ready for purpose-driven innovation that transforms challenges into opportunities",
+    linkText: "Connect with us Today",
+  },
+  leadership: {
+    heading:
+      "Relentlessly pursuing a world that thrives for everyone. Be a Part of Change.",
+    linkText: "Contact Us Today",
+  },
 };
  
  
@@ -101,6 +113,12 @@ else if (location.pathname === "/digital-strategy-consulting" ) {
 else if (location.pathname === "/cloud-services" ) {
   setData(services.cloudServices);
 }
+else if (location.pathname === "/mission-and-vision" ) {
+  setData(services.MissionAndVision);
+}
+else if (location.pathname === "/leadership" ) {
+  setData(services.leadership);
+}
  
   }, [location.pathname]);
  
@@ -108,11 +126,11 @@ else if (location.pathname === "/cloud-services" ) {
  
   return (
         <div className="bg-LightBlue min-h-[280px]  flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2">
-          <div className="ml-[10%]  md:ml-[25%] space-y-5  font-raleway dark:text-white">
+          <div className="ml-[10%]  md:ml-[15%] space-y-5  font-raleway dark:text-white">
             <h3 className=" font-bold text-2xl lg:text-3xl max-w-[500px] ">
               {data?.heading}
             </h3>
-            {data?.caption && <p className="font-medium">{data?.caption}</p>}
+            {data?.caption && <p className="font-medium max-w-[600px]">{data?.caption}</p>}
  
             <a href = "#" className='group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1'>
                   {data?.linkText}

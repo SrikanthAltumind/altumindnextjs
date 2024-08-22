@@ -31,6 +31,8 @@ const WhyAltumind = () => {
             apiUrl = 'api/service-digital-strategy-consulting-stands?populate=*'
          else if(location.pathname === '/cloud-services')
             apiUrl = 'api/service-cloud-stands?populate=*'
+          else if(location.pathname === '/leadership')
+            apiUrl = 'api/leadership-philosophy-contents?populate=*'
 
     
 

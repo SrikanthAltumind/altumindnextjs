@@ -16,16 +16,19 @@ const data = [
         innerMenu: 'About Altumind',
         children: [
           {
-            name: 'Mission and Vision'
+            name: 'Mission and Vision',
+            url: '/mission-and-vision'
           },
           {
-            name: 'Leadership'
+            name: 'Leadership',
+            url: '/leadership'
           },
           {
             name: 'Alliance'
           },
           {
-            name: 'Community Engagement'
+            name: 'Community Engagement',
+            url: '/community-engagement' 
           }
         ]
       }
@@ -52,6 +55,7 @@ const data = [
       },
       {
         innerMenu : 'Technology and Engineering',
+        url: '/technology-engineering',
         children : [
           {
             name : 'Web Development'
@@ -117,6 +121,7 @@ const data = [
       },
       {
         innerMenu : 'Digital Marketing',
+        url: '/digital-marketing-services',
         children : [
           {
             name : 'Branding & Design'
@@ -151,22 +156,28 @@ const data = [
     url: '/industries',
     children: [
       {
-        innerMenu: 'BFSI & Fintech'
+        innerMenu: 'BFSI & Fintech',
+        url: '/bfsi-finance',
       },
       {
-        innerMenu: 'Digital Commerce'
+        innerMenu: 'Digital Commerce',
+        url: '/industries',
       },
       {
-        innerMenu: 'Healthcare'
+        innerMenu: 'Healthcare',
+        url: '/healthcare',
       },
       {
-        innerMenu: 'Green & Sustainability'
+        innerMenu: 'Green & Sustainability',
+        url: '/industries',
       },
       {
-        innerMenu: 'EdTech'
+        innerMenu: 'EdTech',
+        url: '/ed-tech',
       },
       {
-        innerMenu: 'Internet & SaaS'
+        innerMenu: 'Internet & SaaS',
+        url: '/internet',
       },
     ]
   },
@@ -205,7 +216,8 @@ const data = [
         url:'/open-roles',
       },
       {
-        innerMenu: 'Life At Altumind'
+        innerMenu: 'Life At Altumind',
+        url:'/life-at-altumind',
       },
     ]
   }

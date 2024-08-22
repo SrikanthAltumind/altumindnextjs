@@ -1,25 +1,26 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+// import axios from "axios"
+// import { useEffect, useState } from "react"
+import InsightsBlogs from "../common-components/InsightsBlogs"
 
 const ResourceCenter = () => {
-    const [data, setData] = useState()
-    const [activeCategory, setActiveCategory] = useState()
-    const fetchResourceData = ()=> {
-    const url = `${import.meta.env.VITE_APP_API_URL}api/categories?populate[category_card_mains][populate]=image`
-        axios.get(url)
-        .then(response=> {
-            setData(response?.data?.data)
-            setActiveCategory(response?.data?.data[1])
-        })
-        .catch( () => {
-            console.log('Error While Fetching Resources')
-        })
+    // const [data, setData] = useState()
+    // const [activeCategory, setActiveCategory] = useState()
+    // const fetchResourceData = ()=> {
+    // const url = `${import.meta.env.VITE_APP_API_URL}api/categories?populate[category_card_mains][populate]=image`
+    //     axios.get(url)
+    //     .then(response=> {
+    //         setData(response?.data?.data)
+    //         setActiveCategory(response?.data?.data[1])
+    //     })
+    //     .catch( () => {
+    //         console.log('Error While Fetching Resources')
+    //     })
 
-    }
+    // }
 
-    useEffect(()=> {
-        fetchResourceData()
-    },[])
+    // useEffect(()=> {
+    //     fetchResourceData()
+    // },[])
     return (
       <div  className='bg-[#F3F9FF] dark:bg-darkTheme dark:text-white py-14 dark:py-0'>
       <div className="mx-auto w-[90%] max-w-[950px]">
@@ -29,8 +30,9 @@ const ResourceCenter = () => {
               <p className="bg-clip-text w-fit mx-auto text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Stay in Sync</p> 
               <p className="">with the Latest Updates</p>
           </div>
+          <InsightsBlogs/>
           
-            <div className='overflow-x-auto'>
+            {/* <div className='overflow-x-auto'>
             <ul className='flex min-w-max gap-5 justify-between px-2 '>
                 {data?.map(cat=> (
                     <li key={cat.id} className=''>
@@ -41,8 +43,8 @@ const ResourceCenter = () => {
 
                 ))}
             </ul>
-            </div>
-            <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
+            </div> */}
+            {/* <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${activeCategory?.attributes?.category_card_mains?.data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}
                 `}>
             {activeCategory?.attributes?.category_card_mains?.data?.slice(-3)?.map(card=> (
@@ -61,11 +63,11 @@ const ResourceCenter = () => {
                     </div>
                         
                 ))}
-            </div>
+            </div> */}
           </div>
-          <div className='justify-center flex items-center mt-10'>
+          {/* <div className='justify-center flex items-center mt-10'>
           <button className="bg-secondary rounded-full text-sm text-white font-montserrat py-3 px-3">View All Insights</button>
-          </div>
+          </div> */}
       </div>
       </div>
     )

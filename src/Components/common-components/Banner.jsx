@@ -37,6 +37,10 @@ const Banner = () => {
         apiUrl = 'api/service-digital-strategy-consulting-banner'
        else if(location.pathname === '/cloud-services')
         apiUrl = 'api/service-cloud-banner'
+       else if(location.pathname === '/mission-and-vision')
+        apiUrl = 'api/our-mission-and-vision-banner'
+             else if(location.pathname === '/leadership')
+        apiUrl = 'api/leadership-banner'
 
   const fetchData = () => {
     const url = 

@@ -20,7 +20,7 @@ const MegaMenu = ({item}) => {
             {
               // eslint-disable-next-line react/prop-types
               item?.children?.map((child, index) => (
-              <Link to='/'  key={index}><li onMouseOver={() => setSubMenu(child)} className={`${subMenu?.innerMenu === child.innerMenu ? 'bg-[#DE5346] text-white' : '' } rounded-md flex gap-2 items-center  p-2 m-2`}>{subMenu?.innerMenu === child.innerMenu ? <span className="bg-white p-1 rounded-full"></span> : ''}{child.innerMenu}
+              <Link to={child?.url}  key={index}><li onMouseOver={() => setSubMenu(child)} className={`${subMenu?.innerMenu === child.innerMenu ? 'bg-[#DE5346] text-white' : '' } rounded-md flex gap-2 items-center  p-2 m-2`}>{subMenu?.innerMenu === child.innerMenu ? <span className="bg-white p-1 rounded-full"></span> : ''}{child.innerMenu}
               </li></Link>
               ))
             }
