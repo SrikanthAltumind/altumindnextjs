@@ -4,12 +4,15 @@ import SubscribeForm from "../Components/common-components/SubscribeForm"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
+import LeaderBoard from '../Components/leadership-components/LeaderBoard'
+import OurAspiration from '../Components/leadership-components/OurAspiration'
 
 const Leadership = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
     <Banner/>
     <Overview/>
+    <LeaderBoard/>
     <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
       <div className='text-center font-raleway space-y-3 mb-10'>
             <p className='text-sm md:text-base dark:text-white text-black font-semibold'>Our Philosophy</p>
@@ -17,6 +20,7 @@ const Leadership = () => {
         </div>
       <WhyAltumind/>
       </section>
+      <OurAspiration/>
       <GetStarted/>
       <section>
       <div className="text-center space-y-2 mb-20 font-raleway">

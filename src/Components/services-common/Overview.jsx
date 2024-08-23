@@ -35,6 +35,8 @@ const Overview = () => {
     apiUrl = 'api/our-mission-and-vision-future?populate=*'
        else if(location.pathname === '/leadership')
     apiUrl = 'api/leadership-force?populate=*'
+      else if(location.pathname === '/about')
+    apiUrl = 'api/about-us-core?populate=*'
 
     const fetchData = () => {
         const url = `${

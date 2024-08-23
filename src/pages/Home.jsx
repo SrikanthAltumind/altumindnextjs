@@ -10,7 +10,7 @@ import HomeBanner from '../Components/common-components/HomeBanner'
 
 const Home = () => {
   return (
-    <div className='dark:bg-darkTheme lg:space-y-28 space-y-24 pt-16'>
+    <div className='dark:bg-darkTheme lg:space-y-28 space-y-24'>
     <HomeBanner/>
     <SuccessStories/>
     <Affirmations/>
