@@ -25,15 +25,21 @@ import CloudServices from "./pages/CloudServices"
 import MissionAndVision from "./pages/MissionAndVision"
 import Leadership from "./pages/Leadership"
 import AboutUs from "./pages/AboutUs"
+import Error404 from "./pages/Error404"
 
 const router = createBrowserRouter([
   {
     element:<AppLayout/>,
+   
     children:[
       {
         path:"/",
         element:<Home/>
       },
+      {
+        path:"*",
+        element:<Error404 />
+        },
       {
         path:"/contact",
         element:<Contact/>
@@ -130,6 +136,7 @@ const router = createBrowserRouter([
         path:"/about",
         element:<AboutUs/>
       },
+     
     ],
     
   }

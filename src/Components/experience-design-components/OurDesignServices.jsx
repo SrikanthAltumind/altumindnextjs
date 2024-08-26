@@ -69,7 +69,7 @@ const OurDesignServices = () => {
             {
                data?.map((item) => (
                 
-                <div key={item.id} className='max-w-[300px] flex justify-between flex-col text-white lg:h-auto md:h-[300px] h-[350px] space-y-2 p-5 rounded-xl mx-auto'  style={{ backgroundColor: (theme === 'dark' && item.id===1 ) ? "#5EC7A7" : item?.attributes?.hexvalue}}>
+                <div key={item.id} className='max-w-[300px] flex justify-between flex-col text-white  lg:h-auto md:h-[300px] h-[350px] space-y-2 p-5 rounded-xl mx-auto'  style={{ backgroundColor: (theme === 'dark' && item.id===1 ) ? "#5EC7A7" : item?.attributes?.hexvalue}}>
                     <div className="space-y-2">
                     <p className="font-semibold">{item?.attributes?.title}</p>
                     <p className="text-[13px] font-light font-montserrat">{item?.attributes?.description}</p>
