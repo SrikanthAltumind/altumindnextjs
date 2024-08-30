@@ -11,19 +11,19 @@ const TechStack = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
+    if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-tech-stack?populate=*'
     // else if(location.pathname === '/ai-automation')
     //     apiUrl = 'api/industry-bfsi-sol-partners?populate=*'
-    else if(location.pathname === '/qa-testing')
+    else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-stack?populate=*'
-    else if(location.pathname === '/digital-marketing-services')
+    else if(location.pathname === '/services/digital-marketing-services')
         apiUrl = 'api/service-digital-marketing-stack?populate=*'
-    else if(location.pathname === '/technology-engineering')
+    else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-stack?populate=*' 
-    else if(location.pathname === '/data-analytics')
+    else if(location.pathname === '/services/data-analytics')
       apiUrl = 'api/service-data-analytics-stack?populate=*'
-     else if(location.pathname === '/managed-operations')
+     else if(location.pathname === '/services/managed-operations')
       apiUrl = 'api/service-data-analytics-stack?populate=*'
 
     const fetchData = () => {

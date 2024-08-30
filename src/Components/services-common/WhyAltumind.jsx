@@ -11,25 +11,25 @@ const WhyAltumind = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
+    if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-alt-stands?populate=*'
-    else if(location.pathname === '/ai-automation')
+    else if(location.pathname === '/services/ai-automation')
         apiUrl = 'api/service-ai-auto-stands?populate=*'
-    else if(location.pathname === '/qa-testing')
+    else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-stands?populate=*'
-        else if(location.pathname === '/digital-marketing-services')
+        else if(location.pathname === '/services/digital-marketing-services')
         apiUrl = 'api/service-digital-marketing-stands?populate=*'
-        else if(location.pathname === '/technology-engineering')
+        else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-stands?populate=*'
-        else if(location.pathname === '/data-analytics')
+        else if(location.pathname === '/services/data-analytics')
             apiUrl = 'api/service-data-analytics-stands?populate=*'
-        else if(location.pathname === '/managed-operations')
+        else if(location.pathname === '/services/managed-operations')
             apiUrl = 'api/service-managed-operation-stands?populate=*'
         else if(location.pathname === '/services')
             apiUrl = 'api/service-root-why-choose-altuminds?populate=*'
-        else if(location.pathname === '/digital-strategy-consulting')
+        else if(location.pathname === '/services/digital-strategy-consulting')
             apiUrl = 'api/service-digital-strategy-consulting-stands?populate=*'
-         else if(location.pathname === '/cloud-services')
+         else if(location.pathname === '/services/cloud-services')
             apiUrl = 'api/service-cloud-stands?populate=*'
           else if(location.pathname === '/leadership')
             apiUrl = 'api/leadership-philosophy-contents?populate=*'

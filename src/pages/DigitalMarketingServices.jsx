@@ -1,6 +1,7 @@
 import Banner from "../Components/common-components/Banner"
 import SubscribeForm from "../Components/common-components/SubscribeForm"
 import Testimonials from "../Components/common-components/Testimonials"
+import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
@@ -8,10 +9,22 @@ import TechStack from "../Components/services-common/TechStack"
 import ValueSection from "../Components/services-common/ValueSection"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 
+const servicesMenu = [
+  {id:'section1', tabId:'tab1', name:'OverView'},
+  {id:'section2', tabId:'tab2', name:'Services'},
+  {id:'section3', tabId:'tab3', name:'Tech Stack'},
+  {id:'section4', tabId:'tab4', name:'Why Us'},
+  {id:'section5', tabId:'tab5', name:'Testimonials'},
+  {id:'section6', tabId:'tab6', name:'Benefits'},
+  {id:'section7', tabId:'tab7', name:'Success'},
+  {id:'section8', tabId:'tab8', name:'Insights'},
+]
+
 const DigitalMarketingServices = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner/>
+        <IndustriesMenu sectionsMenu={servicesMenu}/>
         <Overview/>
         <ValueSection/>
         <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">

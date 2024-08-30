@@ -12,25 +12,25 @@ const SettingUpForSuccess = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
+    if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-benifits?populate=*'
-    else if(location.pathname === '/ai-automation')
+    else if(location.pathname === '/services/ai-automation')
         apiUrl = 'api/service-ai-auto-we-serves?populate=*'
-    else if(location.pathname === '/qa-testing')
+    else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-we-serves?populate=*'
-    else if(location.pathname === '/digital-marketing-services')
+    else if(location.pathname === '/services/digital-marketing-services')
         apiUrl = 'api/service-digital-marketing-benifits?populate=*'
-    else if(location.pathname === '/technology-engineering')
+    else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-we-serves?populate=*'
-    else if(location.pathname === '/data-analytics')
+    else if(location.pathname === '/services/data-analytics')
       apiUrl = 'api/service-data-analytics-benifits?populate=*'
-       else if(location.pathname === '/managed-operations')
+       else if(location.pathname === '/services/managed-operations')
       apiUrl = 'api/service-managed-operation-benifits?populate=*'
       else if(location.pathname === '/services')
       apiUrl = 'api/service-root-benifits?populate=*'
-      else if(location.pathname === '/digital-strategy-consulting')
+      else if(location.pathname === '/services/digital-strategy-consulting')
       apiUrl = 'api/service-digital-strategy-consulting-benifits?populate=*'
-      else if(location.pathname === '/cloud-services')
+      else if(location.pathname === '/services/cloud-services')
       apiUrl = 'api/service-cloud-benifits?populate=*'
           else if(location.pathname === '/mission-and-vision')
       apiUrl = 'api/our-mission-and-vision-words?populate=*'

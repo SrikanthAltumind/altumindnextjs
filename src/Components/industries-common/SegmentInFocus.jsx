@@ -8,13 +8,15 @@ const SegmentInFocus = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/bfsi-finance')
+    if(location.pathname === '/industries/bfsi-fintech')
         apiUrl = 'api/industry-bfsi-segment-contents?populate=*'
-    else if(location.pathname === '/healthcare')
+    else if(location.pathname === '/industries/healthcare')
         apiUrl = 'api/industry-hc-segment-contents?populate=*'
-    else if(location.pathname === '/ed-tech')
+    else if(location.pathname === '/industries/ed-tech')
         apiUrl = 'api/industry-ed-segement-contents?populate=*'
-    else if(location.pathname=== '/internet')
+    else if(location.pathname=== '/industries/internet')
+        apiUrl = 'api/industry-internet-segment-contents?populate=*'
+     else if(location.pathname=== '/industries/digital-commerce')
         apiUrl = 'api/industry-internet-segment-contents?populate=*'
     
 
@@ -35,7 +37,7 @@ const SegmentInFocus = () => {
     },[])
 
   return (
-    <section id="section1" className="w-[90%] mx-auto font-raleway">
+    <div className="w-[90%] mx-auto font-raleway">
         <div>
             <p className="font-extrabold w-fit mx-auto text-2xl lg:text-3xl py-2 mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Segment in Focus</p>
         </div>
@@ -50,7 +52,7 @@ const SegmentInFocus = () => {
             ))
         }
     </div>
-    </section>
+    </div>
   )
 }
 

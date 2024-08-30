@@ -1,7 +1,7 @@
 import Errorimage404 from '../assets/404Error.png'
 const Error404 = () => {
   return (
-   <section  className='dark:text-white h-screen bg-darkTheme '>
+   <section  className='dark:text-white h-screen dark:bg-darkTheme'>
    <div className=" w-[90%] mx-auto md:flex-row flex-col flex items-center gap-5">
     <div className='lg:basis-[65%]'>
       <img src={Errorimage404} alt="404" className='mx-auto' width={700}/>

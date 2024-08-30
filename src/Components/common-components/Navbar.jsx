@@ -72,50 +72,41 @@ const data = [
         ]
       },
       {
-        innerMenu : 'AI & Chat Bot',
+        innerMenu : 'AI & Automation',
         children : [
           {
-            name : 'Conversational AI'
-          },
-          {
-            name : 'AI Chatbot'
-          },
-        ]
-      },
-      {
-        innerMenu : 'Quality Assurance & Quality control ',
-        children : [
-          {
-            name : 'Platforms'
-          },
-          {
-            name : 'Industries'
-          },
-          {
-            name : 'Levels of software Testing services'
-          },
-          {
-            name : 'Test Management'
-          },
-          {
-            name : 'Defect Management'
-          },
-          {
-            name : 'Other QA services'
-          },
-          {
-            name : 'Resources'
-          },
-        ]
-      },
-      {
-        innerMenu : 'Cloud & Automation',
-        children : [
-          {
-            name : 'Cloud'
+            name : 'Conversational AI & Chatbot'
           },
           {
             name : 'RPA'
+          },
+        ]
+      },
+      {
+        innerMenu : 'Quality Assurance & Testing Services ',
+        children : [
+          {
+            name : 'Automation Testing'
+          },
+          {
+            name : 'Security Testing'
+          },
+          {
+            name : 'Performance Testing'
+          },
+          {
+            name : 'QA Consulting'
+          },
+        ]
+      },
+      {
+        innerMenu : 'Cloud',
+        children : [
+          {
+            name : 'Cloud Migration'
+          },
+          {
+            name : 'Cloud App Services'
           },
         ]
       },
@@ -130,16 +121,7 @@ const data = [
             name : 'Marketing Services'
           },
           {
-            name : 'Paid Advertising'
-          },
-          {
             name : 'Marketing Optimization'
-          },
-          {
-            name : 'Analytics & Strategy Consulting'
-          },
-          {
-            name : 'Marketing Automation'
           },
         ]
       },
@@ -147,7 +129,10 @@ const data = [
         innerMenu : 'Data Analytics '
       },
       {
-        innerMenu : 'IT Services & Consulting'
+        innerMenu : 'Managed Operations'
+      },
+      {
+        innerMenu : 'Digital Strategy and Consulting'
       },
     ]
   },
@@ -157,15 +142,15 @@ const data = [
     children: [
       {
         innerMenu: 'BFSI & Fintech',
-        url: '/bfsi-finance',
+        url: '/industries/bfsi-fintech',
       },
       {
         innerMenu: 'Digital Commerce',
-        url: '/industries',
+        url: '/industries/digital-commerce',
       },
       {
         innerMenu: 'Healthcare',
-        url: '/healthcare',
+        url: '/industries/healthcare',
       },
       {
         innerMenu: 'Green & Sustainability',
@@ -173,11 +158,11 @@ const data = [
       },
       {
         innerMenu: 'EdTech',
-        url: '/ed-tech',
+        url: '/industries/ed-tech',
       },
       {
         innerMenu: 'Internet & SaaS',
-        url: '/internet',
+        url: '/industries/internet',
       },
     ]
   },
@@ -185,7 +170,7 @@ const data = [
     menu : 'Portfolio',
   },
   {
-    menu : 'Insights',
+    menu : 'Insight',
     children: [
       {
         innerMenu: 'Blogs'
@@ -203,21 +188,21 @@ const data = [
         innerMenu: 'Awards'
       },
       {
-        innerMenu: 'Podcasts'
+        innerMenu: 'Podcast'
       },
     ]
   },
   {
-    menu : 'Career',
-    url:'/career',
+    menu : 'Careers',
+    url:'/careers',
     children: [
       {
         innerMenu: 'Open Roles',
-        url:'/open-roles',
+        url:'/careers/open-roles',
       },
       {
-        innerMenu: 'Life At Altumind',
-        url:'/life-at-altumind',
+        innerMenu: 'Life at Altumind',
+        url:'/careers/life-at-altumind',
       },
     ]
   }
@@ -234,7 +219,11 @@ const Navbar = () => {
         <nav className="flex justify-between items-center h-full px-2 sm:px-5">
             <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="sm:w-[180px] w-[150px]" />
             <div className="items-center gap-5 hidden lg:flex ml-auto h-full">
-            <ul className="flex mr-3 h-full ">
+            {
+                      currentItem &&
+                      <div className=" bg-black bg-opacity-50 h-screen absolute top-full w-screen left-0"> </div>
+                    }
+            <ul className="flex mr-3 h-full relative font-montserrat">
                 {/* <Link to="/"><li>About us</li></Link>
                 <Link to="/"><li>Services</li></Link>
                 <Link to="/industries"><li>Industries</li></Link>
@@ -244,10 +233,7 @@ const Navbar = () => {
                 {
                   data?.map((item, index) => (
                     <>
-                    {
-                      currentItem &&
-                      <div className=" bg-black bg-opacity-20 h-screen absolute top-full  w-full left-0"> </div>
-                    }
+                   
                       
                     <Link
                     onMouseOver={() => setCurrentItem(item?.children ? item : null)}
@@ -285,7 +271,7 @@ const Navbar = () => {
         
               </div>
            
-            <Link to="/contact"> <button className="bg-[#DD5143] hidden lg:block outline-none border-none rounded-md text-white px-4 text-sm py-3">Lets Talk</button></Link>
+            <Link to="/contact"> <button className="bg-secondary hidden lg:block outline-none border-none rounded-md text-white px-4 text-sm font-medium font-montserrat py-3">Lets Talk</button></Link>
             </div>
          
             <MobileMenu showMobileMenu={showMobileMenu}/>

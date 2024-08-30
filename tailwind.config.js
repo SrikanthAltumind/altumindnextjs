@@ -19,7 +19,7 @@ export default {
         'gradientBlue'  :'#0350F6',
         'gradientGreen' : '#5EC7A7',
         'DarkBackground' : '#24272c',
-        'LightBlue' : '#EAF1FF'
+        'LightBlue' : '#F3F9FF'
       },
       boxShadow: {
         'custom-shadow': '0 0 4px 2px rgba(0, 0, 0, 0.1)', // Shadow visible from all sides

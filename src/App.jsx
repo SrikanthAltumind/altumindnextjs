@@ -26,6 +26,8 @@ import MissionAndVision from "./pages/MissionAndVision"
 import Leadership from "./pages/Leadership"
 import AboutUs from "./pages/AboutUs"
 import Error404 from "./pages/Error404"
+import DigitalCommerce from "./pages/DigitalCommerce"
+import Privacy from "./pages/Privacy"
 
 const router = createBrowserRouter([
   {
@@ -49,19 +51,19 @@ const router = createBrowserRouter([
         element:<Industry/>
       },
       {
-        path:"/bfsi-finance",
+        path:"/industries/bfsi-fintech",
         element:<BFSIAndFinance/>
       },
       {
-        path:"/healthcare",
+        path:"/industries/healthcare",
         element:<Healthcare/>
       },
       {
-        path:"/ed-tech",
+        path:"/industries/ed-tech",
         element:<EdTech/>
       },
       {
-        path:"/internet",
+        path:"/industries/internet",
         element:<Internet/>
       },
       {
@@ -85,31 +87,31 @@ const router = createBrowserRouter([
         element:<Alliance/>
       },
       {
-        path:"/experience-design",
+        path:"/services/experience-design",
         element:<ExperienceDesign/>
       },
       {
-        path:"/ai-automation",
+        path:"/services/ai-automation",
         element:<AIandAutomation/>
       },
       {
-        path:"/qa-testing",
+        path:"/services/qa-testing",
         element:<QAandTesting/>
       },
       {
-        path:"/digital-marketing-services",
+        path:"/services/digital-marketing-services",
         element:<DigitalMarketingServices/>
       },
       {
-        path:"/technology-engineering",
+        path:"/services/technology-engineering",
         element:<TechnologyAndEngineering/>
       },
       {
-        path:"/data-analytics",
+        path:"/services/data-analytics",
         element:<DataAnalytics/>
       },
       {
-        path:"/managed-operations",
+        path:"/services//managed-operations",
         element:<ManagedOperations/>
       },
       {
@@ -117,11 +119,11 @@ const router = createBrowserRouter([
         element:<Services/>
       },
       {
-        path:"/digital-strategy-consulting",
+        path:"/services/digital-strategy-consulting",
         element:<DigitalStrategy/>
       },
       {
-        path:"/cloud-services",
+        path:"/services/cloud-services",
         element:<CloudServices/>
       },
       {
@@ -136,7 +138,14 @@ const router = createBrowserRouter([
         path:"/about",
         element:<AboutUs/>
       },
-     
+      {
+        path:"/industries/digital-commerce",
+        element:<DigitalCommerce/>
+      },
+      {
+        path:"/privacy",
+        element:<Privacy/>
+      },
     ],
     
   }

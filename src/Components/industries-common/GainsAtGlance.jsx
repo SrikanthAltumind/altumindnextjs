@@ -29,17 +29,17 @@ const GainsAtGlance = () => {
     };
 
 useEffect(()=> {
-    if(location.pathname === '/bfsi-finance')
+    if(location.pathname === '/industries/bfsi-fintech')
         setSlideItems(gainsAtGlance.financeAndBFSI)
-    else if(location.pathname === '/healthcare')
+    else if(location.pathname === '/industries/healthcare')
         setSlideItems(gainsAtGlance.healthCare)
-    else if(location.pathname === '/ed-tech')
+    else if(location.pathname === '/industries/ed-tech')
         setSlideItems(gainsAtGlance.edTech)
-    else if(location.pathname === '/internet-saas')
+    else if(location.pathname === '/industries/internet')
         setSlideItems(gainsAtGlance.internetAndSaas)
-    else if(location.pathname === '/digital-commerce')
+    else if(location.pathname === '/industries/digital-commerce')
         setSlideItems(gainsAtGlance.digitalCommerce)
-    else if(location.pathname === '/green-sustainability')
+    else if(location.pathname === '/industries/green-sustainability')
         setSlideItems(gainsAtGlance.greenSustainability)
  
 },[])

@@ -83,34 +83,34 @@ const GetStarted = () => {
  
   useEffect(() => {
    
-    if (location.pathname === "/experience-design") {
+    if (location.pathname === "/services/experience-design") {
       setData(services.experience);
     }
-    else if (location.pathname === "/digital-marketing-services") {
+    else if (location.pathname === "/services/digital-marketing-services") {
       setData(services.digitalMarketingServices);
     }
-    else if (location.pathname === "/ai-automation") {
+    else if (location.pathname === "/services/ai-automation") {
       setData(services.aiAutomation);
     }
-    else if (location.pathname === "/qa-testing" ) {
+    else if (location.pathname === "/services/qa-testing" ) {
        setData(services.qaTesting);
     }
-    else if (location.pathname === "/technology-engineering" ) {
+    else if (location.pathname === "/services/technology-engineering" ) {
       setData(services.technologyEngineering);
    }
-   else if (location.pathname === "/data-analytics" ) {
+   else if (location.pathname === "/services/data-analytics" ) {
     setData(services.dataAnalytics);
    }
-    else if (location.pathname === "/managed-operations" ) {
+    else if (location.pathname === "/services/managed-operations" ) {
       setData(services.managedOperations);
  }
  else if (location.pathname === "/services" ) {
   setData(services.services);
 }
-else if (location.pathname === "/digital-strategy-consulting" ) {
+else if (location.pathname === "/services/digital-strategy-consulting" ) {
   setData(services.digitalStrategy);
 }
-else if (location.pathname === "/cloud-services" ) {
+else if (location.pathname === "/services/cloud-services" ) {
   setData(services.cloudServices);
 }
 else if (location.pathname === "/mission-and-vision" ) {

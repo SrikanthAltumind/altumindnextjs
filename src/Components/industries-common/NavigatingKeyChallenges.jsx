@@ -8,13 +8,15 @@ const NavigatingKeyChallenges = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/bfsi-finance')
+    if(location.pathname === '/industries/bfsi-fintech')
         apiUrl = 'api/industry-bfsi-challenge-contents?populate=*'
-    else if(location.pathname === '/healthcare')
+    else if(location.pathname === '/industries/healthcare')
         apiUrl = 'api/industry-hc-challenge-contents?populate=*'
-    else if(location.pathname === '/ed-tech')
+    else if(location.pathname === '/industries/ed-tech')
         apiUrl = 'api/industry-ed-challenge-contents?populate=*'
-      else if(location.pathname === '/internet')
+      else if(location.pathname === '/industries/internet')
+        apiUrl = 'api/industry-internet-challenge-contents?populate=*'
+          else if(location.pathname === '/industries/digital-commerce')
         apiUrl = 'api/industry-internet-challenge-contents?populate=*'
 
     const fetchData = () => {
@@ -33,7 +35,7 @@ const NavigatingKeyChallenges = () => {
         fetchData()
     },[])
   return (
-    <section id="section4" className="w-[90%] mx-auto font-raleway">
+    <div className="w-[90%] mx-auto font-raleway">
         <div>
             <p className="w-fit font-extrabold text-2xl lg:text-3xl py-2 mb-10 mx-auto bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Navigating Key Challenges</p>
         </div>
@@ -48,7 +50,7 @@ const NavigatingKeyChallenges = () => {
             ))
         }
     </div>
-    </section>
+    </div>
   )
 }
 

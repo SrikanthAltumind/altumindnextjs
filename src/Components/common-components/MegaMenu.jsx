@@ -1,5 +1,4 @@
 import { useState } from "react";
-import FeaturedInsights from "./FeaturedInsights"
 import { Link } from "react-router-dom";
 
 
@@ -9,19 +8,24 @@ const MegaMenu = ({item}) => {
     const [subMenu , setSubMenu] = useState(item.children[0]);
   return (
     <>
-  <div className="absolute dark:text-black mx-auto right-[calc((100vw-950px)/2)] w-[950px] z-10 top-full">
+  <div className="absolute dark:text-black mx-auto right-0 w-[950px] z-10 top-full">
     <div className=" rounded-lg  shadow-lg bg-[#F3F9FF] p-5 mt-3 " >
         <div className="flex text-[13px] font-medium justify-between w-full h-full">
           {/*  eslint-disable-next-line react/prop-types */}
-          <div className="basis-[60%] flex"  onMouseLeave={() => setSubMenu(item?.children[0])}>
+          <div className="basis-[60%] flex h-full"  onMouseLeave={() => setSubMenu(item?.children[0])}>
     
-          <div className="border-r basis-[50%] w-full h-full">
+          <div className="border-r min-h-[300px] basis-[50%] w-full h-full">
             <ul className="text-black font-montserrat">
             {
               // eslint-disable-next-line react/prop-types
               item?.children?.map((child, index) => (
-              <Link to={child?.url}  key={index}><li onMouseOver={() => setSubMenu(child)} className={`${subMenu?.innerMenu === child.innerMenu ? 'bg-[#DE5346] text-white' : '' } rounded-md flex gap-2 items-center  p-2 m-2`}>{subMenu?.innerMenu === child.innerMenu ? <span className="bg-white p-1 rounded-full"></span> : ''}{child.innerMenu}
-              </li></Link>
+              <Link to={child?.url}  key={index}><li onMouseOver={() => setSubMenu(child)} className={`${subMenu?.innerMenu === child.innerMenu ? 'bg-[#DE5346] text-white' : '' } rounded-md flex justify-between group items-center  p-2 m-2`}>{child.innerMenu}
+             {child?.children?.length > 0 &&
+                <svg className={`${subMenu?.innerMenu === child.innerMenu ? 'border-white' : 'border-black'} w-[19px] h-[19px] border p-[1.5px] rounded-full`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="m9 5 7 7-7 7"/>
+              </svg> 
+             } 
+</li></Link>
               ))
             }
             </ul>
@@ -36,10 +40,6 @@ const MegaMenu = ({item}) => {
             ))}
             </ul>
           </div>
-          </div>
-         
-          <div className="basis-[40%]" >
-           <FeaturedInsights/>
           </div>
 
         </div>

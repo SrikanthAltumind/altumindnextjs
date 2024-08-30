@@ -17,25 +17,25 @@ const Banner = () => {
         apiUrl = 'api/community-management-banner'
        else if(location.pathname === '/alliance')
         apiUrl = 'api/alliance-banner'
-       else if(location.pathname === '/experience-design')
+       else if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-banner'
-      else if(location.pathname === '/ai-automation')
+      else if(location.pathname === '/services/ai-automation')
         apiUrl = 'api/service-ai-automation-banner'
-      else if(location.pathname === '/qa-testing')
+      else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-banner'
-      else if(location.pathname === '/digital-marketing-services')
+      else if(location.pathname === '/services/digital-marketing-services')
         apiUrl = 'api/service-ai-automation-banner'
-        else if(location.pathname === '/technology-engineering')
+        else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-banner'
-      else if(location.pathname === '/data-analytics')
+      else if(location.pathname === '/services/data-analytics')
         apiUrl = 'api/service-data-analytics-banner'
-      else if(location.pathname === '/managed-operations')
+      else if(location.pathname === '/services/managed-operations')
         apiUrl = 'api/service-managed-operation-banner'
       else if(location.pathname === '/services')
         apiUrl = 'api/service-root-overview'
-       else if(location.pathname === '/digital-strategy-consulting')
+       else if(location.pathname === '/services/digital-strategy-consulting')
         apiUrl = 'api/service-digital-strategy-consulting-banner'
-       else if(location.pathname === '/cloud-services')
+       else if(location.pathname === '/services/cloud-services')
         apiUrl = 'api/service-cloud-banner'
        else if(location.pathname === '/mission-and-vision')
         apiUrl = 'api/our-mission-and-vision-banner'

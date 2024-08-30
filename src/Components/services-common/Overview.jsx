@@ -11,25 +11,25 @@ const Overview = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
+    if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-overview?populate=*'
-    else if(location.pathname === '/ai-automation')
+    else if(location.pathname === '/services/ai-automation')
         apiUrl = 'api/service-ai-auto-overview?populate=*'
-    else if(location.pathname === '/qa-testing')
+    else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-overview?populate=*'
-   else if(location.pathname === '/digital-marketing-services')
+   else if(location.pathname === '/services/digital-marketing-services')
     apiUrl = 'api/service-digital-marketing-overview?populate=*'
-    else if(location.pathname === '/technology-engineering')
+    else if(location.pathname === '/services/technology-engineering')
     apiUrl = 'api/service-tech-engg-overview?populate=*'
-  else if(location.pathname === '/data-analytics')
+  else if(location.pathname === '/services/data-analytics')
     apiUrl = 'api/service-data-analytics-overview?populate=*'
-  else if(location.pathname === '/managed-operations')
+  else if(location.pathname === '/services/managed-operations')
     apiUrl = 'api/service-managed-operation-overview?populate=*'
   else if(location.pathname === '/services')
     apiUrl = 'api/service-root-track-record?populate=*'
-  else if(location.pathname === '/digital-strategy-consulting')
+  else if(location.pathname === '/services/digital-strategy-consulting')
     apiUrl = 'api/service-digital-strategy-consulting-overview?populate=*'
-   else if(location.pathname === '/cloud-services')
+   else if(location.pathname === '/services/cloud-services')
     apiUrl = 'api/service-cloud-overview?populate=*'
      else if(location.pathname === '/mission-and-vision')
     apiUrl = 'api/our-mission-and-vision-future?populate=*'
@@ -71,7 +71,7 @@ const Overview = () => {
         );
       }
   return (
-    <section className="w-[90%]  dark:text-white mx-auto font-raleway">
+    <div className="w-[90%]  dark:text-white mx-auto font-raleway">
     <div className='max-w-[1100px] mx-auto'>
     <div className='lg:hidden text-center space-y-3 mb-10'>
         <p className='text-sm md:text-base dark:text-white text-black font-semibold'>{data?.title}</p>
@@ -91,7 +91,7 @@ const Overview = () => {
         </div>
     </div>
     </div>
-    </section>
+    </div>
   )
 }
 
