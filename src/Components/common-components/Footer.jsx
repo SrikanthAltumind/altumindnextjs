@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <> 
       <WatermarkLogo/>
-      <div className="dark:bg-[#0d1015] dark:text-white">
+      <div className="dark:bg-darkTheme dark:text-white">
       <div className="px-5 md:px-0 w-[95%] font-montserrat text-sm font-medium flex flex-wrap gap-y-10 flex-col md:justify-between md:gap-10 lg:justify-normal md:flex-row mx-auto p-10">
       <div className="lg:ml-5 lg:mr-16 lg:w-[330px]">
             <p className="text-lg font-semibold pb-2">Connect</p>

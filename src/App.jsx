@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { RouterProvider, createBrowserRouter, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import { AppLayout } from "./Layouts/AppLayout";
@@ -50,19 +51,67 @@ const router = createBrowserRouter([
       </>
     ),
     children: [
+=======
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import Home from "./pages/Home"
+import {AppLayout} from "./Layouts/AppLayout"
+import Contact from "./pages/Contact"
+import Industry from "./pages/Industry"
+import BFSIAndFinance from "./pages/BFSIAndFinance"
+import Healthcare from "./pages/Healthcare"
+import EdTech from "./pages/EdTech"
+import Internet from "./pages/Internet"
+import Career from "./pages/Career"
+import OpenRoles from "./pages/OpenRoles"
+import CommunityEngagement from "./pages/CommunityEngagement"
+import LifeAtAltumind from "./pages/LifeAtAltumind"
+import Alliance from "./pages/Alliance"
+import ExperienceDesign from "./pages/ExperienceDesign"
+import AIandAutomation from "./pages/AIandAutomation"
+import QAandTesting from "./pages/QAandTesting"
+import DigitalMarketingServices from "./pages/DigitalMarketingServices"
+import TechnologyAndEngineering from "./pages/TechnologyAndEngineering"
+import DataAnalytics from "./pages/DataAnalytics"
+import ManagedOperations from "./pages/ManagedOperations"
+import Services from "./pages/Services"
+import DigitalStrategy from './pages/DigitalStrategy'
+import CloudServices from "./pages/CloudServices"
+import MissionAndVision from "./pages/MissionAndVision"
+import Leadership from "./pages/Leadership"
+import AboutUs from "./pages/AboutUs"
+import Error404 from "./pages/Error404"
+import DigitalCommerce from "./pages/DigitalCommerce"
+import Privacy from "./pages/Privacy"
+
+const router = createBrowserRouter([
+  {
+    element:<AppLayout/>,
+   
+    children:[
+>>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
       {
         path: "/",
         element: <Home />,
       },
       {
+<<<<<<< HEAD
         path: "/contact",
         element: <Contact />,
+=======
+        path:"*",
+        element:<Error404 />
+        },
+      {
+        path:"/contact",
+        element:<Contact/>
+>>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
       },
       {
         path: "/industries",
         element: <Industry />,
       },
       {
+<<<<<<< HEAD
         path: "/industries/bfsi-fintech",
         element: <BFSIAndFinance />,
       },
@@ -77,6 +126,22 @@ const router = createBrowserRouter([
       {
         path: "/industries/internet-saas",
         element: <BFSIAndFinance />,
+=======
+        path:"/industries/bfsi-fintech",
+        element:<BFSIAndFinance/>
+      },
+      {
+        path:"/industries/healthcare",
+        element:<Healthcare/>
+      },
+      {
+        path:"/industries/ed-tech",
+        element:<EdTech/>
+      },
+      {
+        path:"/industries/internet",
+        element:<Internet/>
+>>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
       },
       {
         path: "/career",
@@ -177,6 +242,26 @@ const router = createBrowserRouter([
       {
         path: "/wip",
         element: <WIP />,
+      },
+      {
+        path:"/mission-and-vision",
+        element:<MissionAndVision/>
+      },
+      {
+        path:"/leadership",
+        element:<Leadership/>
+      },
+      {
+        path:"/about",
+        element:<AboutUs/>
+      },
+      {
+        path:"/industries/digital-commerce",
+        element:<DigitalCommerce/>
+      },
+      {
+        path:"/privacy",
+        element:<Privacy/>
       },
     ],
   },

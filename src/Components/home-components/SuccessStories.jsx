@@ -20,7 +20,7 @@ const SuccessStories = () => {
     },[])
 
   return (
-    <section className='font-raleway  dark:text-white'>
+    <div className='font-raleway  dark:text-white'>
     <div>
         <h1 className='text-center font-semibold'>Success Stories</h1>
         <h1 className='text-3xl mb-10 lg:mb-20 mt-2 text-center leading-9 font-extrabold text-primary dark:text-white'>Experiences That
@@ -50,7 +50,7 @@ const SuccessStories = () => {
             ))}
         </div>
     </div>
-    </section>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-
-
+import location from '../../assets/location.png'
+ 
 const OurLocation = () => {
   return (
     <section className="w-[90%] dark:text-white bg-LightBlue dark:bg-DarkBackground space-y-20 p-10 mx-auto font-raleway">

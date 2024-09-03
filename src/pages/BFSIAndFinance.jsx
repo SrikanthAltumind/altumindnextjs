@@ -16,6 +16,7 @@ import LogoMarquee from "../Components/common-components/LogoMarquee"
 import Menu from "../Components/industries-common/Menu"
 import { useEffect } from "react"
 import { useLocation } from "react-router-dom";
+import TechStackSlider from "../Components/services-common/TechStackSlider"
 
 const BFSIAndFinance = () => {
 
@@ -79,6 +80,7 @@ const BFSIAndFinance = () => {
           <InsightsBlogs />
         </div>
       </section>
+      <TechStackSlider />
       <Collaborate />
       <SubscribeForm />
     </div>

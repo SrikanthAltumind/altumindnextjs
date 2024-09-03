@@ -11,6 +11,8 @@ import HomeBannerUpdated from '../Components/home-components/HomeBannerUpdated'
 import LifeandCarrer from '../Components/home-components/LifeandCareer'
 import ResourceCenter from '../Components/home-components/ResourceCenter'
 import SuccessStories from '../Components/home-components/SuccessStories'
+import HomeBanner from '../Components/common-components/HomeBanner'
+
 const Home = () => {
   return (
     <div className='dark:bg-darkTheme lg:space-y-24 space-y-24 w-full'>

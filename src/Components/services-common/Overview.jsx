@@ -73,7 +73,7 @@ const Overview = () => {
         );
       }
   return (
-    <section className="w-[90%]  dark:text-white mx-auto font-raleway">
+    <div className="w-[90%]  dark:text-white mx-auto font-raleway">
     <div className='max-w-[1100px] mx-auto'>
     <div className='lg:hidden text-center space-y-3 mb-10'>
         <p className='text-sm md:text-base dark:text-white text-black font-semibold'>{data?.title}</p>
@@ -93,7 +93,7 @@ const Overview = () => {
         </div>
     </div>
     </div>
-    </section>
+    </div>
   )
 }
 

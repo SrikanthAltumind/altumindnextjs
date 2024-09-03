@@ -497,7 +497,11 @@ const Navbar = () => {
         <nav className="flex justify-between items-center h-full px-2 sm:px-5">
         <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="sm:w-[180px] w-[150px] cursor-pointer" onClick={()=>navigate("/")} />
             <div className="items-center gap-5 hidden lg:flex ml-auto h-full">
-            <ul className="flex mr-3 h-full ">
+            {
+                      currentItem &&
+                      <div className=" bg-black bg-opacity-50 h-screen absolute top-full w-screen left-0"> </div>
+                    }
+            <ul className="flex mr-3 h-full relative font-montserrat">
                 {/* <Link to="/"><li>About us</li></Link>
                 <Link to="/"><li>Services</li></Link>
                 <Link to="/industries"><li>Industries</li></Link>
