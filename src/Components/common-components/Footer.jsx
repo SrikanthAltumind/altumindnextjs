@@ -45,23 +45,25 @@ const Footer = () => {
             <div>
             <p  className="text-lg font-semibold pb-2">Services</p>
                <ul className="space-y-3 dark:font-normal">
-                <li>Design</li>
-                <li>Development</li>
-                <li>E-Commerce</li>
-                <li>AI & Chatbots</li>
-                <li>Cloud & Automation</li>
-                <li>Digital Marketing</li>
-                <li>Digital Analytics</li>
+                <li><Link to="/services/experience-design">Experience Design</Link></li>
+                <li><Link to="/services/technology-engineering">Technology and Engineering</Link></li>
+                <li><Link to="/services/ai-automation">AI & Automation</Link></li>
+                <li><Link to="/services/qa-testing">Quality Assurance & Testing Services</Link></li>
+                <li><Link to="/services/cloud-services">Cloud</Link></li>
+                <li><Link to="/services/digital-marketing">Digital Marketing</Link></li>
+                <li><Link to="/services/data-analytics">Data Analytics</Link></li>
+                <li><Link to="/services/managed-operations">Managed Operations</Link></li>
+                <li><Link to="/services/digital-strategy-consulting">Digital Strategy and Consulting</Link></li>
                </ul>
             </div>
             <div>
             <p  className="text-lg font-semibold pb-2">Others</p>
                <ul className="space-y-3 dark:font-normal">
-                <li>About Us</li>
+                <li><Link to="/about">About Us</Link></li>
                <li> <Link to="/contact">Contact Us</Link></li>
-                <li>Career</li>
-                <li>Insights</li>
-                <li>Portfolio</li>
+                <li><Link to="/career">Career</Link></li>
+                <li><Link to="/insights">Insights</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
                </ul>
             </div>
         </div>
@@ -94,7 +96,7 @@ const Footer = () => {
               <path d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z" />
               <path d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z" />
             </svg>
-            info@altumindglobal.com
+            <a href="mailto: info@altumindglobal.com">info@altumindglobal.com</a>
           </p>
           <p className="flex gap-4 dark:font-normal">
             <svg
@@ -122,8 +124,8 @@ const Footer = () => {
       <div className="w-[95%] px-5 md:px-0 flex md:flex-row text-center gap-y-10 md:text-left flex-col font-montserrat text-sm items-center border-t-[0.6px] border-[#8A8A8A] py-7 mx-auto">
         <p className="font-medium mx-auto lg:pl-20">Copyright © 2024 Altumind Global All rights reserved.</p>
         <div className="flex gap-8">
-        <p className="border-b dark:border-white dark:font-normal border-black cursor-pointer font-medium">Policy</p>
-        <p className="border-b dark:border-white dark:font-normal border-black  cursor-pointer font-medium">Terms</p>
+        <Link to="/privacy"><p className="border-b dark:border-white dark:font-normal border-black font-medium">Privacy</p></Link>
+        <Link to="/terms-conditions"><p className="border-b dark:border-white dark:font-normal border-black  cursor-pointer font-medium">Terms</p></Link>
         </div> 
       </div>
       </div>

@@ -53,7 +53,7 @@ const Collaborate = () => {
     else if (location.pathname === "/industries/ed-tech" ) {
       setData(industries.EDtech);
    }
-   else if (location.pathname === "/industries/internet" ) {
+   else if (location.pathname === "/industries/internet-saas" ) {
     setData(industries.Internet);
    }
    

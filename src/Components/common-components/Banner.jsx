@@ -11,7 +11,7 @@ const Banner = () => {
   const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/life-at-altumind')
+    if(location.pathname === '/careers/life-at-altumind')
         apiUrl = 'api/life-at-banner'
       else if(location.pathname === '/community-engagement')
         apiUrl = 'api/community-management-banner'
@@ -23,7 +23,7 @@ const Banner = () => {
         apiUrl = 'api/service-ai-automation-banner'
       else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-banner'
-      else if(location.pathname === '/services/digital-marketing-services')
+      else if(location.pathname === '/services/digital-marketing')
         apiUrl = 'api/service-ai-automation-banner'
         else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-banner'

@@ -28,6 +28,7 @@ import AboutUs from "./pages/AboutUs"
 import Error404 from "./pages/Error404"
 import DigitalCommerce from "./pages/DigitalCommerce"
 import Privacy from "./pages/Privacy"
+import Terms from "./pages/Terms"
 
 const router = createBrowserRouter([
   {
@@ -63,7 +64,7 @@ const router = createBrowserRouter([
         element:<EdTech/>
       },
       {
-        path:"/industries/internet",
+        path:"/industries/internet-saas",
         element:<Internet/>
       },
       {
@@ -71,7 +72,7 @@ const router = createBrowserRouter([
         element:<Career/>
       },
       {
-        path:"/career/open-roles",
+        path:"/careers/open-roles",
         element:<OpenRoles/>
       },
       {
@@ -79,7 +80,7 @@ const router = createBrowserRouter([
         element:<CommunityEngagement/>
       },
       {
-        path:"/life-at-altumind",
+        path:"/careers/life-at-altumind",
         element:<LifeAtAltumind/>
       },
       {
@@ -99,7 +100,7 @@ const router = createBrowserRouter([
         element:<QAandTesting/>
       },
       {
-        path:"/services/digital-marketing-services",
+        path:"/services/digital-marketing",
         element:<DigitalMarketingServices/>
       },
       {
@@ -111,7 +112,7 @@ const router = createBrowserRouter([
         element:<DataAnalytics/>
       },
       {
-        path:"/services//managed-operations",
+        path:"/services/managed-operations",
         element:<ManagedOperations/>
       },
       {
@@ -145,6 +146,10 @@ const router = createBrowserRouter([
       {
         path:"/privacy",
         element:<Privacy/>
+      },
+      {
+        path:"/terms-conditions",
+        element:<Terms/>
       },
     ],
     

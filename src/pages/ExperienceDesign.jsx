@@ -12,7 +12,7 @@ import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import IndustriesMenu from '../Components/industries-common/IndustriesMenu'
 
 const servicesMenu = [
-  {id:'section1', tabId:'tab1', name:'OverView'},
+  {id:'section1', tabId:'tab1', name:'Overview'},
   {id:'section2', tabId:'tab2', name:'Services'},
   {id:'section3', tabId:'tab3', name:'Tech Stack'},
   {id:'section4', tabId:'tab4', name:'Why Us'},

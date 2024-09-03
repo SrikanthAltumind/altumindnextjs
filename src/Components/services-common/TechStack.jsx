@@ -17,7 +17,7 @@ const TechStack = () => {
     //     apiUrl = 'api/industry-bfsi-sol-partners?populate=*'
     else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-stack?populate=*'
-    else if(location.pathname === '/services/digital-marketing-services')
+    else if(location.pathname === '/services/digital-marketing')
         apiUrl = 'api/service-digital-marketing-stack?populate=*'
     else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-stack?populate=*' 
@@ -60,7 +60,7 @@ const TechStack = () => {
         );
       }
   return (
-    <section className="dark:text-white w-[90%] p-5 mx-auto font-raleway ">  
+    <div className="dark:text-white w-[90%] p-5 mx-auto font-raleway ">  
        <div className="max-w-[950px] mx-auto">
       <div className='text-center space-y-3 mb-10'>
       <p className='text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold'>{data?.title}</p>
@@ -78,7 +78,7 @@ const TechStack = () => {
        
 
         </div>
-    </section>
+    </div>
   )
 }
 

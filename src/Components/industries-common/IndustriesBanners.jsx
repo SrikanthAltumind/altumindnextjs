@@ -13,7 +13,7 @@ const IndustriesBanners = () => {
         apiUrl = 'api/industry-healthcare'
     else if(location.pathname === '/industries/ed-tech')
         apiUrl = 'api/industry-edtech'
-      else if (location.pathname === '/industries/internet')
+      else if (location.pathname === '/industries/internet-saas')
         apiUrl = 'api/industry-internet'
        else if(location.pathname === '/industries/digital-commerce')
         apiUrl = 'api/industry-internet'

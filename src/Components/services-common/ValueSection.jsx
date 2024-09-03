@@ -176,16 +176,16 @@ const ValueSection = () => {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === "/ai-automation")
+    if (location.pathname === "/services/ai-automation")
       setData(aiAndAutomationData)
-    else if (location.pathname === "/digital-marketing-services")
+    else if (location.pathname === "/services/digital-marketing")
         setData(digitalMarketingData)
-    else if (location.pathname === "/cloud-services")
+    else if (location.pathname === "/services/cloud-services")
       setData(cloudServicesData)
   }, []);
 
   return (
-    <section className="w-[90%] sm:max-w-[650px] lg:max-w-[1100px] mx-auto font-raleway dark:text-white space-y-20">
+    <div className="w-[90%] sm:max-w-[650px] lg:max-w-[1100px] mx-auto font-raleway dark:text-white space-y-20">
     <div className='text-center space-y-2'>
         <p className='font-semibold dark:font-medium'>{data?.caption}</p>
         <p className='text-transparent max-w-[420px] xl:max-w-[520px] mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue font-extrabold text-3xl xl:text-4xl '>
@@ -285,7 +285,7 @@ const ValueSection = () => {
         </div>
       ))}
       </div>
-    </section>
+    </div>
   );
 };
 

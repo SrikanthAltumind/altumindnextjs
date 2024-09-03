@@ -25,3 +25,7 @@
 .dark .slick-dots li button::before{
   color: gray;
 }
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}

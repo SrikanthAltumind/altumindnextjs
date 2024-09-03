@@ -12,7 +12,7 @@ const BgImageBanner = () => {
   let apiUrl;
     if(location.pathname === '/community-engagement')
         apiUrl = 'api/community-management-vision?populate=*'
-    else if(location.pathname === '/life-at-altumind')
+    else if(location.pathname === '/careers/life-at-altumind')
         apiUrl = 'api/life-at-diversity?populate=*'
 
   const fetchData = ()=> {

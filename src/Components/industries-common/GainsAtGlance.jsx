@@ -35,7 +35,7 @@ useEffect(()=> {
         setSlideItems(gainsAtGlance.healthCare)
     else if(location.pathname === '/industries/ed-tech')
         setSlideItems(gainsAtGlance.edTech)
-    else if(location.pathname === '/industries/internet')
+    else if(location.pathname === '/industries/internet-saas')
         setSlideItems(gainsAtGlance.internetAndSaas)
     else if(location.pathname === '/industries/digital-commerce')
         setSlideItems(gainsAtGlance.digitalCommerce)

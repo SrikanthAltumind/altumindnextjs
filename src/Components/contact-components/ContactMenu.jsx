@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import CareersForm from './CareersForm'
-import CommonForm from './CommonForm'
+import ContactForm from './ContactForm'
 
 const formTabs = [
-    {id:'projects', name:'Projects'},
-    {id:'partnership', name:'Partnership'},
-    {id:'careers', name:'Careers'},
+    {id:'project', name:'Projects'},
+    {id:'partner', name:'Partnership'},
+    {id:'career', name:'Careers'},
     {id:'general', name:'General'},
 ]
 
-const ContactForms = () => {
+const ContactMenu = () => {
     const [selectedForm, setSelectedForm] = useState(formTabs[0].id)
   return (
     <div className='py-10 font-raleway'>
@@ -23,13 +22,14 @@ const ContactForms = () => {
             ))}
         </div>
         <div className='mt-7'>
-            {selectedForm==='careers'
+            {/* {selectedForm==='career'
              ? <CareersForm/>
              : <CommonForm selectedForm={selectedForm}/>
-            }
+            } */}
+            <ContactForm selectedForm={selectedForm}/>
         </div>
     </div>
   )
 }
 
-export default ContactForms
+export default ContactMenu

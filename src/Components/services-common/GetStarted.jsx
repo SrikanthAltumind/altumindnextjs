@@ -86,7 +86,7 @@ const GetStarted = () => {
     if (location.pathname === "/services/experience-design") {
       setData(services.experience);
     }
-    else if (location.pathname === "/services/digital-marketing-services") {
+    else if (location.pathname === "/services/digital-marketing") {
       setData(services.digitalMarketingServices);
     }
     else if (location.pathname === "/services/ai-automation") {

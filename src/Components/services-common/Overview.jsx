@@ -17,7 +17,7 @@ const Overview = () => {
         apiUrl = 'api/service-ai-auto-overview?populate=*'
     else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-overview?populate=*'
-   else if(location.pathname === '/services/digital-marketing-services')
+   else if(location.pathname === '/services/digital-marketing')
     apiUrl = 'api/service-digital-marketing-overview?populate=*'
     else if(location.pathname === '/services/technology-engineering')
     apiUrl = 'api/service-tech-engg-overview?populate=*'

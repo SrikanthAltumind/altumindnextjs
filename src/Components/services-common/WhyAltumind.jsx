@@ -17,7 +17,7 @@ const WhyAltumind = () => {
         apiUrl = 'api/service-ai-auto-stands?populate=*'
     else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-stands?populate=*'
-        else if(location.pathname === '/services/digital-marketing-services')
+        else if(location.pathname === '/services/digital-marketing')
         apiUrl = 'api/service-digital-marketing-stands?populate=*'
         else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-stands?populate=*'

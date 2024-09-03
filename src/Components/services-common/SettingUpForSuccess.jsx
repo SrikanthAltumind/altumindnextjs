@@ -18,7 +18,7 @@ const SettingUpForSuccess = () => {
         apiUrl = 'api/service-ai-auto-we-serves?populate=*'
     else if(location.pathname === '/services/qa-testing')
         apiUrl = 'api/service-qa-testing-we-serves?populate=*'
-    else if(location.pathname === '/services/digital-marketing-services')
+    else if(location.pathname === '/services/digital-marketing')
         apiUrl = 'api/service-digital-marketing-benifits?populate=*'
     else if(location.pathname === '/services/technology-engineering')
         apiUrl = 'api/service-tech-engg-we-serves?populate=*'

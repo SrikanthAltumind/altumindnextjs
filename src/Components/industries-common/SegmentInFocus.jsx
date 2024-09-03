@@ -14,7 +14,7 @@ const SegmentInFocus = () => {
         apiUrl = 'api/industry-hc-segment-contents?populate=*'
     else if(location.pathname === '/industries/ed-tech')
         apiUrl = 'api/industry-ed-segement-contents?populate=*'
-    else if(location.pathname=== '/industries/internet')
+    else if(location.pathname=== '/industries/internet-saas')
         apiUrl = 'api/industry-internet-segment-contents?populate=*'
      else if(location.pathname=== '/industries/digital-commerce')
         apiUrl = 'api/industry-internet-segment-contents?populate=*'
