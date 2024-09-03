@@ -98,7 +98,10 @@ const Testing = () => {
               {qaService?.attributes?.description}
             </p>
           </div>
-          <Spectrum spectrumData={serviceData} />
+          <div className="w-full flex justify-center items-center">
+            <Spectrum spectrumData={serviceData} />
+          </div>
+
           {/* <div className="flex flex-col gap-8 justify-center items-center p-4">
             {serviceData?.map((service, index) => (
               <div

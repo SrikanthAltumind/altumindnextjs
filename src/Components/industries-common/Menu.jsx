@@ -1,17 +1,7 @@
 import React, { useState } from 'react'
 
-const Menu = () => {
+const Menu = ({sections}) => {
 
-      const sections = [
-        { id: "section-1", tabId: "tab1", name: "Segments" },
-        { id: "section-2", tabId: "tab2", name: "Value propostion" },
-        { id: "section-3", tabId: "tab3", name: "Offerings" },
-        { id: "section-4", tabId: "tab4", name: "Challenges" },
-        { id: "section-5", tabId: "tab5", name: "Success" },
-        { id: "section-6", tabId: "tab6", name: "Benifits" },
-        { id: "section-7", tabId: "tab7", name: "Tools" },
-        { id: "section-8", tabId: "tab8", name: "Insights" },
-      ];
 
     const [selectedTab, setSelectedTab] = useState(sections[0]?.id)
   // Function to handle scrolling to a section
@@ -23,7 +13,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="font-raleway w-full sticky top-0 z-10">
+    <div className="font-raleway w-full sticky top-[75px] z-10">
       <div
         id="sectionTabsMenu"
         className="bg-[#EAF1FF] overflow-x-auto no-scrollbar"

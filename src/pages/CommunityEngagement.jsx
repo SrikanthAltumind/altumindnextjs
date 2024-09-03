@@ -9,7 +9,10 @@ const CommunityEngagement = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-20 lg:gap-28">
       <Banner />
-      <CommunityCards />
+      <section className="w-full">
+        <CommunityCards />
+      </section>
+
       <BgImageBanner />
       <CollaborativeInitiatives />
       <div className="w-full flex justify-center items-center flex-col gap-10 md:gap-16 font-raleway">

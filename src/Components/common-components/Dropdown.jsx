@@ -13,7 +13,7 @@ function useMenuAnimation(isOpen) {
     animate(
       scope.current.querySelector(".arrow"),
       { rotate: isOpen ? 180 : 0 },
-      { duration: 0.2 }
+      { duration: 0.1 }
     );
 
     animate(
@@ -63,7 +63,7 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
   }, [data]);
 
   return (
-    <nav className="menu" ref={scope}>
+    <nav className="menu" ref={scope} key={ddName + "insights"}>
       <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -89,19 +89,22 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
         className="mt-2 bg-white border border-gray-300 p-2 text-sm shadow-md space-y-2 absolute w-[200px] max-h-[300px] overflow-y-auto z-2"
       >
         {data?.map((item, index) => (
-          <li className="flex justify-start gap-3 w-full text-sm font-medium" key={index}>
+          <li
+            className="flex justify-start gap-3 w-full text-sm font-medium"
+            key={index}
+          >
             <input
               type="checkbox"
-              name={item + "cb"}
-              id={item + "cb"}
+              name={item?.attributes?.typeName + "cb"}
+              id={item?.attributes?.typeName + "cb"}
               checked={selection === item}
               onChange={() => handleSelection(item)}
             />
             <label
               className="dark:text-black"
-              htmlFor={item?.attributes?.typeName + "cb"}
+              htmlFor={item?.attributes?.typeName ?? item + "cb"}
             >
-              {item}
+              {item?.attributes?.typeName}
             </label>
           </li>
         ))}

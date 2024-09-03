@@ -7,19 +7,19 @@ const bfsi = {
   third_line: "Next-Gen Fintech Solutions",
 };
 const healthcare = {
-  first_line: "",
-  second_line: "",
-  third_line: "",
+  first_line: "Collaborating for",
+  second_line: "Leading HealthTech Innovation Together",
+  third_line: "Advanced Digital Healthcare Solutions",
 };
 const edtech = {
-  first_line: "",
-  second_line: "",
-  third_line: "",
+  first_line: "Collaborating for",
+  second_line: "Transforming EdTech with Strategic Partnership",
+  third_line: "Future-Ready Edtech Solutions",
 };
 const internet = {
-  first_line: "",
-  second_line: "",
-  third_line: "",
+  first_line: "Collaborating for",
+  second_line: "Accelerate SaaS Success with Powerful Partnerships",
+  third_line: "Transformative SaaS Solutions",
 };
 const digitalEcommerce = {
   first_line: "Dominate the Digital",

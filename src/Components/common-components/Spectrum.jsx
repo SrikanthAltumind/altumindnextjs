@@ -58,7 +58,7 @@ const Spectrum = () => {
     }
 
     return (
-      <div className="flex flex-col gap-8 justify-center items-center p-4 font-raleway">
+      <div className=" w-[90%] flex flex-col gap-8 justify-center items-center p-4 font-raleway">
         {data?.map((service, index) => (
           <div
             className={`${

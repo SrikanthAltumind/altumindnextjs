@@ -25,7 +25,7 @@ const Services = () => {
         <LogoMarquee />
       </div>
       <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-        <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">                 
+        <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
           <p className="font-semibold">Our Key Services</p>
           <p className="text-4xl font-extrabold md:max-w-[500px]">
             <span>
@@ -37,7 +37,10 @@ const Services = () => {
           {/* <p className="md:max-w-[800px]">{data?.attributes?.description}</p> */}
         </div>
       </div>
-      <Spectrum />
+      <div className="w-full flex justify-center items-center">
+        <Spectrum />
+      </div>
+
       <SuccessStories />
       <section>
         <div className="text-center space-y-2 mb-20 font-raleway">

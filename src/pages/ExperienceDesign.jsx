@@ -10,33 +10,49 @@ import WhyAltumind from "../Components/services-common/WhyAltumind"
 import GetStarted from '../Components/services-common/GetStarted'
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import { gradientStyle } from "../ReactFunctions"
+import Menu from "../Components/industries-common/Menu"
 
 const ExperienceDesign = () => {
+  const servicesMenu = [
+    { id: "section-1", tabId: "tab1", name: "OverView" },
+    { id: "section-2", tabId: "tab2", name: "Services" },
+    { id: "section-3", tabId: "tab3", name: "Tech Stack" },
+    { id: "section-4", tabId: "tab4", name: "Why Us" },
+    { id: "section-5", tabId: "tab5", name: "Testimonials" },
+    { id: "section-6", tabId: "tab6", name: "Benefits" },
+
+    // { id: "section-7", tabId: "tab6", name: "Tech Stack" },
+    { id: "section-8", tabId: "tab8", name: "Success" },
+    { id: "section-9", tabId: "tab9", name: "Insights" },
+  ];
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-16">
-      <Banner />
-      <Overview />
-      <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-        <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-          <p className="font-semibold">Our Design Services</p>
-          <p className="text-3xl font-extrabold">
-            <span>Your Partner in </span>
-            <span style={gradientStyle}>Experience-Driven Growth</span>
-          </p>
-          {/* <p className="md:max-w-[800px]">
-            Functional Testing: Ensure rock-solid functionality and reliability.
-            Our domain-specific solutions
-            <br /> rigorously evaluate features, stability, and user
-            interactions, delivering peak performance before
-            <br />
-            production
-          </p> */}
-        </div>
-        <OurDesignServices />
+      <div className="w-full">
+        <Banner />
+        <Menu sections={servicesMenu} />
       </div>
-
-      <TechStack />
-      <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
+      <section id="section-1">
+        <Overview />
+      </section>
+      <section id="section-2">
+        <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
+          <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
+            <p className="font-semibold">Our Design Services</p>
+            <p className="text-3xl font-extrabold">
+              <span>Your Partner in </span>
+              <span style={gradientStyle}>Experience-Driven Growth</span>
+            </p>
+          </div>
+          <OurDesignServices />
+        </div>
+      </section>
+      <section id="section-3">
+        <TechStack />
+      </section>
+      <section
+        id="section-4"
+        className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10"
+      >
         <div className="text-center font-raleway space-y-3 mb-10">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Why Altumind Stands Out
@@ -47,8 +63,7 @@ const ExperienceDesign = () => {
         </div>
         <WhyAltumind />
       </section>
-
-      <section>
+      <section id="section-5">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Client Testimonials
@@ -59,7 +74,7 @@ const ExperienceDesign = () => {
         </div>
         <Testimonials />
       </section>
-      <section>
+      <section id="section-6">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Client Testimonials
@@ -71,8 +86,12 @@ const ExperienceDesign = () => {
         <SettingUpForSuccess />
       </section>
       <GetStarted />
-      <SuccessStories />
-      <InsightsBlogs />
+      <section id="section-8">
+        <SuccessStories />
+      </section>
+      <section id="section-9">
+        <InsightsBlogs />
+      </section>
       <SubscribeForm />
     </div>
   );

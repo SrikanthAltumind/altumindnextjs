@@ -44,7 +44,7 @@ const ResourceCenter = () => {
                 ))}
             </ul> */}
             </div>
-            <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
+            {/* <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${activeCategory?.attributes?.category_card_mains?.data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}
                 `}>
             {activeCategory?.attributes?.category_card_mains?.data?.slice(-3)?.map(card=> (
@@ -63,7 +63,7 @@ const ResourceCenter = () => {
                     </div>
                         
                 ))}
-            </div> 
+            </div> */}
           </div>
           {/* <div className='justify-center flex items-center mt-10'>
           <button className="bg-secondary rounded-full text-sm text-white font-montserrat py-3 px-3">View All Insights</button>

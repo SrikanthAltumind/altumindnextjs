@@ -44,14 +44,14 @@ const CommunityCards = () => {
 
 
     return (
-      <div className="w-full flex flex-col gap-3 items-center justify-center font-raleway">
+      <div className="w-full flex flex-col gap-2 items-center justify-center font-raleway">
         <p className="font-medium">Key Areas of Responsible Practice</p>
         <p className="text-4xl font-extrabold" style={gradientStyle}>
           Our Commitment
         </p>
         <p className="md:max-w-[800px] p-2 text-center text-sm mt-2">{`At Altumind, we're not just about creating "wow" moments – we're committed to unlocking technology's potential for good. Our mission? To shape a world where innovation serves both humanity and our planet. We don't just talk about responsibility; we live it. Through concrete actions, we're ensuring our impact ripples far and wide, touching lives and fostering positive change in everything we do. `}</p>
         <div className="overflow-hidden w-full relative min-h-fit p-3 mt-2">
-          <Marquee>
+          <Marquee className="py-4">
             {data?.map((content) => (
               <div
                 key={content?.id}

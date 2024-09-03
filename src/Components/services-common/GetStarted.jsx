@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { gradientStyle } from "../../ReactFunctions";
  
 const services = {
   experience: {
@@ -111,7 +112,7 @@ const GetStarted = () => {
   return (
         <div className="bg-LightBlue min-h-[280px] w-full flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2">
           <div className="ml-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
-            <p className="font-bold text-2xl lg:text-3xl max-w-[500px] ">
+            <p className="font-bold text-2xl lg:text-3xl max-w-[500px]">
               {data?.heading}
             </p>
             {data?.caption && <p className="font-medium max-w-[60%]">{data?.caption}</p>}

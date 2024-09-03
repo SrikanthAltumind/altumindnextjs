@@ -79,7 +79,7 @@ const HomeBanner = () => {
         className=" dark:text-white bg-LightBlue dark:bg-gradient-to-b from-primary to-darkTheme font-raleway"
       >
         {bannerData.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="max-h-[600px]">
             <div className="min-h-[calc(100vh-40px)] sm:min-h-[calc(100vh-300px)] sm:flex justify-center  md:px-5 max-sm:pt-10">
               <div className="basis-[50%] flex items-center justify-center">
                 <img

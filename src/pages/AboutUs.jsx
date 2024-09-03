@@ -5,6 +5,8 @@ import OurImpactByNumbers from "../Components/services-common/OurImpactByNumbers
 import Overview from "../Components/services-common/Overview";
 import WhyAltumind from "../Components/services-common/WhyAltumind";
 import { gradientStyle } from "../ReactFunctions";
+import NorthAndVisionary from '../Components/about-components/NorthAndVisionary'
+import ExploreFurther from '../Components/about-components/ExploreFurther'
 
 const AboutUs = () => {
   return (
@@ -50,6 +52,9 @@ const AboutUs = () => {
           </p>
         </div>
         <WhyAltumind />
+      </section>
+      <section>
+        <NorthAndVisionary />
       </section>
       <section>
         <div className="text-center font-raleway flex flex-col gap-6 items-center justify-start p-3">
@@ -112,11 +117,14 @@ const AboutUs = () => {
           <div className="basis-[32%] bg-red-10 max-w-[320px] hidden lg:block">
             <img
               className=""
-              src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Our_Aspiration_Compressify_io_a51eef2b4f.webp"
+              src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Our_shared_commitment_Compressify_io_e57b08a7b4.webp"
               alt={`about-section-img`}
             />
           </div>
         </div>
+      </section>
+      <section className="py-6">
+        <ExploreFurther />
       </section>
     </div>
   );

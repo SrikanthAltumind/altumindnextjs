@@ -21,6 +21,17 @@ import TechStackSlider from "../Components/services-common/TechStackSlider"
 const BFSIAndFinance = () => {
 
 
+  const sections = [
+    { id: "section-1", tabId: "tab1", name: "Segments" },
+    { id: "section-2", tabId: "tab2", name: "Value propostion" },
+    { id: "section-3", tabId: "tab3", name: "Offerings" },
+    { id: "section-4", tabId: "tab4", name: "Challenges" },
+    { id: "section-5", tabId: "tab5", name: "Success" },
+    { id: "section-6", tabId: "tab6", name: "Benefits" },
+    { id: "section-7", tabId: "tab7", name: "Insights" },
+    { id: "section-8", tabId: "tab8", name: "Tools" },
+  ];
+
   const location = useLocation()
   useEffect(() => {
     console.log("Location changed:", location.pathname);
@@ -34,7 +45,7 @@ const BFSIAndFinance = () => {
           <p className="font-raleway text-2xl font-semibold">Trusted By</p>
           <LogoMarquee />
         </div>
-        <Menu />
+        <Menu sections={sections} />
       </section>
       <section id="section-1">
         <SegmentInFocus />
@@ -69,7 +80,7 @@ const BFSIAndFinance = () => {
           <SolutionPartners />
         </div>
       </section>
-      <section id="section-8">
+      <section id="section-7">
         <div className="flex flex-col gap-10 w-full items-center justify-center">
           <p
             className="text-4xl font-bold font-raleway py-3"
@@ -80,7 +91,10 @@ const BFSIAndFinance = () => {
           <InsightsBlogs />
         </div>
       </section>
-      <TechStackSlider />
+      <section id="section-8">
+        <TechStackSlider />
+      </section>
+
       <Collaborate />
       <SubscribeForm />
     </div>

@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <div className="w-[90%] mx-auto -mt-[50px]">
       <div className="overflow-x-auto lg:w-[90%] mx-auto">
-        <ul className="flex justify-between gap-14 min-w-max">
+        <ul className="flex justify-between gap-14 min-w-max font-montserrat">
       {
         data?.map((item) => {
             return (

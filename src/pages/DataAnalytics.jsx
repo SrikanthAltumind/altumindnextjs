@@ -5,6 +5,7 @@ import SubscribeForm from "../Components/common-components/SubscribeForm"
 import Testimonials from "../Components/common-components/Testimonials"
 import SuccessStories from "../Components/home-components/SuccessStories"
 import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+import Menu from "../Components/industries-common/Menu"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
@@ -12,36 +13,45 @@ import TechStack from "../Components/services-common/TechStack"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 import { gradientStyle } from "../ReactFunctions"
 
-const servicesMenu = [
-  {id:'section1', tabId:'tab1', name:'OverView'},
-  {id:'section2', tabId:'tab2', name:'Services'},
-  {id:'section3', tabId:'tab3', name:'Tech Stack'},
-  {id:'section4', tabId:'tab4', name:'Why Us'},
-  {id:'section5', tabId:'tab5', name:'Testimonials'},
-  {id:'section6', tabId:'tab6', name:'Benefits'},
-  {id:'section7', tabId:'tab7', name:'Success'},
-  {id:'section8', tabId:'tab8', name:'Insights'},
-]
 
 const DataAnalytics = () => {
+  const servicesMenu = [
+    { id: "section-1", tabId: "tab1", name: "OverView" },
+    { id: "section-2", tabId: "tab2", name: "Services" },
+    { id: "section-3", tabId: "tab3", name: "Why Us" },
+    { id: "section-4", tabId: "tab4", name: "Testimonials" },
+    { id: "section-5", tabId: "tab5", name: "Tech Stack" },
+    { id: "section-6", tabId: "tab6", name: "Benefits" },
+    { id: "section-7", tabId: "tab7", name: "Success Stories" },
+    { id: "section-8", tabId: "tab8", name: "Insights" },
+  ];
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-16">
-      <Banner />
-      <Overview />
-      <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-        <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-          <p className="font-semibold">Our Data Analytics Services</p>
-          <p className="text-3xl font-extrabold md:max-w-[500px]">
-            <span style={gradientStyle}>
-              Full Spectrum Data Analytics
-              <br />{" "}
-            </span>
-            <span>from Insight to Impact</span>
-          </p>
-        </div>
+      <div className="w-full">
+        <Banner />
+        <Menu sections={servicesMenu} />
       </div>
-      <Spectrum />
-      <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
+      <section id="section-1">
+        <Overview />
+      </section>
+      <section id="section-2">
+        <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
+          <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
+            <p className="font-semibold">Our Data Analytics Services</p>
+            <p className="text-3xl font-extrabold md:max-w-[500px]">
+              <span style={gradientStyle}>
+                Full Spectrum Data Analytics
+                <br />{" "}
+              </span>
+              <span>from Insight to Impact</span>
+            </p>
+          </div>
+        </div>
+        <div className="w-full flex justify-center items-center">
+          <Spectrum />
+        </div>
+      </section>
+      <section id="section-3" className="bg-[#F3F9FF] py-8">
         <div className="text-center font-raleway space-y-3 mb-10">
           <p className="text-sm md:text-base dark:text-white text-black font-semibold">
             Why Altumind Stands Out
@@ -52,7 +62,7 @@ const DataAnalytics = () => {
         </div>
         <WhyAltumind />
       </section>
-      <section>
+      <section id="section-4">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Client Testimonials
@@ -63,21 +73,26 @@ const DataAnalytics = () => {
         </div>
         <Testimonials />
       </section>
-      <section>
+      <section id="section-5">
+        <TechStack />
+      </section>
+      <section id="section-6">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Industries We Serve
+            Benefits
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Tailored Solutions Across Diverse Sectors
+          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
+            <span style={gradientStyle}>Transforming Raw Data</span>
+            <span className="text-[#02143b]">into Real Results</span>
           </p>
         </div>
         <SettingUpForSuccess />
       </section>
-      <TechStack />
       <GetStarted />
-      <SuccessStories />
-      <section>
+      <section id="section-7">
+        <SuccessStories />
+      </section>
+      <section id="section-8">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Insights
@@ -88,7 +103,6 @@ const DataAnalytics = () => {
         </div>
         <InsightsBlogs />
       </section>
-
       <SubscribeForm />
     </div>
   );

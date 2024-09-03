@@ -1,55 +1,58 @@
-import React, { useEffect, useState } from 'react'
-import { gradientStyle } from '../ReactFunctions';
-import Dropdown from '../Components/common-components/Dropdown';
-import axios from 'axios';
-import LoaderSpinner from '../Components/common-components/LoaderSpinner';
+import React, { useEffect, useState } from "react";
+import { gradientStyle } from "../ReactFunctions";
+import Dropdown from "../Components/common-components/Dropdown";
+import axios from "axios";
+import LoaderSpinner from "../Components/common-components/LoaderSpinner";
+import InsightsBlogs from "../Components/common-components/InsightsBlogs";
 
 const Insights = () => {
+  const [topicFilters, setTopicFilters] = useState([]);
+  const [typeFilters, setTypeFilters] = useState([]);
+  const [prodServiceFilters, setProdServiceFilters] = useState([]);
+  const [tagsFilters, setTagsFilters] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [topicFilters, setTopicFilters] = useState([])
-    const [typeFilters, setTypeFilters] = useState([])
-    const [prodServiceFilters, setProdServiceFilters] = useState([])
-    const [tagsFilters, setTagsFilters] = useState([])
-    const [loading, setLoading] = useState(true);
+  const [selections, setSelections] = useState({
+    Type: "",
+    "Product & Services": "",
+    Topics: "",
+    Tags: "",
+  });
 
-    const [selections, setSelections] = useState({
-        Type: "",
-        "Product & Services": "",
-        Topics: "",
-        Tags: "",
-    });
+  const handleSelectionChange = (ddName, selectedItem) => {
+    setSelections((prevSelections) => ({
+      ...prevSelections,
+      [ddName]: selectedItem,
+    }));
+  };
 
-      const handleSelectionChange = (ddName, selectedItem) => {
-        setSelections((prevSelections) => ({
-          ...prevSelections,
-          [ddName]: selectedItem,
-        }));
+  useEffect(() => {
+    const fetchFilters = async () => {
+      try {
+        const [topics, types, prodServices, tags] = await Promise.all([
+          axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-topics`),
+          axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-types`),
+          axios.get(
+            `${
+              import.meta.env.VITE_APP_API_URL
+            }api/insight-product-and-services`
+          ),
+          axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-tags`),
+        ]);
+
+        setTopicFilters(topics.data?.data);
+        setTypeFilters(types.data?.data);
+        setProdServiceFilters(prodServices.data?.data);
+        setTagsFilters(tags.data?.data);
+      } catch (error) {
+        console.error("Error fetching filters:", error);
+      } finally {
+        setLoading(false);
+      }
     };
-    
-   useEffect(() => {
-     const fetchFilters = async () => {
-       try {
-         const [topics, types, prodServices, tags] = await Promise.all([
-           axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-topics`),
-           axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-types`),
-           axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-product-and-services`),
-           axios.get(`${import.meta.env.VITE_APP_API_URL}api/insight-tags`),
-         ]);
 
-         setTopicFilters(topics.data?.data);
-         setTypeFilters(types.data?.data);
-         setProdServiceFilters(prodServices.data?.data);
-         setTagsFilters(tags.data?.data);
-       } catch (error) {
-         console.error("Error fetching filters:", error);
-       } finally {
-         setLoading(false);
-       }
-     };
-
-     fetchFilters();
-   }, []);
-
+    fetchFilters();
+  }, []);
 
   return (
     <div className="w-full flex flex-col font-raleway">
@@ -115,35 +118,40 @@ const Insights = () => {
       {loading ? (
         <LoaderSpinner />
       ) : (
-        <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative p-5">
-          <Dropdown
-            data={topicFilters}
-            ddName="Type"
-            selection={selections.Type}
-            onSelectionChange={handleSelectionChange}
-          />
-          <Dropdown
-            data={typeFilters}
-            ddName="Products & Services"
-            selection={selections["Product & Services"]}
-            onSelectionChange={handleSelectionChange}
-          />
-          <Dropdown
-            data={prodServiceFilters}
-            ddName="Topics"
-            selection={selections.Topics}
-            onSelectionChange={handleSelectionChange}
-          />
-          <Dropdown
-            data={tagsFilters}
-            ddName="Tags"
-            selection={selections.Tags}
-            onSelectionChange={handleSelectionChange}
-          />
+        <div className="w-full flex flex-col gap-8 items-center justify-center">
+          <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative p-5">
+            <Dropdown
+              data={topicFilters}
+              ddName="Type"
+              selection={selections.Type}
+              onSelectionChange={handleSelectionChange}
+            />
+            <Dropdown
+              data={typeFilters}
+              ddName="Products & Services"
+              selection={selections["Product & Services"]}
+              onSelectionChange={handleSelectionChange}
+            />
+            <Dropdown
+              data={prodServiceFilters}
+              ddName="Topics"
+              selection={selections.Topics}
+              onSelectionChange={handleSelectionChange}
+            />
+            <Dropdown
+              data={tagsFilters}
+              ddName="Tags"
+              selection={selections.Tags}
+              onSelectionChange={handleSelectionChange}
+            />
+            </div>
+            <div className="w-full flex justify-center items-center">
+              <InsightsBlogs />
+            </div>
         </div>
       )}
     </div>
   );
-}
+};
 
-export default Insights
+export default Insights;

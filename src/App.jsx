@@ -1,66 +1,10 @@
-<<<<<<< HEAD
-import { RouterProvider, createBrowserRouter, useLocation } from "react-router-dom";
-import Home from "./pages/Home";
-import { AppLayout } from "./Layouts/AppLayout";
-import Contact from "./pages/Contact";
-import Industry from "./pages/Industry";
-import BFSIAndFinance from "./pages/BFSIAndFinance";
-// import Healthcare from "../unnecessary-code/Healthcare";
-// import EdTech from "../unnecessary-code/EdTech";
-// import Internet from "../unnecessary-code/Internet";
-import Career from "./pages/Career";
-import OpenRoles from "./pages/OpenRoles";
-import Portfolio from "./pages/Portfolio";
-import Insights from "./pages/Insights";
-import CommunityEngagement from "./pages/CommunityEngagement";
-import LifeAtAltumind from "./pages/LifeAtAltumind";
-import Alliance from "./pages/Alliance";
-import ExperienceDesign from "./pages/ExperienceDesign";
-import Testing from "./pages/Testing";
-import AIandAutomation from "./pages/AIandAutomation";
-import QAandTesting from "./pages/QAandTesting";
-import DigitalMarketingServices from "./pages/DigitalMarketingServices";
-import TechnologyAndEngineering from "./pages/TechnologyAndEngineering";
-import DataAnalytics from "./pages/DataAnalytics";
-import ManagedOperations from "./pages/ManagedOperations";
-import Services from "./pages/Services";
-import DigitalStrategy from "./pages/DigitalStrategy";
-import CloudServices from "./pages/CloudServices";
-import WIP from "./pages/WIP";
-import Leadership from "./pages/Leadership";
-import MissionAndVision from "./pages/MissionAndVision";
-import AboutUs from "./pages/AboutUs";
-import { useEffect } from "react";
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
-
-const router = createBrowserRouter([
-  {
-    element: (
-      <>
-        <ScrollToTop />
-        <AppLayout />
-      </>
-    ),
-    children: [
-=======
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import { RouterProvider, createBrowserRouter, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import {AppLayout} from "./Layouts/AppLayout"
 import Contact from "./pages/Contact"
 import Industry from "./pages/Industry"
 import BFSIAndFinance from "./pages/BFSIAndFinance"
-import Healthcare from "./pages/Healthcare"
-import EdTech from "./pages/EdTech"
-import Internet from "./pages/Internet"
+import Portfolio from "./pages/Portfolio"
 import Career from "./pages/Career"
 import OpenRoles from "./pages/OpenRoles"
 import CommunityEngagement from "./pages/CommunityEngagement"
@@ -82,36 +26,49 @@ import AboutUs from "./pages/AboutUs"
 import Error404 from "./pages/Error404"
 import DigitalCommerce from "./pages/DigitalCommerce"
 import Privacy from "./pages/Privacy"
+import Insights from "./pages/Insights"
+import Testing from "./pages/Testing"
+import WIP from './pages/WIP'
+import { useEffect } from "react"
+import Terms from "./pages/Terms"
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const router = createBrowserRouter([
   {
-    element:<AppLayout/>,
-   
-    children:[
->>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
+    element: (
+      <>
+        <ScrollToTop />
+        <AppLayout />
+      </>
+    ),
+
+    children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-<<<<<<< HEAD
+        path: "*",
+        element: <Error404 />,
+      },
+      {
         path: "/contact",
         element: <Contact />,
-=======
-        path:"*",
-        element:<Error404 />
-        },
-      {
-        path:"/contact",
-        element:<Contact/>
->>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
       },
       {
         path: "/industries",
         element: <Industry />,
       },
       {
-<<<<<<< HEAD
         path: "/industries/bfsi-fintech",
         element: <BFSIAndFinance />,
       },
@@ -126,22 +83,6 @@ const router = createBrowserRouter([
       {
         path: "/industries/internet-saas",
         element: <BFSIAndFinance />,
-=======
-        path:"/industries/bfsi-fintech",
-        element:<BFSIAndFinance/>
-      },
-      {
-        path:"/industries/healthcare",
-        element:<Healthcare/>
-      },
-      {
-        path:"/industries/ed-tech",
-        element:<EdTech/>
-      },
-      {
-        path:"/industries/internet",
-        element:<Internet/>
->>>>>>> ba30ad3b6654891bbf6dfa89d65e3d640da5e1b1
       },
       {
         path: "/career",
@@ -184,7 +125,7 @@ const router = createBrowserRouter([
         element: <AIandAutomation />,
       },
       {
-        path: "services/quality-assurance-quality-control",
+        path: "/services/quality-assurance-quality-control",
         element: <QAandTesting />,
       },
       {
@@ -244,24 +185,28 @@ const router = createBrowserRouter([
         element: <WIP />,
       },
       {
-        path:"/mission-and-vision",
-        element:<MissionAndVision/>
+        path: "/mission-and-vision",
+        element: <MissionAndVision />,
       },
       {
-        path:"/leadership",
-        element:<Leadership/>
+        path: "/leadership",
+        element: <Leadership />,
       },
       {
-        path:"/about",
-        element:<AboutUs/>
+        path: "/about",
+        element: <AboutUs />,
       },
       {
-        path:"/industries/digital-commerce",
-        element:<DigitalCommerce/>
+        path: "/industries/digital-commerce",
+        element: <DigitalCommerce />,
       },
       {
-        path:"/privacy",
-        element:<Privacy/>
+        path: "/privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "/terms",
+        element: <Terms />,
       },
     ],
   },
@@ -269,7 +214,7 @@ const router = createBrowserRouter([
 
 function App() {
   
-  console.log("updated on: 23rd Aug 2024")
+  console.log("updated on: 03/09/24")
   return <RouterProvider router={router} />;
 }
 
