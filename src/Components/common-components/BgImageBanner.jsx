@@ -10,10 +10,10 @@ const BgImageBanner = () => {
 
   
   let apiUrl;
-    if(location.pathname === '/community-engagement')
-        apiUrl = 'api/community-management-vision?populate=*'
-    else if(location.pathname === '/life-at-altumind')
-        apiUrl = 'api/life-at-diversity?populate=*'
+    if (location.pathname === "/about/about-altumind/community-engagement")
+      apiUrl = "api/community-management-vision?populate=*";
+    else if (location.pathname === "/career/life-at-altumind")
+      apiUrl = "api/life-at-diversity?populate=*";
 
   const fetchData = ()=> {
     axios.get(`${import.meta.env.VITE_APP_API_URL}${apiUrl}`)

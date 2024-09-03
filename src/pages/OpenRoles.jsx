@@ -7,6 +7,7 @@ import { gradientStyle } from "../ReactFunctions";
 import axios from "axios";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import {debounce} from 'lodash'
+import Banner from "../Components/common-components/Banner";
 
 const OpenRoles = () => {
 
@@ -159,8 +160,22 @@ useEffect(() => {
 
 
   return (
-    <div className="w-full flex flex-col gap-5 justify-center items-center p-6 font-raleway dark:text-white dark:bg-[#0d1015]">
-      <div className="w-full justify-center items-center p-4">
+    <div className="w-full flex flex-col gap-8 justify-center items-center font-raleway dark:text-white dark:bg-[#0d1015]">
+      <div className="w-full md:h-[380px] bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
+        <p className="text-3xl font-extrabold">
+          <span style={gradientStyle}>Careers That Evolve</span>{" "}
+          <span>With You</span>
+        </p>
+        <p>
+          Join a Culture That Celebrates Your Unique
+          <br />
+          Challenger Spirit
+        </p>
+        <button className="w-[200px] h-[50px] rounded-3xl text-white text-sm font-medium bg-[#DD5143]">
+          See All Open Roles
+        </button>
+      </div>
+      <div className="w-full justify-center items-center p-6">
         <div className="flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">
           <label htmlFor="role-search">
             <svg
@@ -195,7 +210,7 @@ useEffect(() => {
               fill="currentColor"
               className="size-8 cursor-pointer"
               onClick={() => {
-                setSearchTerm("")
+                setSearchTerm("");
                 setJobs(initialJobs);
               }}
             >
@@ -208,7 +223,7 @@ useEffect(() => {
           )}
         </div>
       </div>
-      <div className="flex w-full justify-start items-center">
+      <div className="flex w-full justify-start items-center p-6">
         <p className="font-semibold capitalize">Filter By</p>
       </div>
       <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative">
@@ -247,12 +262,12 @@ useEffect(() => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col justify-start items-center gap-8">
+      <div className="flex flex-col justify-start items-center gap-8 mt-10">
         <p className="text-center text-4xl font-extrabold">
           <span>{"Be Ready for What's Next: "}</span> <br />
           <span style={gradientStyle}>Join Our Talent Pool</span>
         </p>
-        <div className="flex flex-col gap-3 w-full justify-center items-center">
+        <div className="flex flex-col gap-3 w-full justify-center items-center p-4">
           <p className="font-raleway text-sm max-w-[1020px] text-center">
             {
               "We value attitude and skills that transcend job descriptions. If you believe your capabilities can thrive in our innovative environment, we want to hear from you."

@@ -11,32 +11,41 @@ const Banner = () => {
   const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/life-at-altumind')
-        apiUrl = 'api/life-at-banner'
-      else if(location.pathname === '/community-engagement')
-        apiUrl = 'api/community-management-banner'
-       else if(location.pathname === '/alliance')
-        apiUrl = 'api/alliance-banner'
-       else if(location.pathname === '/experience-design')
-        apiUrl = 'api/service-exp-design-banner'
-      else if(location.pathname === '/ai-automation')
-        apiUrl = 'api/service-ai-automation-banner'
-      else if(location.pathname === '/qa-testing')
-        apiUrl = 'api/service-qa-testing-banner'
-      else if(location.pathname === '/digital-marketing-services')
-        apiUrl = 'api/service-ai-automation-banner'
-        else if(location.pathname === '/technology-engineering')
-        apiUrl = 'api/service-tech-engg-banner'
-      else if(location.pathname === '/data-analytics')
-        apiUrl = 'api/service-data-analytics-banner'
-      else if(location.pathname === '/managed-operations')
-        apiUrl = 'api/service-managed-operation-banner'
-      else if(location.pathname === '/services')
-        apiUrl = 'api/service-root-overview'
-       else if(location.pathname === '/digital-strategy-consulting')
-        apiUrl = 'api/service-digital-strategy-consulting-banner'
-       else if(location.pathname === '/cloud-services')
-        apiUrl = 'api/service-cloud-banner'
+    if (location.pathname === "/career/life-at-altumind")
+      apiUrl = "api/life-at-banner";
+    else if (location.pathname === "/about/about-altumind/community-engagement")
+      apiUrl = "api/community-management-banner";
+    else if (location.pathname === "/alliance") apiUrl = "api/alliance-banner";
+    else if (location.pathname === "/services/experience-design")
+      apiUrl = "api/service-exp-design-banner";
+    else if (location.pathname === "/services/ai-and-chat-bot")
+      apiUrl = "api/service-ai-automation-banner";
+    else if (
+      location.pathname === "/services/quality-assurance-quality-control"
+    )
+      apiUrl = "api/service-qa-testing-banner";
+    else if (location.pathname === "/services/digital-marketing")
+      apiUrl = "api/service-digital-marketing-banner";
+    else if (location.pathname === "/services/technology-and-engineering")
+      apiUrl = "api/service-tech-engg-banner";
+    else if (location.pathname === "/services/data-analytics")
+      apiUrl = "api/service-data-analytics-banner";
+    else if (location.pathname === "/services/managed-operations")
+      apiUrl = "api/service-managed-operation-banner";
+    else if (location.pathname === "/services")
+      apiUrl = "api/service-root-overview";
+    else if (location.pathname === "/services/digital-strategy-consulting")
+      apiUrl = "api/service-digital-strategy-consulting-banner";
+    else if (location.pathname === "/services/cloud-automation")
+      apiUrl = "api/service-cloud-banner";
+    else if (location.pathname === "/about/about-altumind/alliance")
+      apiUrl = "api/alliance-banner";
+    else if (location.pathname === "/about/about-altumind/leadership")
+      apiUrl = "api/leadership-banner";
+    else if (location.pathname === "/about/about-altumind/mission-and-vision")
+      apiUrl = "api/our-mission-and-vision-banner";
+    else if (location.pathname === "/about") apiUrl = "api/about-us-banner";
+    else if (location.pathname === "/career/open-roles") apiUrl = "/api/open-role-banner";
 
   const fetchData = () => {
     const url = 
@@ -44,6 +53,7 @@ const Banner = () => {
     axios
       .get(url)
       .then((res) => {
+        console.log("data from banner: ", res?.data?.data)
         setData(res?.data?.data?.attributes);
         setLoading(false);
       })

@@ -12,26 +12,28 @@ const SettingUpForSuccess = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
-        apiUrl = 'api/service-exp-design-benifits?populate=*'
-    else if(location.pathname === '/ai-automation')
-        apiUrl = 'api/service-ai-auto-we-serves?populate=*'
-    else if(location.pathname === '/qa-testing')
-        apiUrl = 'api/service-qa-testing-we-serves?populate=*'
-    else if(location.pathname === '/digital-marketing-services')
-        apiUrl = 'api/service-digital-marketing-benifits?populate=*'
-    else if(location.pathname === '/technology-engineering')
-        apiUrl = 'api/service-tech-engg-we-serves?populate=*'
-    else if(location.pathname === '/data-analytics')
-      apiUrl = 'api/service-data-analytics-benifits?populate=*'
-       else if(location.pathname === '/managed-operations')
-      apiUrl = 'api/service-managed-operation-benifits?populate=*'
-      else if(location.pathname === '/services')
-      apiUrl = 'api/service-root-benifits?populate=*'
-      else if(location.pathname === '/digital-strategy-consulting')
-      apiUrl = 'api/service-digital-strategy-consulting-benifits?populate=*'
-      else if(location.pathname === '/cloud-services')
-      apiUrl = 'api/service-cloud-benifits?populate=*'
+    if (location.pathname === "/services/experience-design")
+      apiUrl = "api/service-exp-design-benifits?populate=*";
+    else if (location.pathname === "/services/ai-and-chat-bot")
+      apiUrl = "api/service-ai-auto-we-serves?populate=*";
+    else if (location.pathname === "/services/quality-assurance-quality-control")
+      apiUrl = "api/service-qa-testing-we-serves?populate=*";
+    else if (location.pathname === "/services/digital-marketing")
+      apiUrl = "api/service-digital-marketing-benifits?populate=*";
+    else if (location.pathname === "/services/technology-and-engineering")
+      apiUrl = "api/service-tech-engg-we-serves?populate=*";
+    else if (location.pathname === "/services/data-analytics")
+      apiUrl = "api/service-data-analytics-benifits?populate=*";
+    else if (location.pathname === "/services/managed-operations")
+      apiUrl = "api/service-managed-operation-benifits?populate=*";
+    else if (location.pathname === "/services")
+      apiUrl = "api/service-root-benifits?populate=*";
+    else if (location.pathname === "/services/digital-strategy-consulting")
+      apiUrl = "api/service-digital-strategy-consulting-benifits?populate=*";
+    else if (location.pathname === "/services/cloud-automation")
+    apiUrl = "api/service-cloud-benifits?populate=*";
+  else if (location.pathname === "/about/about-altumind/mission-and-vision")
+    apiUrl = "api/our-mission-and-vision-words?populate=*";
 
     const fetchData = () => {
         const url = `${

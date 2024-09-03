@@ -8,14 +8,19 @@ const NavigatingKeyChallenges = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/bfsi-finance')
-        apiUrl = 'api/industry-bfsi-challenge-contents?populate=*'
-    else if(location.pathname === '/healthcare')
-        apiUrl = 'api/industry-hc-challenge-contents?populate=*'
-    else if(location.pathname === '/ed-tech')
-        apiUrl = 'api/industry-ed-challenge-contents?populate=*'
-      else if(location.pathname === '/internet')
-        apiUrl = 'api/industry-internet-challenge-contents?populate=*'
+    if (location.pathname === "/industries/bfsi-fintech")
+      apiUrl = "api/industry-bfsi-challenge-contents?populate=*";
+    else if (location.pathname === "/industries/healthcare")
+      apiUrl = "api/industry-hc-challenge-contents?populate=*";
+    else if (location.pathname === "/industries/edtech")
+      apiUrl = "api/industry-ed-challenge-contents?populate=*";
+    else if (location.pathname === "/industries/internet-saas")
+      apiUrl = "api/industry-internet-challenge-contents?populate=*";
+    else if (location.pathname === "/industries/green-sustainability")
+      apiUrl = "api/industry-gs-challenges?populate=*";
+    else if (location.pathname === "/industries/digital-commerce")
+      apiUrl = "api/industry-digital-commerce-challenges?populate=*";
+  
 
     const fetchData = () => {
         const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`
@@ -30,26 +35,36 @@ const NavigatingKeyChallenges = () => {
     }
 
     useEffect(() => {
-        fetchData()
-    },[])
+      fetchData();
+    }, [location.pathname]);
   return (
     <section id="section4" className="w-[90%] mx-auto font-raleway">
-        <div>
-            <p className="w-fit font-extrabold text-2xl lg:text-3xl py-2 mb-10 mx-auto bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Navigating Key Challenges</p>
-        </div>
-        <div className="flex justify-center items-center gap-10 flex-wrap max-w-[950px] mx-auto">
-        {
-            data?.map((item) => (
-                <div key={item.id} className="h-[270px] w-[250px] shadow-custom-shadow p-3 dark:bg-white rounded-sm">
-                    <img src={item?.attributes?.icon?.data?.attributes?.url} />
-                    <p className="text-lg font-medium py-3">{item?.attributes?.title}</p>
-                    <p className="text-sm">{item?.attributes?.description}</p>
-                </div>
-            ))
-        }
-    </div>
+      <div>
+        <p className="w-fit font-extrabold text-2xl lg:text-3xl py-2 mb-10 mx-auto bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+          Navigating Key Challenges
+        </p>
+      </div>
+      <div className="flex justify-center items-center gap-10 flex-wrap max-w-[950px] mx-auto">
+        {data?.map((item) => (
+          <div
+            key={item.id}
+            className="h-[270px] w-[250px] shadow-custom-shadow p-3 dark:bg-white rounded-sm"
+          >
+            <img
+              src={item?.attributes?.icon?.data?.attributes?.url}
+              height="100%"
+              width="100%"
+              className="w-[50px] h-[50px] object-contain"
+            />
+            <p className="text-lg font-medium py-3">
+              {item?.attributes?.title}
+            </p>
+            <p className="text-sm">{item?.attributes?.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
-  )
+  );
 }
 
 export default NavigatingKeyChallenges

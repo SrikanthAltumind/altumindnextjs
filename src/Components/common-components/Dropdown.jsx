@@ -92,16 +92,16 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
           <li className="flex justify-start gap-3 w-full text-sm font-medium" key={index}>
             <input
               type="checkbox"
-              name={item?.attributes?.typeName + "cb"}
-              id={item?.attributes?.typeName + "cb"}
-              checked={selection === item?.attributes?.typeName}
-              onChange={() => handleSelection(item?.attributes?.typeName)}
+              name={item + "cb"}
+              id={item + "cb"}
+              checked={selection === item}
+              onChange={() => handleSelection(item)}
             />
             <label
               className="dark:text-black"
               htmlFor={item?.attributes?.typeName + "cb"}
             >
-              {item?.attributes?.typeName}
+              {item}
             </label>
           </li>
         ))}

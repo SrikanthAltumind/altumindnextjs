@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { gradientStyle } from '../ReactFunctions';
 import axios from 'axios';
+import Spectrum from '../Components/common-components/Spectrum';
 
 const Testing = () => {
 
@@ -25,10 +26,8 @@ const Testing = () => {
 
     const fetchAllData = async () => {
       try {
-        const [overviewData, qaService, serviceData, standData, weServe, stack] = await Promise.all([
+        const [overviewData, standData, weServe, stack] = await Promise.all([
             axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-overview?populate=*`),
-            axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-service`),
-            axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-service-contents?populate=*`),
             axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-stands?populate=*`),
             axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-we-serves?populate=*`),
             axios.get(`${import.meta.env.VITE_APP_API_URL}api/service-qa-testing-stack?populate=*`),
@@ -80,8 +79,9 @@ const Testing = () => {
               src={overviewData?.attributes?.image?.data?.attributes?.url}
               alt={overviewData?.attributes?.image?.data?.attributes?.name}
               height="100%"
-              width="100%"
-              className="w-full object-fit max-w-[420px] max-h-[360px]"
+              // width="100%"
+              className="ml-auto"
+              width={400}
             />
           </div>
         </div>
@@ -98,13 +98,12 @@ const Testing = () => {
               {qaService?.attributes?.description}
             </p>
           </div>
-          <div className="flex flex-col gap-8 justify-center items-center p-4">
+          <Spectrum spectrumData={serviceData} />
+          {/* <div className="flex flex-col gap-8 justify-center items-center p-4">
             {serviceData?.map((service, index) => (
               <div
                 className={`${
-                  index % 2 !== 0
-                    ? ""
-                    : "border-l-8  flex-row-reverse"
+                  index % 2 !== 0 ? "" : "border-l-8  flex-row-reverse"
                 } flex w-full justify-evenly gap-5 items-center py-4 border-[#EF8188]`}
                 key={"servicebox" + index}
               >
@@ -152,7 +151,7 @@ const Testing = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     );

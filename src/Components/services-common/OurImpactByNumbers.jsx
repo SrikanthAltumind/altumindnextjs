@@ -21,18 +21,80 @@ const ourGlobalImprintsData = [
     {id:'users', title:'Users Benefiting from Our Solutions', value:30, countSpeed:50, imagePath:userIcon},
     {id:'projects', title:'Successful Projects Delivered', value:100, countSpeed:20, imagePath:bulbIcon},
     {id:'domains', title:'Domains of Specialized Expertise', value:20, countSpeed:70, imagePath:starIcon},
-  ]
+]
+  
+const aboutUsImpactData = [
+  {
+    id: "years",
+    title: "8 Years of Proven Expertise",
+    description: "Delivering results and exceeding expectations since 2016.",
+    value: 8,
+    suffix: "+",
+    countSpeed: 200,
+    imagePath: businessYears,
+  },
+  {
+    id: "projects",
+    title: "Successful Projects",
+    description:
+      "A track record of driving innovation across diverse industries.",
+    value: 100,
+    suffix: "+",
+    countSpeed: 20,
+    imagePath: bulbIcon,
+  },
+  {
+    id: "domains",
+    title: "Domains of Expertise",
+    description:
+      "Providing comprehensive solutions tailored to your unique needs. ",
+    value: 20,
+    suffix: "+",
+    countSpeed: 70,
+    imagePath: starIcon,
+  },
+  {
+    id: "trust",
+    title: "Client Attrition Rate ",
+    description:
+      "Building lasting partnerships based on trust and exceptional service. ",
+    value: 9,
+    suffix: "%",
+    countSpeed: 200,
+    imagePath: userIcon,
+  },
+  {
+    id: "countries",
+    title: "Global Reach, Local Impact",
+    description:
+      "Serving clients across 5 continents with a personalized approach. ",
+    value: 5,
+    suffix: "",
+    countSpeed: 200,
+    imagePath: globeIcon,
+  },
+  {
+    id: "users",
+    title: "Users and Counting",
+    description: " Empowering millions with our transformative solutions. ",
+    value: 30,
+    suffix: "M+",
+    countSpeed: 50,
+    imagePath: userIcon,
+  },
+];
 
 const OurImpactByNumbers = () => {
   const [statsData, setStatsData] = useState()
   const location = useLocation()
 
   useEffect(()=> {
-      if(location.pathname==='/services'){
-        setStatsData(ourImpactByNumbers)
-      }
-      else if(location.pathname==='/contact-us'){
-        setStatsData(ourGlobalImprintsData)
+      if (location.pathname === "/services") {
+        setStatsData(ourImpactByNumbers);
+      } else if (location.pathname === "/contact-us") {
+        setStatsData(ourGlobalImprintsData);
+      } else if (location.pathname === "/about") {
+        setStatsData(aboutUsImpactData);
       }
   },[])
   return (

@@ -11,26 +11,33 @@ const WhyAltumind = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
-        apiUrl = 'api/service-exp-design-alt-stands?populate=*'
-    else if(location.pathname === '/ai-automation')
-        apiUrl = 'api/service-ai-auto-stands?populate=*'
-    else if(location.pathname === '/qa-testing')
-        apiUrl = 'api/service-qa-testing-stands?populate=*'
-        else if(location.pathname === '/digital-marketing-services')
-        apiUrl = 'api/service-digital-marketing-stands?populate=*'
-        else if(location.pathname === '/technology-engineering')
-        apiUrl = 'api/service-tech-engg-stands?populate=*'
-        else if(location.pathname === '/data-analytics')
-            apiUrl = 'api/service-data-analytics-stands?populate=*'
-        else if(location.pathname === '/managed-operations')
-            apiUrl = 'api/service-managed-operation-stands?populate=*'
-        else if(location.pathname === '/services')
-            apiUrl = 'api/service-root-why-choose-altuminds?populate=*'
-        else if(location.pathname === '/digital-strategy-consulting')
-            apiUrl = 'api/service-digital-strategy-consulting-stands?populate=*'
-         else if(location.pathname === '/cloud-services')
-            apiUrl = 'api/service-cloud-stands?populate=*'
+    if (location.pathname === "/services/experience-design")
+      apiUrl = "api/service-exp-design-alt-stands?populate=*";
+    else if (location.pathname === "/services/ai-and-chat-bot")
+      apiUrl = "api/service-ai-auto-stands?populate=*";
+    else if (
+      location.pathname === "/services/quality-assurance-quality-control"
+    )
+      apiUrl = "api/service-qa-testing-stands?populate=*";
+    else if (location.pathname === "/services/digital-marketing")
+      apiUrl = "api/service-digital-marketing-stands?populate=*";
+    else if (location.pathname === "/services/technology-and-engineering")
+      apiUrl = "api/service-tech-engg-stands?populate=*";
+    else if (location.pathname === "/services/data-analytics")
+      apiUrl = "api/service-data-analytics-stands?populate=*";
+    else if (location.pathname === "/services/managed-operations")
+      apiUrl = "api/service-managed-operation-stands?populate=*";
+    else if (location.pathname === "/services")
+      apiUrl = "api/service-root-why-choose-altuminds?populate=*";
+    else if (location.pathname === "/services/digital-strategy-consulting")
+      apiUrl = "api/service-digital-strategy-consulting-stands?populate=*";
+    else if (location.pathname === "/services/cloud-automation")
+      apiUrl = "api/service-cloud-stands?populate=*";
+    else if (location.pathname === "/about/about-altumind/leadership")
+      apiUrl = "api/leadership-philosophy-contents?populate=*";
+    else if (location.pathname === "/about")
+      apiUrl = "api/about-us-why-us-contents?populate=*";
+
 
     
 

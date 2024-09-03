@@ -7,14 +7,20 @@ const IndustriesBanners = () => {
   const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/bfsi-finance')
-        apiUrl = 'api/industry-bfsi'
-    else if(location.pathname === '/healthcare')
-        apiUrl = 'api/industry-healthcare'
-    else if(location.pathname === '/ed-tech')
-        apiUrl = 'api/industry-edtech'
-      else if (location.pathname === '/internet')
-        apiUrl = 'api/industry-internet'
+    if (location.pathname === "/industries/bfsi-fintech")
+      apiUrl = "api/industry-bfsi";
+    else if (location.pathname === "/industries/healthcare")
+      apiUrl = "api/industry-healthcare";
+    else if (location.pathname === "/industries/edtech")
+      apiUrl = "api/industry-edtech";
+    else if (location.pathname === "/industries/internet-saas")
+      apiUrl = "api/industry-internet";
+    else if (location.pathname === "/industries/green-sustainability")
+      apiUrl = "api/industry-gs-banner";
+    else if (location.pathname === "/industries/digital-commerce")
+      apiUrl = "api/industry-digital-commerce-banner";
+  
+  
  
   const fetchBannerData = ()=> {
     axios.get(import.meta.env.VITE_APP_API_URL + apiUrl)
@@ -26,13 +32,13 @@ const IndustriesBanners = () => {
       })
   }
 
-useEffect(()=> {
-  fetchBannerData()
-},[])
+useEffect(() => {
+  fetchBannerData();
+}, [location.pathname]);
 
   return (
     <div className=' flex justify-center items-center bg-[#e1f0f9] min-h-[280px] text-tertiary w-full'>
-        <div className='text-center px-2'>
+        <div className='text-center px-2 flex flex-col items-center justify-center'>
             <p className='font-raleway w-fit font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue text-3xl md:text-4xl'>
                 {data?.title}
             </p>

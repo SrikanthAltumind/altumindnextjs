@@ -1,5 +1,14 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+const obj = {
+  id: 1,
+  attributes: {
+    title: "Innovative SaaS Solutions",
+    description:
+      "Accelerate digital transformation with tailored SaaS products, CRM integrations, and scalable cloud-native applications driving efficiency and growth.",
+  },
+};
 
 const Accordion = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +20,9 @@ const Accordion = ({ content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-semibold">{content?.title}</h2>
+          <h2 className="text-lg font-semibold">
+            {content?.attributes?.title ?? content?.attributes?.question}
+          </h2>
           <span>
             {isOpen ? (
               <svg
@@ -48,7 +59,9 @@ const Accordion = ({ content }) => {
         animate={{ height: isOpen ? "auto" : 0 }}
         className="overflow-hidden"
       >
-        <div className="px-4 py-2 text-sm">{content?.content}</div>
+        <div className="px-4 py-2 text-sm">
+          {content?.attributes?.description ?? content?.attributes?.answer}
+        </div>
       </motion.div>
     </div>
   );

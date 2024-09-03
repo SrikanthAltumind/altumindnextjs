@@ -14,10 +14,10 @@ const OurDesignServices = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/experience-design')
-        apiUrl = 'api/service-exp-design-services'
-      else if(location.pathname === '/services')
-        apiUrl = 'api/service-root-explores'
+    if (location.pathname === "/services/experience-design")
+      apiUrl = "api/service-exp-design-services";
+    else if (location.pathname === "/services")
+      apiUrl = "api/service-root-explores";
 
 
     const fetchData = () => {

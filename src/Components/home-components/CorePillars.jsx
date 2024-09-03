@@ -246,9 +246,9 @@ const CorePillars = () => {
     >
       <div className="w-full text-center flex flex-col gap-4">
         <p className="font-semibold">Core Pillars</p>
-        <p className="text-4xl font-extrabold text-[#02194a]">
+        <p className="md:text-4xl text-2xl font-extrabold text-[#02194a] dark:text-white">
           <span style={gradientStyle}>Driving Forces</span> Behind <br />
-          Our Extraordinary Achievements.
+          Our Extraordinary Achievements
         </p>
       </div>
       <motion.div
@@ -265,7 +265,7 @@ const CorePillars = () => {
           stiffness: 35,
         }}
         // variants={staggerContainer}
-        className="w-full flex justify-center items-center gap-4 mt-10"
+        className="w-full flex justify-center items-center gap-6 mt-10 flex-wrap"
       >
         {cards.map((card, index) => (
           <motion.div

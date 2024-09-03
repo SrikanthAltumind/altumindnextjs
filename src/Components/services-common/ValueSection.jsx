@@ -115,6 +115,9 @@ const digitalMarketingData = {
   
 ]
 }
+
+// const 
+
 const cloudServicesData = {
   caption: 'Cloud Solutions',
   heading:'Powering Business with Smart Cloud Solutions',
@@ -176,12 +179,12 @@ const ValueSection = () => {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === "/ai-automation")
-      setData(aiAndAutomationData)
-    else if (location.pathname === "/digital-marketing-services")
-        setData(digitalMarketingData)
-    else if (location.pathname === "/cloud-services")
-      setData(cloudServicesData)
+    if (location.pathname === "/services/ai-and-chat-bot")
+      setData(aiAndAutomationData);
+    else if (location.pathname === "/services/digital-marketing")
+      setData(digitalMarketingData);
+    else if (location.pathname === "/services/cloud-automation")
+      setData(cloudServicesData);
   }, []);
 
   return (

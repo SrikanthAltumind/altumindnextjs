@@ -62,7 +62,7 @@ const scrollTabButtons = (tabId)=> {
  
 useEffect(()=> {
     const activeSection = sectionsMenu.find(section=> section.id===visibleSection)
-    scrollTabButtons(activeSection.tabId)
+    scrollTabButtons(activeSection?.tabId)
  
 },[visibleSection])
  

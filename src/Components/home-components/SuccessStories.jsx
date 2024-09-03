@@ -31,13 +31,13 @@ const SuccessStories = () => {
               <div key={story.id} className='min-w-[210px] sm:w-[250px] md:w-[280px]  even:sm:self-end even:sm:mt-[-320px] even:md:mt-[-350px]  '> 
                 <div className='h-[210px] sm:h-[250px] md:h-[280px]'>
                     <img className='w-full' 
-                        //  src={story?.attributes?.image?.data?.attributes?.url}
-                        src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Group_5118_Compressify_io_bfde8a23ac.webp"
+                         src={story?.attributes?.image?.data?.attributes?.url}
+                        // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Group_5118_Compressify_io_bfde8a23ac.webp"
                          alt={story?.attributes?.name}/>
                 </div>
                 <div className='pt-3'>
                     <p className='font-bold text-[10px] sm:text-xs  mb-2 sm:mb-4 lg:mb-5'>{story?.attributes?.name}</p>
-                    <p className='font-extrabold text-xl md:text-2xl'>{story?.attributes?.heading}</p>
+                    <p className='font-extrabold text-lg md:text-xl'>{story?.attributes?.heading}</p>
                     <p className='max-sm:line-clamp-2 font-medium text-xs sm:text-sm lg:text-base my-4 md:my-5'>{story?.attributes?.description}</p>
                     <a href={story.id} className='group text-xs sm:text-sm md:text-base font-bold flex items-center gap-1 max-w-max'>
                         <span className='border-b border-black dark:border-white leading-4'>Learn more</span>

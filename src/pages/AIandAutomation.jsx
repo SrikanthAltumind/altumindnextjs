@@ -12,7 +12,7 @@ import ValueSection from "../Components/services-common/ValueSection"
 
 const AIandAutomation = () => {
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
+    <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-16">
       <Banner/>
       <Overview/>
       <ValueSection/>

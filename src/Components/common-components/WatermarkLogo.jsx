@@ -9,8 +9,8 @@ const WatermarkLogo = () => {
   return (
     <div className='dark:bg-[#0d1015]'>
       <div className='w-[95%] flex justify-between items-end border-b-[0.6px] border-[#B8B5B5] pl-3 mx-auto'>
-      <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="w-[180px] pb-3 cursor-pointer" />
-        <img src={watermark} alt='altumind' className='w-[300px]'/>
+      <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="md:w-[180px] w-[100px] pb-3 cursor-pointer" />
+        <img src={watermark} alt='altumind' className='md:w-[300px] w-[220px]'/>
       </div>
     </div>
   )

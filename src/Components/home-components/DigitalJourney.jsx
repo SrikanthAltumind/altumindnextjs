@@ -8,7 +8,7 @@ const DigitalJourney = () => {
 
   const getScrollData = () => {
     axios
-      .get(`${import.meta.env.VITE_APP_API_URL}api/whatwedo?populate=*`)
+      .get(`${import.meta.env.VITE_APP_API_URL}api/whatwedo?populate[whatwedo_mains][populate]=image`)
       .then((response) => {
         setScrollData(response?.data?.data?.attributes?.whatwedo_mains?.data);
       })
@@ -22,11 +22,11 @@ const DigitalJourney = () => {
   },[])
 
   return (
-    <div className="overflow-hidden relative w-full min-h-[400px] bg-gray-100 flex flex-col justify-start items-center gap-5 py-6">
+    <div className="overflow-hidden relative w-full min-h-[400px] flex flex-col justify-start items-center gap-5 py-6 font-raleway">
       <div className="flex flex-col gap-5 justify-center items-center text-center">
-        <p className="text-xl font-semibold text-[#02194a]">What we do</p>
-        <p className="text-4xl font-extrabold text-[#02194a] text-center gap-2">
-          <span className="leading-7">Empowering Digital Journeys Through</span>
+        <p className="md:text-xl dark:text-white font-semibold text-[#02194a]">What we do</p>
+        <p className="md:text-4xl text-xl md:font-extrabold font-bold text-[#02194a] text-center gap-2 font-raleway">
+          <span className="leading-7 dark:text-white">Empowering Digital Journeys Through</span>
           <br />
           <span className="leading-7" style={gradientStyle}>
             Human-Centric Services

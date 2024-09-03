@@ -28,21 +28,20 @@ const GainsAtGlance = () => {
         },
     };
 
-useEffect(()=> {
-    if(location.pathname === '/bfsi-finance')
-        setSlideItems(gainsAtGlance.financeAndBFSI)
-    else if(location.pathname === '/healthcare')
-        setSlideItems(gainsAtGlance.healthCare)
-    else if(location.pathname === '/ed-tech')
-        setSlideItems(gainsAtGlance.edTech)
-    else if(location.pathname === '/internet-saas')
-        setSlideItems(gainsAtGlance.internetAndSaas)
-    else if(location.pathname === '/digital-commerce')
-        setSlideItems(gainsAtGlance.digitalCommerce)
-    else if(location.pathname === '/green-sustainability')
-        setSlideItems(gainsAtGlance.greenSustainability)
- 
-},[])
+useEffect(() => {
+  if (location.pathname === "/industries/bfsi-fintech")
+    setSlideItems(gainsAtGlance.financeAndBFSI);
+  else if (location.pathname === "/industries/healthcare")
+    setSlideItems(gainsAtGlance.healthCare);
+  else if (location.pathname === "/industries/edtech")
+    setSlideItems(gainsAtGlance.edTech);
+  else if (location.pathname === "/industries/internet-saas")
+    setSlideItems(gainsAtGlance.internetAndSaas);
+  else if (location.pathname === "/industries/digital-commerce")
+    setSlideItems(gainsAtGlance.digitalCommerce);
+  else if (location.pathname === "/industries/green-sustainability")
+    setSlideItems(gainsAtGlance.greenSustainability);
+}, [location.pathname]);
 
 return (
     <div className='bg-[#EAF1FF] dark:bg-[#25282c] dark:text-white font-raleway'>

@@ -31,7 +31,7 @@ const ResourceCenter = () => {
           </div>
           
             <div className='overflow-x-auto'>
-            <ul className='flex min-w-max gap-5 justify-between px-2 '>
+            {/* <ul className='flex min-w-max gap-5 justify-between px-2 '>
                 {data?.map(cat=> (
                     <li key={cat.id} className=''>
                         <button className={`py-1 sm:px-1 border-b-[3px] ${cat.id===activeCategory.id ?'border-secondary font-bold ': 'border-transparent font-medium'} text-black dark:text-white text-xs sm:text-sm`}
@@ -40,7 +40,7 @@ const ResourceCenter = () => {
                     </li>
 
                 ))}
-            </ul>
+            </ul> */}
             </div>
             <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${activeCategory?.attributes?.category_card_mains?.data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}

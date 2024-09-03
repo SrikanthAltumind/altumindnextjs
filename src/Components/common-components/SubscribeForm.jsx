@@ -79,7 +79,7 @@ const SubscribeForm = () => {
   return (
     <div className="w-[90%] text-tertiary dark:bg-darkTheme dark:text-white  mx-auto flex flex-col md:flex-row gap-12 md:gap-7 lg:gap-24">
       <div className="lg:basis-[40%] md:basis-[50%] font-raleway max-md:text-center">
-        <p className="font-semibold md:text-lg">DROP US A LINE</p>
+        {/* <p className="font-semibold md:text-lg">DROP US A LINE</p> */}
         <h1 className="text-5xl md:text-5xl lg:text-6xl py-2 font-semibold text-primary dark:text-white  bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
           Let&apos;s
           <span className="font-extrabold text-transparent">
