@@ -31,6 +31,7 @@ import Testing from "./pages/Testing"
 import WIP from './pages/WIP'
 import { useEffect } from "react"
 import Terms from "./pages/Terms"
+import SuccessStory from "./pages/SuccessStory"
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -208,13 +209,25 @@ const router = createBrowserRouter([
         path: "/terms",
         element: <Terms />,
       },
+      {
+        path: "/portfolio/sukhiba",
+        element: <SuccessStory />,
+      },
+      {
+        path: "/portfolio/secpod",
+        element: <SuccessStory />,
+      },
+      {
+        path: "/portfolio/united-finance",
+        element: <SuccessStory />,
+      },
     ],
   },
 ]);
 
 function App() {
   
-  console.log("updated on: 03/09/24")
+  console.log("updated on: 4/9/24")
   return <RouterProvider router={router} />;
 }
 

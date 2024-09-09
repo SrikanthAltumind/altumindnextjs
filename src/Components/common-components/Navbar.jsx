@@ -503,7 +503,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="dark:bg-[#1b305c] w-full bg-white z-20 h-[70px] dark:text-white top-0 fixed font-raleway">
+    <header className="dark:bg-[#1b305c] w-full bg-white z-20 h-[70px] dark:text-white top-0 sticky">
       <nav className="flex justify-between items-center h-full px-2 sm:px-5">
         <img
           src={theme === "dark" ? AltumindDark : logo}

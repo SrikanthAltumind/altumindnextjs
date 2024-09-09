@@ -2,119 +2,142 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const aiAndAutomationData = {
-  caption: 'Advanced AI & Automation Solutions',
-  heading:'Accelerate Success with \n Next-Gen Business Solutions',
-  data : [
-  {
-    id: 1,
-    attributes: {
-      title: "AI & Chatbot Solutions",
-      description: `Experience the future of healthcare with our comprehensive digital
+  caption: "Advanced AI & Automation Solutions",
+  heading: "Accelerate Success with \n Next-Gen Business Solutions",
+  data: [
+    {
+      id: 1,
+      attributes: {
+        title: "AI & Chatbot Solutions",
+        description: `Experience the future of healthcare with our comprehensive digital
               transformation solutions. Utilizing Generative AI, cloud
               technologies, and Advanced app development, we provide intelligent
               automation and tailored patient experiences. Boost productivity`,
-      pointsList:[
-        {id:1, content:'Content Marketing'},
-        {id:2, content:'Social Media Marketing'},
-        {id:3, content:'Email Marketing'},
-        {id:4, content:'Ecommerce Marketing'},
-        {id:5, content:'Performance Marketing'},
-        {id:6, content:'Marketing Automation'},
-      ],
+        pointsList: [
+          { id: 1, content: "Content Marketing" },
+          { id: 2, content: "Social Media Marketing" },
+          { id: 3, content: "Email Marketing" },
+          { id: 4, content: "Ecommerce Marketing" },
+          { id: 5, content: "Performance Marketing" },
+          { id: 6, content: "Marketing Automation" },
+        ],
         CTA: "Explore AI Solutions",
-      image: {
-        data: {
-          attributes: {
-                url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Branding_and_design_Compressify_io_d11bc71888.webp",
-              },
+        image: {
+          data: {
+            attributes: {
+              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Advance_AI_and_automation_solutions_Compressify_io_99b981da92.webp",
             },
           },
         },
       },
-  {
-    id: 2,
-    attributes: {
-      title: "RPA Solutions",
-      description:`Experience the future of healthcare with our comprehensive digital
-              transformation solutions. Utilizing Generative AI, cloud
-              technologies, and Advanced app development, we provide intelligent
-              automation and tailored patient experiences. Boost productivity`,
-      pointsList:[
-        {id:1, content:'Content Marketing'},
-        {id:2, content:'Social Media Marketing'},
-        {id:3, content:'Email Marketing'},
-        {id:4, content:'Ecommerce Marketing'},
-        {id:5, content:'Performance Marketing'},
-        {id:6, content:'Marketing Automation'},
-      ],
+    },
+    {
+      id: 2,
+      attributes: {
+        title: "RPA Solutions",
+        description: `Unleash the power of intelligent automation with our state of art Robotic Process Automation (RPA) solutions. From process discovery to ROI projection and managed services, we streamline your business for peak productivity. Seamlessly capture and automate workflows through user interfaces, documents, or images, breaking down silos and fostering collaboration between business and IT teams. Leveraging our strong partnerships with leading RPA Partnership and deep domain expertise, we'll elevate your operational efficiency to unprecedented levels.`,
+        pointsList: [
+          { id: 1, content: "RPA-driven Agile Delivery" },
+          { id: 2, content: "Intelligent Automation Consulting" },
+          { id: 3, content: "Workflow Automation Services" },
+          { id: 4, content: "Industry-Specific RPA Solutions" },
+          { id: 5, content: "Cognitive Automation Support" },
+          { id: 6, content: "RPA Process Mining" },
+        ],
         CTA: "Explore RPA Services",
-      image: {
-        data: {
-          attributes: {
-            url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_Services_Compressify_io_714e95291e.webp",
-          },
-        },
-      },
-    },
-  },
-]
-}
-const digitalMarketingData = {
-  caption: 'Our Digital Marketing Services',
-  heading:'Full Spectrum Digital\nEvolution of Your Brand',
-  data : [
-  {
-    id: 1,
-    attributes: {
-      title: "Branding & Design",
-      description:
-        "Transform your brand's visual identity and captivate your audience. Our branding and design services go beyond aesthetics to create a cohesive, memorable brand experience that resonates with your target market.",
-      subTitle: 'We specialize in :',
-      pointsList:[
-        {id:1, content:'Logos'},
-        {id:2, content:'Email Design & Illustrations'},
-        {id:3, content:'Motion & Creative Graphics'}
-      ],
-      subDescription:'Our Branding & design approach combines creativity with strategic thinking, ensuring your brand stands out in the digital landscape while effectively communicating your values and message.',
-        CTA: "Explore Branding Services",
-      image: {
-        data: {
-          attributes: {
-                url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Branding_and_design_Compressify_io_d11bc71888.webp",
-              },
+        image: {
+          data: {
+            attributes: {
+              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/RPA_solutions_Compressify_io_365f07ffb9.webp",
             },
           },
         },
       },
-  {
-    id: 2,
-    attributes: {
-      title: "Marketing Services",
-      description:
-        "Reach, engage, and convert your target audience across multiple digital channels. Our marketing services are tailored to your business goals, leveraging the latest trends and technologies to maximize your online presence.",
-      subTitle: 'Our comprehensive marketing solutions include :',
-      pointsList:[
-        {id:1, content:'Content Marketing'},
-        {id:2, content:'Social Media Marketing'},
-        {id:3, content:'Email Marketing'},
-        {id:4, content:'Ecommerce Marketing'},
-        {id:5, content:'Performance Marketing'},
-        {id:6, content:'Marketing Automation'},
-      ],
-      subDescription:'We craft integrated marketing strategies that work together to create a powerful, cohesive digital presence for your brand. ',
-        CTA: "Discover Marketing Solutions",
-      image: {
-        data: {
-          attributes: {
-            url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_Services_Compressify_io_714e95291e.webp",
+    },
+  ],
+};
+const digitalMarketingData = {
+  caption: "Our Digital Marketing Services",
+  heading: "Full Spectrum Digital\nEvolution of Your Brand",
+  data: [
+    {
+      id: 1,
+      attributes: {
+        title: "Branding & Design",
+        description:
+          "Transform your brand's visual identity and captivate your audience. Our branding and design services go beyond aesthetics to create a cohesive, memorable brand experience that resonates with your target market.",
+        subTitle: "We specialize in:",
+        pointsList: [
+          { id: 1, content: "Logos" },
+          { id: 2, content: "Email Design & Illustrations" },
+          { id: 3, content: "Motion & Creative Graphics" },
+        ],
+        subDescription:
+          "Our Branding & design approach combines creativity with strategic thinking, ensuring your brand stands out in the digital landscape while effectively communicating your values and message.",
+        CTA: "Explore Branding Services",
+        image: {
+          data: {
+            attributes: {
+              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Branding_and_design_Compressify_io_d11bc71888.webp",
+            },
           },
         },
       },
     },
-  },
-  
-]
-}
+    {
+      id: 2,
+      attributes: {
+        title: "Marketing Services",
+        description:
+          "Reach, engage, and convert your target audience across multiple digital channels. Our marketing services are tailored to your business goals, leveraging the latest trends and technologies to maximize your online presence.",
+        subTitle: "Our comprehensive marketing solutions include:",
+        pointsList: [
+          { id: 1, content: "Content Marketing" },
+          { id: 2, content: "Social Media Marketing" },
+          { id: 3, content: "Email Marketing" },
+          { id: 4, content: "Ecommerce Marketing" },
+          { id: 5, content: "Performance Marketing" },
+          { id: 6, content: "Marketing Automation" },
+        ],
+        subDescription:
+          "We craft integrated marketing strategies that work together to create a powerful, cohesive digital presence for your brand. ",
+        CTA: "Discover Marketing Solutions",
+        image: {
+          data: {
+            attributes: {
+              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_Services_Compressify_io_714e95291e.webp",
+            },
+          },
+        },
+      },
+    },
+    {
+      id: 3,
+      attributes: {
+        title: "Marketing Optimization",
+        description:
+          "Maximize the effectiveness of your digital marketing efforts with our optimization services. We use data-driven insights and industry best practices to refine your strategies, improve performance, and increase your return on investment.",
+        subTitle: "Our optimization services cover:",
+        pointsList: [
+          { id: 1, content: "Search Engine Optimization (SEO)" },
+          { id: 2, content: "ORM" },
+          { id: 3, content: "App Store Optimization (ASO)" },
+          { id: 4, content: "CRO" },
+        ],
+        subDescription:
+          "Our team of experts continually analyzes and adjusts your marketing efforts to ensure you're always getting the best possible results in the ever-changing digital landscape.",
+        CTA: "Optimize Your Marketing",
+        image: {
+          data: {
+            attributes: {
+              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_optimization_Digital_marketing_16da877bb9.webp",
+            },
+          },
+        },
+      },
+    },
+  ],
+};
 
 // const 
 

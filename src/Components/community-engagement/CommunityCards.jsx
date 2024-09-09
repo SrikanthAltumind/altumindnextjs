@@ -52,7 +52,7 @@ const CommunityCards = () => {
         <p className="md:max-w-[800px] p-2 text-center text-sm mt-2">{`At Altumind, we're not just about creating "wow" moments – we're committed to unlocking technology's potential for good. Our mission? To shape a world where innovation serves both humanity and our planet. We don't just talk about responsibility; we live it. Through concrete actions, we're ensuring our impact ripples far and wide, touching lives and fostering positive change in everything we do. `}</p>
         <div className="overflow-hidden w-full relative min-h-fit p-3 mt-2">
           <Marquee className="py-4">
-            {data?.map((content) => (
+            {data?.concat(data)?.map((content) => (
               <div
                 key={content?.id}
                 className={`w-[210px] md:w-[230px] rounded-md h-[320px] p-3 mx-3 font-raleway hover:scale-105 duration-150 transition-all flex flex-col justify-start items-center gap-6 cursor-pointer`}

@@ -25,7 +25,7 @@ const servicesMenu = [
 
 const AIandAutomation = () => {
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-16">
+    <div className="dark:bg-darkTheme flex flex-col gap-20 lg:gap-20">
       <div className="w-full">
         <Banner />
         <Menu sections={servicesMenu} />

@@ -12,10 +12,10 @@ const Timeline = () => {
         <li className="mb-10 ms-4  flex flex-col gap-4">
           <div className="absolute w-4 h-4 -left-2 bg-[#EF8188] rounded-full mt-2 -start-1.5" />
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            {`From Sketch to Altumind`}
+            {`From Scketch to Altumind`}
           </h3>
           <p className="mb-4 max-w-[400px] font-normal text-gray-600 dark:text-gray-400 text-sm">
-            {`Founded in 2016 as 'Sketch,' our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind. `}
+            {`Founded in 2016 as 'Scketch,' our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind. `}
           </p>
         </li>
         <li className="mb-10 ms-4  flex flex-col gap-4">

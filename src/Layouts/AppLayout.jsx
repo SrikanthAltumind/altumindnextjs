@@ -16,7 +16,7 @@ const AppLayout = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className="dark:bg-black bg-white mt-16 w-full">
+      <div className="dark:bg-black bg-white w-full">
         <main>
           <Navbar />
           <Outlet />

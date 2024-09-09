@@ -28,8 +28,9 @@ const BFSIAndFinance = () => {
     { id: "section-4", tabId: "tab4", name: "Challenges" },
     { id: "section-5", tabId: "tab5", name: "Success" },
     { id: "section-6", tabId: "tab6", name: "Benefits" },
-    { id: "section-7", tabId: "tab7", name: "Insights" },
-    { id: "section-8", tabId: "tab8", name: "Tools" },
+    { id: "section-7", tabId: "tab7", name: "Partners" },
+    { id: "section-8", tabId: "tab8", name: "Insights" },
+    { id: "section-9", tabId: "tab9", name: "Tools" },
   ];
 
   const location = useLocation()
@@ -38,8 +39,8 @@ const BFSIAndFinance = () => {
   }, [location.pathname]);
 
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-24">
-      <section className="w-full flex flex-col gap-8 items-center justify-start">
+    <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-24 relative">
+      <section className="w-full flex flex-col gap-8 items-center justify-start relative">
         <IndustriesBanners />
         <div className="w-full flex flex-col p-4 px-10 gap-3">
           <p className="font-raleway text-2xl font-semibold">Trusted By</p>
@@ -80,7 +81,7 @@ const BFSIAndFinance = () => {
           <SolutionPartners />
         </div>
       </section>
-      <section id="section-7">
+      <section id="section-8">
         <div className="flex flex-col gap-10 w-full items-center justify-center">
           <p
             className="text-4xl font-bold font-raleway py-3"
@@ -91,7 +92,7 @@ const BFSIAndFinance = () => {
           <InsightsBlogs />
         </div>
       </section>
-      <section id="section-8">
+      <section id="section-9">
         <TechStackSlider />
       </section>
 
