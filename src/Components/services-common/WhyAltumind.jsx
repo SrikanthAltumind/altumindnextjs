@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 const WhyAltumind = () => {
     const [data, setData] = useState([])
@@ -35,10 +35,14 @@ const WhyAltumind = () => {
             apiUrl = 'api/leadership-philosophy-contents?populate=*'
           else if(location.pathname === '/about-us')
             apiUrl = 'api/about-us-why-us-contents?populate=*'
-            else if(location.pathname === '/success-stories/sukhiba')
+            else if(location.pathname === '/portfolio/sukhiba')
             apiUrl = 'api/success-story-sukiba-features-contents?populate=*'
-
-    
+             else if(location.pathname === '/portfolio/secpod')
+            apiUrl = 'api/success-story-sukiba-features-contents?populate=*' //need to change api
+              else if(location.pathname === '/portfolio/enphase')
+            apiUrl = 'api/success-story-enphase-feature-contents'
+           else if(location.pathname === '/portfolio/united-finance')
+            apiUrl = 'api/success-story-sukiba-features-contents?populate=*'
 
     const fetchData = () => {
         const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`

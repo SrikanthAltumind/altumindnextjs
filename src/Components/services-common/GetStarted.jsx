@@ -92,6 +92,31 @@ const services = {
       caption:
       "User-Centric Design. Tailored Solutions. Measurable Results. ",
     linkText: "Contact Us Today",
+    url: '/contact-us'
+  },
+  secpod: {
+    heading:
+      "Ready for a Website Makeover?",
+      caption:
+      "User-Centric Design. Tailored Solutions. Measurable Results. ",
+    linkText: "Contact Us Today",
+    url: '/contact-us'
+  },
+ enphase: {
+    heading:
+      "Ready to transform your business and make a positive impact?  ",
+      caption:
+      "Partner with Altumind and let's create innovative, user-centric solutions. ",
+    linkText: "Contact Us Today",
+    url: '/contact-us'
+  },
+  unitedFinance: {
+    heading:
+      "Outdated Systems Holding You Back? Let's Fix That",
+      caption:
+      "Revitalize Your Web Presence with Altumind.",
+    linkText: "Start with a Free Consultation!",
+    url: '/contact-us'
   },
 };
  
@@ -138,8 +163,17 @@ else if (location.pathname === "/about-us/mission-and-vision" ) {
 else if (location.pathname === "/about-us/leadership" ) {
   setData(services.leadership);
 }
-else if (location.pathname === "/success-stories/sukhiba" ) {
+else if (location.pathname === "/portfolio/sukhiba" ) {
   setData(services.sukhiba);
+}
+else if (location.pathname === "/portfolio/secpod" ) {
+  setData(services.secpod);
+}
+else if (location.pathname === "/portfolio/enphase" ) {
+  setData(services.enphase);
+}
+else if (location.pathname === "/portfolio/united-finance" ) {
+  setData(services.unitedFinance);
 }
  
   }, [location.pathname]);

@@ -14,10 +14,18 @@ const Challenge = () => {
     let ContentApiUrl;
 
     if(storyId === 'sukhiba')
-        HeadingApiUrl = 'api/success-story-sukiba-challenge-head'
-
-     if(storyId === 'sukhiba')
-        ContentApiUrl = 'api/success-story-sukiba-challenge-contents?populate=*'
+        HeadingApiUrl = 'api/success-story-sukiba-challenge-head',
+      ContentApiUrl = 'api/success-story-sukiba-challenge-contents?populate=*'
+    else if(storyId === 'secpod')
+       HeadingApiUrl = 'api/success-story-secpod-challenge-head',
+      ContentApiUrl = 'api/success-story-secpod-challenge-contents?populate=*'
+      else if(storyId === 'enphase')
+        HeadingApiUrl = 'api/success-story-enphase-challenge-head',
+       ContentApiUrl = 'api/success-story-enphase-challenge-contents?populate=*'
+       else if(storyId === 'united-finance')
+        HeadingApiUrl = 'api/success-story-uf-challenge-head',
+       ContentApiUrl = 'api/success-story-uf-challenge-contents?populate=*'
+        
 
     const  fetchHeaderData = () => {
         const url = `${
@@ -76,20 +84,37 @@ const Challenge = () => {
         <p className='font-extrabold text-2xl md:text-3xl xl:text-4xl mb-1 text-primary dark:text-white'>{headerData?.title}:</p>
         <p className='custom-gradient-text'>{headerData?.heading}</p>
         </div>
-        <div className='flex flex-col gap-10 sm:flex-row'>
+        <div className='space-y-10'>
+          <div className='flex gap-10 sm:flex-row flex-col'>
       {
-        content.map(item => (
-            <div key={item.id} className='space-y-5 basis-[47%] items-start'>
+        content.slice(0,content.length/2).map(item => (
+            <div key={item.id} className='space-y-5 basis-[47%]'>
                 <div>
-                <img src={item?.attributes?.icon?.data?.attributes?.url} alt='Challenge' width={50}/>
+                <img src={item?.attributes?.icon?.data?.attributes?.url} alt='Challenge' className='w-[50px] h-[55px]'/>
                 </div>
-                <div>
-                    <p className="text-[13px] font-medium font-montserrat dark:font-normal leading-[26px]">{item?.attributes?.description}</p>
+                <div className=' leading-[26px] '>
+                  <p className='text-[14px] font-bold font-raleway'>{item?.attributes?.title}</p>
+                    <p className=" text-[13px] font-medium font-montserrat dark:font-normal">{item?.attributes?.description}</p>
                 </div>
             </div>
         ))
       }
-       
+      </div>
+      <div className='flex gap-10 sm:flex-row flex-col'>
+      {
+        content.slice(content.length/2,content.length).map(item => (
+            <div key={item.id} className='space-y-5 basis-[47%]'>
+                <div>
+                <img src={item?.attributes?.icon?.data?.attributes?.url} alt='Challenge' className='w-[50px] h-[55px]'/>
+                </div>
+                <div className=' leading-[26px] '>
+                  <p className='text-[14px] font-bold font-raleway'>{item?.attributes?.title}</p>
+                    <p className=" text-[13px] font-medium font-montserrat dark:font-normal">{item?.attributes?.description}</p>
+                </div>
+            </div>
+        ))
+      }
+      </div> 
            
         </div>
     </div>

@@ -1,16 +1,36 @@
 import { useEffect, useState } from 'react'
 import LoaderSpinner from '../common-components/LoaderSpinner'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const Approach = () => {
     const [headerData, setHeaderData] = useState()
     const [content, setContent] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState()
-
+    const {storyId} = useParams()
+    let HeadingApiUrl;
+    let ContentApiUrl;
+    
+    if(storyId === 'sukhiba'){
+        HeadingApiUrl = 'api/success-story-sukiba-approach-head',
+        ContentApiUrl = 'api/success-story-sukiba-approach-contents'}
+        else if(storyId === 'secpod'){
+            HeadingApiUrl = 'api/success-story-secpod-approach-head',
+        ContentApiUrl = 'api/success-story-secpod-approach-contents' 
+        }
+        else if(storyId === 'enphase'){
+            HeadingApiUrl = 'api/success-story-enphase-approach-head',
+        ContentApiUrl = 'api/success-story-enphase-approach-contents?populate=*' 
+        }
+        else if(storyId === 'united-finance'){
+            HeadingApiUrl = 'api/success-story-sukiba-approach-head',
+        ContentApiUrl = 'api/success-story-sukiba-approach-contents' 
+        }
+       
 
     const fetchHeaderData = ()=> {
-        axios.get(`${import.meta.env.VITE_APP_API_URL}api/success-story-sukiba-approach-head`)
+        axios.get(`${import.meta.env.VITE_APP_API_URL}${HeadingApiUrl}`)
             .then(response=> {
                 setHeaderData(response?.data?.data?.attributes)
                 setLoading(false)
@@ -23,7 +43,7 @@ const Approach = () => {
         }
 
     const fetchContent = ()=> {
-        axios.get(`${import.meta.env.VITE_APP_API_URL}api/success-story-sukiba-approach-contents`)
+        axios.get(`${import.meta.env.VITE_APP_API_URL}${ContentApiUrl}`)
             .then(response=> {
                 setContent(response?.data?.data)
                 setLoading(false)
@@ -57,12 +77,12 @@ useEffect(()=> {
         <div className='text-center font-raleway'>
             <p className='font-extrabold text-2xl md:text-3xl xl:text-4xl mb-1 text-primary dark:text-white'>{headerData?.title}:</p>
             <p className='custom-gradient-text'>{headerData?.heading}</p>
-            <p className='text-[13px] sm:text-sm font-medium leading-6 mt-2'>{headerData?.description}</p>
+            <p className='text-[13px] lg:text-sm font-medium mt-2'>{headerData?.description}</p>
         </div>
-        <div className='flex flex-col gap-y-8 sm:flex-row justify-between mt-5 sm:mt-12 font-raleway'>
+        <div className='flex flex-col flex-wrap gap-y-8 sm:flex-row justify-between mt-5 sm:mt-12 font-raleway'>
         {content?.map(item => 
-            <div key={item.id} className='basis-[30%] space-y-1'>
-                <p className=' text-xl font-semibold text-[#D1D7ED]'>{item?.id}.</p>
+            <div key={item.id} className={`${content?.length === 3 ? 'basis-[30%]' : 'basis-[48%]'} space-y-1`}>
+                <p className=' text-2xl font-semibold text-[#D1D7ED]'>{item?.id}.</p>
                 <p className='text-sm font-bold dark:font-semibold'>{item?.attributes?.title}</p>
                 <p className='text-[13px] font-medium dark:font-normal leading-5'>{item?.attributes?.description}</p>
             </div>

@@ -56,9 +56,9 @@ if (loading) {
         <div className='w-[90%]  sm:w-[80%] md:max-w-[750px] lg:max-w-[850px] justify-between flex flex-col sm:flex-row items-center gap-y-5 font-raleway'>
             <div className='basis-[60%] flex flex-col gap-6 max-sm:text-center'>
                 <p className='custom-gradient-text sm:mx-0 lg:text-4xl'>{data?.title}</p>
-                {data?.description &&
+               
                     <p className='font-semibold text-sm '>{data?.description}</p>
-                }
+            
                 <div className='font-semibold text-sm  space-y-2'>
                     <p>Clinet: {data?.client}</p>
                     <p>Industry: {data?.industry}</p>
