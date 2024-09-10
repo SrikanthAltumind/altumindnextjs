@@ -3,7 +3,7 @@ import ContactBanner from "../Components/contact-components/ContactBanner"
 import GlobalImprint from "../Components/contact-components/GlobalImprint"
 import OurLocation from "../Components/contact-components/OurLocation"
 // import ReachOutToAltumind from "../Components/contact-components/ReachOutToAltumind"
-import ThankyouNote from "../Components/contact-components/ThankyouNote"
+
 import ContactMenu from '../Components/contact-components/ContactMenu'
 
 const Contact = () => {
@@ -14,8 +14,8 @@ const Contact = () => {
       <OurLocation/>
       {/* <ReachOutToAltumind/> */}
       <GlobalImprint/>
-      <ThankyouNote/>
-      <SubscribeForm/>
+      {/* <ThankyouNote/> */}
+      {/* <SubscribeForm/> */}
     </div>
   )
 }

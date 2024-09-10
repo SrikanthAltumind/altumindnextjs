@@ -5,6 +5,7 @@ import WhyAltumind from "../Components/services-common/WhyAltumind"
 import Approach from "../Components/success-stories-components/Approach"
 import Challenge from "../Components/success-stories-components/Challenge"
 import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+import ResultSection from "../Components/success-stories-components/ResultSection"
 
 const successStoriesMenu = [
   {id:'section1', tabId:'tab1', name:'Situation'},
@@ -15,10 +16,6 @@ const successStoriesMenu = [
   {id:'section6', tabId:'tab6', name:'Result'},
   {id:'section7', tabId:'tab7', name:'success'},
 ]
-
-
-
-
 
 if(location.pathname === '/portfolio/enphase'){
   successStoriesMenu.push({
@@ -46,7 +43,7 @@ const SuccessStories = () => {
         </div>
       </section>
       <section id="section5"><Approach/></section>
-      <section id="section6">Result</section>
+      <section id="section6"><ResultSection/></section>
       <section id="section7">Success</section>
       </div>
         <GetStarted/>

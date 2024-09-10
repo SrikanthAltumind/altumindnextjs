@@ -5,6 +5,7 @@ import LeadershipVoices from "../Components/career-components/LeadershipVoices"
 import LifeAtAltumind from "../Components/career-components/LifeAtAltumind"
 import WhyJoinAltumind from "../Components/career-components/WhyJoinAltumind"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
+import SubscribeForm from "../Components/common-components/SubscribeForm"
 
 const Career = () => {
   return (
@@ -21,6 +22,7 @@ const Career = () => {
           </div>
     <InsightsBlogs/>
     </section>
+    <SubscribeForm />
     </div>
   )
 }

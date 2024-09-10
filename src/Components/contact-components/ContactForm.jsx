@@ -1,38 +1,8 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Popup from "../common-components/Popup";
+import ThankyouNote from "../contact-components/ThankyouNote";
 import { useEffect, useState } from "react";
-
-const contentSection = {
-  project : {
-    title: 'Your Vision, Our Expertise',
-    caption:'start a project',
-    description:`Outline your project, and we'll help you with solutions that align perfectly with your goals. `,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Projects_Compressify_io_76a2088943.webp'
-  },
-
-  partner : {
-    title: 'Amplify transformation',
-    caption:'Partnership Enquiries',
-    description:`Explore partnership opportunities with Altumind to extend your 
-              software solutionsto new markets and industries.`,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Partnership_Compressify_io_c83693b19d.webp'
-  },
-
-  general : {
-    title: 'Curiosity Welcomed',
-    caption:'General Queries',
-    description:`What's on your mind? Share your thoughts, and let's start a conversation that could transform your business.`,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Genral_Compressify_io_a6ea7066a4.webp'
-  },
-  career : {
-    title: 'Shape The Future With Us',
-    caption:'Join altumind',
-    description:`Explore career opportunities and become part of our innovative team.`,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_Compressify_io_7817557ffb.webp'
-  }
-}
 
 const initialFormData = {
     firstName: "",
@@ -45,13 +15,11 @@ const initialFormData = {
     upload:"",
   };
 
+// eslint-disable-next-line react/prop-types
 const ContactForm = ({selectedForm}) => {
-  const leftSection = contentSection[selectedForm]
   const [showPopup, setShowPopup] = useState(false);
   const [file, setFile] = useState()
   const [presignedUrl, setPresignedUrl] = useState()
-  const [dropdown, setDropDown] = useState(false)
-  const [interest, setInterest] = useState("")
   const [initialValues, setInitialValues] = useState(initialFormData)
 
   const requiredField = yes=> yes ? yup.string().required('Required') : yup.string()
@@ -248,22 +216,11 @@ const ContactForm = ({selectedForm}) => {
     setInitialValues(initialFormData)
     console.log(selectedForm)
   }, [selectedForm])
+
   return (
-    <div className={`w-[90%] md:w-[95%] max-w-[1200px] mx-auto dark:text-white flex flex-col md:flex-row shadow-custom-shadow`}>
-      <div className="basis-[30%] shrink-0 p-5 lg:p-10 pb-2 font-raleway bg-LightBlue dark:bg-DarkBackground flex flex-col items-center md:items-start gap-4">
-        <img src={leftSection?.imgUrl} className="w-36 h-36 lg:w-52 lg:h-52 object-cover bg-merald-200"/>
-          <p className="custom-gradient-text md:mx-0 max-md:text-center text-2xl lg:text-3xl">{leftSection?.title}</p>
-          <p className="uppercase font-semibold text-xs sm:text-sm">{leftSection?.caption}</p>
-          <p className="max-md:text-center text-xs sm:text-sm lg:text-base max-w-[450px] font-montserrat font-medium leading-5">
-              {leftSection?.description}
-          </p>
-          <svg className="w-14 h-12 text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-          </svg>
-      </div>
-      <form
+    <form
         onSubmit={formik.handleSubmit}
-        className="basis-[70%]  space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium "
+        className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
       >
         <div className="sm:flex items-center gap-8 max-sm:space-y-14">
           {/* First Name */}
@@ -441,10 +398,11 @@ const ContactForm = ({selectedForm}) => {
           )}
         </div>
       {/* Upload your brief */}
+      {selectedForm==='career' &&
         <div className="w-full">
             <label className="block mb-3 font-medium">
-            {selectedForm==='career' ? 'Upload your CV' : 'Upload your brief'}
-            {selectedForm==='career' && <span className="text-red-500">*</span>}
+             Upload your CV
+           <span className="text-red-500">*</span>
             </label>
             <div className='border border-gray-300 dark:border-gray-600  rounded-lg'>
               <input onChange={e=> {setFile(e.target.files)}}
@@ -470,7 +428,9 @@ const ContactForm = ({selectedForm}) => {
                 <span className='text-xs lg:text-sm mt-2'>{file ? `${file[0].name}` : 'Click here to upload file'} </span>
               </label>
           </div>
+
         </div>
+      }
           {/* Submit Button */}
         <div className="flex items-center justify-center md:justify-start">
         <button
@@ -500,9 +460,8 @@ const ContactForm = ({selectedForm}) => {
           )}
         </button>
         </div>
+        {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
       </form>
-      {showPopup && <Popup setShowPopup={setShowPopup} />}
-    </div>
   );
 };
 
