@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
+import { Link } from "react-router-dom";
 
 const LifeandCareer = () => {
   const [data, setData] = useState([]);
@@ -65,7 +66,9 @@ const LifeandCareer = () => {
               <p className="text-lg font-light">
                 {item?.attributes?.description}
               </p>
-              <p className="group flex text-lg items-center w-fit gap-1 cursor-pointer">
+             
+              <p className="group">
+              <Link to={item?.attributes?.url} className="text-lg flex gap-1 items-center w-fit">
                 {item?.attributes?.navigator}
                 <svg
                   className="group-hover:translate-x-3 transition-all duration-300 w-10 h-10 text-white"
@@ -84,7 +87,9 @@ const LifeandCareer = () => {
                     d="M19 12H5m14 0-4 4m4-4-4-4"
                   />
                 </svg>
+                </Link>
               </p>
+             
             </div>
           </div>
         ))}

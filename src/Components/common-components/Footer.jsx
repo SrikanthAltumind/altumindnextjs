@@ -46,21 +46,21 @@ const Footer = () => {
             <p  className="text-lg font-semibold pb-2">Services</p>
                <ul className="space-y-3 dark:font-normal">
                 <li><Link to="/services/experience-design">Experience Design</Link></li>
-                <li><Link to="/services/technology-engineering">Technology and Engineering</Link></li>
-                <li><Link to="/services/ai-automation">AI & Automation</Link></li>
-                <li><Link to="/services/qa-testing">Quality Assurance & Testing Services</Link></li>
-                <li><Link to="/services/cloud-services">Cloud</Link></li>
+                <li><Link to="/services/technology-and-engineering">Technology and Engineering</Link></li>
+                <li><Link to="/services/ai-and-automation">AI & Automation</Link></li>
+                <li><Link to="/services/quality-assurance">Quality Assurance & Testing Services</Link></li>
+                <li><Link to="/services/cloud">Cloud</Link></li>
                 <li><Link to="/services/digital-marketing">Digital Marketing</Link></li>
                 <li><Link to="/services/data-analytics">Data Analytics</Link></li>
                 <li><Link to="/services/managed-operations">Managed Operations</Link></li>
-                <li><Link to="/services/digital-strategy-consulting">Digital Strategy and Consulting</Link></li>
+                <li><Link to="/services/digital-strategy">Digital Strategy and Consulting</Link></li>
                </ul>
             </div>
             <div>
             <p  className="text-lg font-semibold pb-2">Others</p>
                <ul className="space-y-3 dark:font-normal">
-                <li><Link to="/about">About Us</Link></li>
-               <li> <Link to="/contact">Contact Us</Link></li>
+                <li><Link to="/about-us">About Us</Link></li>
+               <li> <Link to="/contact-us">Contact Us</Link></li>
                 <li><Link to="/career">Career</Link></li>
                 <li><Link to="/insights">Insights</Link></li>
                 <li><Link to="/portfolio">Portfolio</Link></li>
@@ -125,7 +125,7 @@ const Footer = () => {
         <p className="font-medium mx-auto lg:pl-20">Copyright © 2024 Altumind Global All rights reserved.</p>
         <div className="flex gap-8">
         <Link to="/privacy"><p className="border-b dark:border-white dark:font-normal border-black font-medium">Privacy</p></Link>
-        <Link to="/terms-conditions"><p className="border-b dark:border-white dark:font-normal border-black  cursor-pointer font-medium">Terms</p></Link>
+        <Link to="/terms"><p className="border-b dark:border-white dark:font-normal border-black  cursor-pointer font-medium">Terms</p></Link>
         </div> 
       </div>
       </div>

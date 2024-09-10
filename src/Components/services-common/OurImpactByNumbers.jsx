@@ -32,7 +32,7 @@ const OurImpactByNumbers = () => {
       if(location.pathname==='/services'){
         setStatsData(servicesImpactData)
       }
-      else if(location.pathname==='/about'){
+      else if(location.pathname==='/about-us'){
         setStatsData(aboutUsImpactData)
       }
   },[])

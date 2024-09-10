@@ -29,6 +29,7 @@ import Error404 from "./pages/Error404"
 import DigitalCommerce from "./pages/DigitalCommerce"
 import Privacy from "./pages/Privacy"
 import Terms from "./pages/Terms"
+import SuccessStories from "./pages/SuccessStories"
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
         element:<Error404 />
         },
       {
-        path:"/contact",
+        path:"/contact-us",
         element:<Contact/>
       },
       {
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
         element:<Healthcare/>
       },
       {
-        path:"/industries/ed-tech",
+        path:"/industries/edtech",
         element:<EdTech/>
       },
       {
@@ -72,19 +73,19 @@ const router = createBrowserRouter([
         element:<Career/>
       },
       {
-        path:"/careers/open-roles",
+        path:"/career/open-roles",
         element:<OpenRoles/>
       },
       {
-        path:"/community-engagement",
+        path:"/about-us/community-engagement",
         element:<CommunityEngagement/>
       },
       {
-        path:"/careers/life-at-altumind",
+        path:"/career/life-at-altumind",
         element:<LifeAtAltumind/>
       },
       {
-        path:"/alliance",
+        path:"/about-us/alliance",
         element:<Alliance/>
       },
       {
@@ -92,11 +93,11 @@ const router = createBrowserRouter([
         element:<ExperienceDesign/>
       },
       {
-        path:"/services/ai-automation",
+        path:"/services/ai-and-automation",
         element:<AIandAutomation/>
       },
       {
-        path:"/services/qa-testing",
+        path:"/services/quality-assurance",
         element:<QAandTesting/>
       },
       {
@@ -104,7 +105,7 @@ const router = createBrowserRouter([
         element:<DigitalMarketingServices/>
       },
       {
-        path:"/services/technology-engineering",
+        path:"/services/technology-and-engineering",
         element:<TechnologyAndEngineering/>
       },
       {
@@ -120,23 +121,23 @@ const router = createBrowserRouter([
         element:<Services/>
       },
       {
-        path:"/services/digital-strategy-consulting",
+        path:"/services/digital-strategy",
         element:<DigitalStrategy/>
       },
       {
-        path:"/services/cloud-services",
+        path:"/services/cloud",
         element:<CloudServices/>
       },
       {
-        path:"/mission-and-vision",
+        path:"/about-us/mission-and-vision",
         element:<MissionAndVision/>
       },
       {
-        path:"/leadership",
+        path:"/about-us/leadership",
         element:<Leadership/>
       },
       {
-        path:"/about",
+        path:"/about-us",
         element:<AboutUs/>
       },
       {
@@ -148,8 +149,12 @@ const router = createBrowserRouter([
         element:<Privacy/>
       },
       {
-        path:"/terms-conditions",
+        path:"/terms",
         element:<Terms/>
+      },
+      {
+        path:"/portfolio/:storyId",
+        element:<SuccessStories/>
       },
     ],
     

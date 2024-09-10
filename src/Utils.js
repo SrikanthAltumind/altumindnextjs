@@ -156,32 +156,32 @@ export const NavMenuData = [
     {
       id: 1,
       name: 'About',
-      url: '/about',
+      url: '/about-us',
       children: [
         {
           id: 1,
           name: 'About Altumind',
-          url: '/about',
+          url: '/about-us',
           children: [
             {
               id: 1,
               name: 'Mission and Vision',
-              url: '/about/mission-and-vision',
+              url: '/about-us/mission-and-vision',
             },
             {
               id: 2,
               name: 'Leadership',
-              url: '/about/leadership',
+              url: '/about-us/leadership',
             },
             {
               id: 3,
               name: 'Alliance',
-              url: '/about/alliance',
+              url: '/about-us/alliance',
             },
             {
               id: 4,
               name: 'Community Engagement',
-              url: '/about/community-engagement',
+              url: '/about-us/community-engagement',
             },
           ],
         },
@@ -217,7 +217,7 @@ export const NavMenuData = [
         {
           id: 2,
           name: 'Technology and Engineering',
-          url: '/services/technology-engineering',
+          url: '/services/technology-and-engineering',
           children: [
             {
               id: 1,
@@ -244,7 +244,7 @@ export const NavMenuData = [
         {
           id: 3,
           name: 'AI & Automation',
-          url: '/services/ai-automation',
+          url: '/services/ai-and-automation',
           children: [
             {
               id: 1,
@@ -261,7 +261,7 @@ export const NavMenuData = [
         {
           id: 4,
           name: 'Quality Assurance & Testing Services',
-          url: '/services/qa-testing',
+          url: '/services/quality-assurance',
           children: [
             {
               id: 1,
@@ -288,7 +288,7 @@ export const NavMenuData = [
         {
           id: 5,
           name: 'Cloud',
-          url: '/services/cloud-services',
+          url: '/services/cloud',
           children: [
             {
               id: 1,
@@ -337,7 +337,7 @@ export const NavMenuData = [
         {
           id: 9,
           name: 'Digital Strategy and Consulting',
-          url: '/services/digital-strategy-consulting',
+          url: '/services/digital-strategy',
         },
       ],
     },
@@ -369,7 +369,7 @@ export const NavMenuData = [
         {
           id: 5,
           name: 'EdTech',
-          url: '/industries/ed-tech',
+          url: '/industries/edtech',
         },
         {
           id: 6,
@@ -385,45 +385,45 @@ export const NavMenuData = [
     },
     {
       id: 5,
-      name: 'Insight',
-      url: '/insight',
+      name: 'Insights',
+      url: '/insights',
       children: [
         {
           id: 1,
           name: 'Blogs',
-          url: '/insight/blogs',
+          url: '/insights/blogs',
         },
         {
           id: 2,
           name: 'Expert Articles',
-          url: '/insight/expert-articles',
+          url: '/insights/expert-articles',
         },
         {
           id: 3,
           name: 'White Paper',
-          url: '/insight/white-paper',
+          url: '/insights/white-paper',
         },
         {
           id: 4,
           name: 'PR & Events',
-          url: '/insight/pr-events',
+          url: '/insights/pr-events',
         },
         {
           id: 5,
           name: 'Awards',
-          url: '/insight/awards',
+          url: '/insights/awards',
         },
         {
           id: 6,
           name: 'Podcast',
-          url: '/insight/podcast',
+          url: '/insights/podcast',
         },
       ],
     },
     {
       id: 6,
-      name: 'Careers',
-      url: '/careers',
+      name: 'Career',
+      url: '/career',
       children: [
         {
           id: 1,
@@ -433,7 +433,7 @@ export const NavMenuData = [
         {
           id: 2,
           name: 'Life at Altumind',
-          url: '/careers/life-at-altumind',
+          url: '/career/life-at-altumind',
         },
       ],
     },

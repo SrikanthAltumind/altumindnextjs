@@ -33,7 +33,7 @@ useEffect(()=> {
         setSlideItems(gainsAtGlance.financeAndBFSI)
     else if(location.pathname === '/industries/healthcare')
         setSlideItems(gainsAtGlance.healthCare)
-    else if(location.pathname === '/industries/ed-tech')
+    else if(location.pathname === '/industries/edtech')
         setSlideItems(gainsAtGlance.edTech)
     else if(location.pathname === '/industries/internet-saas')
         setSlideItems(gainsAtGlance.internetAndSaas)

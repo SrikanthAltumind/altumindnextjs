@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const Industries = ( ) => {
   const [data , setData] = useState([])
@@ -50,12 +51,12 @@ useEffect(() => {
                 {industryData?.attributes?.industry_category_mains?.data[0]?.attributes?.description}
               </p>
               <div className="font-montserrat flex gap-5 items-center text-sm">
-              <button className="bg-secondary border border-secondary rounded-full px-5 text-white py-2">Learn How</button>
-              <button className="bg-transparent flex items-center gap-2 border border-secondary text-secondary rounded-full px-5 py-2">Get in Touch
+              <Link to={industryData?.attributes?.industry_category_mains?.data[0]?.attributes?.url}><button className="bg-secondary border border-secondary rounded-full px-5 text-white py-2">Learn How</button></Link>
+              <Link to='/contact-us'><button className="bg-transparent flex items-center gap-2 border border-secondary text-secondary rounded-full px-5 py-2">Get in Touch
               <svg className="w-5 h-5 text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 12H5m14 0-4 4m4-4-4-4"/>
               </svg>
-              </button>
+              </button></Link>
               </div>
               </div>
              

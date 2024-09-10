@@ -12,7 +12,7 @@ const NavigatingKeyChallenges = () => {
         apiUrl = 'api/industry-bfsi-challenge-contents?populate=*'
     else if(location.pathname === '/industries/healthcare')
         apiUrl = 'api/industry-hc-challenge-contents?populate=*'
-    else if(location.pathname === '/industries/ed-tech')
+    else if(location.pathname === '/industries/edtech')
         apiUrl = 'api/industry-ed-challenge-contents?populate=*'
       else if(location.pathname === '/industries/internet-saas')
         apiUrl = 'api/industry-internet-challenge-contents?populate=*'

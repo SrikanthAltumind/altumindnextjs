@@ -87,7 +87,7 @@ const Navbar = () => {
                 <MobileMenu showMobileMenu={showMobileMenu}/>
               </div>
            
-            <Link to="/contact"> <button className="bg-secondary hidden lg:block outline-none border-none rounded-md text-white px-4 text-sm font-medium font-montserrat py-3">Lets Talk</button></Link>
+            <Link to="/contact-us"> <button className="bg-secondary hidden lg:block outline-none border-none rounded-md text-white px-4 text-sm font-medium font-montserrat py-3">Lets Talk</button></Link>
             </div>
          
            

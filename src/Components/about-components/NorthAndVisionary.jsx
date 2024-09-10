@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import LoaderSpinner from '../common-components/LoaderSpinner'
+import { Link } from 'react-router-dom'
 const NorthAndVisionary = () => {
     const [northStarData, setNorthStarData] = useState()
     const [visionaryData, setVisionaryData] = useState()
@@ -66,8 +67,8 @@ const NorthAndVisionary = () => {
             <p className='font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm   xl:text-base leading-5 lg:leading-6'>
                 {northStarData?.description} 
             </p>
-            <a
-                href="#"
+            <Link
+                to='/about-us/mission-and-vision'
                 className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
                 >
                 {northStarData?.CTA}
@@ -88,7 +89,7 @@ const NorthAndVisionary = () => {
                     d="M19 12H5m14 0-4 4m4-4-4-4"
                     />
                 </svg>
-                </a>
+                </Link>
             </div>
             <div className='basis-[40%] max-w-[380px] hidden md:block'>
             <img className='' src={northStarData?.image?.data?.attributes?.url} alt={northStarData?.title}/>
@@ -110,8 +111,8 @@ const NorthAndVisionary = () => {
             <p className='font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm xl:text-base leading-5 lg:leading-6'>
                 {visionaryData?.description} 
             </p>
-            <a
-                href="#"
+            <Link
+                to="/about-us/leadership"
                 className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
                 >
                 {visionaryData?.CTA}
@@ -132,7 +133,7 @@ const NorthAndVisionary = () => {
                     d="M19 12H5m14 0-4 4m4-4-4-4"
                     />
                 </svg>
-                </a>
+                </Link>
             </div>
            
         </div>

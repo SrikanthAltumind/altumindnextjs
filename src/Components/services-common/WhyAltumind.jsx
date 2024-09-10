@@ -13,13 +13,13 @@ const WhyAltumind = () => {
 
     if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-alt-stands?populate=*'
-    else if(location.pathname === '/services/ai-automation')
+    else if(location.pathname === '/services/ai-and-automation')
         apiUrl = 'api/service-ai-auto-stands?populate=*'
-    else if(location.pathname === '/services/qa-testing')
+    else if(location.pathname === '/services/quality-assurance')
         apiUrl = 'api/service-qa-testing-stands?populate=*'
         else if(location.pathname === '/services/digital-marketing')
         apiUrl = 'api/service-digital-marketing-stands?populate=*'
-        else if(location.pathname === '/services/technology-engineering')
+        else if(location.pathname === '/services/technology-and-engineering')
         apiUrl = 'api/service-tech-engg-stands?populate=*'
         else if(location.pathname === '/services/data-analytics')
             apiUrl = 'api/service-data-analytics-stands?populate=*'
@@ -27,14 +27,16 @@ const WhyAltumind = () => {
             apiUrl = 'api/service-managed-operation-stands?populate=*'
         else if(location.pathname === '/services')
             apiUrl = 'api/service-root-why-choose-altuminds?populate=*'
-        else if(location.pathname === '/services/digital-strategy-consulting')
+        else if(location.pathname === '/services/digital-strategy')
             apiUrl = 'api/service-digital-strategy-consulting-stands?populate=*'
-         else if(location.pathname === '/services/cloud-services')
+         else if(location.pathname === '/services/cloud')
             apiUrl = 'api/service-cloud-stands?populate=*'
-          else if(location.pathname === '/leadership')
+          else if(location.pathname === '/about-us/leadership')
             apiUrl = 'api/leadership-philosophy-contents?populate=*'
-          else if(location.pathname === '/about')
+          else if(location.pathname === '/about-us')
             apiUrl = 'api/about-us-why-us-contents?populate=*'
+            else if(location.pathname === '/success-stories/sukhiba')
+            apiUrl = 'api/success-story-sukiba-features-contents?populate=*'
 
     
 
@@ -75,7 +77,7 @@ const WhyAltumind = () => {
 <div className="flex justify-center items-center gap-10 flex-wrap max-w-[950px] mx-auto">
     {
         data?.map((item) => (
-            <div key={item.id} className="h-[270px] w-[285px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm">
+            <div key={item.id} className="h-[285px] w-[285px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm">
                 <img src={item?.attributes?.icon?.data?.attributes?.url}  className="dark:invert"/>
                 <p className="text-lg font-medium py-3">{item?.attributes?.title}</p>
                 <p className="text-sm dark:font-light">{item?.attributes?.description}</p>

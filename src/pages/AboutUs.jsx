@@ -5,6 +5,7 @@ import Overview from "../Components/services-common/Overview"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 import SolutionPartners from '../Components/common-components/SolutionPartners'
 import NorthAndVisionary from "../Components/about-components/NorthAndVisionary"
+import { Link } from "react-router-dom"
 
 
 const AboutUs = () => {
@@ -31,12 +32,12 @@ const AboutUs = () => {
       <SolutionPartners/>
       <div className="bg-LightBlue dark:bg-DarkBackground dark:text-white max-w-[500px] rounded-xl space-y-3 w-[90%] text-sm md:text-base mx-auto mt-20 p-5 text-center font-raleway font-semibold">
         <p className="">Discover the advantages of our strategic network.</p>
-        <a href = "#" className='group mx-auto w-fit text-sm md:text-base underline decoration-1 underline-offset-2   text-secondary  flex justify-center items-center gap-1'>
+        <Link to= "/about-us/alliance" className='group mx-auto w-fit text-sm md:text-base underline decoration-1 underline-offset-2   text-secondary  flex justify-center items-center gap-1'>
         Explore Our Alliances
                     <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                     </svg>
-                </a>
+                </Link>
       </div>
       </section>
       

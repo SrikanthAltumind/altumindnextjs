@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const industries = {
   BFSIAndFinance: {
@@ -29,6 +29,9 @@ const industries = {
     heading: "Collaborating for Digital Finance Success",
     caption: "Next-Gen Fintech Solutions ",
   },
+  Sukhiba:{
+    
+  }
 }
 
 
@@ -50,7 +53,7 @@ const Collaborate = () => {
     else if (location.pathname === "/industries/green-and-sustainability" ) {
        setData(industries.GreenAndSustainability);
     }
-    else if (location.pathname === "/industries/ed-tech" ) {
+    else if (location.pathname === "/industries/edtech" ) {
       setData(industries.EDtech);
    }
    else if (location.pathname === "/industries/internet-saas" ) {
@@ -65,12 +68,12 @@ const Collaborate = () => {
            {data?.heading}
           </h1>
           <p className='font-semibold'>{data?.caption}</p>
-          <a href = "#" className='group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1 mt-10'>
+          <Link to= "/contact-us" className='group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1 mt-10'>
                   Let&apos;s Connect
                     <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                     </svg>
-                </a>
+                </Link>
          </div>
      
         </div>

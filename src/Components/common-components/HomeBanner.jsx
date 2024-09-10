@@ -3,18 +3,21 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import flyingRocket from '../../assets/3d_rocket_flying.png'
+import { Link } from 'react-router-dom';
 
 const bannerData = [
     {   id:1, 
         heading1:'Providing Value-centric Solutions in', 
         dynamicWords:['Design', 'Development', 'Marketing'], 
-        cta:'Check our Services'
+        cta:'Check our Services',
+        url:'/services'
     },
     {   id:2, 
         heading1:'Integrated', 
         heading2:'Digital Transformation',
         description: 'Utilize the strength of digital breakthroughs to reshape your business horizon.',
-        cta:'Check out our work'
+        cta:'Check out our work',
+        url:'/portfolio'
     }
 ]
 
@@ -91,9 +94,9 @@ useEffect(()=> {
                             <p className='py-2 custom-gradient-text text-3xl xl:text-4xl'>{item.heading2}</p>
                         </div>
                         {item?.description && <p className='text-sm md:text-base max-w-[400px] font-medium dark:font-light'>{item?.description}</p>}
-                        <button className=' text-sm bg-secondary py-[10px] px-5 rounded-full text-white font-montserrat max-lg:mt-2'>
+                        <Link to={item.url}><button className=' text-sm bg-secondary py-[10px] px-5 rounded-full text-white font-montserrat max-lg:mt-2'>
                             {item.cta}
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
                 </div>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const Banner = () => {
@@ -11,21 +11,21 @@ const Banner = () => {
   const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/careers/life-at-altumind')
+    if(location.pathname === '/career/life-at-altumind')
         apiUrl = 'api/life-at-banner'
-      else if(location.pathname === '/community-engagement')
+      else if(location.pathname === '/about-us/community-engagement')
         apiUrl = 'api/community-management-banner'
-       else if(location.pathname === '/alliance')
+       else if(location.pathname === '/about-us/alliance')
         apiUrl = 'api/alliance-banner'
        else if(location.pathname === '/services/experience-design')
         apiUrl = 'api/service-exp-design-banner'
-      else if(location.pathname === '/services/ai-automation')
+      else if(location.pathname === '/services/ai-and-automation')
         apiUrl = 'api/service-ai-automation-banner'
-      else if(location.pathname === '/services/qa-testing')
+      else if(location.pathname === '/services/quality-assurance')
         apiUrl = 'api/service-qa-testing-banner'
       else if(location.pathname === '/services/digital-marketing')
-        apiUrl = 'api/service-ai-automation-banner'
-        else if(location.pathname === '/services/technology-engineering')
+        apiUrl = 'api/service-digital-marketing-banner'
+        else if(location.pathname === '/services/technology-and-engineering')
         apiUrl = 'api/service-tech-engg-banner'
       else if(location.pathname === '/services/data-analytics')
         apiUrl = 'api/service-data-analytics-banner'
@@ -33,15 +33,15 @@ const Banner = () => {
         apiUrl = 'api/service-managed-operation-banner'
       else if(location.pathname === '/services')
         apiUrl = 'api/service-root-overview'
-       else if(location.pathname === '/services/digital-strategy-consulting')
+       else if(location.pathname === '/services/digital-strategy')
         apiUrl = 'api/service-digital-strategy-consulting-banner'
-       else if(location.pathname === '/services/cloud-services')
+       else if(location.pathname === '/services/cloud')
         apiUrl = 'api/service-cloud-banner'
-       else if(location.pathname === '/mission-and-vision')
+       else if(location.pathname === '/about-us/mission-and-vision')
         apiUrl = 'api/our-mission-and-vision-banner'
-             else if(location.pathname === '/leadership')
+             else if(location.pathname === '/about-us/leadership')
         apiUrl = 'api/leadership-banner'
-        else if(location.pathname === '/about')
+        else if(location.pathname === '/about-us')
         apiUrl = 'api/about-us-banner'
 
   const fetchData = () => {
@@ -83,12 +83,14 @@ const Banner = () => {
     <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-medium dark:text-white'>{data?.description}</p>
     {
       location.pathname === '/services' &&
+      <Link to='/contact-us'>
       <p  className='group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1'>
       Get Started With Us
         <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
         </svg>
       </p>
+      </Link>
     }
   </div>
   )

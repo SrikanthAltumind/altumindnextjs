@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const aiAndAutomationData = {
   caption: 'Advanced AI & Automation Solutions',
@@ -22,6 +22,7 @@ const aiAndAutomationData = {
         {id:6, content:'Marketing Automation'},
       ],
         CTA: "Explore AI Solutions",
+        url:'/services/ai-and-automation/conversational-ai',
       image: {
         data: {
           attributes: {
@@ -48,6 +49,7 @@ const aiAndAutomationData = {
         {id:6, content:'Marketing Automation'},
       ],
         CTA: "Explore RPA Services",
+        url:'/services/ai-and-automation/rpa',
       image: {
         data: {
           attributes: {
@@ -133,6 +135,7 @@ const cloudServicesData = {
         {id:4, content:'Cloud optimization and management'}
       ],
         CTA: "Explore More",
+        url: '/services/cloud/cloud-migration',
       image: {
         data: {
           attributes: {
@@ -158,6 +161,7 @@ const cloudServicesData = {
         {id:6, content:'Application Performance Optimization'},
       ],
         CTA: "Explore More",
+        url: '/services/cloud/cloud-app',
       image: {
         data: {
           attributes: {
@@ -176,11 +180,11 @@ const ValueSection = () => {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === "/services/ai-automation")
+    if (location.pathname === "/services/ai-and-automation")
       setData(aiAndAutomationData)
     else if (location.pathname === "/services/digital-marketing")
         setData(digitalMarketingData)
-    else if (location.pathname === "/services/cloud-services")
+    else if (location.pathname === "/services/cloud")
       setData(cloudServicesData)
   }, []);
 
@@ -258,8 +262,8 @@ const ValueSection = () => {
             </div>
             {section?.attributes?.subDescription && <p className="text-sm font-montserrat font-medium dark:font-normal">{section?.attributes?.subDescription}</p>}
 
-            <a
-              href="#"
+            <Link
+              to={section?.attributes?.url}
               className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
             >
               {section?.attributes?.CTA}
@@ -280,7 +284,7 @@ const ValueSection = () => {
                   d="M19 12H5m14 0-4 4m4-4-4-4"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       ))}
