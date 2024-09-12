@@ -10,7 +10,7 @@ const MegaMenu = ({item}) => {
     <>
   <div className="absolute dark:text-black mx-auto right-0 w-[950px] z-10 top-full">
     <div className=" rounded-lg  shadow-lg bg-[#F3F9FF] p-5 mt-3 " >
-        <div className="flex text-[13px] font-medium justify-between w-full h-full">
+        <div className="flex text-[13px] font-semibold justify-between w-full h-full">
           {/*  eslint-disable-next-line react/prop-types */}
           <div className="basis-[60%] flex h-full"  onMouseLeave={() => setSubMenu(item?.children[0])}>
     

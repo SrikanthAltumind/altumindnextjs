@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
     {id:'countries', title:'Presence in Countries', value:5, suffix:'', countSpeed:200, imagePath:globeIcon},
     {id:'users', title:'Users Benefiting from Our Solutions', value:30, suffix:'+', countSpeed:50, imagePath:userIcon},
     {id:'projects', title:'Successful Projects Delivered', value:100, suffix:'+', countSpeed:20, imagePath:bulbIcon},
-    {id:'domains', title:'Domains of Specialized Expertise', value:20, suffix:'+', countSpeed:70, imagePath:starIcon},
+    {id:'domains', title:'Domains of Specialized Expertise', value:12, suffix:'+', countSpeed:70, imagePath:starIcon},
   ]
 
   const aboutUsImpactData = [

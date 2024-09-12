@@ -44,7 +44,7 @@ const NavigatingKeyChallenges = () => {
             data?.map((item) => (
                 <div key={item.id} className="h-[270px] w-[250px] shadow-custom-shadow p-3 dark:bg-white rounded-sm">
                     <img src={item?.attributes?.icon?.data?.attributes?.url} />
-                    <p className="text-lg font-medium py-3">{item?.attributes?.title}</p>
+                    <p className="text-lg font-semibold py-3">{item?.attributes?.title}</p>
                     <p className="text-sm">{item?.attributes?.description}</p>
                 </div>
             ))

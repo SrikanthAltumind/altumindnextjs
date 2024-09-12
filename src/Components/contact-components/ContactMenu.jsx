@@ -64,8 +64,8 @@ const ContactMenu = () => {
             {/* Left Content section */}
             <div className="basis-[30%] shrink-0 p-5 lg:p-10 pb-2 font-raleway bg-LightBlue dark:bg-DarkBackground flex flex-col items-center md:items-start gap-4">
                 <img src={leftSection?.imgUrl} className="w-36 h-36 lg:w-52 lg:h-52 object-cover bg-merald-200"/>
-                <p className="custom-gradient-text md:mx-0 max-md:text-center text-2xl lg:text-3xl">{leftSection?.title}</p>
-                <p className="uppercase font-semibold text-xs sm:text-sm">{leftSection?.caption}</p>
+                <p className="custom-gradient-text md:mx-0 max-md:text-center text-2xl lg:text-3xl capitalize">{leftSection?.caption}</p>
+                <p className="uppercase font-semibold text-xs sm:text-sm">{leftSection?.title}</p>
                 <p className="max-md:text-center text-xs sm:text-sm lg:text-base max-w-[450px] font-montserrat font-medium leading-5">
                     {leftSection?.description}
                 </p>

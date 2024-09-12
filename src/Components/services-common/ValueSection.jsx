@@ -9,24 +9,21 @@ const aiAndAutomationData = {
     id: 1,
     attributes: {
       title: "AI & Chatbot Solutions",
-      description: `Experience the future of healthcare with our comprehensive digital
-              transformation solutions. Utilizing Generative AI, cloud
-              technologies, and Advanced app development, we provide intelligent
-              automation and tailored patient experiences. Boost productivity`,
+      description: `Harness the power of AI and chatbots to transform your business. Our intelligent solutions analyze user behavior, interpret content, and generate predictions, giving you a competitive edge. By leveraging data-driven insights, we help you boost efficiency, enhance customer satisfaction, and accelerate growth across all aspects of your operations.`,
       pointsList:[
-        {id:1, content:'Content Marketing'},
-        {id:2, content:'Social Media Marketing'},
-        {id:3, content:'Email Marketing'},
-        {id:4, content:'Ecommerce Marketing'},
-        {id:5, content:'Performance Marketing'},
-        {id:6, content:'Marketing Automation'},
+        {id:1, content:'Voice assistants and skillsets '},
+        {id:2, content:'Customer service automation '},
+        {id:3, content:'Enterprise operations optimization '},
+        {id:4, content:'Transactional support'},
+        {id:5, content:'Data-Driven CX Analytics '},
+        {id:6, content:'Lead generation and sales assistance '},
       ],
         CTA: "Explore AI Solutions",
         url:'/services/ai-and-automation/conversational-ai',
       image: {
         data: {
           attributes: {
-                url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Branding_and_design_Compressify_io_d11bc71888.webp",
+                url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/AI_and_amp_Chatbot_80d8a78ba9.png",
               },
             },
           },
@@ -36,24 +33,21 @@ const aiAndAutomationData = {
     id: 2,
     attributes: {
       title: "RPA Solutions",
-      description:`Experience the future of healthcare with our comprehensive digital
-              transformation solutions. Utilizing Generative AI, cloud
-              technologies, and Advanced app development, we provide intelligent
-              automation and tailored patient experiences. Boost productivity`,
+      description:`Unleash the power of intelligent automation with our state of art Robotic Process Automation (RPA) solutions. From process discovery to ROI projection and managed services, we streamline your business for peak productivity. Seamlessly capture and automate workflows through user interfaces, documents, or images, breaking down silos and fostering collaboration between business and IT teams.  Leveraging our strong partnerships with leading RPA Partnership and deep domain expertise, we'll elevate your operational efficiency to unprecedented levels.`,
       pointsList:[
-        {id:1, content:'Content Marketing'},
-        {id:2, content:'Social Media Marketing'},
-        {id:3, content:'Email Marketing'},
-        {id:4, content:'Ecommerce Marketing'},
-        {id:5, content:'Performance Marketing'},
-        {id:6, content:'Marketing Automation'},
+        {id:1, content:'RPA-driven Agile Delivery'},
+        {id:2, content:'Intelligent Automation Consulting'},
+        {id:3, content:'Workflow Automation Services '},
+        {id:4, content:'Industry-Specific RPA Solutions'},
+        {id:5, content:'Cognitive Automation Support '},
+        {id:6, content:'RPA Process Mining '},
       ],
         CTA: "Explore RPA Services",
         url:'/services/ai-and-automation/rpa',
       image: {
         data: {
           attributes: {
-            url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_Services_Compressify_io_714e95291e.webp",
+            url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/RPA_Solutions_4b24f7bd49.png",
           },
         },
       },

@@ -260,7 +260,7 @@ export const NavMenuData = [
         },
         {
           id: 4,
-          name: 'Quality Assurance & Testing Services',
+          name: 'QA & Testing Services',
           url: '/services/quality-assurance',
           children: [
             {
@@ -328,16 +328,93 @@ export const NavMenuData = [
           id: 7,
           name: 'Data Analytics',
           url: '/services/data-analytics',
+          children: [
+            {
+              id: 1,
+              name: 'Business Intelligence',
+              url: '/services/data-analytics/business-intelligence',
+            },
+            {
+              id: 2,
+              name: 'Digital Intelligence',
+              url: '/services/data-analytics/digital-intelligence',
+            },
+            {
+              id: 3,
+              name: 'Marketing Intelligence',
+              url: '/services/data-analytics/marketing-intelligence',
+            },
+            {
+              id: 4,
+              name: 'Customer 360',
+              url: '/services/data-analytics/customer-360',
+            },
+            {
+              id: 5,
+              name: 'Sales Intelligence',
+              url: '/services/data-analytics/sales-intelligence',
+            },
+          ],
         },
         {
           id: 8,
           name: 'Managed Operations',
           url: '/services/managed-operations',
+          children: [
+            {
+              id: 1,
+              name: 'Product Innovation & Management',
+              url: '/services/managed-operations/product-innovation-management',
+            },
+            {
+              id: 2,
+              name: 'Website Operations & management',
+              url: 'services/managed-operations/website-operations-management',
+            },
+            {
+              id: 3,
+              name: 'Cloud Management',
+              url: 'services/managed-operations/cloud-management',
+            },
+            {
+              id: 4,
+              name: 'Software Maintenance & Support',
+              url: 'services/managed-operations/software-maintenance-support',
+            },
+          ],
+
         },
         {
           id: 9,
           name: 'Digital Strategy and Consulting',
           url: '/services/digital-strategy',
+          children: [
+            {
+              id: 1,
+              name: 'Digital Experience & Engagement',
+              url: '/services/digital-strategy/digital-experience-engagement',
+            },
+            {
+              id: 2,
+              name: 'Digital Build',
+              url: '/services/digital-strategy/digital-build',
+            },
+            {
+              id: 3,
+              name: 'Digital Modernization',
+              url: '/services/digital-strategy/digital-modernization',
+            },
+            {
+              id: 4,
+              name: 'Digital Audits',
+              url: '/services/digital-strategy/digital-audits',
+            },
+            {
+              id: 5,
+              name: 'Incubation Of Products & Services',
+              url: '/services/data-analytics/incubaton-products-services',
+            },
+          ],
         },
       ],
     },

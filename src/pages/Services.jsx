@@ -11,17 +11,19 @@ import OurDesignServices from "../Components/experience-design-components/OurDes
 import OurPhilosophy from "../Components/services-common/OurPhilosophy"
 import OurImpactByNumbers from '../Components/services-common/OurImpactByNumbers'
 
+
 const Services = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner/>
         <Overview/>
+    
         <OurImpactByNumbers/>
         <SuccessStories/>
         <section>
           <div className="text-center space-y-2 mb-20 font-raleway">
             <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Client Testimonials</p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">The Altumind Impact In Their Words</p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">The Altumind Impact: In Their Words</p>
           </div>
         <Testimonials/>
         </section>

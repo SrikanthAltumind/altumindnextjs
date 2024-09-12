@@ -9,7 +9,13 @@ const CommunityEngagement = () => {
     <Banner/>
     <BgImageBanner/>
     <CollaborativeInitiatives/>
+    <section>
+    <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Insights</p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">Dive into Our Latest Perspectives</p>
+          </div>
     <InsightsBlogs/>
+    </section>
     </div>
   )
 }

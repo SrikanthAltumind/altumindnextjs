@@ -30,7 +30,7 @@ useEffect(() => {
       {
         data?.map((item) => {
             return (
-            <li key={item.id}  onClick={()=> setIndustryData(item)} className={`${item.id === industryData.id ? 'border-b-2 border-secondary font-medium' : 'border-none'} cursor-pointer text-[#1E1E1E] lg:text-base text-sm dark:text-white`}>{item?.attributes?.industry_category}</li>
+            <li key={item.id}  onClick={()=> setIndustryData(item)} className={`${item.id === industryData.id ? 'border-b-[3px] border-secondary font-medium' : 'border-none'} cursor-pointer text-[#1E1E1E] lg:text-base text-sm dark:text-white`}>{item?.attributes?.industry_category}</li>
         )})
       }
       </ul>

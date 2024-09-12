@@ -6,6 +6,7 @@ import WhyAltumind from "../Components/services-common/WhyAltumind"
 import SolutionPartners from '../Components/common-components/SolutionPartners'
 import NorthAndVisionary from "../Components/about-components/NorthAndVisionary"
 import { Link } from "react-router-dom"
+import Timeline from "../Components/about-components/Timeline"
 
 
 const AboutUs = () => {
@@ -14,6 +15,7 @@ const AboutUs = () => {
         <Banner/>
         <Overview/>
         <OurImpactByNumbers/>
+        <Timeline/>
         <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
       <div className='text-center font-raleway space-y-3 mb-10'>
             <p className='text-sm md:text-base dark:text-white text-black font-semibold'>Why Us?</p>

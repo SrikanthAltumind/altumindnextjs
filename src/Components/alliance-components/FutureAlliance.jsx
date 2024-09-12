@@ -46,10 +46,10 @@ const FutureAlliance = () => {
          
         <div className='w-[90%] max-w-[1000px]  mx-auto  '>
         <div className='text-center lg:text-left mb-5 lg:mb-0'>
-                <p className='font-extrabold text-2xl lg:text-3xl xl:text-4xl bg-clip-text text-transparent w-fit max-lg:mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>
-                {data?.title}
+                <p className='font-semibold   text-xs lg:text-sm'>
+                {data?.sub}
                 </p>
-                <p className='font-semibold mt-1 md:mt-3 text-xs lg:text-sm'>{data?.sub}</p>
+                <p className='font-extrabold mt-1 md:mt-3 text-2xl lg:text-3xl xl:text-4xl bg-clip-text text-transparent w-fit max-lg:mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>{data?.title}</p>
                 </div>
            <div className='flex flex-col-reverse items-center  lg:flex-row gap-x-10 gap-y-5'>
             <div className='basis-[50%] max-w-[600px] grow max-lg:text-center sm:text-base text-sm'>

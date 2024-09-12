@@ -41,9 +41,10 @@ const PowerhousePartnerships = () => {
     }
   return (
    <section className="w-[90%] mx-auto dark:text-white space-y-10">
-    <div className="text-center space-y-3">
-        <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>Powerhouse Partnerships</p>
+    <div className="text-center space-y-3 font-raleway">
+        
         <p className='text-sm md:text-base dark:text-white text-black font-semibold'>Explore Our Partnership Ecosystem</p>
+        <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>Powerhouse Partnerships</p>
     </div>
     <div className="flex flex-col gap-10 justify-center">
         {

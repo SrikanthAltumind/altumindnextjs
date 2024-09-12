@@ -80,7 +80,7 @@ const Banner = () => {
     <div className='bg-LightBlue dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
     <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.title}
     </p>
-    <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-medium dark:text-white'>{data?.description}</p>
+    <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-semibold dark:text-white'>{data?.description}</p>
     {
       location.pathname === '/services' &&
       <Link to='/contact-us'>

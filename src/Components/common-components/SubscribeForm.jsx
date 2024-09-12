@@ -6,9 +6,9 @@ import ContactForm from "../contact-components/ContactForm";
 
 const data = {
   partnership : {
-    title: 'Partnership Enquiries',
-    caption:'Amplify transformation',
-    description:` Explore partnership opportunities with Altumind to extend your software solutions to new markets and industries.`,
+    title: 'Start a Project',
+    caption:'Your Vision, Our Expertise',
+    description:`Outline your project, and we'll help you with solutions that align perfectly with your goals.`,
   },
   career : {
     title: 'Join Altumind',
