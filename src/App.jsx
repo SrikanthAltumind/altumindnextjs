@@ -123,20 +123,32 @@ const router = createBrowserRouter([
         element: <ExperienceDesign />,
       },
       {
+        path: "/services/experience-design/*",
+        element: <WIP />,
+      },
+      {
         path: "/testing",
         element: <Testing />,
       },
       {
-        path: "/services/ai-and-chat-bot",
+        path: "/services/ai-automation",
         element: <AIandAutomation />,
       },
       {
-        path: "/services/quality-assurance-quality-control",
+        path: "/services/ai-automation/*",
+        element: <WIP />,
+      },
+      {
+        path: "/services/quality-assurance",
         element: <QAandTesting />,
       },
       {
         path: "/services/digital-marketing",
         element: <DigitalMarketingServices />,
+      },
+      {
+        path: "/services/digital-marketing/*",
+        element: <WIP />,
       },
       {
         path: "/services/technology-and-engineering",
@@ -147,8 +159,16 @@ const router = createBrowserRouter([
         element: <DataAnalytics />,
       },
       {
+        path: "/services/data-analytics/*",
+        element: <WIP />,
+      },
+      {
         path: "/services/managed-operations",
         element: <ManagedOperations />,
+      },
+      {
+        path: "/services/managed-operations/*",
+        element: <WIP />,
       },
       {
         path: "/services",
@@ -159,8 +179,12 @@ const router = createBrowserRouter([
         element: <DigitalStrategy />,
       },
       {
-        path: "/services/cloud-automation",
+        path: "/services/cloud",
         element: <CloudServices />,
+      },
+      {
+        path: "/services/cloud/*",
+        element: <WIP />,
       },
       {
         path: "/about/about-altumind/mission-and-vision",
@@ -235,12 +259,20 @@ const router = createBrowserRouter([
         element: <SuccessStory />,
       },
       {
-        path:"/terms",
-        element:<Terms/>
+        path: "/terms",
+        element: <Terms />,
       },
       {
-        path:"/portfolio/:storyId",
-        element:<SuccessStory/>
+        path: "/services/quality-assurance/*",
+        element: <WIP />,
+      },
+      {
+        path: "/services/technology-and-engineering/*",
+        element: <WIP />,
+      },
+      {
+        path: "/portfolio/:storyId",
+        element: <SuccessStory />,
       },
     ],
   },

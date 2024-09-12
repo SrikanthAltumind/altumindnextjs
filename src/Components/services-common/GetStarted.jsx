@@ -1,118 +1,111 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { gradientStyle } from "../../ReactFunctions";
- 
+
 const services = {
   experience: {
     heading: "Turn Vision into Impactful Digital Experiences.",
     caption: "Start Your Experience Transformation Today ",
     linkText: "Get in Touch ",
-    url:'/contact'
+    url: "/contact",
   },
   digitalMarketingServices: {
     heading: "Amplify Your Brand's Voice in the Digital Sphere",
     caption:
       "Build Brand Recognition as an Industry Leader and Increase Profitability",
     linkText: "Get Started",
-    url: '/contact'
+    url: "/contact",
   },
   aiAutomation: {
     heading:
       "Shaping the Future of Intelligent Automation: Our Next-Gen AI & RPA Solutions Propel Your Business Forward. ",
 
     linkText: "Reach Out Today",
-    url:'/contact'
+    url: "/contact",
   },
   qaTesting: {
     heading:
       "Elevate Quality Standards. Deliver Flawless Solution with Precision Testing and Robust Quality Assurance.",
     linkText: "Get Started",
-    url:'/contact'
+    url: "/contact",
   },
   technologyEngineering: {
     heading:
       "Redefine What's Possible with Advanced Engineering. Build the Future with Scalable and Robust Solutions.",
     linkText: "Get Started",
-    url: '/contact'
+    url: "/contact",
   },
   dataAnalytics: {
     heading: "Beyond Numbers: Your Data Tells a Story ",
     caption:
       "We Help You Listen, Understand, and Act. Covering All Angles of Your Business",
     linkText: "Get Started",
-    url: '/contact'
+    url: "/contact",
   },
   managedOperations: {
     heading: "Empower Your Business: Expertise and Resilience on Demand",
     caption:
       "Streamline Operations, Enhance Communication, and Boost Agility with Our Managed Services",
     linkText: "Get Started",
-    url: '/contact'
+    url: "/contact",
   },
   services: {
     heading: "Evolving Business for the ‘Now’ Era",
     caption:
       "Harness the power of integrated transformation for unparalleled growth with Altumind. ",
     linkText: "Get Started Today",
-    url:'/contact'
+    url: "/contact",
   },
   digitalStrategy: {
     heading: "The Digital Differentiator Your Business Needs",
     caption:
       "We bring the skills, technology, and scale necessary to think and deliver big for your business.",
     linkText: "Get Started",
-    url: '/contact'
+    url: "/contact",
   },
   cloudServices: {
     heading:
       "Build the foundations for success. Next-Gen Cloud Services for Agility, Scalability, and Success.",
     linkText: "Reach Out Today",
-    url: '/contact'
+    url: "/contact",
   },
   MissionAndVision: {
     heading: "Driven by purpose, fueled by empathy",
     caption:
       "We blend technology, data, and creativity to craft solutions that resonate and deliver meaningful impact. If you're ready for purpose-driven innovation that transforms challenges into opportunities",
     linkText: "Connect with us Today",
-    url:'/contact'
+    url: "/contact",
   },
   leadership: {
     heading:
       "Relentlessly pursuing a world that thrives for everyone. Be a Part of Change.",
     linkText: "Contact Us Today",
-    url:'/contact'
+    url: "/contact",
   },
   sukhiba: {
-    heading:
-      "Unlock E-commerce Growth in Emerging Markets",
-      caption:
-      "User-Centric Design. Tailored Solutions. Measurable Results. ",
+    heading: "Unlock E-commerce Growth in Emerging Markets",
+    caption: "User-Centric Design. Tailored Solutions. Measurable Results. ",
     linkText: "Contact Us Today",
-    url: '/contact'
+    url: "/contact",
   },
   secpod: {
-    heading:
-      "Ready for a Website Makeover?",
-      caption:
-      "User-Centric Design. Tailored Solutions. Measurable Results. ",
+    heading: "Ready for a Website Makeover?",
+    caption: "User-Centric Design. Tailored Solutions. Measurable Results. ",
     linkText: "Contact Us Today",
-    url: '/contact'
+    url: "/contact",
   },
- enphase: {
-    heading:
-      "Ready to transform your business and make a positive impact?  ",
-      caption:
+  enphase: {
+    heading: "Ready to transform your business and make a positive impact?  ",
+    caption:
       "Partner with Altumind and let's create innovative, user-centric solutions. ",
     linkText: "Contact Us Today",
-    url: '/contact'
+    url: "/contact",
   },
   unitedFinance: {
-    heading:
-      "Outdated Systems Holding You Back? Let's Fix That",
-      caption:
-      "Revitalize Your Web Presence with Altumind.",
+    heading: "Outdated Systems Holding You Back? Let's Fix That",
+    caption: "Revitalize Your Web Presence with Altumind.",
     linkText: "Start with a Free Consultation!",
-    url: '/contact'
+    url: "/contact",
   },
   // sukhiba: {
   //   heading: "Unlock E-commerce Growth in Emerging Markets",
@@ -136,22 +129,19 @@ const services = {
   //   linkText: "Start with a Free Consultation!",
   // },
 };
- 
- 
+
 const GetStarted = () => {
   const [data, setData] = useState("");
   const location = useLocation();
- 
+
   useEffect(() => {
     if (location.pathname === "/services/experience-design") {
       setData(services.experience);
     } else if (location.pathname === "/services/digital-marketing") {
       setData(services.digitalMarketingServices);
-    } else if (location.pathname === "/services/ai-and-chat-bot") {
+    } else if (location.pathname === "/services/ai-automation") {
       setData(services.aiAutomation);
-    } else if (
-      location.pathname === "/services/quality-assurance-quality-control"
-    ) {
+    } else if (location.pathname === "/services/quality-assurance") {
       setData(services.qaTesting);
     } else if (location.pathname === "/services/technology-and-engineering") {
       setData(services.technologyEngineering);
@@ -163,7 +153,7 @@ const GetStarted = () => {
       setData(services.services);
     } else if (location.pathname === "/services/digital-strategy-consulting") {
       setData(services.digitalStrategy);
-    } else if (location.pathname === "/services/cloud-automation") {
+    } else if (location.pathname === "/services/cloud") {
       setData(services.cloudServices);
     } else if (
       location.pathname === "/about/about-altumind/mission-and-vision"
@@ -181,9 +171,7 @@ const GetStarted = () => {
       setData(services.unitedFinance);
     }
   }, [location.pathname]);
- 
- 
- 
+
   return (
     <div className="bg-[#EAF1FF] min-h-[280px] w-full flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2 py-10">
       <div className="ml-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
@@ -221,7 +209,5 @@ const GetStarted = () => {
     </div>
   );
 };
- 
+
 export default GetStarted;
- 
- 

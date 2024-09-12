@@ -10,7 +10,7 @@ const Spectrum = () => {
 
     let apiUrl;
 
-    if (location.pathname === "/services/quality-assurance-quality-control")
+    if (location.pathname === "/services/quality-assurance")
       apiUrl = "api/service-qa-testing-service-contents?populate=*";
     else if (location.pathname === "/services/technology-and-engineering")
       apiUrl = "api/service-tech-engg-service-contents?populate=*";
@@ -82,31 +82,38 @@ const Spectrum = () => {
               <p className="text-lg font-medium">
                 {service?.attributes?.title}
               </p>
-              <p className="text-sm max-w-[480px]">{service?.attributes?.description}</p>
-              {service?.attributes?.CTA && <p className="underline cursor-pointer mt-4 font-semibold flex gap-1 items-center group text-[#DD5143]">
-                <span className="font-montserrat">
-                  {service?.attributes?.CTA}
-                </span>{" "}
-                <span>
-                  <svg
-                    className="w-6 h-6 group-hover:translate-x-3 transition-all duration-200 "
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </span>
-              </p>}
+              <p className="text-sm max-w-[480px]">
+                {service?.attributes?.description}
+              </p>
+              {service?.attributes?.CTA && (
+                <a
+                  href={service?.attributes?.url}
+                  className="underline cursor-pointer mt-4 font-semibold flex gap-1 items-center group text-[#DD5143]"
+                >
+                  <span className="font-montserrat">
+                    {service?.attributes?.CTA}
+                  </span>{" "}
+                  <span>
+                    <svg
+                      className="w-6 h-6 group-hover:translate-x-3 transition-all duration-200 "
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1"
+                        d="M19 12H5m14 0-4 4m4-4-4-4"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              )}
             </div>
           </div>
         ))}

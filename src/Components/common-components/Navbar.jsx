@@ -83,63 +83,63 @@ export const Navbardata = [
       },
       {
         innerMenu: "AI & Automation",
-        path: "/services/ai-and-chat-bot",
+        path: "/services/ai-automation",
         children: [
           {
             name: "Conversational AI & Chatbot",
-            path: "/services/ai-and-chat-bot/conversational-ai",
+            path: "/services/ai-automation/conversational-ai",
           },
           {
             name: "RPA",
-            path: "/services/ai-and-chat-bot/ai-chatbot",
+            path: "/services/ai-automation/ai-chatbot",
           },
         ],
       },
       {
         innerMenu: "Quality Assurance & Testing Services",
-        path: "/services/quality-assurance-quality-control",
+        path: "/services/quality-assurance",
         children: [
           {
             name: "Automation Testing",
-            path: "/services/quality-assurance-quality-control/platforms",
+            path: "/services/quality-assurance/platforms",
           },
           {
             name: "Security Testing",
-            path: "/services/quality-assurance-quality-control/industries",
+            path: "/services/quality-assurance/industries",
           },
           {
             name: "Performance Testing",
-            path: "/services/quality-assurance-quality-control/levels-of-software-testing-services",
+            path: "/services/quality-assurance/levels-of-software-testing-services",
           },
           {
             name: "QA Consulting",
-            path: "/services/quality-assurance-quality-control/test-management",
+            path: "/services/quality-assurance/test-management",
           },
           // {
           //   name: "Defect Management",
-          //   path: "/services/quality-assurance-quality-control/defect-management",
+          //   path: "/services/quality-assurance/defect-management",
           // },
           // {
           //   name: "Other QA Services",
-          //   path: "/services/quality-assurance-quality-control/other-qa-services",
+          //   path: "/services/quality-assurance/other-qa-services",
           // },
           // {
           //   name: "Resources",
-          //   path: "/services/quality-assurance-quality-control/resources",
+          //   path: "/services/quality-assurance/resources",
           // },
         ],
       },
       {
         innerMenu: "Cloud",
-        path: "/services/cloud-automation",
+        path: "/services/cloud",
         children: [
           {
             name: "Cloud Migration",
-            path: "/services/cloud-automation/cloud",
+            path: "/services/cloud/cloud",
           },
           {
             name: "Cloud App Services",
-            path: "/services/cloud-automation/rpa",
+            path: "/services/cloud/rpa",
           },
         ],
       },

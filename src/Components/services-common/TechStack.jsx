@@ -15,7 +15,7 @@ const TechStack = () => {
       apiUrl = "api/service-exp-design-tech-stack?populate=*";
     // else if(location.pathname === '/ai-automation')
     //     apiUrl = 'api/industry-bfsi-sol-partners?populate=*'
-    else if (location.pathname === "/services/quality-assurance-quality-control")
+    else if (location.pathname === "/services/quality-assurance")
       apiUrl = "api/service-qa-testing-stack?populate=*";
     else if (location.pathname === "/services/digital-marketing")
       apiUrl = "api/service-digital-marketing-stack?populate=*";

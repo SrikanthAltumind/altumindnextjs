@@ -132,15 +132,15 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/ai-and-chat-bot">AI & Automation</Link>
+                  <Link to="/services/ai-automation">AI & Automation</Link>
                 </li>
                 <li>
-                  <Link to="services/quality-assurance-quality-control">
+                  <Link to="services/quality-assurance">
                     Quality Assurance & Testing Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/cloud-automation">Cloud</Link>
+                  <Link to="/services/cloud">Cloud</Link>
                 </li>
                 <li>
                   <Link to="/services/digital-marketing">

@@ -10,7 +10,7 @@ const SpectrumDesc = () => {
 
    let apiUrl;
 
-   if (location.pathname === "/services/quality-assurance-quality-control")
+   if (location.pathname === "/services/quality-assurance")
      apiUrl = "api/service-qa-testing-service";
    else if (location.pathname === "/services/technology-and-engineering")
      apiUrl = "api/service-tech-engg-service-contents?populate=*";
