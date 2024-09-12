@@ -263,6 +263,10 @@ const router = createBrowserRouter([
         element: <Terms />,
       },
       {
+        path: "/blog/:id",
+        element: <WIP />,
+      },
+      {
         path: "/services/quality-assurance/*",
         element: <WIP />,
       },
