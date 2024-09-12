@@ -21,7 +21,7 @@ useEffect(()=> {
   return (
     <div className='font-raleway'>
         <p className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue text-3xl lg:text-4xl mb-10 w-fit mx-auto">
-            Teck Stack
+            Tech Stack
         </p> 
      
         <Marquee

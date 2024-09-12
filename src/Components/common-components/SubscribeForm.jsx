@@ -1,98 +1,113 @@
-import axios from "axios";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import Popup from "./Popup";
-import { useState } from "react";
+// import axios from "axios";
+// import { useFormik } from "formik";
+// import * as yup from "yup";
+// import {useState } from "react";
+import ContactForm from "../contact-components/ContactForm";
+
+const data = {
+  partnership : {
+    title: 'Start a Project',
+    caption:'Your Vision, Our Expertise',
+    description:`Outline your project, and we'll help you with solutions that align perfectly with your goals.`,
+  },
+  career : {
+    title: 'Join Altumind',
+    caption:'SHAPE THE FUTURE WITH US',
+    description:`Explore career opportunities and become part of our innovative team.`,
+   
+  }
+}
+
 
 const SubscribeForm = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const initialValues = {
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  };
+  const IsCareerform = location.pathname === '/career'
+  const content = IsCareerform ? data?.career : data?.partnership
+  // const [showPopup, setShowPopup] = useState(false);
+  // const initialValues = {
+  //   name: "",
+  //   phone: "",
+  //   email: "",
+  //   message: "",
+  // };
 
-  const validationSchema = yup.object({
-    name: yup
-      .string()
-      .required("Required")
-      .matches(/^[A-Za-z ]+$/, "Enter only alphabet")
-      .test(
-        "leading-space",
-        "Cannot start with space",
-        (value) => !value.startsWith(" ")
-      )
-      .min(2, "Name is too short"),
-    phone: yup
-      .string()
-      .required("Required")
-      .matches(/^[0-9]+$/, "Enter only digits")
-      .length(10, "Number should have 10 digits"),
-    email: yup
-      .string()
-      .required("Required")
-      .matches(
-        /^[A-Z0-9._%+-]{3,}@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i,
-        "Invalid email"
-      ),
-    message: yup
-      .string()
-      .required("Required")
-      .test(
-        "leading-space",
-        "Cannot start with space",
-        (value) => !value.startsWith(" ")
-      )
-      .min(2, "Message should have atleast 2 characters"),
-  });
+  // const validationSchema = yup.object({
+  //   name: yup
+  //     .string()
+  //     .required("Required")
+  //     .matches(/^[A-Za-z ]+$/, "Enter only alphabet")
+  //     .test(
+  //       "leading-space",
+  //       "Cannot start with space",
+  //       (value) => !value.startsWith(" ")
+  //     )
+  //     .min(2, "Name is too short"),
+  //   phone: yup
+  //     .string()
+  //     .required("Required")
+  //     .matches(/^[0-9]+$/, "Enter only digits")
+  //     .length(10, "Number should have 10 digits"),
+  //   email: yup
+  //     .string()
+  //     .required("Required")
+  //     .matches(
+  //       /^[A-Z0-9._%+-]{3,}@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i,
+  //       "Invalid email"
+  //     ),
+  //   message: yup
+  //     .string()
+  //     .required("Required")
+  //     .test(
+  //       "leading-space",
+  //       "Cannot start with space",
+  //       (value) => !value.startsWith(" ")
+  //     )
+  //     .min(2, "Message should have atleast 2 characters"),
+  // });
 
-  const onSubmit = (formData, { resetForm }) => {
-    const payload = {
-      data: {
-        name: formData.name.trim(),
-        phone: formData.phone,
-        email: formData.email.trim(),
-        message: formData.message.trim(),
-      },
-    };
+  // const onSubmit = (formData, { resetForm }) => {
+  //   const payload = {
+  //     data: {
+  //       name: formData.name.trim(),
+  //       phone: formData.phone,
+  //       email: formData.email.trim(),
+  //       message: formData.message.trim(),
+  //     },
+  //   };
 
-    axios
-      .post(`${import.meta.env.VITE_APP_API_URL}api/save-contacts`, payload)
-      .then((response) => {
-        console.log("Response Data", response?.data);
-        resetForm();
-        setShowPopup(true);
-      })
-      .catch((error) => {
-        console.log("Error sending Form data", error);
-        resetForm();
-      });
-  };
+  //   axios
+  //     .post(`${import.meta.env.VITE_APP_API_URL}api/save-contacts`, payload)
+  //     .then((response) => {
+  //       console.log("Response Data", response?.data);
+  //       resetForm();
+  //       setShowPopup(true);
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error sending Form data", error);
+  //       resetForm();
+  //     });
+  // };
 
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validationSchema,
-  });
+  // const formik = useFormik({
+  //   initialValues,
+  //   onSubmit,
+  //   validationSchema,
+  // });
+
+
 
   return (
     <div className="w-[90%] text-tertiary dark:bg-darkTheme dark:text-white  mx-auto flex flex-col md:flex-row gap-12 md:gap-7 lg:gap-24">
-      <div className="lg:basis-[40%] md:basis-[50%] font-raleway max-md:text-center">
-        {/* <p className="font-semibold md:text-lg">DROP US A LINE</p> */}
-        <h1 className="text-5xl md:text-5xl lg:text-6xl py-2 font-semibold text-primary dark:text-white  bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
-          Let&apos;s
-          <span className="font-extrabold text-transparent">
-            {" "}
-            Work Together!
-          </span>
+      <div className="lg:basis-[35%] md:basis-[50%] font-raleway max-md:text-center">
+       
+        <h1 className="text-5xl md:text-5xl lg:text-7xl py-2 mt-5 font-bold custom-gradient-text">
+       {content?.title}
         </h1>
-        <p className="font-montserrat text-sm font-medium  mt-4">
-          Discover how we can support your organization in reaching its next
-          milestone. Share your areas of interest so we can serve you better.
+        <p className="font-semibold md:text-lg uppercase py-5 dark:text-white">{content?.caption}</p>
+        <p className="font-montserrat text-sm font-medium">
+        {content?.description}
         </p>
       </div>
-      <form
+      {/* <form
         onSubmit={formik.handleSubmit}
         className="lg:basis-[60%] md:basis-[50%] space-y-14 font-montserrat font-medium "
       >
@@ -216,8 +231,11 @@ const SubscribeForm = () => {
             "Send"
           )}
         </button>
-      </form>
-      {showPopup && <Popup setShowPopup={setShowPopup} />}
+      </form> */}
+      {/* {showPopup && <Popup setShowPopup={setShowPopup} />} */}
+      <div className="lg:basis-[65%] md:basis-[50%] space-y-14 font-montserrat font-medium ">
+        <ContactForm selectedForm={IsCareerform ? 'career': ''}/>
+      </div>
     </div>
   );
 };

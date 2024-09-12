@@ -234,6 +234,14 @@ const router = createBrowserRouter([
         path: "/portfolio/enphase",
         element: <SuccessStory />,
       },
+      {
+        path:"/terms",
+        element:<Terms/>
+      },
+      {
+        path:"/portfolio/:storyId",
+        element:<SuccessStory/>
+      },
     ],
   },
 ]);

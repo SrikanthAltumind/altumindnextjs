@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 const WhyAltumind = () => {
     const [data, setData] = useState([])

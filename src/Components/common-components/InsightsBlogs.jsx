@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const InsightsBlogs = () => {
     const [data, setData] = useState()
@@ -48,12 +49,14 @@ const InsightsBlogs = () => {
             </div>
           </div>
           <div className='justify-center flex items-center mt-16'>
-          <button className="group text-sm font-semibold font-montserrat  flex items-center gap-1">
+            <Link to='/insights'>
+          <button className="group text-sm font-semibold font-raleway  flex items-center gap-1">
             <span className='border-b border-tertiary dark:border-white dark:text-white'>View all Insights</span>
             <svg className="w-5 h-5 group-hover:translate-x-3 transition-all duration-200 dark:text-white text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
             </svg>
           </button>
+          </Link>
           </div>
       </div>
     )

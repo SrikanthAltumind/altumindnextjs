@@ -10,7 +10,7 @@ const WeAreSeeking = () => {
             {" "} &apos;What If&apos; into &apos;What&apos;s Next&apos;.&rdquo;
         </span>
       </p>
-      <Link to="/">
+      <Link to="/career/open-roles">
         <button className='group mx-auto underline decoration-1 underline-offset-2 text-secondary dark:text-white font-semibold flex justify-center items-center gap-1 mt-10'>
             Join Our Team
             <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

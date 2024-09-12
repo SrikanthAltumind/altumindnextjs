@@ -1,50 +1,28 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Popup from "../common-components/Popup";
-import { useState } from "react";
+import ThankyouNote from "../contact-components/ThankyouNote";
+import { useEffect, useState } from "react";
 
-const contentSection = {
-  projects : {
-    title: 'Your Vision, Our Expertise',
-    caption:'start a project',
-    description:`Outline your project, and we'll help you with solutions that align perfectly with your goals. `,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Projects_Compressify_io_76a2088943.webp'
-  },
-
-  partnership : {
-    title: 'Amplify transformation',
-    caption:'Partnership Enquiries',
-    description:`Explore partnership opportunities with Altumind to extend your 
-              software solutionsto new markets and industries.`,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Partnership_Compressify_io_c83693b19d.webp'
-  },
-
-  general : {
-    title: 'Curiosity Welcomed',
-    caption:'General Queries',
-    description:`What's on your mind? Share your thoughts, and let's start a conversation that could transform your business.`,
-    imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Genral_Compressify_io_a6ea7066a4.webp'
-  }
-}
-
-const CommonForm = ({selectedForm}) => {
-  const leftSection = contentSection[selectedForm]
-  const [showPopup, setShowPopup] = useState(false);
-  const [file, setFile] = useState()
-  const [dropdown, setDropDown] = useState(false)
-  const [interest, setInterest] = useState("")
-  const initialValues = {
+const initialFormData = {
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     companyName: "",
     howDidYouHearAboutUs:"",
-    howCanWeHelp: "",
-    uploadYourBrief:"",
-    // formType:''
+    message: "",
+    upload:"",
   };
+
+// eslint-disable-next-line react/prop-types
+const ContactForm = ({selectedForm}) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [file, setFile] = useState()
+  const [presignedUrl, setPresignedUrl] = useState()
+  const [initialValues, setInitialValues] = useState(initialFormData)
+
+  const requiredField = yes=> yes ? yup.string().required('Required') : yup.string()
 
   const validationSchema = yup.object({
     firstName: yup
@@ -67,18 +45,18 @@ const CommonForm = ({selectedForm}) => {
         (value) => !value.startsWith(" ")
       )
       .min(2, "Name is too short"),
-    companyName: yup
-      .string()
-      .required("Required")
+    companyName: requiredField(selectedForm !== 'career')
+    //   .string()
       .matches(/^[A-Za-z ]+$/, "Enter only alphabet")
       .test(
         "leading-space",
         "Cannot start with space",
-        (value) => !value.startsWith(" ")
+        // (value) => !value.startsWith(" ")
+        (value) => value ? !value.startsWith(" ") : true
       )
       .min(4, "Name is too short"),
-    phone: yup
-      .string()
+    phone: requiredField(selectedForm === 'career')
+    //   .string()
       .matches(/^[0-9]+$/, "Enter only digits")
       .length(10, "Number should have 10 digits"),
     email: yup
@@ -91,67 +69,158 @@ const CommonForm = ({selectedForm}) => {
       howDidYouHearAboutUs: yup
       .string()
       .required("Required"),
-    howCanWeHelp: yup
-      .string()
-      .required("Required")
+    message: requiredField(selectedForm !== 'career')
+    //   .string()
       .test(
         "leading-space",
         "Cannot start with space",
-        (value) => !value.startsWith(" ")
+        // (value) => !value.startsWith(" ")
+        (value) => value ? !value.startsWith(" ") : true
       )
       .min(2, "Message should have atleast 2 characters"),
   });
 
-  const onSubmit = (formData, { resetForm }) => {
-    const payload = {
-      data: {
-        firstName: formData.firstName.trim(),
-        lastName: formData.lastName.trim(),
-        phone: formData.phone,
-        email: formData.email.trim(),
-        companyName: formData.companyName.trim(),
-        howDidYouHearAboutUs: formData.howDidYouHearAboutUs.trim(),
-        // howDidYouHearAboutUs: howDidYouHearAboutUs,
-        howCanWeHelp: formData.howCanWeHelp.trim(),
-      },
-    };
-    console.log('Form Data Payload', payload)
-return;
-    axios
-      .post(`${import.meta.env.VITE_APP_API_URL}api/save-contacts`, payload)
-      .then((response) => {
-        console.log("Response Data", response?.data);
-        resetForm();
-        setShowPopup(true);
-     
-      })
-      .catch((error) => {
-        console.log("Error sending Form data", error);
-        resetForm();
-      });
+  const sendData = async (formData, fileUrl=null) => {
+      if(selectedForm==='career'){   //Career Form API
+        const payload = {
+          data: {
+            firstname: formData.firstName.trim(),
+            lastname: formData.lastName.trim(),
+            email: formData.email.trim(),
+            contact: formData.phone,
+            company: formData.companyName.trim(),
+            aboutyou: formData.message.trim(),
+            hearAboutUs: formData.howDidYouHearAboutUs.trim(),
+            // upload: fileUrl.split('?')[0],
+          },
+        };
+        console.log('Career Form Data Payload', payload)
+        await axios.post(`${import.meta.env.VITE_APP_API_URL}api/contact-for-careers`, payload)
+        console.log('Career data sent successfully!');
+      }
+      else{   //Projects, Partnership, General Forms API
+        const payload = {
+          data: {
+            firstname: formData.firstName.trim(),
+            lastname: formData.lastName.trim(),
+            email: formData.email.trim(),
+            phone: formData.phone,
+            company: formData.companyName.trim(),
+            hearAbout: formData.howDidYouHearAboutUs.trim(),
+            message: formData.message.trim(),
+            // upload: fileUrl.split('?')[0],
+            formType: selectedForm,
+          },
+        };
+        console.log('Form Data Payload', payload)
+        await axios.post(`${import.meta.env.VITE_APP_API_URL}api/contact-for-projects`, payload)
+        console.log('Contact data sent successfully!');
+      }
   };
 
-  const formik = useFormik({
+
+  const getPresignedurl = async (file) => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${file.type}&filename=${file.name}`,{withCredentials:true});
+      console.log('getPresignedurl',response?.data?.data);
+      if (response.data && response.data.data) {
+        setPresignedUrl(response.data.data);
+        return response.data.data;
+      } else {
+        console.error('Presigned URL not found in the response.');
+        return null;
+      }
+    
+    } catch (error) {
+      console.error('Error fetching presigned URL:', error);
+    }
+  };
+
+//   const uploadFile = async () => {
+//     try {
+//       const presignedUrlResponse = await getPresignedurl(file);
+//       if (!presignedUrlResponse) {
+//         console.error('Presigned URL is null or undefined.');
+//         // Handle this case appropriately, e.g., display an error message
+//         return;
+//       }
+//       await axios.put(presignedUrlResponse.url, file, {withCredentials:true,  'Content-Type': file.type})
+//       console.log('File uploaded successfully!');
+//       console.log('filetype', file.type);
+//       await sendData(presignedUrlResponse.url);
+//       setUploadSuccess(true);
+//       setPopUp(true)
+
+//     }catch(error){
+//       console.error('Error uploading file:', error);
+//       if (error.response) {
+//         // The request was made and the server responded with a status code
+//         console.error('Response status:', error.response.status);
+//         console.error('Response data:', error.response.data);
+//       } else if (error.request) {
+//         // The request was made but no response was received
+//         console.error('No response received:', error.request);
+//       } else {
+//         // Something happened in setting up the request that triggered an Error
+//         console.error('Request setup error:', error.message);
+//       }
+//     }finally {
+//       // setUploading(false);
+//       setSubmitting(false);
+//     }
+// };
+
+
+  const onSubmit = async (formData, { resetForm }) => {
+    try {
+      // const presignedUrlResponse = await getPresignedurl(file);
+      // if (!presignedUrlResponse) {
+      //   console.error('Presigned URL is null or undefined.');
+      //   // Handle this case appropriately, e.g., display an error message
+      //   return;
+      // }
+      // await axios.put(presignedUrlResponse.url, file, {withCredentials:true,  'Content-Type': file.type})
+      // console.log('File uploaded successfully!');
+      // console.log('filetype', file.type);
+      await sendData(formData);
+      // await sendData(formData, presignedUrlResponse.url);
+      console.log('Resetting Form')
+      resetForm();
+      setShowPopup(true);
+
+    }catch(error){
+      console.error('Error submitting form:', error);
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        console.error('Response status:', error.response.status);
+        console.error('Response data:', error.response.data);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('No response received:', error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Request setup error:', error.message);
+      }
+    }finally {
+      console.log('Finally-BLock..........')
+    }
+  }
+
+  let formik = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
   });
+  
+  useEffect(()=> {
+    setInitialValues(initialFormData)
+    console.log(selectedForm)
+  }, [selectedForm])
+
   return (
-    <div className={`w-[90%] md:w-[95%] max-w-[1200px] mx-auto dark:text-white flex flex-col md:flex-row shadow-custom-shadow`}>
-      <div className="basis-[35%] shrink-0 lg:basis-[30%] p-5 lg:p-10 pb-2 font-raleway bg-LightBlue dark:bg-DarkBackground flex flex-col items-center md:items-start gap-4">
-        <img src={leftSection?.imgUrl} className="w-36 h-36 lg:w-52 lg:h-52 object-cover bg-merald-200"/>
-          <p className="custom-gradient-text md:mx-0 max-md:text-center text-2xl lg:text-3xl">{leftSection?.title}</p>
-          <p className="uppercase font-semibold text-xs sm:text-sm">{leftSection?.caption}</p>
-          <p className="max-md:text-center text-xs sm:text-sm lg:text-base max-w-[450px] font-montserrat font-medium leading-5">
-              {leftSection?.description}
-          </p>
-          <svg className="w-14 h-12 text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-          </svg>
-      </div>
-      <form
+    <form
         onSubmit={formik.handleSubmit}
-        className="basis-[70%] space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium "
+        className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
       >
         <div className="sm:flex items-center gap-8 max-sm:space-y-14">
           {/* First Name */}
@@ -165,7 +234,7 @@ return;
             <label
               htmlFor="firstName"
               className={`w-full  absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values.firstName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+                formik.values?.firstName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
               } peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
             >
               First Name<span className="text-red-500">*</span>
@@ -188,7 +257,7 @@ return;
             <label
               htmlFor="lastName"
               className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values.lastName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+                formik.values?.lastName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
               }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
             >
               Last Name<span className="text-red-500">*</span>
@@ -214,7 +283,7 @@ return;
             <label
               htmlFor="email"
               className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
-                formik.values.email ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+                formik.values?.email ? "text-xs -translate-y-6" : "text-sm lg:text-base"
               } peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
             >
               Email<span className="text-red-500">*</span>
@@ -239,10 +308,10 @@ return;
             <label
               htmlFor="phone"
               className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
-                formik.values.phone ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+                formik.values?.phone ? "text-xs -translate-y-6" : "text-sm lg:text-base"
               }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
             >
-              Phone
+              Phone{selectedForm==='career'&& <span className="text-red-500">*</span>}
             </label>
             <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
             {formik.touched.phone && formik.errors.phone && (
@@ -252,7 +321,7 @@ return;
             )}
           </div>
         </div>
-        <div className="sm:flex items-center gap-8 max-sm:space-y-14">
+        <div className="sm:flex items-end gap-8 md:gap-6 lg:gap-8 max-sm:space-y-14">
           {/* Company Name */}
           <div className="relative flex flex-col w-full">
             <input
@@ -264,10 +333,10 @@ return;
             <label
               htmlFor="companyName"
               className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values.companyName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+                formik.values?.companyName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
               }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
             >
-             Company Name<span className="text-red-500">*</span>
+             Company Name{selectedForm!=='career'&& <span className="text-red-500">*</span>}
             </label>
             <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
             {formik.touched.companyName && formik.errors.companyName && (
@@ -277,39 +346,10 @@ return;
             )}
           </div>
           {/* How did you hear about us */}
-          <div className="relative flex flex-col w-full">
-            {/* <div onMouseLeave={()=> setDropDown(false)}>
-              <label
-              onClick={()=> setDropDown(!dropdown)}
-              name="interest"
-              className="flex justify-between pr- items-center cursor-pointer text-sm lg:text-base  peer pb-1 bg-transparent outline-none border-b border-tertiary dark:border-white"
-              id="interest"
-              > 
-              <span className="text-sm md:text-[13px] lg:text-base">{interest || "What are you interested in?"}</span>
-                {dropdown ? 
-                  <svg className="w-5 h-5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m5 15 7-7 7 7"/>
-                  </svg>
-                : <svg className="w-4 h-4 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7"/>
-                </svg>
-
-                }
-              </label>
-              {dropdown && 
-              <ul className="absolute z-10 w-full bg-white dark:bg-DarkBackground border rounded-lg border-gray-400 dark:border-gray-600 shadow-custom-shadow">
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 first:rounded-t-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="">None</li>
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="Interest 1" >Interest 1</li>
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="Interest 2" >Interest 2</li>
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="Interest 3" >Interest 3</li>
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="Interest 4" >Interest 4</li>
-                <li onClick={(e)=> {setInterest(e.target.value); setDropDown(false)}} className="text-sm lg:text-base dark:font-normal py-[6px] px-5 border-b dark:border-slate-700 last:border-none last:rounded-b-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-700" value="Interest 5" >Interest 5</li>
-              </ul>
-              }
-            </div> */}
+          <div className="relative flex flex-col w-full ">
             <select
               name="howDidYouHearAboutUs"
-              className="cursor-pointer text-sm lg:text-base bg-transparent outline-none border-b border-tertiary dark:border-white dark:focus:border-blue-400 "
+              className="cursor-pointer text-sm  lg:text-base bg-transparent outline-none border-b border-tertiary dark:border-white dark:focus:border-blue-400 "
               id="howDidYouHearAboutUs"
               {...formik.getFieldProps("howDidYouHearAboutUs")}
             >
@@ -335,33 +375,38 @@ return;
         {/* How can we help */}
         <div className="relative flex flex-col w-full">
           <textarea
-            name="howCanWeHelp"
+            name="message"
             rows={5}
             className="peer text-sm bg-transparent outline-none border-b border-tertiary dark:border-white"
-            id="howCanWeHelp"
-            {...formik.getFieldProps("howCanWeHelp")}
+            id="message"
+            {...formik.getFieldProps("message")}
           />
           <label
-            htmlFor="howCanWeHelp"
+            htmlFor="message"
             className={`w-full absolute cursor-text top-1 peer-focus:text-xs ${
-              formik.values.howCanWeHelp ? "text-xs -translate-y-6" : "text-sm lg:text-base"
+              formik.values?.message ? "text-xs -translate-y-6" : "text-sm lg:text-base"
             }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
           >
-            How can we help ?<span className="text-red-500">*</span>
+            {selectedForm==='career' ? 'A little about you:' : 'How can we help ?'}
+            {selectedForm!=='career' && <span className="text-red-500">*</span>}
           </label>
           <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
-          {formik.touched.howCanWeHelp && formik.errors.howCanWeHelp && (
+          {formik.touched.message && formik.errors.message && (
             <p className="absolute -bottom-[18px] text-secondary text-xs">
-              *{formik.errors.howCanWeHelp}
+              *{formik.errors.message}
             </p>
           )}
         </div>
       {/* Upload your brief */}
+      {selectedForm==='career' &&
         <div className="w-full">
-            <label className="block mb-3 font-medium">Upload your brief</label>
+            <label className="block mb-3 font-medium">
+             Upload your CV
+           <span className="text-red-500">*</span>
+            </label>
             <div className='border border-gray-300 dark:border-gray-600  rounded-lg'>
               <input onChange={e=> {setFile(e.target.files)}}
-                type="File" accept='docs/*' id="fileUpload" placeholder="Upload here"  
+                type="File" accept='.pdf' id="fileUpload" placeholder="Upload here"  
                 className='hidden'
                 
               />
@@ -383,7 +428,9 @@ return;
                 <span className='text-xs lg:text-sm mt-2'>{file ? `${file[0].name}` : 'Click here to upload file'} </span>
               </label>
           </div>
+
         </div>
+      }
           {/* Submit Button */}
         <div className="flex items-center justify-center md:justify-start">
         <button
@@ -413,10 +460,9 @@ return;
           )}
         </button>
         </div>
+        {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
       </form>
-      {showPopup && <Popup setShowPopup={setShowPopup} />}
-    </div>
   );
 };
 
-export default CommonForm;
+export default ContactForm;

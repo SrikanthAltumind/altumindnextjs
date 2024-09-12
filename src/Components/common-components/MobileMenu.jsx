@@ -1,271 +1,86 @@
-// import { useState } from "react";
+import { useEffect, useState } from "react";
+import { NavMenuData } from "../../Utils";
 
 import { Link } from "react-router-dom";
 
-const data = [
-    {
-      menu : 'About',
-      children : [
-        {
-          innerMenu: 'About Altumind',
-          children: [
-            {
-              name: 'Mission and Vision'
-            },
-            {
-              name: 'Leadership'
-            },
-            {
-              name: 'Alliance'
-            },
-            {
-              name: 'Community Engagement'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      menu : 'Services',
-      children : [
-        {
-          innerMenu : 'Experience Design',
-          children : [
-            {
-              name : 'UI Design'
-            },
-            {
-              name : 'UX Design'
-            },
-            {
-              name : 'CX Design'
-            },
-          ]
-        },
-        {
-          innerMenu : 'Technology and Engineering',
-          children : [
-            {
-              name : 'Web Development'
-            },
-            {
-              name : 'Mobile App Development'
-            },
-            {
-              name : 'ERP Integration'
-            },
-            {
-              name : 'Ecommerce Services'
-            },
-          ]
-        },
-        {
-          innerMenu : 'AI & Chat Bot',
-          children : [
-            {
-              name : 'Conversational AI'
-            },
-            {
-              name : 'AI Chatbot'
-            },
-          ]
-        },
-        {
-          innerMenu : 'Quality Assurance & Quality control ',
-          children : [
-            {
-              name : 'Platforms'
-            },
-            {
-              name : 'Industries'
-            },
-            {
-              name : 'Levels of software Testing services'
-            },
-            {
-              name : 'Test Management'
-            },
-            {
-              name : 'Defect Management'
-            },
-            {
-              name : 'Other QA services'
-            },
-            {
-              name : 'Resources'
-            },
-          ]
-        },
-        {
-          innerMenu : 'Cloud & Automation',
-          children : [
-            {
-              name : 'Cloud'
-            },
-            {
-              name : 'RPA'
-            },
-          ]
-        },
-        {
-          innerMenu : 'Digital Marketing',
-          children : [
-            {
-              name : 'Branding & Design'
-            },
-            {
-              name : 'Marketing Services'
-            },
-            {
-              name : 'Paid Advertising'
-            },
-            {
-              name : 'Marketing Optimization'
-            },
-            {
-              name : 'Analytics & Strategy Consulting'
-            },
-            {
-              name : 'Marketing Automation'
-            },
-          ]
-        },
-        {
-          innerMenu : 'Data Analytics '
-        },
-        {
-          innerMenu : 'IT Services & Consulting'
-        },
-      ]
-    },
-    {
-      menu : 'Industries',
-      children: [
-        {
-          innerMenu: 'BFSI & Fintech'
-        },
-        {
-          innerMenu: 'Digital Commerce'
-        },
-        {
-          innerMenu: 'Healthcare'
-        },
-        {
-          innerMenu: 'Green & Sustainability'
-        },
-        {
-          innerMenu: 'EdTech'
-        },
-        {
-          innerMenu: 'Internet & SaaS'
-        },
-      ]
-    },
-    {
-      menu : 'Portfolio',
-    },
-    {
-      menu : 'Insights',
-      children: [
-        {
-          innerMenu: 'Blogs'
-        },
-        {
-          innerMenu: 'Expert Articles'
-        },
-        {
-          innerMenu: 'White Paper'
-        },
-        {
-          innerMenu: 'PR & Events'
-        },
-        {
-          innerMenu: 'Awards'
-        },
-        {
-          innerMenu: 'Podcasts'
-        },
-      ]
-    },
-    {
-      menu : 'Career',
-      children: [
-        {
-          innerMenu: 'Open Roles'
-        },
-        {
-          innerMenu: 'Life At Altumind'
-        },
-      ]
-    }
-  ]
+
 
 // eslint-disable-next-line react/prop-types
 const MobileMenu = ({showMobileMenu}) => {
-    // const [activeMenu, setActiveMenu] = useState(null)
-    // const [subMenu, setSubMenu] = useState(null)
+    const [activeMenu, setActiveMenu] = useState(null)
+    const [subMenu, setSubMenu] = useState(null)
+
+    useEffect(()=> {
+      setActiveMenu(null)
+      setSubMenu(null)
+  },[showMobileMenu])
    
   return (
-    <div className={`${showMobileMenu ? 'right-0 w-full sm:w-[50%] p-2 z-20' : '-right-full w-0'} overflow-hidden duration-500 absolute top-full bg-green-500 h-screen`}>
-    {/* {!activeMenu &&  */}
-     <ul >
-         {data?.map(item=> (
+    <div className={`${showMobileMenu ? 'right-0 w-full sm:w-[40%] md:w-[50%] px-10 py-5 z-20' : '-right-full w-0'} overflow-hidden shadow-md font-medium text-[15px] duration-500 absolute top-full font-montserrat bg-LightBlue h-screen`}>
+  {/* {!activeMenu &&   */}
+  <div>
+     <ul className="space-y-5">
+         {NavMenuData?.map((item)=> (
              <li key={item.id}
                  className='flex items-center justify-between'
                  >
-             <Link to={item.navLink} className='p-1'> {item.menu} </Link>
-             <button className='p-1'
-                    >
+             <Link to={item.url} className='p-1'> {item.name} </Link>
+             {
+              item?.children?.length > 0 &&
+             
+             <button className='p-1' onClick={()=>setActiveMenu(item)}>
+                    
                  <svg  className="w-6 h-6 ml-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                  </svg>
              </button>
+             }
              </li>
          ))}
      </ul>
-    {/* } */}
+     <div className="text-center my-10">
+     <Link to='/contact' className="bg-secondary rounded-md py-2 px-20 text-white font-medium font-raleway">Let&apos;s Talk</Link>
+     </div>
+     </div>
+   {/* }   */}
      {/* Clicked Menu Item */}
      {/* {activeMenu && */}
-     {/* <div className={`bg-red-300 py-2 ${activeMenu ? 'block' : 'hidden'} absolute w-44 h-full top-0 left-0`}>
-         <div className='flex items-center gap-2'>
+     <div className={` ${activeMenu ? ' right-0' : '-right-full'} w-[99%] font-medium overflow-y-auto text-[15px] px-10 py-5 duration-500 absolute top-0 font-montserrat bg-LightBlue h-screen`}>
+         <div className='flex items-center gap-5'>
              <button onClick={()=> {setActiveMenu(null); setSubMenu(null)}} className='flex items-center text-primary font-semibold'>
                  <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
                  </svg>
              </button>
-             <Link to={activeMenu?.navLink} className='text-primary font-semibold'>{activeMenu?.name}</Link>
+             <Link to={activeMenu?.url} className='font-semibold text-secondary'>{activeMenu?.name}</Link>
          </div>
-         <ul className='ml-5'>
+         <ul className='py-5 space-y-5 h-full overflow-y-auto'>
          {activeMenu?.children?.map(child=> (
              <li key={child.id}>
-                 <div className='flex items-center gap-1'>
-                     <Link to={child?.navLink} className='py-1'>{child.name}</Link>
+                 <div className='flex justify-between items-center gap-1'>
+                     <Link to={child?.url} className={`${subMenu?.id === child.id ? 'text-primary font-semibold' : 'rotate-0 text-black hover:text-secondary font-medium' } py-1`}>{child.name}</Link>
                      {child?.children?.length>0 && 
-                     <button onClick={()=> setSubMenu(prevMenu=> prevMenu?.id===child.id ? null : child)} className='flex items-center p-1'>
-                         { subMenu?.id!==child.id 
-                         ? <svg className="w-4 h-4 mt-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                     <button onClick={()=> setSubMenu(prevMenu=> prevMenu?.id===child?.id ? null : child)} className='flex items-center p-1'>
+                          <svg className={`${subMenu?.id === child.id ? 'rotate-180 text-primary' : 'rotate-0 text-black' } duration-300 w-5 h-5 dark:text-white`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7"/>
-                         </svg>
-                         : <svg className="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m5 15 7-7 7 7"/>
-                         </svg>
-                     
-                         }
+                         </svg> 
+                         
+                      
                      </button>
                      }
                  </div>
                  {subMenu?.id===child.id &&
-                     <ul className='ml-10 list-disc '>
+                     <ul className={`ml-5`}>
                          {subMenu?.children?.map(lastChild=> (
-                             <Link key={lastChild.id} to={lastChild?.navLink}><li className='py-1 hover:text-secondary hover:underline decoration-1 underline-offset-'>{lastChild.name}</li></Link>
+                             <li key={lastChild.id}  className='py-2.5 hover:text-secondary '><Link to={lastChild?.url}>{lastChild.name}</Link></li>
                          ))}
                      </ul>
-                 }
+                } 
              </li>
          ))}
          </ul>
-     </div> */}
-     {/* } */}
+     </div>
+     {/* }  */}
  </div>
   )
 }

@@ -150,3 +150,369 @@ export const teckStack = [
         ]
     }
     ]
+
+
+export const NavMenuData = [
+    {
+      id: 1,
+      name: 'About',
+      url: '/about-us',
+      children: [
+        {
+          id: 1,
+          name: 'About Altumind',
+          url: '/about-us',
+          children: [
+            {
+              id: 1,
+              name: 'Mission and Vision',
+              url: '/about-us/mission-and-vision',
+            },
+            {
+              id: 2,
+              name: 'Leadership',
+              url: '/about-us/leadership',
+            },
+            {
+              id: 3,
+              name: 'Alliance',
+              url: '/about-us/alliance',
+            },
+            {
+              id: 4,
+              name: 'Community Engagement',
+              url: '/about-us/community-engagement',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Services',
+      url: '/services',
+      children: [
+        {
+          id: 1,
+          name: 'Experience Design',
+          url: '/services/experience-design',
+          children: [
+            {
+              id: 1,
+              name: 'UI Design',
+              url: '/services/experience-design/ui-design',
+            },
+            {
+              id: 2,
+              name: 'UX Design',
+              url: '/services/experience-design/ux-design',
+            },
+            {
+              id: 3,
+              name: 'CX Design',
+              url: '/services/experience-design/cx-design',
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: 'Technology and Engineering',
+          url: '/services/technology-and-engineering',
+          children: [
+            {
+              id: 1,
+              name: 'Web Development',
+              url: '/services/technology-engineering/web-development',
+            },
+            {
+              id: 2,
+              name: 'Mobile App Development',
+              url: '/services/technology-engineering/mobile-app-development',
+            },
+            {
+              id: 3,
+              name: 'ERP Integration',
+              url: '/services/technology-engineering/erp-integration',
+            },
+            {
+              id: 4,
+              name: 'Ecommerce Services',
+              url: '/services/technology-engineering/ecommerce-services',
+            },
+          ],
+        },
+        {
+          id: 3,
+          name: 'AI & Automation',
+          url: '/services/ai-and-automation',
+          children: [
+            {
+              id: 1,
+              name: 'Conversational AI & Chatbot',
+              url: '/services/ai-automation/conversational-ai-chatbot',
+            },
+            {
+              id: 2,
+              name: 'RPA',
+              url: '/services/ai-automation/rpa',
+            },
+          ],
+        },
+        {
+          id: 4,
+          name: 'QA & Testing Services',
+          url: '/services/quality-assurance',
+          children: [
+            {
+              id: 1,
+              name: 'Automation Testing',
+              url: '/services/qa-testing/automation-testing',
+            },
+            {
+              id: 2,
+              name: 'Security Testing',
+              url: '/services/qa-testing/security-testing',
+            },
+            {
+              id: 3,
+              name: 'Performance Testing',
+              url: '/services/qa-testing/performance-testing',
+            },
+            {
+              id: 4,
+              name: 'QA Consulting',
+              url: '/services/qa-testing/qa-consulting',
+            },
+          ],
+        },
+        {
+          id: 5,
+          name: 'Cloud',
+          url: '/services/cloud',
+          children: [
+            {
+              id: 1,
+              name: 'Cloud Migration',
+              url: '/services/cloud-services/cloud-migration',
+            },
+            {
+              id: 2,
+              name: 'Cloud App Services',
+              url: '/services/cloud-services/cloud-app-services',
+            },
+          ],
+        },
+        {
+          id: 6,
+          name: 'Digital Marketing',
+          url: '/services/digital-marketing',
+          children: [
+            {
+              id: 1,
+              name: 'Branding & Design',
+              url: '/services/digital-marketing/branding-design',
+            },
+            {
+              id: 2,
+              name: 'Marketing Services',
+              url: '/services/digital-marketing/marketing-services',
+            },
+            {
+              id: 3,
+              name: 'Marketing Optimization',
+              url: '/services/digital-marketing/marketing-optimization',
+            },
+          ],
+        },
+        {
+          id: 7,
+          name: 'Data Analytics',
+          url: '/services/data-analytics',
+          children: [
+            {
+              id: 1,
+              name: 'Business Intelligence',
+              url: '/services/data-analytics/business-intelligence',
+            },
+            {
+              id: 2,
+              name: 'Digital Intelligence',
+              url: '/services/data-analytics/digital-intelligence',
+            },
+            {
+              id: 3,
+              name: 'Marketing Intelligence',
+              url: '/services/data-analytics/marketing-intelligence',
+            },
+            {
+              id: 4,
+              name: 'Customer 360',
+              url: '/services/data-analytics/customer-360',
+            },
+            {
+              id: 5,
+              name: 'Sales Intelligence',
+              url: '/services/data-analytics/sales-intelligence',
+            },
+          ],
+        },
+        {
+          id: 8,
+          name: 'Managed Operations',
+          url: '/services/managed-operations',
+          children: [
+            {
+              id: 1,
+              name: 'Product Innovation & Management',
+              url: '/services/managed-operations/product-innovation-management',
+            },
+            {
+              id: 2,
+              name: 'Website Operations & management',
+              url: 'services/managed-operations/website-operations-management',
+            },
+            {
+              id: 3,
+              name: 'Cloud Management',
+              url: 'services/managed-operations/cloud-management',
+            },
+            {
+              id: 4,
+              name: 'Software Maintenance & Support',
+              url: 'services/managed-operations/software-maintenance-support',
+            },
+          ],
+
+        },
+        {
+          id: 9,
+          name: 'Digital Strategy and Consulting',
+          url: '/services/digital-strategy',
+          children: [
+            {
+              id: 1,
+              name: 'Digital Experience & Engagement',
+              url: '/services/digital-strategy/digital-experience-engagement',
+            },
+            {
+              id: 2,
+              name: 'Digital Build',
+              url: '/services/digital-strategy/digital-build',
+            },
+            {
+              id: 3,
+              name: 'Digital Modernization',
+              url: '/services/digital-strategy/digital-modernization',
+            },
+            {
+              id: 4,
+              name: 'Digital Audits',
+              url: '/services/digital-strategy/digital-audits',
+            },
+            {
+              id: 5,
+              name: 'Incubation Of Products & Services',
+              url: '/services/data-analytics/incubaton-products-services',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: 'Industries',
+      url: '/industries',
+      children: [
+        {
+          id: 1,
+          name: 'BFSI & Fintech',
+          url: '/industries/bfsi-fintech',
+        },
+        {
+          id: 2,
+          name: 'Digital Commerce',
+          url: '/industries/digital-commerce',
+        },
+        {
+          id: 3,
+          name: 'Healthcare',
+          url: '/industries/healthcare',
+        },
+        {
+          id: 4,
+          name: 'Green & Sustainability',
+          url: '/industries/green-sustainability',
+        },
+        {
+          id: 5,
+          name: 'EdTech',
+          url: '/industries/edtech',
+        },
+        {
+          id: 6,
+          name: 'Internet & SaaS',
+          url: '/industries/internet-saas',
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: 'Portfolio',
+      url: '/portfolio',
+    },
+    {
+      id: 5,
+      name: 'Insights',
+      url: '/insights',
+      children: [
+        {
+          id: 1,
+          name: 'Blogs',
+          url: '/insights/blogs',
+        },
+        {
+          id: 2,
+          name: 'Expert Articles',
+          url: '/insights/expert-articles',
+        },
+        {
+          id: 3,
+          name: 'White Paper',
+          url: '/insights/white-paper',
+        },
+        {
+          id: 4,
+          name: 'PR & Events',
+          url: '/insights/pr-events',
+        },
+        {
+          id: 5,
+          name: 'Awards',
+          url: '/insights/awards',
+        },
+        {
+          id: 6,
+          name: 'Podcast',
+          url: '/insights/podcast',
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: 'Career',
+      url: '/career',
+      children: [
+        {
+          id: 1,
+          name: 'Open Roles',
+          url: '/careers/open-roles',
+        },
+        {
+          id: 2,
+          name: 'Life at Altumind',
+          url: '/career/life-at-altumind',
+        },
+      ],
+    },
+  ];
+      

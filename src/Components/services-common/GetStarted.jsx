@@ -7,90 +7,134 @@ const services = {
     heading: "Turn Vision into Impactful Digital Experiences.",
     caption: "Start Your Experience Transformation Today ",
     linkText: "Get in Touch ",
+    url:'/contact-us'
   },
   digitalMarketingServices: {
     heading: "Amplify Your Brand's Voice in the Digital Sphere",
     caption:
       "Build Brand Recognition as an Industry Leader and Increase Profitability",
     linkText: "Get Started",
+    url: '/contact-us'
   },
   aiAutomation: {
     heading:
       "Shaping the Future of Intelligent Automation: Our Next-Gen AI & RPA Solutions Propel Your Business Forward. ",
 
     linkText: "Reach Out Today",
+    url:'/contact-us'
   },
   qaTesting: {
     heading:
       "Elevate Quality Standards. Deliver Flawless Solution with Precision Testing and Robust Quality Assurance.",
     linkText: "Get Started",
+    url:'/contact-us'
   },
   technologyEngineering: {
     heading:
       "Redefine What's Possible with Advanced Engineering. Build the Future with Scalable and Robust Solutions.",
     linkText: "Get Started",
+    url: '/contact-us'
   },
   dataAnalytics: {
     heading: "Beyond Numbers: Your Data Tells a Story ",
     caption:
       "We Help You Listen, Understand, and Act. Covering All Angles of Your Business",
     linkText: "Get Started",
+    url: '/contact-us'
   },
   managedOperations: {
     heading: "Empower Your Business: Expertise and Resilience on Demand",
     caption:
       "Streamline Operations, Enhance Communication, and Boost Agility with Our Managed Services",
     linkText: "Get Started",
+    url: '/contact-us'
   },
   services: {
     heading: "Evolving Business for the ‘Now’ Era",
     caption:
       "Harness the power of integrated transformation for unparalleled growth with Altumind. ",
     linkText: "Get Started Today",
+    url:'/contact-us'
   },
   digitalStrategy: {
     heading: "The Digital Differentiator Your Business Needs",
     caption:
       "We bring the skills, technology, and scale necessary to think and deliver big for your business.",
     linkText: "Get Started",
+    url: '/contact-us'
   },
   cloudServices: {
     heading:
       "Build the foundations for success. Next-Gen Cloud Services for Agility, Scalability, and Success.",
     linkText: "Reach Out Today",
+    url: '/contact-us'
   },
   MissionAndVision: {
     heading: "Driven by purpose, fueled by empathy",
     caption:
       "We blend technology, data, and creativity to craft solutions that resonate and deliver meaningful impact. If you're ready for purpose-driven innovation that transforms challenges into opportunities",
     linkText: "Connect with us Today",
+    url:'/contact-us'
   },
   leadership: {
     heading:
       "Relentlessly pursuing a world that thrives for everyone. Be a Part of Change.",
     linkText: "Contact Us Today",
+    url:'/contact-us'
   },
   sukhiba: {
-    heading: "Unlock E-commerce Growth in Emerging Markets",
-    caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+    heading:
+      "Unlock E-commerce Growth in Emerging Markets",
+      caption:
+      "User-Centric Design. Tailored Solutions. Measurable Results. ",
     linkText: "Contact Us Today",
+    url: '/contact-us'
   },
   secpod: {
-    heading: "Ready for a Website Makeover?",
-    caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+    heading:
+      "Ready for a Website Makeover?",
+      caption:
+      "User-Centric Design. Tailored Solutions. Measurable Results. ",
     linkText: "Contact Us Today",
+    url: '/contact-us'
   },
-  enphase: {
-    heading: "Ready to transform your business and make a positive impact?",
-    caption:
-      "Partner with Altumind and let's create innovative, user-centric solutions.",
+ enphase: {
+    heading:
+      "Ready to transform your business and make a positive impact?  ",
+      caption:
+      "Partner with Altumind and let's create innovative, user-centric solutions. ",
     linkText: "Contact Us Today",
+    url: '/contact-us'
   },
   unitedFinance: {
-    heading: "Outdated Systems Holding You Back? Let's Fix That",
-    caption: "Revitalize Your Web Presence with Altumind.",
+    heading:
+      "Outdated Systems Holding You Back? Let's Fix That",
+      caption:
+      "Revitalize Your Web Presence with Altumind.",
     linkText: "Start with a Free Consultation!",
+    url: '/contact-us'
   },
+  // sukhiba: {
+  //   heading: "Unlock E-commerce Growth in Emerging Markets",
+  //   caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+  //   linkText: "Contact Us Today",
+  // },
+  // secpod: {
+  //   heading: "Ready for a Website Makeover?",
+  //   caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+  //   linkText: "Contact Us Today",
+  // },
+  // enphase: {
+  //   heading: "Ready to transform your business and make a positive impact?",
+  //   caption:
+  //     "Partner with Altumind and let's create innovative, user-centric solutions.",
+  //   linkText: "Contact Us Today",
+  // },
+  // unitedFinance: {
+  //   heading: "Outdated Systems Holding You Back? Let's Fix That",
+  //   caption: "Revitalize Your Web Presence with Altumind.",
+  //   linkText: "Start with a Free Consultation!",
+  // },
 };
  
  

@@ -13,16 +13,6 @@ import SettingUpForSuccess from "../Components/services-common/SettingUpForSucce
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 import { gradientStyle } from "../ReactFunctions"
 
-const servicesMenu = [
-  {id:'section1', tabId:'tab1', name:'OverView'},
-  {id:'section2', tabId:'tab2', name:'Services'},
-  {id:'section3', tabId:'tab3', name:'Tech Stack'},
-  {id:'section4', tabId:'tab4', name:'Why Us'},
-  {id:'section5', tabId:'tab5', name:'Testimonials'},
-  {id:'section6', tabId:'tab6', name:'Benefits'},
-  {id:'section7', tabId:'tab7', name:'Success'},
-  {id:'section8', tabId:'tab8', name:'Insights'},
-]
 
 const DigitalStrategy = () => {
   const servicesMenu = [

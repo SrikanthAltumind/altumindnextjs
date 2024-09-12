@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Altumind logo-01.webp";
 import AltumindDark from "../../assets/AltumindDark.png";
-import ToggleTheme from "./ToggleTheme";
+// import ToggleTheme from "./ToggleTheme";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../Layouts/AppLayout";
 
@@ -606,8 +606,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 
 {
   /* {currentItem && (

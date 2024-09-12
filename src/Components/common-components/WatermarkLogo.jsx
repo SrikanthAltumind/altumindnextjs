@@ -3,6 +3,7 @@ import logo from '../../assets/Altumind logo-01.webp'
 import watermark from '../../assets/Altumind watermark.webp'
 import AltumindDark from '../../assets/AltumindDark.png'
 import { ThemeContext } from '../../Layouts/AppLayout'
+import darkwatermark from '../../assets/Altumind A watermark.webp'
 
 const WatermarkLogo = () => {
   const {theme} = useContext(ThemeContext)

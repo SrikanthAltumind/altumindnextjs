@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const Banner = () => {
@@ -85,15 +85,17 @@ const Banner = () => {
     <div className='bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
     <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.title}
     </p>
-    <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-medium dark:text-white'>{data?.description}</p>
+    <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-semibold dark:text-white'>{data?.description}</p>
     {
       location.pathname === '/services' &&
+      <Link to='/contact-us'>
       <p  className='group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1'>
       Get Started With Us
         <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
         </svg>
       </p>
+      </Link>
     }
   </div>
   )

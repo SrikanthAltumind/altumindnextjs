@@ -47,12 +47,13 @@ if (error) {
       <div style={{backgroundImage: `url(${data?.image?.data?.attributes?.url})`}} 
         className={`w-full min-h-[500px] text-center  bg-cover bg-center md:bg-bottom relative`}>
           <div className="  absolute inset-0  bg-transparent dark:bg-black dark:bg-opacity-50 flex flex-col justify-center items-center px-4 font-raleway ">
+          <p className="text-sm lg:text-base text-tertiary font-semibold dark:text-white pt-2 ">
+              {data?.title}
+            </p>
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue font-extrabold text-3xl lg:text-4xl py-1">
               {data?.heading}
             </p>
-            <p className="text-sm lg:text-base text-tertiary font-semibold dark:text-white pt-2 ">
-              {data?.title}
-            </p>
+            
             <p className="max-w-[950px] leading-6 sm:leading-7 pt-10 text-sm font-semibold text-tertiary dark:text-white ">
               {data?.description}
             </p>
