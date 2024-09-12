@@ -37,7 +37,14 @@ const WhyAltumind = () => {
       apiUrl = "api/leadership-philosophy-contents?populate=*";
     else if (location.pathname === "/about")
       apiUrl = "api/about-us-why-us-contents?populate=*";
-
+    else if (location.pathname === "/portfolio/sukhiba")
+      apiUrl = "api/success-story-sukiba-features-contents?populate=*";
+    else if (location.pathname === "/portfolio/secpod")
+      apiUrl = "api/success-story-secpod-feature-contents?populate=*";
+    else if (location.pathname === "/portfolio/enphase")
+      apiUrl = "api/success-story-enphase-feature-contents?populate=*";
+    else if (location.pathname === "/portfolio/united-finance")
+      apiUrl = "api/success-story-uf-feature-contents?populate=*";
 
     
 
@@ -75,15 +82,15 @@ const WhyAltumind = () => {
 
   return (
     <section id="section1" className="w-[90%] mx-auto font-raleway dark:text-white">
-<div className="flex justify-center items-center gap-10 flex-wrap max-w-[950px] mx-auto">
+<div className="flex justify-center items-center gap-10 flex-wrap max-w-[90%] mx-auto">
     {
-        data?.map((item) => (
-            <div key={item.id} className="h-[270px] w-[285px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm">
-                <img src={item?.attributes?.icon?.data?.attributes?.url}  className="dark:invert"/>
-                <p className="text-lg font-medium py-3">{item?.attributes?.title}</p>
-                <p className="text-sm dark:font-light">{item?.attributes?.description}</p>
-            </div>
-        ))
+      data?.map((item) => (
+          <div key={item.id} className="w-[260px] h-[270px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm">
+              <img src={item?.attributes?.icon?.data?.attributes?.url}  className="dark:invert"/>
+              <p className="text-lg font-medium py-3">{item?.attributes?.title}</p>
+              <p className="text-xs dark:font-light leading-2">{item?.attributes?.description}</p>
+          </div>
+      ))
     }
 </div>
 </section>

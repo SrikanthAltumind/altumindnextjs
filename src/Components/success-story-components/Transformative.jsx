@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import TextImage from "../common-components/TextImage";
-import axios from "axios";
-import LoaderSpinner from "../common-components/LoaderSpinner";
+import React, { useEffect, useState } from 'react'
+import TextImage from '../common-components/TextImage';
+import LoaderSpinner from '../common-components/LoaderSpinner';
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
-const Situation = () => {
+const Transformative = () => {
     const [data, setData] = useState({})
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -12,15 +12,8 @@ const Situation = () => {
     let apiUrl;
     const location = useLocation();
 
-    
-    if (location.pathname === "/portfolio/sukhiba")
-      apiUrl = "api/success-story-sukiba-situation?populate=*";
-    else if (location.pathname === "/portfolio/secpod")
-      apiUrl = "api/success-story-secpod-situation?populate=*";
-    else if (location.pathname === "/portfolio/united-finance")
-      apiUrl = "api/success-story-uf-situation?populate=*";
-    else if (location.pathname === "/portfolio/enphase")
-      apiUrl = "api/success-story-enphase-situation?populate=*";
+    if (location.pathname === "/portfolio/enphase")
+      apiUrl = "api/success-story-enphase-transformation?populate=*";
 
     const fetchData = () => {
     const url = import.meta.env.VITE_APP_API_URL + apiUrl;
@@ -55,8 +48,11 @@ const Situation = () => {
      }
     
   return (
-    <TextImage data={data} textRight={false}/>
+    <TextImage
+      data={data}
+      textRight={false}
+    />
   );
 };
 
-export default Situation;
+export default Transformative;

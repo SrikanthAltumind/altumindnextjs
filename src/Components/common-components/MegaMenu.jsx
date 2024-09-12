@@ -8,7 +8,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
   return (
     <>
       <div
-        className="absolute dark:text-black mx-auto right-0 w-[950px] z-10 top-full"
+        className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[820px] z-10 top-full"
         onMouseLeave={onMouseLeave}
       >
         <div className=" rounded-lg  shadow-lg bg-[#F3F9FF] p-5 mt-3 ">

@@ -1,37 +1,42 @@
-import { RouterProvider, createBrowserRouter, useLocation } from "react-router-dom"
-import Home from "./pages/Home"
-import {AppLayout} from "./Layouts/AppLayout"
-import Contact from "./pages/Contact"
-import Industry from "./pages/Industry"
-import BFSIAndFinance from "./pages/BFSIAndFinance"
-import Portfolio from "./pages/Portfolio"
-import Career from "./pages/Career"
-import OpenRoles from "./pages/OpenRoles"
-import CommunityEngagement from "./pages/CommunityEngagement"
-import LifeAtAltumind from "./pages/LifeAtAltumind"
-import Alliance from "./pages/Alliance"
-import ExperienceDesign from "./pages/ExperienceDesign"
-import AIandAutomation from "./pages/AIandAutomation"
-import QAandTesting from "./pages/QAandTesting"
-import DigitalMarketingServices from "./pages/DigitalMarketingServices"
-import TechnologyAndEngineering from "./pages/TechnologyAndEngineering"
-import DataAnalytics from "./pages/DataAnalytics"
-import ManagedOperations from "./pages/ManagedOperations"
-import Services from "./pages/Services"
-import DigitalStrategy from './pages/DigitalStrategy'
-import CloudServices from "./pages/CloudServices"
-import MissionAndVision from "./pages/MissionAndVision"
-import Leadership from "./pages/Leadership"
-import AboutUs from "./pages/AboutUs"
-import Error404 from "./pages/Error404"
-import DigitalCommerce from "./pages/DigitalCommerce"
-import Privacy from "./pages/Privacy"
-import Insights from "./pages/Insights"
-import Testing from "./pages/Testing"
-import WIP from './pages/WIP'
-import { useEffect } from "react"
-import Terms from "./pages/Terms"
-import SuccessStory from "./pages/SuccessStory"
+import {
+  RouterProvider,
+  createBrowserRouter,
+  useLocation,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import { AppLayout } from "./Layouts/AppLayout";
+import Contact from "./pages/Contact";
+import Industry from "./pages/Industry";
+import BFSIAndFinance from "./pages/BFSIAndFinance";
+import Portfolio from "./pages/Portfolio";
+import Career from "./pages/Career";
+import OpenRoles from "./pages/OpenRoles";
+import CommunityEngagement from "./pages/CommunityEngagement";
+import LifeAtAltumind from "./pages/LifeAtAltumind";
+import Alliance from "./pages/Alliance";
+import ExperienceDesign from "./pages/ExperienceDesign";
+import AIandAutomation from "./pages/AIandAutomation";
+import QAandTesting from "./pages/QAandTesting";
+import DigitalMarketingServices from "./pages/DigitalMarketingServices";
+import TechnologyAndEngineering from "./pages/TechnologyAndEngineering";
+import DataAnalytics from "./pages/DataAnalytics";
+import ManagedOperations from "./pages/ManagedOperations";
+import Services from "./pages/Services";
+import DigitalStrategy from "./pages/DigitalStrategy";
+import CloudServices from "./pages/CloudServices";
+import MissionAndVision from "./pages/MissionAndVision";
+import Leadership from "./pages/Leadership";
+import AboutUs from "./pages/AboutUs";
+import Error404 from "./pages/Error404";
+import DigitalCommerce from "./pages/DigitalCommerce";
+import Privacy from "./pages/Privacy";
+import Insights from "./pages/Insights";
+import Testing from "./pages/Testing";
+import WIP from "./pages/WIP";
+import { useEffect } from "react";
+import Terms from "./pages/Terms";
+import SuccessStory from "./pages/SuccessStory";
+import Blogs from "./pages/Blogs";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -221,13 +226,20 @@ const router = createBrowserRouter([
         path: "/portfolio/united-finance",
         element: <SuccessStory />,
       },
+      {
+        path: "/insights/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/portfolio/enphase",
+        element: <SuccessStory />,
+      },
     ],
   },
 ]);
 
 function App() {
-  
-  console.log("updated on: 4/9/24")
+  console.log("updated on: 4/9/24");
   return <RouterProvider router={router} />;
 }
 

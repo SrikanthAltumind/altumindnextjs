@@ -15,9 +15,13 @@ const Success = () => {
   if (location.pathname === "/portfolio/sukhiba")
     apiUrl = "api/success-story-sukiba-success?populate=*";
   else if (location.pathname === "/portfolio/secpod")
-    apiUrl = "api/success-story-secpod-situation?populate=*";
+    apiUrl = "api/success-story-secpod-success?populate=*";
   else if (location.pathname === "/portfolio/united-finance")
-    apiUrl = "api/success-story-uf-success?populate=*";
+        apiUrl = "api/success-story-uf-success?populate=*";
+    else if (location.pathname === "/portfolio/enphase")
+        apiUrl = "api/success-story-enphase-success?populate=*";
+    
+    
 
   const fetchData = () => {
     const url = import.meta.env.VITE_APP_API_URL + apiUrl;

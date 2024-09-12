@@ -58,7 +58,7 @@ const greenSustainability = {
     "Advanced Cloud Sustainability Platforms",
     "Environmental Policy Compliant",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Values_that_matter_image_Compressify_io_05c32869f2.webp",
+  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_matters_Compressify_io_9610c53bb8.webp",
 };
 
 const edtech = {
@@ -156,7 +156,7 @@ const ValueThatMatters = () => {
                     />
                   </svg>
 
-                  <p className="text-wrap font-medium text-xs">{content}</p>
+                  <p className="text-wrap font-semibold text-xs">{content}</p>
                 </div>
               );
             })}

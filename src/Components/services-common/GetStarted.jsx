@@ -70,6 +70,27 @@ const services = {
       "Relentlessly pursuing a world that thrives for everyone. Be a Part of Change.",
     linkText: "Contact Us Today",
   },
+  sukhiba: {
+    heading: "Unlock E-commerce Growth in Emerging Markets",
+    caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+    linkText: "Contact Us Today",
+  },
+  secpod: {
+    heading: "Ready for a Website Makeover?",
+    caption: "User-Centric Design. Tailored Solutions. Measurable Results.",
+    linkText: "Contact Us Today",
+  },
+  enphase: {
+    heading: "Ready to transform your business and make a positive impact?",
+    caption:
+      "Partner with Altumind and let's create innovative, user-centric solutions.",
+    linkText: "Contact Us Today",
+  },
+  unitedFinance: {
+    heading: "Outdated Systems Holding You Back? Let's Fix That",
+    caption: "Revitalize Your Web Presence with Altumind.",
+    linkText: "Start with a Free Consultation!",
+  },
 };
  
  
@@ -100,31 +121,60 @@ const GetStarted = () => {
       setData(services.digitalStrategy);
     } else if (location.pathname === "/services/cloud-automation") {
       setData(services.cloudServices);
-    } else if (location.pathname === "/about/about-altumind/mission-and-vision") {
+    } else if (
+      location.pathname === "/about/about-altumind/mission-and-vision"
+    ) {
       setData(services.MissionAndVision);
     } else if (location.pathname === "/about/about-altumind/leadership") {
       setData(services.leadership);
+    } else if (location.pathname === "/portfolio/sukhiba") {
+      setData(services.sukhiba);
+    } else if (location.pathname === "/portfolio/secpod") {
+      setData(services.secpod);
+    } else if (location.pathname === "/portfolio/enphase") {
+      setData(services.enphase);
+    } else if (location.pathname === "/portfolio/united-finance") {
+      setData(services.unitedFinance);
     }
   }, [location.pathname]);
  
  
  
   return (
-        <div className="bg-LightBlue min-h-[280px] w-full flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2">
-          <div className="ml-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
-            <p className="font-bold text-2xl lg:text-3xl max-w-[500px]">
-              {data?.heading}
-            </p>
-            {data?.caption && <p className="font-medium max-w-[60%]">{data?.caption}</p>}
- 
-            <a href = "#" className='group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1'>
-                  {data?.linkText}
-                    <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-                    </svg>
-                </a>
-          </div>
-        </div>
+    <div className="bg-[#EAF1FF] min-h-[280px] w-full flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2 py-10">
+      <div className="ml-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
+        <p className="xl:text-5xl lg:text-4xl md:text-4xl text-xl font-extrabold max-w-[500px]">
+          {data?.heading}
+        </p>
+        {data?.caption && (
+          <p className="font-medium max-w-[60%]">{data?.caption}</p>
+        )}
+
+        <a
+          href="#"
+          className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
+        >
+          {data?.linkText}
+          <svg
+            className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 12H5m14 0-4 4m4-4-4-4"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
   );
 };
  

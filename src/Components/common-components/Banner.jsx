@@ -45,7 +45,8 @@ const Banner = () => {
     else if (location.pathname === "/about/about-altumind/mission-and-vision")
       apiUrl = "api/our-mission-and-vision-banner";
     else if (location.pathname === "/about") apiUrl = "api/about-us-banner";
-    else if (location.pathname === "/career/open-roles") apiUrl = "/api/open-role-banner";
+  else if (location.pathname === "/career/open-roles") apiUrl = "api/open-role-banner";
+  else if (location.pathname === "/insights/blogs") apiUrl = "api/open-role-banner";
 
   const fetchData = () => {
     const url = 
@@ -81,7 +82,7 @@ const Banner = () => {
   }
 
   return (
-    <div className='bg-LightBlue dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
+    <div className='bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4'>
     <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.title}
     </p>
     <p className='max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-medium dark:text-white'>{data?.description}</p>

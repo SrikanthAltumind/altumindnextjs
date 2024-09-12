@@ -115,6 +115,7 @@ import {
 } from "framer-motion";
 import { gradientStyle } from "../../ReactFunctions";
 import axios from "axios";
+import { indexOf } from "lodash";
 
 // import { useInView } from "react-intersection-observer";
 
@@ -288,10 +289,18 @@ const CorePillars = () => {
                     backgroundColor: cardData?.[index]?.attributes?.hexvalue,
                   }}
                 >
-                  <p className="font-medium h-[80px] flex items-start">
+                  <p
+                    className={`font-bold h-[80px] flex items-start ${
+                      index === 1 ? "text-black" : ""
+                    }`}
+                  >
                     {cardData?.[index]?.attributes?.heading}
                   </p>
-                  <p className="text-sm h-[160px]">
+                  <p
+                    className={`text-sm font-medium h-[160px] ${
+                      index === 1 ? "text-black" : ""
+                    }`}
+                  >
                     {cardData?.[index]?.attributes?.description}
                   </p>
                 </div>
@@ -300,6 +309,29 @@ const CorePillars = () => {
           </motion.div>
         ))}
       </motion.div>
+      <a
+        href="#"
+        className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-[#02194A] font-semibold flex justify-center items-center gap-1 mt-10"
+      >
+        Know More About Us
+        <svg
+          className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 12H5m14 0-4 4m4-4-4-4"
+          />
+        </svg>
+      </a>
     </motion.section>
   );
 };

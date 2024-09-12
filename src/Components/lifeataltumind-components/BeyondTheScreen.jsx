@@ -200,10 +200,14 @@ const BeyondTheScreen = () => {
       });
   };
   useEffect(() => {
-    fetchData();
+    
     setNav1(sliderRef1);
     setNav2(sliderRef2);
   }, [data]);
+
+  useEffect(() => {
+    fetchData();
+  },[])
  
   if (loading) {
     return <LoaderSpinner/>;

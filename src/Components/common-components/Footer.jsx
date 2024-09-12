@@ -3,7 +3,7 @@ import WatermarkLogo from "./WatermarkLogo";
 
 const Footer = () => {
   return (
-    <>
+    <div className="mt-10">
       <WatermarkLogo />
       <div className="dark:bg-darkTheme dark:text-white">
         <div className="px-5 md:px-0 w-[95%] font-montserrat text-sm font-medium flex flex-wrap gap-y-10 flex-col md:justify-between md:gap-10 lg:justify-normal md:flex-row mx-auto p-10">
@@ -240,7 +240,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
