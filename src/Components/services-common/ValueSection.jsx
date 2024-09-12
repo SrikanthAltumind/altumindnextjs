@@ -22,6 +22,7 @@ const aiAndAutomationData = {
           { id: 6, content: "Marketing Automation" },
         ],
         CTA: "Explore AI Solutions",
+        url: "/services/ai-automation/conversational-ai",
         image: {
           data: {
             attributes: {
@@ -45,6 +46,7 @@ const aiAndAutomationData = {
           { id: 6, content: "RPA Process Mining" },
         ],
         CTA: "Explore RPA Services",
+        url: "/services/ai-automation/rpa",
         image: {
           data: {
             attributes: {

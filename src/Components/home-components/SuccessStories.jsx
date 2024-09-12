@@ -1,24 +1,26 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SuccessStories = () => {
-    const [data, setData] = useState()
-    const fetchSuccessStoriesData = ()=> {
-    const url = `${import.meta.env.VITE_APP_API_URL}api/success-storie?populate[success_story_mains][populate]=image`
-        axios.get(url)
-        .then(response=> {
-            setData(response?.data?.data?.attributes?.success_story_mains?.data)
-        })
-        .catch(() => {
-            console.log('Error While Fetching Resources')
-        })
+  const [data, setData] = useState();
+  const fetchSuccessStoriesData = () => {
+    const url = `${
+      import.meta.env.VITE_APP_API_URL
+    }api/success-storie?populate[success_story_mains][populate]=image`;
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response?.data?.data?.attributes?.success_story_mains?.data);
+      })
+      .catch(() => {
+        console.log("Error While Fetching Resources");
+      });
+  };
 
-    }
-
-    useEffect(()=> {
-        fetchSuccessStoriesData()
-    },[])
+  useEffect(() => {
+    fetchSuccessStoriesData();
+  }, []);
 
   return (
     <div className="font-raleway  dark:text-white">
@@ -31,16 +33,28 @@ const SuccessStories = () => {
             Inspire Innovation
           </span>
         </h1>
-        <div className="flex items-start gap-7 overflow-x-auto no-scrollbar max-sm:px-5 sm:flex-col  sm:w-[90%] mx-auto md:w-[85%] md:max-w-[900px]">
+        {/* <div className='flex items-start gap-7 overflow-x-auto no-scrollbar max-sm:px-5 sm:flex-col  sm:w-[90%] mx-auto md:w-[85%] md:max-w-[900px]'> */}
+        <div
+          className={`flex items-start gap-7 overflow-x-auto no-scrollbar max-sm:px-5 sm:w-[90%] mx-auto md:w-[85%] md:max-w-[900px] ${
+            location.pathname === "/"
+              ? "sm:flex-col"
+              : "sm:flex-wrap justify-between gap-y-16 lg:gap-20"
+          }`}
+        >
           {data?.map((story) => (
+            //   <div key={story.id} className='min-w-[210px] sm:w-[250px] md:w-[280px]  even:sm:self-end even:sm:mt-[-320px] even:md:mt-[-350px]  '>
             <div
               key={story.id}
-              className="min-w-[210px] sm:w-[250px] md:w-[280px]  even:sm:self-end even:sm:mt-[-320px] even:md:mt-[-350px]  "
+              className={`min-w-[210px] sm:w-[250px] md:w-[280px] ${
+                location.pathname === "/" &&
+                "even:sm:self-end even:sm:mt-[-320px] even:md:mt-[-350px]"
+              }`}
             >
               <div className="h-[210px] sm:h-[250px] md:h-[280px]">
                 <img
                   className="w-full"
                   src={story?.attributes?.image?.data?.attributes?.url}
+                  // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Group_5118_Compressify_io_bfde8a23ac.webp"
                   alt={story?.attributes?.name}
                 />
               </div>
@@ -48,14 +62,16 @@ const SuccessStories = () => {
                 <p className="font-bold text-[10px] sm:text-xs  mb-2 sm:mb-4 lg:mb-5">
                   {story?.attributes?.name}
                 </p>
-                <p className="font-extrabold text-lg md:text-xl">
+                <p className="font-extrabold text-xl md:text-2xl">
                   {story?.attributes?.heading}
                 </p>
                 <p className="max-sm:line-clamp-2 font-medium text-xs sm:text-sm lg:text-base my-4 md:my-5">
                   {story?.attributes?.description}
                 </p>
-                <a
-                  href={`/portfolio/` + story?.attributes?.name.toLowerCase()?.replace(" ", "-")}
+                <Link
+                  to={`/portfolio/${story?.attributes?.name
+                    .toLowerCase()
+                    .replace(" ", "-")}`}
                   className="group text-xs sm:text-sm md:text-base font-bold flex items-center gap-1 max-w-max"
                 >
                   <span className="border-b border-black dark:border-white leading-4">
@@ -78,7 +94,7 @@ const SuccessStories = () => {
                       d="M19 12H5m14 0-4 4m4-4-4-4"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -86,6 +102,6 @@ const SuccessStories = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SuccessStories
+export default SuccessStories;

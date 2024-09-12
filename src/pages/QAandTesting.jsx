@@ -78,7 +78,7 @@ const QAandTesting = () => {
             Client Testimonials
           </p>
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact In Their Words
+            The Altumind Impact: In Their Words
           </p>
         </div>
         <Testimonials />
@@ -88,8 +88,11 @@ const QAandTesting = () => {
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Industries We Serve
           </p>
+          
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
-            <span className="text-[#02143b]">Tailored Solutions Across</span>{" "}
+            <span className="text-[#02143b]">
+              QA & Testing Solutions Across
+            </span>{" "}
             <span style={gradientStyle}>Diverse Sectors</span>
           </p>
         </div>

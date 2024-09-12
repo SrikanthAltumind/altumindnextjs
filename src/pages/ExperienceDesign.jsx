@@ -36,13 +36,13 @@ const ExperienceDesign = () => {
       </section>
       <section id="section-2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-          <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
+          {/* <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
             <p className="font-semibold">Our Design Services</p>
             <p className="text-3xl font-extrabold">
               <span>Your Partner in </span>
               <span style={gradientStyle}>Experience-Driven Growth</span>
             </p>
-          </div>
+          </div> */}
           <OurDesignServices />
         </div>
       </section>
@@ -69,7 +69,7 @@ const ExperienceDesign = () => {
             Client Testimonials
           </p>
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact In Their Words
+            The Altumind Impact: In Their Words
           </p>
         </div>
         <Testimonials />
@@ -77,10 +77,10 @@ const ExperienceDesign = () => {
       <section id="section-6">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Client Testimonials
+            Benefits
           </p>
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact In Their Words
+            Setting You Up For Success
           </p>
         </div>
         <SettingUpForSuccess />
@@ -90,6 +90,14 @@ const ExperienceDesign = () => {
         <SuccessStories />
       </section>
       <section id="section-9">
+        <div className="text-center space-y-2 mb-20 font-raleway">
+          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+            Insights
+          </p>
+          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            Dive into Our Latest Perspectives
+          </p>
+        </div>
         <InsightsBlogs />
       </section>
       <SubscribeForm />

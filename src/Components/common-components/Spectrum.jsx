@@ -58,11 +58,11 @@ const Spectrum = () => {
     }
 
     return (
-      <div className=" w-[90%] flex flex-col gap-8 justify-center items-center p-4 font-raleway">
+      <div className=" w-[80%] flex flex-col gap-8 justify-center items-center p-4 font-raleway">
         {data?.map((service, index) => (
           <div
             className={`${
-              index % 2 !== 0 ? "" : "border-l-8  flex-row-reverse"
+              index % 2 !== 0 ? "" : "flex-row-reverse"
             } flex w-full justify-evenly gap-5 items-center py-4 border-[#EF8188]`}
             key={"servicebox" + index}
           >
@@ -76,9 +76,9 @@ const Spectrum = () => {
               />
             </div>
             <div className="md:w-[50%] p-3 gap-3 flex flex-col">
-              <p className="text-[#A9C4FD] text-4xl">
+              {/* <p className="text-[#A9C4FD] text-4xl">
                 {index + 1 > 10 ? `${index + 1}.` : `0${index + 1}.`}
-              </p>
+              </p> */}
               <p className="text-lg font-medium">
                 {service?.attributes?.title}
               </p>

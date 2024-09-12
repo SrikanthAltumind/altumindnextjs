@@ -31,7 +31,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                             subMenu?.innerMenu === child.innerMenu
                               ? "bg-[#DE5346] text-white"
                               : ""
-                          } rounded-md flex justify-between group items-center  p-2 m-2`}
+                          } rounded-md flex justify-between group font-semibold items-center  p-2 m-2`}
                         >
                           {child.innerMenu}
                           {child?.children?.length > 0 && (
@@ -70,6 +70,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                     <li
                       key={index}
                       className="p-2 m-2 font-medium hover:font-semibold hover:text-secondary"
+                      onClick={onMouseLeave}
                     >
                       <Link to={child?.path}>{child.name}</Link>
                     </li>

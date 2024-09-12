@@ -53,92 +53,111 @@ const NorthAndVisionary = () => {
     }
   
     return (
-        <div className='w-[90%] max-w-[1100px] mx-auto space-y-20 dark:text-white'>
-            {/* North star */}
-        <div className='md:flex items-center justify-between '>
-            <div className='basis-[55%] lg:basis-[55%] space-y-5'>
-            <div className='font-raleway space-y-2 max-md:text-center'>
-                <p className='font-semibold dark:font-medium'>{northStarData?.title}</p>
-                <p className='custom-gradient-text md:mx-0 max-lg:text-2xl'>{northStarData?.heading}</p>
+      <div className="w-[90%] max-w-[1100px] mx-auto space-y-20 dark:text-white">
+        {/* North star */}
+        <div className="md:flex items-center justify-between ">
+          <div className="basis-[55%] lg:basis-[55%] space-y-5">
+            <div className="font-raleway space-y-2 max-md:text-center">
+              <p className="font-semibold dark:font-medium">
+                {northStarData?.title}
+              </p>
+              <p className="custom-gradient-text md:mx-0 max-lg:text-2xl">
+                {northStarData?.heading}
+              </p>
             </div>
-            <div className='md:hidden max-w-[320px] mx-auto'>
-                <img src={northStarData?.image?.data?.attributes?.url} alt={northStarData?.title}/>
+            <div className="md:hidden max-w-[320px] mx-auto">
+              <img
+                src={northStarData?.image?.data?.attributes?.url}
+                alt={northStarData?.title}
+              />
             </div>
-            <p className='font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm   xl:text-base leading-5 lg:leading-6'>
-                {northStarData?.description} 
+            <p className="font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm   xl:text-base leading-5 lg:leading-6">
+              {northStarData?.description}
             </p>
             <Link
-                to='/about-us/mission-and-vision'
-                className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
-                >
-                {northStarData?.CTA}
-                <svg
-                    className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                </svg>
-                </Link>
-            </div>
-            <div className='basis-[40%] max-w-[380px] hidden md:block'>
-            <img className='' src={northStarData?.image?.data?.attributes?.url} alt={northStarData?.title}/>
-            </div>
+              to="/about/about-altumind/mission-and-vision"
+              className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
+            >
+              {northStarData?.CTA}
+              <svg
+                className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"
+                />
+              </svg>
+            </Link>
+          </div>
+          <div className="basis-[40%] max-w-[380px] hidden md:block">
+            <img
+              className=""
+              src={northStarData?.image?.data?.attributes?.url}
+              alt={northStarData?.title}
+            />
+          </div>
         </div>
-{/* Visionary Leadership */}
-        <div className='md:flex items-center justify-between '>
-        <div className='basis-[40%] max-w-[380px] hidden md:block'>
-            <img className='' src={visionaryData?.image?.data?.attributes?.url} alt={visionaryData?.title}/>
+        {/* Visionary Leadership */}
+        <div className="md:flex items-center justify-between ">
+          <div className="basis-[40%] max-w-[380px] hidden md:block">
+            <img
+              className=""
+              src={visionaryData?.image?.data?.attributes?.url}
+              alt={visionaryData?.title}
+            />
+          </div>
+          <div className="basis-[55%] lg:basis-[55%] space-y-2">
+            <div className="font-raleway space-y-2 max-md:text-center">
+              <p className="font-semibold text-lg  dark:font-medium">
+                {visionaryData?.title}
+              </p>
+              <p className="font-medium ">{visionaryData?.heading}</p>
             </div>
-            <div className='basis-[55%] lg:basis-[55%] space-y-2'>
-            <div className='font-raleway space-y-2 max-md:text-center'>
-                <p className='font-semibold text-lg  dark:font-medium'>{visionaryData?.title}</p>
-                <p className='font-medium '>{visionaryData?.heading}</p>
+            <div className="md:hidden max-w-[320px] mx-auto">
+              <img
+                src={visionaryData?.image?.data?.attributes?.url}
+                alt={visionaryData?.title}
+              />
             </div>
-            <div className='md:hidden max-w-[320px] mx-auto'>
-                <img src={visionaryData?.image?.data?.attributes?.url} alt={visionaryData?.title}/>
-            </div>
-            <p className='font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm xl:text-base leading-5 lg:leading-6'>
-                {visionaryData?.description} 
+            <p className="font-montserrat font-medium dark:font-normal max-md:text-center text-[13px]  lg:text-sm xl:text-base leading-5 lg:leading-6">
+              {visionaryData?.description}
             </p>
             <Link
-                to="/about-us/leadership"
-                className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
-                >
-                {visionaryData?.CTA}
-                <svg
-                    className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                </svg>
-                </Link>
-            </div>
-           
+              to="/about/about-altumind/leadership"
+              className="group w-fit max-md:mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
+            >
+              {visionaryData?.CTA}
+              <svg
+                className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
-    )
+    );
   }
   
 export default NorthAndVisionary

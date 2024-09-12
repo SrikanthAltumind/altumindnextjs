@@ -67,7 +67,7 @@ const AIandAutomation = () => {
             Client Testimonials
           </p>
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact In Their Words
+            The Altumind Impact: In Their Words
           </p>
         </div>
         <Testimonials />

@@ -219,220 +219,289 @@ const ContactForm = ({selectedForm}) => {
 
   return (
     <form
-        onSubmit={formik.handleSubmit}
-        className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
-      >
-        <div className="sm:flex items-center gap-8 max-sm:space-y-14">
-          {/* First Name */}
-          <div className="relative flex flex-col w-full">
-            <input
-              name="firstName"
-              className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
-              id="firstName"
-              {...formik.getFieldProps("firstName")}
-            />
-            <label
-              htmlFor="firstName"
-              className={`w-full  absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values?.firstName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-              } peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-            >
-              First Name<span className="text-red-500">*</span>
-            </label>
-            <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
-            {formik.touched.firstName && formik.errors.firstName && (
-              <p className="absolute -bottom-[18px] text-red-500 text-xs">
-                *{formik.errors.firstName}
-              </p>
-            )}
-          </div>
-         {/* Last Name */}
-         <div className="relative flex flex-col w-full">
-            <input
-              name="lastName"
-              className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
-              id="lastName"
-              {...formik.getFieldProps("lastName")}
-            />
-            <label
-              htmlFor="lastName"
-              className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values?.lastName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-              }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-            >
-              Last Name<span className="text-red-500">*</span>
-            </label>
-            <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
-            {formik.touched.lastName && formik.errors.lastName && (
-              <p className="absolute -bottom-[18px] text-red-500 text-xs">
-                *{formik.errors.lastName}
-              </p>
-            )}
-          </div>
+      onSubmit={formik.handleSubmit}
+      className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
+    >
+      <div className="sm:flex items-center gap-8 max-sm:space-y-14">
+        {/* First Name */}
+        <div className="relative flex flex-col w-full">
+          <input
+            name="firstName"
+            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            id="firstName"
+            {...formik.getFieldProps("firstName")}
+          />
+          <label
+            htmlFor="firstName"
+            className={`w-full  absolute cursor-text bottom-1  peer-focus:text-xs   ${
+              formik.values?.firstName
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            } peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+          >
+            First Name<span className="text-red-500">*</span>
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
+          {formik.touched.firstName && formik.errors.firstName && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.firstName}
+            </p>
+          )}
         </div>
-        <div className="sm:flex items-center gap-8 max-sm:space-y-14">
-          {/* Email */}
-          <div className="relative flex flex-col w-full">
-            <input
-              name="email"
-              className=" peer  bg-transparent outline-none border-b border-tertiary dark:border-white"
-              type="email"
-              id="email"
-              {...formik.getFieldProps("email")}
-            />
-            <label
-              htmlFor="email"
-              className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
-                formik.values?.email ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-              } peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-            >
-              Email<span className="text-red-500">*</span>
-            </label>
-            <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
-            {formik.touched.email && formik.errors.email && (
-              <p className="absolute -bottom-[18px] text-red-500 text-xs">
-                *{formik.errors.email}
-              </p>
-            )}
-          </div>
-          {/* Phone */}
-          <div className="relative flex flex-col w-full">
-            <input
-              name="phone"
-              className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
-              type="text"
-              id="phone"
-              maxLength={10}
-              {...formik.getFieldProps("phone")}
-            />
-            <label
-              htmlFor="phone"
-              className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
-                formik.values?.phone ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-              }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-            >
-              Phone{selectedForm==='career'&& <span className="text-red-500">*</span>}
-            </label>
-            <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
-            {formik.touched.phone && formik.errors.phone && (
-              <p className="absolute -bottom-[18px] text-red-500 text-xs">
-                *{formik.errors.phone}
-              </p>
-            )}
-          </div>
+        {/* Last Name */}
+        <div className="relative flex flex-col w-full">
+          <input
+            name="lastName"
+            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            id="lastName"
+            {...formik.getFieldProps("lastName")}
+          />
+          <label
+            htmlFor="lastName"
+            className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
+              formik.values?.lastName
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+          >
+            Last Name<span className="text-red-500">*</span>
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
+          {formik.touched.lastName && formik.errors.lastName && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.lastName}
+            </p>
+          )}
         </div>
-        <div className="sm:flex items-end gap-8 md:gap-6 lg:gap-8 max-sm:space-y-14">
-          {/* Company Name */}
-          <div className="relative flex flex-col w-full">
-            <input
-              name="companyName"
-              className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
-              id="companyName"
-              {...formik.getFieldProps("companyName")}
-            />
-            <label
-              htmlFor="companyName"
-              className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
-                formik.values?.companyName ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-              }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-            >
-             Company Name{selectedForm!=='career'&& <span className="text-red-500">*</span>}
-            </label>
-            <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
-            {formik.touched.companyName && formik.errors.companyName && (
-              <p className="absolute -bottom-[18px] text-red-500 text-xs">
-                *{formik.errors.companyName}
-              </p>
+      </div>
+      <div className="sm:flex items-center gap-8 max-sm:space-y-14">
+        {/* Email */}
+        <div className="relative flex flex-col w-full">
+          <input
+            name="email"
+            className=" peer  bg-transparent outline-none border-b border-tertiary dark:border-white"
+            type="email"
+            id="email"
+            {...formik.getFieldProps("email")}
+          />
+          <label
+            htmlFor="email"
+            className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
+              formik.values?.email
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            } peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+          >
+            Email<span className="text-red-500">*</span>
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
+          {formik.touched.email && formik.errors.email && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.email}
+            </p>
+          )}
+        </div>
+        {/* Phone */}
+        <div className="relative flex flex-col w-full">
+          <input
+            name="phone"
+            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            type="text"
+            id="phone"
+            maxLength={10}
+            {...formik.getFieldProps("phone")}
+          />
+          <label
+            htmlFor="phone"
+            className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
+              formik.values?.phone
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+          >
+            Phone
+            {selectedForm === "career" && (
+              <span className="text-red-500">*</span>
             )}
-          </div>
-          {/* How did you hear about us */}
-          <div className="relative flex flex-col w-full ">
-            <select
-              name="howDidYouHearAboutUs"
-              className="cursor-pointer text-sm  lg:text-base bg-transparent outline-none border-b border-tertiary dark:border-white dark:focus:border-blue-400 "
-              id="howDidYouHearAboutUs"
-              {...formik.getFieldProps("howDidYouHearAboutUs")}
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
+          {formik.touched.phone && formik.errors.phone && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.phone}
+            </p>
+          )}
+        </div>
+      </div>
+      <div className="sm:flex items-end gap-8 md:gap-6 lg:gap-8 max-sm:space-y-14">
+        {/* Company Name */}
+        <div className="relative flex flex-col w-full">
+          <input
+            name="companyName"
+            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            id="companyName"
+            {...formik.getFieldProps("companyName")}
+          />
+          <label
+            htmlFor="companyName"
+            className={`w-full absolute cursor-text bottom-1  peer-focus:text-xs   ${
+              formik.values?.companyName
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+          >
+            Company Name
+            {selectedForm !== "career" && (
+              <span className="text-red-500">*</span>
+            )}
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-200 ease-linear before:dark:bg-blue-400"></div>
+          {formik.touched.companyName && formik.errors.companyName && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.companyName}
+            </p>
+          )}
+        </div>
+        {/* How did you hear about us */}
+        <div className="relative flex flex-col w-full ">
+          <select
+            name="howDidYouHearAboutUs"
+            className="cursor-pointer text-sm  lg:text-base bg-transparent outline-none border-b border-tertiary dark:border-white dark:focus:border-blue-400 "
+            id="howDidYouHearAboutUs"
+            {...formik.getFieldProps("howDidYouHearAboutUs")}
+          >
+            <option className="dark:bg-DarkBackground" value="">
+              <p>
+                How did you hear about us ? *
+              </p>
+            </option>
+            <option className="dark:bg-DarkBackground" value="Ad Campaign">
+              Ad Campaign{" "}
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Search Engine (Google, Bing, etc.)"
             >
-              <option className="dark:bg-DarkBackground" value="">How did you hear about us ?*</option>
-              <option className="dark:bg-DarkBackground" value="Ad Campaign" >Ad Campaign </option>
-              <option className="dark:bg-DarkBackground" value="Search Engine (Google, Bing, etc.)" >Search Engine (Google, Bing, etc.)</option>
-              <option className="dark:bg-DarkBackground" value="Social media" >Social media</option>
-              <option className="dark:bg-DarkBackground" value="LinkedIn" >LinkedIn</option>
-              <option className="dark:bg-DarkBackground" value="Business Directory" >Business Directory</option>
-              <option className="dark:bg-DarkBackground" value="Networking Event, Webinars " >Networking Event, Webinars </option>
-              <option className="dark:bg-DarkBackground" value="Recommended by colleague" >Recommended by colleague</option>
-              <option className="dark:bg-DarkBackground" value="Third party Review " >Third party Review </option>
-              <option className="dark:bg-DarkBackground" value="Worked with Altumind Previously" >Worked with Altumind Previously</option>
-              <option className="dark:bg-DarkBackground" value="Other" >Other</option>
-            </select>
-            {formik.touched.howDidYouHearAboutUs && formik.errors.howDidYouHearAboutUs && (
+              Search Engine (Google, Bing, etc.)
+            </option>
+            <option className="dark:bg-DarkBackground" value="Social media">
+              Social media
+            </option>
+            <option className="dark:bg-DarkBackground" value="LinkedIn">
+              LinkedIn
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Business Directory"
+            >
+              Business Directory
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Networking Event, Webinars "
+            >
+              Networking Event, Webinars{" "}
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Recommended by colleague"
+            >
+              Recommended by colleague
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Third party Review "
+            >
+              Third party Review{" "}
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Worked with Altumind Previously"
+            >
+              Worked with Altumind Previously
+            </option>
+            <option className="dark:bg-DarkBackground" value="Other">
+              Other
+            </option>
+          </select>
+          {formik.touched.howDidYouHearAboutUs &&
+            formik.errors.howDidYouHearAboutUs && (
               <p className="absolute -bottom-[18px] text-red-500 text-xs">
                 *{formik.errors.howDidYouHearAboutUs}
               </p>
             )}
-          </div>
         </div>
-        {/* How can we help */}
-        <div className="relative flex flex-col w-full">
-          <textarea
-            name="message"
-            rows={5}
-            className="peer text-sm bg-transparent outline-none border-b border-tertiary dark:border-white"
-            id="message"
-            {...formik.getFieldProps("message")}
-          />
-          <label
-            htmlFor="message"
-            className={`w-full absolute cursor-text top-1 peer-focus:text-xs ${
-              formik.values?.message ? "text-xs -translate-y-6" : "text-sm lg:text-base"
-            }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
-          >
-            {selectedForm==='career' ? 'A little about you:' : 'How can we help ?'}
-            {selectedForm!=='career' && <span className="text-red-500">*</span>}
-          </label>
-          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
-          {formik.touched.message && formik.errors.message && (
-            <p className="absolute -bottom-[18px] text-secondary text-xs">
-              *{formik.errors.message}
-            </p>
-          )}
-        </div>
+      </div>
+      {/* How can we help */}
+      <div className="relative flex flex-col w-full">
+        <textarea
+          name="message"
+          rows={5}
+          className="peer text-sm bg-transparent outline-none border-b border-tertiary dark:border-white"
+          id="message"
+          {...formik.getFieldProps("message")}
+        />
+        <label
+          htmlFor="message"
+          className={`w-full absolute cursor-text top-1 peer-focus:text-xs ${
+            formik.values?.message
+              ? "text-xs -translate-y-6"
+              : "text-sm lg:text-base"
+          }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
+        >
+          {selectedForm === "career"
+            ? "A little about you:"
+            : "How can we help ?"}
+          {selectedForm !== "career" && <span className="text-red-500">*</span>}
+        </label>
+        <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
+        {formik.touched.message && formik.errors.message && (
+          <p className="absolute -bottom-[18px] text-secondary text-xs">
+            *{formik.errors.message}
+          </p>
+        )}
+      </div>
       {/* Upload your brief */}
-      {selectedForm==='career' &&
+      {selectedForm === "career" && (
         <div className="w-full">
-            <label className="block mb-3 font-medium">
-             Upload your CV
-           <span className="text-red-500">*</span>
-            </label>
-            <div className='border border-gray-300 dark:border-gray-600  rounded-lg'>
-              <input onChange={e=> {setFile(e.target.files)}}
-                type="File" accept='.pdf' id="fileUpload" placeholder="Upload here"  
-                className='hidden'
-                
-              />
-              <label 
+          <label className="block mb-3 font-medium">
+            Upload your CV
+            <span className="text-red-500">*</span>
+          </label>
+          <div className="border border-gray-300 dark:border-gray-600  rounded-lg">
+            <input
+              onChange={(e) => {
+                setFile(e.target.files);
+              }}
+              type="File"
+              accept=".pdf"
+              id="fileUpload"
+              placeholder="Upload here"
+              className="hidden"
+            />
+            <label
               required
-                htmlFor='fileUpload'
-                className='bg-gray-50 dark:bg-DarkBackground dark:text-white  text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400  w-full p-2.5 flex flex-col items-center cursor-pointer '
+              htmlFor="fileUpload"
+              className="bg-gray-50 dark:bg-DarkBackground dark:text-white  text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400  w-full p-2.5 flex flex-col items-center cursor-pointer "
+            >
+              <svg
+                className="w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
               >
-                <svg
-                    className="w-6 h-6"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 21 16"
-                  >
-                    <path d="M11 16a1 1 0 0 1-1-1v-1h2v1a1 1 0 0 1-1 1Z" />
-                    <path d="M17.989 6.124a6.5 6.5 0 0 0-12.495-2.1A5 5 0 0 0 6 14h4V8.414l-.293.293a1 1 0 0 1-1.414-1.414l2-2a1 1 0 0 1 1.414 0l2 2a1 1 0 1 1-1.414 1.414L12 8.414V14h5a4 4 0 0 0 .989-7.876Z" />
-                </svg>
-                <span className='text-xs lg:text-sm mt-2'>{file ? `${file[0].name}` : 'Click here to upload file'} </span>
-              </label>
+                <path d="M11 16a1 1 0 0 1-1-1v-1h2v1a1 1 0 0 1-1 1Z" />
+                <path d="M17.989 6.124a6.5 6.5 0 0 0-12.495-2.1A5 5 0 0 0 6 14h4V8.414l-.293.293a1 1 0 0 1-1.414-1.414l2-2a1 1 0 0 1 1.414 0l2 2a1 1 0 1 1-1.414 1.414L12 8.414V14h5a4 4 0 0 0 .989-7.876Z" />
+              </svg>
+              <span className="text-xs lg:text-sm mt-2">
+                {file ? `${file[0].name}` : "Click here to upload file"}{" "}
+              </span>
+            </label>
           </div>
-
         </div>
-      }
-          {/* Submit Button */}
-        <div className="flex items-center justify-center md:justify-start">
+      )}
+      {/* Submit Button */}
+      <div className="flex items-center justify-center md:justify-start">
         <button
           type="submit"
           disabled={!formik.dirty || !formik.isValid || formik.isSubmitting}
@@ -459,9 +528,9 @@ const ContactForm = ({selectedForm}) => {
             "Send"
           )}
         </button>
-        </div>
-        {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
-      </form>
+      </div>
+      {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
+    </form>
   );
 };
 

@@ -8,226 +8,7 @@ import { ThemeContext } from "../../Layouts/AppLayout";
 import MegaMenu from "./MegaMenu";
 import MobileMenu from "./MobileMenu";
 
-// const data = [
-//   {
-//     menu: "About",
-//     path: "/about",
-//     children: [
-//       {
-//         innerMenu: "About Altumind",
-//         children: [
-//           {
-//             name: "Mission and Vision",
-//             path: "/about/mission-and-vision",
-//           },
-//           {
-//             name: "Leadership",
-//             path: "/about/leadership",
-//           },
-//           {
-//             name: "Alliance",
-//             path: "/about/alliance",
-//           },
-//           {
-//             name: "Community Engagement",
-//             path: "/about/community-engagement",
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     menu: "Services",
-//     path: "/services",
-//     children: [
-//       {
-//         innerMenu: "Experience Design",
-//         path: "/services/experience-design",
-//         children: [
-//           {
-//             name: "UI Design",
-//             path: "/services/experience-design/ui-design",
-//           },
-//           {
-//             name: "UX Design",
-//             path: "/services/experience-design/ux-design",
-//           },
-//           {
-//             name: "CX Design",
-//             path: "/services/experience-design/cx-design",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "Technology and Engineering",
-//         path: "/services/technology-and-engineering",
-//         children: [
-//           {
-//             name: "Web Development",
-//             path: "/services/technology-and-engineering/web-development",
-//           },
-//           {
-//             name: "Mobile App Development",
-//             path: "/services/technology-and-engineering",
-//           },
-//           {
-//             name: "ERP Integration",
-//             path: "/services/technology-and-engineering",
-//           },
-//           {
-//             name: "Ecommerce Services",
-//             path: "/services/technology-and-engineering",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "AI & Chat Bot",
-//         children: [
-//           {
-//             name: "Conversational AI",
-//           },
-//           {
-//             name: "AI Chatbot",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "Quality Assurance & Quality control ",
-//         children: [
-//           {
-//             name: "Platforms",
-//           },
-//           {
-//             name: "Industries",
-//           },
-//           {
-//             name: "Levels of software Testing services",
-//           },
-//           {
-//             name: "Test Management",
-//           },
-//           {
-//             name: "Defect Management",
-//           },
-//           {
-//             name: "Other QA services",
-//           },
-//           {
-//             name: "Resources",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "Cloud & Automation",
-//         children: [
-//           {
-//             name: "Cloud",
-//           },
-//           {
-//             name: "RPA",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "Digital Marketing",
-//         children: [
-//           {
-//             name: "Branding & Design",
-//           },
-//           {
-//             name: "Marketing Services",
-//           },
-//           {
-//             name: "Paid Advertising",
-//           },
-//           {
-//             name: "Marketing Optimization",
-//           },
-//           {
-//             name: "Analytics & Strategy Consulting",
-//           },
-//           {
-//             name: "Marketing Automation",
-//           },
-//         ],
-//       },
-//       {
-//         innerMenu: "Data Analytics ",
-//       },
-//       {
-//         innerMenu: "IT Services & Consulting",
-//       },
-//     ],
-//   },
-//   {
-//     menu: "Industries",
-//     path: "/industries",
-//     children: [
-//       {
-//         innerMenu: "BFSI & Fintech",
-//       },
-//       {
-//         innerMenu: "Digital Commerce",
-//       },
-//       {
-//         innerMenu: "Healthcare",
-//       },
-//       {
-//         innerMenu: "Green & Sustainability",
-//       },
-//       {
-//         innerMenu: "EdTech",
-//       },
-//       {
-//         innerMenu: "Internet & SaaS",
-//       },
-//     ],
-//   },
-//   {
-//     menu: "Portfolio",
-//     path: "/portfolio",
-//   },
-//   {
-//     menu: "Insights",
-//     path: "/insights",
-//     children: [
-//       {
-//         innerMenu: "Blogs",
-//       },
-//       {
-//         innerMenu: "Expert Articles",
-//       },
-//       {
-//         innerMenu: "White Paper",
-//       },
-//       {
-//         innerMenu: "PR & Events",
-//       },
-//       {
-//         innerMenu: "Awards",
-//       },
-//       {
-//         innerMenu: "Podcasts",
-//       },
-//     ],
-//   },
-//   {
-//     menu: "Career",
-//     path: "/career",
-//     children: [
-//       {
-//         innerMenu: "Open Roles",
-//         path: "/open-roles",
-//       },
-//       {
-//         innerMenu: "Life At Altumind",
-//       },
-//     ],
-//   },
-// ];
-// console.log(data[0].children[0].children, 'innermenus')
-
-const data = [
+export const Navbardata = [
   {
     menu: "About",
     path: "/about",
@@ -395,14 +176,90 @@ const data = [
       {
         innerMenu: "Data Analytics",
         path: "/services/data-analytics",
+        children: [
+          {
+            id: 1,
+            name: "Business Intelligence",
+            url: "/services/data-analytics/business-intelligence",
+          },
+          {
+            id: 2,
+            name: "Digital Intelligence",
+            url: "/services/data-analytics/digital-intelligence",
+          },
+          {
+            id: 3,
+            name: "Marketing Intelligence",
+            url: "/services/data-analytics/marketing-intelligence",
+          },
+          {
+            id: 4,
+            name: "Customer 360",
+            url: "/services/data-analytics/customer-360",
+          },
+          {
+            id: 5,
+            name: "Sales Intelligence",
+            url: "/services/data-analytics/sales-intelligence",
+          },
+        ],
       },
       {
         innerMenu: "Managed Operations",
         path: "/services/managed-operations",
+        children: [
+          {
+            id: 1,
+            name: "Product Innovation & Management",
+            url: "/services/managed-operations/product-innovation-management",
+          },
+          {
+            id: 2,
+            name: "Website Operations & management",
+            url: "services/managed-operations/website-operations-management",
+          },
+          {
+            id: 3,
+            name: "Cloud Management",
+            url: "services/managed-operations/cloud-management",
+          },
+          {
+            id: 4,
+            name: "Software Maintenance & Support",
+            url: "services/managed-operations/software-maintenance-support",
+          },
+        ],
       },
       {
         innerMenu: "Digital Strategy and Consulting",
         path: "/services/digital-strategy-consulting",
+        children: [
+          {
+            id: 1,
+            name: "Digital Experience & Engagement",
+            url: "/services/digital-strategy/digital-experience-engagement",
+          },
+          {
+            id: 2,
+            name: "Digital Build",
+            url: "/services/digital-strategy/digital-build",
+          },
+          {
+            id: 3,
+            name: "Digital Modernization",
+            url: "/services/digital-strategy/digital-modernization",
+          },
+          {
+            id: 4,
+            name: "Digital Audits",
+            url: "/services/digital-strategy/digital-audits",
+          },
+          {
+            id: 5,
+            name: "Incubation Of Products & Services",
+            url: "/services/data-analytics/incubaton-products-services",
+          },
+        ],
       },
     ],
   },
@@ -518,7 +375,7 @@ const Navbar = () => {
             </div>
           )}
           <ul className="flex mr-3 h-full relative font-montserrat">
-            {data?.map((item, index) => (
+            {Navbardata?.map((item, index) => (
               <li
                 key={index}
                 className="h-full flex items-center"

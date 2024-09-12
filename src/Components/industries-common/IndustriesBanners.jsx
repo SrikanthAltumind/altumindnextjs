@@ -47,7 +47,7 @@ useEffect(() => {
         </p>
 
         <a
-          href="#"
+          href="/contact"
           className="group w-fit mx-auto font-raleway  text-secondary font-semibold flex justify-center items-center gap-1 mt-10"
         >
           <span className="border-b leading-4 border-secondary">

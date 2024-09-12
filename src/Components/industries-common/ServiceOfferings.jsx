@@ -384,7 +384,7 @@ const ServiceOfferrings = () => {
             {data?.heading}
           </p>
           <p className="md:max-w-[450px]">{data?.description}</p>
-          <p className="text-[#DD5143] w-full flex gap-2 font-semibold group cursor-pointer underline items-center">
+          <a href="/services" className="text-[#DD5143] w-full flex gap-2 font-semibold group cursor-pointer underline items-center">
             <span>Explore All Services</span>
             <span className="group-hover:mx-2 transition-all duration-200">
               <svg
@@ -400,7 +400,7 @@ const ServiceOfferrings = () => {
                 />
               </svg>
             </span>
-          </p>
+          </a>
         </div>
 
         <div className="w-[60%] flex flex-col gap-4">

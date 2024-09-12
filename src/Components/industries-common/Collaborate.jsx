@@ -66,7 +66,7 @@ const Collaborate = () => {
           </h1>
           <p className="font-semibold">{data?.third_line}</p>
           <a
-            href="#"
+            href="/contact"
             className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1 mt-10"
           >
             Let&apos;s Connect

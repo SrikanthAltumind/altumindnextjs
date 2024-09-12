@@ -32,6 +32,9 @@ const Career = () => {
       <section className="flex w-full justify-center items-center mt-10">
         <FAQ />
       </section>
+      <section className="flex w-full justify-center items-center">
+        <SubscribeForm />
+      </section>
     </div>
   );
 }

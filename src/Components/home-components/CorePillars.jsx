@@ -108,14 +108,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
-  useScroll,
-  useTransform,
   useInView,
   stagger,
 } from "framer-motion";
 import { gradientStyle } from "../../ReactFunctions";
 import axios from "axios";
-import { indexOf } from "lodash";
+// import { indexOf } from "lodash";
 
 // import { useInView } from "react-intersection-observer";
 
@@ -217,15 +215,15 @@ const CorePillars = () => {
   //   },
   // };
 
-  const staggerItem = {
-    hidden: { opacity: 0, x: "-100%", filter: "blur(5px)" },
-    show: {
-      opacity: 1,
-      x: 0,
-      filter: "blur(0px)",
-      transition: { duration: 1 },
-    },
-  };
+  // const staggerItem = {
+  //   hidden: { opacity: 0, x: "-100%", filter: "blur(5px)" },
+  //   show: {
+  //     opacity: 1,
+  //     x: 0,
+  //     filter: "blur(0px)",
+  //     transition: { duration: 1 },
+  //   },
+  // };
 
   // Update sectionInView state when inView changes
   useEffect(() => {
@@ -310,7 +308,7 @@ const CorePillars = () => {
         ))}
       </motion.div>
       <a
-        href="#"
+        href="/about"
         className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-[#02194A] font-semibold flex justify-center items-center gap-1 mt-10"
       >
         Know More About Us
