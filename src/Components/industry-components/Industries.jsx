@@ -25,15 +25,15 @@ useEffect(() => {
 
   return (
     <div className="w-[90%] mx-auto -mt-[50px]">
-      <div className="overflow-x-auto lg:w-[90%] mx-auto">
-        <ul className="flex justify-between gap-14 min-w-max font-montserrat">
+      <div className="lg:flex justify-evenly items-center  w-full overflow-x-auto no-scrollbar font-raleway">
+          <div className="w-full min-w-screen flex gap-8 justify-evenly items-center p-3">
       {
         data?.map((item) => {
             return (
-            <li key={item.id}  onClick={()=> setIndustryData(item)} className={`${item.id === industryData.id ? 'border-b-[3px] border-secondary font-medium' : 'border-none'} cursor-pointer text-[#1E1E1E] lg:text-base text-sm dark:text-white`}>{item?.attributes?.industry_category}</li>
+            <p key={item.id}  onClick={()=> setIndustryData(item)} className={`${item.id === industryData.id ? 'border-b-[3px] border-secondary font-medium' : 'border-none'} py-2 text-nowrap cursor-pointer text-[#1E1E1E] lg:text-base text-sm dark:text-white`}>{item?.attributes?.industry_category}</p>
         )})
       }
-      </ul>
+      </div>
       </div>
 
       <div>

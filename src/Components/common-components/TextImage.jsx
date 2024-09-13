@@ -1,19 +1,10 @@
 import React from 'react'
 import { gradientStyle } from '../../ReactFunctions';
 import Markdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
+import { customRenderers } from '../../ReactFunctions';
 
 
 const TextImage = ({ data, textRight }) => {
-
-    const customRenderers = {
-      ul: ({ children }) => (
-        <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
-          {children}
-        </ul>
-      ),
-    };
 
   return (
     <div className="w-[90%] flex flex-col gap-14 p-3 items-center justify-center font-raleway">
@@ -41,6 +32,7 @@ const TextImage = ({ data, textRight }) => {
         <div className="md:w-[50%] max-w-[400px] flex flex-col justify-start items-start gap-3 leading-5 md:leading-6 lg:leading-7">
           <Markdown
             components={customRenderers}
+            className="markdown"
           >
             {data?.description}
           </Markdown>

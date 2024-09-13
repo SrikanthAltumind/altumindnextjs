@@ -161,7 +161,7 @@ useEffect(() => {
 
   return (
     <div className="w-full flex flex-col gap-8 justify-center items-center font-raleway dark:text-white dark:bg-[#0d1015]">
-      <div className="w-full md:h-[380px] bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
+      <div className="w-full md:h-[360px] bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
         <p className="text-3xl font-extrabold">
           <span style={gradientStyle}>Careers That Evolve</span>{" "}
           <span>With You</span>
@@ -171,9 +171,9 @@ useEffect(() => {
           <br />
           Challenger Spirit
         </p>
-        <button className="w-[200px] h-[50px] rounded-3xl text-white text-sm font-medium bg-[#DD5143]">
+        {/* <button className="w-[200px] h-[50px] rounded-3xl text-white text-sm font-medium bg-[#DD5143]">
           See All Open Roles
-        </button>
+        </button> */}
       </div>
       <div className="w-full justify-center items-center p-6">
         <div className="flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">

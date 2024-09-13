@@ -1,8 +1,9 @@
 import Marquee from "react-fast-marquee";
+import { useNavigate } from "react-router-dom";
 
 
 
-const Card = ({ content }) => {
+const Card = ({ content, navigate }) => {
   
   return (
     <div
@@ -11,6 +12,7 @@ const Card = ({ content }) => {
       style={{
         backgroundColor: content?.attributes?.hexvalue,
       }}
+      onClick={() => navigate(content?.attributes?.path)}
     >
       <div className="w-full">
         <p
@@ -43,12 +45,13 @@ const Card = ({ content }) => {
   );
 };
 
-const ScrollingCards = ({scrollData}) => {
+const ScrollingCards = ({ scrollData }) => {
+  const navigate = useNavigate();
   return (
     <div className="py-2">
       <Marquee className="py-4">
         {scrollData?.concat(scrollData)?.map((src, index) => (
-          <Card content={src} key={index + "test"} />
+          <Card content={src} key={index + "test"} navigate={navigate} />
         ))}
       </Marquee>
     </div>

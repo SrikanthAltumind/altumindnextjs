@@ -108,7 +108,9 @@ const Portfolio = () => {
       })
       .catch((error) => {
         console.log("error while categories", error);
+        setError("Failed to fetch data. Please try again later.");
         setLoading(false);
+        
       });
   };
 
@@ -140,7 +142,7 @@ const Portfolio = () => {
           <br /> our transformational efforts.
         </p>
       </div>
-      
+
       <div className="w-full flex flex-col gap-4 justify-start items-center p-3">
         <div className="w-full flex justify-evenly flex-wrap gap-4 items-center">
           {data.map((category) => (
@@ -162,29 +164,52 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-        <div className="flex justify-evenly p-4 items-center h-[125px] w-full min-w-[1200px] overflow-x-auto">
-          {data
-            .find((category) => category.id === activeCategory)
-            ?.attributes.portfolio_subcategories.data.map((subcategory) => (
-              <button
-                key={activeCategory + "subcategory" + subcategory.id}
-                onClick={() =>
-                  setActiveSubcategory(subcategory.attributes.title)
-                }
-                className={`border-b-[3px] py-3 ${
-                  subcategory.attributes.title === activeSubcategory
-                    ? "border-secondary font-bold "
-                    : "border-transparent font-medium"
-                }
+        <div className="lg:flex justify-evenly p-4 items-center  w-full overflow-x-auto no-scrollbar">
+          <div className="w-full min-w-screen flex gap-8 justify-evenly items-center p-3">
+            {data
+              .find((category) => category.id === activeCategory)
+              ?.attributes.portfolio_subcategories.data.map((subcategory) => (
+                <button
+                  key={activeCategory + "subcategory" + subcategory.id}
+                  onClick={() =>
+                    setActiveSubcategory(subcategory.attributes.title)
+                  }
+                  className={`border-b-[3px] py-3 ${
+                    subcategory.attributes.title === activeSubcategory
+                      ? "border-secondary font-bold "
+                      : "border-transparent font-medium"
+                  }
               
               `}
-              >
-                <p className="max-w-[160px] text-wrap text-center font-mont cursor-pointer text-sm font-medium">
-                  {subcategory.attributes.title}
-                </p>
-              </button>
-            ))}
+                >
+                  <p className="text-nowrap text-center font-mont cursor-pointer text-sm font-medium">
+                    {subcategory.attributes.title}
+                  </p>
+                </button>
+              ))}
+          </div>
         </div>
+        {/* <div className="w-full flex justify-center items-center px-3 py-2 lg:hidden">
+          <select
+            name="subcat-dd"
+            id="subcat-dd"
+            value={activeSubcategory}
+            onChange={(e) => setActiveSubcategory(e.target.value)}
+            className="border rounded-md border-gray-400 text-sm px-3 p-2 w-[280px] h-[60px] cursor-pointer"
+          >
+            {data
+              .find((category) => category.id === activeCategory)
+              ?.attributes.portfolio_subcategories.data.map((subcategory) => (
+                <option
+                  value={subcategory.attributes.title}
+                  key={"subcat_option" + subcategory.attributes.title}
+                  className=""
+                >
+                  <p className="truncate">{subcategory.attributes.title}</p>
+                </option>
+              ))}
+          </select>
+        </div> */}
       </div>
       <div className="w-full flex lg:flex-row flex-col flex-wrap items-center justify-center gap-8 lg:px-12 px-4 md:px-8">
         {filteredBlogs.length > 0 ? (
@@ -247,7 +272,11 @@ const Portfolio = () => {
         )}
       </div>
       <div className="w-full justify-center items-center flex h-[140px]">
-        <button disabled className="bg-[#213560] text-white w-[220px] h-[50px] disabled:bg-gray-400 cursor-not-allowed" onClick={()=>alert("No more stories to load")}>
+        <button
+          disabled
+          className="bg-[#213560] text-white w-[220px] h-[50px] disabled:bg-gray-400 cursor-not-allowed"
+          onClick={() => alert("No more stories to load")}
+        >
           Load More
         </button>
       </div>

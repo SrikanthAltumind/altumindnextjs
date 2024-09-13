@@ -4,6 +4,7 @@ import Dropdown from "../Components/common-components/Dropdown";
 import axios from "axios";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import InsightsBlogs from "../Components/common-components/InsightsBlogs";
+import SubscribeForm from "../Components/common-components/SubscribeForm";
 
 const Insights = () => {
   const [topicFilters, setTopicFilters] = useState([]);
@@ -76,24 +77,24 @@ const Insights = () => {
             className="h-[400px] w-[530px] object-fill rounded-md"
           />
         </div>
-        <div className="w-[50%] flex flex-col justify-start items-start gap-3 px-5">
-          <p className="font-medium text-xs">Case study</p>
-          <p className="text-2xl">
-            Step into the Bold and <br />
-            Beautiful ‘AI + Design’ Era
+        <div className="w-[50%] flex flex-col justify-start items-start gap-6 px-5">
+          <p className="font-medium text-xs">Blog</p>
+          <p className="text-xl font-semibold">
+            Ultimate Guide to App Store Optimization:
+            <br />
+            Strategies to Increase Downloads
           </p>
           <p>
-            Although there was a certain paranoia revolving around Artificial
+            Master App Store Optimization (ASO) to boost your app's visibility,
             <br />
-            Intelligence (AI), thanks to Skynet, but in recent years AI has
+            downloads, and user engagement. Learn essential strategies for Apple
             <br />
-            enhanced by leaps and bounds. 2018 is especially witnessing a new
-            <br />
-            surge in the field of AI, especially among various enterprises that
-            <br />
-            are collecting big data.
+            App Store and Google Play success in 2024.
           </p>
-          <p className="text-sm font-medium group flex items-center gap-2 cursor-pointer">
+          <a
+            href="/blog/3"
+            className="text-sm font-medium group flex items-center gap-2 cursor-pointer underline"
+          >
             <span>Read Article</span>{" "}
             <span>
               <svg
@@ -109,13 +110,13 @@ const Insights = () => {
                 />
               </svg>
             </span>
-          </p>
+          </a>
         </div>
       </div>
-      <div className="flex w-full justify-start items-center p-5">
+      {/* <div className="flex w-full justify-start items-center p-5">
         <p className="font-semibold capitalize">Filter By</p>
-      </div>
-      {loading ? (
+      </div> */}
+      {/* {loading ? (
         <LoaderSpinner />
       ) : (
         <div className="w-full flex flex-col gap-8 items-center justify-center">
@@ -144,12 +145,25 @@ const Insights = () => {
               selection={selections.Tags}
               onSelectionChange={handleSelectionChange}
             />
-            </div>
-            <div className="w-full flex justify-center items-center">
-              <InsightsBlogs />
-            </div>
+          </div>
+          <div className="w-full flex justify-center items-center">
+            <InsightsBlogs />
+          </div>
         </div>
-      )}
+      )} */}
+      <div className="flex w-full justify-center items-center p-5 h-[200px]">
+        <p className="text-4xl font-extrabold" style={gradientStyle}>
+          Innovations & Beyond
+        </p>
+      </div>
+      <div className="w-full flex flex-col gap-8 items-center justify-center">
+        <div className="w-full flex justify-center items-center">
+          <InsightsBlogs />
+        </div>
+      </div>
+      <div className="mt-16">
+        <SubscribeForm />
+      </div>
     </div>
   );
 };

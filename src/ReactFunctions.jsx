@@ -5,3 +5,9 @@ export const gradientStyle = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };
+
+export const customRenderers = {
+  ul: ({ children }) => (
+    <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>{children}</ul>
+  ),
+};

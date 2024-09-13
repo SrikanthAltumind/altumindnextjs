@@ -28,3 +28,7 @@
 .no-scrollbar::-webkit-scrollbar{
   display: none;
 }
+
+.markdown>* {
+  all: revert;
+}

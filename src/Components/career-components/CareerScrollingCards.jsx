@@ -69,7 +69,7 @@ const CareerScrollingCards = () => {
                 width="100%"
               />
               <p
-                className={`font-medium`}
+                className={`font-semibold`}
                 style={{ color: src?.attributes?.textClr }}
               >
                 {src?.attributes?.title}

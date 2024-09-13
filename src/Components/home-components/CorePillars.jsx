@@ -166,24 +166,28 @@ const CorePillars = () => {
   const cards = [
     {
       id: 1,
+      text: "TRY",
       front:
         "https://cdn.prod.website-files.com/65ae047f83bf50321f9583a0/65ef10226bbd1609bb9c2996_astrosight.webp",
       back: "Identify Targets",
     },
     {
       id: 2,
+      text: "FALL",
       front:
         "https://cdn.prod.website-files.com/65ae047f83bf50321f9583a0/65ee6047dbef6a26edc5379a_astrolaptopwork.webp",
       back: "Qualify",
     },
     {
       id: 3,
+      text: "CHANGE",
       front:
         "https://cdn.prod.website-files.com/65ae047f83bf50321f9583a0/65ee60caca00890dd4fdb2ce_astrometaverse.webp",
       back: "Long & Short list",
     },
     {
       id: 4,
+      text: "RISE",
       front:
         "https://cdn.prod.website-files.com/65ae047f83bf50321f9583a0/65ee60f4f5a57abb50ec696a_astrojetpack.webp",
       back: "Hyre!",
@@ -276,8 +280,9 @@ const CorePillars = () => {
             <FlipCard
               isFlipped={flipCard}
               frontContent={
-                <div className="bg-gray-300 w-full h-full flex justify-center items-center text-white rounded-md p-2">
-                  <img src={card?.front} alt="" />
+                <div className="w-full h-full flex justify-center items-center rounded-md p-2 border-2">
+                  {/* <img src={card?.front} alt="" /> */}
+                  <p className="text-xl font-bold">{ card?.text}</p>
                 </div>
               }
               backContent={

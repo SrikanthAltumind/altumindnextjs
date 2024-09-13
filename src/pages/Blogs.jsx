@@ -56,13 +56,23 @@ const Blogs = () => {
       })
       .catch((error) => {
         console.log("error while fetching categories", error);
+        setError("Failed to fetch data. Please try again later.");
         setLoading(false);
       });
-  };
+    };
+    
+    const filterData = () => {
+        const filterData = data.find(e => e?.id === activeCategory)?.attributes?.blog_main_cards?.data || []
+        setBlogData(filterData)
+    }
 
-  useEffect(() => {
-    getData();
-  }, []);
+    useEffect(() => {
+        getData();
+    }, []);
+    
+    useEffect(() => {
+        filterData()
+    },[activeCategory])
 
   if (loading) {
     return <LoaderSpinner />;
@@ -80,28 +90,30 @@ const Blogs = () => {
     <div className="w-full flex flex-col gap-8 py-4 items-center justify-center">
       <section className="w-full">
         <Banner />
-        <div className="w-full p-3 gap-4 flex justify-evenly items-center bg-[#EAF1FF]  overflow-x-auto">
-          {data?.map((type) => (
-            <button
-              key={"type" + type.id}
-              className={`pb-3 pt-4 sm:pt-6 sm:pb-4 px-2 sm:px-3 border-b-[3px] font-raleway sm:border-b-4 ${
-                activeCategory === type?.id
-                  ? "border-secondary font-bold "
-                  : "border-transparent font-medium"
-              } text-black text-xs sm:text-sm`}
-              onClick={() => {
-                setActiveCategory(type?.id);
-              }}
-            >
-              <p
-                className={`text-base font-semibold group-hover:text-[#E42D38] ${
-                  activeCategory === type?.id ? "text-[#E42D38]" : ""
-                }`}
+        <div className="lg:flex justify-evenly items-center  w-full overflow-x-auto no-scrollbar bg-[#EAF1FF]">
+          <div className="w-full min-w-screen p-3 gap-7 flex justify-evenly items-center ">
+            {data?.map((type) => (
+              <button
+                key={"type" + type.id}
+                className={`pb-3 pt-4 sm:pt-6 sm:pb-4 px-2 sm:px-3 border-b-[3px] font-raleway sm:border-b-4 ${
+                  activeCategory === type?.id
+                    ? "border-secondary font-bold "
+                    : "border-transparent font-medium"
+                } text-black text-xs sm:text-sm`}
+                onClick={() => {
+                  setActiveCategory(type?.id);
+                }}
               >
-                {type?.attributes?.type}
-              </p>
-            </button>
-          ))}
+                <p
+                  className={`text-base text-nowrap font-semibold group-hover:text-[#E42D38] ${
+                    activeCategory === type?.id ? "text-[#E42D38]" : ""
+                  }`}
+                >
+                  {type?.attributes?.type}
+                </p>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
       <section className="w-full p-6 flex flex-wrap gap-7 justify-center items-center">

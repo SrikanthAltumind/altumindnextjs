@@ -37,6 +37,7 @@ import { useEffect } from "react";
 import Terms from "./pages/Terms";
 import SuccessStory from "./pages/SuccessStory";
 import Blogs from "./pages/Blogs";
+import IndividualBlogPage from "./pages/IndividualBlogPage";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -264,7 +265,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog/:id",
-        element: <WIP />,
+        element: <IndividualBlogPage />,
       },
       {
         path: "/services/quality-assurance/*",
