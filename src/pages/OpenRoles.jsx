@@ -159,12 +159,12 @@ useEffect(() => {
 
   return (
     <div className="w-full flex flex-col gap-8 justify-center items-center font-raleway dark:text-white dark:bg-[#0d1015]">
-      <div className="w-full md:h-[360px] bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
-        <p className="text-3xl font-extrabold">
+      <div className="w-full h-[240px] md:h-[360px] py-10 bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
+        <p className="lg:text-3xl md:text-2xl text-xl font-extrabold">
           <span style={gradientStyle}>Careers That Evolve</span>{" "}
           <span>With You</span>
         </p>
-        <p>
+        <p className="lg:text-base font-medium text-sm">
           Join a Culture That Celebrates Your Unique
           <br />
           Challenger Spirit
@@ -173,8 +173,8 @@ useEffect(() => {
           See All Open Roles
         </button> */}
       </div>
-      <div className="w-full justify-center items-center p-6">
-        <div className="flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">
+      <div className="w-full justify-center flex items-center p-6">
+        <div className=" w-[80%] flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">
           <label htmlFor="role-search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -252,16 +252,16 @@ useEffect(() => {
       </div>
       <div className="w-full p-4 flex flex-col gap-5 justify-center items-center">
         {loading ? <LoaderSpinner /> : <JobCards jobData={jobs} />}
-        <div className="w-full flex items-center justify-center p-4">
+        {/* <div className="w-full flex items-center justify-center p-4">
           <button className="outline-none">
             <p className="underline text-center text-sm font-medium text-[#E42D38] cursor-pointer">
               View More
             </p>
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col justify-start items-center gap-8 mt-10">
-        <p className="text-center text-4xl font-extrabold">
+        <p className="text-center lg:text-4xl md:text-2xl text-xl font-extrabold">
           <span>{"Be Ready for What's Next: "}</span> <br />
           <span style={gradientStyle}>Join Our Talent Pool</span>
         </p>

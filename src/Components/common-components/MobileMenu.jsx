@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
-import { NavMenuData } from "../../Utils";
 import { Navbardata } from "./Navbar";
 
-import { Link } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 
-
-
-// eslint-disable-next-line react/prop-types
-const MobileMenu = ({showMobileMenu}) => {
+const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
     const [activeMenu, setActiveMenu] = useState(null)
-    const [subMenu, setSubMenu] = useState(null)
+  const [subMenu, setSubMenu] = useState(null)
+  const navigate = useNavigate()
 
     useEffect(()=> {
       setActiveMenu(null)
@@ -29,10 +26,16 @@ const MobileMenu = ({showMobileMenu}) => {
         <ul className="space-y-5">
           {Navbardata?.map((item) => (
             <li key={item.menu} className="flex items-center justify-between">
-              <Link to={item.path} className="p-1">
+              <p
+                className="p-1"
+                onClick={() => {
+                  setShowMobileMenu(false);
+                  navigate(item.path);
+                }}
+              >
                 {" "}
                 {item.menu}{" "}
-              </Link>
+              </p>
               {item?.children?.length > 0 && (
                 <button
                   className="p-1 flex justify-between items-center"
@@ -61,12 +64,12 @@ const MobileMenu = ({showMobileMenu}) => {
           ))}
         </ul>
         <div className="text-center my-10">
-          <Link
-            to="/contact"
+          <p
             className="bg-secondary rounded-md py-2 px-20 text-white font-medium font-raleway"
+            onClick={() => navigate("/contact")}
           >
             Let&apos;s Talk
-          </Link>
+          </p>
         </div>
       </div>
       {/* }   */}
@@ -103,16 +106,22 @@ const MobileMenu = ({showMobileMenu}) => {
               />
             </svg>
           </button>
-          <Link to={activeMenu?.path} className="font-semibold text-secondary">
+          <p
+            className="font-semibold text-secondary"
+            onClick={() => navigate(activeMenu?.path)}
+          >
             {activeMenu?.menu}
-          </Link>
+          </p>
         </div>
         <ul className="py-5 space-y-5 h-full overflow-y-auto">
           {activeMenu?.children?.map((child) => (
             <li key={child.innerMenu}>
               <div className="flex justify-between items-center gap-1">
-                <Link
-                  to={child?.path}
+                <p
+                  onClick={() => {
+                    setShowMobileMenu(false);
+                    navigate(child?.path)
+                  }}
                   className={`${
                     subMenu?.innerMenu === child.innerMenu
                       ? "text-primary font-semibold"
@@ -120,7 +129,7 @@ const MobileMenu = ({showMobileMenu}) => {
                   } py-1`}
                 >
                   {child?.innerMenu}
-                </Link>
+                </p>
                 {child?.children?.length > 0 && (
                   <button
                     onClick={() =>
@@ -161,7 +170,14 @@ const MobileMenu = ({showMobileMenu}) => {
                       key={lastChild.name}
                       className="py-2.5 hover:text-secondary "
                     >
-                      <Link to={lastChild?.path}>{lastChild.name}</Link>
+                      <p
+                        onClick={() => {
+                          setShowMobileMenu(false);
+                          navigate(lastChild?.path)
+                        }}
+                      >
+                        {lastChild.name}
+                      </p>
                     </li>
                   ))}
                 </ul>

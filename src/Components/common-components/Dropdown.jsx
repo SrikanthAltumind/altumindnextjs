@@ -105,7 +105,7 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
               className="dark:text-black"
               htmlFor={item?.attributes?.typeName ?? item + "cb"}
             >
-              {item?.attributes?.typeName}
+              {item}
             </label>
           </li>
         ))}

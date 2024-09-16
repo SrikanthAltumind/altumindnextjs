@@ -456,7 +456,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <MobileMenu showMobileMenu={showMobileMenu} />
+        <MobileMenu showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
       </nav>
     </header>
   );
