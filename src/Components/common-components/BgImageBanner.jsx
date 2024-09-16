@@ -18,7 +18,6 @@ const BgImageBanner = () => {
   const fetchData = ()=> {
     axios.get(`${import.meta.env.VITE_APP_API_URL}${apiUrl}`)
     .then(response=> {
-      console.log(response?.data?.data?.attributes)
       setData(response?.data?.data?.attributes)
       setLoading(false)
     })

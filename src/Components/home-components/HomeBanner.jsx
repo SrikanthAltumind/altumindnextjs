@@ -10,6 +10,7 @@ const bannerData = [
     heading1: "Providing Value-centric Solutions in",
     dynamicWords: ["Design", "Development", "Marketing"],
     cta: "Check our Services",
+    path: "/services",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const bannerData = [
     description:
       "Utilize the strength of digital breakthroughs to reshape your business horizon.",
     cta: "Check out our work",
+    path: "/portfolio",
   },
 ];
 
@@ -112,9 +114,11 @@ const HomeBanner = () => {
                     your business horizon.
                   </p>
                 )}
-                <button className=" text-sm bg-secondary py-[10px] px-5 rounded-full text-white font-montserrat max-lg:mt-2">
-                  {item.cta}
-                </button>
+                <a href={item?.path}>
+                  <button className=" text-sm bg-secondary py-[10px] px-5 rounded-full text-white font-montserrat max-lg:mt-2">
+                    {item.cta}
+                  </button>
+                </a>
               </div>
             </div>
           </div>

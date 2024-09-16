@@ -3,8 +3,9 @@ import Banner from "../Components/common-components/Banner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
+import { gradientStyle } from "../ReactFunctions";
 
-const BlogCard = ({ blog }) => {
+const BlogCard = ({ blog, index }) => {
   const navigate = useNavigate();
   return (
     <div className="w-[360px] flex flex-col h-[420px] shadow-lg">
@@ -18,12 +19,18 @@ const BlogCard = ({ blog }) => {
       <div className="font-raleway flex flex-col justify-between items-start h-[210px]">
         <div className="flex flex-col gap-3 p-3">
           <p className=" text-gray-400 text-sm">{blog.attributes.tag}</p>
-          <p
-            className="cursor-pointer w-full font-medium text-lg"
-            onClick={() => navigate(`/blog/${blog?.id}`)}
-          >
-            {blog.attributes.title}
-          </p>
+          {index <= 6 ? (
+            <a
+              href={`/blog/${blog?.id}`}
+              className="cursor-pointer w-full font-medium text-lg"
+            >
+              {blog.attributes.title}
+            </a>
+          ) : (
+            <p className="w-full font-medium text-lg">
+              {blog.attributes.title}
+            </p>
+          )}
         </div>
         <div className="p-3">
           <p>30 July, 2024</p>
@@ -89,7 +96,19 @@ const Blogs = () => {
   return (
     <div className="w-full flex flex-col gap-8 py-4 items-center justify-center">
       <section className="w-full">
-        <Banner />
+        <div className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme  min-h-[300px] flex flex-col justify-center items-center text-center font-raleway gap-y-5 px-4">
+          <p
+            className=" font-extrabold text-3xl  lg:text-4xl text-transparent"
+            style={gradientStyle}
+          >
+            Our Latest Blogs
+          </p>
+          <p className="max-w-[450px] text-sm md:text-base  text-black dark:font-normal font-semibold dark:text-white">
+            Your Guide to Digital Innovation and IT Solutions.
+          </p>
+        </div>
+
+       
         <div className="lg:flex justify-evenly items-center  w-full overflow-x-auto no-scrollbar bg-[#EAF1FF]">
           <div className="w-full min-w-screen p-3 gap-7 flex justify-evenly items-center ">
             {data?.map((type) => (
@@ -119,7 +138,7 @@ const Blogs = () => {
       <section className="w-full p-6 flex flex-wrap gap-7 justify-center items-center">
         {blogData?.length > 0 ? (
           blogData?.map((blog, index) => {
-            return <BlogCard key={"blogCard" + index} blog={blog} />;
+              return <BlogCard key={"blogCard" + index} blog={blog} index={index} />;
           })
         ) : (
           <p>No blogs available for this category.</p>

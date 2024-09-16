@@ -14,7 +14,6 @@ const FAQ = () => {
         axios
         .get(url)
         .then((res) => {
-            console.log("data from career core values: ", res?.data?.data);
             setData(res?.data?.data);
             setLoading(false);
         })

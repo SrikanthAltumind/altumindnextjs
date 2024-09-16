@@ -49,9 +49,7 @@ const WhyAltumind = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res);
         setData(res?.data?.data);
-        console.log(data, "fetch");
         setLoading(false);
       })
       .catch((err) => {

@@ -60,6 +60,7 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
 
   useEffect(() => {
     console.log("log from dd: ", data);
+    
   }, [data]);
 
   return (

@@ -23,7 +23,6 @@ const IndividualBlogPage = () => {
       )
       .then((response) => {
         setBlogData(response?.data?.data);
-        console.log("blog data response", response?.data?.data);
         setLoading(false);
       })
       .catch((error) => {

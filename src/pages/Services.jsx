@@ -13,6 +13,7 @@ import OurImpactByNumbers from '../Components/services-common/OurImpactByNumbers
 import LogoMarquee from "../Components/common-components/LogoMarquee"
 import { gradientStyle } from "../ReactFunctions"
 import Spectrum from "../Components/common-components/Spectrum"
+import EngModel from "../Components/common-components/EngModel"
 // import UpdatedEngagementModel from "../Components/services-common/UpdatedEngagementModel"
 
 
@@ -67,7 +68,9 @@ const Services = () => {
         <WhyAltumind />
       </section>
       <OurPhilosophy />
-      {/* <UpdatedEngagementModel /> */}
+      <EngagementModel />
+
+      {/* <EngModel /> */}
       <section>
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">

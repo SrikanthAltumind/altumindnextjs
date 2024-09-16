@@ -370,9 +370,9 @@ const ContactForm = ({selectedForm}) => {
             {...formik.getFieldProps("howDidYouHearAboutUs")}
           >
             <option className="dark:bg-DarkBackground" value="">
-              <p>
+              
                 How did you hear about us ? *
-              </p>
+              
             </option>
             <option className="dark:bg-DarkBackground" value="Ad Campaign">
               Ad Campaign{" "}

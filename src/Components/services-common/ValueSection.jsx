@@ -22,7 +22,7 @@ const aiAndAutomationData = {
           { id: 6, content: "Marketing Automation" },
         ],
         CTA: "Explore AI Solutions",
-        url: "/services/ai-automation/conversational-ai",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -46,7 +46,7 @@ const aiAndAutomationData = {
           { id: 6, content: "RPA Process Mining" },
         ],
         CTA: "Explore RPA Services",
-        url: "/services/ai-automation/rpa",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -77,7 +77,7 @@ const digitalMarketingData = {
         subDescription:
           "Our Branding & design approach combines creativity with strategic thinking, ensuring your brand stands out in the digital landscape while effectively communicating your values and message.",
         CTA: "Explore Branding Services",
-        url: "/services/digital-marketing/branding-design",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -105,7 +105,7 @@ const digitalMarketingData = {
         subDescription:
           "We craft integrated marketing strategies that work together to create a powerful, cohesive digital presence for your brand. ",
         CTA: "Discover Marketing Solutions",
-        url: "/services/digital-marketing/marketing-services",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -131,7 +131,7 @@ const digitalMarketingData = {
         subDescription:
           "Our team of experts continually analyzes and adjusts your marketing efforts to ensure you're always getting the best possible results in the ever-changing digital landscape.",
         CTA: "Optimize Your Marketing",
-        url: "/services/digital-marketing/marketing-optimization",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -164,7 +164,7 @@ const cloudServicesData = {
           { id: 4, content: "Cloud optimization and management" },
         ],
         CTA: "Explore More",
-        url: "/services/cloud/cloud-migration",
+        url: "/contact",
         image: {
           data: {
             attributes: {
@@ -190,7 +190,7 @@ const cloudServicesData = {
           { id: 6, content: "Application Performance Optimization" },
         ],
         CTA: "Explore More",
-        url: "/services/cloud/cloud-app",
+        url: "/contact",
         image: {
           data: {
             attributes: {

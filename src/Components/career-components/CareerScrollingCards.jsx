@@ -14,7 +14,6 @@ const CareerScrollingCards = () => {
       const url = import.meta.env.VITE_APP_API_URL + "api/career-core-value-contents?populate=*";
       axios.get(url)
         .then((res) => {
-          console.log("data from career core values: ", res?.data?.data);
           setScrollData(res?.data?.data);
           setLoading(false);
         })
@@ -53,9 +52,9 @@ const CareerScrollingCards = () => {
       </div>
       <div className="w-full overflow-x-hidden py-3">
         <Marquee className="py-4">
-          {scrollData?.concat(scrollData)?.map((src) => (
+          {scrollData?.concat(scrollData)?.map((src, index) => (
             <div
-              key={"career core values - " + src?.id}
+              key={"career_core_values - " + index}
               className={`w-[260px] rounded-md h-[330px] p-3 mx-3 font-raleway hover:scale-105 duration-150 transition-all flex flex-col justify-start items-start gap-6 cursor-pointer`}
               style={{
                 backgroundColor: src?.attributes?.hexvalue,

@@ -16,7 +16,6 @@ const ExploreFurther = () => {
       .get(url)
       .then((res) => {
         setData(res?.data?.data);
-        console.log(res?.data?.data, 'daaata')
         setLoading(false);
       })
       .catch((err) => {

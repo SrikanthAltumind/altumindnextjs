@@ -34,7 +34,6 @@ const TechStack = () => {
           .get(url)
           .then((res) => {
             setData(res?.data?.data?.attributes);
-            console.log(res?.data?.data?.attributes, 'test')
             setLoading(false);
           })
           .catch((err) => {

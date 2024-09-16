@@ -40,7 +40,6 @@ const LogoMarquee = () => {
     const fetchLogos = () => {
         axios.get(`${import.meta.env.VITE_APP_API_URL}api/client-images?populate=*`)
         .then((response) => {
-            console.log("logo response: ", response?.data?.data)
             setLogoData(response?.data?.data)
         })
         .catch((error) => {

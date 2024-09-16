@@ -93,7 +93,7 @@ const AboutUs = () => {
             <p className="font-montserrat font-medium dark:font-normal max-lg:text-center text-sm xl:text-base leading-6">
               {`Sustainability is at the heart of everything we do. We empower businesses on their journey to a greener future by providing innovative digital solutions that optimize resource use, enhance transparency, and promote eco-conscious practices. Our own commitment to sustainability is unwavering, ensuring we're not just a provider of innovative digital solutions; we're a partner in your journey toward a greener future, fostering a collective commitment to a better world. `}
             </p>
-            <p className="cursor-pointer text-[#DD5143] underline font-medium group flex gap-1 items-center">
+            <a href="/about/about-altumind/community-engagement" className="cursor-pointer text-[#DD5143] underline font-medium group flex gap-1 items-center">
               <span>Learn more on our community page</span>
               <span>
                 <svg
@@ -112,7 +112,7 @@ const AboutUs = () => {
                   />
                 </svg>
               </span>
-            </p>
+            </a>
           </div>
           <div className="basis-[32%] bg-red-10 max-w-[320px] hidden lg:block">
             <img

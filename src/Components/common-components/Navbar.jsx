@@ -305,26 +305,26 @@ export const Navbardata = [
         innerMenu: "Blogs",
         path: "/insights/blogs",
       },
-      {
-        innerMenu: "Expert Articles",
-        path: "/insights/expert-articles",
-      },
-      {
-        innerMenu: "White Paper",
-        path: "/insights/white-paper",
-      },
-      {
-        innerMenu: "PR & Events",
-        path: "/insights/pr-events",
-      },
-      {
-        innerMenu: "Awards",
-        path: "/insights/awards",
-      },
-      {
-        innerMenu: "Podcasts",
-        path: "/insights/podcasts",
-      },
+      // {
+      //   innerMenu: "Expert Articles",
+      //   path: "/insights/expert-articles",
+      // },
+      // {
+      //   innerMenu: "White Paper",
+      //   path: "/insights/white-paper",
+      // },
+      // {
+      //   innerMenu: "PR & Events",
+      //   path: "/insights/pr-events",
+      // },
+      // {
+      //   innerMenu: "Awards",
+      //   path: "/insights/awards",
+      // },
+      // {
+      //   innerMenu: "Podcasts",
+      //   path: "/insights/podcasts",
+      // },
     ],
   },
   {

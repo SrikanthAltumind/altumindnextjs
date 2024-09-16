@@ -89,10 +89,7 @@ const Portfolio = () => {
     const subcategoryData =
       activeCategoryData.attributes.portfolio_subcategories.data.find(
         (subcategory) => subcategory.attributes.title === activeSubcategory
-      );        
-
-      console.log(subcategoryData?.attributes.portfolio_cards.data); // Return the collected blogs
-    
+      );          
 
     return subcategoryData?.attributes.portfolio_cards.data || [];
   };
@@ -271,7 +268,7 @@ const Portfolio = () => {
           <p>No stories available for this category.</p>
         )}
       </div>
-      <div className="w-full justify-center items-center flex h-[140px]">
+      {/* <div className="w-full justify-center items-center flex h-[140px]">
         <button
           disabled
           className="bg-[#213560] text-white w-[220px] h-[50px] disabled:bg-gray-400 cursor-not-allowed"
@@ -279,7 +276,7 @@ const Portfolio = () => {
         >
           Load More
         </button>
-      </div>
+      </div> */}
       <div className="w-full mt-16">
         <LogoMarquee />
       </div>

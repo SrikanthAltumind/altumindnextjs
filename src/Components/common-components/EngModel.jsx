@@ -2,18 +2,17 @@ import FixedBid from '../../assets/Fixed Bid.png'
 
 const EngModel = () => {
   return (
-    // <div  className="w-[90%] py-5 bg-slate-300 mx-auto">
-    //     <div className="w-[600px] border-b-2 border-r-2 border-l-2 border-black relative flex gap-10 rounded-b-full h-[300px] items-end justify-center mx-auto bg-green-200">
-    //       <div className="h-[90px] absolute top-0 -left-10 w-[90px] bg-slate-600 rounded-full"></div>
-    //       <div className="h-[90px] absolute top-[150px] left-10 w-[90px] bg-slate-600 rounded-full"></div>
-    //       <div className="h-[90px] absolute top-[150px] right-10 w-[90px] bg-slate-600 rounded-full"></div>
-    //       <div className="h-[90px] absolute -bottom-10  w-[100px] bg-slate-600 rounded-full"></div>
-          
-    //       <div className="h-[90px] absolute -right-10 top-0 w-[90px] bg-slate-600 rounded-full"></div>
-    //     </div>
-    // </div>
+    <div  className="w-[90%] py-16 bg-slate-300 mx-auto">
+        <div className="w-[600px] border-b-2 border-r-2 border-l-2 border-black relative flex gap-10 rounded-b-full h-[300px] items-end justify-center mx-auto ">
+          <div className="h-[90px] absolute top-0 -left-10 w-[90px] bg-slate-600 rounded-full"></div>
+          <div className="h-[90px] absolute top-[150px] left-10 w-[90px] bg-slate-600 rounded-full"></div>
+          <div className="h-[90px] absolute top-[150px] right-10 w-[90px] bg-slate-600 rounded-full"></div>
+          <div className="h-[90px] absolute -bottom-10  w-[90px] bg-slate-600 rounded-full"></div>
+          <div className="h-[90px] absolute -right-10 top-0 w-[90px] bg-slate-600 rounded-full"></div>
+        </div>
+    </div>
 
-<div  className="w-[90%] py-5 bg-slate-300 mx-auto">
+/* <div  className="w-[90%] py-5 bg-slate-300 mx-auto">
 <div className="sm:max-w-[80%] max-w-[70%] relative h-[700px] mx-auto border-l-2 border-black  bg-green-200">
   <div className="absolute top-10 -left-12 flex-col sm:flex-row flex gap-10">
     <div className='flex gap-5 items-center w-full bg-red-400'>
@@ -32,7 +31,7 @@ const EngModel = () => {
   <div className="h-[90px]  w-[90px] bg-slate-600 rounded-full"></div>
   </div>
 </div>
-</div>
+</div> */
   )
 }
 

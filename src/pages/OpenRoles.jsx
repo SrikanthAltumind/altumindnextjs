@@ -91,7 +91,6 @@ const OpenRoles = () => {
   const fetchFilteredJobs = (url) => {
     axios.get(url)
       .then((response) => {
-        console.log("response from filtered jobs: ", response?.data?.data);
         setJobs(response?.data?.data)
       })
       .catch((error) =>{
@@ -149,7 +148,6 @@ useEffect(() => {
   };
 
   const apiURL = constructURL();
-  console.log("API URL:", apiURL);
 
   fetchFilteredJobs(apiURL)
 }, [selections]);
@@ -279,7 +277,7 @@ useEffect(() => {
             }
           </p>
         </div>
-        <div className="underline text-center text-sm font-medium text-[#E42D38] cursor-pointer group flex gap-2">
+        <a href="/contact" className="underline text-center text-sm font-medium text-[#E42D38] cursor-pointer group flex gap-2">
           <span>Connect with Us </span>
           <span className="flex justify-center items-center">
             <svg
@@ -295,7 +293,7 @@ useEffect(() => {
               />
             </svg>
           </span>
-        </div>
+        </a>
       </div>
     </div>
   );

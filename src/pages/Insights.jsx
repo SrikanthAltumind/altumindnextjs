@@ -70,11 +70,11 @@ const Insights = () => {
       <div className="w-full flex justify-center items-start gap-5 p-3 py-6">
         <div className="w-50% flex justify-center items-center rounded-md">
           <img
-            src="https://blogging.co.uk/wp-content/uploads/2024/07/AI-Prompts-for-Bloggers-1000x640.jpg"
+            src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/4_Compressify_io_6be35e1720.webp"
             alt=""
             height="100%"
             width="100%"
-            className="h-[400px] w-[530px] object-fill rounded-md"
+            className="h-[400px] w-[530px] object-fit rounded-md"
           />
         </div>
         <div className="w-[50%] flex flex-col justify-start items-start gap-6 px-5">

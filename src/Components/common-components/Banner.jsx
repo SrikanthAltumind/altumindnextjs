@@ -53,7 +53,6 @@ const Banner = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log("data from banner: ", res?.data?.data);
         setData(res?.data?.data?.attributes);
         setLoading(false);
       })
@@ -89,8 +88,8 @@ const Banner = () => {
         {data?.description}
       </p>
       {location.pathname === "/services" && (
-        <Link to="/contact-us">
-          <p className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
+        
+          <a href="/contact" className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
             Get Started With Us
             <svg
               className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
@@ -109,8 +108,8 @@ const Banner = () => {
                 d="M19 12H5m14 0-4 4m4-4-4-4"
               />
             </svg>
-          </p>
-        </Link>
+          </a>
+        
       )}
     </div>
   );

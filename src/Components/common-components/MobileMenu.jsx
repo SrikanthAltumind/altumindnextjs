@@ -28,13 +28,16 @@ const MobileMenu = ({showMobileMenu}) => {
       <div>
         <ul className="space-y-5">
           {Navbardata?.map((item) => (
-            <li key={item.id} className="flex items-center justify-between">
-              <Link to={item.url} className="p-1">
+            <li key={item.menu} className="flex items-center justify-between">
+              <Link to={item.path} className="p-1">
                 {" "}
-                {item.name}{" "}
+                {item.menu}{" "}
               </Link>
               {item?.children?.length > 0 && (
-                <button className="p-1" onClick={() => setActiveMenu(item)}>
+                <button
+                  className="p-1 flex justify-between items-center"
+                  onClick={() => setActiveMenu(item)}
+                >
                   <svg
                     className="w-6 h-6 ml-auto"
                     aria-hidden="true"
@@ -100,38 +103,38 @@ const MobileMenu = ({showMobileMenu}) => {
               />
             </svg>
           </button>
-          <Link to={activeMenu?.url} className="font-semibold text-secondary">
-            {activeMenu?.name}
+          <Link to={activeMenu?.path} className="font-semibold text-secondary">
+            {activeMenu?.menu}
           </Link>
         </div>
         <ul className="py-5 space-y-5 h-full overflow-y-auto">
           {activeMenu?.children?.map((child) => (
-            <li key={child.id}>
+            <li key={child.innerMenu}>
               <div className="flex justify-between items-center gap-1">
                 <Link
-                  to={child?.url}
+                  to={child?.path}
                   className={`${
-                    subMenu?.id === child.id
+                    subMenu?.innerMenu === child.innerMenu
                       ? "text-primary font-semibold"
                       : "rotate-0 text-black hover:text-secondary font-medium"
                   } py-1`}
                 >
-                  {child.name}
+                  {child?.innerMenu}
                 </Link>
                 {child?.children?.length > 0 && (
                   <button
                     onClick={() =>
                       setSubMenu((prevMenu) =>
-                        prevMenu?.id === child?.id ? null : child
+                        prevMenu?.innerMenu === child?.innerMenu ? null : child
                       )
                     }
                     className="flex items-center p-1"
                   >
                     <svg
                       className={`${
-                        subMenu?.id === child.id
+                        subMenu?.innerMenu === child.innerMenu
                           ? "rotate-180 text-primary"
-                          : "rotate-0 text-black"
+                          : "rotate-270 text-black"
                       } duration-300 w-5 h-5 dark:text-white`}
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -151,14 +154,14 @@ const MobileMenu = ({showMobileMenu}) => {
                   </button>
                 )}
               </div>
-              {subMenu?.id === child.id && (
+              {subMenu?.innerMenu === child.innerMenu && (
                 <ul className={`ml-5`}>
                   {subMenu?.children?.map((lastChild) => (
                     <li
-                      key={lastChild.id}
+                      key={lastChild.name}
                       className="py-2.5 hover:text-secondary "
                     >
-                      <Link to={lastChild?.url}>{lastChild.name}</Link>
+                      <Link to={lastChild?.path}>{lastChild.name}</Link>
                     </li>
                   ))}
                 </ul>

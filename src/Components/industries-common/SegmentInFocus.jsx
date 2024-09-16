@@ -27,7 +27,6 @@ const SegmentInFocus = () => {
         const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`
         axios.get(url)
         .then((res) => {
-            console.log(res);
             setData(res?.data?.data)
         })
         .catch((err) => {
