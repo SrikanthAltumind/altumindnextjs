@@ -10,16 +10,19 @@ import WhyAltumind from "../Components/services-common/WhyAltumind"
 import GetStarted from '../Components/services-common/GetStarted'
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import IndustriesMenu from '../Components/industries-common/IndustriesMenu'
+import EngModel from '../Components/services-common/FlowChart'
 
 const servicesMenu = [
   {id:'section1', tabId:'tab1', name:'Overview'},
   {id:'section2', tabId:'tab2', name:'Services'},
   {id:'section3', tabId:'tab3', name:'Tech Stack'},
   {id:'section4', tabId:'tab4', name:'Why Us'},
-  {id:'section5', tabId:'tab5', name:'Testimonials'},
-  {id:'section6', tabId:'tab6', name:'Benefits'},
-  {id:'section7', tabId:'tab7', name:'Success'},
-  {id:'section8', tabId:'tab8', name:'Insights'},
+  {id:'section5', tabId:'tab5', name:'Our Model'},
+  {id:'section6', tabId:'tab6', name:'Testimonials'},
+  {id:'section7', tabId:'tab7', name:'Benefits'},
+  {id:'section8', tabId:'tab8', name:'Success'},
+  {id:'section9', tabId:'tab9', name:'Insights'},
+  
 ]
 
 const ExperienceDesign = () => {
@@ -41,6 +44,9 @@ const ExperienceDesign = () => {
           </div>
         </section>
         <section id="section5">
+            <EngModel/>
+          </section>
+        <section id="section6">
           <div>
             <div className="text-center space-y-2 mb-20 font-raleway">
               <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Client Testimonials</p>
@@ -49,23 +55,24 @@ const ExperienceDesign = () => {
             <Testimonials/>
           </div>
         </section>
-        <section id="section6">
+        <section id="section7">
         <div>
           <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Client Testimonials</p>
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Benefits</p>
             <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">The Altumind Impact In Their Words</p>
           </div>
           <SettingUpForSuccess/>
         </div>
         </section>
         <GetStarted/>
-        <section id="section7"><SuccessStories/></section>
-        <section id="section8">
+        <section id="section8"><SuccessStories/></section>
+        <section id="section9">
         <div className="text-center space-y-2 mb-20 font-raleway">
               <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Insights</p>
               <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">Dive into Our Latest Perspectives</p>
             </div>
           <InsightsBlogs/></section>
+          
         </div>
         <SubscribeForm/>
     </div>

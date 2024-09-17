@@ -14,8 +14,8 @@ const EngModel = () => {
     // </div>
 
 <div  className="w-[90%] py-5 bg-slate-300 mx-auto">
-<div className="sm:max-w-[80%] max-w-[70%] relative h-[700px] mx-auto border-l-2 border-black  bg-green-200">
-  <div className="absolute top-10 -left-12 flex-col sm:flex-row flex gap-10">
+<div className="sm:max-w-[80%] w-full relative h-[700px] sm:mx-auto border-l-2 border-black  bg-green-200">
+  <div className="absolute top-10 left-0 flex-col sm:flex-row flex gap-10">
     <div className='flex gap-5 items-center w-full bg-red-400'>
     <div className=" h-[90px] border-4 shadow-custom-shadow hover:bg-[#02194A] hover:scale-125 border-white w-[90px] flex  justify-center items-center bg-[#C2DDE6] rounded-full">
     <img src={FixedBid} alt="Fixed Bid" className='w-[40px]' />

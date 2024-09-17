@@ -10,6 +10,7 @@ import SettingUpForSuccess from "../Components/services-common/SettingUpForSucce
 import OurDesignServices from "../Components/experience-design-components/OurDesignServices"
 import OurPhilosophy from "../Components/services-common/OurPhilosophy"
 import OurImpactByNumbers from '../Components/services-common/OurImpactByNumbers'
+import EngModel from "../Components/services-common/FlowChart"
 
 
 const Services = () => {
@@ -17,8 +18,8 @@ const Services = () => {
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner/>
         <Overview/>
-    
         <OurImpactByNumbers/>
+        <EngModel/>
         <SuccessStories/>
         <section>
           <div className="text-center space-y-2 mb-20 font-raleway">
