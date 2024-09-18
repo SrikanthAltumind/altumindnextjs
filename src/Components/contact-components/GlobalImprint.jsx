@@ -32,8 +32,8 @@ const GlobalImprint = () => {
               ))}
             </div>
         </div>
-    </div>
-  )
-}
+      </div>
+  );
+};
 
-export default GlobalImprint
+export default GlobalImprint;

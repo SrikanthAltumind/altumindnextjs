@@ -48,7 +48,6 @@ const EngagementModel = () => {
       )
       .then((res) => {
         setData(res?.data?.data?.attributes);
-        console.log(res?.data?.data);
         setLoading(false);
       })
       .catch((err) => {

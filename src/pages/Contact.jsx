@@ -17,7 +17,7 @@ const Contact = () => {
       {/* <ThankyouNote/> */}
       {/* <SubscribeForm/> */}
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

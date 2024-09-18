@@ -97,7 +97,7 @@ const SubscribeForm = () => {
 
   return (
     <div className="w-[90%] text-tertiary dark:bg-darkTheme dark:text-white  mx-auto flex flex-col md:flex-row gap-12 md:gap-7 lg:gap-24">
-      <div className="lg:basis-[35%] md:basis-[50%] font-raleway max-md:text-center">
+      <div className="lg:basis-[35%] md:basis-[50%] font-raleway max-md:text-center ">
        
         <h1 className="text-5xl md:text-5xl lg:text-7xl py-2 mt-5 font-bold custom-gradient-text">
        {content?.title}

@@ -9,9 +9,9 @@ const WatermarkLogo = () => {
   const {theme} = useContext(ThemeContext)
   return (
     <div className='dark:bg-[#0d1015]'>
-      <div className='w-[95%] flex sm:flex-row flex-col-reverse sm:justify-between gap-y-5 sm:items-end border-b-[0.6px] border-[#B8B5B5] pl-3 mx-auto'>
-      <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="w-[180px] pb-3 cursor-pointer" />
-        <img src={theme === 'dark' ? darkwatermark : watermark} alt='altumind' className='w-[300px]'/>
+      <div className='w-[95%] flex justify-between items-end border-b-[0.6px] border-[#B8B5B5] pl-3 mx-auto'>
+      <img src={theme === 'dark' ? AltumindDark : logo} alt="altumind" className="md:w-[180px] w-[100px] pb-3 cursor-pointer" />
+        <img src={watermark} alt='altumind' className='md:w-[300px] w-[220px]'/>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const WeAreSeeking = () => {
   return (
-    <div className='sm:w-[90%] mx-auto bg-gradient-to-b from-[#f3f9ff] to-transparent  dark:from-[#25282c] min-h-[280px] xl:min-h-[300px] p-8 flex justify-center items-center'>
+    <div className='w-full mx-auto bg-gradient-to-b from-[#f3f9ff] to-transparent  dark:from-[#25282c] min-h-[280px] xl:min-h-[300px] p-8 flex justify-center items-center'>
     <div className='max-w-[760px] text-center font-raleway'>
       <p className='font-extrabold text-primary dark:text-white text-3xl lg:text-4xl'>
         &ldquo;We&apos;re seeking those who dare to turn

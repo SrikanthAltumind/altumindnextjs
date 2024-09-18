@@ -13,7 +13,6 @@
       @apply  text-2xl lg:text-3xl xl:text-4xl w-fit mx-auto font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue;
     }
 }
-
 .move-inside{
   bottom: 0!important;
 }
@@ -28,4 +27,8 @@
 
 .no-scrollbar::-webkit-scrollbar{
   display: none;
+}
+
+.markdown>* {
+  all: revert;
 }

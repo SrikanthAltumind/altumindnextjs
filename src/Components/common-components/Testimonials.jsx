@@ -69,10 +69,10 @@ const Testimonials = () => {
       >
         {data?.map((item, index) => {
           return (
-            <>
+            <div key={item?.attributes?.name + index}>
               <div
                 className=" dark:text-white mx-auto flex justify-center md:flex-row flex-col gap-x-16 gap-y-10"
-                key={index}
+                key={item?.attributes?.name + index}
               >
                 <div className=" relative rounded-full mx-auto h-[250px] md:min-w-[250px] w-[250px]">
                   <img
@@ -102,12 +102,16 @@ const Testimonials = () => {
                     {item?.attributes?.description}
                   </p>
                   <div className="md:text-left text-center">
-                    <p className="dark:font-medium font-semibold">-{item?.attributes?.name}</p>
-                    <p className="text-sm dark:font-light">{item?.attributes?.designation}</p>
+                    <p className="dark:font-medium font-semibold">
+                      -{item?.attributes?.name}
+                    </p>
+                    <p className="text-sm dark:font-light">
+                      {item?.attributes?.designation}
+                    </p>
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </Slider>

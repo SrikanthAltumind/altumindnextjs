@@ -10,7 +10,8 @@ import WhyAltumind from "../Components/services-common/WhyAltumind"
 import GetStarted from '../Components/services-common/GetStarted'
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import IndustriesMenu from '../Components/industries-common/IndustriesMenu'
-import EngModel from '../Components/services-common/FlowChart'
+import EngModel from '../Components/services-common/EngModel'
+
 
 const servicesMenu = [
   {id:'section1', tabId:'tab1', name:'Overview'},
@@ -28,8 +29,8 @@ const servicesMenu = [
 const ExperienceDesign = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
-        <Banner/>
-        <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
+      <Banner/>
+      <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
         <IndustriesMenu sectionsMenu={servicesMenu}/>
         <section id="section1"><Overview/></section>
         <section id="section2"><OurDesignServices/></section>
@@ -43,9 +44,7 @@ const ExperienceDesign = () => {
             <WhyAltumind/>
           </div>
         </section>
-        <section id="section5">
-            <EngModel/>
-          </section>
+        <section id="section5"><EngModel/></section>
         <section id="section6">
           <div>
             <div className="text-center space-y-2 mb-20 font-raleway">
@@ -58,7 +57,7 @@ const ExperienceDesign = () => {
         <section id="section7">
         <div>
           <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Benefits</p>
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">Client Testimonials</p>
             <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">The Altumind Impact In Their Words</p>
           </div>
           <SettingUpForSuccess/>
@@ -72,11 +71,10 @@ const ExperienceDesign = () => {
               <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">Dive into Our Latest Perspectives</p>
             </div>
           <InsightsBlogs/></section>
-          
         </div>
-        <SubscribeForm/>
+      <SubscribeForm />
     </div>
-  )
+  );
 }
 
 export default ExperienceDesign

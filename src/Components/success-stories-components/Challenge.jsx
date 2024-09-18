@@ -51,7 +51,6 @@ const Challenge = () => {
           .get(url)
           .then((res) => {
             setContent(res?.data?.data);
-            console.log(res?.data?.data, 'test')
             setLoading(false);
           })
           .catch((err) => {

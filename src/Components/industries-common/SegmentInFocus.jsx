@@ -8,23 +8,25 @@ const SegmentInFocus = () => {
     const location = useLocation()
     let apiUrl;
 
-    if(location.pathname === '/industries/bfsi-fintech')
-        apiUrl = 'api/industry-bfsi-segment-contents?populate=*'
-    else if(location.pathname === '/industries/healthcare')
-        apiUrl = 'api/industry-hc-segment-contents?populate=*'
-    else if(location.pathname === '/industries/edtech')
-        apiUrl = 'api/industry-ed-segement-contents?populate=*'
-    else if(location.pathname=== '/industries/internet-saas')
-        apiUrl = 'api/industry-internet-segment-contents?populate=*'
-     else if(location.pathname=== '/industries/digital-commerce')
-        apiUrl = 'api/industry-internet-segment-contents?populate=*'
+    if (location.pathname === "/industries/bfsi-fintech")
+      apiUrl = "api/industry-bfsi-segment-contents?populate=*";
+    else if (location.pathname === "/industries/healthcare")
+      apiUrl = "api/industry-hc-segment-contents?populate=*";
+    else if (location.pathname === "/industries/edtech")
+      apiUrl = "api/industry-ed-segement-contents?populate=*";
+    else if (location.pathname === "/industries/internet-saas")
+      apiUrl = "api/industry-internet-segment-contents?populate=*";
+    else if (location.pathname === "/industries/green-sustainability")
+      apiUrl = "api/industry-gs-segments?populate=*";
+    else if (location.pathname === "/industries/digital-commerce")
+      apiUrl = "api/industry-digital-commerce-segments?populate=*";
+       
     
 
     const fetchData = () => {
         const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`
         axios.get(url)
         .then((res) => {
-            console.log(res);
             setData(res?.data?.data)
         })
         .catch((err) => {
@@ -33,8 +35,8 @@ const SegmentInFocus = () => {
     }
 
     useEffect(() => {
-        fetchData();
-    },[])
+      fetchData();
+    }, [location.pathname]);
 
   return (
     <div className="w-[90%] mx-auto font-raleway">
