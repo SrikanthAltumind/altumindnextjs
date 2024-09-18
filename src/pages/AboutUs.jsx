@@ -1,4 +1,4 @@
-import Timeline from "../Components/about-us-components/Timeline";
+import Timeline from "../Components/about-components/Timeline";
 import Banner from "../Components/common-components/Banner";
 import SolutionPartners from "../Components/common-components/SolutionPartners";
 import OurImpactByNumbers from "../Components/services-common/OurImpactByNumbers";
@@ -15,7 +15,7 @@ const AboutUs = () => {
       <Overview />
       <OurImpactByNumbers />
       <section className="w-full flex flex-col gap-4 font-raleway">
-        <div className="w-full flex flex-col justify-center items-center gap-4 p-3">
+        {/* <div className="w-full flex flex-col justify-center items-center gap-4 p-3">
           <p className="font-medium">The Altumind Story</p>
           <p className="text-3xl font-bold">
             <span className="dark:text-gray-100">A Journey of </span>
@@ -31,7 +31,7 @@ const AboutUs = () => {
             attempts, resilience in the face of challenges, and an unwavering
             commitment to progress.`}
           </p>
-        </div>
+        </div> */}
         <Timeline />
       </section>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
@@ -91,7 +91,7 @@ const AboutUs = () => {
           <img src={data?.image?.data?.attributes?.url} alt={data?.title} />
         </div> */}
             <p className="font-montserrat font-medium dark:font-normal max-lg:text-center text-sm xl:text-base leading-6">
-              {`Sustainability is at the heart of everything we do. We empower businesses on their journey to a greener future by providing innovative digital solutions that optimize resource use, enhance transparency, and promote eco-conscious practices. Our own commitment to sustainability is unwavering, ensuring we're not just a provider of innovative digital solutions; we're a partner in your journey toward a greener future, fostering a collective commitment to a better world. `}
+              {`Sustainability is at the heart of everything we do. We empower businesses on their journey to a greener future by providing innovative digital solutions that optimize resource use, enhance transparency, and promote eco-conscious practices. Our own commitment to sustainability is unwavering, ensuring we're not just a provider of innovative digital solutions; we're a partner in your journey toward a greener future, fostering a collective commitment to a better world.`}
             </p>
             <a href="/about/about-altumind/community-engagement" className="cursor-pointer text-[#DD5143] underline font-medium group flex gap-1 items-center">
               <span>Learn more on our community page</span>

@@ -1,12 +1,13 @@
 import Banner from "../Components/common-components/Banner"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import Spectrum from "../Components/common-components/Spectrum"
-import SpectrumDesc from "../Components/common-components/SpectrumDesc"
+// import SpectrumDesc from "../Components/common-components/SpectrumDesc"
 import SubscribeForm from "../Components/common-components/SubscribeForm"
 import Testimonials from "../Components/common-components/Testimonials"
 import SuccessStories from "../Components/home-components/SuccessStories"
 import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
-import Menu from "../Components/industries-common/Menu"
+import EngModel from "../Components/services-common/EngModel"
+// import Menu from "../Components/industries-common/Menu"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
@@ -17,26 +18,24 @@ import { gradientStyle } from "../ReactFunctions"
 
 const TechnologyAndEngineering = () => {
    const servicesMenu = [
-     { id: "section-1", tabId: "tab1", name: "OverView" },
-     { id: "section-2", tabId: "tab2", name: "Services" },
-     { id: "section-3", tabId: "tab3", name: "Why Us" },
-     { id: "section-4", tabId: "tab4", name: "Testimonials" },
-     { id: "section-5", tabId: "tab5", name: "Industries" },
-     { id: "section-6", tabId: "tab6", name: "Tech Stack" },
-     { id: "section-8", tabId: "tab8", name: "Success" },
-     { id: "section-9", tabId: "tab9", name: "Insights" },
+     { id: "section1", tabId: "tab1", name: "Overview" },
+     { id: "section2", tabId: "tab2", name: "Services" },
+     { id: "section3", tabId: "tab3", name: "Why Us" },
+     { id: "section4", tabId: "tab4", name: "Our Model" },
+     { id: "section5", tabId: "tab5", name: "Testimonial" },
+     { id: "section6", tabId: "tab6", name: "Industries" },
+     { id: "section7", tabId: "tab7", name: "Tech Stack" },
+     { id: "section8", tabId: "tab8", name: "Success" },
+     { id: "section9", tabId: "tab9", name: "Insights" },
    ];
   
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-12 lg:gap-16">
-      <div className="w-full">
         <Banner />
-        <Menu sections={servicesMenu} />
-      </div>
-      <section id="section-1">
-        <Overview />
-      </section>
-      <section id="section-2">
+        <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
+        <IndustriesMenu sectionsMenu={servicesMenu} />
+        <section id="section1"><Overview /></section>
+        <section id="section2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
           <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
             <p className="font-semibold">Our Engineering Services</p>
@@ -55,7 +54,7 @@ const TechnologyAndEngineering = () => {
         </div>
       </section>
       <section
-        id="section-3"
+        id="section3"
         className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10"
       >
         <div className="text-center font-raleway space-y-3 mb-10">
@@ -68,7 +67,8 @@ const TechnologyAndEngineering = () => {
         </div>
         <WhyAltumind />
       </section>
-      <section id="section-4">
+      <section id="section4"><EngModel/></section>
+      <section id="section5">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Client Testimonials
@@ -79,7 +79,7 @@ const TechnologyAndEngineering = () => {
         </div>
         <Testimonials />
       </section>
-      <section id="section-5">
+      <section id="section6">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Industries We Serve
@@ -91,11 +91,11 @@ const TechnologyAndEngineering = () => {
         </div>
         <SettingUpForSuccess />
       </section>
-      <section id="section-6">
+      <section id="section7">
         <TechStack />
       </section>
       <GetStarted />
-      <section id="section-8">
+      <section id="section8">
         <SuccessStories />
       </section>
       <section id="section-9">
@@ -109,7 +109,8 @@ const TechnologyAndEngineering = () => {
         </div>
         <InsightsBlogs />
       </section>
-      <SubscribeForm />
+        </div>
+        <SubscribeForm />
     </div>
   );
 }

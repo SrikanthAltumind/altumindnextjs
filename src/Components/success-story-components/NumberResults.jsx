@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import Counter from "../common-components/Counter";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import axios from "axios";

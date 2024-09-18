@@ -1,8 +1,8 @@
-import React from 'react'
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+
+// import {
+//   VerticalTimeline,
+//   VerticalTimelineElement,
+// } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
 const Timeline = () => {
@@ -15,7 +15,7 @@ const Timeline = () => {
             {`From Scketch to Altumind`}
           </h3>
           <p className="mb-4 max-w-[400px] font-normal text-gray-600 dark:text-gray-400 text-sm">
-            {`Founded in 2016 as 'Scketch,' our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind. `}
+            {`Founded in 2016 as 'Scketch,' our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind.`}
           </p>
         </li>
         <li className="mb-10 ms-4  flex flex-col gap-4">
@@ -42,7 +42,7 @@ const Timeline = () => {
             {`The Road Ahead: Charting New Frontiers`}
           </h3>
           <p className="mb-4 max-w-[400px] font-normal text-gray-600 dark:text-gray-400 text-sm">
-            {`Our bold journey propels us towards a future brimming with opportunities. At Altumind, we firmly believe that the true power of technology lies in its seamless integration with human understanding. It's this synergy that will ignite groundbreaking innovation, craft meaningful experiences, and empower us to make a lasting, positive impact on the world. `}
+            {`Our bold journey propels us towards a future brimming with opportunities. At Altumind, we firmly believe that the true power of technology lies in its seamless integration with human understanding. It's this synergy that will ignite groundbreaking innovation, craft meaningful experiences, and empower us to make a lasting, positive impact on the world.`}
           </p>
         </li>
       </ol>
