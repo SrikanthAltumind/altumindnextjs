@@ -14,10 +14,33 @@ import LogoMarquee from "../Components/common-components/LogoMarquee"
 import { gradientStyle } from "../ReactFunctions"
 import Spectrum from "../Components/common-components/Spectrum"
 import EngModel from "../Components/common-components/EngModel"
+import ExploreFurther from "../Components/about-components/ExploreFurther"
 // import UpdatedEngagementModel from "../Components/services-common/UpdatedEngagementModel"
 
 
 const Services = () => {
+  const exploreFurtherData = [
+    {
+      title: "Dive into our latest insights and industry analyses.",
+      hexvalue: "#02194A",
+      cta: "/insights",
+      ctaText: "Explore Our Insights",
+    },
+    {
+      title:
+        "Curious about our industry expertise? Let’s dive in and discover how we excel across various sectors!",
+      hexvalue: "#DD5143",
+      cta: "/industries",
+      ctaText: "Explore Our Industries Expertise",
+    },
+    {
+      title:
+        "Discover the journey behind Altumind. From our humble beginnings to our current position.",
+      hexvalue: "#5489FC",
+      cta: "/about",
+      ctaText: "Our Story",
+    },
+  ];
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-16">
       <Banner />
@@ -88,7 +111,44 @@ const Services = () => {
             Explore Further
           </p>
         </div>
-        <OurDesignServices />
+        <div className="mx-auto w-[90%] max-w-[950px] dark:text-white space-y-10 font-raleway">
+          <div className="flex gap-10 flex-wrap  justify-center text-white">
+            {exploreFurtherData?.map((item) => (
+              <div
+                key={item.id}
+                className="rounded-lg p-5 w-[270px] h-[310px] flex justify-between flex-col"
+                style={{ backgroundColor: item?.hexvalue }}
+              >
+                <p className="font-semibold text-lg">
+                  {item?.title}
+                </p>
+                <a href={item?.cta} to={item?.attributes?.url} className="w-fit cursor-pointer underline">
+                  <p className="text-[13px] flex gap-2 items-center w-fit group font-semibold">
+                    {item?.ctaText}
+                    <svg
+                      className="w-5 h-5 group-hover:translate-x-3 transition-all duration-300  dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 12H5m14 0-4 4m4-4-4-4"
+                      />
+                    </svg>
+                  </p>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* <OurDesignServices /> */}
       </section>
       <GetStarted />
       <SubscribeForm />

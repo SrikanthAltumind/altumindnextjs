@@ -9,17 +9,14 @@ const aiAndAutomationData = {
       id: 1,
       attributes: {
         title: "AI & Chatbot Solutions",
-        description: `Experience the future of healthcare with our comprehensive digital
-              transformation solutions. Utilizing Generative AI, cloud
-              technologies, and Advanced app development, we provide intelligent
-              automation and tailored patient experiences. Boost productivity`,
+        description: `Harness the power of AI and chatbots to transform your business. Our intelligent solutions analyze user behavior, interpret content, and generate predictions, giving you a competitive edge. By leveraging data-driven insights, we help you boost efficiency, enhance customer satisfaction, and accelerate growth across all aspects of your operations. `,
         pointsList: [
-          { id: 1, content: "Content Marketing" },
-          { id: 2, content: "Social Media Marketing" },
-          { id: 3, content: "Email Marketing" },
-          { id: 4, content: "Ecommerce Marketing" },
-          { id: 5, content: "Performance Marketing" },
-          { id: 6, content: "Marketing Automation" },
+          { id: 1, content: "Voice assistants and skillsets" },
+          { id: 2, content: "Customer service automation" },
+          { id: 3, content: "Enterprise operations optimization" },
+          { id: 4, content: "Transactional support" },
+          { id: 5, content: "Data-Driven CX Analytics" },
+          { id: 6, content: "Lead generation and sales assistance" },
         ],
         CTA: "Explore AI Solutions",
         url: "/contact",

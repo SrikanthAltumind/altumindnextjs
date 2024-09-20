@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { convertToUrlFormat } from '../../ReactFunctions'
 
 const InsightsBlogs = () => {
     const [data, setData] = useState()
@@ -54,7 +55,7 @@ const InsightsBlogs = () => {
                 <p className="line-clamp-2 px-2 md:text-lg lg:text-xl">
                   {card?.attributes?.title}
                 </p>
-                <a href={`/blog/${card?.id}`} className="text-sm group px-2 flex items-center cursor-pointer gap-1 max-w-max">
+                <a href={`/blog/${card?.id}/${convertToUrlFormat(card?.attributes?.title)}`} className="text-sm group px-2 flex items-center cursor-pointer gap-1 max-w-max">
                   <span className="">Read Article</span>
                   <svg
                     className="w-5 h-5 group-hover:translate-x-3 transition-all duration-200 dark:text-white text-gray-800"

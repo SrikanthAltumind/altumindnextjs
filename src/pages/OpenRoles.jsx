@@ -29,7 +29,7 @@ const OpenRoles = () => {
     "Project Management",
     "Design",
     "Sales & Operations",
-    "Developement",
+    "Development",
   ];
 
   const job_type = [

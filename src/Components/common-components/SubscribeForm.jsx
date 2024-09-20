@@ -2,6 +2,7 @@
 // import { useFormik } from "formik";
 // import * as yup from "yup";
 // import {useState } from "react";
+import { gradientStyle } from "../../ReactFunctions";
 import ContactForm from "../contact-components/ContactForm";
 
 const data = {
@@ -20,7 +21,9 @@ const data = {
 
 
 const SubscribeForm = () => {
-  const IsCareerform = location.pathname === '/career'
+  const IsCareerform =
+    location.pathname === "/career" ||
+    location.pathname === "/career/life-at-altumind";
   const content = IsCareerform ? data?.career : data?.partnership
   // const [showPopup, setShowPopup] = useState(false);
   // const initialValues = {
@@ -97,14 +100,15 @@ const SubscribeForm = () => {
 
   return (
     <div className="w-[90%] text-tertiary dark:bg-darkTheme dark:text-white  mx-auto flex flex-col md:flex-row gap-12 md:gap-7 lg:gap-24">
-      <div className="lg:basis-[35%] md:basis-[50%] font-raleway max-md:text-center ">
-       
-        <h1 className="text-5xl md:text-5xl lg:text-7xl py-2 mt-5 font-bold custom-gradient-text">
-       {content?.title}
-        </h1>
-        <p className="font-semibold md:text-lg uppercase py-5 dark:text-white">{content?.caption}</p>
+      <div className="lg:w-[35%] md:w-[50%] w-full font-raleway flex flex-col items-start justify-start">
+        <p className="text-5xl lg:text-7xl py-2 font-bold " style={gradientStyle}>
+          {content?.title}
+        </p>
+        <p className="font-semibold md:text-lg uppercase py-5 dark:text-white">
+          {content?.caption}
+        </p>
         <p className="font-montserrat text-sm font-medium">
-        {content?.description}
+          {content?.description}
         </p>
       </div>
       {/* <form
@@ -234,7 +238,7 @@ const SubscribeForm = () => {
       </form> */}
       {/* {showPopup && <Popup setShowPopup={setShowPopup} />} */}
       <div className="lg:basis-[65%] md:basis-[50%] space-y-14 font-montserrat font-medium ">
-        <ContactForm selectedForm={IsCareerform ? 'career': ''}/>
+        <ContactForm selectedForm={IsCareerform ? "career" : ""} />
       </div>
     </div>
   );

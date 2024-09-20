@@ -38,6 +38,7 @@ import Terms from "./pages/Terms";
 import SuccessStory from "./pages/SuccessStory";
 import Blogs from "./pages/Blogs";
 import IndividualBlogPage from "./pages/IndividualBlogPage";
+import JobDetails from "./pages/JobDetails";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -264,7 +265,7 @@ const router = createBrowserRouter([
         element: <Terms />,
       },
       {
-        path: "/blog/:id",
+        path: "/blog/:id/:blogName",
         element: <IndividualBlogPage />,
       },
       {
@@ -278,6 +279,10 @@ const router = createBrowserRouter([
       {
         path: "/portfolio/:storyId",
         element: <SuccessStory />,
+      },
+      {
+        path: "/jobs/:jobId/:jobName",
+        element: <JobDetails />,
       },
     ],
   },
