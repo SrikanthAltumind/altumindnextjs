@@ -12,8 +12,8 @@ const Timeline = () => {
             <div className="p-5  relative w-full sm:w-[50%]  left-0 sm:left-[50%]">
 <img className='w-10 h-10 object-contain border border-secondary absolute -left-[19px] p-[5px] bg-white rounded-full' src={AltumindLogo} alt='logo'/>
                 <div className="text-[13px] space-y-1 ml-2 relative">
-                    <p className='font-semibold'>From Sketch to Altumind</p>
-                    <p>Founded in 2016 as &apos;Sketch,&apos; our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind.</p>
+                    <p className='font-semibold'>From Scketch to Altumind</p>
+                    <p>Founded in 2016 as &apos;Scketch,&apos; our initial focus was on Customer Experience (CX) and Product Engineering. Fueled by visionary leadership, a diverse client base, and expanding skill sets, we organically evolved into a multi-faceted organization. The 2020 rebranding to Altumind marked a strategic transformation, reflecting our expanded capabilities and ambitious vision. The need for a brand that embodied our evolution into a digital powerhouse gave birth to Altumind.</p>
                 </div>
             </div>
 

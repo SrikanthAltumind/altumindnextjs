@@ -15,11 +15,11 @@ import SuccessStories from '../Components/home-components/SuccessStories'
 
 const Home = () => {
   return (
-    <div className='dark:bg-darkTheme lg:space-y-24 space-y-24 w-full'>
+    <div className="dark:bg-darkTheme lg:space-y-24 space-y-24 w-full">
       {/* <HomeBannerUpdated /> */}
-      <HomeBanner />
-    <DigitalJourney />
-    <SuccessStories />
+      <HomeBannerUpdated />
+      <DigitalJourney />
+      <SuccessStories />
       <CorePillars />
       <GlobalImprint />
       <div className=" font-raleway font-semibold text-center text-primary dark:text-white">
@@ -36,13 +36,12 @@ const Home = () => {
         <Testimonials />
       </div>
       <LogoMarquee />
-    {/* <Testimonials/> */}
-    <ResourceCenter/>
-    <LifeandCarrer/>
-    <SubscribeForm/>
+      {/* <Testimonials/> */}
+      <ResourceCenter />
+      <LifeandCarrer />
+      <SubscribeForm />
     </div>
- 
-  )
+  );
 }
 
 export default Home

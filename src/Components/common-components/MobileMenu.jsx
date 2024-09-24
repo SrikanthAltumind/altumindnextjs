@@ -64,12 +64,15 @@ const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
           ))}
         </ul>
         <div className="text-center my-10">
-          <p
+          <button
             className="bg-secondary rounded-md py-2 px-20 text-white font-medium font-raleway"
-            onClick={() => navigate("/contact")}
+            onClick={() => {
+              setShowMobileMenu(false);
+              navigate("/contact")
+            }}
           >
             Let&apos;s Talk
-          </p>
+          </button>
         </div>
       </div>
       {/* }   */}

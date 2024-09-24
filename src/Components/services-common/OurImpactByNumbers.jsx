@@ -5,6 +5,7 @@ import globeIcon from '../../assets/globe.png'
 import userIcon from '../../assets/user-icon.png'
 import bulbIcon from '../../assets/bulb.png'
 import starIcon from '../../assets/star.png'
+import client from '../../assets/client.png'
 import { useLocation } from 'react-router-dom'
 
   const servicesImpactData = [
@@ -29,7 +30,7 @@ const aboutUsImpactData = [
     title: "8 Years of Proven Expertise",
     description: "Delivering results and exceeding expectations since 2016.",
     value: 8,
-    suffix: "+",
+    suffix: "",
     countSpeed: 200,
     imagePath: businessYears,
   },
@@ -48,7 +49,7 @@ const aboutUsImpactData = [
     title: "Domains of Expertise",
     description:
       "Providing comprehensive solutions tailored to your unique needs. ",
-    value: 20,
+    value: 12,
     suffix: "+",
     countSpeed: 70,
     imagePath: starIcon,
@@ -61,7 +62,7 @@ const aboutUsImpactData = [
     value: 9,
     suffix: "%",
     countSpeed: 200,
-    imagePath: userIcon,
+    imagePath: client,
   },
   {
     id: "countries",

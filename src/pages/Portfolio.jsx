@@ -3,6 +3,7 @@ import { gradientStyle } from "../ReactFunctions";
 import axios from "axios";
 import LogoMarquee from "../Components/common-components/LogoMarquee";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
+import SubscribeForm from "../Components/common-components/SubscribeForm";
 
 const Portfolio = () => {
   const [data, setData] = useState([])
@@ -280,6 +281,7 @@ const Portfolio = () => {
       <div className="w-full mt-16">
         <LogoMarquee />
       </div>
+      <SubscribeForm />
     </div>
   );
 };

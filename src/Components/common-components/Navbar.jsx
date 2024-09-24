@@ -300,32 +300,32 @@ export const Navbardata = [
   {
     menu: "Insights",
     path: "/insights",
-    children: [
-      {
-        innerMenu: "Blogs",
-        path: "/insights/blogs",
-      },
-      // {
-      //   innerMenu: "Expert Articles",
-      //   path: "/insights/expert-articles",
-      // },
-      // {
-      //   innerMenu: "White Paper",
-      //   path: "/insights/white-paper",
-      // },
-      // {
-      //   innerMenu: "PR & Events",
-      //   path: "/insights/pr-events",
-      // },
-      // {
-      //   innerMenu: "Awards",
-      //   path: "/insights/awards",
-      // },
-      // {
-      //   innerMenu: "Podcasts",
-      //   path: "/insights/podcasts",
-      // },
-    ],
+    // children: [
+    //   {
+    //     innerMenu: "Blogs",
+    //     path: "/insights/blogs",
+    //   },
+    //   {
+    //     innerMenu: "Expert Articles",
+    //     path: "/insights/expert-articles",
+    //   },
+    //   {
+    //     innerMenu: "White Paper",
+    //     path: "/insights/white-paper",
+    //   },
+    //   {
+    //     innerMenu: "PR & Events",
+    //     path: "/insights/pr-events",
+    //   },
+    //   {
+    //     innerMenu: "Awards",
+    //     path: "/insights/awards",
+    //   },
+    //   {
+    //     innerMenu: "Podcasts",
+    //     path: "/insights/podcasts",
+    //   },
+    // ],
   },
   {
     menu: "Career",
@@ -366,7 +366,10 @@ const Navbar = () => {
           src={theme === "dark" ? AltumindDark : logo}
           alt="altumind"
           className="sm:w-[180px] w-[150px] cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            setShowMobileMenu(false)
+            navigate("/")
+          }}
         />
         <div className="items-center gap-5 hidden lg:flex ml-auto h-full">
           {currentItem && (

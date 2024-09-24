@@ -11,3 +11,13 @@ export const customRenderers = {
     <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>{children}</ul>
   ),
 };
+
+
+export const convertToUrlFormat = (str) => {
+  return str
+    .trim()
+    .toLowerCase()
+    .replace(/[\s:]+/g, '-')
+    .replace(/[^a-zA-Z0-9-]/g, '')
+    .toLowerCase()
+};

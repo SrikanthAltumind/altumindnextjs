@@ -3,7 +3,7 @@ import Banner from "../Components/common-components/Banner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
-import { gradientStyle } from "../ReactFunctions";
+import { convertToUrlFormat, gradientStyle } from "../ReactFunctions";
 
 const BlogCard = ({ blog, index }) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const BlogCard = ({ blog, index }) => {
           <p className=" text-gray-400 text-sm">{blog.attributes.tag}</p>
           {index <= 6 ? (
             <a
-              href={`/blog/${blog?.id}`}
+              href={`/blog/${blog?.id}/${convertToUrlFormat(blog?.attributes?.title)}`}
               className="cursor-pointer w-full font-medium text-lg"
             >
               {blog.attributes.title}

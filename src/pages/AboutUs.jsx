@@ -7,6 +7,7 @@ import WhyAltumind from "../Components/services-common/WhyAltumind";
 import { gradientStyle } from "../ReactFunctions";
 import NorthAndVisionary from '../Components/about-components/NorthAndVisionary'
 import ExploreFurther from '../Components/about-components/ExploreFurther'
+import SubscribeForm from "../Components/common-components/SubscribeForm";
 
 const AboutUs = () => {
   return (
@@ -126,6 +127,7 @@ const AboutUs = () => {
       <section className="py-6">
         <ExploreFurther />
       </section>
+      <SubscribeForm />
     </div>
   );
 };
