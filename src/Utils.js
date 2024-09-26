@@ -21,6 +21,7 @@ import ionicLogo from '../src/assets/Techstack logos/Ionic-(Compressify.io).webp
 import joomlaLogo from '../src/assets/Techstack logos/Joomla-(Compressify.io).webp'
 import powerAutomation from '../src/assets/Techstack logos/Power automate-(Compressify.io).webp'
 import uiPathLogo from '../src/assets/Techstack logos/UI Path-(Compressify.io).webp'
+import magento from '../src/assets/Techstack logos/Magento.webp'
 
 export const gainsAtGlance = {
         financeAndBFSI : [
@@ -74,82 +75,83 @@ export const gainsAtGlance = {
 
 
 export const teckStack = [
-    {
-        id: 1,
-        title: "Frontend Development",
-        heading: "Languages and Frameworks",
-        images: [
-            { id: 1, altText: "Angular", url: angularLogo },
-            { id: 2, altText: "React", url: reactJSLogo},
-            { id: 3, altText: "Vue.js", url: vueJSLogo}
-        ]
-    },
-    {
-        id: 2,
-        title: "Backend Development",
-        heading: "Languages and Frameworks",
-        images: [
-            { id: 1, altText: "PHP", url: phpLogo},
-            { id: 2, altText: "Node.js", url: nodeLogo},
-            { id: 3, altText: "Java", url: javaLogo},
-            { id: 4, altText: "Python", url: pythonLogo}
-        ]
-    },
-    {
-        id: 3,
-        title: "Mobile Development",
-        heading: "Platform and Frameworks",
-        images: [
-            { id: 1, altText: "iOS", url: iOSLogo},
-            { id: 2, altText: "Flutter", url: flutterLogo},
-            { id: 3, altText: "Android", url: androidLogo},
-            { id: 4, altText: "React Native", url: reactNativeLogo},
-            { id: 5, altText: "Ionic", url: ionicLogo}
-        ]
-    },
-    {
-        id: 4,
-        title: "Web Development",
-        heading: "Platform and Frameworks",
-        images: [
-            { id: 1, altText: "Headless CMS ", url: headlinesCMSLogo},
-            { id: 2, altText: "Word Press", url: wordpressLogo},
-            { id: 3, altText: "Drupal", url: drupalLogo},
-            { id: 4, altText: "CMS Hub ", url: cmsHubLogo},
-            { id: 5, altText: "Joomla", url: joomlaLogo}
-        ]
-    },
-    {
-        id: 5,
-        title: "Progressive Web App",
-        heading: "(PWA) Development",
-        images: [
-            { id: 1, altText: "Angular", url: angularLogo },
-            { id: 2, altText: "React", url: reactJSLogo},
-            { id: 3, altText: "Vue.js ", url: vueJSLogo}
-        ]
-    },
-    {
-        id: 6,
-        title: "Cloud",
-        heading: "Platforms",
-        images: [
-            { id: 1, altText: "AWS", url: awsLogo},
-            { id: 2, altText: "Google Cloud", url: googleCloudLogo},
-            { id: 3, altText: "Azure", url: azureLogo},
-        ]
-    },
-    {
-        id: 7,
-        title: "Automation",
-        heading: "Technologies",
-        images: [
-            { id: 1, altText: "Power Automation ", url: powerAutomation},
-            { id: 2, altText: "UiPath", url: uiPathLogo},
-            { id: 3, altText: "Automation Anywhere ", url: automationLogo},
-        ]
-    }
-    ]
+  {
+    id: 1,
+    title: "Frontend Development",
+    heading: "Languages and Frameworks",
+    images: [
+      { id: 1, altText: "Angular", url: angularLogo },
+      { id: 2, altText: "React", url: reactJSLogo },
+      { id: 3, altText: "Vue.js", url: vueJSLogo },
+    ],
+  },
+  {
+    id: 2,
+    title: "Backend Development",
+    heading: "Languages and Frameworks",
+    images: [
+      { id: 1, altText: "PHP", url: phpLogo },
+      { id: 2, altText: "Node.js", url: nodeLogo },
+      { id: 3, altText: "Java", url: javaLogo },
+      { id: 4, altText: "Python", url: pythonLogo },
+    ],
+  },
+  {
+    id: 3,
+    title: "Mobile Development",
+    heading: "Platform and Frameworks",
+    images: [
+      { id: 1, altText: "iOS", url: iOSLogo },
+      { id: 2, altText: "Flutter", url: flutterLogo },
+      { id: 3, altText: "Android", url: androidLogo },
+      { id: 4, altText: "React Native", url: reactNativeLogo },
+      { id: 5, altText: "Ionic", url: ionicLogo },
+    ],
+  },
+  {
+    id: 4,
+    title: "Web Development",
+    heading: "Platform and Frameworks",
+    images: [
+      { id: 1, altText: "Headless CMS ", url: headlinesCMSLogo },
+      { id: 2, altText: "Word Press", url: wordpressLogo },
+      { id: 3, altText: "Drupal", url: drupalLogo },
+      { id: 4, altText: "CMS Hub ", url: cmsHubLogo },
+      { id: 5, altText: "Joomla", url: joomlaLogo },
+      { id: 6, altText: "Magento", url: magento },
+    ],
+  },
+  {
+    id: 5,
+    title: "Progressive Web App",
+    heading: "(PWA) Development",
+    images: [
+      { id: 1, altText: "Angular", url: angularLogo },
+      { id: 2, altText: "React", url: reactJSLogo },
+      { id: 3, altText: "Vue.js ", url: vueJSLogo },
+    ],
+  },
+  {
+    id: 6,
+    title: "Cloud",
+    heading: "Platforms",
+    images: [
+      { id: 1, altText: "AWS", url: awsLogo },
+      { id: 2, altText: "Google Cloud", url: googleCloudLogo },
+      { id: 3, altText: "Azure", url: azureLogo },
+    ],
+  },
+  {
+    id: 7,
+    title: "Automation",
+    heading: "Technologies",
+    images: [
+      { id: 1, altText: "Power Automation ", url: powerAutomation },
+      { id: 2, altText: "UiPath", url: uiPathLogo },
+      { id: 3, altText: "Automation Anywhere ", url: automationLogo },
+    ],
+  },
+];
 
 
 export const NavMenuData = [
