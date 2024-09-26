@@ -41,7 +41,7 @@ const FAQ = () => {
     }
 
   return (
-    <div className="md:w-[80%] w-full flex md:flex-row flex-col md:p-8 p-3 gap-4 md:gap-0 font-raleway">
+    <div className="md:w-[80%] mx-auto w-full flex md:flex-row flex-col md:p-8 p-3 gap-4 md:gap-0 font-raleway">
       <div className="md:w-[40%] w-full flex flex-col gap-3 md:items-start justify-start items-center py-4">
         <p className="text-3xl font-bold" style={gradientStyle}>
           {"FAQ's"}

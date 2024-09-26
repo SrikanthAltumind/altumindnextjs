@@ -79,7 +79,7 @@ const Spectrum = () => {
               {/* <p className="text-[#A9C4FD] text-4xl">
                 {index + 1 > 10 ? `${index + 1}.` : `0${index + 1}.`}
               </p> */}
-              <p className="text-lg font-medium">
+              <p className="text-xl font-semibold">
                 {service?.attributes?.title}
               </p>
               <p className="text-sm max-w-[480px]">

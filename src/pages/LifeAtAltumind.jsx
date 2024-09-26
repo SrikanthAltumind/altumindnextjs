@@ -7,6 +7,7 @@ import LearningAndDevelopment from "../Components/lifeataltumind-components/Lear
 import WeAreSeeking from "../Components/lifeataltumind-components/WeAreSeeking"
 import BgImageBanner from "../Components/common-components/BgImageBanner"
 import BenefitCards from "../Components/lifeataltumind-components/BenefitCards"
+import CareerForm from "../Components/contact-components/CareerForm"
 
 
 const LifeAtAltumind = () => {
@@ -20,7 +21,7 @@ const LifeAtAltumind = () => {
     <LearningAndDevelopment/>
     <BgImageBanner/>
     <WeAreSeeking/>
-    <SubscribeForm/>
+    <CareerForm/>
     </div>
   )
 }

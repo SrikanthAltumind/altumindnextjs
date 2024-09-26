@@ -34,6 +34,7 @@ const AboutUs = () => {
           </p>
         </div> */}
         <Timeline />
+
       </section>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
         <div className="text-center font-raleway space-y-3 mb-10">

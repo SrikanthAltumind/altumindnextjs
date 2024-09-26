@@ -8,6 +8,7 @@ import axios from "axios";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import {debounce} from 'lodash'
 import Banner from "../Components/common-components/Banner";
+import CareerForm from "../Components/contact-components/CareerForm";
 
 const OpenRoles = () => {
 
@@ -260,7 +261,7 @@ useEffect(() => {
           </button>
         </div> */}
       </div>
-      <div className="flex flex-col justify-start items-center gap-8 mt-10">
+      {/* <div className="flex flex-col justify-start items-center gap-8 mt-10">
         <p className="text-center lg:text-4xl md:text-2xl text-xl font-extrabold">
           <span>{"Be Ready for What's Next: "}</span> <br />
           <span style={gradientStyle}>Join Our Talent Pool</span>
@@ -294,7 +295,8 @@ useEffect(() => {
             </svg>
           </span>
         </a>
-      </div>
+      </div> */}
+      <CareerForm/>
     </div>
   );
 };

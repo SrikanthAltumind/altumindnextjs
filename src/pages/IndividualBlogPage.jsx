@@ -5,6 +5,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import { customRenderers } from "../ReactFunctions";
+import NewsLetterTextfield from "../Components/common-components/NewsletterTextfield";
 
 const IndividualBlogPage = () => {
     const [blogData, setBlogData] = useState({});
@@ -122,16 +123,18 @@ const IndividualBlogPage = () => {
               <p className="font-semibold xl:text-xl">
                 Subscribe to our newsletter
               </p>
-              <div className="w-full max-w-[310px] border-2 dark:border rounded-xl p-3 flex flex-col gap-3">
-                <input
+              <div className="w-full bg-[#E9EAEF] max-w-[310px] border-2 dark:border rounded-xl p-3 flex flex-col gap-3">
+                {/* <input
                   className="font-montserrat outline-primary bg-transparent font-medium border-2 dark:border rounded-md px-3 py-2 text-sm"
                   type="email"
                   placeholder="Enter your email"
-                />
-                <button className="bg-secondary font-montserrat font-medium text-sm text-white py-2 rounded-md">
+                /> */}
+                {/* <button className="bg-secondary font-montserrat font-medium text-sm text-white py-2 rounded-md">
                   Subscribe
-                </button>
+                </button> */}
+                <NewsLetterTextfield/>
               </div>
+              
             </div>
           </div>
         </div>

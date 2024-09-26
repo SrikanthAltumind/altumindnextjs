@@ -370,7 +370,7 @@ export const NavMenuData = [
             },
             {
               id: 2,
-              name: 'Website Operations & management',
+              name: 'Website Operations & Management',
               url: 'services/managed-operations/website-operations-management',
             },
             {

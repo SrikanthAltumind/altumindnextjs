@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import WatermarkLogo from "./WatermarkLogo";
+import NewsletterTextfield from '../common-components/NewsletterTextfield'
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
             <div className="w-fit lg:w-full bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue rounded-3xl pt-2">
               <div className="bg-[#e9eaef] dark:bg-[#242932]  rounded-3xl py-3 px-5">
                 <p className="font-medium pb-2">Subscribe to our insights</p>
-                <div className="flex items-center dark:bg-[#50545a] px-3 rounded-full bg-white">
+                {/* <div className="flex items-center dark:bg-[#50545a] px-3 rounded-full bg-white">
                   <input
                     className="border-none bg-transparent  w-full outline-none py-2"
                     type="email"
@@ -35,7 +36,8 @@ const Footer = () => {
                       d="M19 12H5m14 0-4 4m4-4-4-4"
                     />
                   </svg>
-                </div>
+                </div> */}
+                <NewsletterTextfield/>
                 <div className="py-3 flex items-center gap-2">
                   <a
                     href="https://www.linkedin.com/company/altumindglobal/"

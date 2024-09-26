@@ -13,7 +13,7 @@ import OurImpactByNumbers from '../Components/services-common/OurImpactByNumbers
 import LogoMarquee from "../Components/common-components/LogoMarquee"
 import { gradientStyle } from "../ReactFunctions"
 import Spectrum from "../Components/common-components/Spectrum"
-import EngModel from "../Components/common-components/EngModel"
+import EngModel from "../Components/services-common/EngModel"
 import ExploreFurther from "../Components/about-components/ExploreFurther"
 // import UpdatedEngagementModel from "../Components/services-common/UpdatedEngagementModel"
 

@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom';
 import LoaderSpinner from '../Components/common-components/LoaderSpinner';
 import { customRenderers } from '../ReactFunctions';
 import Markdown from 'react-markdown';
+import JobApplicationForm from '../Components/Openings/JobApplicationForm'
 
 const JobDetails = () => {
     const [jobData, setJobData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [showForm , setShowForm] = useState(false);
     const {jobId} = useParams()
 
     const fetchJobData = () => {
@@ -29,6 +31,10 @@ const JobDetails = () => {
     useEffect(() => {
       fetchJobData();
     }, []);
+
+    useEffect(() => {
+      showForm ? document.body.style.position = "fixed" : document.body.style.position = "static"
+    },[showForm])
 
     if (loading) {
       return <LoaderSpinner />;
@@ -93,9 +99,10 @@ const JobDetails = () => {
               </p>
             </div>
             <div className="w-full flex justify-between gap-5 items-center p-4 text-center">
-              <button className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md bg-[#E42D38] text-white">
+              <button onClick={() => setShowForm(true)} className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md bg-[#E42D38] text-white">
                 Apply Now
               </button>
+            
               <button className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md border-black border-2">
                 Refer a Friend
               </button>
@@ -138,7 +145,11 @@ const JobDetails = () => {
             </a>
           </div>
         </div>
+        {
+                showForm && <JobApplicationForm setShowForm={setShowForm}/>
+              }
       </div>
+
     );
 }
 

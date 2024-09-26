@@ -4,7 +4,7 @@ import ContactForm from './ContactForm'
 const formTabs = [
     {id:'project', name:'Projects'},
     {id:'partner', name:'Partnership'},
-    {id:'career', name:'Careers'},
+    // {id:'career', name:'Careers'},
     {id:'general', name:'General'},
 ]
 
@@ -30,12 +30,12 @@ const contentSection = {
       description:`What's on your mind? Share your thoughts, and let's start a conversation that could transform your business.`,
       imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Genral_Compressify_io_a6ea7066a4.webp'
     },
-    career : {
-      title: 'Shape The Future With Us',
-      caption:'Join altumind',
-      description:`Explore career opportunities and become part of our innovative team.`,
-      imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_Compressify_io_7817557ffb.webp'
-    }
+    // career : {
+    //   title: 'Shape The Future With Us',
+    //   caption:'Join altumind',
+    //   description:`Explore career opportunities and become part of our innovative team.`,
+    //   imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_Compressify_io_7817557ffb.webp'
+    // }
   }
 
 const ContactMenu = () => {
@@ -75,7 +75,7 @@ const ContactMenu = () => {
             </div>
             {/* Actual Form with fields */}
             <div className="basis-[70%]">
-                <ContactForm selectedForm={selectedForm}/>
+                <ContactForm selectedForm={selectedForm} />
             </div>
          </div>
         </div>

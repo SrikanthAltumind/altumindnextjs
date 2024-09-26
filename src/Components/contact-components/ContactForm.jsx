@@ -3,6 +3,8 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
 import { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser'
+
 
 const initialFormData = {
     firstName: "",
@@ -21,6 +23,16 @@ const ContactForm = ({selectedForm}) => {
   const [file, setFile] = useState()
   const [presignedUrl, setPresignedUrl] = useState()
   const [initialValues, setInitialValues] = useState(initialFormData)
+
+  let toMailID = ""
+
+  if(selectedForm === "project"){
+    toMailID ="sales@altumindglobal.com"
+  }else if(selectedForm === "partnership"){
+    toMailID = "info@altumindglobal.com"
+  }else if(selectedForm === "general"){
+    toMailID = "business@altumindglobal.com"
+  }
 
   const requiredField = yes=> yes ? yup.string().required('Required') : yup.string()
 
@@ -170,9 +182,44 @@ const ContactForm = ({selectedForm}) => {
 //     }
 // };
 
+const sendMail = formData => {
+  const serviceID = import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID //old service_oik8vde
+  const templateID = import.meta.env.VITE_APP_DATA_MAIL_NEWSLETTER_TEMPLATE_ID  //old template_1f6ib6b
+  const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY  //old ZRpWuyBwxaFOkFcGf
+ 
+  const templateParams = {
+    ...formData,
+    to_mail: toMailID, 
+    form_name: selectedForm,
+    page_url: window.location.href,
+  }
+  console.log('templateParams:',templateParams)
+  emailjs.send(serviceID, templateID, templateParams, publicKey)
+    .then(response=> {
+      if(response.status===200){
+      console.log('Data mail sent Successfully..!')
+      console.log(response)
+      // no-replay mail
+      emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
+              .then(response=> {
+                if(response.status===200){
+                console.log('Thank you mail sent Successfully..!')
+                console.log(response)
+                }
+              })
+              .catch(error=> {
+                console.error(error)
+              })
+      }
+    })
+    .catch(error=> {
+      console.error(error)
+    })
+}
 
   const onSubmit = async (formData, { resetForm }) => {
     try {
+
       // const presignedUrlResponse = await getPresignedurl(file);
       // if (!presignedUrlResponse) {
       //   console.error('Presigned URL is null or undefined.');
@@ -183,6 +230,7 @@ const ContactForm = ({selectedForm}) => {
       // console.log('File uploaded successfully!');
       // console.log('filetype', file.type);
       await sendData(formData);
+      sendMail(formData);
       // await sendData(formData, presignedUrlResponse.url);
       console.log('Resetting Form')
       resetForm();

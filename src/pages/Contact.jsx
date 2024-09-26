@@ -5,15 +5,19 @@ import OurLocation from "../Components/contact-components/OurLocation"
 // import ReachOutToAltumind from "../Components/contact-components/ReachOutToAltumind"
 
 import ContactMenu from '../Components/contact-components/ContactMenu'
+import CareerForm from "../Components/contact-components/CareerForm"
 
 const Contact = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <ContactBanner/>
       <ContactMenu/>
+ 
       <OurLocation/>
+      
       {/* <ReachOutToAltumind/> */}
       <GlobalImprint/>
+      <CareerForm/>
       {/* <ThankyouNote/> */}
       {/* <SubscribeForm/> */}
     </div>

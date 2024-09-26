@@ -7,18 +7,18 @@ import LeadershipVoices from "../Components/career-components/LeadershipVoices"
 import LifeAtAltumind from "../Components/career-components/LifeAtAltumind"
 import WhyJoinAltumind from "../Components/career-components/WhyJoinAltumind"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
-import SubscribeForm from "../Components/common-components/SubscribeForm"
+import CareerForm from "../Components/contact-components/CareerForm"
 
 const Career = () => {
   return (
-    <div className="w-full dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
+    <div className=" dark:bg-darkTheme flex flex-col gap-16 lg:gap-20">
       <CareersBanner />
       <WhyJoinAltumind />
       <CareerScrollingCards />
       <LifeAtAltumind />
       <LeadershipVoices />
       <DiscoverRoles />
-      <section className="w-full">
+      <section>
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
             Altumind Insights
@@ -29,12 +29,9 @@ const Career = () => {
         </div>
         <InsightsBlogs />
       </section>
-      <section className="flex w-full justify-center items-center mt-10">
         <FAQ />
-      </section>
-      <section className="flex w-full justify-center items-center">
-        <SubscribeForm />
-      </section>
+       <CareerForm/>
+    
     </div>
   );
 }
