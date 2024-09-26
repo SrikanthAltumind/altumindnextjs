@@ -20,7 +20,7 @@ const Accordion = ({ content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg md:text-base text-sm font-semibold">
             {content?.attributes?.title ?? content?.attributes?.question}
           </h2>
           <span>

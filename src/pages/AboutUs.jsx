@@ -16,7 +16,7 @@ const AboutUs = () => {
       <Overview />
       <OurImpactByNumbers />
       <section className="w-full flex flex-col gap-4 font-raleway">
-        <div className="w-full flex flex-col justify-center items-center gap-4 p-3">
+        {/* <div className="w-full flex flex-col justify-center items-center gap-4 p-3">
           <p className="font-medium">The Altumind Story</p>
           <p className="text-3xl font-bold">
             <span className="dark:text-gray-100">A Journey of </span>
@@ -32,7 +32,7 @@ const AboutUs = () => {
             attempts, resilience in the face of challenges, and an unwavering
             commitment to progress.`}
           </p>
-        </div>
+        </div> */}
         <Timeline />
       </section>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">

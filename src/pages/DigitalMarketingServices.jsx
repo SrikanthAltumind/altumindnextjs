@@ -28,6 +28,8 @@ const DigitalMarketingServices = () => {
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <div className="w-full">
         <Banner />
+      </div>
+      <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme">
         <Menu sections={servicesMenu} />
       </div>
       <section id="section-1">

@@ -28,6 +28,8 @@ const AIandAutomation = () => {
     <div className="dark:bg-darkTheme flex flex-col gap-20 lg:gap-20">
       <div className="w-full">
         <Banner />
+      </div>
+      <div className="w-full sticky top-[70px] bg-white -mt-20 dark:bg-darkTheme">
         <Menu sections={servicesMenu} />
       </div>
       <section id="section-1">

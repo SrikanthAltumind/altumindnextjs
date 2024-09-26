@@ -26,9 +26,11 @@ const ExperienceDesign = () => {
     { id: "section-9", tabId: "tab9", name: "Insights" },
   ];
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-16">
+    <div className="dark:bg-darkTheme flex flex-col gap-16 relative">
       <div className="w-full">
         <Banner />
+      </div>
+      <div className="w-full sticky top-[70px] bg-white dark:bg-darkTheme -mt-16">
         <Menu sections={servicesMenu} />
       </div>
       <section id="section-1">

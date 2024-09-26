@@ -309,41 +309,41 @@ const greenSustainability = {
     {
       id: 2,
       attributes: {
-        title: "Advanced AI and Data Analytics ",
+        title: "Advanced AI and Data-Driven Solutions",
         description:
-          "Leverage AI-powered insights, predictive models, and machine learning to enable data-driven decision-making, optimize operations, and boost customer engagement.",
+          "Leverage AI-powered Predictive Analytics, Sustainable Optimization models, and actionable Environmental Data Insights to drive intelligent sustainability strategies.",
       },
     },
     {
       id: 3,
       attributes: {
-        title: "Cloud Infrastructure & DevOps",
+        title: "Cloud and Infrastructure Management",
         description:
-          "Seamless cloud migration and DevOps automation for high-performance, scalable SaaS platforms on AWS, Google Cloud, and Azure.",
+          "Enable seamless Renewable Energy System Deployment, Smart Grid Integration, and provision Scalable Sustainability Infrastructure leveraging cloud computing prowess.",
       },
     },
     {
       id: 4,
       attributes: {
-        title: "Exceptional UX/UI Design",
+        title: "Eco-Centric UX and Design",
         description:
-          "Craft captivating user experiences with intuitive interfaces, interactive prototypes, and user-centric platform designs maximizing satisfaction and retention.",
+          "Craft user-centric experiences fostering Sustainable User Engagement through intuitive Eco-Solution Adoption Interfaces and Green Product Prototyping services.",
       },
     },
     {
       id: 5,
       attributes: {
-        title: "Agile Engineering Excellence ",
+        title: "Technology and Engineering Solutions",
         description:
-          "Robust digital solutions including API development, microservices, mobile apps, secure payment gateways, delivered through agile methodologies.",
+          "Unlock a greener digital world through our eco-conscious Web Apps, Progressive Web Apps, and Custom Content Management Systems, tailored to your sustainable technology needs.",
       },
     },
     {
       id: 6,
       attributes: {
-        title: "SaaS Growth Marketing",
+        title: "Digital Marketing solutions",
         description:
-          "Strategic branding, SEO, content marketing, and targeted advertising to elevate your SaaS brand and acquire a wider audience. ",
+          "Nurture a thriving, planet-friendly digital presence and amplify your eco-conscious brand with our comprehensive digital marketing solutions.",
       },
     },
   ],
@@ -374,18 +374,28 @@ const ServiceOfferrings = () => {
   return (
     <div className="w-full bg-[#EAF1FF] flex flex-col gap-4 py-6 font-raleway">
       <div className="flex justify-center items-center w-full p-3">
-        <p className="text-5xl font-extrabold" style={gradientStyle}>
+        <p
+          className="font-extrabold lg:text-5xl md:text-4xl text-3xl "
+          style={gradientStyle}
+        >
           Service Offerings
         </p>
       </div>
-      <div className="w-full flex gap-2 items-start justify-between p-5">
-        <div className="w-[30%] justify-start h-full items-center flex flex-col gap-4 p-3">
-          <p className="font-semibold text-3xl py-2 md:max-w-[450px]">
+      <div className="w-full flex md:flex-row flex-col gap-2 items-start justify-between p-5">
+        <div className="md:w-[30%] w-full justify-start h-full md:items-start items-center flex flex-col gap-4 p-3">
+          <p className="font-semibold lg:text-3xl md:text-2xl text-xl py-2 md:max-w-[450px] text-center md:text-left">
             {data?.heading}
           </p>
-          <p className="md:max-w-[450px]">{data?.description}</p>
-          <a href="/services" className="text-[#DD5143] w-full flex gap-2 font-semibold group cursor-pointer underline items-center">
-            <span>Explore All Services</span>
+          <p className="md:max-w-[450px] text-center md:text-left text-sm lg:text-base">
+            {data?.description}
+          </p>
+          <a
+            href="/services"
+            className="text-[#DD5143] w-full flex gap-2 font-semibold group cursor-pointer underline md:justify-start justify-center items-center"
+          >
+            <span className="md:text-left text-sm lg:text-base">
+              Explore All Services
+            </span>
             <span className="group-hover:mx-2 transition-all duration-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -403,7 +413,7 @@ const ServiceOfferrings = () => {
           </a>
         </div>
 
-        <div className="w-[60%] flex flex-col gap-4">
+        <div className="md:w-[60%] w-full flex flex-col gap-4">
           {data?.points?.map((service, index) => {
             return <Accordion content={service} key={index} />;
           })}

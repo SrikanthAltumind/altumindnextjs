@@ -17,7 +17,7 @@ const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
     <div
       className={`${
         showMobileMenu
-          ? "right-0 w-full sm:w-[40%] md:w-[50%] px-10 py-5 z-20"
+          ? "right-0 w-full sm:w-[40%] md:w-[50%] px-10 py-5 z-10"
           : "-right-full w-0"
       } overflow-hidden shadow-md font-medium text-[15px] duration-500 absolute top-full font-montserrat bg-LightBlue h-screen`}
     >

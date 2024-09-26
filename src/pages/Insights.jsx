@@ -67,15 +67,15 @@ const Insights = () => {
           perspectives, and future disruptions to propel your business forward.
         </p>
       </div>
-      <div className="flex w-full justify-center items-center p-5 lg:h-[200px]">
+      {/* <div className="flex w-full justify-center items-center p-5 lg:h-[200px]">
         <p
           className="lg:text-4xl text-2xl text-center font-extrabold"
           style={gradientStyle}
         >
           Featured Blog
         </p>
-      </div>
-      <div className="w-full flex justify-center items-center">
+      </div> */}
+      <div className="w-full flex justify-center items-center mt-10">
         <div className="w-[70%] flex lg:flex-row flex-col md:justify-center md:items-start justify-center items-center lg:gap-5 gap-8 p-3 py-6">
           <div className="md:w-40% w-full flex justify-center items-center rounded-md ">
             <img
@@ -88,7 +88,7 @@ const Insights = () => {
             {/* md:h-[300px] sm:h-[300px] md:w-[420px] sm-[360px] w-[300px] */}
           </div>
           <div className="md:w-[65%] lg:p-0 py-6 w-full flex flex-col lg:justify-start justify-center items-start gap-6 lg:px-5">
-            {/* <p className="font-medium text-xs">Featured Blog</p> */}
+            <p className="font-bold text-sm">Featured Blog</p>
             <p className="text-xl font-semibold w-full">
               Ultimate Guide to App Store Optimization: Strategies to Increase
               Downloads
@@ -99,7 +99,7 @@ const Insights = () => {
               strategies for Apple App Store and Google Play success in 2024.
             </p>
             <a
-              href="/blog/4/ultimate-guide-to-app-store-optimization-strategies-to-increase-downloads"
+              href="insights/blog/4/ultimate-guide-to-app-store-optimization-strategies-to-increase-downloads"
               className="text-sm font-medium group flex items-center gap-2 cursor-pointer underline"
             >
               <span>Read Article</span>{" "}

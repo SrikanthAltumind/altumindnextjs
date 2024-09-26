@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
-const Menu = ({sections}) => {
+const Menu = ({ sections }) => {
+  
+  const location = useLocation()
 
 
     const [selectedTab, setSelectedTab] = useState(sections[0]?.id)
@@ -63,11 +66,15 @@ const Menu = ({sections}) => {
     );
     scrollTabButtons(activeSection?.tabId);
   }, [selectedTab]);
+
+  useEffect(() => {
+    setSelectedTab(sections[0]?.id);
+  },[location.pathname])
  
 
 
   return (
-    <div className="w-full font-raleway sticky top-[70px] z-10">
+    <div className="w-full font-raleway sticky top-[70px]">
       <div
         id="sectionTabsMenu"
         className="bg-[#EAF1FF] overflow-x-auto no-scrollbar"

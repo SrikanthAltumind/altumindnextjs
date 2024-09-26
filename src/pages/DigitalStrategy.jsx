@@ -29,6 +29,8 @@ const DigitalStrategy = () => {
       <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-16">
         <div className="w-full">
           <Banner />
+        </div>
+        <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
           <Menu sections={servicesMenu} />
         </div>
         <section id="section-1">

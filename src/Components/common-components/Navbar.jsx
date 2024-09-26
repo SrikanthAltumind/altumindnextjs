@@ -215,7 +215,7 @@ export const Navbardata = [
           },
           {
             id: 2,
-            name: "Website Operations & management",
+            name: "Website Operations & Management",
             url: "services/managed-operations/website-operations-management",
           },
           {
@@ -360,15 +360,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="dark:bg-[#1b305c] w-full bg-white z-20 h-[70px] dark:text-white top-0 sticky">
-      <nav className="flex justify-between items-center h-full px-2 sm:px-5">
+    <header className="dark:bg-[#1b305c] w-full bg-white z-10 h-[70px] dark:text-white top-0 sticky">
+      <nav className="flex justify-between items-center h-full px-2 sm:px-5 relative">
         <img
           src={theme === "dark" ? AltumindDark : logo}
           alt="altumind"
           className="sm:w-[180px] w-[150px] cursor-pointer"
           onClick={() => {
-            setShowMobileMenu(false)
-            navigate("/")
+            setShowMobileMenu(false);
+            navigate("/");
           }}
         />
         <div className="items-center gap-5 hidden lg:flex ml-auto h-full">
@@ -386,9 +386,6 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
-                  // onMouseOver={() => setCurrentItem(item?.children ? item : null)}
-                  // onMouseLeave={() => setCurrentItem(null)}
-
                   onClick={() => setCurrentItem(null)}
                   className="h-full flex items-center px-4 border-b-4 border-transparent text-sm font-medium hover:border-secondary"
                   to={item?.path}
@@ -396,10 +393,12 @@ const Navbar = () => {
                   {item?.menu}
                 </Link>
                 {item?.children && currentItem === item && (
-                  <MegaMenu
-                    item={currentItem}
-                    onMouseLeave={handleMouseLeave}
-                  />
+                  <div className="z-50">
+                    <MegaMenu
+                      item={currentItem}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  </div>
                 )}
               </li>
             ))}
@@ -458,8 +457,10 @@ const Navbar = () => {
             </button>
           </Link>
         </div>
-
-        <MobileMenu showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
+        <MobileMenu
+          showMobileMenu={showMobileMenu}
+          setShowMobileMenu={setShowMobileMenu}
+        />
       </nav>
     </header>
   );
