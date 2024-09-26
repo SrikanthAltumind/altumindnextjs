@@ -9,9 +9,9 @@ import SettingUpForSuccess from "../Components/services-common/SettingUpForSucce
 import GetStarted from "../Components/services-common/GetStarted"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import ValueSection from "../Components/services-common/ValueSection"
-// import Menu from "../Components/industries-common/Menu"
+import Menu from "../Components/industries-common/Menu"
 import { gradientStyle } from "../ReactFunctions"
-import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+// import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
 import EngModel from "../Components/services-common/EngModel"
 
 const servicesMenu = [
@@ -28,14 +28,20 @@ const servicesMenu = [
 
 const AIandAutomation = () => {
   return (
+    <>
     <div className="dark:bg-darkTheme flex flex-col gap-20 lg:gap-20">
         <Banner />
-        <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
-        <IndustriesMenu sectionsMenu={servicesMenu} />
-          <section id="section1"><Overview /></section>
-          <section id="section2"><ValueSection /></section>
-          <section id="section3">
-          <div className="text-center space-y-3 mb-10 font-raleway">
+      <div className="w-full sticky top-[70px] bg-white -mt-20 dark:bg-darkTheme">
+        <Menu sections={servicesMenu} />
+      </div>
+      <section id="section-1">
+        <Overview />
+      </section>
+      <section id="section-2">
+        <ValueSection />
+      </section>
+      <section id="section-3">
+        <div className="text-center space-y-3 mb-10 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Our Partnership Ecosystem
           </p>
@@ -98,9 +104,10 @@ const AIandAutomation = () => {
         </div>
         <InsightsBlogs />
       </section>
-      </div>
+      
       <SubscribeForm />
-    </div>
+      </div>
+    </>
   );
 }
 

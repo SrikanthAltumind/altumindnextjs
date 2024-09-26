@@ -5,9 +5,9 @@ import Spectrum from "../Components/common-components/Spectrum"
 import SubscribeForm from "../Components/common-components/SubscribeForm"
 import Testimonials from "../Components/common-components/Testimonials"
 import SuccessStories from "../Components/home-components/SuccessStories"
-import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+// import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
 import EngModel from "../Components/services-common/EngModel"
-// import Menu from "../Components/industries-common/Menu"
+import Menu from "../Components/industries-common/Menu"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
@@ -32,10 +32,14 @@ const TechnologyAndEngineering = () => {
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-12 lg:gap-16">
         <Banner />
-        <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
-        <IndustriesMenu sectionsMenu={servicesMenu} />
-        <section id="section1"><Overview /></section>
-        <section id="section2">
+  
+      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
+        <Menu sections={servicesMenu} />
+      </div>
+      <section id="section-1">
+        <Overview />
+      </section>
+      <section id="section-2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
           <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
             <p className="font-semibold">Our Engineering Services</p>
@@ -109,7 +113,7 @@ const TechnologyAndEngineering = () => {
         </div>
         <InsightsBlogs />
       </section>
-        </div>
+       
         <SubscribeForm />
     </div>
   );

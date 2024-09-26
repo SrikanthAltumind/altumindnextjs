@@ -133,7 +133,7 @@ useEffect(() => {
       );
     if (JobType)
       filters.push(
-        `filters[open_role_job_type][typeName][$eq]=${encodeURIComponent(
+        `filters[open_role_job_types][typeName][$eq]=${encodeURIComponent(
           JobType
         )}`
       );

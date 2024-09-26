@@ -40,14 +40,16 @@ const BFSIAndFinance = () => {
 
   return (
     <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-24 relative">
-      <section className="w-full flex flex-col gap-8 items-center justify-start relative">
+      <section className="w-full flex flex-col gap-8 items-center justify-start">
         <IndustriesBanners />
         <div className="w-full flex flex-col p-4 px-10 gap-3">
           <p className="font-raleway text-2xl font-semibold">Trusted By</p>
           <LogoMarquee />
         </div>
-        <Menu sections={sections} />
       </section>
+      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
+        <Menu sections={sections} />
+      </div>
       <section id="section-1">
         <SegmentInFocus />
       </section>

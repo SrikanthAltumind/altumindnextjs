@@ -10,6 +10,13 @@ export const customRenderers = {
   ul: ({ children }) => (
     <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>{children}</ul>
   ),
+  img: ({ src, alt }) => (
+    <img
+      src={src}
+      alt={alt}
+      className="object-contain max-w-[600px] max-h-[360px] mx-auto"
+    />
+  )
 };
 
 

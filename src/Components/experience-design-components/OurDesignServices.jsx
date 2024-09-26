@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { ThemeContext } from "../../Layouts/AppLayout"
-import { Link, useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 
 const OurDesignServices = () => {

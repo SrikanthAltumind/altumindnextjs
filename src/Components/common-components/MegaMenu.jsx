@@ -6,9 +6,8 @@ const MegaMenu = ({ item, onMouseLeave }) => {
   // eslint-disable-next-line react/prop-types
   const [subMenu, setSubMenu] = useState(item.children[0]);
   return (
-    <>
       <div
-        className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[950px] z-10 top-full"
+      className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[820px] top-[70px] z-20"
         onMouseLeave={onMouseLeave}
       >
         <div className=" rounded-lg  shadow-lg bg-[#F3F9FF] p-5 mt-3 ">
@@ -31,7 +30,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                             subMenu?.innerMenu === child.innerMenu
                               ? "bg-[#DE5346] text-white"
                               : ""
-                          } rounded-md flex justify-between group font-semibold items-center  p-2 m-2`}
+                          } rounded-md flex justify-between group font-semibold capitalize items-center  p-2 m-2`}
                         >
                           {child.innerMenu}
                           {child?.children?.length > 0 && (
@@ -69,10 +68,10 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                   {subMenu?.children?.map((child, index) => (
                     <li
                       key={index}
-                      className="p-2 m-2 font-medium hover:font-semibold hover:text-secondary"
+                      className="p-2 m-2 font-medium hover:font-semibold hover:text-secondary capitalize"
                       onClick={onMouseLeave}
                     >
-                      <Link to={child?.path}>{child.name}</Link>
+                      <Link to={child?.path} className="capitalize">{child.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -81,7 +80,6 @@ const MegaMenu = ({ item, onMouseLeave }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

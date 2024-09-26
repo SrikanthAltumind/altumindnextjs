@@ -4,8 +4,8 @@ import SolutionPartners from "../Components/common-components/SolutionPartners"
 import SubscribeForm from "../Components/common-components/SubscribeForm"
 import Testimonials from "../Components/common-components/Testimonials"
 import SuccessStories from "../Components/home-components/SuccessStories"
-import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
-// import Menu from "../Components/industries-common/Menu"
+// import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+import Menu from "../Components/industries-common/Menu"
 import EngModel from "../Components/services-common/EngModel"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
@@ -27,14 +27,21 @@ const CloudServices = () => {
     { id: "section9", tabId: "tab9", name: "Insights" },
   ];
   return (
+    <>
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner />
-        <div className="flex flex-col -mt-24 lg:-mt-28 gap-24 lg:gap-28">
-        <IndustriesMenu sectionsMenu={servicesMenu} />
-          <section id="section1"><Overview /></section>
-          <section id="section2"><ValueSection /></section>
-          <section id="section3">
-          <div className="text-center space-y-3 mb-10 font-raleway">
+   
+      <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme">
+        <Menu sections={servicesMenu} />
+      </div>
+      <section id="section-1">
+        <Overview />
+      </section>
+      <section id="section-2">
+        <ValueSection />
+      </section>
+      <section id="section-3">
+        <div className="text-center space-y-3 mb-10 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Our Partnership Ecosystem
           </p>
@@ -93,9 +100,9 @@ const CloudServices = () => {
         </div>
         <InsightsBlogs />
       </section>
-      </div>
       <SubscribeForm />
     </div>
+    </>
   );
 }
 

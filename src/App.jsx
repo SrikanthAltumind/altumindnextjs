@@ -265,7 +265,7 @@ const router = createBrowserRouter([
         element: <Terms />,
       },
       {
-        path: "/blog/:id/:blogName",
+        path: "insights/blog/:id/:blogName",
         element: <IndividualBlogPage />,
       },
       {
@@ -289,7 +289,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  console.log("updated on: 16/9/24");
+  console.log("updated on: 24/9/24");
   return <RouterProvider router={router} />;
 }
 

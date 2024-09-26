@@ -113,11 +113,11 @@ const ValueThatMatters = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center font-raleway py-6 gap-5">
       <div className="w-full flex justify-center items-center p-3">
-        <p className="text-5xl font-extrabold" style={gradientStyle}>
+        <p className="lg:text-5xl md:text-4xl text-3xl font-extrabold" style={gradientStyle}>
           Value That Matters
         </p>
       </div>
-      <div className="w-[90%] flex items-center p-3 gap-2 md:h-[450px] justify-between">
+      <div className="lg:w-[90%] w-full flex md:flex-row flex-col items-center p-3 gap-2 md:h-[450px] justify-between">
         <div className="">
           <img
             src={data?.url}
@@ -127,7 +127,7 @@ const ValueThatMatters = () => {
             className="object-contain md:h-[400px] h-[200px] w-[300px] md:w-[500px]"
           />
         </div>
-        <div className="w-[60%] h-full py-3 px-2 gap-8 flex flex-col">
+        <div className="md:w-[60%] w-full h-full py-3 px-2 gap-8 flex flex-col">
           <div className="flex flex-col justify-start items-start">
             <p className="dark:text-white text-sm leading-relaxed">{data?.description}</p>
           </div>
