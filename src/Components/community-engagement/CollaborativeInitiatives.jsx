@@ -53,7 +53,7 @@ if (loading) {
                 </div>
                 <p className='font-medium font-montserrat my-5 md:my-8 text-xs lg:text-sm'>{data?.description1}</p>
                 <p className='font-montserrat font-semibold my-5 md:my-8 text-xs lg:text-sm'>{data?.description2}</p>
-                <Link to='/insights/pr-events' className='group text-xs lg:text-base text-secondary underline underline-offset-2 decoration-1 font-semibold flex gap-2 items-center w-fit max-sm:mx-auto'>
+                <Link to='/insights/' className='group text-xs lg:text-base text-secondary underline underline-offset-2 decoration-1 font-semibold flex gap-2 items-center w-fit max-sm:mx-auto'>
                     <span className=''>Join Us for Upcoming Event</span>
                     <svg className="w-6 h-6 group-hover:translate-x-3 transition-all duration-200 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 12H5m14 0-4 4m4-4-4-4"/>

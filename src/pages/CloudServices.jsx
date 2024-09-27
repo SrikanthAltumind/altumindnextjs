@@ -28,80 +28,82 @@ const CloudServices = () => {
   ];
   return (
     <>
-    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
+      <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner />
-   
-      <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme">
-        <Menu sections={servicesMenu} />
-      </div>
-      <section id="section-1">
-        <Overview />
-      </section>
-      <section id="section-2">
-        <ValueSection />
-      </section>
-      <section id="section-3">
-        <div className="text-center space-y-3 mb-10 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Our Partnership Ecosystem
-          </p>
-          <p className=" font-extrabold w-fit mx-auto text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Elite Partners Behind Our Cloud Innovation
-          </p>
+
+        <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme z-[2]">
+          <Menu sections={servicesMenu} />
+        </div>
+        <section id="section1">
+          <Overview />
+        </section>
+        <section id="section2">
+          <ValueSection />
+        </section>
+        <section id="section3">
+          <div className="text-center space-y-3 mb-10 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Our Partnership Ecosystem
+            </p>
+            <p className=" font-extrabold w-fit mx-auto text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Elite Partners Behind Our Cloud Innovation
+            </p>
           </div>
-        <SolutionPartners />
+          <SolutionPartners />
         </section>
         <section id="section4" className="bg-[#F3F9FF] py-8">
-        <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
-            Why Altumind Stands Out
-          </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Making Cloud Work for You
-          </p>
-        </div>
-        <WhyAltumind />
+          <div className="text-center font-raleway space-y-3 mb-10">
+            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+              Why Altumind Stands Out
+            </p>
+            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Making Cloud Work for You
+            </p>
+          </div>
+          <WhyAltumind />
         </section>
-        <section id="section5"><EngModel/></section>
+        <section id="section5">
+          <EngModel />
+        </section>
         <section id="section6">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Client Testimonials
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact: In Their Words
-          </p>
-        </div>
-        <Testimonials />
-      </section>
-      <section id="section7">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Benefits
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Adaptive Solutions for Modern Success
-          </p>
-        </div>
-        <SettingUpForSuccess />
-      </section>
-      <GetStarted />
-      <section id="section8">
-        <SuccessStories />
-      </section>
-      <section id="section9">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Insights
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Dive into Our Latest Perspectives
-          </p>
-        </div>
-        <InsightsBlogs />
-      </section>
-      <SubscribeForm />
-    </div>
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Client Testimonials
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              The Altumind Impact: In Their Words
+            </p>
+          </div>
+          <Testimonials />
+        </section>
+        <section id="section7">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Benefits
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Adaptive Solutions for Modern Success
+            </p>
+          </div>
+          <SettingUpForSuccess />
+        </section>
+        <GetStarted />
+        <section id="section8">
+          <SuccessStories />
+        </section>
+        <section id="section9">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Insights
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Dive into Our Latest Perspectives
+            </p>
+          </div>
+          <InsightsBlogs />
+        </section>
+        <SubscribeForm />
+      </div>
     </>
   );
 }

@@ -29,88 +29,90 @@ const DataAnalytics = () => {
   ];
   return (
     <>
-    <div className="dark:bg-darkTheme flex flex-col gap-16">
+      <div className="dark:bg-darkTheme flex flex-col gap-16">
         <Banner />
-  
-      <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme">
-        <Menu sections={servicesMenu} />
-      </div>
-      <section id="section-1">
-        <Overview />
-      </section>
-      <section id="section-2">
-        <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-          <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-            <p className="font-semibold">Our Data Analytics Services</p>
-            <p className="text-3xl font-extrabold md:max-w-[500px]">
-              <span style={gradientStyle}>
-                Full Spectrum Data Analytics
-                <br />
-              </span>
-              <span>from Insight to Impact</span>
+
+        <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme z-[2]">
+          <Menu sections={servicesMenu} />
+        </div>
+        <section id="section1">
+          <Overview />
+        </section>
+        <section id="section2">
+          <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
+            <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
+              <p className="font-semibold">Our Data Analytics Services</p>
+              <p className="text-3xl font-extrabold md:max-w-[500px]">
+                <span style={gradientStyle}>
+                  Full Spectrum Data Analytics
+                  <br />
+                </span>
+                <span>from Insight to Impact</span>
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex justify-center items-center">
+            <Spectrum />
+          </div>
+        </section>
+        <section id="section3" className="bg-[#F3F9FF] py-8">
+          <div className="text-center font-raleway space-y-3 mb-10">
+            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+              Why Altumind Stands Out
+            </p>
+            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Turning Data into Your Competitive Edge
             </p>
           </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <Spectrum />
-        </div>
-      </section>
-      <section id="section3" className="bg-[#F3F9FF] py-8">
-        <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
-            Why Altumind Stands Out
-          </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Turning Data into Your Competitive Edge
-          </p>
-        </div>
-        <WhyAltumind />
-      </section>
-      <section id="section4"><EngModel/></section>
-      <section id="section5">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Client Testimonials
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact: In Their Words
-          </p>
-        </div>
-        <Testimonials />
-      </section>
-      <section id="section6">
-        <TechStack />
-      </section>
-      <section id="section7">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Benefits
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
-            <span style={gradientStyle}>Transforming Raw Data</span>
-            <span className="text-[#02143b]">into Real Results</span>
-          </p>
-        </div>
-        <SettingUpForSuccess />
-      </section>
-      <GetStarted />
-      <section id="section8">
-        <SuccessStories />
-      </section>
-      <section id="section9">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Insights
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Dive into Our Latest Perspectives
-          </p>
-        </div>
-        <InsightsBlogs />
-      </section>
-     
-      <SubscribeForm />
-    </div>
+          <WhyAltumind />
+        </section>
+        <section id="section4">
+          <EngModel />
+        </section>
+        <section id="section5">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Client Testimonials
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              The Altumind Impact: In Their Words
+            </p>
+          </div>
+          <Testimonials />
+        </section>
+        <section id="section6">
+          <TechStack />
+        </section>
+        <section id="section7">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Benefits
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
+              <span style={gradientStyle}>Transforming Raw Data</span>
+              <span className="text-[#02143b]">into Real Results</span>
+            </p>
+          </div>
+          <SettingUpForSuccess />
+        </section>
+        <GetStarted />
+        <section id="section8">
+          <SuccessStories />
+        </section>
+        <section id="section9">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Insights
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Dive into Our Latest Perspectives
+            </p>
+          </div>
+          <InsightsBlogs />
+        </section>
+
+        <SubscribeForm />
+      </div>
     </>
   );
 }
