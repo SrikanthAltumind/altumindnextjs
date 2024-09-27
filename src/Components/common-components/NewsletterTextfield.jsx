@@ -106,7 +106,7 @@ let formik = useFormik({
                  </svg>
                     :
                   <svg
-                    className="w-8 h-8 dark:text-white text-[#cfcfcf] cursor-pointer hover:scale-[1.1]"
+                    className="w-8 h-8 dark:text-white text-black cursor-pointer hover:scale-[1.1]"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

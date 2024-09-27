@@ -184,7 +184,7 @@ const ContactForm = ({selectedForm}) => {
 
 const sendMail = formData => {
   const serviceID = import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID //old service_oik8vde
-  const templateID = import.meta.env.VITE_APP_DATA_MAIL_NEWSLETTER_TEMPLATE_ID  //old template_1f6ib6b
+  const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID  //old template_1f6ib6b
   const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY  //old ZRpWuyBwxaFOkFcGf
  
   const templateParams = {
@@ -442,6 +442,12 @@ const sendMail = formData => {
               value="Business Directory"
             >
               Business Directory
+            </option>
+            <option
+              className="dark:bg-DarkBackground"
+              value="Job Portal"
+            >
+              Job Portal
             </option>
             <option
               className="dark:bg-DarkBackground"
