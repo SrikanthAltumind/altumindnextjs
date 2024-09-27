@@ -8,6 +8,7 @@ import { gradientStyle } from "../ReactFunctions";
 import NorthAndVisionary from '../Components/about-components/NorthAndVisionary'
 import ExploreFurther from '../Components/about-components/ExploreFurther'
 import SubscribeForm from "../Components/common-components/SubscribeForm";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -76,6 +77,32 @@ const AboutUs = () => {
           </p>
         </div>
         <SolutionPartners />
+        <div className="text-center w-fit mx-auto space-y-3 mt-10 mb-5">
+          <p className="font-medium">Discover the advantages of our strategic network.</p>
+          <Link
+              to="/about/about-altumind/alliance"
+              className="group w-fit mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
+            >
+              Explore Our Alliances
+              <svg
+                className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"
+                />
+              </svg>
+            </Link>
+        </div>
       </section>
       <section className="w-full flex flex-col items-center justify-start">
         <div className="w-[90%] max-w-[1100px] mx-auto lg:flex items-center justify-between dark:text-white">

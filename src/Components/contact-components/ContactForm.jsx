@@ -26,11 +26,11 @@ const ContactForm = ({selectedForm}) => {
 
   let toMailID = ""
 
-  if(selectedForm === "project"){
+  if(selectedForm?.id === "project"){
     toMailID ="sales@altumindglobal.com"
-  }else if(selectedForm === "partnership"){
+  }else if(selectedForm?.id === "partner"){
     toMailID = "info@altumindglobal.com"
-  }else if(selectedForm === "general"){
+  }else if(selectedForm?.id === "general"){
     toMailID = "business@altumindglobal.com"
   }
 
@@ -57,9 +57,9 @@ const ContactForm = ({selectedForm}) => {
         (value) => !value.startsWith(" ")
       )
       .min(2, "Name is too short"),
-    companyName: requiredField(selectedForm !== 'career')
+    companyName: requiredField(selectedForm?.id !== 'career')
     //   .string()
-      .matches(/^[A-Za-z ]+$/, "Enter only alphabet")
+      .matches(/^[A-Za-z0-9 ]+$/, "Enter a valid name")
       .test(
         "leading-space",
         "Cannot start with space",
@@ -67,7 +67,7 @@ const ContactForm = ({selectedForm}) => {
         (value) => value ? !value.startsWith(" ") : true
       )
       .min(4, "Name is too short"),
-    phone: requiredField(selectedForm === 'career')
+    phone: requiredField(selectedForm?.id === 'career')
     //   .string()
       .matches(/^[0-9]+$/, "Enter only digits")
       .length(10, "Number should have 10 digits"),
@@ -81,7 +81,7 @@ const ContactForm = ({selectedForm}) => {
       howDidYouHearAboutUs: yup
       .string()
       .required("Required"),
-    message: requiredField(selectedForm !== 'career')
+    message: requiredField(selectedForm?.id !== 'career')
     //   .string()
       .test(
         "leading-space",
@@ -93,7 +93,7 @@ const ContactForm = ({selectedForm}) => {
   });
 
   const sendData = async (formData, fileUrl=null) => {
-      if(selectedForm==='career'){   //Career Form API
+      if(selectedForm?.id==='career'){   //Career Form API
         const payload = {
           data: {
             firstname: formData.firstName.trim(),
@@ -121,7 +121,7 @@ const ContactForm = ({selectedForm}) => {
             hearAbout: formData.howDidYouHearAboutUs.trim(),
             message: formData.message.trim(),
             // upload: fileUrl.split('?')[0],
-            formType: selectedForm,
+            formType: selectedForm?.id,
           },
         };
         console.log('Form Data Payload', payload)
@@ -190,31 +190,31 @@ const sendMail = formData => {
   const templateParams = {
     ...formData,
     to_mail: toMailID, 
-    form_name: selectedForm,
+    form_name: selectedForm?.name,
     page_url: window.location.href,
   }
   console.log('templateParams:',templateParams)
-  emailjs.send(serviceID, templateID, templateParams, publicKey)
-    .then(response=> {
-      if(response.status===200){
-      console.log('Data mail sent Successfully..!')
-      console.log(response)
-      // no-replay mail
-      emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
-              .then(response=> {
-                if(response.status===200){
-                console.log('Thank you mail sent Successfully..!')
-                console.log(response)
-                }
-              })
-              .catch(error=> {
-                console.error(error)
-              })
-      }
-    })
-    .catch(error=> {
-      console.error(error)
-    })
+  // emailjs.send(serviceID, templateID, templateParams, publicKey)
+  //   .then(response=> {
+  //     if(response.status===200){
+  //     console.log('Data mail sent Successfully..!')
+  //     console.log(response)
+  //     // no-replay mail
+  //     emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
+  //             .then(response=> {
+  //               if(response.status===200){
+  //               console.log('Thank you mail sent Successfully..!')
+  //               console.log(response)
+  //               }
+  //             })
+  //             .catch(error=> {
+  //               console.error(error)
+  //             })
+  //     }
+  //   })
+  //   .catch(error=> {
+  //     console.error(error)
+  //   })
 }
 
   const onSubmit = async (formData, { resetForm }) => {
@@ -368,7 +368,7 @@ const sendMail = formData => {
             }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
           >
             Phone
-            {selectedForm === "career" && (
+            {selectedForm?.id === "career" && (
               <span className="text-red-500">*</span>
             )}
           </label>
@@ -398,7 +398,7 @@ const sendMail = formData => {
             }  peer-focus:-translate-y-6 transition-all duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
           >
             Company Name
-            {selectedForm !== "career" && (
+            {selectedForm?.id !== "career" && (
               <span className="text-red-500">*</span>
             )}
           </label>
@@ -502,10 +502,10 @@ const sendMail = formData => {
               : "text-sm lg:text-base"
           }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
         >
-          {selectedForm === "career"
+          {selectedForm?.id === "career"
             ? "A little about you:"
             : "How can we help ?"}
-          {selectedForm !== "career" && <span className="text-red-500">*</span>}
+          {selectedForm?.id !== "career" && <span className="text-red-500">*</span>}
         </label>
         <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
         {formik.touched.message && formik.errors.message && (
@@ -515,7 +515,7 @@ const sendMail = formData => {
         )}
       </div>
       {/* Upload your brief */}
-      {selectedForm === "career" && (
+      {selectedForm?.id === "career" && (
         <div className="w-full">
           <label className="block mb-3 font-medium">
             Upload your CV
