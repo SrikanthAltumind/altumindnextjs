@@ -133,7 +133,7 @@ const Portfolio = () => {
     <div className="font-raleway w-full flex flex-col gap-9 overflow-x-auto">
       <div className="banner w-full h-[280px] flex text-center p-3 flex-col justify-center items-center gap-4 bg-[#F3F9FF]">
         <p className="text-5xl font-extrabold text-[#02194a]">
-          <span style={gradientStyle}>Success</span> Naratives
+          <span style={gradientStyle}>Success</span> Narratives
         </p>
         <p className="leading-7 text-lg">
           Discover inspiring client stories that fuel

@@ -75,7 +75,7 @@ const TechnologyAndEngineering = () => {
       <section id="section4">
         <EngModel />
       </section>
-      <section id="section5 z-0">
+      <section id="section5">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Client Testimonials
@@ -105,7 +105,7 @@ const TechnologyAndEngineering = () => {
       <section id="section8">
         <SuccessStories />
       </section>
-      <section id="section-9">
+      <section id="section9">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Insights

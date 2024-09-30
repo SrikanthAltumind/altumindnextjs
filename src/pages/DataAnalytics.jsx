@@ -89,7 +89,7 @@ const DataAnalytics = () => {
               Benefits
             </p>
             <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
-              <span style={gradientStyle}>Transforming Raw Data</span>
+              <span style={gradientStyle}>Transforming Raw Data</span>{" "}
               <span className="text-[#02143b]">into Real Results</span>
             </p>
           </div>

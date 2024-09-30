@@ -47,7 +47,7 @@ const BFSIAndFinance = () => {
           <LogoMarquee />
         </div>
       </section>
-      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
+      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme z-[2]">
         <Menu sections={sections} />
       </div>
       <section id="section-1">
