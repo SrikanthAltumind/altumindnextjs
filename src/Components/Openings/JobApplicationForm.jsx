@@ -26,8 +26,7 @@ const JobApplicationForm = ({setShowForm}) => {
           </svg>
         </button>
         <iframe
-          frameBorder="0"
-          style="height:500px;width:99%;border:none;"
+          style={{height:"500px", width:"99%", border:"none"}}
           src="https://altumind.zohorecruit.com/forms/c3d3766175e9f426d11928e0e557d1573a8d18a12c1467931f0cafc4e274a036"
         />
       </div>
