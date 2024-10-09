@@ -216,22 +216,22 @@ const router = createBrowserRouter([
         path: "/wip",
         element: <WIP />,
       },
-      {
-        path: "/mission-and-vision",
-        element: <MissionAndVision />,
-      },
-      {
-        path: "/leadership",
-        element: <Leadership />,
-      },
-      {
-        path: "/about",
-        element: <AboutUs />,
-      },
-      {
-        path: "/industries/digital-commerce",
-        element: <DigitalCommerce />,
-      },
+      // {
+      //   path: "/mission-and-vision",
+      //   element: <MissionAndVision />,
+      // },
+      // {
+      //   path: "/leadership",
+      //   element: <Leadership />,
+      // },
+      // {
+      //   path: "/about",
+      //   element: <AboutUs />,
+      // },
+      // {
+      //   path: "/industries/digital-commerce",
+      //   element: <DigitalCommerce />,
+      // },
       {
         path: "/privacy",
         element: <Privacy />,

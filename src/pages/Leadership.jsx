@@ -1,6 +1,7 @@
 import Banner from "../Components/common-components/Banner"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
-import SubscribeForm from "../Components/leadership-components/Leaderboard"
+import LeaderBoard from "../Components/leadership-components/Leaderboard"
+import SubscribeForm from "../Components/common-components/SubscribeForm"
 import OurAspiration from "../Components/leadership-components/OurAspiration"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
@@ -11,7 +12,7 @@ const Leadership = () => {
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <Banner />
       <Overview />
-      <LeaderBoard />
+      <LeaderBoard/>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
         <div className="text-center font-raleway space-y-3 mb-10">
           <p className="text-sm md:text-base dark:text-white text-black font-semibold">
