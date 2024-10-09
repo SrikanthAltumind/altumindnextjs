@@ -14,6 +14,7 @@ import SettingUpForSuccess from "../Components/services-common/SettingUpForSucce
 import TechStack from "../Components/services-common/TechStack"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 import { gradientStyle } from "../ReactFunctions"
+import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
 
 
 const TechnologyAndEngineering = () => {
@@ -30,16 +31,16 @@ const TechnologyAndEngineering = () => {
    ];
   
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-12 lg:gap-16">
-        <Banner />
-  
-      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
+    <div className="dark:bg-darkTheme flex flex-col gap-12 lg:gap-16 relative">
+      <Banner />
+      <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme z-[2]">
         <Menu sections={servicesMenu} />
+        {/* <IndustriesMenu sectionsMenu={servicesMenu} /> */}
       </div>
-      <section id="section-1">
+      <section id="section1">
         <Overview />
       </section>
-      <section id="section-2">
+      <section id="section2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
           <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
             <p className="font-semibold">Our Engineering Services</p>
@@ -71,7 +72,9 @@ const TechnologyAndEngineering = () => {
         </div>
         <WhyAltumind />
       </section>
-      <section id="section4"><EngModel/></section>
+      <section id="section4">
+        <EngModel />
+      </section>
       <section id="section5">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
@@ -102,7 +105,7 @@ const TechnologyAndEngineering = () => {
       <section id="section8">
         <SuccessStories />
       </section>
-      <section id="section-9">
+      <section id="section9">
         <div className="text-center space-y-2 mb-20 font-raleway">
           <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
             Insights
@@ -113,8 +116,8 @@ const TechnologyAndEngineering = () => {
         </div>
         <InsightsBlogs />
       </section>
-       
-        <SubscribeForm />
+
+      <SubscribeForm />
     </div>
   );
 }

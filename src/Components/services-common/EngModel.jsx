@@ -11,8 +11,8 @@ const EngModel = () => {
     <p className="font-montserrat text-sm font-medium">At Altumind, we understand that every project is unique. That&apos;s why we offer a range of engagement models designed to fit your specific requirements, budget, and timeline. Our flexible approach ensures you get the most value from our partnership. Each of these models is designed to provide maximum flexibility and value, ensuring that we can meet your needs regardless of project size, complexity, or duration. Our team will work with you to determine the best fit for your specific situation.</p>
 </div>
 
-<div className='lg:hidden min-h-96 w-[85%] sm:w-[50%] py-10 ml-auto border-l-2 border-black dark:border-white dark:text-white flex  flex-col gap-y-28'>
-            <div className='-ml-[30px] sm:-ml-[45px] w-[300px] sm:w-[350px]  group flex items-center'>
+<div className='lg:hidden min-h-96 w-[85%] sm:w-[50%] mt-10 py-10 ml-auto border-l-2 border-black dark:border-white dark:text-white flex  flex-col gap-y-28'>
+            <div className='-ml-[30px] sm:-ml-[45px] w-[300px] sm:w-[350px] group flex items-center'>
              <div className='bg-gray-400   group-hover:bg-[#0A194A] dark:bg-DarkBackground  dark:group-hover:bg-[#0A194A] dark:border-gray-500 dark:group-hover:border-white flex items-center justify-center   w-[60px] h-[60px] shrink-0 sm:w-[90px] sm:h-[90px] rounded-full border-[4px] sm:border-[7px] border-white shadow-custom-shadow'>
                 <svg className="w-8 h-8 sm:w-10 group-hover:scale-125 duration-300 sm:h-10 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" 
@@ -90,7 +90,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
         </div>
     
 
-    <div className='hidden lg:flex h-[550px] dark:text-white px-10  justify-center'>
+    <div className='hidden lg:flex h-[550px] dark:text-white px-10 mt-10 justify-center'>
         <div className='border-2 border-t-0 border-black dark:border-white  p-1 items-center justify-center gap-5 w-[450px] xl:w-[550px] h-[300px] xl:h-[350px] relative rounded-b-full'>
             <div className='bg-gray-400 group  hover:bg-[#0A194A] dark:bg-DarkBackground  dark:hover:bg-[#0A194A] dark:border-gray-500 dark:hover:border-white flex items-center justify-center absolute top-3 -left-[45px]  w-[90px] h-[90px] rounded-full border-[7px] border-white shadow-custom-shadow'>
                 <svg className="w-10 h-10 text-white group-hover:scale-125 duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

@@ -78,7 +78,7 @@ const OpenRoles = () => {
 
   const handleSearch = () => {
     setLoading(true)
-    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*&filters[$or][0][open_role_department][departmentName][$contains]=${searchTerm}&filters[$or][1][open_role_experience][experienceLevel][$contains]=${searchTerm}&filters[$or][2][open_role_job_type][typeName][$contains]=${searchTerm}&filters[$or][3][open_role_job_location][country][$contains]=${searchTerm}&filters[$or][4][job_title][$contains]=${searchTerm}`)
+    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*&filters[$or][0][open_role_department][departmentName][$contains]=${searchTerm}&filters[$or][1][open_role_experience][experienceLevel][$contains]=${searchTerm}&filters[$or][2][open_role_job_types][typeName][$contains]=${searchTerm}&filters[$or][3][open_role_job_location][country][$contains]=${searchTerm}&filters[$or][4][job_title][$contains]=${searchTerm}`)
     .then((response) => {
       setJobs(response?.data?.data);
       setLoading(false);

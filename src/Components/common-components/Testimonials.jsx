@@ -74,7 +74,7 @@ const Testimonials = () => {
                 className=" dark:text-white mx-auto flex justify-center md:flex-row flex-col gap-x-16 gap-y-10"
                 key={item?.attributes?.name + index}
               >
-                <div className=" relative rounded-full mx-auto h-[250px] md:min-w-[250px] w-[250px]">
+                <div className="relative rounded-full mx-auto h-[250px] md:min-w-[250px] w-[250px]">
                   <img
                     className=" h-full w-full object-cover rounded-full"
                     src={item?.attributes?.image?.data?.attributes?.url}

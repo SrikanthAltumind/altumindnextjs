@@ -1,44 +1,43 @@
-import Banner from "../Components/common-components/Banner"
-import InsightsBlogs from "../Components/common-components/InsightsBlogs"
-import SolutionPartners from "../Components/common-components/SolutionPartners"
-import Spectrum from "../Components/common-components/Spectrum"
-import SubscribeForm from "../Components/common-components/SubscribeForm"
-import Testimonials from "../Components/common-components/Testimonials"
-import SuccessStories from "../Components/home-components/SuccessStories"
+import Banner from "../Components/common-components/Banner";
+import InsightsBlogs from "../Components/common-components/InsightsBlogs";
+import SolutionPartners from "../Components/common-components/SolutionPartners";
+import Spectrum from "../Components/common-components/Spectrum";
+import SubscribeForm from "../Components/common-components/SubscribeForm";
+import Testimonials from "../Components/common-components/Testimonials";
+import SuccessStories from "../Components/home-components/SuccessStories";
 // import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
-import EngModel from "../Components/services-common/EngModel"
-import Menu from "../Components/industries-common/Menu"
-import GetStarted from "../Components/services-common/GetStarted"
-import Overview from "../Components/services-common/Overview"
-import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
-import WhyAltumind from "../Components/services-common/WhyAltumind"
-import { gradientStyle } from "../ReactFunctions"
-
+import EngModel from "../Components/services-common/EngModel";
+import Menu from "../Components/industries-common/Menu";
+import GetStarted from "../Components/services-common/GetStarted";
+import Overview from "../Components/services-common/Overview";
+import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess";
+import WhyAltumind from "../Components/services-common/WhyAltumind";
+import { gradientStyle } from "../ReactFunctions";
 
 const DigitalStrategy = () => {
   const servicesMenu = [
     { id: "section1", tabId: "tab1", name: "Overview" },
     { id: "section2", tabId: "tab2", name: "Services" },
     { id: "section3", tabId: "tab3", name: "Why Us" },
-    { id: "section4", tabId: "tab4", name: "Our Models" },
+    { id: "section4", tabId: "tab4", name: "Our Model" },
     { id: "section5", tabId: "tab5", name: "Testimonials" },
     { id: "section6", tabId: "tab6", name: "Benefits" },
     { id: "section7", tabId: "tab7", name: "Tech Stack" },
     { id: "section8", tabId: "tab8", name: "Success" },
     { id: "section9", tabId: "tab9", name: "Insights" },
   ];
-    return (
-      <>
+  return (
+    <>
       <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-16">
-          <Banner />
-     
-        <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme">
+        <Banner />
+
+        <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme z-[2]">
           <Menu sections={servicesMenu} />
         </div>
-        <section id="section-1">
+        <section id="section1">
           <Overview />
         </section>
-        <section id="section-2">
+        <section id="section2">
           <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
             <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
               <p className="font-semibold">Our Digital Strategy & Consulting</p>
@@ -66,7 +65,9 @@ const DigitalStrategy = () => {
           </div>
           <WhyAltumind />
         </section>
-        <section id="section4"><EngModel/></section>
+        <section id="section4">
+          <EngModel />
+        </section>
         <section id="section5">
           <div className="text-center space-y-2 mb-20 font-raleway">
             <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
@@ -121,11 +122,11 @@ const DigitalStrategy = () => {
           </div>
           <InsightsBlogs />
         </section>
-       
+
         <SubscribeForm />
       </div>
-      </>
-    );
-}
+    </>
+  );
+};
 
-export default DigitalStrategy
+export default DigitalStrategy;

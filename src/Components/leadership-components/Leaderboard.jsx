@@ -56,7 +56,7 @@ const LeaderBoard = () => {
       <div className="font-raleway text-center dark:text-white mb-32">
             <p className='font-semibold'>Meet Our Leader Board</p>
             <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
-            Members & their brief history
+            Members & Their Brief History
             </p>
         </div>
          <div className="flex flex-col md:flex-row gap-x-28 gap-y-36 py-10 z-10 justify-center items-center text-center">

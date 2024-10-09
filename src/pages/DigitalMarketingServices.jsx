@@ -28,78 +28,81 @@ const DigitalMarketingServices = () => {
    ];
   return (
     <>
-    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
-    
+      <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner />
-  
-      <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme">
-        <Menu sections={servicesMenu} />
-      </div>
-      <section id="section-1">
-        <Overview />
-      </section>
-      <section id="section-2">
-        <ValueSection />
-      </section>
-      <section id="section-3" className="bg-[#F3F9FF] py-10">
-        <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
-            Why Altumind Stands Out
-          </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Leading the Way in Fulfilling Your Brand&apos;s Vision
-          </p>
-        </div>
-        <WhyAltumind />
-      </section>
-      <section id="section4"><EngModel/></section>
-      <section id="section5">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Client Testimonials
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            The Altumind Impact: In Their Words
-          </p>
-        </div>
-        <Testimonials />
-      </section>
-      <section id="section6">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Benefits
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            <span style={gradientStyle}>Blending creativity and Results </span>
-            <br />
-            <span className="text-[#02143b] darK:text-white">
-              to Elevate Your Brand
-            </span>
-          </p>
-        </div>
-        <SettingUpForSuccess />
-      </section>
-      <section id="section7">
-        <TechStack />
-      </section>
-      <GetStarted />
-      <section id="section8">
-        <SuccessStories />
-      </section>
-      <section id="section9">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
-            Insights
-          </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Dive into Our Latest Perspectives
-          </p>
-        </div>
-        <InsightsBlogs />
-      </section>
 
-      <SubscribeForm />
-    </div>
+        <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme z-[2]">
+          <Menu sections={servicesMenu} />
+        </div>
+        <section id="section1">
+          <Overview />
+        </section>
+        <section id="section2">
+          <ValueSection />
+        </section>
+        <section id="section3" className="bg-[#F3F9FF] py-10">
+          <div className="text-center font-raleway space-y-3 mb-10">
+            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+              Why Altumind Stands Out
+            </p>
+            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Leading the Way in Fulfilling Your Brand&apos;s Vision
+            </p>
+          </div>
+          <WhyAltumind />
+        </section>
+        <section id="section4">
+          <EngModel />
+        </section>
+        <section id="section5">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Client Testimonials
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              The Altumind Impact: In Their Words
+            </p>
+          </div>
+          <Testimonials />
+        </section>
+        <section id="section6">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Benefits
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              <span style={gradientStyle}>
+                Blending creativity and Results{" "}
+              </span>
+              <br />
+              <span className="text-[#02143b] darK:text-white">
+                to Elevate Your Brand
+              </span>
+            </p>
+          </div>
+          <SettingUpForSuccess />
+        </section>
+        <section id="section7">
+          <TechStack />
+        </section>
+        <GetStarted />
+        <section id="section8">
+          <SuccessStories />
+        </section>
+        <section id="section9">
+          <div className="text-center space-y-2 mb-20 font-raleway">
+            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+              Insights
+            </p>
+            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+              Dive into Our Latest Perspectives
+            </p>
+          </div>
+          <InsightsBlogs />
+        </section>
+
+        <SubscribeForm />
+      </div>
     </>
   );
 }

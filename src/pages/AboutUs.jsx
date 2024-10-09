@@ -35,7 +35,6 @@ const AboutUs = () => {
           </p>
         </div> */}
         <Timeline />
-
       </section>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
         <div className="text-center font-raleway space-y-3 mb-10">
@@ -77,15 +76,13 @@ const AboutUs = () => {
           </p>
         </div>
         <SolutionPartners />
-        <div className="text-center w-fit mx-auto space-y-3 mt-10 mb-5">
-          <p className="font-medium">Discover the advantages of our strategic network.</p>
-          <Link
-              to="/about/about-altumind/alliance"
-              className="group w-fit mx-auto underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1"
-            >
+        <div className="w-full flex flex-col justify-center items-center p-4 gap-6 mt-10 font-raleway font-medium text-center">
+          <p>Discover the advantages of our strategic network.</p>
+          <a href="/about/about-altumind/alliance" className="cursor-pointer">
+            <p className=" md:text-base text-sm flex gap-2 underline items-center w-fit group font-semibold text-[#DD5143]">
               Explore Our Alliances
               <svg
-                className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
+                className="w-5 h-5 group-hover:translate-x-3 transition-all duration-300"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -101,28 +98,35 @@ const AboutUs = () => {
                   d="M19 12H5m14 0-4 4m4-4-4-4"
                 />
               </svg>
-            </Link>
+            </p>
+          </a>
         </div>
       </section>
       <section className="w-full flex flex-col items-center justify-start">
-        <div className="w-[90%] max-w-[1100px] mx-auto lg:flex items-center justify-between dark:text-white">
-          <div className="basis-[65%] space-y-5">
-            <div className="font-raleway space-y-2 max-lg:text-center">
-              <p className="font-semibold dark:font-medium">
+        <div className="w-[90%] max-w-[1100px] mx-auto lg:flex-row flex flex-col text-center items-center justify-between dark:text-white">
+          <div className="md:w-[65%] w-full gap-6 flex-col flex md:items-start items-center">
+            <div className="font-raleway gap-3 flex flex-col md:items-start items-center justify-center">
+              <p className="font-semibold dark:font-medium max-w-[550px] w-full md:text-left text-center">
                 Our Shared Commitment
               </p>
-              <p className="lg:mx-0 max-w-[550px] text-3xl font-bold">
-                Empowering <br />
-                <span style={gradientStyle}>Green Transformations</span>
+              <p className="max-w-[550px] w-full text-3xl font-bold md:text-left text-center">
+                <span>Empowering</span>{" "}
+                <span style={gradientStyle}>
+                  Green
+                  <br /> Transformations
+                </span>
               </p>
             </div>
             {/* <div className="lg:hidden max-w-[320px] mx-auto">
           <img src={data?.image?.data?.attributes?.url} alt={data?.title} />
         </div> */}
-            <p className="font-montserrat font-medium dark:font-normal max-lg:text-center text-sm xl:text-base leading-6">
+            <p className="font-montserrat font-medium dark:font-normal md:text-left text-center text-sm xl:text-base leading-6">
               {`Sustainability is at the heart of everything we do. We empower businesses on their journey to a greener future by providing innovative digital solutions that optimize resource use, enhance transparency, and promote eco-conscious practices. Our own commitment to sustainability is unwavering, ensuring we're not just a provider of innovative digital solutions; we're a partner in your journey toward a greener future, fostering a collective commitment to a better world.`}
             </p>
-            <a href="/about/about-altumind/community-engagement" className="cursor-pointer text-[#DD5143] underline font-medium group flex gap-1 items-center">
+            <a
+              href="/about/about-altumind/community-engagement"
+              className="cursor-pointer text-[#DD5143] underline font-medium group flex md:justify-start justify-center gap-1 items-center w-full"
+            >
               <span>Learn more on our community page</span>
               <span>
                 <svg
@@ -143,7 +147,7 @@ const AboutUs = () => {
               </span>
             </a>
           </div>
-          <div className="basis-[32%] bg-red-10 max-w-[320px] hidden lg:block">
+          <div className="basis-[32%] bg-red-10 max-w-[320px] lg:block">
             <img
               className=""
               src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Our_shared_commitment_Compressify_io_e57b08a7b4.webp"

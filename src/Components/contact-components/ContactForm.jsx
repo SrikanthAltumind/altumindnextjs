@@ -3,38 +3,38 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
 import { useEffect, useState } from "react";
-import emailjs from '@emailjs/browser'
-
+import emailjs from "@emailjs/browser";
 
 const initialFormData = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    companyName: "",
-    howDidYouHearAboutUs:"",
-    message: "",
-    upload:"",
-  };
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  companyName: "",
+  howDidYouHearAboutUs: "",
+  message: "",
+  upload: "",
+};
 
 // eslint-disable-next-line react/prop-types
-const ContactForm = ({selectedForm}) => {
+const ContactForm = ({ selectedForm }) => {
   const [showPopup, setShowPopup] = useState(false);
-  const [file, setFile] = useState()
-  const [presignedUrl, setPresignedUrl] = useState()
-  const [initialValues, setInitialValues] = useState(initialFormData)
+  const [file, setFile] = useState();
+  const [presignedUrl, setPresignedUrl] = useState();
+  const [initialValues, setInitialValues] = useState(initialFormData);
 
-  let toMailID = ""
+  let toMailID = "";
 
-  if(selectedForm?.id === "project"){
-    toMailID ="sales@altumindglobal.com"
-  }else if(selectedForm?.id === "partner"){
-    toMailID = "info@altumindglobal.com"
-  }else if(selectedForm?.id === "general"){
-    toMailID = "business@altumindglobal.com"
+  if (selectedForm?.id === "project") {
+    toMailID = "sales@altumindglobal.com";
+  } else if (selectedForm?.id === "partner") {
+    toMailID = "info@altumindglobal.com";
+  } else if (selectedForm?.id === "general") {
+    toMailID = "business@altumindglobal.com";
   }
 
-  const requiredField = yes=> yes ? yup.string().required('Required') : yup.string()
+  const requiredField = (yes) =>
+    yes ? yup.string().required("Required") : yup.string();
 
   const validationSchema = yup.object({
     firstName: yup
@@ -57,18 +57,18 @@ const ContactForm = ({selectedForm}) => {
         (value) => !value.startsWith(" ")
       )
       .min(2, "Name is too short"),
-    companyName: requiredField(selectedForm?.id !== 'career')
-    //   .string()
+    companyName: requiredField(selectedForm?.id !== "career")
+      //   .string()
       .matches(/^[A-Za-z0-9 ]+$/, "Enter a valid name")
       .test(
         "leading-space",
         "Cannot start with space",
         // (value) => !value.startsWith(" ")
-        (value) => value ? !value.startsWith(" ") : true
+        (value) => (value ? !value.startsWith(" ") : true)
       )
       .min(4, "Name is too short"),
-    phone: requiredField(selectedForm?.id === 'career')
-    //   .string()
+    phone: requiredField(selectedForm?.id === "career")
+      //   .string()
       .matches(/^[0-9]+$/, "Enter only digits")
       .length(10, "Number should have 10 digits"),
     email: yup
@@ -78,148 +78,155 @@ const ContactForm = ({selectedForm}) => {
         /^[A-Z0-9._%+-]{3,}@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i,
         "Invalid email"
       ),
-      howDidYouHearAboutUs: yup
-      .string()
-      .required("Required"),
-    message: requiredField(selectedForm?.id !== 'career')
-    //   .string()
+    howDidYouHearAboutUs: yup.string().required("Required"),
+    message: requiredField(selectedForm?.id !== "career")
+      //   .string()
       .test(
         "leading-space",
         "Cannot start with space",
         // (value) => !value.startsWith(" ")
-        (value) => value ? !value.startsWith(" ") : true
+        (value) => (value ? !value.startsWith(" ") : true)
       )
       .min(2, "Message should have atleast 2 characters"),
   });
 
-  const sendData = async (formData, fileUrl=null) => {
-      if(selectedForm?.id==='career'){   //Career Form API
-        const payload = {
-          data: {
-            firstname: formData.firstName.trim(),
-            lastname: formData.lastName.trim(),
-            email: formData.email.trim(),
-            contact: formData.phone,
-            company: formData.companyName.trim(),
-            aboutyou: formData.message.trim(),
-            hearAboutUs: formData.howDidYouHearAboutUs.trim(),
-            // upload: fileUrl.split('?')[0],
-          },
-        };
-        console.log('Career Form Data Payload', payload)
-        await axios.post(`${import.meta.env.VITE_APP_API_URL}api/contact-for-careers`, payload)
-        console.log('Career data sent successfully!');
-      }
-      else{   //Projects, Partnership, General Forms API
-        const payload = {
-          data: {
-            firstname: formData.firstName.trim(),
-            lastname: formData.lastName.trim(),
-            email: formData.email.trim(),
-            phone: formData.phone,
-            company: formData.companyName.trim(),
-            hearAbout: formData.howDidYouHearAboutUs.trim(),
-            message: formData.message.trim(),
-            // upload: fileUrl.split('?')[0],
-            formType: selectedForm?.id,
-          },
-        };
-        console.log('Form Data Payload', payload)
-        await axios.post(`${import.meta.env.VITE_APP_API_URL}api/contact-for-projects`, payload)
-        console.log('Contact data sent successfully!');
-      }
+  const sendData = async (formData, fileUrl = null) => {
+    if (selectedForm?.id === "career") {
+      //Career Form API
+      const payload = {
+        data: {
+          firstname: formData.firstName.trim(),
+          lastname: formData.lastName.trim(),
+          email: formData.email.trim(),
+          contact: formData.phone,
+          company: formData.companyName.trim(),
+          aboutyou: formData.message.trim(),
+          hearAboutUs: formData.howDidYouHearAboutUs.trim(),
+          // upload: fileUrl.split('?')[0],
+        },
+      };
+      console.log("Career Form Data Payload", payload);
+      await axios.post(
+        `${import.meta.env.VITE_APP_API_URL}api/contact-for-careers`,
+        payload
+      );
+      console.log("Career data sent successfully!");
+    } else {
+      //Projects, Partnership, General Forms API
+      const payload = {
+        data: {
+          firstname: formData.firstName.trim(),
+          lastname: formData.lastName.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone,
+          company: formData.companyName.trim(),
+          hearAbout: formData.howDidYouHearAboutUs.trim(),
+          message: formData.message.trim(),
+          // upload: fileUrl.split('?')[0],
+          formType: selectedForm?.id,
+        },
+      };
+      console.log("Form Data Payload", payload);
+      await axios.post(
+        `${import.meta.env.VITE_APP_API_URL}api/contact-for-projects`,
+        payload
+      );
+      console.log("Contact data sent successfully!");
+    }
   };
-
 
   const getPresignedurl = async (file) => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${file.type}&filename=${file.name}`,{withCredentials:true});
-      console.log('getPresignedurl',response?.data?.data);
+      const response = await axios.get(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${
+          file.type
+        }&filename=${file.name}`,
+        { withCredentials: true }
+      );
+      console.log("getPresignedurl", response?.data?.data);
       if (response.data && response.data.data) {
         setPresignedUrl(response.data.data);
         return response.data.data;
       } else {
-        console.error('Presigned URL not found in the response.');
+        console.error("Presigned URL not found in the response.");
         return null;
       }
-    
     } catch (error) {
-      console.error('Error fetching presigned URL:', error);
+      console.error("Error fetching presigned URL:", error);
     }
   };
 
-//   const uploadFile = async () => {
-//     try {
-//       const presignedUrlResponse = await getPresignedurl(file);
-//       if (!presignedUrlResponse) {
-//         console.error('Presigned URL is null or undefined.');
-//         // Handle this case appropriately, e.g., display an error message
-//         return;
-//       }
-//       await axios.put(presignedUrlResponse.url, file, {withCredentials:true,  'Content-Type': file.type})
-//       console.log('File uploaded successfully!');
-//       console.log('filetype', file.type);
-//       await sendData(presignedUrlResponse.url);
-//       setUploadSuccess(true);
-//       setPopUp(true)
+  //   const uploadFile = async () => {
+  //     try {
+  //       const presignedUrlResponse = await getPresignedurl(file);
+  //       if (!presignedUrlResponse) {
+  //         console.error('Presigned URL is null or undefined.');
+  //         // Handle this case appropriately, e.g., display an error message
+  //         return;
+  //       }
+  //       await axios.put(presignedUrlResponse.url, file, {withCredentials:true,  'Content-Type': file.type})
+  //       console.log('File uploaded successfully!');
+  //       console.log('filetype', file.type);
+  //       await sendData(presignedUrlResponse.url);
+  //       setUploadSuccess(true);
+  //       setPopUp(true)
 
-//     }catch(error){
-//       console.error('Error uploading file:', error);
-//       if (error.response) {
-//         // The request was made and the server responded with a status code
-//         console.error('Response status:', error.response.status);
-//         console.error('Response data:', error.response.data);
-//       } else if (error.request) {
-//         // The request was made but no response was received
-//         console.error('No response received:', error.request);
-//       } else {
-//         // Something happened in setting up the request that triggered an Error
-//         console.error('Request setup error:', error.message);
-//       }
-//     }finally {
-//       // setUploading(false);
-//       setSubmitting(false);
-//     }
-// };
-
-const sendMail = formData => {
-  const serviceID = import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID //old service_oik8vde
-  const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID  //old template_1f6ib6b
-  const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY  //old ZRpWuyBwxaFOkFcGf
- 
-  const templateParams = {
-    ...formData,
-    to_mail: toMailID, 
-    form_name: selectedForm?.name,
-    page_url: window.location.href,
-  }
-  console.log('templateParams:',templateParams)
-  // emailjs.send(serviceID, templateID, templateParams, publicKey)
-  //   .then(response=> {
-  //     if(response.status===200){
-  //     console.log('Data mail sent Successfully..!')
-  //     console.log(response)
-  //     // no-replay mail
-  //     emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
-  //             .then(response=> {
-  //               if(response.status===200){
-  //               console.log('Thank you mail sent Successfully..!')
-  //               console.log(response)
-  //               }
-  //             })
-  //             .catch(error=> {
-  //               console.error(error)
-  //             })
+  //     }catch(error){
+  //       console.error('Error uploading file:', error);
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         console.error('Response status:', error.response.status);
+  //         console.error('Response data:', error.response.data);
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         console.error('No response received:', error.request);
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.error('Request setup error:', error.message);
+  //       }
+  //     }finally {
+  //       // setUploading(false);
+  //       setSubmitting(false);
   //     }
-  //   })
-  //   .catch(error=> {
-  //     console.error(error)
-  //   })
-}
+  // };
+
+  const sendMail = (formData) => {
+    const serviceID = import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID; //old service_oik8vde
+    const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID; //old template_1f6ib6b
+    const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY; //old ZRpWuyBwxaFOkFcGf
+
+    const templateParams = {
+      ...formData,
+      to_mail: toMailID,
+      form_name: selectedForm?.name,
+      page_url: window.location.href,
+    };
+    console.log("templateParams:", templateParams);
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(response=> {
+        if(response.status===200){
+        console.log('Data mail sent Successfully..!')
+        console.log(response)
+        // no-replay mail
+        emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
+                .then(response=> {
+                  if(response.status===200){
+                  console.log('Thank you mail sent Successfully..!')
+                  console.log(response)
+                  }
+                })
+                .catch(error=> {
+                  console.error(error)
+                })
+        }
+      })
+      .catch(error=> {
+        console.error(error)
+      })
+  };
 
   const onSubmit = async (formData, { resetForm }) => {
     try {
-
       // const presignedUrlResponse = await getPresignedurl(file);
       // if (!presignedUrlResponse) {
       //   console.error('Presigned URL is null or undefined.');
@@ -232,38 +239,37 @@ const sendMail = formData => {
       await sendData(formData);
       sendMail(formData);
       // await sendData(formData, presignedUrlResponse.url);
-      console.log('Resetting Form')
+      console.log("Resetting Form");
       resetForm();
       setShowPopup(true);
-
-    }catch(error){
-      console.error('Error submitting form:', error);
+    } catch (error) {
+      console.error("Error submitting form:", error);
       if (error.response) {
         // The request was made and the server responded with a status code
-        console.error('Response status:', error.response.status);
-        console.error('Response data:', error.response.data);
+        console.error("Response status:", error.response.status);
+        console.error("Response data:", error.response.data);
       } else if (error.request) {
         // The request was made but no response was received
-        console.error('No response received:', error.request);
+        console.error("No response received:", error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.error('Request setup error:', error.message);
+        console.error("Request setup error:", error.message);
       }
-    }finally {
-      console.log('Finally-BLock..........')
+    } finally {
+      console.log("Finally-BLock..........");
     }
-  }
+  };
 
   let formik = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
   });
-  
-  useEffect(()=> {
-    setInitialValues(initialFormData)
-    console.log(selectedForm)
-  }, [selectedForm])
+
+  useEffect(() => {
+    setInitialValues(initialFormData);
+    console.log(selectedForm);
+  }, [selectedForm]);
 
   return (
     <form
@@ -418,9 +424,7 @@ const sendMail = formData => {
             {...formik.getFieldProps("howDidYouHearAboutUs")}
           >
             <option className="dark:bg-DarkBackground" value="">
-              
-                How did you hear about us ? *
-              
+              How did you hear about us ? *
             </option>
             <option className="dark:bg-DarkBackground" value="Ad Campaign">
               Ad Campaign{" "}
@@ -443,10 +447,7 @@ const sendMail = formData => {
             >
               Business Directory
             </option>
-            <option
-              className="dark:bg-DarkBackground"
-              value="Job Portal"
-            >
+            <option className="dark:bg-DarkBackground" value="Job Portal">
               Job Portal
             </option>
             <option
@@ -505,7 +506,9 @@ const sendMail = formData => {
           {selectedForm?.id === "career"
             ? "A little about you:"
             : "How can we help ?"}
-          {selectedForm?.id !== "career" && <span className="text-red-500">*</span>}
+          {selectedForm?.id !== "career" && (
+            <span className="text-red-500">*</span>
+          )}
         </label>
         <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
         {formik.touched.message && formik.errors.message && (
