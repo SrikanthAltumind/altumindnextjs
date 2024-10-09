@@ -16,25 +16,42 @@ export const Navbardata = [
       {
         innerMenu: "About Altumind",
         path: "/about",
-        children: [
-          {
-            name: "Mission and Vision",
+       
+      },
+         {
+          innerMenu: "Mission and Vision",
             path: "/about/about-altumind/mission-and-vision",
           },
           {
-            name: "Leadership",
+            innerMenu: "Leadership",
             path: "/about/about-altumind/leadership",
-          },
+           },
+           {
+             innerMenu: "Alliance",
+             path: "/about/about-altumind/alliance",
+           },
           {
-            name: "Alliance",
-            path: "/about/about-altumind/alliance",
-          },
-          {
-            name: "Community Engagement",
+            innerMenu: "Community Engagement",
             path: "/about/about-altumind/community-engagement",
-          },
-        ],
-      },
+           },
+            // children: [
+        //   {
+        //     name: "Mission and Vision",
+        //     path: "/about/about-altumind/mission-and-vision",
+        //   },
+        //   {
+        //     name: "Leadership",
+        //     path: "/about/about-altumind/leadership",
+        //   },
+        //   {
+        //     name: "Alliance",
+        //     path: "/about/about-altumind/alliance",
+        //   },
+        //   {
+        //     name: "Community Engagement",
+        //     path: "/about/about-altumind/community-engagement",
+        //   },
+        // ],
     ],
   },
   {
@@ -44,222 +61,238 @@ export const Navbardata = [
       {
         innerMenu: "Experience Design",
         path: "/services/experience-design",
-        children: [
-          {
-            name: "UI Design",
-            path: "/services/experience-design/ui-design",
-          },
-          {
-            name: "UX Design",
-            path: "/services/experience-design/ux-design",
-          },
-          {
-            name: "CX Design",
-            path: "/services/experience-design/cx-design",
-          },
-        ],
+        // children: [
+        //   {
+        //     name: "UI Design",
+        //     // path: "/services/experience-design/ui-design",
+        //     path: "/services/experience-design",
+            
+        //   },
+        //   {
+        //     name: "UX Design",
+        //     // path: "/services/experience-design/ux-design",
+        //     path: "/services/experience-design",
+        //   },
+        //   {
+        //     name: "CX Design",
+        //     // path: "/services/experience-design/cx-design",
+        //     path: "/services/experience-design",
+        //   },
+        // ],
       },
       {
-        innerMenu: "Technology and Engineering",
+        innerMenu: "Technology & Engineering",
         path: "/services/technology-and-engineering",
-        children: [
-          {
-            name: "Web Development",
-            path: "/services/technology-and-engineering/web-development",
-          },
-          {
-            name: "Mobile App Development",
-            path: "/services/technology-and-engineering/mobile-app-development",
-          },
-          {
-            name: "ERP Integration",
-            path: "/services/technology-and-engineering/erp-integration",
-          },
-          {
-            name: "Ecommerce Services",
-            path: "/services/technology-and-engineering/ecommerce-services",
-          },
-        ],
+        // children: [
+        //   {
+        //     name: "Web Development",
+        //     // path: "/services/technology-and-engineering/web-development",
+        //     path: "/services/technology-and-engineering",
+        //   },
+        //   {
+        //     name: "Mobile App Development",
+        //     // path: "/services/technology-and-engineering/mobile-app-development",
+        //     path: "/services/technology-and-engineering",
+        //   },
+        //   {
+        //     name: "ERP Integration",
+        //     // path: "/services/technology-and-engineering/erp-integration",
+        //     path: "/services/technology-and-engineering",
+        //   },
+        //   {
+        //     name: "Ecommerce Services",
+        //     // path: "/services/technology-and-engineering/ecommerce-services",
+        //     path: "/services/technology-and-engineering",
+        //   },
+        // ],
       },
       {
         innerMenu: "AI & Automation",
         path: "/services/ai-automation",
-        children: [
-          {
-            name: "Conversational AI & Chatbot",
-            path: "/services/ai-automation/conversational-ai",
-          },
-          {
-            name: "RPA",
-            path: "/services/ai-automation/ai-chatbot",
-          },
-        ],
+        // children: [
+        //   {
+        //     name: "Conversational AI & Chatbot",
+        //     // path: "/services/ai-automation/conversational-ai",
+        //     path: "/services/ai-automation",
+        //   },
+        //   {
+        //     name: "RPA",
+        //     // path: "/services/ai-automation/ai-chatbot",
+        //     path: "/services/ai-automation",
+        //   },
+        // ],
       },
       {
-        innerMenu: "Quality Assurance & Testing Services",
+        innerMenu: "QA & Testing Services",
         path: "/services/quality-assurance",
-        children: [
-          {
-            name: "Automation Testing",
-            path: "/services/quality-assurance/platforms",
-          },
-          {
-            name: "Security Testing",
-            path: "/services/quality-assurance/industries",
-          },
-          {
-            name: "Performance Testing",
-            path: "/services/quality-assurance/levels-of-software-testing-services",
-          },
-          {
-            name: "QA Consulting",
-            path: "/services/quality-assurance/test-management",
-          },
-          // {
-          //   name: "Defect Management",
-          //   path: "/services/quality-assurance/defect-management",
-          // },
-          // {
-          //   name: "Other QA Services",
-          //   path: "/services/quality-assurance/other-qa-services",
-          // },
-          // {
-          //   name: "Resources",
-          //   path: "/services/quality-assurance/resources",
-          // },
-        ],
+        // children: [
+        //   {
+        //     name: "Automation Testing",
+        //     // path: "/services/quality-assurance/platforms",
+        //     path: "/services/quality-assurance",
+        //   },
+        //   {
+        //     name: "Security Testing",
+        //     // path: "/services/quality-assurance/industries",
+        //     path: "/services/quality-assurance",
+        //   },
+        //   {
+        //     name: "Performance Testing",
+        //     // path: "/services/quality-assurance/levels-of-software-testing-services",
+        //     path: "/services/quality-assurance",
+        //   },
+        //   {
+        //     name: "QA Consulting",
+        //     // path: "/services/quality-assurance/test-management",
+        //     path: "/services/quality-assurance",
+        //   },
+        //   // {
+        //   //   name: "Defect Management",
+        //   //   path: "/services/quality-assurance/defect-management",
+        //   // },
+        //   // {
+        //   //   name: "Other QA Services",
+        //   //   path: "/services/quality-assurance/other-qa-services",
+        //   // },
+        //   // {
+        //   //   name: "Resources",
+        //   //   path: "/services/quality-assurance/resources",
+        //   // },
+        // ],
       },
       {
         innerMenu: "Cloud",
         path: "/services/cloud",
-        children: [
-          {
-            name: "Cloud Migration",
-            path: "/services/cloud/cloud",
-          },
-          {
-            name: "Cloud App Services",
-            path: "/services/cloud/rpa",
-          },
-        ],
+        // children: [
+        //   {
+        //     name: "Cloud Migration",
+        //     // path: "/services/cloud/cloud",
+        //     path: "/services/cloud",
+        //   },
+        //   {
+        //     name: "Cloud App Services",
+        //     // path: "/services/cloud/rpa",
+        //     path: "/services/cloud",
+        //   },
+        // ],
       },
       {
         innerMenu: "Digital Marketing",
         path: "/services/digital-marketing",
-        children: [
-          {
-            name: "Branding & Design",
-            path: "/services/digital-marketing/branding-design",
-          },
-          {
-            name: "Marketing Services",
-            path: "/services/digital-marketing/marketing-services",
-          },
-          // {
-          //   name: "Paid Advertising",
-          //   path: "/services/digital-marketing/paid-advertising",
-          // },
-          {
-            name: "Marketing Optimization",
-            path: "/services/digital-marketing/marketing-optimization",
-          },
-          // {
-          //   name: "Analytics & Strategy Consulting",
-          //   path: "/services/digital-marketing/analytics-strategy-consulting",
-          // },
-          // {
-          //   name: "Marketing Automation",
-          //   path: "/services/digital-marketing/marketing-automation",
-          // },
-        ],
+        // children: [
+        //   {
+        //     name: "Branding & Design",
+        //     path: "/services/digital-marketing/branding-design",
+        //   },
+        //   {
+        //     name: "Marketing Services",
+        //     path: "/services/digital-marketing/marketing-services",
+        //   },
+        //   // {
+        //   //   name: "Paid Advertising",
+        //   //   path: "/services/digital-marketing/paid-advertising",
+        //   // },
+        //   {
+        //     name: "Marketing Optimization",
+        //     path: "/services/digital-marketing/marketing-optimization",
+        //   },
+        //   // {
+        //   //   name: "Analytics & Strategy Consulting",
+        //   //   path: "/services/digital-marketing/analytics-strategy-consulting",
+        //   // },
+        //   // {
+        //   //   name: "Marketing Automation",
+        //   //   path: "/services/digital-marketing/marketing-automation",
+        //   // },
+        // ],
       },
       {
         innerMenu: "Data Analytics",
         path: "/services/data-analytics",
-        children: [
-          {
-            id: 1,
-            name: "Business Intelligence",
-            url: "/services/data-analytics/business-intelligence",
-          },
-          {
-            id: 2,
-            name: "Digital Intelligence",
-            url: "/services/data-analytics/digital-intelligence",
-          },
-          {
-            id: 3,
-            name: "Marketing Intelligence",
-            url: "/services/data-analytics/marketing-intelligence",
-          },
-          {
-            id: 4,
-            name: "Customer 360",
-            url: "/services/data-analytics/customer-360",
-          },
-          {
-            id: 5,
-            name: "Sales Intelligence",
-            url: "/services/data-analytics/sales-intelligence",
-          },
-        ],
+        // children: [
+        //   {
+        //     id: 1,
+        //     name: "Business Intelligence",
+        //     url: "/services/data-analytics/business-intelligence",
+        //   },
+        //   {
+        //     id: 2,
+        //     name: "Digital Intelligence",
+        //     url: "/services/data-analytics/digital-intelligence",
+        //   },
+        //   {
+        //     id: 3,
+        //     name: "Marketing Intelligence",
+        //     url: "/services/data-analytics/marketing-intelligence",
+        //   },
+        //   {
+        //     id: 4,
+        //     name: "Customer 360",
+        //     url: "/services/data-analytics/customer-360",
+        //   },
+        //   {
+        //     id: 5,
+        //     name: "Sales Intelligence",
+        //     url: "/services/data-analytics/sales-intelligence",
+        //   },
+        // ],
       },
       {
         innerMenu: "Managed Operations",
         path: "/services/managed-operations",
-        children: [
-          {
-            id: 1,
-            name: "Product Innovation & Management",
-            url: "/services/managed-operations/product-innovation-management",
-          },
-          {
-            id: 2,
-            name: "Website Operations & Management",
-            url: "services/managed-operations/website-operations-management",
-          },
-          {
-            id: 3,
-            name: "Cloud Management",
-            url: "services/managed-operations/cloud-management",
-          },
-          {
-            id: 4,
-            name: "Software Maintenance & Support",
-            url: "services/managed-operations/software-maintenance-support",
-          },
-        ],
+        // children: [
+        //   {
+        //     id: 1,
+        //     name: "Product Innovation & Management",
+        //     url: "/services/managed-operations/product-innovation-management",
+        //   },
+        //   {
+        //     id: 2,
+        //     name: "Website Operations & Management",
+        //     url: "services/managed-operations/website-operations-management",
+        //   },
+        //   {
+        //     id: 3,
+        //     name: "Cloud Management",
+        //     url: "services/managed-operations/cloud-management",
+        //   },
+        //   {
+        //     id: 4,
+        //     name: "Software Maintenance & Support",
+        //     url: "services/managed-operations/software-maintenance-support",
+        //   },
+        // ],
       },
       {
-        innerMenu: "Digital Strategy and Consulting",
+        innerMenu: "Digital Strategy & Consulting",
         path: "/services/digital-strategy-consulting",
-        children: [
-          {
-            id: 1,
-            name: "Digital Experience & Engagement",
-            url: "/services/digital-strategy/digital-experience-engagement",
-          },
-          {
-            id: 2,
-            name: "Digital Build",
-            url: "/services/digital-strategy/digital-build",
-          },
-          {
-            id: 3,
-            name: "Digital Modernization",
-            url: "/services/digital-strategy/digital-modernization",
-          },
-          {
-            id: 4,
-            name: "Digital Audits",
-            url: "/services/digital-strategy/digital-audits",
-          },
-          {
-            id: 5,
-            name: "Incubation Of Products & Services",
-            url: "/services/data-analytics/incubaton-products-services",
-          },
-        ],
+        // children: [
+        //   {
+        //     id: 1,
+        //     name: "Digital Experience & Engagement",
+        //     url: "/services/digital-strategy/digital-experience-engagement",
+        //   },
+        //   {
+        //     id: 2,
+        //     name: "Digital Build",
+        //     url: "/services/digital-strategy/digital-build",
+        //   },
+        //   {
+        //     id: 3,
+        //     name: "Digital Modernization",
+        //     url: "/services/digital-strategy/digital-modernization",
+        //   },
+        //   {
+        //     id: 4,
+        //     name: "Digital Audits",
+        //     url: "/services/digital-strategy/digital-audits",
+        //   },
+        //   {
+        //     id: 5,
+        //     name: "Incubation Of Products & Services",
+        //     url: "/services/data-analytics/incubaton-products-services",
+        //   },
+        // ],
       },
     ],
   },
@@ -377,11 +410,13 @@ const Navbar = () => {
               {" "}
             </div>
           )}
-          <ul className="flex mr-3 h-full relative font-montserrat">
+          {/* <ul className="flex mr-3 h-full relative font-montserrat"> */}
+          <ul className="flex mr-3 h-full  font-montserrat">
             {Navbardata?.map((item, index) => (
               <li
                 key={index}
-                className="h-full flex items-center"
+                className="h-full relative flex items-center"
+                // className="h-full flex items-center"
                 onMouseEnter={() => handleMouseEnter(item)}
                 onMouseLeave={handleMouseLeave}
               >

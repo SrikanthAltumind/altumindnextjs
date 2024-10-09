@@ -4,20 +4,24 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const MegaMenu = ({ item, onMouseLeave }) => {
   // eslint-disable-next-line react/prop-types
-  const [subMenu, setSubMenu] = useState(item.children[0]);
+  const [subMenu, setSubMenu] = useState();
   return (
       <div
-      className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[820px] top-[70px] z-20"
+      // className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[820px] top-[70px] z-20"
+       className={`absolute dark:text-black mx-auto ${item?.menu === 'Career' ? 'right-0': '-right-[calc(150px-50%)]'} w-[300px] top-[70px] z-20`}
         onMouseLeave={onMouseLeave}
       >
-        <div className=" rounded-lg  shadow-lg bg-[#F3F9FF] p-5 mt-3 ">
+        <div className=" rounded-b-xl  shadow-lg bg-[#F3F9FF] p-3 mt-3 ">
           <div className="flex text-[13px] font-medium justify-between w-full h-full">
             {/*  eslint-disable-next-line react/prop-types */}
             <div
-              className="basis-[60%] flex h-full"
-              onMouseLeave={() => setSubMenu(item?.children[0])}
+              // className="basis-[60%] bg-slate-400 flex h-full"
+               className="  w-full flex h-full"
+              // onMouseLeave={() => setSubMenu(item?.children[0])}
+              onMouseLeave={() => setSubMenu()}
             >
-              <div className="border-r min-h-[300px] basis-[50%] w-full h-full">
+              {/* border-r basis-[50%] min-h-[300px]  needs to be added below when submenus are present */}
+              <div className="w-full h-full"> 
                 <ul className="text-black font-montserrat">
                   {
                     // eslint-disable-next-line react/prop-types
@@ -33,7 +37,24 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                           } rounded-md flex justify-between group font-semibold capitalize items-center  p-2 m-2`}
                         >
                           {child.innerMenu}
-                          {child?.children?.length > 0 && (
+                          <svg
+                              className='w-5 h-5'
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="m9 5 7 7-7 7"
+                              />
+                            </svg>
+                          {/* {child?.children?.length > 0 && (
                             <svg
                               className={`${
                                 subMenu?.innerMenu === child.innerMenu
@@ -55,7 +76,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                                 d="m9 5 7 7-7 7"
                               />
                             </svg>
-                          )}
+                          )} */}
                         </li>
                       </Link>
                     ))
@@ -63,7 +84,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                 </ul>
               </div>
 
-              <div className="basis-[50%]">
+              {/* <div className="basis-[50%]">
                 <ul className="font-montserrat">
                   {subMenu?.children?.map((child, index) => (
                     <li
@@ -75,7 +96,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
