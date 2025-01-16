@@ -12,7 +12,8 @@ import GetStarted from "../Components/services-common/GetStarted";
 import Overview from "../Components/services-common/Overview";
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess";
 import WhyAltumind from "../Components/services-common/WhyAltumind";
-import { gradientStyle } from "../ReactFunctions";
+// import { gradientStyle } from "../ReactFunctions";
+import { Helmet } from "react-helmet-async";
 
 const DigitalStrategy = () => {
   const servicesMenu = [
@@ -28,6 +29,22 @@ const DigitalStrategy = () => {
   ];
   return (
     <>
+    <Helmet>
+      {/* For SEO  */}
+      <title>Digital Strategy Services | Best Digital Strategy consultant</title>
+      <meta
+        name="description"
+        content="Need a winning digital strategy? Our digital strategy services and experienced digital strategist consultants provide the insights to grow your business online."
+      />
+      <meta name="keywords" content="digital strategy services, it strategy consulting services, digital strategist consultant, digital strategy consulting firms, digital strategy consulting companies" />
+      {/* For Social Media */}
+      <meta property="og:title" content="Digital Strategy Services | Best Digital Strategy consultant" />
+      <meta property="og:description" content="Need a winning digital strategy? Our digital strategy services and experienced digital strategist consultants provide the insights to grow your business online." />
+      <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+      <meta property="og:keywords" content="managed application services, infrastructure managed services, operations managed services, Cloud managed services, it management consulting, it management company, it and management consulting" />
+      {/* canonical */}
+      <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting" />
+    </Helmet>
       <div className="dark:bg-darkTheme flex flex-col gap-16 lg:gap-16">
         <Banner />
 
@@ -39,14 +56,14 @@ const DigitalStrategy = () => {
         </section>
         <section id="section2">
           <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-            <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-              <p className="font-semibold">Our Digital Strategy & Consulting</p>
-              <p className="text-3xl font-extrabold md:max-w-[500px]">
-                <span style={gradientStyle}>
+            <div className="space-y-3 text-center">
+              <p className="custom-sub-heading">Our Digital Strategy & Consulting</p>
+              <p className="custom-gradient-text">
+              
                   Offering End-to-End Support
                   <br />
-                </span>
-                <span>for Your Digital Visions</span>
+             
+                for Your Digital Visions
               </p>
             </div>
             <div className="w-full flex justify-center items-center">
@@ -56,10 +73,10 @@ const DigitalStrategy = () => {
         </section>
         <section id="section3" className="bg-[#F3F9FF] py-8">
           <div className="text-center font-raleway space-y-3 mb-10">
-            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+            <p className="custom-sub-heading">
               Why Altumind Stands Out
             </p>
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text">
               Ensuring your business win in the digital world
             </p>
           </div>
@@ -69,39 +86,38 @@ const DigitalStrategy = () => {
           <EngModel />
         </section>
         <section id="section5">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Client Testimonials
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               The Altumind Impact: In Their Words
             </p>
           </div>
           <Testimonials />
         </section>
         <section id="section6">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Benefits
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-              <span className="text-[#02143b] dark:text-white">
-                Leaping Ahead with{" "}
-              </span>
-              <span style={gradientStyle}>
+            <p className="custom-gradient-text">
+                Leaping Ahead with
+            
+              
                 Value-Driven
                 <br /> Digital Solutions
-              </span>
+          
             </p>
           </div>
           <SettingUpForSuccess />
         </section>
         <section id="section7">
           <div className="text-center space-y-3 mb-10 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+            <p className="custom-sub-heading">
               Tech Stack
             </p>
-            <p className=" font-extrabold w-fit mx-auto text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Harnessing the Power of Leading Technologies
             </p>
           </div>
@@ -109,14 +125,14 @@ const DigitalStrategy = () => {
         </section>
         <GetStarted />
         <section id="section8">
-          <SuccessStories />
+          <SuccessStories heading="Transforming Challenges into Triumphs"/>
         </section>
         <section id="section9">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Insights
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Dive into Our Latest Perspectives
             </p>
           </div>

@@ -44,21 +44,28 @@ if (loading) {
         <div className='w-[90%] bg-red-00 max-w-[1100px] gap-10 mx-auto flex flex-col-reverse items-center lg:flex-row '>
             <div className='basis-[50%] grow lg:pt-10 max-sm:text-center'>
               <div className='hidden lg:block'>
-                <p className='font-extrabold text-3xl xl:text-4xl bg-clip-text text-transparent w-fit  bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>
+                <div className='space-y-3'>
+                <p className='custom-gradient-text mx-0'>
                {data?.title}
                 </p>
-                <p className='font-semibold mt-3 text-sm'>{data?.heading}</p>
+                <p className='custom-sub-heading'>{data?.heading}</p>
+                </div>
+                
                 </div>
                 <p className='leading-[32px] lg:text-left text-center font-medium lg:my-8'>{data?.description}</p>
             </div>
-            <div className='basis-[50%] max-w-[350px]  lg:max-w-[420px]'>
-            <div className='lg:hidden mb-8'>
-                <p className='font-extrabold text-2xl bg-clip-text text-transparent w-fit mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>
+            <div className='basis-[50%]'>
+           
+              <div className='space-y-3 text-center lg:hidden mb-8'>
+              <p className='custom-gradient-text'>
                {data?.title}
                 </p>
-                <p className='font-semibold mt-1 md:mt-3 text-center text-sm'>{data?.heading}</p>
-                </div>
+                <p className='custom-sub-heading'>{data?.heading}</p>
+              </div>
+               
+             <div className=' max-w-[350px]  lg:max-w-[420px]'>
                 <img src={data?.image?.data?.attributes?.url} className='mx-auto' alt={data?.title}/>
+                </div>
             </div>
         </div>
     </div>

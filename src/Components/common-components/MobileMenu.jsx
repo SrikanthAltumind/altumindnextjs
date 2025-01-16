@@ -71,7 +71,7 @@ const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
               navigate("/contact")
             }}
           >
-            Let&apos;s Talk
+           Discuss
           </button>
         </div>
       </div>

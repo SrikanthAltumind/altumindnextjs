@@ -222,13 +222,13 @@ const BeyondTheScreen = () => {
   }
  
   return (
-    <section className=" md:w-[90%] bg-[#F3F9FF] dark:bg-[#25282c] dark:text-white mx-auto font-raleway">
+    <div className=" md:w-[90%] w-full bg-[#F3F9FF] dark:bg-[#25282c] dark:text-white mx-auto font-raleway">
       <div className="px-5 py-5 flex lg:flex-row flex-col gap-7 justify-center items-center lg:items-start">
         <div className="lg:hidden space-y-1 text-center">
-          <p className="font-extrabold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             {data?.title}
           </p>
-          <p className="md:text-lg dark:text-white text-black font-semibold">
+          <p className="custom-sub-heading">
             {data?.heading}
           </p>
         </div>
@@ -317,10 +317,10 @@ const BeyondTheScreen = () => {
         </div>
         <div className="basis-[50%]">
           <div className="hidden lg:block space-y-3 mb-10">
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text mx-0">
               {data?.title}
             </p>
-            <p className="text-lg md:text-xl dark:text-white text-black font-semibold">
+            <p className="custom-sub-heading">
               {data?.heading}
             </p>
           </div>
@@ -331,7 +331,7 @@ const BeyondTheScreen = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
  

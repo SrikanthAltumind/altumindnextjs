@@ -70,11 +70,11 @@ const OurTeamSpeaks = () => {
   //123456
   return (
     <div className='bg-gray-3 w-full dark:text-white font-raleway'>
-        <div className='text-center mb-5'>
-            <p className='bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue  font-extrabold text-3xl xl:text-4xl w-fit mx-auto'>
-                 <span className='text-transparent '>Our Team Speaks</span>
+        <div className='text-center space-y-3 mb-10'>
+            <p className='custom-gradient-text'>
+                Our Team Speaks
             </p>
-            <p className='font-semibold py-3'>Minds Behind Magic</p>
+            <p className='custom-sub-heading'>Minds Behind Magic</p>
         </div>
             <Slider ref={(slider) => {desktopSliderRef = slider;}} {...settings} 
                 className='hidden lg:block max-w-[1200px] w-[99%] mx-auto'>

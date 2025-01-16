@@ -58,24 +58,24 @@ const Spectrum = () => {
     }
 
     return (
-      <div className=" w-[80%] flex flex-col gap-8 justify-center items-center p-4 font-raleway">
+      <div className=" space-y-8 max-w-[1000px] mx-auto font-raleway">
         {data?.map((service, index) => (
           <div
             className={`${
               index % 2 !== 0 ? "" : "flex-row-reverse"
-            } flex w-full justify-evenly gap-5 items-center py-4 border-[#EF8188]`}
+            } sm:flex  p-3 sm:justify-evenly max-sm:space-y-5 gap-5 items-center border-[#EF8188]`}
             key={"servicebox" + index}
           >
-            <div className="md:w-[30%]">
+            <div className="basis-[50%]">
               <img
                 src={service?.attributes?.image?.data?.attributes?.url}
                 alt={service?.attributes?.image?.data?.attributes?.name}
                 height="100%"
                 width="100%"
-                className="md:w-[300px] md:h-[300px] object-contain"
+                className={`md:w-[300px] md:h-[300px] object-contain ${index % 2 !== 0 ? 'ml-0' : 'mx-auto'}`}
               />
             </div>
-            <div className="md:w-[50%] p-3 gap-3 flex flex-col">
+            <div className="basis-[50%]  gap-3 flex flex-col">
               {/* <p className="text-[#A9C4FD] text-4xl">
                 {index + 1 > 10 ? `${index + 1}.` : `0${index + 1}.`}
               </p> */}
@@ -90,7 +90,7 @@ const Spectrum = () => {
                   href={service?.attributes?.url}
                   className="underline cursor-pointer mt-4 font-semibold flex gap-1 items-center group text-[#DD5143]"
                 >
-                  <span className="font-montserrat">
+                  <span className="font-montserrat text-sm">
                     {service?.attributes?.CTA}
                   </span>{" "}
                   <span>

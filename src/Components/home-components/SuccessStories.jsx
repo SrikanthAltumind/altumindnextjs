@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const SuccessStories = () => {
+const SuccessStories = ({heading, title="Success Stories"}) => {
   const [data, setData] = useState();
   const fetchSuccessStoriesData = () => {
     const url = `${
@@ -24,15 +24,19 @@ const SuccessStories = () => {
 
   return (
     <div className="font-raleway  dark:text-white">
-      <div>
-        <h1 className="text-center font-semibold">Success Stories</h1>
-        <h1 className="text-3xl mb-10 lg:mb-20 mt-2 text-center leading-9 font-extrabold text-primary dark:text-white">
+      <div className="space-y-24">
+        <div className="text-center space-y-3">
+          <h2 className="custom-sub-heading">{title}</h2>
+          <p className="custom-gradient-text">{heading}</p>
+        </div>
+        {/* <h1 className="text-center font-semibold">Success Stories</h1>
+        <h1 className="text-[33px] mb-10 lg:mb-20 mt-2 text-center leading-9 font-extrabold text-primary dark:text-white">
           Experiences That
           <span className="text-transparent bg-clip-text bg-gradient-to-r  from-gradientGreen to-gradientBlue">
             {" "}
             Inspire Innovation
           </span>
-        </h1>
+        </h1> */}
         {/* <div className='flex items-start gap-7 overflow-x-auto no-scrollbar max-sm:px-5 sm:flex-col  sm:w-[90%] mx-auto md:w-[85%] md:max-w-[900px]'> */}
         <div
           className={`flex items-start gap-7 overflow-x-auto no-scrollbar max-sm:px-5 sm:w-[90%] mx-auto md:w-[85%] md:max-w-[900px] ${

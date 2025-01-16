@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const obj = {
   id: 1,
@@ -20,9 +21,9 @@ const Accordion = ({ content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <h2 className="lg:text-lg md:text-base text-sm font-semibold">
+          <h3 className="max-w-[90%] lg:text-lg md:text-base text-sm font-semibold">
             {content?.attributes?.title ?? content?.attributes?.question}
-          </h2>
+          </h3>
           <span>
             {isOpen ? (
               <svg
@@ -59,8 +60,21 @@ const Accordion = ({ content }) => {
         animate={{ height: isOpen ? "auto" : 0 }}
         className="overflow-hidden"
       >
-        <div className="px-4 py-2 text-sm">
+        {/* <div className="px-4 py-2 text-sm">
           {content?.attributes?.description ?? content?.attributes?.answer}
+          
+        </div> */}
+        <div className="px-4 py-2 flex flex-col gap-2 text-sm">
+          <p>{content?.attributes?.description ?? content?.attributes?.answer}</p>
+          
+          {content?.attributes?.cta && 
+          <Link to={content?.attributes?.path} className="group text-secondary font-medium flex items-center gap-1 font-montserrat w-fit">
+              <span className="group-hover:underline underline-offset-1">{content?.attributes?.cta}</span>
+              <svg className="w-6 h-6 group-hover:translate-x-2 duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+              </svg>
+          </Link>
+          }
         </div>
       </motion.div>
     </div>

@@ -4,6 +4,8 @@ import axios from "axios";
 import LogoMarquee from "../Components/common-components/LogoMarquee";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import SubscribeForm from "../Components/common-components/SubscribeForm";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [data, setData] = useState([])
@@ -130,16 +132,47 @@ const Portfolio = () => {
   }
 
   return (
+    <>
+      <Helmet>
+    {/* For SEO  */}
+    <title>Portfolio | Proven Success Across Industries & Projects</title>
+    <meta
+      name="description"
+      content="See our success stories in action. Our portfolio showcases the projects we’ve delivered, helping businesses thrive with innovative solutions."
+    />
+    <meta name="keywords" content="" />
+    {/* For Social Media */}
+    <meta property="og:title" content="Portfolio | Proven Success Across Industries & Projects" />
+    <meta property="og:description" content="See our success stories in action. Our portfolio showcases the projects we’ve delivered, helping businesses thrive with innovative solutions." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:keywords" content="" />
+    {/* canonical */}
+    <link rel="canonical" href="https://altumindglobal.com/portfolio" />
+  </Helmet>
+   
     <div className="font-raleway w-full flex flex-col gap-9 overflow-x-auto">
-      <div className="banner w-full h-[280px] flex text-center p-3 flex-col justify-center items-center gap-4 bg-[#F3F9FF]">
-        <p className="text-5xl font-extrabold text-[#02194a]">
-          <span style={gradientStyle}>Success</span> Narratives
+      {/* <div className="banner w-full h-[280px] flex text-center p-3 flex-col justify-center items-center gap-4 bg-[#F3F9FF]">
+        <p className="custom-gradient-text">
+        Success Stories 
         </p>
         <p className="leading-7 text-lg">
-          Discover inspiring client stories that fuel
-          <br /> our transformational efforts.
+        Discover Inspiring Client Stories<br/> that Fuel Innovation 
         </p>
-      </div>
+      </div> */}
+
+<div className='bg-LightBlue md:h-[300px]  max-md:py-10 flex md:flex-row flex-col-reverse justify-between items-center gap-y-10 font-raleway px-4 md:px-10 lg:px-28'>
+      
+      <div className="max-md:px-5 space-y-3">
+     <p className=' custom-gradient-text mx-0  py-2'>
+     Success Stories 
+     </p>
+     <p className='max-w-[420px] mx-0 text-sm md:text-base  text-black font-medium'>Discover Inspiring Client Stories that Fuel Innovation</p>
+     </div>
+  
+     <div>
+       <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Portfolio_1ceb081916.svg" alt="Two people collaborate at a table with a tablet, papers, a cup, and a laptop, framed by a red and blue decorative border." />
+     </div>
+   </div>
 
       <div className="w-full flex flex-col gap-4 justify-start items-center p-3">
         <div className="w-full flex justify-evenly flex-wrap gap-4 items-center">
@@ -234,9 +267,9 @@ const Portfolio = () => {
                   {blog.attributes.tag}
                 </p>
                 <p className="m-0 font-medium">{blog.attributes.title}</p>
-                <a
+                <Link
                   className="m-0 cursor-pointer underline text-sm flex gap-1 items-center group"
-                  href={
+                  to={
                     `/portfolio/` +
                     blog.attributes.title.toLowerCase()?.replace(" ", "-")
                   }
@@ -261,7 +294,7 @@ const Portfolio = () => {
                       />
                     </svg>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           ))
@@ -283,6 +316,7 @@ const Portfolio = () => {
       </div>
       <SubscribeForm />
     </div>
+    </>
   );
 };
 

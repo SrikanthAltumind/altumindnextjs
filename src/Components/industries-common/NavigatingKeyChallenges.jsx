@@ -37,9 +37,9 @@ const NavigatingKeyChallenges = () => {
       fetchData();
     }, [location.pathname]);
   return (
-    <section id="section4" className="w-[90%] mx-auto font-raleway">
+    <section id="section4" className="w-[90%] space-y-10 mx-auto font-raleway">
       <div>
-        <p className="w-fit font-extrabold text-2xl lg:text-3xl py-2 mb-10 mx-auto bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+        <p className="custom-gradient-text py-2">
           Navigating Key Challenges
         </p>
       </div>

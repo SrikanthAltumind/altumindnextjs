@@ -46,7 +46,7 @@ useEffect(() => {
 return (
   <div className="bg-[#EAF1FF] dark:bg-[#25282c] dark:text-white font-raleway">
     <div className="w-[95%] max-w-[950px] mx-auto pt-10 pb-20">
-      <p className="max-sm:mx-auto bg-clip-text w-fit text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen  to-gradientBlue text-3xl font-bold ">
+      <p className="custom-gradient-text sm:mx-0 lg:-mx-20">
         Gains at a Glance
       </p>
       <Slider {...settings}>

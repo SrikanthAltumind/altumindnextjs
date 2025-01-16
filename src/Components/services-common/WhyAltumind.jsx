@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { useLocation } from "react-router-dom";
+import Markdown from "react-markdown";
 
 const WhyAltumind = () => {
   const [data, setData] = useState([]);
@@ -43,6 +44,8 @@ const WhyAltumind = () => {
     apiUrl = "api/success-story-enphase-feature-contents?populate=*";
   else if (location.pathname === "/portfolio/united-finance")
     apiUrl = "api/success-story-uf-feature-contents?populate=*";
+  else if (location.pathname === "/services/ai-automation/conversational-ai-chatbot")
+    apiUrl = "/api/service-ai-automation-ai-chat-impacts?populate=*";
 
   const fetchData = () => {
     const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
@@ -80,11 +83,11 @@ const WhyAltumind = () => {
       id="section1"
       className="w-[90%] mx-auto font-raleway dark:text-white"
     >
-      <div className="flex justify-center items-center gap-10 flex-wrap max-w-[90%] mx-auto">
+      <div className="flex justify-center  gap-10 flex-wrap max-w-[90%] mx-auto">
         {data?.map((item) => (
           <div
             key={item.id}
-            className="w-[260px] h-[270px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm"
+            className="w-[260px] shadow-custom-shadow dark:bg-[#0A1220] bg-white p-3 dark:shadow-slate-500 rounded-sm"
           >
             <img
               src={item?.attributes?.icon?.data?.attributes?.url}
@@ -93,8 +96,8 @@ const WhyAltumind = () => {
             <p className="text-lg font-medium py-3">
               {item?.attributes?.title}
             </p>
-            <p className="text-xs dark:font-light leading-2">
-              {item?.attributes?.description}
+            <p className="text-xs markdown dark:font-light leading-2">
+              <Markdown>{item?.attributes?.description}</Markdown>
             </p>
           </div>
         ))}

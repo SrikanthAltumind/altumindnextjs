@@ -43,10 +43,10 @@ const FAQ = () => {
   return (
     <div className="md:w-[80%] mx-auto w-full flex md:flex-row flex-col md:p-8 p-3 gap-4 md:gap-0 font-raleway">
       <div className="md:w-[40%] w-full flex flex-col gap-3 md:items-start justify-start items-center py-4">
-        <p className="text-3xl font-bold" style={gradientStyle}>
+        <p className="custom-gradient-text mx-0">
           {"FAQ's"}
         </p>
-        <p className="text-sm font-medium">
+        <p className="custom-sub-heading ">
           Everything You Want to
           <br />
           Know Before Joining Us

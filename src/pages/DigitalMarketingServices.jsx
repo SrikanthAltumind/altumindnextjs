@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import Banner from "../Components/common-components/Banner"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import SubscribeForm from "../Components/common-components/SubscribeForm"
@@ -12,7 +13,7 @@ import SettingUpForSuccess from "../Components/services-common/SettingUpForSucce
 import TechStack from "../Components/services-common/TechStack"
 import ValueSection from "../Components/services-common/ValueSection"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
-import { gradientStyle } from "../ReactFunctions"
+// import { gradientStyle } from "../ReactFunctions"
 
 const DigitalMarketingServices = () => {
    const servicesMenu = [
@@ -28,6 +29,22 @@ const DigitalMarketingServices = () => {
    ];
   return (
     <>
+     <Helmet>
+                {/* For SEO  */}
+                <title>Digital Marketing Services | Digital Marketing Strategy Consulting</title>
+                <meta
+                  name="description"
+                  content="Looking for digital marketing services? Our digital marketing strategy consulting helps you build successful online campaigns and boost brand performance."
+                />
+                <meta name="keywords" content="digital marketing services, web marketing services, digital branding services, digital marketing services list, digital marketing strategy consulting, digital media company, digital marketing planing" />
+                {/* For Social Media */}
+                <meta property="og:title" content="Digital Marketing Services | Digital Marketing Strategy Consulting" />
+                <meta property="og:description" content="Looking for digital marketing services? Our digital marketing strategy consulting helps you build successful online campaigns and boost brand performance." />
+                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:keywords" content="digital marketing services, web marketing services, digital branding services, digital marketing services list, digital marketing strategy consulting, digital media company, digital marketing planing" />
+                {/* canonical */}
+                <link rel="canonical" href="https://altumindglobal.com/services/digital-marketing" />
+        </Helmet>
       <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner />
 
@@ -42,10 +59,10 @@ const DigitalMarketingServices = () => {
         </section>
         <section id="section3" className="bg-[#F3F9FF] py-10">
           <div className="text-center font-raleway space-y-3 mb-10">
-            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+            <p className="custom-sub-heading">
               Why Altumind Stands Out
             </p>
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text">
               Leading the Way in Fulfilling Your Brand&apos;s Vision
             </p>
           </div>
@@ -55,29 +72,26 @@ const DigitalMarketingServices = () => {
           <EngModel />
         </section>
         <section id="section5">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Client Testimonials
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               The Altumind Impact: In Their Words
             </p>
           </div>
           <Testimonials />
         </section>
         <section id="section6">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Benefits
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-              <span style={gradientStyle}>
-                Blending creativity and Results{" "}
-              </span>
+            <p className="custom-gradient-text">
+                Blending creativity and Results
               <br />
-              <span className="text-[#02143b] darK:text-white">
                 to Elevate Your Brand
-              </span>
+           
             </p>
           </div>
           <SettingUpForSuccess />
@@ -87,14 +101,14 @@ const DigitalMarketingServices = () => {
         </section>
         <GetStarted />
         <section id="section8">
-          <SuccessStories />
+          <SuccessStories heading="Proven Result of our Marketing Expertise"/>
         </section>
         <section id="section9">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Insights
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Dive into Our Latest Perspectives
             </p>
           </div>

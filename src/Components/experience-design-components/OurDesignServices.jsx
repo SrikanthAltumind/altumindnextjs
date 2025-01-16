@@ -60,8 +60,8 @@ const OurDesignServices = () => {
         {
           location.pathname === '/services/experience-design' &&
           <div className='text-center space-y-3 mb-10'>
-            <p className='text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold'>Our Design Services</p>
-            <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>Your Partner in Experience-Driven Growth</p>
+            <p className='custom-sub-heading'>Our Design Services</p>
+            <p className=' custom-gradient-text'>Your Partner in Experience-Driven Growth</p>
         </div>
         }
         <div className="flex justify-center sm:flex-row  flex-wrap lg:flex-nowrap flex-col gap-5  ">

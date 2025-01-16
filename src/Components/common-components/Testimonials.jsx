@@ -139,9 +139,9 @@ const Testimonials = () => {
           />
         </svg>
 
-        <p className="font-semibold dark:text-white font-montserrat">
+        {/* <p className="font-semibold dark:text-white font-montserrat">
           {currentIndex + 1} / {data?.length}
-        </p>
+        </p> */}
 
         <svg
           onClick={() => sliderRef.slickNext()}

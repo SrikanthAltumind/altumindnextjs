@@ -42,14 +42,18 @@ const LifeandCareer = () => {
   }
 
   return (
-    <div className="text-primary dark:text-white font-semibold text-center font-raleway mx-auto w-[90%]">
-      <p>Life & Careers at Altumind</p>
+    <div className="dark:text-white space-y-16 font-semibold font-raleway mx-auto w-[90%]">
+      {/* <p>Life & Careers at Altumind</p>
       <p className="font-extrabold text-3xl lg:text-4xl py-2 mb-10">
         Inspiring Minds,{" "}
         <span className=" bg-clip-text text-transparent bg-gradient-to-r from-gradientGreen to-gradientBlue">
           Transforming Tomorrow
         </span>
-      </p>
+      </p> */}
+      <div className="space-y-3 text-center ">
+      <p className="custom-sub-heading">Life & Careers at Altumind</p>
+      <p className="custom-gradient-text">Inspiring Minds, Transforming Tomorrow</p> 
+      </div>
       <div className="flex justify-center md:flex-row flex-col gap-12 mb-10 mx-auto max-w-[1000px]">
         {data?.map((item) => (
           <div
@@ -67,8 +71,8 @@ const LifeandCareer = () => {
                 {item?.attributes?.description}
               </p>
              
-              <p className="group">
-              <Link to={item?.attributes?.url} className="text-lg flex gap-1 items-center w-fit">
+              <p className="group w-fit">
+              <Link to={item?.attributes?.url} className="text-lg flex gap-1 items-center ">
                 {item?.attributes?.navigator}
                 <svg
                   className="group-hover:translate-x-3 transition-all duration-300 w-10 h-10 text-white"

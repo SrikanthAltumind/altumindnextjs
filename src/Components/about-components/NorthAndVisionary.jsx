@@ -58,10 +58,10 @@ const NorthAndVisionary = () => {
         <div className="md:flex items-center justify-between ">
           <div className="basis-[55%] lg:basis-[55%] space-y-5">
             <div className="font-raleway space-y-2 max-md:text-center">
-              <p className="font-semibold dark:font-medium">
+              <p className="custom-sub-heading">
                 {northStarData?.title}
               </p>
-              <p className="custom-gradient-text md:mx-0 max-lg:text-2xl">
+              <p className="custom-gradient-text">
                 {northStarData?.heading}
               </p>
             </div>
@@ -117,10 +117,10 @@ const NorthAndVisionary = () => {
           </div>
           <div className="basis-[55%] lg:basis-[55%] space-y-2">
             <div className="font-raleway space-y-2 max-md:text-center">
-              <p className="font-semibold text-lg  dark:font-medium">
+              <p className="custom-sub-heading">
                 {visionaryData?.title}
               </p>
-              <p className="font-medium ">{visionaryData?.heading}</p>
+              <p className="font-semibold text-2xl ">{visionaryData?.heading}</p>
             </div>
             <div className="md:hidden max-w-[320px] mx-auto">
               <img

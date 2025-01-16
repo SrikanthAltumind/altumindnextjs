@@ -42,11 +42,11 @@ const WhyJoinAltumind = () => {
   }
   return (
     <section className="mx-auto w-[90%] max-w-[950px] dark:text-white font-raleway">
-        <div className="text-center">
-            <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+        <div className="text-center space-y-3">
+            <p className="custom-gradient-text">
             {data?.heading}
             </p>
-            <p className="font-semibold mb-7">{data?.title}</p>
+            <p className="custom-sub-heading">{data?.title}</p>
             <p className="text-sm font-medium">{data?.description}</p>
         </div>
     </section>

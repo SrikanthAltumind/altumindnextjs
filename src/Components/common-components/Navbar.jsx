@@ -297,6 +297,32 @@ export const Navbardata = [
     ],
   },
   {
+    menu: "Agiliti",
+    path: "/agiliti-hire-dedicated-developers",
+    // children: [
+    //   {
+    //     innerMenu: "Why Agiliti",
+    //     path: "/agiliti/#why-agiliti",
+    //   },
+    //   {
+    //     innerMenu: "How it Works",
+    //     path: "/agiliti/#how-it-works",
+    //   },
+    //   {
+    //     innerMenu: "Engagement Models",
+    //     path: "/agiliti/#engagement-models",
+    //   },
+    //   {
+    //     innerMenu: "Technologies",
+    //     path: "/agiliti/#technologies",
+    //   },
+    //   {
+    //     innerMenu: "Get in Touch with Us",
+    //     path: "/agiliti/#get-in-touch-with-us",
+    //   },
+    // ]
+  },
+  {
     menu: "Industries",
     path: "/industries",
     children: [
@@ -393,7 +419,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="dark:bg-[#1b305c] w-full bg-white z-10 h-[70px] dark:text-white top-0 sticky">
+    <header className="dark:bg-[#1b305c] w-full bg-white z-[99] h-[70px] dark:text-white top-0 sticky">
       <nav className="flex justify-between items-center h-full px-2 sm:px-5 relative">
         <img
           src={theme === "dark" ? AltumindDark : logo}
@@ -488,7 +514,7 @@ const Navbar = () => {
           <Link to="/contact">
             {" "}
             <button className="bg-[#DD5143] hidden lg:block outline-none border-none font-medium rounded-md text-white px-4 text-sm py-3">
-              Lets Talk
+             Discuss
             </button>
           </Link>
         </div>

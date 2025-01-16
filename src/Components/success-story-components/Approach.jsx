@@ -78,10 +78,7 @@ const Approach = () => {
   return (
     <div className="w-[80%] mx-auto py-10 dark:text-white">
       <div className="text-center font-raleway flex flex-col items-center">
-        <p className="font-extrabold text-2xl md:text-3xl xl:text-4xl mb-1 text-primary dark:text-white">
-          {headerData?.title}:
-        </p>
-        <p className="custom-gradient-text">{headerData?.heading}</p>
+        <p className="custom-gradient-text py-2"> {headerData?.title}:<br/>{headerData?.heading}</p>
         <p className="text-sm font-medium mt-2 max-w-[800px] leading-6">
           {headerData?.description}
         </p>

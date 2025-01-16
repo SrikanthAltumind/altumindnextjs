@@ -23,16 +23,20 @@ const ResourceCenter = () => {
     // },[])
     return (
       <div  className='bg-[#F3F9FF] dark:bg-darkTheme dark:text-white py-14 dark:py-0'>
-      <div className="mx-auto w-[90%] max-w-[950px]">
-          <div className="font-raleway font-semibold text-center text-primary dark:text-white">
-              <p>Resource Center</p>
+      <div className="mx-auto w-[90%] max-w-[950px] font-raleway">
+          <div className="space-y-16">
+              {/* <p>Resource Center</p>
               <div className="font-extrabold text-3xl lg:text-4xl mb-10 pt-2 space-y-1">
               <p className="bg-clip-text w-fit mx-auto text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Stay in Sync</p> 
               <p className="">with the Latest Updates</p>
+          </div> */}
+          <div className="text-center space-y-3">
+            <p className="custom-sub-heading">Resource Center</p>
+            <p className="custom-gradient-text">Stay in Sync<br/> with the Latest Updates</p>
           </div>
           <InsightsBlogs/>
           
-            <div className='overflow-x-auto'>
+            {/* <div className='overflow-x-auto'> */}
             {/* <ul className='flex min-w-max gap-5 justify-between px-2 '>
                 {data?.map(cat=> (
                     <li key={cat.id} className=''>
@@ -43,7 +47,7 @@ const ResourceCenter = () => {
 
                 ))}
             </ul> */}
-            </div>
+            {/* </div> */}
             {/* <div className={`mt-10 gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${activeCategory?.attributes?.category_card_mains?.data?.length>2? 'justify-between sm:gap-0':'justify-center sm:gap-16'}
                 `}>

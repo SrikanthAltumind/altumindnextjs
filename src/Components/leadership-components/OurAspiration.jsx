@@ -46,14 +46,13 @@ const OurAspiration = () => {
   return (
     <div className="w-[90%] max-w-[1100px] mx-auto lg:flex items-center justify-between dark:text-white">
       <div className="basis-[65%] space-y-5">
-        <div className="font-raleway space-y-2 max-lg:text-center">
-          <p className="font-semibold dark:font-medium">Our Aspiration</p>
-          <p className="lg:mx-0 max-w-[550px] text-3xl font-bold">
+        <div className="font-raleway space-y-3 max-lg:text-center">
+          <p className="custom-sub-heading">Our Aspiration</p>
+          <p className="lg:mx-0 max-w-[550px] custom-gradient-text">
             Building an{" "}
-            <span style={gradientStyle}>
               Innovative,
               <br /> Impactful, Inclusive Tomorrow.
-            </span>
+          
           </p>
         </div>
         {/* <div className="lg:hidden max-w-[320px] mx-auto">

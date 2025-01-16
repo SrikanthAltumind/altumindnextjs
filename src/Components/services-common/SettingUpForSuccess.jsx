@@ -20,6 +20,7 @@ const SettingUpForSuccess = () => {
   else if (location.pathname === "/services/digital-marketing")
     apiUrl = "api/service-digital-marketing-benifits?populate=*";
   else if (location.pathname === "/services/technology-and-engineering")
+    
     apiUrl = "api/service-tech-engg-we-serves?populate=*";
   else if (location.pathname === "/services/data-analytics")
     apiUrl = "api/service-data-analytics-benifits?populate=*";
@@ -33,6 +34,62 @@ const SettingUpForSuccess = () => {
     apiUrl = "api/service-cloud-benifits?populate=*";
   else if (location.pathname === "/about/about-altumind/mission-and-vision")
     apiUrl = "api/our-mission-and-vision-words?populate=*";
+  else if(location.pathname === '/services/experience-design/ui-design')
+    apiUrl = 'api/service-exp-design-ui-benifit-contents?populate=*'
+ else if(location.pathname === '/services/experience-design/ux-design')
+   apiUrl = 'api/service-exp-design-ux-benifit-contents?populate=*'
+ else if(location.pathname === '/services/experience-design/cx-design')
+   apiUrl = 'api/service-exp-design-cx-benifit-contents?populate=*'
+  else if(location.pathname === '/services/technology-and-engineering/web-development')
+   apiUrl = 'api/service-tech-engg-web-benifit-contents?populate=*'
+  else if(location.pathname === '/services/technology-and-engineering/mobile-app-development')
+   apiUrl = 'api/service-tech-engg-mobile-benifit-contents?populate=*'
+  else if(location.pathname === '/services/technology-and-engineering/ecommerce-services')
+   apiUrl = 'api/service-tech-engg-ecom-benifit-contents?populate=*'
+  else if(location.pathname === '/services/technology-and-engineering/erp-integration')
+   apiUrl = 'api/service-tech-engg-erp-benifit-contents?populate=*'
+  else if(location.pathname === "/services/ai-automation/conversational-ai-chatbot")
+    apiUrl = "api/service-ai-automation-ai-chat-benifit-contents?populate=*"
+        else if(location.pathname === "/services/ai-automation/rpa")
+          apiUrl = "api/service-ai-automation-rpa-benefit-contents?populate=*"
+  else if(location.pathname === "/services/cloud/cloud-migration")
+    apiUrl = "api/service-cloud-migration-benefit-contents?populate=*"
+    else if(location.pathname === "/services/cloud/cloud-app")
+    apiUrl = "api/service-cloud-app-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-marketing/marketing-optimization")
+    apiUrl = "api/service-dm-marketing-opt-benefit-contents?populate=*"
+        else if(location.pathname === "/services/digital-marketing/marketing-services")
+    apiUrl = "api/service-dm-ms-benefit-contents?populate=*"
+        else if(location.pathname === "/services/data-analytics/marketing-intelligence")
+    apiUrl = "api/service-da-marketing-intelligence-benf-contents?populate=*"
+    else if(location.pathname === "/services/data-analytics/business-intelligence")
+    apiUrl = "api/service-da-business-intelligence-benf-contents?populate=*"
+      else if(location.pathname === "/services/data-analytics/digital-intelligence")
+    apiUrl = "api/service-da-digital-intelligence-benf-contents?populate=*"
+  else if(location.pathname === "/services/data-analytics/customer-360")
+       apiUrl = "api/service-da-customer-360-benf-contents?populate=*"
+    else if(location.pathname === "/services/data-analytics/sales-intelligence")
+    apiUrl = "api/service-da-sales-intelligence-benf-contents?populate=*"
+  else if(location.pathname === "/services/managed-operations/product-innovation-management")
+      apiUrl = "api/service-managed-operation-dpi-benefit-contents?populate=*"
+      else if(location.pathname === "/services/managed-operations/website-operations-management")
+      apiUrl = "api/service-managed-operation-wom-benefit-contents?populate=*"
+    else if(location.pathname === "/services/managed-operations/cloud-management")
+      apiUrl = "api/service-managed-operation-cm-benefit-contents?populate=*"
+        else if(location.pathname === "/services/managed-operations/software-maintenance-support")
+      apiUrl = "api/service-managed-operation-ssm-benefit-contents?populate=*"
+        else if(location.pathname === "/services/quality-assurance/automation-testing")
+          apiUrl = "api/service-qat-automation-benefit-contents?populate=*"
+      else if(location.pathname === "/services/quality-assurance/security-testing")
+          apiUrl = "api/service-qat-security-benefit-contents?populate=*"
+      else if(location.pathname === "/services/quality-assurance/performance-testing")
+          apiUrl = "api/service-qat-performance-benefit-contents?populate=*"
+      else if(location.pathname === "/services/quality-assurance/qa-consulting")
+          apiUrl = "api/service-qat-consulting-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
+          apiUrl = "api/service-dsc-dee-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
+          apiUrl = "api/service-dsc-dm-benefit-contents?populate=*"
 
   const fetchData = () => {
     const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
@@ -52,7 +109,7 @@ const SettingUpForSuccess = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [location.pathname]);
 
   if (loading) {
     return <p>Loading...</p>;

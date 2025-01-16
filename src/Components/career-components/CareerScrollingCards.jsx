@@ -41,12 +41,12 @@ const CareerScrollingCards = () => {
     }
 
   return (
-    <div className="flex flex-col gap-6 items-center justify-center p-4 w-full font-raleway">
+    <div className="flex flex-col gap-6 items-center justify-center py-4 w-full font-raleway">
       <div className="flex flex-col text-center gap-4 items-center justify-center">
-        <p className="md:text-3xl text-2xl font-bold md:font-extrabold">
-          Altumind <span style={gradientStyle}>Core Values</span>
+        <p className="custom-gradient-text">
+          Altumind Core Values
         </p>
-        <p className="font-medium">
+        <p className="custom-sub-heading">
           Pillars Elevating Work Beyond the Ordinary
         </p>
       </div>

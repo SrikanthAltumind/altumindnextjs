@@ -238,7 +238,7 @@ const SubscribeForm = () => {
       </form> */}
       {/* {showPopup && <Popup setShowPopup={setShowPopup} />} */}
       <div className="lg:basis-[65%] md:basis-[50%] space-y-14 font-montserrat font-medium ">
-        <ContactForm selectedForm={IsCareerform ? "career" : ""} />
+        <ContactForm selectedForm={IsCareerform ? {id:"career", name:"Career"} : {id:"project", name:"Project"}} />
       </div>
     </div>
   );

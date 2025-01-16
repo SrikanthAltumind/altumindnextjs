@@ -6,19 +6,35 @@ import OurAspiration from "../Components/leadership-components/OurAspiration"
 import GetStarted from "../Components/services-common/GetStarted"
 import Overview from "../Components/services-common/Overview"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
+import { Helmet } from "react-helmet-async"
 
 const Leadership = () => {
   return (
+    <>
+    <Helmet>
+    {/* For SEO  */}
+    <title>Meet the Leadership | Altumind Technology Experts</title>
+    <meta
+      name="description"
+      content="Discover the visionary leaders behind our success, guiding our team with expertise, integrity, and a commitment to innovation."
+    />
+    {/* For Social Media */}
+    <meta property="og:title" content="Meet the Leadership | AltumindGlobal Technology Experts" />
+    <meta property="og:description" content="Discover the visionary leaders behind our success, guiding our team with expertise, integrity, and a commitment to innovation." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    {/* canonical */}
+    <link rel="canonical" href="https://altumindglobal.com/about/about-altumind/leadership" />
+  </Helmet>
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <Banner />
       <Overview />
       <LeaderBoard/>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
         <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+          <p className="custom-sub-heading">
             Our Philosophy
           </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Leading with Clarity and Conviction
           </p>
         </div>
@@ -39,6 +55,7 @@ const Leadership = () => {
       </section>
       <SubscribeForm />
     </div>
+    </>
   );
 }
 

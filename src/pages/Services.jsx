@@ -7,14 +7,15 @@ import Overview from "../Components/services-common/Overview"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
 // import EngagementModel from '../Components/services-common/EngagementModel'
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
-import OurDesignServices from "../Components/experience-design-components/OurDesignServices"
+// import OurDesignServices from "../Components/experience-design-components/OurDesignServices"
 import OurPhilosophy from "../Components/services-common/OurPhilosophy"
 import OurImpactByNumbers from '../Components/services-common/OurImpactByNumbers'
 import LogoMarquee from "../Components/common-components/LogoMarquee"
-import { gradientStyle } from "../ReactFunctions"
+// import { gradientStyle } from "../ReactFunctions"
 import Spectrum from "../Components/common-components/Spectrum"
 import EngModel from "../Components/services-common/EngModel"
-import ExploreFurther from "../Components/about-components/ExploreFurther"
+// import ExploreFurther from "../Components/about-components/ExploreFurther"
+import { Helmet } from "react-helmet-async"
 // import UpdatedEngagementModel from "../Components/services-common/UpdatedEngagementModel"
 
 
@@ -42,7 +43,23 @@ const Services = () => {
     },
   ];
   return (
-    <div className="dark:bg-darkTheme flex flex-col gap-16">
+     <>
+    <Helmet>
+    {/* For SEO  */}
+    <title>Our Services | Next-Gen Technology Solutions</title>
+    <meta
+      name="description"
+      content="Learn about the wide range of services we offer to deliver effective solutions that support your business goals."
+    />
+    {/* For Social Media */}
+    <meta property="og:title" content="Our Services | Next-Gen Technology Solutions" />
+    <meta property="og:description" content="Learn about the wide range of services we offer to deliver effective solutions that support your business goals." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    {/* canonical */}
+    <link rel="canonical" href= "https://altumindglobal.com/services" />
+  </Helmet>
+   
+    <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <Banner />
       <Overview />
       <OurImpactByNumbers />
@@ -50,30 +67,22 @@ const Services = () => {
         <p className="font-raleway text-2xl font-semibold">Trusted By</p>
         <LogoMarquee />
       </div>
-      <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-        <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-          <p className="font-semibold">Our Key Services</p>
-          <p className="text-4xl font-extrabold md:max-w-[500px]">
-            <span>
-              Offering Inside-Out
-              <br />{" "}
-            </span>
-            <span style={gradientStyle}>Business Transformation</span>
-          </p>
+      <div className="font-raleway space-y-14 w-[90%] mx-auto">
+        <div className="w-full text-center">
+          <p className="custom-sub-heading">Our Key Services</p>
+          <p className="custom-gradient-text md:max-w-[500px]">Offering Inside-Out<br />Business Transformation</p>
           {/* <p className="md:max-w-[800px]">{data?.attributes?.description}</p> */}
         </div>
-      </div>
-      <div className="w-full flex justify-center items-center">
         <Spectrum />
       </div>
       <EngModel/>
-      <SuccessStories />
+      <SuccessStories heading="Stories of Real-World Impact"/>
       <section>
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+        <div className="text-center space-y-3 mb-20 font-raleway">
+          <p className="custom-sub-heading">
             Client Testimonials
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             The Altumind Impact: In Their Words
           </p>
         </div>
@@ -81,11 +90,11 @@ const Services = () => {
       </section>
       <section className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10">
         <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+          <p className="custom-sub-heading">
             Why Choose Altumind
           </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
-            Driving Change Through Strategic Digital Innovation Services
+          <p className="custom-gradient-text">
+            Driving Change Through Strategic<br className="max-sm:hidden"/> Digital Innovation Services
           </p>
         </div>
         <WhyAltumind />
@@ -94,19 +103,19 @@ const Services = () => {
       {/* <EngagementModel /> */}
 
       <section>
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+        <div className="text-center space-y-3 mb-20 font-raleway">
+          <p className="custom-sub-heading">
             Benefits
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Powerful Advantages to Navigate Your Success
           </p>
         </div>
         <SettingUpForSuccess />
       </section>
       <section>
-        <div className="text-center space-y-2 mb-10 font-raleway">
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+        <div className="text-center mb-10 font-raleway">
+          <p className="custom-gradient-text">
             Explore Further
           </p>
         </div>
@@ -152,6 +161,7 @@ const Services = () => {
       <GetStarted />
       <SubscribeForm />
     </div>
+    </>
   );
 }
 

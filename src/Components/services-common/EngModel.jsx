@@ -6,7 +6,7 @@ const EngModel = () => {
 <>
 
 <div className="w-[90%] font-raleway text-center space-y-3 max-w-[1100px] mx-auto">
-    <p className="font-semibold">Our Engagement Model</p>
+    <p className="custom-sub-heading">Our Engagement Model</p>
     <p className="custom-gradient-text">Matching Your Pace and Goals</p>
     <p className="font-montserrat text-sm font-medium">At Altumind, we understand that every project is unique. That&apos;s why we offer a range of engagement models designed to fit your specific requirements, budget, and timeline. Our flexible approach ensures you get the most value from our partnership. Each of these models is designed to provide maximum flexibility and value, ensuring that we can meet your needs regardless of project size, complexity, or duration. Our team will work with you to determine the best fit for your specific situation.</p>
 </div>
@@ -21,8 +21,7 @@ const EngModel = () => {
              </div>
                 <div className='opacity-60 group-hover:opacity-100 top-0 left-full px-4 sm:pl-6 sm:pr-0  w-[250px] font-montserrat'>
                     <p className='font-semibold text-sm'>Fixed Bid:</p>
-                    <p className='font-medium text-[13px] leading-6'>Predictable costs for well-defined projects Clear scope.
-                        fixed budget and peace if mind.
+                    <p className='font-medium text-[13px] leading-6'>Predictable costs for well-defined projects. Clear scope, fixed budget, and peace of mind.
                     </p>
                 </div>
             </div>
@@ -35,7 +34,7 @@ const EngModel = () => {
              </div>
                 <div className='opacity-60 group-hover:opacity-100 px-4 sm:pl-0 sm:pr-6 sm:text-right w-[250px] font-montserrat'>
                     <p className='font-semibold text-sm'>Time and Material:</p>
-                    <p className='font-medium text-[13px] leading-6'>Flexible pricing for evolving needs Adapt as your project grows and changes.
+                    <p className='font-medium text-[13px] leading-6'>Flexible pricing for evolving needs. Adapt seamlessly as your project grows and changes.
                     </p>
                 </div>
             </div>
@@ -48,7 +47,7 @@ const EngModel = () => {
              </div>
                 <div className='opacity-60 group-hover:opacity-100 px-4 sm:pl-6 sm:pr-0 w-[250px] font-montserrat'>
                     <p className='font-semibold text-sm'>Dedicated Team:</p>
-                    <p className='font-medium text-[13px] leading-6'>On-demand trained team at your fingertips Efficient, scalable support for ongoing development.
+                    <p className='font-medium text-[13px] leading-6'>On-demand trained team at your fingertips. Efficient, scalable support for continuous development.
                     </p>
                 </div>
             </div>
@@ -66,7 +65,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
              </div>
                 <div className='opacity-60 group-hover:opacity-100 px-4 sm:pl-0 sm:pr-6 sm:text-right  w-[250px] font-montserrat'>
                     <p className='font-semibold text-sm'>Build, Operate & Transfer:</p>
-                    <p className='font-medium text-[13px] leading-6'>End-to-end solution management We build it, run it, then hand it over seamlessly.
+                    <p className='font-medium text-[13px] leading-6'>End-to-end solution management. We build it, operate it, and transition it seamlessly to you. 
                     </p>
                 </div>
             </div>
@@ -83,7 +82,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
              </div>
                 <div className='opacity-60 group-hover:opacity-100 px-4 sm:pl-6 sm:pr-0 w-[250px] font-montserrat'>
                     <p className='font-semibold text-sm'>Hybrid:</p>
-                    <p className='font-medium text-[13px] leading-6'>Customized engagement tailored just for you Mix and match models to fit your unique requirements.
+                    <p className='font-medium text-[13px] leading-6'>Customized engagement tailored for you. Mix and match models to meet your unique requirements.
                     </p>
                 </div>
             </div>
@@ -100,8 +99,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
 
                 <div className='absolute opacity-60 group-hover:opacity-100 top-0 right-full pr-6 text-right w-[240px] font-montserrat'>
                     <p className='font-semibold text-sm'>Fixed Bid:</p>
-                    <p className='font-medium text-[13px] leading-6'>Predictable costs for well-defined projects Clear scope.
-                        fixed budget and peace if mind.
+                    <p className='font-medium text-[13px] leading-6'> Predictable costs for well-defined projects. Clear scope, fixed budget, and peace of mind.
                     </p>
                 </div>
             </div>
@@ -112,7 +110,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
                 </svg>
                 <div className='absolute opacity-60 group-hover:opacity-100 top-0 right-full pr-6 text-right w-[240px] font-montserrat'>
                     <p className='font-semibold text-sm'>Time and Material:</p>
-                    <p className='font-medium text-[13px] leading-6'>Flexible pricing for evolving needs Adapt as your project grows and changes.
+                    <p className='font-medium text-[13px] leading-6'>Flexible pricing for evolving needs. Adapt seamlessly as your project grows and changes. 
                     </p>
                 </div>
             </div>
@@ -123,7 +121,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
 
                 <div className='absolute opacity-60 group-hover:opacity-100 top-full pt-6 -left-[calc(125px-48px)] text-center w-[240px] font-montserrat'>
                     <p className='font-semibold text-sm'>Dedicated Team:</p>
-                    <p className='font-medium text-[13px] leading-6'>On-demand trained team at your fingertips Efficient, scalable support for ongoing development.
+                    <p className='font-medium text-[13px] leading-6'>On-demand trained team at your fingertips. Efficient, scalable support for continuous development.
                     </p>
                 </div> 
             </div>
@@ -141,7 +139,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
 
                 <div className='absolute opacity-60 group-hover:opacity-100 top-0 left-full pl-6 w-[240px] font-montserrat'>
                     <p className='font-semibold text-sm'>Build, Operate & Transfer:</p>
-                    <p className='font-medium text-[13px] leading-6'>End-to-end solution management We build it, run it, then hand it over seamlessly.
+                    <p className='font-medium text-[13px] leading-6'>End-to-end solution management. We build it, operate it, and transition it seamlessly to you.
                     </p>
                 </div> 
             </div>
@@ -156,7 +154,7 @@ width="24" height="24" fill="none" viewBox="0 0 24 24">
 
                 <div className='absolute opacity-60 group-hover:opacity-100 top-0 left-full pl-6 w-[240px] font-montserrat'>
                     <p className='font-semibold text-sm'>Hybrid:</p>
-                    <p className='font-medium text-[13px] leading-6'>Customized engagement tailored just for you Mix and match models to fit your unique requirements.
+                    <p className='font-medium text-[13px] leading-6'>Customized engagement tailored for you. Mix and match models to meet your unique requirements.
                     </p>
                 </div> 
             </div>

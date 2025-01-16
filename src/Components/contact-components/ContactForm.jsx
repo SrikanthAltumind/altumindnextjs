@@ -31,6 +31,9 @@ const ContactForm = ({ selectedForm }) => {
     toMailID = "info@altumindglobal.com";
   } else if (selectedForm?.id === "general") {
     toMailID = "business@altumindglobal.com";
+  } else if (selectedForm?.id === "agiliti") {
+    toMailID = "agiliti@altumindglobal.com";
+    // toMailID = "naveen.kolhapur@altumindglobal.com";
   }
 
   const requiredField = (yes) =>
@@ -57,7 +60,7 @@ const ContactForm = ({ selectedForm }) => {
         (value) => !value.startsWith(" ")
       )
       .min(2, "Name is too short"),
-    companyName: requiredField(selectedForm?.id !== "career")
+    companyName: requiredField(selectedForm?.id !== "career" && selectedForm?.id !== "agiliti")
       //   .string()
       .matches(/^[A-Za-z0-9 ]+$/, "Enter a valid name")
       .test(
@@ -67,10 +70,11 @@ const ContactForm = ({ selectedForm }) => {
         (value) => (value ? !value.startsWith(" ") : true)
       )
       .min(4, "Name is too short"),
-    phone: requiredField(selectedForm?.id === "career")
+    phone: requiredField(selectedForm?.id === "career" || selectedForm?.id === "agiliti")
       //   .string()
-      .matches(/^[0-9]+$/, "Enter only digits")
-      .length(10, "Number should have 10 digits"),
+      .matches(/^[0-9 +]+$/, "Enter a valid phone number")
+      // .length(10, "Number should have 10 digits"),
+      .min(10, "Number should have atleast 10 digits"),
     email: yup
       .string()
       .required("Required")
@@ -78,7 +82,7 @@ const ContactForm = ({ selectedForm }) => {
         /^[A-Z0-9._%+-]{3,}@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i,
         "Invalid email"
       ),
-    howDidYouHearAboutUs: yup.string().required("Required"),
+    howDidYouHearAboutUs:  requiredField(selectedForm?.id !== "agiliti"),
     message: requiredField(selectedForm?.id !== "career")
       //   .string()
       .test(
@@ -95,8 +99,8 @@ const ContactForm = ({ selectedForm }) => {
       //Career Form API
       const payload = {
         data: {
-          firstname: formData.firstName.trim(),
-          lastname: formData.lastName.trim(),
+          firstname: formData.firstName.trim().charAt(0).toUpperCase() + formData.firstName.trim().slice(1),
+          lastname: formData.lastName.trim().charAt(0).toUpperCase() + formData.lastName.trim().slice(1),
           email: formData.email.trim(),
           contact: formData.phone,
           company: formData.companyName.trim(),
@@ -111,12 +115,35 @@ const ContactForm = ({ selectedForm }) => {
         payload
       );
       console.log("Career data sent successfully!");
-    } else {
+    }
+    else if (selectedForm?.id === "agiliti") {
+      //Career Form API
+      const payload = {
+        data: {
+          firstname: formData.firstName.trim().charAt(0).toUpperCase() + formData.firstName.trim().slice(1),
+          lastname: formData.lastName.trim().charAt(0).toUpperCase() + formData.lastName.trim().slice(1),
+          email: formData.email.trim(),
+          contact: formData.phone,
+          message: formData.message.trim(),
+        },
+       
+      };
+   
+      console.log("agiliti Form Data Payload", payload);
+      return;
+      // await axios.post(
+      //   `${import.meta.env.VITE_APP_API_URL}/apiurl`, //need to change url later
+      //   payload
+      // );
+      // console.log("Agiliti data sent successfully!");
+  
+    }
+    else {
       //Projects, Partnership, General Forms API
       const payload = {
         data: {
-          firstname: formData.firstName.trim(),
-          lastname: formData.lastName.trim(),
+          firstname: formData.firstName.trim().charAt(0).toUpperCase() + formData.firstName.trim().slice(1),
+          lastname: formData.lastName.trim().charAt(0).toUpperCase() + formData.lastName.trim().slice(1),
           email: formData.email.trim(),
           phone: formData.phone,
           company: formData.companyName.trim(),
@@ -191,15 +218,21 @@ const ContactForm = ({ selectedForm }) => {
   // };
 
   const sendMail = (formData) => {
-    const serviceID = import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID; //old service_oik8vde
+    const serviceID = selectedForm.id ==="agiliti" ? import.meta.env.VITE_APP_AGILITI_DATA_MAIL_SERVICE_ID : import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID //old service_oik8vde
     const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID; //old template_1f6ib6b
     const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY; //old ZRpWuyBwxaFOkFcGf
-
+    const ThankYouServiceID = selectedForm.id ==="agiliti" ? import.meta.env. VITE_APP_AGILITI_THANK_YOU_MAIL_SERVICE_ID : import.meta.env. VITE_APP_THANK_YOU_MAIL_SERVICE_ID
+   
+    const firstname = formData.firstName?.trim().charAt(0).toUpperCase() + formData.firstName?.trim().slice(1);
+    const lastname = formData.lastName?.trim().charAt(0).toUpperCase() + formData.lastName?.trim().slice(1);
     const templateParams = {
       ...formData,
+      firstName:firstname,
+      lastName:lastname,
       to_mail: toMailID,
       form_name: selectedForm?.name,
       page_url: window.location.href,
+      subject: selectedForm?.id === "agiliti" ? `Agiliti: New enquiry from ${firstname+" "+lastname}` : `New ${selectedForm?.name} form submission`
     };
     console.log("templateParams:", templateParams);
     emailjs.send(serviceID, templateID, templateParams, publicKey)
@@ -208,7 +241,8 @@ const ContactForm = ({ selectedForm }) => {
         console.log('Data mail sent Successfully..!')
         console.log(response)
         // no-replay mail
-        emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
+
+        emailjs.send(ThankYouServiceID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:firstname+" "+lastname}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
                 .then(response=> {
                   if(response.status===200){
                   console.log('Thank you mail sent Successfully..!')
@@ -281,7 +315,7 @@ const ContactForm = ({ selectedForm }) => {
         <div className="relative flex flex-col w-full">
           <input
             name="firstName"
-            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            className="peer bg-transparent capitalize outline-none border-b border-tertiary dark:border-white"
             id="firstName"
             {...formik.getFieldProps("firstName")}
           />
@@ -306,7 +340,7 @@ const ContactForm = ({ selectedForm }) => {
         <div className="relative flex flex-col w-full">
           <input
             name="lastName"
-            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            className="peer bg-transparent capitalize outline-none border-b border-tertiary dark:border-white"
             id="lastName"
             {...formik.getFieldProps("lastName")}
           />
@@ -362,7 +396,7 @@ const ContactForm = ({ selectedForm }) => {
             className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
             type="text"
             id="phone"
-            maxLength={10}
+            maxLength={17}
             {...formik.getFieldProps("phone")}
           />
           <label
@@ -374,7 +408,7 @@ const ContactForm = ({ selectedForm }) => {
             }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400`}
           >
             Phone
-            {selectedForm?.id === "career" && (
+            {selectedForm?.id === "career" || selectedForm?.id === "agiliti"  && (
               <span className="text-red-500">*</span>
             )}
           </label>
@@ -386,6 +420,7 @@ const ContactForm = ({ selectedForm }) => {
           )}
         </div>
       </div>
+      {selectedForm.id !== "agiliti" &&
       <div className="sm:flex items-end gap-8 md:gap-6 lg:gap-8 max-sm:space-y-14">
         {/* Company Name */}
         <div className="relative flex flex-col w-full">
@@ -486,6 +521,7 @@ const ContactForm = ({ selectedForm }) => {
             )}
         </div>
       </div>
+      }
       {/* How can we help */}
       <div className="relative flex flex-col w-full">
         <textarea
@@ -505,7 +541,7 @@ const ContactForm = ({ selectedForm }) => {
         >
           {selectedForm?.id === "career"
             ? "A little about you:"
-            : "How can we help ?"}
+            : "How can we help ?" }
           {selectedForm?.id !== "career" && (
             <span className="text-red-500">*</span>
           )}

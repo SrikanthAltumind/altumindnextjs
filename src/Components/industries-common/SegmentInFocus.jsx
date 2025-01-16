@@ -39,9 +39,9 @@ const SegmentInFocus = () => {
     }, [location.pathname]);
 
   return (
-    <div className="w-[90%] mx-auto font-raleway">
+    <div className="w-[90%] mx-auto space-y-10 font-raleway">
         <div>
-            <p className="font-extrabold w-fit mx-auto text-2xl lg:text-3xl py-2 mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">Segment in Focus</p>
+            <p className="custom-gradient-text py-2">Segment in Focus</p>
         </div>
     <div className="flex justify-center items-center gap-10 flex-wrap max-w-[950px] mx-auto">
         {

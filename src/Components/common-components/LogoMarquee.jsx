@@ -48,7 +48,7 @@ const LogoMarquee = () => {
     }
     return (
       <div className="py-5">
-        <Marquee className="" pauseOnHover>
+        <Marquee className="" gradientColor={'white'} gradient gradientWidth={80} pauseOnHover>
           {logoData?.concat(logoData)?.map((item, index) => (
             <div
               key={`${index + item.attributes.image?.data?.attributes?.name}`}
@@ -57,7 +57,7 @@ const LogoMarquee = () => {
               <img
                 src={item.attributes.image?.data?.attributes?.url}
                 alt={item.attributes.image?.data?.attributes?.name}
-                className="max-w-[250px] h-[60px] object-fill grayscale hover:grayscale-0"
+                className="max-w-[250px] h-[60px] object-contain grayscale hover:grayscale-0"
               />
             </div>
           ))}

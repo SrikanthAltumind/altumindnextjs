@@ -5,7 +5,7 @@ const OurLocation = () => {
     <section className="w-[90%] dark:text-white bg-LightBlue dark:bg-DarkBackground space-y-20 p-10 mx-auto font-raleway">
       <div className="flex justify-between md:flex-row flex-col gap-10 items-center">
         <div className="space-y-8 md:text-left text-center">
-          <p className="custom-gradient-text md:mx-0">Our Location</p>
+          <p className="custom-gradient-text md:mx-0">Our Locations</p>
           <p className="font-montserrat max-w-[450px] text-sm font-medium">
             Rooted in India and the US but branching out worldwide. Wherever
             there&apos;s Wi-Fi, you&apos;ll find our digital leaves ready to
@@ -16,7 +16,7 @@ const OurLocation = () => {
           <img src={location} alt="location" width={300} />
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col gap-10 font-raleway">
+      <div className="flex lg:flex-row flex-col gap-10 font-montserrat">
         <div className="md:w-1/3 sm:w-1/2">
           <p className="md:text-2xl text-lg mb-2 font-semibold">
             United States
@@ -74,7 +74,8 @@ const OurLocation = () => {
                 >
                   <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
                 </svg>
-                1-866-381-8411
+                {/* 1-866-381-8411 */}
+                +1-6198536363
               </p>
             </div>
           </div>
@@ -135,7 +136,8 @@ const OurLocation = () => {
                   >
                     <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
                   </svg>
-                  080-42242799
+                  {/* 080-42242799 */}
+                  +91-80-31405675
                 </p>
               </div>
             </div>
@@ -194,7 +196,8 @@ const OurLocation = () => {
                   >
                     <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
                   </svg>
-                  1-866-381-8411
+                  {/* 1-866-381-8411 */}
+                  +91-80-31405675
                 </p>
               </div>
             </div>

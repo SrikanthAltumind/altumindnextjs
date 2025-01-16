@@ -69,11 +69,9 @@ const NumberResults = () => {
 
   return (
     <div className="py-10 space-y-10 w-[90%] max-w-[950px] mx-auto dark:text-white font-raleway">
-      <div>
-        <p className="text-2xl lg:text-3xl xl:text-4xl w-fit mx-auto font-extrabold text-center">
-          {headingData?.title}:
-        </p>
-        <p className="custom-gradient-text mt-4">{headingData?.heading}</p>
+      <div className="text-center">
+       
+        <p className="custom-gradient-text py-2">{headingData?.title}: <br/>{headingData?.heading}</p>
       </div>
 
       <p className="text-center font-medium text-[13px] lg:text-sm dark:font-normal leading-6">

@@ -9,13 +9,14 @@ import TechStack from "../Components/services-common/TechStack";
 import WhyAltumind from "../Components/services-common/WhyAltumind";
 import GetStarted from "../Components/services-common/GetStarted";
 import InsightsBlogs from "../Components/common-components/InsightsBlogs";
-import { gradientStyle } from "../ReactFunctions";
+// import { gradientStyle } from "../ReactFunctions";
 import Menu from "../Components/industries-common/Menu";
 import EngModel from "../Components/services-common/EngModel";
+import { Helmet } from "react-helmet-async";
 
 const ExperienceDesign = () => {
   const servicesMenu = [
-    { id: "section-1", tabId: "tab1", name: "OverView" },
+    { id: "section-1", tabId: "tab1", name: "Overview" },
     { id: "section-2", tabId: "tab2", name: "Services" },
     { id: "section-3", tabId: "tab3", name: "Tech Stack" },
     { id: "section-4", tabId: "tab4", name: "Why Us" },
@@ -26,6 +27,22 @@ const ExperienceDesign = () => {
     { id: "section-9", tabId: "tab9", name: "Insights" },
   ];
   return (
+     <>
+    <Helmet>
+    {/* For SEO  */}
+    <title>Experience Design Services & Consulting | Altumind</title>
+    <meta
+      name="description"
+      content="Transform your digital presence with our experience design services and experience design consulting, focused on creating seamless, user-centered solutions."
+    />
+    {/* For Social Media */}
+    <meta property="og:title" content="Experience Design Services & Consulting | AltumindGlobal" />
+    <meta property="og:description" content="Transform your digital presence with our experience design services and experience design consulting, focused on creating seamless, user-centered solutions." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    {/* canonical */}
+    <link rel="canonical" href="https://altumindglobal.com/services/experience-design" />
+  </Helmet>
+   
     <div className="dark:bg-darkTheme flex flex-col gap-16 relative">
       <div className="w-full">
         <Banner />
@@ -56,10 +73,10 @@ const ExperienceDesign = () => {
         className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10"
       >
         <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <p className="custom-sub-heading">
             Why Altumind Stands Out
           </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Shaping Digital Interactions Since Inception
           </p>
         </div>
@@ -70,10 +87,10 @@ const ExperienceDesign = () => {
       </section>
       <section id="section-6">
         <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <p className="custom-sub-heading">
             Client Testimonials
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             The Altumind Impact: In Their Words
           </p>
         </div>
@@ -81,10 +98,10 @@ const ExperienceDesign = () => {
       </section>
       <section id="section-7">
         <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <p className="custom-sub-heading">
             Benefits
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Setting You Up For Success
           </p>
         </div>
@@ -92,14 +109,14 @@ const ExperienceDesign = () => {
       </section>
       <GetStarted />
       <section id="section-8">
-        <SuccessStories />
+        <SuccessStories heading="Experiences That Inspire Innovation" />
       </section>
       <section id="section-9">
         <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <p className="custom-sub-heading">
             Insights
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Dive into Our Latest Perspectives
           </p>
         </div>
@@ -107,6 +124,7 @@ const ExperienceDesign = () => {
       </section>
       <SubscribeForm />
     </div>
+    </>
   );
 };
 

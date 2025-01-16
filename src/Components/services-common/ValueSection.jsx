@@ -121,9 +121,9 @@ const digitalMarketingData = {
         subTitle: "Our optimization services cover:",
         pointsList: [
           { id: 1, content: "Search Engine Optimization (SEO)" },
-          { id: 2, content: "ORM" },
+          { id: 2, content: "Online Reputation Management (ORM) " },
           { id: 3, content: "App Store Optimization (ASO)" },
-          { id: 4, content: "CRO" },
+          { id: 4, content: "Conversion Rate Optimization (CRO)" },
         ],
         subDescription:
           "Our team of experts continually analyzes and adjusts your marketing efforts to ensure you're always getting the best possible results in the ever-changing digital landscape.",
@@ -215,9 +215,9 @@ const ValueSection = () => {
 
   return (
     <div className="w-[90%] sm:max-w-[650px] lg:max-w-[1100px] mx-auto font-raleway dark:text-white space-y-20">
-      <div className="text-center space-y-2">
-        <p className="font-semibold dark:font-medium">{data?.caption}</p>
-        <p className="text-transparent max-w-[420px] xl:max-w-[520px] mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue font-extrabold text-3xl xl:text-4xl ">
+      <div className="text-center space-y-3">
+        <p className="custom-sub-heading">{data?.caption}</p>
+        <p className="custom-gradient-text md:max-w-[520px] ">
           {data?.heading}
         </p>
       </div>
@@ -284,7 +284,7 @@ const ValueSection = () => {
                         />
                       </svg>
 
-                      <p className="truncate">{point.content}</p>
+                      <p className="">{point.content}</p>
                     </div>
                   );
                 })}

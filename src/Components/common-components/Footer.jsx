@@ -7,8 +7,8 @@ const Footer = () => {
     <>
       <WatermarkLogo />
       <div className="dark:bg-darkTheme dark:text-white">
-        <div className="px-5 md:px-0 w-[95%] font-montserrat text-sm font-medium flex flex-wrap gap-y-10 flex-col md:justify-between md:gap-10 lg:justify-normal md:flex-row mx-auto p-10">
-          <div className="lg:ml-5 lg:mr-16 lg:w-[330px]">
+        <div className="w-[90%] mx-auto font-montserrat text-sm font-medium flex flex-wrap gap-9 lg:gap-10 my-8 justify-between">
+          <div className="lg:w-[330px]">
             <p className="text-lg font-semibold pb-2">Connect</p>
             <div className="w-fit lg:w-full bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue rounded-3xl pt-2">
               <div className="bg-[#e9eaef] dark:bg-[#242932]  rounded-3xl py-3 px-5">
@@ -119,8 +119,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex lg:gap-16 gap-6">
-            <div>
+          
+
+          {/* <div className="border flex lg:gap-16 gap-6"> */}
+            <div className="">
               <p className="text-lg font-semibold pb-2">Services</p>
               <ul className="space-y-3 dark:font-normal">
                 <li>
@@ -164,7 +166,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+
+            <div className="">
               <p className="text-lg font-semibold pb-2">Others</p>
               <ul className="space-y-3 dark:font-normal">
                 <li>
@@ -185,9 +188,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div className="space-y-8 font-medium xl:ml-auto lg:w-[330px]">
+          {/* </div> */}
+          <div className="space-y-8 max-md:mt-5 font-medium">
             <p className="flex gap-4 dark:font-normal">
               <svg
                 className="w-6 h-6 dark:text-white text-gray-800"
@@ -200,7 +202,8 @@ const Footer = () => {
               >
                 <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
               </svg>
-              080-42242799
+              {/* 080-42242799 */}
+              +91-80-31405675
             </p>
             <p className="flex dark:font-normal gap-4">
               <svg
@@ -237,13 +240,14 @@ const Footer = () => {
               </svg>
               #775, 100 Feet Rd,
               <br />
-              Indiranagar, Bengaluru, KA
+              Indiranagar, Bengaluru, KA, 560038
             </p>
           </div>
+          
         </div>
         <div className="w-[95%] px-5 md:px-0 flex md:flex-row text-center gap-y-10 md:text-left flex-col font-montserrat text-sm items-center border-t-[0.6px] border-[#8A8A8A] py-7 mx-auto">
           <p className="font-medium mx-auto lg:pl-20">
-            Copyright © 2024 Altumind Global All rights reserved.
+            Copyright © {new Date().getFullYear()} Altumind All rights reserved.
           </p>
           <div className="flex gap-8">
             <Link to="/privacy">

@@ -1,5 +1,25 @@
+import { Helmet } from "react-helmet-async"
+
 const Terms = () => {
   return (
+    <>
+    <Helmet>
+    {/* For SEO  */}
+    <title>Terms and Conditions | Our Policies and User Guidelines</title>
+    <meta
+        name="description"
+        content="Check out our Terms and Conditions to learn about our rules and policies. Using our site means you accept and agree to abide by these terms."
+    />
+    <meta name="keywords" content="" />
+    {/* For Social Media */}
+    <meta property="og:title" content="Terms and Conditions | Our Policies and User Guidelines" />
+    <meta property="og:description" content="Check out our Terms and Conditions to learn about our rules and policies. Using our site means you accept and agree to abide by these terms." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:keywords" content="" />
+    {/* canonical */}
+    <link rel="canonical" href="https://altumindglobal.com/terms" />
+    </Helmet>
+
     <section className="py-20 dark:bg-darkTheme dark:text-white font-montserrat">
         <div className="sm:w-[80%] w-[90%] mx-auto space-y-5">
             <div>
@@ -111,6 +131,7 @@ const Terms = () => {
             </div>
         </div> 
     </section>
+    </>
   )
 }
 

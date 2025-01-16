@@ -42,11 +42,11 @@ const LifeAtAltumind = () => {
   }
   return (
     <section className="mx-auto w-[90%] max-w-[950px] dark:text-white font-raleway">
-        <div className="text-center">
-            <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+        <div className="text-center space-y-3">
+            <p className="custom-gradient-text">
             {data?.title}
             </p>
-            <p className="font-semibold mb-7">{data?.heading}</p>
+            <p className="custom-sub-heading">{data?.heading}</p>
             <p className="text-sm font-medium max-w-[650px] mx-auto">{data?.description}</p>
             <Link to='/career/life-at-altumind' className='group mx-auto py-5 text-xs lg:text-base text-secondary underline underline-offset-2 decoration-1 font-semibold flex gap-2 items-center w-fit max-sm:mx-auto'>
                     <span className=''>Explore Life At Altumind</span>

@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { useLocation } from "react-router-dom";
+import TextImage from "../common-components/TextImage";
+import Markdown from "react-markdown";
 
 const Overview = () => {
   const [data, setData] = useState([]);
@@ -37,6 +39,8 @@ const Overview = () => {
     apiUrl = "api/leadership-force?populate=*";
   else if (location.pathname === "/about")
     apiUrl = "api/about-us-core?populate=*";
+  else if (location.pathname === "/services/experience-design/ui-design")
+    apiUrl = "api/service-exp-design-ui-overview?populate=*";
 
   const fetchData = () => {
     const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
@@ -44,6 +48,7 @@ const Overview = () => {
       .get(url)
       .then((res) => {
         setData(res?.data?.data?.attributes);
+        console.log('overview', data)
         setLoading(false);
       })
       .catch((err) => {
@@ -72,23 +77,29 @@ const Overview = () => {
     <div className="w-[90%]  dark:text-white mx-auto font-raleway">
       <div className="max-w-[1100px] mx-auto">
         <div className="lg:hidden text-center space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+          <p className="custom-sub-heading">
             {data?.title}
           </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             {data?.heading}
           </p>
         </div>
         <div className="flex lg:flex-row flex-col-reverse gap-5 items-center lg:justify-between">
           <div className="basis-[60%]">
-            <div className="hidden lg:block space-y-2 mb-5">
-              <p className="font-semibold dark:font-normal">{data?.title}</p>
-              <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <div className="hidden lg:block space-y-3 mb-5">
+              <p className="custom-sub-heading">{data?.title}</p>
+              <p className="custom-gradient-text lg:mx-0">
                 {data?.heading}
               </p>
             </div>
             <p className="leading-7 text-sm sm:text-base lg:text-left text-center dark:font-normal font-medium">
-              {data?.description}
+            <Markdown
+            // components={customRenderers}
+            className="markdown"
+          >
+            {data?.description}
+          </Markdown>
+              {/* {data?.description} */}
             </p>
           </div>
           <div className="basis-[35%]">

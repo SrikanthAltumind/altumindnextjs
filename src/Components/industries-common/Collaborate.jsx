@@ -2,34 +2,28 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const bfsi = {
-  first_line: "Collaborating for",
-  second_line: "Digital Finance Success",
-  third_line: "Next-Gen Fintech Solutions",
+  first_line: "Collaborating for Digital Finance Success",
+  second_line: "Next-Gen Fintech Solutions",
 };
 const healthcare = {
-  first_line: "Collaborating for",
-  second_line: "Leading HealthTech Innovation Together",
-  third_line: "Advanced Digital Healthcare Solutions",
+  first_line: "Leading HealthTech Innovation Together",
+  second_line: "Advanced Digital Healthcare Solutions",
 };
 const edtech = {
-  first_line: "Collaborating for",
-  second_line: "Transforming EdTech with Strategic Partnership",
-  third_line: "Future-Ready Edtech Solutions",
+  first_line: "Transforming EdTech with Strategic Partnership",
+  second_line: "Future-Ready Edtech Solutions",
 };
 const internet = {
-  first_line: "Collaborating for",
-  second_line: "Accelerate SaaS Success with Powerful Partnerships",
-  third_line: "Transformative SaaS Solutions",
+  first_line: "Accelerate SaaS Success with Powerful Partnerships",
+  second_line: "Transformative SaaS Solutions",
 };
 const digitalEcommerce = {
-  first_line: "Dominate the Digital",
-  second_line: "Commerce Landscape",
-  third_line: "Next Gen Digital Commerce Solutions",
+  first_line: "Dominate the Digital Commerce Landscape",
+  second_line: "Next Gen Digital Commerce Solutions",
 };
 const greenSustainability = {
-  first_line: "Tech Revolutionaries",
-  second_line: "for a Greener Future",
-  third_line: "Advanced Green Tech Solutions",
+  first_line: "Tech Revolutionaries for a Greener Future",
+  second_line: "Advanced Green Tech Solutions",
 };
 
 const Collaborate = () => {
@@ -59,12 +53,10 @@ const Collaborate = () => {
     return (
       <div className="bg-[#EAF1FF]  min-h-[280px] flex flex-col justify-center  relative text-black">
         <div className="ml-[10%] md:ml-[20%] space-y-7 font-raleway">
-          <h1 className=" font-bold text-2xl  lg:text-3xl leading-8">
+          <h1 className=" font-bold text-2xl max-w-[400px] lg:text-3xl leading-8">
             {data?.first_line}
-            <br />
-            {data?.second_line}
           </h1>
-          <p className="font-semibold">{data?.third_line}</p>
+          <p className="font-semibold">{data?.second_line}</p>
           <a
             href="/contact"
             className="group w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1 mt-10"

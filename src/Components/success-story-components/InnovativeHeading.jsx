@@ -55,15 +55,10 @@ const InnovativeHeading = () => {
   return (
     <div className="w-full flex flex-col gap-6 justify-center items-center text-center font-raleway">
       <div className="flex flex-col gap-3">
-        <p className="text-xl md:text-3xl lg:text-4xl lg:font-extrabold font-bold">
-          {data?.title}
+        <p className="custom-gradient-text py-2">
+          {data?.title}<br/>{data?.heading}
         </p>
-        <p
-          className="text-xl md:text-3xl lg:text-4xl lg:font-extrabold font-bold"
-          style={gradientStyle}
-        >
-          {data?.heading}
-        </p>
+       
       </div>
 
       {data?.description && (

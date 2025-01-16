@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import Banner from "../Components/common-components/Banner"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import SolutionPartners from "../Components/common-components/SolutionPartners"
@@ -28,6 +29,22 @@ const CloudServices = () => {
   ];
   return (
     <>
+     <Helmet>
+                {/* For SEO  */}
+                <title>Cloud Consulting Services | Cloud Strategy Engineering Services</title>
+                <meta
+                  name="description"
+                  content="Explore our cloud strategy engineering services and cloud advisory services to help your business optimize its cloud strategy and achieve lasting success."
+                />
+                <meta name="keywords" content="cloud consulting services, cloud implementation services, cloud strategy engineering services, cloud advisory services, cloud technology consultant, hybrid cloud consulting" />
+                {/* For Social Media */}
+                <meta property="og:title" content="Cloud Consulting Services | Cloud Strategy Engineering Services" />
+                <meta property="og:description" content="Explore our cloud strategy engineering services and cloud advisory services to help your business optimize its cloud strategy and achieve lasting success." />
+                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:keywords" content="cloud consulting services, cloud implementation services, cloud strategy engineering services, cloud advisory services, cloud technology consultant, hybrid cloud consulting" />
+                {/* canonical */}
+                <link rel="canonical" href="https://altumindglobal.com/services/cloud" />
+              </Helmet>
       <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
         <Banner />
 
@@ -42,10 +59,10 @@ const CloudServices = () => {
         </section>
         <section id="section3">
           <div className="text-center space-y-3 mb-10 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+            <p className="custom-sub-heading">
               Our Partnership Ecosystem
             </p>
-            <p className=" font-extrabold w-fit mx-auto text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text">
               Elite Partners Behind Our Cloud Innovation
             </p>
           </div>
@@ -53,10 +70,10 @@ const CloudServices = () => {
         </section>
         <section id="section4" className="bg-[#F3F9FF] py-8">
           <div className="text-center font-raleway space-y-3 mb-10">
-            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+            <p className="custom-sub-heading">
               Why Altumind Stands Out
             </p>
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text">
               Making Cloud Work for You
             </p>
           </div>
@@ -66,22 +83,22 @@ const CloudServices = () => {
           <EngModel />
         </section>
         <section id="section6">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Client Testimonials
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               The Altumind Impact: In Their Words
             </p>
           </div>
           <Testimonials />
         </section>
         <section id="section7">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Benefits
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Adaptive Solutions for Modern Success
             </p>
           </div>
@@ -89,14 +106,14 @@ const CloudServices = () => {
         </section>
         <GetStarted />
         <section id="section8">
-          <SuccessStories />
+          <SuccessStories heading="Transforming Challenges into Triumphs"/>
         </section>
         <section id="section9">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Insights
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Dive into Our Latest Perspectives
             </p>
           </div>

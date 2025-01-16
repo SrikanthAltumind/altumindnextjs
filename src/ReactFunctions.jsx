@@ -14,7 +14,7 @@ export const customRenderers = {
     <img
       src={src}
       alt={alt}
-      className="object-contain max-w-[600px] max-h-[360px] mx-auto"
+      className="object-contain sm:max-w-[600px]  mx-auto"
     />
   )
 };

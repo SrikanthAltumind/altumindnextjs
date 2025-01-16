@@ -9,6 +9,7 @@ import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import {debounce} from 'lodash'
 import Banner from "../Components/common-components/Banner";
 import CareerForm from "../Components/contact-components/CareerForm";
+import { Helmet } from "react-helmet-async";
 
 const OpenRoles = () => {
 
@@ -159,21 +160,55 @@ useEffect(() => {
 
 
   return (
+    <>
+     <Helmet>
+                {/* For SEO  */}
+                <title>Open Roles | Explore Current Job Openings & Apply Now</title>
+                <meta
+                  name="description"
+                  content="Ready for your next career adventure? Join our team and be part of a company that values creativity, growth, and collaboration. Explore our opportunities!"
+                />
+                <meta name="keywords" content="" />
+                {/* For Social Media */}
+                <meta property="og:title" content="Open Roles | Explore Current Job Openings & Apply Now" />
+                <meta property="og:description" content="Ready for your next career adventure? Join our team and be part of a company that values creativity, growth, and collaboration. Explore our opportunities!" />
+                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:keywords" content="" />
+                {/* canonical */}
+                <link rel="canonical" href="https://altumindglobal.com/career/open-roles" />
+              </Helmet>
+    <div className='bg-LightBlue md:h-[300px]  max-md:py-10 flex md:flex-row flex-col-reverse justify-between items-center font-raleway gap-y-10 px-4 md:px-10 lg:px-28'>
+      
+    <div className="max-md:px-5">
+   <p className=' custom-gradient-text mx-0  py-2'>
+   Careers That Evolve
+   With You
+   </p>
+   <p className='max-w-[420px] mx-0 text-sm md:text-base  text-black font-medium'>Join a Culture That Celebrates Your Unique Challenger Spirit</p>
+   </div>
+
+   <div>
+     <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Open_Roles_e8e58a1cd1.svg" alt="Two people hold a 'Join Us!' sign next to a document labeled 'Candidate' with profile pictures, a red chair nearby, and a dark background." />
+   </div>
+ </div>
     <div className="w-full flex flex-col gap-8 justify-center items-center font-raleway dark:text-white dark:bg-[#0d1015]">
-      <div className="w-full h-[240px] md:h-[360px] py-10 bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
-        <p className="lg:text-3xl md:text-2xl text-xl font-extrabold">
-          <span style={gradientStyle}>Careers That Evolve</span>{" "}
-          <span>With You</span>
+      {/* <div className="w-full h-[240px] md:h-[360px] py-10 bg-[#F3F9FF] flex flex-col gap-4 items-center justify-center text-center">
+        <p className="custom-gradient-text py-2">
+       Careers That Evolve
+        With You
         </p>
         <p className="lg:text-base font-medium text-sm">
           Join a Culture That Celebrates Your Unique
           <br />
           Challenger Spirit
-        </p>
+        </p> */}
         {/* <button className="w-[200px] h-[50px] rounded-3xl text-white text-sm font-medium bg-[#DD5143]">
           See All Open Roles
         </button> */}
-      </div>
+      {/* </div> */}
+
+     
+
       <div className="w-full justify-center flex items-center p-6">
         <div className=" w-[80%] flex gap-4 rounded-full justify-start items-center border border-gray-300 px-4 py-2">
           <label htmlFor="role-search">
@@ -222,7 +257,7 @@ useEffect(() => {
           )}
         </div>
       </div>
-      <div className="flex w-full justify-start items-center p-6">
+      <div className="w-[85%]">
         <p className="font-semibold capitalize">Filter By</p>
       </div>
       <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative">
@@ -298,6 +333,7 @@ useEffect(() => {
       </div> */}
       <CareerForm/>
     </div>
+    </>
   );
 };
 

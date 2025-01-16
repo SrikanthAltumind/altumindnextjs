@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { gradientStyle } from "../../ReactFunctions";
 import Accordion from "../common-components/Accordion";
 import { useLocation } from "react-router-dom";
+import LoaderSpinner from "../common-components/LoaderSpinner";
+import axios from "axios";
 
 const bfsi = {
   heading: "Fueling the Next Wave of Innovation",
@@ -68,7 +70,7 @@ const edtech = {
       attributes: {
         title: "Digital EdTech Solutions",
         description:
-          "Experience education anew with our Digital EdTech Solutions. Elevate your learning path with our LCMS, E learning apps, and Remote Proctoring Solutions, customized for personalized learning and efficient educational administration.",
+          "Experience education anew with our Digital EdTech Solutions. Elevate your learning path with our LCMS, e-learning apps, and remote proctoring solutions, customized for personalized learning and efficient educational administration.",
       },
     },
     {
@@ -351,6 +353,8 @@ const greenSustainability = {
 
 const ServiceOfferrings = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const location = useLocation();
 
@@ -364,8 +368,8 @@ const ServiceOfferrings = () => {
     else if (location.pathname === "/industries/digital-commerce")
       setData(digitalEcommerce);
     else if (location.pathname === "/industries/green-sustainability")
-      setData(greenSustainability);
-  };
+      setData(greenSustainability);  
+}
 
   useEffect(() => {
     fetchData();
@@ -373,10 +377,9 @@ const ServiceOfferrings = () => {
 
   return (
     <div className="w-full bg-[#EAF1FF] flex flex-col gap-4 py-6 font-raleway">
-      <div className="flex justify-center items-center w-full p-3">
+      <div className="py-2">
         <p
-          className="font-extrabold lg:text-5xl md:text-4xl text-3xl "
-          style={gradientStyle}
+          className="custom-gradient-text py-2"
         >
           Service Offerings
         </p>

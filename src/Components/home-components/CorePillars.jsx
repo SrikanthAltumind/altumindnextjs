@@ -240,6 +240,7 @@ const CorePillars = () => {
   }, []);
 
   return (
+    <div className="font-raleway">
     <motion.section
       ref={ref}
       className="flex w-full justify-start items-center flex-col gap-6"
@@ -247,12 +248,16 @@ const CorePillars = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full text-center flex flex-col gap-4">
+      {/* <div className="w-full text-center flex flex-col gap-4">
         <p className="font-semibold">Core Pillars</p>
         <p className="md:text-4xl text-2xl font-extrabold text-[#02194a] dark:text-white">
           <span style={gradientStyle}>Driving Forces</span> Behind <br />
           Our Extraordinary Achievements
         </p>
+      </div> */}
+      <div className="text-center space-y-3">
+        <p className="custom-sub-heading">Core Pillars</p>
+        <p className="custom-gradient-text px-5 sm:px-0">Driving Forces Behind <br/> Our Extraordinary Achievements</p>
       </div>
       <motion.div
         initial={{ x: "-100%", opacity: 0, filter: blur("5px") }}
@@ -336,6 +341,7 @@ const CorePillars = () => {
         </svg>
       </a>
     </motion.section>
+    </div>
   );
 };
 

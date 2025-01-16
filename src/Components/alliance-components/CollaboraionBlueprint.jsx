@@ -42,8 +42,8 @@ const CollaboraionBlueprint = () => {
   return (
     <section className="mx-auto lg:w-[97%] w-[90%] max-w-[1100px] dark:text-white font-raleway space-y-10">
         <div className="text-center space-y-3">
-        <p className="text-sm md:text-base dark:text-white text-black font-semibold">Our Approach to Successful Alliances</p>
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">Collaboration Blueprint</p>
+        <p className="custom-sub-heading">Our Approach to Successful Alliances</p>
+            <p className="custom-gradient-text">Collaboration Blueprint</p>
         </div>
         <div className="flex sm:flex-row justify-center flex-wrap lg:flex-nowrap max-lg:max-w-[750px] mx-auto flex-col gap-x-[10px] gap-y-5">
             {

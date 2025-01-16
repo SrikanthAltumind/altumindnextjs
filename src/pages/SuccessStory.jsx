@@ -11,9 +11,13 @@ import GetStarted from "../Components/services-common/GetStarted";
 import Transformative from "../Components/success-story-components/Transformative";
 import NumberResults from "../Components/success-story-components/NumberResults";
 import Menu from "../Components/industries-common/Menu";
+import { portfolioMetaData } from "../MetaData";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const SuccessStory = () => {
-
+  // const [metadata, setMetaData] = useState({})
+  
   let servicesMenu;
   if (window?.location.pathname === "/portfolio/enphase") {
     servicesMenu = [
@@ -37,8 +41,31 @@ const SuccessStory = () => {
       { id: "section-7", tabId: "tab7", name: "Success" },
     ];
   }
+
+  
+    const pageID = location.pathname.split("/")
+        const pathID = pageID[pageID.length-1]
+        const metadata = portfolioMetaData[pathID]
+        // setMetaData(portfolioMetaData[pathID])
+        console.log("Page ID changed:", pathID);
+        console.log(metadata, 'meta')
   
   return (
+    <>
+      <Helmet>
+            {/* SEO */}
+            <title>{metadata.title}</title>
+            <meta name="description" content={metadata.description} />
+            {metadata.keywords && <meta name="keywords" content={metadata.keywords} /> }
+            {/* Social Media */}
+            <meta property="og:title" content={metadata.ogTitle} />
+            {metadata.keywords && <meta property="og:keywords" content={metadata.keywords} /> }
+            <meta property="og:description" content={metadata.ogDescription} />
+            <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+            {/* Canonical */}
+            <link rel="canonical" href={metadata.canonicalUrl} />
+          </Helmet>
+ 
     <div className="w-full flex flex-col justify-start items-center gap-16 md:gap-20">
       <section className="w-full flex justify-center">
         <SuccessStoryBanner />
@@ -106,6 +133,7 @@ const SuccessStory = () => {
         <GetStarted />
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import Banner from "../Components/common-components/Banner"
 import InsightsBlogs from "../Components/common-components/InsightsBlogs"
 import Spectrum from "../Components/common-components/Spectrum"
@@ -12,7 +13,7 @@ import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
 import TechStack from "../Components/services-common/TechStack"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
-import { gradientStyle } from "../ReactFunctions"
+// import { gradientStyle } from "../ReactFunctions"
 
 
 const DataAnalytics = () => {
@@ -29,10 +30,27 @@ const DataAnalytics = () => {
   ];
   return (
     <>
+    <Helmet>
+                    {/* For SEO  */}
+                    <title>Data Analytics Company | Professional Data Analytics Services</title>
+                    <meta
+                      name="description"
+                      content="Make better decisions with data. Our data analytics services and experienced data analytics company help you turn your data into a powerful growth tool."
+                    />
+                    <meta name="keywords" content="data analytics services, data analytics as a service, data analytics service providers, data analytics solution, data analytics Company, data analytics consulting services, data analytics services companies" />
+                    {/* For Social Media */}
+                    <meta property="og:title" content="Data Analytics Company | Professional Data Analytics Services" />
+                    <meta property="og:description" content="Make better decisions with data. Our data analytics services and experienced data analytics company help you turn your data into a powerful growth tool." />
+                    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                    <meta property="og:keywords" content="data analytics services, data analytics as a service, data analytics service providers, data analytics solution, data analytics Company, data analytics consulting services, data analytics services companies" />
+                    {/* canonical */}
+                    <link rel="canonical" href="https://altumindglobal.com/services/data-analytics" />
+            </Helmet>
+
       <div className="dark:bg-darkTheme flex flex-col gap-16">
         <Banner />
 
-        <div className="w-full sticky top-[70px] bg-white -mt-28 dark:bg-darkTheme z-[2]">
+        <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme z-[2]">
           <Menu sections={servicesMenu} />
         </div>
         <section id="section1">
@@ -40,14 +58,14 @@ const DataAnalytics = () => {
         </section>
         <section id="section2">
           <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-            <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-              <p className="font-semibold">Our Data Analytics Services</p>
-              <p className="text-3xl font-extrabold md:max-w-[500px]">
-                <span style={gradientStyle}>
+            <div className="space-y-3 text-center">
+              <p className="custom-sub-heading">Our Data Analytics Services</p>
+              <p className="custom-gradient-text">
+               
                   Full Spectrum Data Analytics
                   <br />
-                </span>
-                <span>from Insight to Impact</span>
+            
+              from Insight to Impact
               </p>
             </div>
           </div>
@@ -57,10 +75,10 @@ const DataAnalytics = () => {
         </section>
         <section id="section3" className="bg-[#F3F9FF] py-8">
           <div className="text-center font-raleway space-y-3 mb-10">
-            <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+            <p className="custom-sub-heading">
               Why Altumind Stands Out
             </p>
-            <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className=" custom-gradient-text">
               Turning Data into Your Competitive Edge
             </p>
           </div>
@@ -70,11 +88,11 @@ const DataAnalytics = () => {
           <EngModel />
         </section>
         <section id="section5">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Client Testimonials
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               The Altumind Impact: In Their Words
             </p>
           </div>
@@ -84,27 +102,27 @@ const DataAnalytics = () => {
           <TechStack />
         </section>
         <section id="section7">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Benefits
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
-              <span style={gradientStyle}>Transforming Raw Data</span>{" "}
-              <span className="text-[#02143b]">into Real Results</span>
+            <p className="custom-gradient-text">
+            Transforming Raw Data
+             into Real Results
             </p>
           </div>
           <SettingUpForSuccess />
         </section>
         <GetStarted />
         <section id="section8">
-          <SuccessStories />
+          <SuccessStories heading="Proven Result of our Marketing Expertise"/>
         </section>
         <section id="section9">
-          <div className="text-center space-y-2 mb-20 font-raleway">
-            <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+          <div className="text-center space-y-3 mb-20 font-raleway">
+            <p className="custom-sub-heading">
               Insights
             </p>
-            <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+            <p className="custom-gradient-text">
               Dive into Our Latest Perspectives
             </p>
           </div>

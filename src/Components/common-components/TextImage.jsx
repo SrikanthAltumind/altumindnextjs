@@ -9,14 +9,8 @@ const TextImage = ({ data, textRight }) => {
   return (
     <div className="w-[90%] flex flex-col gap-14 p-3 items-center justify-center font-raleway">
       <div className="w-full flex flex-col gap-2 justify-center items-center text-center">
-        <p className="text-xl md:text-3xl lg:text-4xl font-extrabold">
-          {data?.title}:
-        </p>
-        <p
-          className="text-xl md:text-3xl lg:text-4xl font-extrabold"
-          style={gradientStyle}
-        >
-          {data?.heading}
+        <p className="custom-gradient-text py-2">
+          {data?.title}:<br/>{data?.heading}
         </p>
         {data?.subheading && (
           <p className="font-medium text-sm mt-3 max-w-[600px]">
@@ -25,7 +19,7 @@ const TextImage = ({ data, textRight }) => {
         )}
       </div>
       <div
-        className={`w-full gap-10 items-center justify-evenly flex flex-col md:flex-row lg:text-base md:text-sm text-xs ${
+        className={`w-full gap-10 items-center justify-evenly flex flex-col-reverse md:flex-row lg:text-base md:text-sm text-xs ${
           textRight && "md:flex-row-reverse flex-col"
         }`}
       >

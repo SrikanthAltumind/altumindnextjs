@@ -3,8 +3,8 @@ import AltumindLogo from '../../assets/Vector.png'
 const Timeline = () => {
   return (
     <div className="w-[90%] mx-auto py-5"> 
-    <div className='font-raleway text-center mx-auto max-w-[950px] mb-10 space-y-2'>
-        <p className='font-semibold'>The Altumind Story</p>
+    <div className='font-raleway text-center mx-auto max-w-[950px] mb-10 space-y-3'>
+        <p className='custom-sub-heading'>The Altumind Story</p>
         <p className='custom-gradient-text'>A Journey of TRY. FALL. CHANGE. RISE.</p>
         <p className='font-montserrat font-medium text-[13px]'>At Altumind, we embrace a philosophy of continuous evolution, recognizing that true growth emerges from a willingness to experiment, learn from setbacks, and adapt to an ever-changing landscape. Our journey is a testament to this ethos, marked by bold attempts, resilience in the face of challenges, and an unwavering commitment to progress.</p>
     </div>

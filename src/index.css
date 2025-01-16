@@ -10,7 +10,10 @@
 
 @layer components {
     .custom-gradient-text {
-      @apply  text-2xl lg:text-3xl xl:text-4xl w-fit mx-auto font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue;
+      @apply  sm:text-3xl text-2xl lg:text-4xl w-fit mx-auto font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue;
+    }
+    .custom-sub-heading{
+      @apply lg:text-xl sm:text-lg font-semibold
     }
 }
 .move-inside{
@@ -32,4 +35,22 @@
 .markdown>* {
   all: revert;
   font-family: "Raleway", system-ui;
+}
+
+.markdown li{
+padding-bottom: 4px;
+}
+
+.markdown-agiliti ul{
+  all: revert;
+margin-left: -20px;
+}
+
+.markdown-services-animated-card>* {
+  all: revert;
+  font-family: "Raleway", system-ui;
+}
+.markdown-services-animated-card ul{
+  padding-left: 20px;
+  list-style-image: url('./assets/Tick Icon.svg');
 }

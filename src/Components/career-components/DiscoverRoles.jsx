@@ -43,10 +43,13 @@ if (loading) {
     <div className=' font-raleway py-5  dark:text-white '>
         <div className='w-[90%] bg-red-00 max-w-[950px] gap-10 mx-auto flex flex-col items-center sm:flex-row '>
             <div className='basis-[50%] grow sm:pt-10 max-sm:text-center'>
-                <p className='font-extrabold text-2xl lg:text-3xl xl:text-4xl bg-clip-text text-transparent w-fit max-sm:mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>
+                <div className='space-y-3'>
+                <p className='custom-gradient-text sm:mx-0'>
                     {data?.title}
                 </p>
-                <p className='font-semibold mt-1 md:mt-3 text-xs lg:text-sm'>{data?.text}</p>
+                <p className='custom-sub-heading'>{data?.text}</p>
+                </div>
+               
                 <p className='font-medium font-montserrat my-5 md:my-8 text-xs lg:text-sm'>{data?.description}</p>
                 <Link to='/career/open-roles' className='group text-xs lg:text-base text-secondary underline underline-offset-2 decoration-1 font-semibold flex gap-2 items-center w-fit max-sm:mx-auto'>
                     <span className=''>Explore Open Roles</span>

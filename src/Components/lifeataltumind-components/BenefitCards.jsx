@@ -43,11 +43,14 @@ const BenefitCards = () => {
 
   return (
     <div className="w-full flex flex-col gap-2 items-center justify-center font-raleway">
-      <p className="text-4xl font-extrabold" style={gradientStyle}>
+      <div className="space-y-3">
+      <p className="custom-gradient-text">
         Benefits
       </p>
-      <p className="font-medium">The Altumind Difference</p>
-      <div className="overflow-hidden w-full relative min-h-fit p-3 mt-2">
+      <p className="custom-sub-heading">The Altumind Difference</p>
+      </div>
+
+      <div className="overflow-hidden w-full relative min-h-fit py-3 mt-2">
         <Marquee className="py-4">
           {data?.concat(data)?.map((content) => (
             <div

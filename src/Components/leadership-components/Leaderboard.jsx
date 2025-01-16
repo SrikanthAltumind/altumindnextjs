@@ -53,9 +53,9 @@ const LeaderBoard = () => {
   return (
     <div className='w-[90%] max-w-[950px] mx-auto dark:text-white space-y-10'>
       {/* with old code */}
-      <div className="font-raleway text-center dark:text-white mb-32">
-            <p className='font-semibold'>Meet Our Leader Board</p>
-            <p className="w-fit mx-auto font-extrabold text-2xl lg:text-3xl mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue">
+      <div className="font-raleway text-center dark:text-white mb-36 space-y-3">
+            <p className='custom-sub-heading'>Meet Our Leader Board</p>
+            <p className="custom-gradient-text">
             Members & Their Brief History
             </p>
         </div>

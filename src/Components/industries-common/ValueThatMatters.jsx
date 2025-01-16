@@ -112,12 +112,13 @@ const ValueThatMatters = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center font-raleway py-6 gap-5">
-      <div className="w-full flex justify-center items-center p-3">
-        <p className="lg:text-5xl md:text-4xl text-3xl font-extrabold" style={gradientStyle}>
+      <div>
+        <p className="custom-gradient-text">
           Value That Matters
         </p>
       </div>
-      <div className="lg:w-[90%] w-full flex md:flex-row flex-col items-center p-3 gap-2 md:h-[450px] justify-between">
+      {/* <div className="lg:w-[90%] w-full flex md:flex-row flex-col items-center p-3 gap-2 md:h-[450px] justify-between"> */}
+        <div className="lg:w-[90%] w-full flex lg:flex-row flex-col items-center p-3 gap-2 justify-between">
         <div className="">
           <img
             src={data?.url}
@@ -127,7 +128,8 @@ const ValueThatMatters = () => {
             className="object-contain md:h-[400px] h-[200px] w-[300px] md:w-[500px]"
           />
         </div>
-        <div className="md:w-[60%] w-full h-full py-3 px-2 gap-8 flex flex-col">
+        {/* <div className="md:w-[60%] w-full h-full py-3 px-2 gap-8 flex flex-col"> */}
+        <div className="lg:w-[60%] w-full h-full py-3 px-2 gap-8 flex flex-col">
           <div className="flex flex-col justify-start items-start">
             <p className="dark:text-white text-sm leading-relaxed">{data?.description}</p>
           </div>
@@ -135,7 +137,8 @@ const ValueThatMatters = () => {
             {data?.points?.map((content, index) => {
               return (
                 <div
-                  className="flex gap-2 justify-start items-center w-[45%] dark:text-white"
+                  // className="flex gap-2 justify-start items-center w-[45%] dark:text-white"
+                  className="flex gap-2 justify-start items-center w-full sm:w-[45%] dark:text-white"
                   key={content + index}
                 >
                   <svg

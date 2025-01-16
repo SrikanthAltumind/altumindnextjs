@@ -45,11 +45,11 @@ const FutureAlliance = () => {
     <section className=' font-raleway py-10  dark:text-white bg-[#F3F9FF] dark:bg-[#24272c]'>
          
         <div className='w-[90%] max-w-[1000px]  mx-auto  '>
-        <div className='text-center lg:text-left mb-5 lg:mb-0'>
-                <p className='font-semibold   text-xs lg:text-sm'>
+        <div className='text-center lg:text-left mb-5 space-y-3 lg:mb-0'>
+                <p className='custom-sub-heading'>
                 {data?.sub}
                 </p>
-                <p className='font-extrabold mt-1 md:mt-3 text-2xl lg:text-3xl xl:text-4xl bg-clip-text text-transparent w-fit max-lg:mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>{data?.title}</p>
+                <p className='custom-gradient-text lg:mx-0'>{data?.title}</p>
                 </div>
            <div className='flex flex-col-reverse items-center  lg:flex-row gap-x-10 gap-y-5'>
             <div className='basis-[50%] max-w-[600px] grow max-lg:text-center sm:text-base text-sm'>

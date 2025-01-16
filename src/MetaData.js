@@ -1,0 +1,149 @@
+// industries Pages Meta data
+export const industriesMetaData = {
+    'bfsi-fintech': {
+      title: "Finance & BFSI | Expert Solutions for Banking & Financial Services",
+      ogTitle: "Finance & BFSI | Expert Solutions for Banking & Financial Services",
+      description: "Unlock growth in the finance & BFSI sector with our tailored solutions. We help optimize operations, improve efficiency, and drive innovation in financial services.",
+      ogDescription: "Unlock growth in the finance & BFSI sector with our tailored solutions. We help optimize operations, improve efficiency, and drive innovation in financial services.",
+      keywords: "keywordss",
+      canonicalUrl:'https://altumindglobal.com/industries/bfsi-fintech'
+    },
+    'digital-commerce': {
+      title: "Digital Commerce Solutions | Enhance Your Online Business",
+      ogTitle: "Digital Commerce Solutions | Enhance Your Online Business",
+      description: "Boost your sales with our digital commerce solutions. We help optimize eCommerce platforms, streamline processes, and drive online business growth.",
+      ogDescription: "Boost your sales with our digital commerce solutions. We help optimize eCommerce platforms, streamline processes, and drive online business growth.",
+      keywords: "",
+      canonicalUrl:'https://altumindglobal.com/industries/digital-commerce'
+    },
+    'healthcare': {
+      title: "Healthcare Industry Solutions | Transforming Healthcare Services",
+      ogTitle: "Healthcare Industry Solutions | Transforming Healthcare Services",
+      description: "Unlock innovation in healthcare with our expert solutions. We help optimize healthcare operations, enhance patient experiences, and improve overall care.",
+      ogDescription: "Unlock innovation in healthcare with our expert solutions. We help optimize healthcare operations, enhance patient experiences, and improve overall care.",
+      keywords: "keywords",
+      canonicalUrl:'https://altumindglobal.com/industries/healthcare'
+    },
+    'green-sustainability': {
+      title: "Sustainability & Green | Sustainable Practices for a Better Future",
+      ogTitle: "Sustainability & Green | Sustainable Practices for a Better Future",
+      description: "Take action for the planet. We provide green and sustainability solutions that help your business become more eco-conscious while improving efficiency.",
+      ogDescription: "Take action for the planet. We provide green and sustainability solutions that help your business become more eco-conscious while improving efficiency.",
+      keywords: "keywords",
+      canonicalUrl:'https://altumindglobal.com/industries/green-sustainability'
+    },
+    'edtech': {
+      title: "Edtech Industry Solutions | Innovating Education with Technology",
+      ogTitle: "Edtech Industry Solutions | Innovating Education with Technology",
+      description: "Enhance your educational impact with our Edtech solutions. We help schools and institutions improve learning experiences and drive digital transformation.",
+      ogDescription: "Enhance your educational impact with our Edtech solutions. We help schools and institutions improve learning experiences and drive digital transformation.",
+      keywords: "keywords",
+      canonicalUrl:'https://altumindglobal.com/industries/edtech'
+    },
+    'internet-saas': {
+      title: "Internet & SaaS Solutions | Cloud Software for Business Growth",
+      ogTitle: "Internet & SaaS Solutions | Cloud Software for Business Growth",
+      description: "Let us help you scale smarter. Our Internet & SaaS solutions improve efficiency, streamline workflows, and deliver intuitive cloud-based software for growth.",
+      ogDescription: "Let us help you scale smarter. Our Internet & SaaS solutions improve efficiency, streamline workflows, and deliver intuitive cloud-based software for growth.",
+      keywords: "keywords",
+      canonicalUrl:'https://altumindglobal.com/industries/internet-saas'
+    },
+  };
+
+//   success stories meta data
+ export const portfolioMetaData = {
+    'sukhiba': {
+        title: "Sukhiba Android App & Dashboard | Success Story & Insights",
+        ogTitle: "Sukhiba Android App & Dashboard | Success Story & Insights",
+        description: "Discover the Sukhiba Android App & Dashboard success story. Learn how our solution boosts efficiency and streamlines operations for businesses.",
+        ogDescription: "Discover the Sukhiba Android App & Dashboard success story. Learn how our solution boosts efficiency and streamlines operations for businesses.",
+        keywords: "keywords",
+        canonicalUrl:'https://altumindglobal.com/portfolio/sukhiba'
+    },
+    'secpod': {
+        title: "Secpod Marketing Website | Exploring Our Digital Strategy",
+        ogTitle: "Secpod Marketing Website | Exploring Our Digital Strategy",
+        description: "Curious about Secpod’s digital strategy? Explore how we use innovative solutions and data-driven marketing to drive growth and connect with your audience.",
+        ogDescription: "Curious about Secpod’s digital strategy? Explore how we use innovative solutions and data-driven marketing to drive growth and connect with your audience.",
+        keywords: "keywords",
+        canonicalUrl:'https://altumindglobal.com/portfolio/secpod'
+        },
+        'united-finance': {
+        title: "United Finance Corporate Website | Case Study on Design & Strategy",
+        ogTitle: "United Finance Corporate Website | Case Study on Design & Strategy",
+        description: "Discover how we helped United Finance succeed through innovative design and smart strategy. Explore our case study and see the results of a tailored approach.",
+        ogDescription: "Discover how we helped United Finance succeed through innovative design and smart strategy. Explore our case study and see the results of a tailored approach.",
+        keywords: "keywords",
+        canonicalUrl:'https://altumindglobal.com/portfolio/united-finance'
+        },
+        'enphase': {
+        title: "Enphase System Estimator Calculator | US Case Study & Overview",
+        ogTitle: "Enphase System Estimator Calculator | US Case Study & Overview",
+        description: "Check out how the Enphase System Estimator Calculator helped streamline solar system estimates. Read our US case study to see the impact of this innovative solution.",
+        ogDescription: "Check out how the Enphase System Estimator Calculator helped streamline solar system estimates. Read our US case study to see the impact of this innovative solution.",
+        keywords: "keywords",
+        canonicalUrl:'https://altumindglobal.com/portfolio/enphase'
+        },
+    };
+
+export const blogMetaData = {
+      '4': {
+        title: "Ultimate Guide to App Store Optimization: Strategies to Increase Downloads",
+        ogTitle: "Ultimate Guide to App Store Optimization: Strategies to Increase Downloads",
+        description: "Boost your app's visibility, downloads, and engagement with expert App Store Optimization (ASO) strategies for Apple App Store and Google Play in 2024.",
+        ogDescription: "Boost your app's visibility, downloads, and engagement with expert App Store Optimization (ASO) strategies for Apple App Store and Google Play in 2024.",
+        keywords: "keywords",
+        canonicalUrl:'https://altumindglobal.com/insights/blog/4/ultimate-guide-to-app-store-optimization-strategies-to-increase-downloads'
+      },
+      '1': {
+          title: "Breaking Down 5 UX Design Myths Plaguing Financial Services",
+          ogTitle: "Breaking Down 5 UX Design Myths Plaguing Financial Services",
+          description: "Unlock financial services growth by busting 5 UX design myths. Discover how great user experiences fuel innovation and success.",
+          ogDescription: "Unlock financial services growth by busting 5 UX design myths. Discover how great user experiences fuel innovation and success.",
+          keywords: "keywords",
+          canonicalUrl:'https://altumindglobal.com/insights/blog/1/breaking-down-5-ux-design-myths-plaguing-financial-services'
+        },
+        '2': {
+          title: "Bridging the Gap: Humanizing Big Data Through Design Thinking",
+          ogTitle: "Bridging the Gap: Humanizing Big Data Through Design Thinking",
+          description: "Transform data into powerful solutions that align with user needs, crafting innovative products and experiences that make a real, personal impact.",
+          ogDescription: "Transform data into powerful solutions that align with user needs, crafting innovative products and experiences that make a real, personal impact.",
+          keywords: "keywords",
+          canonicalUrl:'https://altumindglobal.com/insights/blog/2/bridging-the-gap-humanizing-big-data-through-design-thinking'
+        },
+        '3': {
+          title: "How AI is Transforming Design: A New Era of Creativity and Innovation",
+          ogTitle: "How AI is Transforming Design: A New Era of Creativity and Innovation",
+          description: "AI is transforming UX design, enabling personalized experiences, automating tasks, and creating smarter interfaces. Embrace AI for the future of user experience.",
+          ogDescription: "AI is transforming UX design, enabling personalized experiences, automating tasks, and creating smarter interfaces. Embrace AI for the future of user experience.",
+          keywords: "keywords",
+          canonicalUrl:'https://altumindglobal.com/insights/blog/3/how-ai-is-transforming-design-a-new-era-of-creativity-and-innovation'
+        },
+    };
+
+export const UIUXCXMetadata = {
+      'ui-design': {
+        title: "Altumind | UI Design Services & Company",
+        ogTitle: "AltumindGlobal | UI Design Services & Company",
+        description: "Elevate your user experience with professional UI Design services from a top UI Design company, focused on intuitive, high-performance designs.",
+        ogDescription: "Elevate your user experience with professional UI Design services from a top UI Design company, focused on intuitive, high-performance designs.",
+        keywords: "UI Design Services, ui services, UI design services company, web ui design, UI Design Company, mobile ui design company, best ui design company",
+        canonicalUrl:'https://altumindglobal.com/services/experience-design/ui-design'
+      },
+      'ux-design': {
+        title: "Altumind | UX Design Services & Company",
+        ogTitle: "AltumindGlobal | UX Design Services & Company",
+        description: "Transform your digital products with our UX Design services, offered by a trusted UX Design company, focused on enhancing user engagement and experience.",
+        ogDescription: "Transform your digital products with our UX Design services, offered by a trusted UX Design company, focused on enhancing user engagement and experience.",
+        keywords: "UX design services, UX services, UX web design, UX Research Services, UX design company, UX design consultant",
+        canonicalUrl:'https://altumindglobal.com/services/experience-design/ux-design'
+      },
+      'cx-design': {
+        title: "Expert CX Design | Customer Experience as a Service",
+        ogTitle: "Expert CX Design | Customer Experience as a Service",
+        description: "Enhance customer satisfaction with our CX design services and Customer Experience as a Service, driving loyalty through intuitive, tailored experiences.",
+        ogDescription: "Enhance customer satisfaction with our CX design services and Customer Experience as a Service, driving loyalty through intuitive, tailored experiences.",
+        keywords: "CX design, customer experience design, customer experience as a service, customer experience methodology, service design vs ux, what is cx design",
+        canonicalUrl:'https://altumindglobal.com/services/experience-design/cx-design'
+      },
+    };

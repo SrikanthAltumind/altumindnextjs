@@ -78,11 +78,8 @@ const Challenge = () => {
   return (
     <div className="w-[80%] mx-auto dark:text-white">
       <div className="text-center font-raleway mb-10">
-        <p className="font-extrabold text-xl md:text-3xl lg:text-4xl mb-1 text-primary dark:text-white">
-          {headerData?.title}:
-        </p>
-        <p className="custom-gradient-text text-xl md:text-3xl lg:text-4xl">
-          {headerData?.heading}
+        <p className="custom-gradient-text py-2">
+          {headerData?.title}: <br/>{headerData?.heading}
         </p>
       </div>
       <div className="space-y-10 mt-14">

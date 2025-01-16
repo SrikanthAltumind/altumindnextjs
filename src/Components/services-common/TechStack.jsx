@@ -62,8 +62,8 @@ const TechStack = () => {
     <div className="dark:text-white w-[90%] p-5 mx-auto font-raleway ">  
        <div className="max-w-[950px] mx-auto">
       <div className='text-center space-y-3 mb-10'>
-      <p className='text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold'>{data?.title}</p>
-            <p className=' font-extrabold w-fit mx-auto text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.heading}</p>
+      <p className='custom-sub-heading'>{data?.title}</p>
+            <p className=' custom-gradient-text'>{data?.heading}</p>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-10 gap-x-14 mx-auto max-w-[850px]">
                 {

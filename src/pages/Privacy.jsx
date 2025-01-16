@@ -1,5 +1,26 @@
+import { Helmet } from "react-helmet-async"
+
 const Privacy = () => {
   return (
+    <>
+      <Helmet>
+        {/* For SEO  */}
+        <title>Privacy Policy | How We Handle Your Personal Data</title>
+        <meta
+            name="description"
+            content="Read our Privacy Policy to understand how we protect your data. Learn about our practices and your rights regarding personal information."
+        />
+        <meta name="keywords" content="" />
+        {/* For Social Media */}
+        <meta property="og:title" content="Privacy Policy | How We Handle Your Personal Data" />
+        <meta property="og:description" content="Read our Privacy Policy to understand how we protect your data. Learn about our practices and your rights regarding personal information." />
+        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:keywords" content="" />
+        {/* canonical */}
+        <link rel="canonical" href="https://altumindglobal.com/privacy" />
+        </Helmet>
+    
+ 
     <section className="py-20 dark:bg-darkTheme dark:text-white font-montserrat">
     <div className="sm:w-[80%] w-[90%] mx-auto space-y-5">
         <div>
@@ -189,6 +210,7 @@ const Privacy = () => {
         </div>
     </div>
     </section>
+    </>
   )
 }
 

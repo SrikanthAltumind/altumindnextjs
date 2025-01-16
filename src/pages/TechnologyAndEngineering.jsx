@@ -13,8 +13,9 @@ import Overview from "../Components/services-common/Overview"
 import SettingUpForSuccess from "../Components/services-common/SettingUpForSuccess"
 import TechStack from "../Components/services-common/TechStack"
 import WhyAltumind from "../Components/services-common/WhyAltumind"
-import { gradientStyle } from "../ReactFunctions"
-import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+// import { gradientStyle } from "../ReactFunctions"
+// import IndustriesMenu from "../Components/industries-common/IndustriesMenu"
+import { Helmet } from "react-helmet-async"
 
 
 const TechnologyAndEngineering = () => {
@@ -31,6 +32,24 @@ const TechnologyAndEngineering = () => {
    ];
   
   return (
+     <>
+    <Helmet>
+    {/* For SEO  */}
+    <title>Digital Engineering Transformation | Digital Development Services</title>
+    <meta
+      name="description"
+      content="Leverage our digital engineering transformation and digital development services to drive innovation, optimize operations, and future-proof your business."
+    />
+    <meta name="keywords" content="digital engineering transformation, digital development services, platform engineering services, digital platform engineering services, consulting platform engineering, engineering services and products company" />
+    {/* For Social Media */}
+    <meta property="og:title" content="Digital Engineering Transformation | Digital Development Services" />
+    <meta property="og:description" content="Leverage our digital engineering transformation and digital development services to drive innovation, optimize operations, and future-proof your business." />
+    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:keywords" content="digital engineering transformation, digital development services, platform engineering services, digital platform engineering services, consulting platform engineering, engineering services and products company" />
+    {/* canonical */}
+    <link rel="canonical" href= "https://altumindglobal.com/services/technology-and-engineering"  />
+  </Helmet>
+   
     <div className="dark:bg-darkTheme flex flex-col gap-12 lg:gap-16 relative">
       <Banner />
       <div className="w-full sticky top-[70px] bg-white -mt-16 dark:bg-darkTheme z-[2]">
@@ -42,19 +61,19 @@ const TechnologyAndEngineering = () => {
       </section>
       <section id="section2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
-          <div className="w-full justify-center items-center flex flex-col p-4 gap-3 text-center">
-            <p className="font-semibold">Our Engineering Services</p>
-            <p className="text-3xl font-extrabold md:max-w-[500px]">
-              <span>Unmatched </span>
-              <span style={gradientStyle}>
+          <div className="text-center space-y-3">
+            <p className="custom-sub-heading">Our Engineering Services</p>
+            <p className="custom-gradient-text">
+             Unmatched 
+          
                 Engineering
                 <br /> Service Spectrum
-              </span>
+              
             </p>
             {/* <p className="md:max-w-[800px]">{data?.attributes?.description}</p> */}
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
+        <div className="w-[90%] mx-auto flex justify-center items-center">
           <Spectrum />
         </div>
       </section>
@@ -63,10 +82,10 @@ const TechnologyAndEngineering = () => {
         className="bg-[#F3F9FF] dark:bg-gradient-to-b from-[#031848] to-darkTheme py-10"
       >
         <div className="text-center font-raleway space-y-3 mb-10">
-          <p className="text-sm md:text-base dark:text-white text-black font-semibold">
+          <p className="custom-sub-heading">
             Why Altumind Stands Out
           </p>
-          <p className=" font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className=" custom-gradient-text">
             Elevating Businesses Through Smart Engineering
           </p>
         </div>
@@ -76,24 +95,24 @@ const TechnologyAndEngineering = () => {
         <EngModel />
       </section>
       <section id="section5">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+        <div className="text-center space-y-3 mb-20 font-raleway">
+          <p className="custom-sub-heading">
             Client Testimonials
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             The Altumind Impact: In Their Words
           </p>
         </div>
         <Testimonials />
       </section>
       <section id="section6">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+        <div className="text-center space-y-3 mb-20 font-raleway">
+          <p className="custom-sub-heading">
             Industries We Serve
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto">
-            <span className="text-[#02143b]">Tailored Solutions Across</span>{" "}
-            <span style={gradientStyle}>Diverse Sectors</span>
+          <p className="custom-gradient-text">
+           Tailored Solutions Across
+           Diverse Sectors
           </p>
         </div>
         <SettingUpForSuccess />
@@ -103,14 +122,14 @@ const TechnologyAndEngineering = () => {
       </section>
       <GetStarted />
       <section id="section8">
-        <SuccessStories />
+        <SuccessStories heading="Real results from our Engineering Excellence"/>
       </section>
       <section id="section9">
-        <div className="text-center space-y-2 mb-20 font-raleway">
-          <p className="text-sm md:text-base dark:text-white text-black dark:font-normal font-semibold">
+        <div className="text-center space-y-3 mb-20 font-raleway">
+          <p className="custom-sub-heading">
             Insights
           </p>
-          <p className="font-extrabold text-3xl  lg:text-4xl text-transparent w-fit mx-auto bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue">
+          <p className="custom-gradient-text">
             Dive into Our Latest Perspectives
           </p>
         </div>
@@ -119,6 +138,7 @@ const TechnologyAndEngineering = () => {
 
       <SubscribeForm />
     </div>
+    </>
   );
 }
 

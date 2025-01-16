@@ -44,8 +44,8 @@ const RemoteFirstCulture = () => {
     <section className="w-[90%]  dark:text-white mx-auto font-raleway">
         <div className='max-w-[1100px] mx-auto'>
         <div className='text-center space-y-3 mb-10'>
-            <p className=' font-extrabold text-3xl  lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gradientBlue  via-gradientGreen to-gradientBlue'>{data?.title}</p>
-            <p className='text-sm md:text-base dark:text-white text-black font-semibold'>{data?.heading}</p>
+            <p className='custom-gradient-text'>{data?.title}</p>
+            <p className='custom-sub-heading'>{data?.heading}</p>
         </div>
         <div className='flex lg:flex-row flex-col-reverse gap-5 items-center '>
             <div className='basis-[50%]'>

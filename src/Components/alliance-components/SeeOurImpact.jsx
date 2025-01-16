@@ -48,11 +48,11 @@ const SeeOurImpact = () => {
             <img src={data?.image?.data?.attributes?.url} className='mx-auto' alt="future-alliance"/>
         </div>
     <div className=''>
-    <div className="text-center lg:text-right mb-5 lg:mb-0">
-            <p className='font-extrabold text-2xl lg:text-3xl xl:text-4xl bg-clip-text text-transparent w-fit lg:ml-auto max-lg:mx-auto bg-gradient-to-r from-gradientBlue via-gradientGreen to-gradientBlue'>
+    <div className="text-center space-y-3 lg:text-right mb-5 lg:mb-0">
+            <p className='lg:ml-auto lg:mx-0 custom-gradient-text'>
             {data?.title}
             </p>
-            <p className='font-semibold mt-1 md:mt-3 text-xs lg:text-sm'>{data?.sub}</p>
+            <p className='custom-sub-heading'>{data?.sub}</p>
         </div>
         <div className='basis-[50%] lg:hidden max-w-[350px] mx-auto'>
             <img src={data?.image?.data?.attributes?.url} className='mx-auto' alt="future-alliance"/>

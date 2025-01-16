@@ -55,7 +55,7 @@ const SuccessStoryBanner = () => {
     <div className="bg-LightBlue w-full lg:min-h-[380px] py-6 sm:py-10 flex justify-center items-center">
       <div className="w-[90%]  sm:w-[80%]  justify-between flex flex-col sm:flex-row items-center gap-y-5 font-raleway">
         <div className="basis-[60%] flex flex-col gap-6 max-sm:text-center">
-          <p className="custom-gradient-text sm:mx-0 lg:text-4xl xl:text-5xl">
+          <p className="custom-gradient-text py-2 sm:mx-0">
             {data?.title}
           </p>
 

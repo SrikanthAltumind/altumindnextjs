@@ -42,14 +42,14 @@ const LeadershipVoices = () => {
   }
   return (
     <section className="w-full font-raleway flex flex-col items-center justify-center gap-8">
-      <div className="text-center dark:text-white flex flex-col gap-3 items-center justify-center">
+      <div className="text-center space-y-3">
         <p
-          className="w-fit font-extrabold text-2xl lg:text-3xl"
-          style={gradientStyle}
+          className="custom-gradient-text"
+       
         >
           Leadership Voices
         </p>
-        <p className="font-semibold">
+        <p className="custom-sub-heading">
           Planting the Seeds of Innovation and Growth
         </p>
       </div>

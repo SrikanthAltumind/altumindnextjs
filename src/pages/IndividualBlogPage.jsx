@@ -2,18 +2,28 @@ import React, { useEffect, useState } from "react";
 import AltumindLogo from "../assets/altumind_logo.png";
 import LoaderSpinner from "../Components/common-components/LoaderSpinner";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import { customRenderers } from "../ReactFunctions";
 import NewsLetterTextfield from "../Components/common-components/NewsletterTextfield";
+import { Helmet } from "react-helmet-async";
+import { blogMetaData } from "../MetaData";
 
 const IndividualBlogPage = () => {
     const [blogData, setBlogData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { id } = useParams();
+
+    const location = useLocation();
+
     
-    
+    const pageID = location.pathname.split("/")
+    const pathID = pageID[pageID.length-2]
+    const metadata = blogMetaData[pathID]
+    // setMetaData(portfolioMetaData[pathID])
+    console.log("Page ID changed:", pathID);
+    console.log(metadata, 'meta')
 
   const getData = () => {
     axios
@@ -37,19 +47,36 @@ const IndividualBlogPage = () => {
     getData();
   }, []);
 
-  if (loading) {
-    return <LoaderSpinner />;
-  }
+  
 
-  if (error) {
-    return (
-      <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-        {error}
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return <LoaderSpinner />;
+  // }
+
+  // if (error) {
+  //   return (
+  //     <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+  //       {error}
+  //     </div>
+  //   );
+  // }
 
   return (
+    <>
+     <Helmet>
+                {/* SEO */}
+                <title>{metadata.title}</title>
+                <meta name="description" content={metadata.description} />
+                {metadata.keywords && <meta name="keywords" content={metadata.keywords} /> }
+                {/* Social Media */}
+                <meta property="og:title" content={metadata.ogTitle} />
+                {metadata.keywords && <meta property="og:keywords" content={metadata.keywords} /> }
+                <meta property="og:description" content={metadata.ogDescription} />
+                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                {/* Canonical */}
+                <link rel="canonical" href={metadata.canonicalUrl} />
+              </Helmet>
+    
     <div className="w-full flex flex-col gap-8 p-5">
       <div className="w-full flex lg:flex-row flex-col gap-5 relative font-raleway">
         <img
@@ -140,6 +167,7 @@ const IndividualBlogPage = () => {
         </div>
       </div>
     </div>
+    </>
 
     // <div className="space-y-10 dark:text-white">
     //   <div className="px-3 sm:px-5 py-3">
