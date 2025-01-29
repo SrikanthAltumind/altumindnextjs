@@ -23,7 +23,7 @@ const TimeLineFlow = () => {
         apiUrl = '/api/service-tech-engg-mobile-process-contents?populate=*'
          else if(location.pathname === '/services/cloud/cloud-migration')
         apiUrl = '/api/service-cloud-migration-process-sections?populate=*'
-    else if(location.pathname === '/services/cloud/cloud-app')
+    else if(location.pathname === '/services/cloud/cloud-app-services')
         apiUrl = '/api/service-cloud-app-process-contents?populate=*'
      else if(location.pathname === '/services/digital-marketing/marketing-optimization')
         apiUrl = '/api/service-dm-marketing-opt-process-contents?populate=*'
@@ -57,12 +57,20 @@ const TimeLineFlow = () => {
             apiUrl = "api/service-qat-security-process-contents?populate=*"
         else if(location.pathname === "/services/quality-assurance/performance-testing")
             apiUrl = "api/service-qat-performance-process-contents?populate=*"
+        else if(location.pathname === "/services/quality-assurance/functional-testing")
+            apiUrl = "api/service-qat-functional-process-contents?populate=*"
         else if(location.pathname === "/services/quality-assurance/qa-consulting")
             apiUrl = "api/service-qat-consulting-process-contents?populate=*"
         else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
             apiUrl = "api/service-dsc-dee-process-contents?populate=*"
         else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
             apiUrl = "api/service-dsc-dm-process-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+            apiUrl = "api/service-dsc-da-process-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+            apiUrl = "api/service-dsc-inp-process-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+            apiUrl = "api/service-dsc-db-process-contents?populate=*"
 
     const fetchTimeLineData = ()=> {
         axios.get(import.meta.env.VITE_APP_API_URL + apiUrl)

@@ -31,7 +31,7 @@ const Overview = () => {
       apiUrl = "api/service-ai-automation-rpa-overview?populate=*"
     else if(location.pathname === "/services/cloud/cloud-migration")
       apiUrl = "api/service-cloud-migration-overview?populate=*" 
-    else if(location.pathname === "/services/cloud/cloud-app")
+    else if(location.pathname === "/services/cloud/cloud-app-services")
       apiUrl = "api/service-cloud-app-overview?populate=*" 
     else if(location.pathname === "/services/digital-marketing/marketing-optimization")
       apiUrl = "api/service-dm-marketing-opt-overview?populate=*" 
@@ -63,12 +63,20 @@ const Overview = () => {
       apiUrl = "api/service-qat-security-overview?populate=*"
   else if(location.pathname === "/services/quality-assurance/performance-testing")
       apiUrl = "api/service-qat-performance-overview?populate=*"
+      else if(location.pathname === "/services/quality-assurance/functional-testing")
+      apiUrl = "api/service-qat-functional-overview?populate=*"
   else if(location.pathname === "/services/quality-assurance/qa-consulting")
       apiUrl = "api/service-qat-consulting-overview?populate=*"
   else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
       apiUrl = "api/service-dsc-dee-overview?populate=*"
   else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
       apiUrl = "api/service-dsc-dm-overview?populate=*"
+  else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+      apiUrl = "api/service-dsc-da-overview?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+      apiUrl = "api/service-dsc-inp-overview?populate=*"
+  else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+      apiUrl = "api/service-dsc-db-overview?populate=*"
   
     const fetchData = ()=> {
         axios.get(import.meta.env.VITE_APP_API_URL + apiUrl)

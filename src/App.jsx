@@ -68,6 +68,10 @@ import PerformanceTesting from "./pages/PerformanceTesting";
 import QAConsultingService from "./pages/QAConsultingService";
 import DigitalExperienceEngagement from "./pages/DigitalExperienceEngagement";
 import DigitalModernization from "./pages/DigitalModernization";
+import DigitalAudit from "./pages/DigitalAudit";
+import IncubationOfNewProducts from "./pages/IncubationOfNewProducts";
+import DigitalBuild from "./pages/DigitalBuild";
+import FunctionalTesting from "./pages/FunctionalTesting";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -79,6 +83,86 @@ const ScrollToTop = () => {
   return null;
 };
 
+export const routes = [
+  { path: "/", element: <Home /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/custom-website-development", element: <CustomWebDev /> },
+  { path: "/agiliti-hire-dedicated-developers", element: <Agiliti /> },
+  { path: "/industries", element: <Industry /> },
+  { path: "/industries/bfsi-fintech", element: <BFSIAndFinance /> },
+  { path: "/industries/healthcare", element: <BFSIAndFinance /> },
+  { path: "/industries/edtech", element: <BFSIAndFinance /> },
+  { path: "/industries/internet-saas", element: <BFSIAndFinance /> },
+  { path: "/career", element: <Career /> },
+  { path: "/portfolio", element: <Portfolio /> },
+  { path: "/career/open-roles", element: <OpenRoles /> },
+  { path: "/insights", element: <Insights /> },
+  { path: "/about/about-altumind/community-engagement", element: <CommunityEngagement /> },
+  { path: "/career/life-at-altumind", element: <LifeAtAltumind /> },
+  { path: "/about/about-altumind/alliance", element: <Alliance /> },
+  { path: "/services/experience-design", element: <ExperienceDesign /> },
+  { path: "/services/experience-design/:id", element: <UIUXCXDesign /> }, // Dynamic route
+  { path: "/services/technology-and-engineering/web-development", element: <WebDevelopment /> },
+  { path: "/services/technology-and-engineering/mobile-app-development", element: <MobileAppDevelopment /> },
+  { path: "/services/technology-and-engineering/erp-integration", element: <ERPIntegration /> },
+  { path: "/services/technology-and-engineering/ecommerce-services", element: <EcommerceServices /> },
+  { path: "/testing", element: <Testing /> },
+  { path: "/services/ai-automation", element: <AIandAutomation /> },
+  { path: "/services/ai-automation/conversational-ai-chatbot", element: <AIAndChatBotServices /> },
+  { path: "/services/ai-automation/rpa", element: <RPAServices /> },
+  { path: "/services/quality-assurance", element: <QAandTesting /> },
+  { path: "/services/quality-assurance/automation-testing", element: <AutomationTesting /> },
+  { path: "/services/quality-assurance/security-testing", element: <SecurityTesting /> },
+  { path: "/services/quality-assurance/performance-testing", element: <PerformanceTesting /> },
+  { path: "/services/quality-assurance/functional-testing", element: <FunctionalTesting /> },
+  { path: "/services/quality-assurance/qa-consulting", element: <QAConsultingService /> },
+  { path: "/services/digital-marketing", element: <DigitalMarketingServices /> },
+  { path: "/services/digital-marketing/marketing-optimization", element: <MarketingOptimization /> },
+  { path: "/services/digital-marketing/branding-design", element: <BrandingAndDesign /> },
+  { path: "/services/digital-marketing/marketing-services", element: <MarketingServices /> },
+  { path: "/services/technology-and-engineering", element: <TechnologyAndEngineering /> },
+  { path: "/services/data-analytics", element: <DataAnalytics /> },
+  { path: "/services/data-analytics/business-intelligence", element: <BusinessIntelligence /> },
+  { path: "/services/data-analytics/marketing-intelligence", element: <MarketingIntelligence /> },
+  { path: "/services/data-analytics/digital-intelligence", element: <DigitalIntelligence /> },
+  { path: "/services/data-analytics/customer-360", element: <Customer360 /> },
+  { path: "/services/data-analytics/sales-intelligence", element: <SalesIntelligence /> },
+  { path: "/services/managed-operations", element: <ManagedOperations /> },
+  { path: "/services/managed-operations/product-innovation-management", element: <DigitalProductInnovation /> },
+  { path: "/services/managed-operations/website-operations-management", element: <WebsiteOperationsManagement /> },
+  { path: "/services/managed-operations/cloud-management", element: <CloudManagement /> },
+  { path: "/services/managed-operations/software-maintenance-support", element: <SoftwareMaintenanceSupport /> },
+  { path: "/services", element: <Services /> },
+  { path: "/services/digital-strategy-consulting", element: <DigitalStrategy /> },
+  { path: "/services/digital-strategy-consulting/digital-experience-engagement", element: <DigitalExperienceEngagement /> },
+  { path: "/services/digital-strategy-consulting/digital-modernization", element: <DigitalModernization /> },
+  { path: "/services/digital-strategy-consulting/digital-audits", element: <DigitalAudit /> },
+  { path: "/services/digital-strategy-consulting/incubation-products-services", element: <IncubationOfNewProducts /> },
+  { path: "/services/digital-strategy-consulting/digital-build", element: <DigitalBuild /> },
+  { path: "/services/cloud", element: <CloudServices /> },
+  { path: "/services/cloud/cloud-migration", element: <CloudMigration /> },
+  { path: "/services/cloud/cloud-app-services", element: <CloudApp /> },
+  { path: "/about/about-altumind/mission-and-vision", element: <MissionAndVision /> },
+  { path: "/about/about-altumind/leadership", element: <Leadership /> },
+  { path: "/services/it-services-consulting", element: <WIP /> },
+  { path: "/about", element: <AboutUs /> },
+  { path: "/industries/digital-commerce", element: <BFSIAndFinance /> },
+  { path: "/industries/green-sustainability", element: <BFSIAndFinance /> },
+  { path: "/privacy", element: <Privacy /> },
+  { path: "/terms", element: <Terms /> },
+  { path: "/portfolio/sukhiba", element: <SuccessStory /> },
+  { path: "/portfolio/secpod", element: <SuccessStory /> },
+  { path: "/portfolio/united-finance", element: <SuccessStory /> },
+  { path: "/portfolio/enphase", element: <SuccessStory /> },
+  { path: "/portfolio/:storyId", element: <SuccessStory /> }, // Dynamic route
+  { path: "/jobs/:jobId/:jobName", element: <JobDetails /> }, // Dynamic route
+  { path: "/insights/blogs", element: <Blogs /> },
+  { path: "/insights/blog/:id/:blogName", element: <IndividualBlogPage /> }, // Dynamic route
+  // not allowed to index
+  { path: "*", element: <Error404 /> }
+];
+
+
 const router = createBrowserRouter([
   {
     element: (
@@ -88,352 +172,365 @@ const router = createBrowserRouter([
       </>
     ),
     
-
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "*",
-        element: <Error404 />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/custom-website-development",
-        element: <CustomWebDev />,
-      },
-      {
-        path: "/agiliti-hire-dedicated-developers",
-        element: <Agiliti />,
+    children: routes
+    // children: 
+    // [
+    //   {
+    //     path: "/",
+    //     element: <Home />,
+    //   },
+    //   {
+    //     path: "*",
+    //     element: <Error404 />,
+    //   },
+    //   {
+    //     path: "/contact",
+    //     element: <Contact />,
+    //   },
+    //   {
+    //     path: "/custom-website-development",
+    //     element: <CustomWebDev />,
+    //   },
+    //   {
+    //     path: "/agiliti-hire-dedicated-developers",
+    //     element: <Agiliti />,
         
-      },
-      {
-        path: "/industries",
-        element: <Industry />,
-      },
-      {
-        path: "/industries/bfsi-fintech",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/industries/healthcare",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/industries/edtech",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/industries/internet-saas",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/career",
-        element: <Career />,
-      },
-      {
-        path: "/portfolio",
-        element: <Portfolio />,
-      },
-      {
-        path: "/career/open-roles",
-        element: <OpenRoles />,
-      },
-      {
-        path: "/insights",
-        element: <Insights />,
-      },
-      {
-        path: "/about/about-altumind/community-engagement",
-        element: <CommunityEngagement />,
-      },
-      {
-        path: "/career/life-at-altumind",
-        element: <LifeAtAltumind />,
-      },
-      {
-        path: "/about/about-altumind/alliance",
-        element: <Alliance />,
-      },
-      {
-        path: "/services/experience-design",
-        element: <ExperienceDesign />,
-      },
-      {
-        path: "/services/experience-design/:id",
-        element: <UIUXCXDesign />,
-      },
-      {
-        path: "/services/technology-and-engineering/web-development",
-        element: <WebDevelopment />,
-      },
-      {
-        path: "/services/technology-and-engineering/mobile-app-development",
-        element: <MobileAppDevelopment />,
-      },
-      {
-        path: "/services/technology-and-engineering/erp-integration",
-        element: <ERPIntegration />,
-      },
-      {
-        path: "/services/technology-and-engineering/ecommerce-services",
-        element: <EcommerceServices/>,
-      },
+    //   },
+    //   {
+    //     path: "/industries",
+    //     element: <Industry />,
+    //   },
+    //   {
+    //     path: "/industries/bfsi-fintech",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/industries/healthcare",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/industries/edtech",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/industries/internet-saas",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/career",
+    //     element: <Career />,
+    //   },
+    //   {
+    //     path: "/portfolio",
+    //     element: <Portfolio />,
+    //   },
+    //   {
+    //     path: "/career/open-roles",
+    //     element: <OpenRoles />,
+    //   },
+    //   {
+    //     path: "/insights",
+    //     element: <Insights />,
+    //   },
+    //   {
+    //     path: "/about/about-altumind/community-engagement",
+    //     element: <CommunityEngagement />,
+    //   },
+    //   {
+    //     path: "/career/life-at-altumind",
+    //     element: <LifeAtAltumind />,
+    //   },
+    //   {
+    //     path: "/about/about-altumind/alliance",
+    //     element: <Alliance />,
+    //   },
+    //   {
+    //     path: "/services/experience-design",
+    //     element: <ExperienceDesign />,
+    //   },
+    //   {
+    //     path: "/services/experience-design/:id",
+    //     element: <UIUXCXDesign />,
+    //   },
+    //   {
+    //     path: "/services/technology-and-engineering/web-development",
+    //     element: <WebDevelopment />,
+    //   },
+    //   {
+    //     path: "/services/technology-and-engineering/mobile-app-development",
+    //     element: <MobileAppDevelopment />,
+    //   },
+    //   {
+    //     path: "/services/technology-and-engineering/erp-integration",
+    //     element: <ERPIntegration />,
+    //   },
+    //   {
+    //     path: "/services/technology-and-engineering/ecommerce-services",
+    //     element: <EcommerceServices/>,
+    //   },
 
-      // {
-      //   path: "/services/experience-design/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/testing",
-        element: <Testing />,
-      },
-      {
-        path: "/services/ai-automation",
-        element: <AIandAutomation />,
-      },
-      {
-        path: "/services/ai-automation/conversational-ai-chatbot",
-        element: <AIAndChatBotServices />,
-      },
-      {
-        path: "/services/ai-automation/rpa",
-        element: <RPAServices />,
-      },
-      // {
-      //   path: "/services/ai-automation/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/services/quality-assurance",
-        element: <QAandTesting />,
-      },
-      {
-        path: "/services/quality-assurance/automation-testing",
-        element: <AutomationTesting/>,
-      },
-      {
-        path: "/services/quality-assurance/security-testing",
-        element: <SecurityTesting />,
-      },
-      {
-        path: "/services/quality-assurance/performance-testing",
-        element: <PerformanceTesting />,
-      },
-      {
-        path: "/services/quality-assurance/qa-consulting",
-        element: <QAConsultingService />,
-      },
-      {
-        path: "/services/digital-marketing",
-        element: <DigitalMarketingServices />,
-      },
-      {
-        path: "/services/digital-marketing/marketing-optimization",
-        element: <MarketingOptimization />,
-      },
-      {
-        path: "/services/digital-marketing/branding-design",
-        element: <BrandingAndDesign />,
-      },
-      {
-        path: "/services/digital-marketing/marketing-services",
-        element: <MarketingServices />,
-      },
+    //   // {
+    //   //   path: "/services/experience-design/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/testing",
+    //     element: <Testing />,
+    //   },
+    //   {
+    //     path: "/services/ai-automation",
+    //     element: <AIandAutomation />,
+    //   },
+    //   {
+    //     path: "/services/ai-automation/conversational-ai-chatbot",
+    //     element: <AIAndChatBotServices />,
+    //   },
+    //   {
+    //     path: "/services/ai-automation/rpa",
+    //     element: <RPAServices />,
+    //   },
+    //   // {
+    //   //   path: "/services/ai-automation/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/services/quality-assurance",
+    //     element: <QAandTesting />,
+    //   },
+    //   {
+    //     path: "/services/quality-assurance/automation-testing",
+    //     element: <AutomationTesting/>,
+    //   },
+    //   {
+    //     path: "/services/quality-assurance/security-testing",
+    //     element: <SecurityTesting />,
+    //   },
+    //   {
+    //     path: "/services/quality-assurance/performance-testing",
+    //     element: <PerformanceTesting />,
+    //   },
+    //   {
+    //     path: "/services/quality-assurance/qa-consulting",
+    //     element: <QAConsultingService />,
+    //   },
+    //   {
+    //     path: "/services/digital-marketing",
+    //     element: <DigitalMarketingServices />,
+    //   },
+    //   {
+    //     path: "/services/digital-marketing/marketing-optimization",
+    //     element: <MarketingOptimization />,
+    //   },
+    //   {
+    //     path: "/services/digital-marketing/branding-design",
+    //     element: <BrandingAndDesign />,
+    //   },
+    //   {
+    //     path: "/services/digital-marketing/marketing-services",
+    //     element: <MarketingServices />,
+    //   },
       
-      // {
-      //   path: "/services/digital-marketing/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/services/technology-and-engineering",
-        element: <TechnologyAndEngineering />,
-      },
-      {
-        path: "/services/data-analytics",
-        element: <DataAnalytics />,
-      },
-      // {
-      //   path: "/services/data-analytics/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/services/data-analytics/business-intelligence",
-        element: <BusinessIntelligence />,
-      },
-      {
-        path: "/services/data-analytics/marketing-intelligence",
-        element: <MarketingIntelligence />,
-      },
-      {
-        path: "/services/data-analytics/digital-intelligence",
-        element: <DigitalIntelligence />,
-      },
-      {
-        path: "/services/data-analytics/customer-360",
-        element: <Customer360/>,
-      },
-      {
-        path: "/services/data-analytics/sales-intelligence",
-        element: <SalesIntelligence />,
-      },
-      {
-        path: "/services/managed-operations",
-        element: <ManagedOperations />,
-      },
-      {
-        path: "/services/managed-operations/product-innovation-management",
-        element: <DigitalProductInnovation />,
-      },
-      {
-        path: "/services/managed-operations/website-operations-management",     
-        element: <WebsiteOperationsManagement />,
-      },
-      {
-        path: "/services/managed-operations/cloud-management",     
-        element: <CloudManagement />,
-      },
-      {
-        path: "/services/managed-operations/software-maintenance-support",     
-        element: <SoftwareMaintenanceSupport />,
-      },
-      // {
-      //   path: "/services/managed-operations/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/services",
-        element: <Services />,
-      },
-      {
-        path: "/services/digital-strategy-consulting",
-        element: <DigitalStrategy />,
-      },
-      {
-        path: "/services/digital-strategy-consulting/digital-experience-engagement",
-        element: <DigitalExperienceEngagement />,
-      },
-      {
-        path: "/services/digital-strategy-consulting/digital-modernization",
-        element: <DigitalModernization />,
-      },
-      {
-        path: "/services/cloud",
-        element: <CloudServices />,
-      },
-      {
-        path:"/services/cloud/cloud-migration",
-        element:<CloudMigration/>
-      },
-      {
-        path:"/services/cloud/cloud-app",
-        element:<CloudApp/>
-      },
-      // {
-      //   path: "/services/cloud/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/about/about-altumind/mission-and-vision",
-        element: <MissionAndVision />,
-      },
-      {
-        path: "/about/about-altumind/leadership",
-        element: <Leadership />,
-      },
-      {
-        path: "/services/it-services-consulting",
-        element: <WIP />,
-      },
-      {
-        path: "/about",
-        element: <AboutUs />,
-      },
-      {
-        path: "/industries/digital-commerce",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/industries/green-sustainability",
-        element: <BFSIAndFinance />,
-      },
-      {
-        path: "/wip",
-        element: <WIP />,
-      },
-      // {
-      //   path: "/mission-and-vision",
-      //   element: <MissionAndVision />,
-      // },
-      // {
-      //   path: "/leadership",
-      //   element: <Leadership />,
-      // },
-      // {
-      //   path: "/about",
-      //   element: <AboutUs />,
-      // },
-      // {
-      //   path: "/industries/digital-commerce",
-      //   element: <DigitalCommerce />,
-      // },
-      {
-        path: "/privacy",
-        element: <Privacy />,
-      },
-      {
-        path: "/terms",
-        element: <Terms />,
-      },
-      {
-        path: "/portfolio/sukhiba",
-        element: <SuccessStory />,
-      },
-      {
-        path: "/portfolio/secpod",
-        element: <SuccessStory />,
-      },
-      {
-        path: "/portfolio/united-finance",
-        element: <SuccessStory />,
-      },
-      {
-        path: "/insights/blogs",
-        element: <Blogs />,
-      },
-      {
-        path: "/portfolio/enphase",
-        element: <SuccessStory />,
-      },
-      {
-        path: "/terms",
-        element: <Terms />,
-      },
-      {
-        path: "insights/blog/:id/:blogName",
-        element: <IndividualBlogPage />,
-      },
-      {
-        path: "/services/quality-assurance/*",
-        element: <WIP />,
-      },
-      // {
-      //   path: "/services/technology-and-engineering/*",
-      //   element: <WIP />,
-      // },
-      {
-        path: "/portfolio/:storyId",
-        element: <SuccessStory />,
-      },
-      {
-        path: "/jobs/:jobId/:jobName",
-        element: <JobDetails />,
-      },
-    ],
+    //   // {
+    //   //   path: "/services/digital-marketing/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/services/technology-and-engineering",
+    //     element: <TechnologyAndEngineering />,
+    //   },
+    //   {
+    //     path: "/services/data-analytics",
+    //     element: <DataAnalytics />,
+    //   },
+    //   // {
+    //   //   path: "/services/data-analytics/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/services/data-analytics/business-intelligence",
+    //     element: <BusinessIntelligence />,
+    //   },
+    //   {
+    //     path: "/services/data-analytics/marketing-intelligence",
+    //     element: <MarketingIntelligence />,
+    //   },
+    //   {
+    //     path: "/services/data-analytics/digital-intelligence",
+    //     element: <DigitalIntelligence />,
+    //   },
+    //   {
+    //     path: "/services/data-analytics/customer-360",
+    //     element: <Customer360/>,
+    //   },
+    //   {
+    //     path: "/services/data-analytics/sales-intelligence",
+    //     element: <SalesIntelligence />,
+    //   },
+    //   {
+    //     path: "/services/managed-operations",
+    //     element: <ManagedOperations />,
+    //   },
+    //   {
+    //     path: "/services/managed-operations/product-innovation-management",
+    //     element: <DigitalProductInnovation />,
+    //   },
+    //   {
+    //     path: "/services/managed-operations/website-operations-management",     
+    //     element: <WebsiteOperationsManagement />,
+    //   },
+    //   {
+    //     path: "/services/managed-operations/cloud-management",     
+    //     element: <CloudManagement />,
+    //   },
+    //   {
+    //     path: "/services/managed-operations/software-maintenance-support",     
+    //     element: <SoftwareMaintenanceSupport />,
+    //   },
+    //   // {
+    //   //   path: "/services/managed-operations/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/services",
+    //     element: <Services />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting",
+    //     element: <DigitalStrategy />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting/digital-experience-engagement",
+    //     element: <DigitalExperienceEngagement />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting/digital-modernization",
+    //     element: <DigitalModernization />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting/digital-audits",
+    //     element: <DigitalAudit />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting/incubation-products-services",
+    //     element: <IncubationOfNewProducts />,
+    //   },
+    //   {
+    //     path: "/services/digital-strategy-consulting/digital-build",
+    //     element: <DigitalBuild />,
+    //   },
+    //   {
+    //     path: "/services/cloud",
+    //     element: <CloudServices />,
+    //   },
+    //   {
+    //     path:"/services/cloud/cloud-migration",
+    //     element:<CloudMigration/>
+    //   },
+    //   {
+    //     path:"/services/cloud/cloud-app-services",
+    //     element:<CloudApp/>
+    //   },
+    //   // {
+    //   //   path: "/services/cloud/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/about/about-altumind/mission-and-vision",
+    //     element: <MissionAndVision />,
+    //   },
+    //   {
+    //     path: "/about/about-altumind/leadership",
+    //     element: <Leadership />,
+    //   },
+    //   {
+    //     path: "/services/it-services-consulting",
+    //     element: <WIP />,
+    //   },
+    //   {
+    //     path: "/about",
+    //     element: <AboutUs />,
+    //   },
+    //   {
+    //     path: "/industries/digital-commerce",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/industries/green-sustainability",
+    //     element: <BFSIAndFinance />,
+    //   },
+    //   {
+    //     path: "/wip",
+    //     element: <WIP />,
+    //   },
+    //   // {
+    //   //   path: "/mission-and-vision",
+    //   //   element: <MissionAndVision />,
+    //   // },
+    //   // {
+    //   //   path: "/leadership",
+    //   //   element: <Leadership />,
+    //   // },
+    //   // {
+    //   //   path: "/about",
+    //   //   element: <AboutUs />,
+    //   // },
+    //   // {
+    //   //   path: "/industries/digital-commerce",
+    //   //   element: <DigitalCommerce />,
+    //   // },
+    //   {
+    //     path: "/privacy",
+    //     element: <Privacy />,
+    //   },
+    //   {
+    //     path: "/terms",
+    //     element: <Terms />,
+    //   },
+    //   {
+    //     path: "/portfolio/sukhiba",
+    //     element: <SuccessStory />,
+    //   },
+    //   {
+    //     path: "/portfolio/secpod",
+    //     element: <SuccessStory />,
+    //   },
+    //   {
+    //     path: "/portfolio/united-finance",
+    //     element: <SuccessStory />,
+    //   },
+    //   {
+    //     path: "/insights/blogs",
+    //     element: <Blogs />,
+    //   },
+    //   {
+    //     path: "/portfolio/enphase",
+    //     element: <SuccessStory />,
+    //   },
+    //   {
+    //     path: "/terms",
+    //     element: <Terms />,
+    //   },
+    //   {
+    //     path: "insights/blog/:id/:blogName",
+    //     element: <IndividualBlogPage />,
+    //   },
+    //   {
+    //     path: "/services/quality-assurance/*",
+    //     element: <WIP />,
+    //   },
+    //   // {
+    //   //   path: "/services/technology-and-engineering/*",
+    //   //   element: <WIP />,
+    //   // },
+    //   {
+    //     path: "/portfolio/:storyId",
+    //     element: <SuccessStory />,
+    //   },
+    //   {
+    //     path: "/jobs/:jobId/:jobName",
+    //     element: <JobDetails />,
+    //   },
+    // ],
   },
 ]);
 

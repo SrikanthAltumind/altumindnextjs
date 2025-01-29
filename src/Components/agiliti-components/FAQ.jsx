@@ -75,7 +75,7 @@ const FAQ = () => {
       apiUrl = "/api/service-tech-engg-ecom-faq-contents";
     else if (location.pathname === "/services/cloud/cloud-migration")
       apiUrl = "/api/service-cloud-migration-faq-contents";
-    else if (location.pathname === "/services/cloud/cloud-app")
+    else if (location.pathname === "/services/cloud/cloud-app-services")
       apiUrl = "/api/service-cloud-app-faq-contents";
     else if (location.pathname === "/services/digital-marketing/marketing-optimization")
       apiUrl = "/api/service-dm-marketing-opt-faq-contents";
@@ -111,12 +111,20 @@ const FAQ = () => {
           apiUrl = "api/service-qat-security-faq-contents"
       else if(location.pathname === "/services/quality-assurance/performance-testing")
           apiUrl = "api/service-qat-performance-faq-contents"
+      else if(location.pathname === "/services/quality-assurance/functional-testing")
+          apiUrl = "api/service-qat-functional-faq-contents"
       else if(location.pathname === "/services/quality-assurance/qa-consulting")
           apiUrl = "api/service-qat-consulting-faq-contents"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
           apiUrl = "api/service-dsc-dee-faq-contents"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
           apiUrl = "api/service-dsc-dm-faq-contents"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+          apiUrl = "api/service-dsc-da-faq-contents"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+          apiUrl = "api/service-dsc-db-faq-contents"
+      else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+          apiUrl = "api/service-dsc-inp-faq-contents"
     
     const fetchData = () =>  {
         const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;

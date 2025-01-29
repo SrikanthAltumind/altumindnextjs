@@ -3,6 +3,7 @@ import Footer from "../Components/common-components/Footer";
 import Navbar from "../Components/common-components/Navbar";
 import { createContext, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ThemeContext = createContext();
 
@@ -17,15 +18,23 @@ const AppLayout = () => {
 
   return (
     <HelmetProvider>
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className="dark:bg-black bg-white w-full">
-        <main>
-          <Navbar />
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
-    </ThemeContext.Provider>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <GoogleReCaptchaProvider
+          scriptProps={{
+            async: true,
+            defer: true,
+          }}
+          reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+        >
+          <div className="dark:bg-black bg-white w-full">
+            <main>
+              <Navbar />
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
+        </GoogleReCaptchaProvider>
+      </ThemeContext.Provider>
     </HelmetProvider>
   );
 };

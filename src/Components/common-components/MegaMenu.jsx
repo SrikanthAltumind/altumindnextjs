@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const MegaMenu = ({ item, onMouseLeave }) => {
   // eslint-disable-next-line react/prop-types
-  const [subMenu, setSubMenu] = useState();
+  const [subMenu, setSubMenu] = useState(item?.children[0]);
   return (
       <div
-      // className="absolute dark:text-black mx-auto right-0 w-[90%] min-w-[820px] top-[70px] z-20"
-       className={`absolute dark:text-black mx-auto ${item?.menu === 'Career' ? 'right-0': '-right-[calc(150px-50%)]'} w-[300px] top-[70px] z-20`}
+      className={`absolute dark:text-black mx-auto  w-[90%] ${item?.menu === 'Career' ? 'right-0': '-right-[calc(410px-50%)]'} min-w-[820px] top-[70px] z-20`}
+      //  className={`absolute dark:text-black mx-auto ${item?.menu === 'Career' ? 'right-0': '-right-[calc(150px-50%)]'} w-[300px] top-[70px] z-20`}
         onMouseLeave={onMouseLeave}
       >
         <div className=" rounded-b-xl  shadow-lg bg-[#F3F9FF] p-3 mt-3 ">
           <div className="flex text-[13px] font-medium justify-between w-full h-full">
             {/*  eslint-disable-next-line react/prop-types */}
             <div
-              // className="basis-[60%] bg-slate-400 flex h-full"
-               className="  w-full flex h-full"
-              // onMouseLeave={() => setSubMenu(item?.children[0])}
-              onMouseLeave={() => setSubMenu()}
+              className="basis-[70%] flex h-full"
+              //  className="  w-full flex h-full"
+              onMouseLeave={() => setSubMenu(item?.children[0])}
+              // onMouseLeave={() => setSubMenu()}
             >
               {/* border-r basis-[50%] min-h-[300px]  needs to be added below when submenus are present */}
-              <div className="w-full h-full"> 
+              <div className="w-full h-full border-r basis-[50%] min-h-[300px] "> 
                 <ul className="text-black font-montserrat">
                   {
                     // eslint-disable-next-line react/prop-types
@@ -84,7 +84,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                 </ul>
               </div>
 
-              {/* <div className="basis-[50%]">
+              <div className="basis-[50%]">
                 <ul className="font-montserrat">
                   {subMenu?.children?.map((child, index) => (
                     <li
@@ -96,7 +96,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                     </li>
                   ))}
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

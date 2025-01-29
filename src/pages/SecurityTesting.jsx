@@ -30,13 +30,13 @@ const SecurityTesting = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>temp:Security Testing</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <title>Protect Your Software with Our Security Testing Services</title>
+        <meta name="description" content="Our security testing services help you protect your software from potential threats, giving you peace of mind that your system is secure." />
+        <meta name="keywords" content="security testing services, vulnerability testing services, it security testing, security testing company, application security testing companies" />
         {/* Social Media */}
-        <meta property="og:title" content=""/>
-        <meta property="og:description" content=""/>
-        <meta property="og:keywords" content="" />
+        <meta property="og:title" content="Protect Your Software with Our Security Testing Services"/>
+        <meta property="og:description" content="Our security testing services help you protect your software from potential threats, giving you peace of mind that your system is secure."/>
+        <meta property="og:keywords" content="security testing services, vulnerability testing services, it security testing, security testing company, application security testing companies" />
         <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance/security-testing"/>

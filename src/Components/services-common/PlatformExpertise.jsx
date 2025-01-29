@@ -18,7 +18,7 @@ const PlatformExpertise = () => {
     apiUrl = "api/service-ai-automation-rpa-partnership?populate=*"
   else if(location.pathname === "/services/cloud/cloud-migration")
     apiUrl = "api/service-cloud-migration-partnership?populate=*"
-    else if(location.pathname === "/services/cloud/cloud-app")
+    else if(location.pathname === "/services/cloud/cloud-app-services")
     apiUrl = "api/service-cloud-app-partnership?populate=*"
     else if(location.pathname === '/services/digital-marketing/marketing-optimization')
         apiUrl = '/api/service-dm-child-tech-stack?populate=*'

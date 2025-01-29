@@ -52,7 +52,7 @@ const DevelopmentServices = () => {
             apiUrl = "api/service-ai-automation-rpa-service-contents?populate=*"
       else if(location.pathname === "/services/cloud/cloud-migration")
         apiUrl = 'api/service-cloud-migration-service-contents?populate=*'
-      else if(location.pathname === "/services/cloud/cloud-app")
+      else if(location.pathname === "/services/cloud/cloud-app-services")
         apiUrl = '/api/service-cloud-app-service-contents?populate=*'
             else if(location.pathname === "/services/data-analytics/marketing-intelligence")
         apiUrl = '/api/service-da-marketing-intelligence-serv-contents?populate=*'
@@ -76,12 +76,20 @@ const DevelopmentServices = () => {
             apiUrl = "api/service-qat-security-service-contents?populate=*"
         else if(location.pathname === "/services/quality-assurance/performance-testing")
             apiUrl = "api/service-qat-performance-service-contents?populate=*"
+        else if(location.pathname === "/services/quality-assurance/functional-testing")
+            apiUrl = "api/service-qat-functional-service-contents?populate=*"
         else if(location.pathname === "/services/quality-assurance/qa-consulting")
             apiUrl = "api/service-qat-consulting-service-contents?populate=*"
         else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
             apiUrl = "api/service-dsc-dee-service-contents?populate=*"
         else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
             apiUrl = "api/service-dsc-dm-service-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+            apiUrl = "api/service-dsc-da-service-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+            apiUrl = "api/service-dsc-inp-service-contents?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+            apiUrl = "api/service-dsc-db-service-contents?populate=*"
 
   
     const fetchData = ()=> {

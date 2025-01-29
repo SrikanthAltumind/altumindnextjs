@@ -133,9 +133,9 @@ const ServiceCardsPair = ({pair})=> {
                 <Markdown>{pair[0]?.attributes?.descriptionTwo}</Markdown>
             </motion.div>
         </motion.div>
-
-
-
+ 
+        {
+          pair[1] &&
         <motion.div  
           onHoverStart={() => setIsHovered('second')}
           onHoverEnd={() => setIsHovered(null)}
@@ -170,6 +170,7 @@ const ServiceCardsPair = ({pair})=> {
                 <Markdown>{pair[1]?.attributes?.descriptionTwo}</Markdown>
             </motion.div>
         </motion.div>
+         }
       {/* )
       } */}
   </div>

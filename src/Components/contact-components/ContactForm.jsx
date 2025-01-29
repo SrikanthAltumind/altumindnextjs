@@ -2,8 +2,10 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+// import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initialFormData = {
   firstName: "",
@@ -22,6 +24,7 @@ const ContactForm = ({ selectedForm }) => {
   const [file, setFile] = useState();
   const [presignedUrl, setPresignedUrl] = useState();
   const [initialValues, setInitialValues] = useState(initialFormData);
+  const [captchaError, setCaptchaError] = useState(false)
 
   let toMailID = "";
 
@@ -259,6 +262,35 @@ const ContactForm = ({ selectedForm }) => {
       })
   };
 
+  // const {validateRecaptchaToken, resetRecaptcha} = useContext(GoogleCaptchaContext)
+  const {executeRecaptcha} = useGoogleReCaptcha()
+  const validateCaptcha = async () => {
+  try {
+    const token = await executeRecaptcha(); 
+    // If token is available, proceed with form submission
+    if (token) {
+      // Send form data with token to your server
+      console.log('TOKEN:', token)
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/verify-recaptcha`, {token})
+      console.log(response,'success captcha')
+      setCaptchaError(false)
+      // resetRecaptcha()
+      console.log('token success')
+      return true;
+    } else {
+      console.log('TOKEN-Error', token)
+      console.log('Ref')
+      setCaptchaError(true)
+      return false;
+    }
+  } catch (error) {
+    console.log('Something went wrong:', error)
+    setCaptchaError(true)
+    return false;
+  }
+};
+
+
   const onSubmit = async (formData, { resetForm }) => {
     try {
       // const presignedUrlResponse = await getPresignedurl(file);
@@ -270,6 +302,9 @@ const ContactForm = ({ selectedForm }) => {
       // await axios.put(presignedUrlResponse.url, file, {withCredentials:true,  'Content-Type': file.type})
       // console.log('File uploaded successfully!');
       // console.log('filetype', file.type);
+      if (!await validateCaptcha()){
+        return;
+      }
       await sendData(formData);
       sendMail(formData);
       // await sendData(formData, presignedUrlResponse.url);
@@ -593,6 +628,10 @@ const ContactForm = ({ selectedForm }) => {
           </div>
         </div>
       )}
+      {
+        captchaError &&
+        <p className="text-red-500">Oops!! something went wrong, please try again.</p>
+      }
       {/* Submit Button */}
       <div className="flex items-center justify-center md:justify-start">
         <button

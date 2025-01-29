@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
           apiUrl = "api/service-ai-automation-rpa-choose-contents?populate=*"
     else if(location.pathname === "/services/cloud/cloud-migration")
       apiUrl = "api/service-cloud-migration-choose-contents?populate=*" 
-    else if(location.pathname === "/services/cloud/cloud-app")
+    else if(location.pathname === "/services/cloud/cloud-app-services")
       apiUrl = "api/service-cloud-app-choose-contents?populate=*" 
     else if(location.pathname === "/services/digital-marketing/marketing-optimization")
       apiUrl = "api/service-dm-marketing-opt-choose-contents?populate=*" 
@@ -63,12 +63,20 @@ const WhyChooseUs = () => {
           apiUrl = "api/service-qat-security-choose-contents?populate=*"
       else if(location.pathname === "/services/quality-assurance/performance-testing")
           apiUrl = "api/service-qat-performance-choose-contents?populate=*"
+      else if(location.pathname === "/services/quality-assurance/functional-testing")
+          apiUrl = "api/service-qat-functional-choose-contents?populate=*"
       else if(location.pathname === "/services/quality-assurance/qa-consulting")
           apiUrl = "api/service-qat-consulting-choose-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
           apiUrl = "api/service-dsc-dee-choose-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
           apiUrl = "api/service-dsc-dm-choose-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+          apiUrl = "api/service-dsc-da-choose-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+          apiUrl = "api/service-dsc-db-choose-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+          apiUrl = "api/service-dsc-inp-choose-contents?populate=*"
 
     const fetchData = ()=> {
         axios.get(import.meta.env.VITE_APP_API_URL + apiUrl)

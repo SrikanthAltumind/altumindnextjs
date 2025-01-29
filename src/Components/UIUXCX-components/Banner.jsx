@@ -12,11 +12,11 @@ const Banner = () => {
 
   let apiUrl;
   if(location.pathname === "/services/experience-design/ui-design")
-    apiUrl = "api/service-exp-design-ui-banner"
+    apiUrl = "api/service-exp-design-ui-banner?populate=*"
   else if(location.pathname === "/services/experience-design/ux-design")
-    apiUrl = "api/service-exp-design-ux-banner"
+    apiUrl = "api/service-exp-design-ux-banner?populate=*"
   else if(location.pathname === "/services/experience-design/cx-design")
-    apiUrl = "api/service-exp-design-cx-banner"
+    apiUrl = "api/service-exp-design-cx-banner?populate=*"
   else if(location.pathname === "/services/technology-and-engineering/web-development")
   apiUrl = "api/service-tech-engg-web-banner?populate=*"
   else if(location.pathname === "/services/technology-and-engineering/mobile-app-development")
@@ -31,7 +31,7 @@ const Banner = () => {
     apiUrl = "api/service-ai-automation-rpa-banner?populate=*" 
   else if (location.pathname === "/services/cloud/cloud-migration")
     apiUrl = "/api/service-cloud-migration-banner?populate=*";
-  else if (location.pathname === "/services/cloud/cloud-app")
+  else if (location.pathname === "/services/cloud/cloud-app-services")
     apiUrl = "/api/service-cloud-app-banner?populate=*";
   else if (location.pathname === "/services/digital-marketing/marketing-optimization")
     apiUrl = "/api/service-dm-marketing-opt-banner?populate=*";
@@ -63,12 +63,20 @@ const Banner = () => {
     apiUrl = "api/service-qat-security-banner?populate=*"  
   else if(location.pathname === "/services/quality-assurance/performance-testing")    
     apiUrl = "api/service-qat-performance-banner?populate=*"  
+  else if(location.pathname === "/services/quality-assurance/functional-testing")    
+    apiUrl = "api/service-qat-functional-banner?populate=*" 
   else if(location.pathname === "/services/quality-assurance/qa-consulting")    
     apiUrl = "api/service-qat-consulting-banner?populate=*"
     else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")    
     apiUrl = "/api/service-dsc-dee-banner?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")    
     apiUrl = "/api/service-dsc-dm-banner?populate=*"
+        else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")    
+    apiUrl = "/api/service-dsc-da-banner?populate=*"
+          else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")    
+    apiUrl = "/api/service-dsc-inp-banner?populate=*"
+          else if(location.pathname === "/services/digital-strategy-consulting/digital-build")    
+    apiUrl = "/api/service-dsc-db-banner?populate=*"
  
 
   const fetchData = () => {
@@ -133,7 +141,7 @@ const Banner = () => {
       </div>
    
       <div>
-        <img className="lg:h-[260px] h-[230px] mx-auto" src={data?.image?.data?.attributes?.url} alt="Banner_image" />
+        <img className="lg:h-[260px] h-[230px] mx-auto" src={data?.image?.data?.attributes?.url} alt={data?.image?.data?.attributes?.alternativeText} />
       </div>
     </div>
   );

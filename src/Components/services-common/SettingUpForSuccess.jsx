@@ -54,7 +54,7 @@ const SettingUpForSuccess = () => {
           apiUrl = "api/service-ai-automation-rpa-benefit-contents?populate=*"
   else if(location.pathname === "/services/cloud/cloud-migration")
     apiUrl = "api/service-cloud-migration-benefit-contents?populate=*"
-    else if(location.pathname === "/services/cloud/cloud-app")
+    else if(location.pathname === "/services/cloud/cloud-app-services")
     apiUrl = "api/service-cloud-app-benefit-contents?populate=*"
       else if(location.pathname === "/services/digital-marketing/marketing-optimization")
     apiUrl = "api/service-dm-marketing-opt-benefit-contents?populate=*"
@@ -84,12 +84,20 @@ const SettingUpForSuccess = () => {
           apiUrl = "api/service-qat-security-benefit-contents?populate=*"
       else if(location.pathname === "/services/quality-assurance/performance-testing")
           apiUrl = "api/service-qat-performance-benefit-contents?populate=*"
+      else if(location.pathname === "/services/quality-assurance/functional-testing")
+          apiUrl = "api/service-qat-functional-benefit-contents?populate=*"
       else if(location.pathname === "/services/quality-assurance/qa-consulting")
           apiUrl = "api/service-qat-consulting-benefit-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
           apiUrl = "api/service-dsc-dee-benefit-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
           apiUrl = "api/service-dsc-dm-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+          apiUrl = "api/service-dsc-da-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+          apiUrl = "api/service-dsc-db-benefit-contents?populate=*"
+      else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+          apiUrl = "api/service-dsc-inp-benefit-contents?populate=*"
 
   const fetchData = () => {
     const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
