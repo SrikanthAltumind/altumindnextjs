@@ -75,8 +75,11 @@ const PerformanceTesting = () => {
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
               <div className='font-raleway'>
                   <div className='w-[90%] text-center mb-10 mx-auto'>
-                      <p className='custom-sub-heading'>Why Choose Us?</p>
-                      <p className='custom-gradient-text'>Unleashing Digital Performance Potential</p>
+                      <p className='custom-sub-heading'>Why Choose Altumind</p>
+                      <h2 className='custom-gradient-text max-w-[700px]'>
+                        {/* Unleashing Digital Performance Potential */}
+                        Your Trusted Performance Testing Company for Reliable Results
+                        </h2>
                   </div>
                   <WhyChooseUs/>
               </div>

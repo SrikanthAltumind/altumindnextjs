@@ -274,7 +274,7 @@ const Portfolio = () => {
                     blog.attributes.title.toLowerCase()?.replace(" ", "-")
                   }
                 >
-                  <span>Read Article</span>
+                  <span className="capitalize">Read {blog.attributes.title} Article</span>
                   <span>
                     <svg
                       className="w-4 h-4 text-gray-800 group-hover:translate-x-3 transition-all duration-300"

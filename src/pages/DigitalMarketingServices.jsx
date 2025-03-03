@@ -60,11 +60,12 @@ const DigitalMarketingServices = () => {
         <section id="section3" className="bg-[#F3F9FF] py-10">
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+            Why Choose Altumind
             </p>
-            <p className=" custom-gradient-text">
-              Leading the Way in Fulfilling Your Brand&apos;s Vision
-            </p>
+            <h2 className=" custom-gradient-text max-w-[700px]">
+              {/* Leading the Way in Fulfilling Your Brand&apos;s Vision */}
+              End-to-End Digital Marketing Strategy Consulting
+            </h2>
           </div>
           <WhyAltumind />
         </section>

@@ -85,7 +85,7 @@ const Spectrum = () => {
               <p className="text-sm max-w-[480px]">
                 {service?.attributes?.description}
               </p>
-              {/* {service?.attributes?.CTA && (
+              {service?.attributes?.CTA && (
                 <a
                   href={service?.attributes?.url}
                   className="underline cursor-pointer mt-4 font-semibold flex gap-1 items-center group text-[#DD5143]"
@@ -113,7 +113,7 @@ const Spectrum = () => {
                     </svg>
                   </span>
                 </a>
-              )} */}
+              )}
             </div>
           </div>
         ))}

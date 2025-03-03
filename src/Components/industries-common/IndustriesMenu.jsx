@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
 const IndustriesMenu = ({sectionsMenu}) => {
     // eslint-disable-next-line react/prop-types
     const [visibleSection, setVisibleSection] = useState(sectionsMenu[0].id)
+    const {id} = useParams()
+
+    useEffect(() => {
+        setVisibleSection(sectionsMenu[0].id)
+    },[id])
  
     const scrollToSection = (sectionId)=> {
         const sectionElement = document.getElementById(sectionId)

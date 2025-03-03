@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const ExploreFurther = () => {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -42,25 +42,42 @@ const ExploreFurther = () => {
   }
   return (
     <div className="mx-auto w-[90%] max-w-[950px] dark:text-white space-y-10 font-raleway">
-        <p className="custom-gradient-text">Explore Further</p>
-        <div className="flex gap-10 flex-wrap  justify-center text-white" >
-            {
-                data?.map((item) => (
-                    <div key={item.id} className="rounded-lg p-5 w-[230px] h-[260px] flex justify-between flex-col" style={{backgroundColor:item?.attributes?.hexvalue}}>
-                        <p className="font-semibold text-lg">{item?.attributes?.title}</p>
-                        <Link to={item?.attributes?.url} className="w-fit">
-                        <p className="text-[13px] flex gap-2 items-center w-fit group font-semibold">{item?.attributes?.CTA}
-                        <svg className="w-5 h-5 group-hover:translate-x-3 transition-all duration-300  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-                        </svg>
-                        </p>
-                        </Link>
-                    </div>
-                ))
-            }
-        </div>
+      <p className="custom-gradient-text">Explore Further</p>
+      <div className="flex gap-10 flex-wrap  justify-center text-white">
+        {data?.map((item) => (
+          <div
+            key={item.id}
+            className="rounded-lg p-5 w-[230px] h-[260px] flex justify-between flex-col"
+            style={{ backgroundColor: item?.attributes?.hexvalue }}
+          >
+            <p className="font-semibold text-lg">{item?.attributes?.title}</p>
+            <Link to={item?.attributes?.url} className="w-fit">
+              <p className="text-[13px] flex gap-2 items-center w-fit group font-semibold">
+                {item?.attributes?.CTA}
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-3 transition-all duration-300  dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 12H5m14 0-4 4m4-4-4-4"
+                  />
+                </svg>
+              </p>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ExploreFurther
+export default ExploreFurther;

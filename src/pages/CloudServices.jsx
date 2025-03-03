@@ -71,11 +71,12 @@ const CloudServices = () => {
         <section id="section4" className="bg-[#F3F9FF] py-8">
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+              Why Choose Altumind
             </p>
-            <p className=" custom-gradient-text">
-              Making Cloud Work for You
-            </p>
+            <h2 className=" custom-gradient-text">
+              {/* Making Cloud Work for You */}
+              Cloud Consulting Services that Maximize Your ROI
+            </h2>
           </div>
           <WhyAltumind />
         </section>

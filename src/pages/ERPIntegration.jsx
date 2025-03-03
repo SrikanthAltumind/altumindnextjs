@@ -73,8 +73,11 @@ const ERPIntegration = () => {
         <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='font-raleway'>
                 <div className='text-center mb-10'>
-                    <p className='custom-sub-heading'>Why Choose Us?</p>
-                    <p className='custom-gradient-text'>The Altumind Advantage: <br/> Your Trusted ERP Integration Partner</p>
+                    <p className='custom-sub-heading'>Why Choose Altumind</p>
+                    <h2 className='custom-gradient-text max-w-[700px]'>
+                    Optimize Business Efficiency with ERP Integrated Solutions
+                      {/* The Altumind Advantage: <br/> Your Trusted ERP Integration Partner */}
+                      </h2>
                 </div>
                 <WhyChooseUs/>
             </div>

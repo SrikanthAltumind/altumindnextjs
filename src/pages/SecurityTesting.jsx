@@ -75,8 +75,11 @@ const SecurityTesting = () => {
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
               <div className='font-raleway'>
                   <div className='w-[90%] max-w-[750px] text-center mb-10 mx-auto'>
-                      <p className='custom-sub-heading'>Why Choose Us?</p>
-                      <p className='custom-gradient-text'>Comprehensive Security Testing Solution You Can Trust</p>
+                      <p className='custom-sub-heading'>Why Choose Altumind</p>
+                      <h2 className='custom-gradient-text'>
+                        {/* Comprehensive Security Testing Solution You Can Trust */}
+                        Strengthen Your Digital Defense with best Security Testing company
+                        </h2>
                   </div>
                   <WhyChooseUs/>
               </div>

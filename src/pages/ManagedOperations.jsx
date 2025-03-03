@@ -80,11 +80,12 @@ const ManagedOperations = () => {
         >
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+            Why Choose Altumind
             </p>
-            <p className=" custom-gradient-text">
-              Architect of Your Digital Success Story
-            </p>
+            <h2 className=" custom-gradient-text max-w-[700px]">
+              {/* Architect of Your Digital Success Story */}
+              Optimizing Operations with IT Management Consulting
+            </h2>
           </div>
           <WhyAltumind />
         </section>

@@ -82,8 +82,11 @@ const WebDevelopment = () => {
         <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='font-raleway'>
                 <div className="text-center font-raleway space-y-3 mb-10">
-                    <p className='custom-sub-heading'>Why Choose Us?</p>
-                    <p className='custom-gradient-text'>The Altumind Advantage: <br/>Your Web Solutions Partner</p>
+                    <p className='custom-sub-heading'>Why Choose Altumind</p>
+                    <h2 className='custom-gradient-text max-w-[700px]'>
+                    {/* The Altumind Advantage: <br/>Your Web Solutions Partner */}
+                    Drive Innovation Through Web Development Consulting Services
+                    </h2>
                 </div>
                 <WhyChooseUs/>
             </div>

@@ -64,6 +64,7 @@ const LifeandCareer = () => {
               className="h-full w-full hover:scale-105 transition-all duration-300"
               src={item?.attributes?.image?.data?.attributes?.url}
               alt={item?.attributes?.title}
+              loading="lazy"
             />
             <div className="text-white absolute w-full py-3 bg-gradient-to-t from-[#02194A] to-transparent duration-500 bottom-0 left-0 pl-5 text-left">
               <p className="text-2xl font-bold">{item?.attributes?.title}</p>

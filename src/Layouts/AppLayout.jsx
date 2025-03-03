@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, } from "react-router-dom";
 import Footer from "../Components/common-components/Footer";
 import Navbar from "../Components/common-components/Navbar";
 import { createContext, useEffect, useState } from "react";
@@ -7,8 +7,17 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ThemeContext = createContext();
 
+
+
+
+ 
 const AppLayout = () => {
   const [theme, setTheme] = useState("light");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [pathname]);
 
   useEffect(() => {
     theme === "dark"

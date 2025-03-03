@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 
 const Menu = ({ sections }) => {
   
   const location = useLocation()
 
-
     const [selectedTab, setSelectedTab] = useState(sections[0]?.id)
-  // Function to handle scrolling to a section
-  // const scrollToSection = (id) => {
-  //   const section = document.getElementById(id);
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
 
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
@@ -29,7 +21,7 @@ const Menu = ({ sections }) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const sectionId = entry.target.id;
-        setVisibleSection(sectionId);
+        setSelectedTab(sectionId);
       }
     });
   };

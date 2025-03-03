@@ -37,7 +37,7 @@ const NavigatingKeyChallenges = () => {
       fetchData();
     }, [location.pathname]);
   return (
-    <section id="section4" className="w-[90%] space-y-10 mx-auto font-raleway">
+    <div className="w-[90%] space-y-10 mx-auto font-raleway">
       <div>
         <p className="custom-gradient-text py-2">
           Navigating Key Challenges
@@ -62,7 +62,7 @@ const NavigatingKeyChallenges = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

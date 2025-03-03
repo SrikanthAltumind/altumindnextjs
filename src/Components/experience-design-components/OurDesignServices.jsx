@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { ThemeContext } from "../../Layouts/AppLayout"
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 
 const OurDesignServices = () => {
@@ -73,13 +73,13 @@ const OurDesignServices = () => {
                     <p className="font-semibold">{item?.attributes?.title}</p>
                     <p className="text-[13px] font-light font-montserrat">{item?.attributes?.description}</p>
                     </div>
-                    {/* <Link to={item?.attributes?.url} className="w-fit">
+                    <Link to={item?.attributes?.url} className="w-fit">
                     <p className="text-[13px] flex gap-2 items-center w-fit group font-semibold">{item?.attributes?.cta  || item?.attributes?.CTA}
                     <svg className="w-5 h-5 group-hover:translate-x-3 transition-all duration-300  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                         </svg>
                     </p>
-                    </Link> */}
+                    </Link>
                 </div>
                ))
             }

@@ -14,6 +14,7 @@ import { Helmet } from "react-helmet-async";
 const OpenRoles = () => {
 
   const [jobs, setJobs] = useState([]);
+  const [jobOpenings, setJobOpenings] = useState([]);
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(false)
   const [executeDebouncer, setExecuteDebouncer] = useState(false);
@@ -22,72 +23,153 @@ const OpenRoles = () => {
   const debouncedSearch = useCallback(
     debounce(() => {
       setExecuteDebouncer(true)
-    }, 750),
+    }, 500),
     []
   );
 
-  const depart_list = [
-    "Marketing",
-    "Project Management",
-    "Design",
-    "Sales & Operations",
-    "Development",
-  ];
+  // const depart_list = [
+  //   "Marketing",
+  //   "Project Management",
+  //   "Design",
+  //   "Sales & Operations",
+  //   "Development",
+  // ];
 
+  // const job_type = [
+  //   "Full Time",
+  //   "Part Time",
+  //   "Contractual",
+  //   "Training"
+  // ];
+
+  // const location = ["USA", "India", "Remote"];
+
+  // const experience = [
+  //   "Fresher",
+  //   "Entry-Level (1-3 years)",
+  //   "Mid-Level (4-5 years)",
+  //   "Senior-Level (5+ years)",
+  //   "Managerial (10+ years)",
+  //   "Executive (15+ years)",
+  // ];
+
+  // const depart_list = [
+  //   { id: "Marketing", name: "Marketing" },
+  //   { id: "Project Management", name: "Project Management" },
+  //   { id: "Design", name: "Design" },
+  //   { id: "Sales & Operations", name: "Sales & Operations" },
+  //   { id: "Development", name: "Development" }
+  // ];
+  
   const job_type = [
-    "Full Time",
-    "Part Time",
-    "Contractual",
-    "Remote",
-    "Hybrid",
+    { id: "Full Time", name: "Full Time" },
+    { id: "Part Time", name: "Part Time" },
+    { id: "Contractual", name: "Contractual" },
+    { id: "Training", name: "Training" }
   ];
-
-  const location = ["USA", "India"];
-
+  
+  const location = [
+    { id: "USA", name: "USA" },
+    { id: "India", name: "India" },
+    { id: "Remote", name: "Remote" }
+  ];
+  
   const experience = [
-    "Entry-Level (1-3 years)",
-    "Mid-Level (3-5 years)",
-    "Senior-Level (5+ years)",
-    "Managerial (10+ years)",
-    "Executive (15+ years)",
+    { id: "Fresher", name: "Fresher" },
+    { id: "1-3 years", name: "Entry-Level (1-3 years)" },
+    { id: "3-5 years", name: "Mid-Level (3-5 years)" },
+    { id: "5-8 years", name: "Senior-Level (5-8 years)" },
+    { id: "8-10 years", name: "Managerial (8-10 years)" },
+    { id: "10+ years", name: "Executive (10+ years)" }
   ];
+  
 
   const [selections, setSelections] = useState({
-    Department: "",
-    "Job Type": "",
-    Location: "",
-    Experience: "",
+    // Department: [],
+    "Job Type": [],
+    Location: [],
+    Experience: [],
   });
 
+  const ClearFilter = () => {
+    setSelections({
+      // Department: [],
+      "Job Type": [],
+      Location: [],
+      Experience: [],
+    })
+  }
+
+
+
   const handleSelectionChange = (ddName, selectedItem) => {
+
+    let activeddName = selections[ddName]
+    // const filtereddata = activeddName.includes(selectedItem) ? activeddName.filter((item) => item !== selectedItem) : activeddName.push(selectedItem)
+    if(activeddName.includes(selectedItem)) {
+     activeddName = activeddName.filter((item) => item !== selectedItem)
+    } else {
+      activeddName.push(selectedItem)
+    }
     setSelections((prevSelections) => ({
       ...prevSelections,
-      [ddName]: selectedItem,
+      // [ddName]: selectedItem,
+      [ddName]: activeddName,
+      
     }));
+    console.log(selectedItem, activeddName, 'item')
   };
 
-  const fetchJobs = () => {
-    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*`)
+  // const fetchJobs = () => {
+  //   axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*`)
+  //     .then((response) => {
+  //       setJobs(response?.data?.data);
+  //       setInitialJobs(response?.data?.data)
+  //     })
+  //     .catch((error) => {
+  //       console.log("error while fetching jobs: ", error);
+  //     });
+  // };
+
+  const fetchJobOpenings = () => {
+    setLoading(true)
+    axios.get(`${import.meta.env.VITE_APP_API_URL}api/zoho-recruit/fetch-jobs`)
       .then((response) => {
-        setJobs(response?.data?.data);
-        setInitialJobs(response?.data?.data)
+        setLoading(false)
+        setJobOpenings(response?.data?.data?.filter(job=> job?.Job_Opening_Status==="In-progress"))
+        setInitialJobs(response?.data?.data?.filter(job=> job?.Job_Opening_Status==="In-progress"))
+        console.log(response, 'test')
       })
       .catch((error) => {
+        setLoading(false)
         console.log("error while fetching jobs: ", error);
       });
   };
 
+  console.log(jobOpenings, 'jobbb')
+
+  // const handleSearch = () => {
+  //   setLoading(true)
+  //   axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*&filters[$or][0][open_role_department][departmentName][$contains]=${searchTerm}&filters[$or][1][open_role_experience][experienceLevel][$contains]=${searchTerm}&filters[$or][2][open_role_job_types][typeName][$contains]=${searchTerm}&filters[$or][3][open_role_job_location][country][$contains]=${searchTerm}&filters[$or][4][job_title][$contains]=${searchTerm}`)
+  //   .then((response) => {
+  //     setJobs(response?.data?.data);
+  //     setLoading(false);
+  //   })
+  //   .catch((error) => {
+  //     console.log("Error while searching: ", error);
+  //     setLoading(false);
+  //   });
+  // }
+
   const handleSearch = () => {
-    setLoading(true)
-    axios.get(`${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate=*&filters[$or][0][open_role_department][departmentName][$contains]=${searchTerm}&filters[$or][1][open_role_experience][experienceLevel][$contains]=${searchTerm}&filters[$or][2][open_role_job_types][typeName][$contains]=${searchTerm}&filters[$or][3][open_role_job_location][country][$contains]=${searchTerm}&filters[$or][4][job_title][$contains]=${searchTerm}`)
-    .then((response) => {
-      setJobs(response?.data?.data);
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.log("Error while searching: ", error);
-      setLoading(false);
-    });
+    console.log(searchTerm)
+    console.log(jobOpenings)
+    const filteredData = jobOpenings.filter((job) => 
+      job?.Job_Opening_Name?.toLowerCase().includes(searchTerm?.toLowerCase())
+      || job?.City?.toLowerCase().includes(searchTerm?.toLowerCase()) 
+      || job?.Country?.toLowerCase().includes(searchTerm?.toLowerCase()) 
+    )
+    setInitialJobs(filteredData)
   }
 
   const fetchFilteredJobs = (url) => {
@@ -101,19 +183,43 @@ const OpenRoles = () => {
 
   }
 
-
-  useEffect(() => {
-    if (executeDebouncer) {
-      setExecuteDebouncer(false);
-      handleSearch();
+  const handleDropdownFilter = ()=> {
+    //rendering all jobs if no chechbox is selected
+    if(Object.entries(selections).every(([key,value])=> value.length===0)){
+        setInitialJobs(jobOpenings)
+        return;
     }
-  }, [executeDebouncer]);
+    // Filtering if any checkbox is selected
+    const filteredData = jobOpenings.filter(job=> 
+        selections?.["Job Type"]?.map(option=> option.toLowerCase()).includes(job?.Job_Type?.toLowerCase())
+        || selections?.Location?.map(option=> option.toLowerCase()).includes(job?.Country?.toLowerCase())
+        || (selections?.Location?.includes('Remote') && job?.Remote_Job)
+        // || selections?.Department?.map(option=> option.toLowerCase()).includes(job?.Industry?.toLowerCase())
+        || selections?.Experience?.map(option=> option.toLowerCase()).includes(job?.Work_Experience?.toLowerCase())
+    )
+    setInitialJobs(filteredData)
+  }
+
+  useEffect(() => {  //Search Filter
+    handleSearch()
+  },[searchTerm])
+
+  useEffect(() => {  //Dropdown Filter
+    handleDropdownFilter()
+  },[selections])
+
+  // useEffect(() => {
+  //   if (executeDebouncer) {
+  //     setExecuteDebouncer(false);
+  //     handleSearch();
+  //   }
+  // }, [executeDebouncer]);
 
 
 useEffect(() => {
   const constructURL = () => {
     const {
-      Department,
+      // Department,
       "Job Type": JobType,
       Location,
       Experience,
@@ -121,12 +227,12 @@ useEffect(() => {
     const baseURL = `${import.meta.env.VITE_APP_API_URL}api/open-role-job-cards?populate[open_role_department][populate]=*&populate[open_role_experience]=*&populate[open_role_job_type]=*&populate[open_role_job_location]=*`;
 
     const filters = [];
-    if (Department)
-      filters.push(
-        `filters[open_role_department][departmentName][$eq]=${encodeURIComponent(
-          Department
-        )}`
-      );
+    // if (Department)
+    //   filters.push(
+    //     `filters[open_role_department][departmentName][$eq]=${encodeURIComponent(
+    //       Department
+    //     )}`
+    //   );
     if (Experience)
       filters.push(
         `filters[open_role_experience][experienceLevel][$eq]=${encodeURIComponent(
@@ -149,13 +255,16 @@ useEffect(() => {
     return `${baseURL}&${filters.join("&")}`;
   };
 
+
+
   const apiURL = constructURL();
 
   fetchFilteredJobs(apiURL)
 }, [selections]);
 
   useEffect(() => {
-    fetchJobs();
+    // fetchJobs();
+    fetchJobOpenings();
   }, []);
 
 
@@ -234,7 +343,6 @@ useEffect(() => {
             className="p-1 w-full outline-none dark:bg-[#0d1015]"
             onChange={(e) => {
               setSearchTerm(e?.target?.value);
-              debouncedSearch();
             }}
           />
           {searchTerm?.length > 0 && (
@@ -260,13 +368,14 @@ useEffect(() => {
       <div className="w-[85%]">
         <p className="font-semibold capitalize">Filter By</p>
       </div>
-      <div className="w-full flex justify-evenly gap-5 flex-wrap items-start relative">
-        <Dropdown
+      <div className="w-[85%] flex justify-between max-md:justify-center gap-10 flex-wrap items-center relative">
+        {/* <Dropdown
           data={depart_list}
           ddName="Department"
           selection={selections.Department}
           onSelectionChange={handleSelectionChange}
-        />
+        /> */}
+        <div className="flex sm:flex-row flex-col gap-10 items-center">
         <Dropdown
           data={job_type}
           ddName="Job Type"
@@ -285,9 +394,15 @@ useEffect(() => {
           selection={selections.Experience}
           onSelectionChange={handleSelectionChange}
         />
+        </div>
+        {
+         (Object.values(selections).some(arr => arr.length > 0)) && 
+          <button onClick={ClearFilter} className="font-semibold border lg:ml-auto  border-gray-300 rounded-md text-secondary  text-sm py-2 px-4">Clear Filters</button>
+        }
+        
       </div>
       <div className="w-full p-4 flex flex-col gap-5 justify-center items-center">
-        {loading ? <LoaderSpinner /> : <JobCards jobData={jobs} />}
+        {loading ? <LoaderSpinner /> : <JobCards jobData={jobs} jobOpeningsData={initialJobs}/>}
         {/* <div className="w-full flex items-center justify-center p-4">
           <button className="outline-none">
             <p className="underline text-center text-sm font-medium text-[#E42D38] cursor-pointer">
@@ -331,7 +446,9 @@ useEffect(() => {
           </span>
         </a>
       </div> */}
-      <CareerForm/>
+
+    
+      {/* <CareerForm/> */}
     </div>
     </>
   );

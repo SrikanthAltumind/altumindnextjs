@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +16,12 @@
       @apply lg:text-xl sm:text-lg font-semibold
     }
 }
+
+.body{
+  font-family: "Raleway", sans-serif;
+  font-display: swap;
+}
+
 .move-inside{
   bottom: 0!important;
 }
@@ -53,4 +59,71 @@ margin-left: -20px;
 .markdown-services-animated-card ul{
   padding-left: 20px;
   list-style-image: url('./assets/Tick Icon.svg');
+}
+
+.grecaptcha-badge {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.phone-container{
+  margin-top: -9.5px !important;
+}
+
+.phone-input{
+  border: none!important; 
+  border-bottom: 0.5px solid #0e0e0e!important;
+  width: 100%!important;
+  padding: 0px 10px;
+  outline: none; 
+  font-size: 16px!important;
+  background-color: transparent!important;
+  border-radius: 0!important;
+}
+.phone-input-dark{
+  border: none!important; 
+  border-bottom: 0.5px solid #ffff!important;
+  width: 100%!important;
+  padding: 0px 10px;
+  outline: none; 
+  font-size: 16px!important;
+  background-color: transparent!important;
+  border-radius: 0!important;
+}
+.phone-button{
+  background-color: transparent!important;
+  border: none!important;
+
+}
+.phone-button-dark{
+  background-color: transparent!important;
+  border: none!important;
+
+}
+.phone-dropdown{
+  border: none!important;
+
+}
+.phone-dropdown-dark{
+  background-color: black!important;
+  border: 1px solid white!important;
+}
+
+.phone-search{
+  border: none!important;
+}
+
+.phone-search-dark{
+  background-color: black!important;
+  border: 1px solid white!important;
+  color: black!important;
+}
+
+.phone-input:focus{
+  border-bottom: 0.5px solid #02194a!important;
+}
+.phone-input-dark:focus{
+  border-color:#60a5fa!important;
+  transition: all .2s linear;
+  transform:border-color;
 }

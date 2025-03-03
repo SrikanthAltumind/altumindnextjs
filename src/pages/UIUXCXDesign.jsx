@@ -43,9 +43,9 @@ const designServicesHeaderData = {
   'cx-design':{title:'CX Design Services', heading:'Making Customer Experience Your Competitive Edge'}
 }
 const WhychooseUsHeaderData = {
-  'ui-design':{title:'Why Choose Us?', heading:'Your Partner in Strategic Design Evolution'},
-  'ux-design':{title:'Why Choose Us?', heading:'The Altumind Advantage: Your UX Design Partner'},
-  'cx-design':{title:'Why Choose Us?', heading:'Your Partner in Experience Excellence'}
+  'ui-design':{title:'Why Choose Altumind', heading:'Partner with the Best UI Design Company for Innovation and Growth'},
+  'ux-design':{title:'Why Choose Altumind', heading:'Elevate Experiences with an Expert UX Design Consultant'},
+  'cx-design':{title:'Why Choose Altumind', heading:'Transform Engagement ThroughDigital Customer Experience Strategy'}
 }
 const benefitsHeaderData = {
   'ui-design':{title:'Benefits', heading:'Setting you Up for Success'},
@@ -55,7 +55,7 @@ const benefitsHeaderData = {
 const insightsHeaderData = {
   'ui-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
   'ux-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
-  'cx-design':{title:'Insights', heading:'Latest Perspectives'}
+  'cx-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'}
 }
 const pageIds = ['ui-design', 'ux-design', 'cx-design']
 
@@ -122,9 +122,9 @@ const UIUXCXDesign = () => {
         <section id='section5'>
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='w-[90%] mx-auto font-raleway'>
-                <div className='text-center mb-10 max-w-[750px] mx-auto'>
+                <div className='text-center mb-12 max-w-[750px] mx-auto'>
                     <p className='custom-sub-heading'>{WhychooseUsHeader?.title}</p>
-                    <p className='custom-gradient-text'>{WhychooseUsHeader?.heading}</p>
+                    <h2 className='custom-gradient-text'>{WhychooseUsHeader?.heading}</h2>
                 </div>
                 <WhyChooseUs/>
             </div>

@@ -72,8 +72,11 @@ const AIAndChatBotServices = () => {
 
         <section id='section4'>
         <div className='text-center mb-8 max-w-[800px] mx-auto font-raleway'>
-                <h2 className='custom-sub-heading'>Key Impact Areas</h2>
-                <p className='custom-gradient-text'>Transform Your Business Operations Across Core Functions</p>
+                <h2 className='custom-sub-heading'>Why Choose Altumind</h2>
+                <h2 className='custom-gradient-text'>
+                Transform Engagement with Intelligent Chatbot Solutions
+                  {/* Transform Your Business Operations Across Core Functions */}
+                  </h2>
             </div>
             <WhyAltumind/>
         </section>

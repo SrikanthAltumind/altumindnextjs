@@ -28,6 +28,8 @@ const JobDetails = () => {
         });
     };
 
+    console.log(jobData, 'jobdata')
+
     useEffect(() => {
       fetchJobData();
     }, []);
@@ -67,21 +69,21 @@ const JobDetails = () => {
             <p className="font-extrabold lg:text-4xl md:text-3xl text-2xl md:hidden text-center w-full">
               {jobData?.job}
             </p>
-            <div className="w-full">
+            <div className="w-full h-[300px]">
               <img
-                src={jobData?.attributes?.poster?.data?.attributes?.url}
+                src={jobData?.poster?.data?.attributes?.url}
                 alt={jobData?.attributes?.name}
-                srcSet={`
-                    ${jobData?.poster?.data?.attributes?.formats?.large?.url} 1024w,
-                    ${jobData?.poster?.data?.attributes?.formats?.medium?.url} 768w,
-                    ${jobData?.poster?.data?.attributes?.formats?.small?.url} 480w
-                `}
-                sizes="
-                    (min-width: 1024px) 1024px,
-                    (min-width: 768px) 768px,
-                    100vw
-                "
-                className="w-full object-fit h-full rounded-xl max-h-[700px]"
+                // srcSet={`
+                //     ${jobData?.poster?.data?.attributes?.formats?.large?.url} 1024w,
+                //     ${jobData?.poster?.data?.attributes?.formats?.medium?.url} 768w,
+                //     ${jobData?.poster?.data?.attributes?.formats?.small?.url} 480w
+                // `}
+                // sizes="
+                //     (min-width: 1024px) 1024px,
+                //     (min-width: 768px) 768px,
+                //     100vw
+                // "
+                className="w-full object-contain h-full rounded-xl"
               />
             </div>
             <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center items-start p-4">
@@ -98,14 +100,14 @@ const JobDetails = () => {
                 </span>
               </p>
             </div>
-            <div className="w-full flex justify-between gap-5 items-center p-4 text-center">
+            <div className="w-full flex justify-center gap-5 items-center p-4 text-center">
               <button onClick={() => setShowForm(true)} className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md bg-[#E42D38] text-white">
                 Apply Now
               </button>
             
-              <button className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md border-black border-2">
+              {/* <button className="text-sm font-medium lg:w-[200px] lg:h-[60px] w-[150px] h-[50px] rounded-md border-black border-2">
                 Refer a Friend
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

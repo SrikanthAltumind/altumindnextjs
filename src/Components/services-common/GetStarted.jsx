@@ -4,8 +4,8 @@ import { gradientStyle } from "../../ReactFunctions";
 
 const services = {
   experience: {
-    heading: "Turn Vision into Impactful Digital Experiences.",
-    caption: "Start Your Experience Transformation Today ",
+    heading: "Turn Vision into Impactful Digital Experiences. Start Your Experience Design Consulting Today ",
+    caption: "",
     linkText: "Get in Touch ",
     url: "/contact",
   },
@@ -38,14 +38,14 @@ const services = {
   dataAnalytics: {
     heading: "Beyond Numbers: Your Data Tells a Story ",
     caption:
-      "We Help You Listen, Understand, and Act. Covering All Angles of Your Business",
+      "Our Data Analytics Consulting Services emphasize the skills, technology, and scale necessary to think and deliver big for your business.",
     linkText: "Get Started",
     url: "/contact",
   },
   managedOperations: {
     heading: "Empower Your Business: Expertise and Resilience on Demand",
     caption:
-      "Streamline Operations, Enhance Communication, and Boost Agility with Our Managed Services",
+      "Streamline Operations, Enhance Communication, and Boost Agility with a Reliable IT Management Consulting Company",
     linkText: "Get Started",
     url: "/contact",
   },
@@ -59,7 +59,7 @@ const services = {
   digitalStrategy: {
     heading: "The Digital Differentiator Your Business Needs",
     caption:
-      "We bring the skills, technology, and scale necessary to think and deliver big for your business.",
+      "Across all Digital Strategy Services, we bring the skills, technology, and scale necessary to think and deliver big for your business.",
     linkText: "Get Started",
     url: "/contact",
   },
@@ -174,12 +174,12 @@ const GetStarted = () => {
 
   return (
     <div className="bg-[#EAF1FF] min-h-[280px] w-full flex  flex-col  justify-center  dark:bg-[#1F3257] pr-2 py-10">
-      <div className="ml-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
+      <div className="ml-[10%] max-sm:mr-[10%]  md:ml-[15%] flex flex-col gap-8  font-raleway dark:text-white">
         <p className="xl:text-4xl lg:text-3xl md:text-2xl text-xl font-extrabold max-w-[500px]">
           {data?.heading}
         </p>
         {data?.caption && (
-          <p className="font-medium max-w-[60%]">{data?.caption}</p>
+          <p className="font-medium md:max-w-[60%]">{data?.caption}</p>
         )}
 
         <a

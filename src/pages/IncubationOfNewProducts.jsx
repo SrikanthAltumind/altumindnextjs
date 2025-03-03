@@ -75,8 +75,11 @@ const IncubationOfNewProducts = () => {
     <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
       <div className='w-[90%] mx-auto font-raleway'>
           <div className='text-center mb-20 space-y-3 max-w-[750px] mx-auto'>
-              <p className='custom-sub-heading'>Why Choose Us?</p>
-              <p className='custom-gradient-text'>Empowering Your Ideas with Expertise and Efficiency</p>
+              <p className='custom-sub-heading'>Why Choose Altumind</p>
+              <h2 className='custom-gradient-text'>
+                {/* Empowering Your Ideas with Expertise and Efficiency */}
+                Transform Ideas into Scalable Solutions with a Technology Business Incubator
+                </h2>
           </div>
           <WhyChooseUs/>
       </div>

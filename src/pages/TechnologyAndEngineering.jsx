@@ -83,11 +83,12 @@ const TechnologyAndEngineering = () => {
       >
         <div className="text-center font-raleway space-y-3 mb-10">
           <p className="custom-sub-heading">
-            Why Altumind Stands Out
+              Why Choose Altumind
           </p>
-          <p className=" custom-gradient-text">
-            Elevating Businesses Through Smart Engineering
-          </p>
+          <h2 className=" custom-gradient-text">
+            {/* Elevating Businesses Through Smart Engineering */}
+            Your Digital Engineering Transformation Partner
+          </h2>
         </div>
         <WhyAltumind />
       </section>

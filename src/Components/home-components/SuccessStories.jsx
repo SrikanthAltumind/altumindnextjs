@@ -60,6 +60,9 @@ const SuccessStories = ({heading, title="Success Stories"}) => {
                   src={story?.attributes?.image?.data?.attributes?.url}
                   // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Group_5118_Compressify_io_bfde8a23ac.webp"
                   alt={story?.attributes?.name}
+                  loading="lazy"
+                  height={250}
+                  width={250}
                 />
               </div>
               <div className="pt-3">

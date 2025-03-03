@@ -67,9 +67,9 @@ const SuccessStory = () => {
           </Helmet>
  
     <div className="w-full flex flex-col justify-start items-center gap-16 md:gap-20">
-      <section className="w-full flex justify-center">
+      <div className="w-full flex justify-center">
         <SuccessStoryBanner />
-      </section>
+      </div>
       <div className="w-full sticky top-[70px] bg-white -mt-20 dark:bg-darkTheme">
         <Menu sections={servicesMenu} />
       </div>
@@ -129,9 +129,9 @@ const SuccessStory = () => {
           <Transformative />
         </section>
       )}
-      <section className="w-full flex justify-center">
+      <div className="w-full flex justify-center">
         <GetStarted />
-      </section>
+      </div>
     </div>
     </>
   );

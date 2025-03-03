@@ -75,8 +75,11 @@ const AutomationTesting = () => {
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
               <div className='font-raleway'>
                   <div className='w-[90%] text-center mb-10 mx-auto'>
-                      <p className='custom-sub-heading'>Why Choose Us?</p>
-                      <p className='custom-gradient-text'>The Automation Excellence Advantage</p>
+                      <p className='custom-sub-heading'>Why Choose Altumind</p>
+                      <h2 className='custom-gradient-text max-w-[700px]'>
+                        {/* The Automation Excellence Advantage */}
+                        Boost Quality and Speed with Automated Software Testing Services
+                        </h2>
                   </div>
                   <WhyChooseUs/>
               </div>

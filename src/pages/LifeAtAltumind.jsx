@@ -40,7 +40,7 @@ const LifeAtAltumind = () => {
     <LearningAndDevelopment/>
     <BgImageBanner/>
     <WeAreSeeking/>
-    <CareerForm/>
+    {/* <CareerForm/> */}
     </div>
     </>
   )

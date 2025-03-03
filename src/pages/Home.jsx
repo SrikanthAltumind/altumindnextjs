@@ -13,8 +13,20 @@ import HomeBannerUpdated from '../Components/home-components/HomeBannerUpdated'
 import LifeandCarrer from '../Components/home-components/LifeandCareer'
 import ResourceCenter from '../Components/home-components/ResourceCenter'
 import SuccessStories from '../Components/home-components/SuccessStories'
+// import { useEffect } from 'react'
+// import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+
+    // const { pathname } = useLocation();
+  
+    // useEffect(() => {
+    //   window.scrollTo(0,0);
+    //   console.log("useeffect called")
+    //   return () => {
+    //     console.log("return block")
+    //   }
+    // }, [pathname]);
   return (
     <>
     <Helmet>
@@ -48,6 +60,12 @@ const Home = () => {
     "https://x.com/altumind"
   ]}`}
    </script>
+   {/* <link 
+          rel="preload" 
+          as="image" 
+          href="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_Desktop_Compressify_io_75ff825852.webp" 
+          type="image/webp"
+        /> */}
   </Helmet>
     <div className="dark:bg-darkTheme dark:text-white font-raleway lg:space-y-24 space-y-24 w-full">
       <HomeBannerUpdated />

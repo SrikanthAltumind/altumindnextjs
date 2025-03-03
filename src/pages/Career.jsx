@@ -49,7 +49,7 @@ const Career = () => {
         <InsightsBlogs />
       </section>
         <FAQ />
-       <CareerForm/>
+       {/* <CareerForm/> */}
     
     </div>
     </>

@@ -76,31 +76,36 @@ const OurTeamSpeaks = () => {
             </p>
             <p className='custom-sub-heading'>Minds Behind Magic</p>
         </div>
-            <Slider ref={(slider) => {desktopSliderRef = slider;}} {...settings} 
-                className='hidden lg:block max-w-[1200px] w-[99%] mx-auto'>
-            {[...Array(slidesCount)].map((_,index)=>
-            <React.Fragment key={index}>
-            <div  className='w-full flex flex-col mx-auto'>
-              {[data[data.length-1], ...data.slice(1, data?.length-1), data[0]].slice(index*4, (index+1)*4).map((card)=>
-                <div key={card.id} className='w-[48%] even:self-end even:-mt-[270px] p-7 m-1 shadow-custom-shadow bg-white dark:bg-[#25282c] flex flex-col gap-8'>
-                <img className='w-[120px]' src={theme==='light' ? altumindLight : altumindDark} alt="altumind_logo"/>
-                <p className='text-sm tracking-wider text-tertiary dark:text-white dark:font-light'>{card?.attributes?.testimony}</p>
-                <div className='flex items-center  text-sm md:text-base gap-8 md:gap-10'>
-                    <img className='w-20 h-20 object-cover shrink-0 md:w-24 md:h-24 bg-gray-200' src={card?.attributes?.empImage?.data?.attributes?.url} alt="employee_img"/>
-                    <p className='font-montserrat text-secondary font-semibold'>
-                        {card?.attributes?.employeeName} {" "}
-                        <span className='text-[#5E5E5E] dark:text-[#9C9C9C] font-medium'>/ {card?.attributes?.designation}</span></p>
-                </div>
-                </div>
-                 )}
-            </div>
-            </React.Fragment> 
-            )}
-            </Slider>
+        {
+          window.innerWidth >= 1024 && 
+          <Slider ref={(slider) => {desktopSliderRef = slider;}} {...settings} 
+          className='hidden lg:block max-w-[1200px] w-[99%] mx-auto'>
+      {[...Array(slidesCount)].map((_,index)=>
+      <div key={index}>
+      <div  className='w-full flex flex-col mx-auto'>
+        {[data[data.length-1], ...data.slice(1, data?.length-1), data[0]].slice(index*4, (index+1)*4).map((card)=>
+          <div key={card.id} className='w-[48%] even:self-end even:-mt-[270px] p-7 m-1 shadow-custom-shadow bg-white dark:bg-[#25282c] flex flex-col gap-8'>
+          <img className='w-[120px]' src={theme==='light' ? altumindLight : altumindDark} alt="altumind_logo"/>
+          <p className='text-sm tracking-wider text-tertiary dark:text-white dark:font-light'>{card?.attributes?.testimony}</p>
+          <div className='flex items-center  text-sm md:text-base gap-8 md:gap-10'>
+              <img className='w-20 h-20 object-cover shrink-0 md:w-24 md:h-24 bg-gray-200' src={card?.attributes?.empImage?.data?.attributes?.url} alt="employee_img"/>
+              <p className='font-montserrat text-secondary font-semibold'>
+                  {card?.attributes?.employeeName} {" "}
+                  <span className='text-[#5E5E5E] dark:text-[#9C9C9C] font-medium'>/ {card?.attributes?.designation}</span></p>
+          </div>
+          </div>
+           )}
+      </div>
+      </div> 
+      )}
+      </Slider>
+        }
+           {
+            window.innerWidth < 1024 && 
             <Slider ref={(slider) => {mobileSliderRef = slider;}} {...settings} 
-              className='block lg:hidden' >
+              className='block lg:hidden'>
               {[data[data.length-1], ...data.slice(1, data?.length-1), data[0]]?.map(card=> (
-                <React.Fragment key={card?.id}>
+                <div key={card?.id}>
                 <div  className='max-w-[600px] mx-auto p-7 m-1 shadow-custom-shadow bg-white dark:bg-[#25282c] flex flex-col gap-8'>
                 <img className='w-[120px]' src={theme==='light' ? altumindLight : altumindDark} alt="altumind_logo"/>
                 <p className='text-sm tracking-wider text-tertiary dark:text-white dark:font-light'>{card?.attributes?.testimony}</p>
@@ -111,9 +116,12 @@ const OurTeamSpeaks = () => {
                         <span className='text-[#5E5E5E] dark:text-[#9C9C9C] font-medium'>/ {card?.attributes?.designation}</span></p>
                 </div>
                 </div>
-                </React.Fragment>
+                </div>
               ))}
-            </Slider>
+            </Slider> 
+}
+           
+          
     <div className="flex items-center justify-center  gap-4 lg:mr-5 pt-5">
         <svg
           onClick={() => slidesCount<data?.length ? desktopSliderRef.slickPrev() : mobileSliderRef.slickPrev()}
@@ -166,6 +174,8 @@ const OurTeamSpeaks = () => {
         </svg>
       </div>
     </div>
+
+  
   )
 }
 

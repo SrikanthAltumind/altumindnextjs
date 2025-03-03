@@ -1,6 +1,9 @@
 import  { useEffect, useState } from 'react'
 import { gradientStyle } from '../../ReactFunctions';
 // import { Link } from 'react-router-dom';
+import desktop from '../../assets/desktop.webp'
+import mobile from '../../assets/mobile.webp'
+
 
 const words = ["Design", "Development", "Marketing"];
 
@@ -54,14 +57,29 @@ const HomeBannerUpdated = () => {
           </a>
         </div>
       </div>
-      <div className="md:w-[40%] w-full flex justify-center">
+      <div className="md:w-[40%] max-h-[300px] lg:max-h-[400px] w-full flex justify-center">
+        <picture>
+        <source 
+        //     srcSet="
+        //     https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_mobile_Compressify_io_b2fe2133a6.webp 600w,
+        //     https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_Desktop_Compressify_io_75ff825852.webp 1024w
+        //  " 
+        srcSet={`${mobile} 600w, ${desktop} 1024w`}
+          type="image/webp"
+        />
         <img
           // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Banner_Image_0b6b650582.webp"
-          src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_e48ac42265.svg"
+          // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_e48ac42265.svg"
+          src={desktop}
+        
           alt="A digital integration of Earth is showcased with glowing connections, overlaid by stylized curved lines."
           // className="object-contain lg:h-[650px] lg:w-[750px] md:h-[400px] h-[320px] w-[340px] "
-          className='max-h-[300px] lg:max-h-[400px]  mx-auto'
+          className='max-h-[300px] lg:max-h-[400px] h-full mx-auto object-contain'
+          loading='eager'
+          height={"366"}
+          width={"536"}
         />
+          </picture>
       </div>
     </div>
   );

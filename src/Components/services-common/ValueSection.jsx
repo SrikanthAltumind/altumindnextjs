@@ -9,7 +9,7 @@ const aiAndAutomationData = {
       id: 1,
       attributes: {
         title: "AI & Chatbot Solutions",
-        description: `Harness the power of AI and chatbots to transform your business. Our intelligent solutions analyze user behavior, interpret content, and generate predictions, giving you a competitive edge. By leveraging data-driven insights, we help you boost efficiency, enhance customer satisfaction, and accelerate growth across all aspects of your operations. `,
+        description: `Harness the power of AI and chatbots to transform your business. Our intelligent AI services analyze user behavior, interpret content, and generate predictions, giving you a competitive edge. By leveraging data-driven insights, we help you boost efficiency, enhance customer satisfaction, and accelerate growth across all aspects of your operations.`,
         pointsList: [
           { id: 1, content: "Voice assistants and skillsets" },
           { id: 2, content: "Customer service automation" },
@@ -19,7 +19,7 @@ const aiAndAutomationData = {
           { id: 6, content: "Lead generation and sales assistance" },
         ],
         CTA: "Explore AI Solutions",
-        url: "/contact",
+        url: "/services/ai-automation/conversational-ai-chatbot",
         image: {
           data: {
             attributes: {
@@ -43,7 +43,7 @@ const aiAndAutomationData = {
           { id: 6, content: "RPA Process Mining" },
         ],
         CTA: "Explore RPA Services",
-        url: "/contact",
+        url: "/services/ai-automation/rpa",
         image: {
           data: {
             attributes: {
@@ -74,7 +74,7 @@ const digitalMarketingData = {
         subDescription:
           "Our Branding & design approach combines creativity with strategic thinking, ensuring your brand stands out in the digital landscape while effectively communicating your values and message.",
         CTA: "Explore Branding Services",
-        url: "/contact",
+        url: "/services/digital-marketing/branding-design",
         image: {
           data: {
             attributes: {
@@ -87,9 +87,9 @@ const digitalMarketingData = {
     {
       id: 2,
       attributes: {
-        title: "Marketing Services",
+        title: "Digital Marketing Services",
         description:
-          "Reach, engage, and convert your target audience across multiple digital channels. Our marketing services are tailored to your business goals, leveraging the latest trends and technologies to maximize your online presence.",
+          "Reach, engage, and convert your target audience across multiple digital channels. Our digital marketing services are tailored to your business goals, leveraging the latest trends and technologies to maximize your online presence. ",
         subTitle: "Our comprehensive marketing solutions include:",
         pointsList: [
           { id: 1, content: "Content Marketing" },
@@ -102,7 +102,7 @@ const digitalMarketingData = {
         subDescription:
           "We craft integrated marketing strategies that work together to create a powerful, cohesive digital presence for your brand. ",
         CTA: "Discover Marketing Solutions",
-        url: "/contact",
+        url: "/services/digital-marketing/marketing-services",
         image: {
           data: {
             attributes: {
@@ -128,7 +128,7 @@ const digitalMarketingData = {
         subDescription:
           "Our team of experts continually analyzes and adjusts your marketing efforts to ensure you're always getting the best possible results in the ever-changing digital landscape.",
         CTA: "Optimize Your Marketing",
-        url: "/contact",
+        url: "/services/digital-marketing/marketing-optimization",
         image: {
           data: {
             attributes: {
@@ -145,7 +145,7 @@ const digitalMarketingData = {
 
 const cloudServicesData = {
   caption: "Cloud Solutions",
-  heading: "Powering Business with Smart Cloud Solutions",
+  heading: "Powering Business with Smart Cloud Strategy Engineering Services",
   data: [
     {
       id: 1,
@@ -161,7 +161,7 @@ const cloudServicesData = {
           { id: 4, content: "Cloud optimization and management" },
         ],
         CTA: "Explore More",
-        url: "/contact",
+        url: "/services/cloud/cloud-migration",
         image: {
           data: {
             attributes: {
@@ -176,7 +176,7 @@ const cloudServicesData = {
       attributes: {
         title: "Cloud App Services",
         description:
-          "Accelerate innovation and streamline operations with Altumind's comprehensive suite of cloud application services. We empower your business to leverage the full potential of the cloud, from development and deployment to management and scaling. ",
+          "Accelerate innovation and streamline operations with Altumind's comprehensive suite of cloud application services. Collaborate with us, our all-inclusive cloud consulting services empower businesses to leverage the full potential of the cloud, from development and deployment to management and scaling.",
         subTitle: "What we offer:",
         pointsList: [
           { id: 1, content: "Cloud-Native Application Development " },
@@ -187,7 +187,7 @@ const cloudServicesData = {
           { id: 6, content: "Application Performance Optimization" },
         ],
         CTA: "Explore More",
-        url: "/contact",
+        url: "/services/cloud/cloud-app-services",
         image: {
           data: {
             attributes: {
@@ -217,7 +217,7 @@ const ValueSection = () => {
     <div className="w-[90%] sm:max-w-[650px] lg:max-w-[1100px] mx-auto font-raleway dark:text-white space-y-20">
       <div className="text-center space-y-3">
         <p className="custom-sub-heading">{data?.caption}</p>
-        <p className="custom-gradient-text md:max-w-[520px] ">
+        <p className="custom-gradient-text md:max-w-[700px] ">
           {data?.heading}
         </p>
       </div>

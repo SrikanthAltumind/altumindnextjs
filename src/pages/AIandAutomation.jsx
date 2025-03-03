@@ -74,10 +74,11 @@ const AIandAutomation = () => {
         >
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+              Why Choose Altumind
             </p>
             <p className=" custom-gradient-text">
-              Powering Intelligent Transformation
+              {/* Powering Intelligent Transformation */}
+              Results-Driven Automation Consulting Services
             </p>
           </div>
           <WhyAltumind />

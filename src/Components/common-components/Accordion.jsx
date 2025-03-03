@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Markdown from "react-markdown";
 
 const obj = {
   id: 1,
@@ -13,6 +14,12 @@ const obj = {
 
 const Accordion = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false)
+  },[location.pathname])
 
   return (
     <div className="border-b border-gray-300 py-4">
@@ -65,8 +72,9 @@ const Accordion = ({ content }) => {
           
         </div> */}
         <div className="px-4 py-2 flex flex-col gap-2 text-sm">
-          <p>{content?.attributes?.description ?? content?.attributes?.answer}</p>
-          
+         
+          <p> <Markdown className="markdown">{content?.attributes?.description ?? content?.attributes?.answer}</Markdown></p>  
+       
           {content?.attributes?.cta && 
           <Link to={content?.attributes?.path} className="group text-secondary font-medium flex items-center gap-1 font-montserrat w-fit">
               <span className="group-hover:underline underline-offset-1">{content?.attributes?.cta}</span>
@@ -75,6 +83,7 @@ const Accordion = ({ content }) => {
               </svg>
           </Link>
           }
+           
         </div>
       </motion.div>
     </div>

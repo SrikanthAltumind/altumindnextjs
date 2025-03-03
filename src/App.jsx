@@ -1,87 +1,84 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-  useLocation,
-} from "react-router-dom";
-import Home from "./pages/Home";
+import { RouterProvider, createBrowserRouter,} from "react-router-dom";
+import { lazy, Suspense } from "react";
 import { AppLayout } from "./Layouts/AppLayout";
-import Contact from "./pages/Contact";
-import Industry from "./pages/Industry";
-import BFSIAndFinance from "./pages/BFSIAndFinance";
-import Portfolio from "./pages/Portfolio";
-import Career from "./pages/Career";
-import OpenRoles from "./pages/OpenRoles";
-import CommunityEngagement from "./pages/CommunityEngagement";
-import LifeAtAltumind from "./pages/LifeAtAltumind";
-import Alliance from "./pages/Alliance";
-import ExperienceDesign from "./pages/ExperienceDesign";
-import AIandAutomation from "./pages/AIandAutomation";
-import QAandTesting from "./pages/QAandTesting";
-import DigitalMarketingServices from "./pages/DigitalMarketingServices";
-import TechnologyAndEngineering from "./pages/TechnologyAndEngineering";
-import DataAnalytics from "./pages/DataAnalytics";
-import ManagedOperations from "./pages/ManagedOperations";
-import Services from "./pages/Services";
-import DigitalStrategy from "./pages/DigitalStrategy";
-import CloudServices from "./pages/CloudServices";
-import MissionAndVision from "./pages/MissionAndVision";
-import Leadership from "./pages/Leadership";
-import AboutUs from "./pages/AboutUs";
+
 import Error404 from "./pages/Error404";
-// import DigitalCommerce from "./pages/DigitalCommerce";
-import Privacy from "./pages/Privacy";
-import Insights from "./pages/Insights";
+const Home = lazy(() => import("./pages/Home"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Insights = lazy(() => import("./pages/Insights"));
+const Terms = lazy(() => import("./pages/Terms"));
+const CustomWebDev = lazy(() => import("./pages/CustomWebDev"));
+const SuccessStory = lazy(() => import("./pages/SuccessStory"));
+const Blogs = lazy(() => import("./pages/Blogs"));
+const IndividualBlogPage = lazy(() => import("./pages/IndividualBlogPage"));
+const Agiliti = lazy(() => import("./pages/Agiliti"));
+// Industry Routes
+const Industry = lazy(() => import("./pages/Industry"));
+const BFSIAndFinance = lazy(() => import("./pages/BFSIAndFinance"));
+// career Routes
+const Career = lazy(() => import("./pages/Career"));
+const OpenRoles = lazy(() => import("./pages/OpenRoles"));
+const LifeAtAltumind = lazy(() => import("./pages/LifeAtAltumind"));
+const JobDetails = lazy(() => import("./pages/JobDetails"));
+const ApplyNow = lazy(() => import("./pages/ApplyNow"));
+// About Routes
+const CommunityEngagement = lazy(() => import("./pages/CommunityEngagement"));
+const Alliance = lazy(() => import("./pages/Alliance"));
+const MissionAndVision = lazy(() => import("./pages/MissionAndVision"));
+const Leadership = lazy(() => import("./pages/Leadership"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+// services Routes
+const ExperienceDesign = lazy(() => import("./pages/ExperienceDesign"));
+const AIandAutomation = lazy(() => import("./pages/AIandAutomation"));
+const QAandTesting = lazy(() => import("./pages/QAandTesting"));
+const DigitalMarketingServices = lazy(() => import("./pages/DigitalMarketingServices"));
+const TechnologyAndEngineering = lazy(() => import("./pages/TechnologyAndEngineering"));
+const DataAnalytics = lazy(() => import("./pages/DataAnalytics"));
+const ManagedOperations = lazy(() => import("./pages/ManagedOperations"));
+const Services = lazy(() => import("./pages/Services"));
+const DigitalStrategy = lazy(() => import("./pages/DigitalStrategy"));
+const CloudServices = lazy(() => import("./pages/CloudServices"));
+const UIUXCXDesign = lazy(() => import("./pages/UIUXCXDesign"));
+const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
+const MobileAppDevelopment = lazy(() => import("./pages/MobileAppDevelopment"));
+const ERPIntegration = lazy(() => import("./pages/ERPIntegration"));
+const EcommerceServices = lazy(() => import("./pages/EcommerceServices"));
+const CloudMigration = lazy(() => import("./pages/CloudMigration"));
+const CloudApp = lazy(() => import("./pages/CloudApp"));
+const MarketingOptimization = lazy(() => import("./pages/MarketingOptimization"));
+const MarketingIntelligence = lazy(() => import("./pages/MarketingIntelligence"));
+const BusinessIntelligence = lazy(() => import("./pages/BusinessIntelligence"));
+const Customer360 = lazy(() => import("./pages/Customer360"));
+const DigitalIntelligence = lazy(() => import("./pages/DigitalIntelligence"));
+const SalesIntelligence = lazy(() => import("./pages/SalesIntelligence"));
+const DigitalProductInnovation = lazy(() => import("./pages/DigitalProductInnovation"));
+const WebsiteOperationsManagement = lazy(() => import("./pages/WebsiteOperationsManagement"));
+const CloudManagement = lazy(() => import("./pages/CloudManagement"));
+const SoftwareMaintenanceSupport = lazy(() => import("./pages/SoftwareMaintenanceSupport"));
+const BrandingAndDesign = lazy(() => import("./pages/BrandingAndDesign"));
+const MarketingServices = lazy(() => import("./pages/MarketingServices"));
+const AIAndChatBotServices = lazy(() => import("./pages/AIAndChatBotServices"));
+const RPAServices = lazy(() => import("./pages/RPAServices"));
+const AutomationTesting = lazy(() => import("./pages/AutomationTesting"));
+const SecurityTesting = lazy(() => import("./pages/SecurityTesting"));
+const PerformanceTesting = lazy(() => import("./pages/PerformanceTesting"));
+const QAConsultingService = lazy(() => import("./pages/QAConsultingService"));
+const DigitalExperienceEngagement = lazy(() => import("./pages/DigitalExperienceEngagement"));
+const DigitalModernization = lazy(() => import("./pages/DigitalModernization"));
+const DigitalAudit = lazy(() => import("./pages/DigitalAudit"));
+const IncubationOfNewProducts = lazy(() => import("./pages/IncubationOfNewProducts"));
+const DigitalBuild = lazy(() => import("./pages/DigitalBuild"));
+const FunctionalTesting = lazy(() => import("./pages/FunctionalTesting"));
+// extra
 import Testing from "./pages/Testing";
 import WIP from "./pages/WIP";
-import { useEffect } from "react";
-import Terms from "./pages/Terms";
-import SuccessStory from "./pages/SuccessStory";
-import Blogs from "./pages/Blogs";
-import IndividualBlogPage from "./pages/IndividualBlogPage";
-import JobDetails from "./pages/JobDetails";
-import Agiliti from "./pages/Agiliti";
-import CustomWebDev from "./pages/CustomWebDev";
-import UIUXCXDesign from "./pages/UIUXCXDesign";
-import WebDevelopment from "./pages/WebDevelopment";
-import MobileAppDevelopment from "./pages/MobileAppDevelopment";
-import ERPIntegration from "./pages/ERPIntegration";
-import EcommerceServices from "./pages/EcommerceServices";
-import CloudMigration from "./pages/CloudMigration";
-import CloudApp from "./pages/CloudApp";
-import MarketingOptimization from "./pages/MarketingOptimization";
-import MarketingIntelligence from "./pages/MarketingIntelligence";
-import BusinessIntelligence from "./pages/BusinessIntelligence";
-import Customer360 from "./pages/Customer360";
-import DigitalIntelligence from "./pages/DigitalIntelligence";
-import SalesIntelligence from "./pages/SalesIntelligence";
-import DigitalProductInnovation from "./pages/DigitalProductInnovation";
-import WebsiteOperationsManagement from "./pages/WebsiteOperationsManagement";
-import CloudManagement from "./pages/CloudManagement";
-import SoftwareMaintenanceSupport from "./pages/SoftwareMaintenanceSupport";
-import BrandingAndDesign from "./pages/BrandingAndDesign";
-import MarketingServices from "./pages/MarketingServices";
-import AIAndChatBotServices from "./pages/AIAndChatBotServices";
-import RPAServices from "./pages/RPAServices";
-import AutomationTesting from "./pages/AutomationTesting";
-import SecurityTesting from "./pages/SecurityTesting";
-import PerformanceTesting from "./pages/PerformanceTesting";
-import QAConsultingService from "./pages/QAConsultingService";
-import DigitalExperienceEngagement from "./pages/DigitalExperienceEngagement";
-import DigitalModernization from "./pages/DigitalModernization";
-import DigitalAudit from "./pages/DigitalAudit";
-import IncubationOfNewProducts from "./pages/IncubationOfNewProducts";
-import DigitalBuild from "./pages/DigitalBuild";
-import FunctionalTesting from "./pages/FunctionalTesting";
+import Loader from "./Components/common-components/Loader";
+import JobDetailsUpdated from "./pages/JobDetailsUpdated";
+import JobApplicationForm from "./pages/JobApplicationForm";
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
+// import DigitalCommerce from "./pages/DigitalCommerce";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -155,8 +152,10 @@ export const routes = [
   { path: "/portfolio/united-finance", element: <SuccessStory /> },
   { path: "/portfolio/enphase", element: <SuccessStory /> },
   { path: "/portfolio/:storyId", element: <SuccessStory /> }, // Dynamic route
-  { path: "/jobs/:jobId/:jobName", element: <JobDetails /> }, // Dynamic route
+  { path: "/jobs/:jobId/:jobName", element: <JobDetailsUpdated /> }, // Dynamic route
+  { path: "/jobs/:jobName/ApplyNow", element: <JobApplicationForm/> }, // Dynamic route
   { path: "/insights/blogs", element: <Blogs /> },
+  { path: "/callback", element: <Blogs /> },
   { path: "/insights/blog/:id/:blogName", element: <IndividualBlogPage /> }, // Dynamic route
   // not allowed to index
   { path: "*", element: <Error404 /> }
@@ -167,8 +166,10 @@ const router = createBrowserRouter([
   {
     element: (
       <>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
+        <Suspense fallback={<Loader/>}>
         <AppLayout />
+        </Suspense>
       </>
     ),
     
@@ -535,7 +536,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  console.log("updated on: 3/10/24 ZRFF");
   return <RouterProvider router={router} />;
 }
 

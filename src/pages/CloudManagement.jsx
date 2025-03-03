@@ -76,8 +76,11 @@ const CloudManagement = () => {
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='w-[90%] mx-auto font-raleway'>
                 <div className='text-center mb-20 space-y-3 max-w-[750px] mx-auto'>
-                    <p className='custom-sub-heading'>Why Choose Us?</p>
-                    <p className='custom-gradient-text'>Your Strategic Partner for Cloud Excellence</p>
+                    <p className='custom-sub-heading'>Why Choose Altumind</p>
+                    <h2 className='custom-gradient-text'>
+                      {/* Your Strategic Partner for Cloud Excellence */}
+                      Your Trusted Cloud Management Company for Seamless Solutions
+                      </h2>
                 </div>
                 <WhyChooseUs/>
             </div>

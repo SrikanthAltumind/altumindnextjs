@@ -414,6 +414,8 @@ const Navbar = () => {
         <img
           src={theme === "dark" ? AltumindDark : logo}
           alt="altumind"
+          height={"100%"}
+          width={"100%"}
           className="sm:w-[180px] w-[150px] cursor-pointer"
           onClick={() => {
             setShowMobileMenu(false);

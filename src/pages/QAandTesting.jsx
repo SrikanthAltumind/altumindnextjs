@@ -87,11 +87,12 @@ const QAandTesting = () => {
         >
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+            Why Choose Altumind
             </p>
-            <p className=" custom-gradient-text">
-              Your Gateway to Impeccable Quality Assurance
-            </p>
+            <h2 className=" custom-gradient-text max-w-[700px]">
+              {/* Your Gateway to Impeccable Quality Assurance */}
+              Drive Precision with Quality Assurance Consulting Services
+            </h2>
           </div>
           <WhyAltumind />
         </section>

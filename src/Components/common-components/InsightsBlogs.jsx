@@ -11,6 +11,7 @@ const InsightsBlogs = () => {
         axios.get(url)
         .then(response=> {
             setData(response?.data)
+            console.log(data, 'insights')
         })
         .catch((err) => {
             console.log('Error While Fetching Resources',err)
@@ -45,8 +46,9 @@ const InsightsBlogs = () => {
                 <div className=" w-[270px] h-[180px] sm:w-full  max-w-[280px] md:h-[220px] rounded-xl overflow-hidden">
                   <img
                     src={card?.attributes?.image?.data?.attributes?.url}
-                    alt={card?.tag}
+                    alt={card?.attributes?.image?.data?.attributes?.alternativeText || card?.attributes?.title }
                     className="h-full w-full hover:scale-105 transition-all object-fit"
+                    loading='lazy'
                   />
                 </div>
                 <p className="text-xs px-2 lg:text-sm font-medium">

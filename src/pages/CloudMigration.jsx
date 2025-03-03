@@ -76,8 +76,11 @@ const CloudMigration = () => {
           <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='w-[90%] mx-auto font-raleway'>
                 <div className='text-center mb-20 space-y-3 max-w-[750px] mx-auto'>
-                    <p className='custom-sub-heading'>Why Choose Us?</p>
-                    <p className='custom-gradient-text'>Your Trusted Cloud Migration Partner</p>
+                    <p className='custom-sub-heading'>Why Choose Altumind</p>
+                    <h2 className='custom-gradient-text'>
+                      {/* Your Trusted Cloud Migration Partner */}
+                      Navigate Your Cloud Journey with Cloud Migration Service Provider
+                      </h2>
                 </div>
                 <WhyChooseUs/>
             </div>

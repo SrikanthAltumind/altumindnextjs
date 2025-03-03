@@ -49,13 +49,19 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
 
+
+  const ddListRef = useRef()
+  const ddButtonRef = useRef()
+
   const handleSelection = (item) => {
-    if (selection === item) {
-      onSelectionChange(ddName, "");
-    } else {
-      onSelectionChange(ddName, item);
-    }
-    setIsOpen(false);
+    // if (selection === item) {
+    //   onSelectionChange(ddName, "");
+    // } else {
+    //   onSelectionChange(ddName, item);
+    // }
+    // setIsOpen(false);
+    onSelectionChange(ddName, item.id);
+  
   };
 
   useEffect(() => {
@@ -63,9 +69,26 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
     
   }, [data]);
 
+  const handleOutSideClick = (e) => {
+    if(ddButtonRef.current.contains(e.target)){
+        return
+    }
+    if (isOpen && ddListRef.current && !ddListRef.current.contains(e.target)) {
+        setIsOpen(false);
+    }
+};
+  useEffect(() => {
+      document.addEventListener("click", handleOutSideClick);
+  
+    return () => {
+      document.removeEventListener("click", handleOutSideClick);
+    };
+  }, [isOpen]);
+
   return (
     <nav className="menu" ref={scope} key={ddName + "insights"}>
       <motion.button
+      ref={ddButtonRef}
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
         className="flex gap-3 items-center justify-between p-2 w-[200px] border border-gray-300 rounded-md"
@@ -83,6 +106,7 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
         </div>
       </motion.button>
       <ul
+      ref={ddListRef}
         style={{
           pointerEvents: isOpen ? "auto" : "none",
           clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -91,21 +115,25 @@ const Dropdown = ({ ddName, data, selection, onSelectionChange }) => {
       >
         {data?.map((item, index) => (
           <li
-            className="flex justify-start gap-3 w-full text-sm font-medium"
+            className="cursor-pointer flex justify-start gap-3 w-full text-sm font-medium"
             key={index}
+            onClick={() => handleSelection(item)}
           >
             <input
               type="checkbox"
-              name={item?.attributes?.typeName + "cb"}
-              id={item?.attributes?.typeName + "cb"}
-              checked={selection === item}
-              onChange={() => handleSelection(item)}
+              // name={item?.attributes?.typeName + "cb"}
+              // id={item?.attributes?.typeName + "cb"}
+              name={item?.id}
+              id={item?.id}
+              checked={selection.includes(item?.id)}
+            //   onChange={() => handleSelection(item)}
             />
             <label
-              className="dark:text-black"
-              htmlFor={item?.attributes?.typeName ?? item + "cb"}
+              className="cursor-pointer dark:text-black"
+              // htmlFor={item?.attributes?.typeName ?? item + "cb"}
+              htmlFor={item?.id}
             >
-              {item}
+              {item?.name}
             </label>
           </li>
         ))}

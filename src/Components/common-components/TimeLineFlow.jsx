@@ -100,7 +100,7 @@ if(loading){
                         <div className={`${data.length===5 ? 'lg:w-[80px] lg:h-[80px]' : data.length<=4 ?'lg:w-[90px] lg:h-[90px]' : 'lg:w-[70px] lg:h-[70px] '} w-16 h-16 shrink-0 rounded-full p-1 bg-white shadow-custom-shadow p- flex justify-center items-center`}>
                             <div className='w-full h-full rounded-full flex justify-center items-center'
                                 style={{backgroundColor:item?.attributes?.bgClr}} >
-                                <img className='w-[70%]'
+                                <img className='w-[55%]'
                                 src={item?.attributes?.icon?.data?.attributes?.url} 
                                 alt={item?.attributes?.icon?.data?.attributes?.name} />
                             </div>

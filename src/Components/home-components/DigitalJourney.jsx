@@ -32,7 +32,7 @@ const DigitalJourney = () => {
             Human-Centric Services
           </span>
         </p> */}
-        <p className='custom-gradient-text px-5 sm:px-0 md:max-w-[70%]'>Empowering Digital Journeys Through Human-Centric Services</p>
+        <h2 className='custom-gradient-text px-5 sm:px-0 md:max-w-[70%]'>Empowering Digital Integration Through Human-Centric Services</h2>
       </div>
       <div className="overflow-hidden w-full relative min-h-fit py-3">
         <ScrollingCards scrollData={scrollData} />

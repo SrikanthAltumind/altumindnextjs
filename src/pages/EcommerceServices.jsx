@@ -85,8 +85,12 @@ const EcommerceServices = () => {
         <div className='bg-LightBlue dark:bg-DarkBackground dark:text-white py-10'>
             <div className='font-raleway'>
                 <div className='text-center mb-10'>
-                    <p className='custom-sub-heading'>Why Choose Us?</p>
-                    <p className='custom-gradient-text'>Your Trusted E-commerce <br/> Development Partner</p>
+                    <p className='custom-sub-heading'>Why Choose Altumind</p>
+                    <p className='custom-gradient-text max-w-[700px]'>
+                      {/* Your Trusted E-commerce <br/> Development Partner */}
+                      Scale Impact Through Omnicommerce Innovation
+                    </p>
+
                 </div>
                 <WhyChooseUs/>
             </div>

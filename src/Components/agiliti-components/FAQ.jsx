@@ -12,7 +12,7 @@ const erpFAQData = [
   "title": "What ERP systems do you integrate with?",
   "description": "We have extensive experience integrating with all major ERP systems, including SAP, Oracle, NetSuite, Microsoft Dynamics 365, and more. Our solutions are also compatible with industry-specific ERPs and custom-built systems. Don't see your ERP listed? Talk to our experts to discuss your specific needs!",
   "cta":'Schedule a Call',
-  "path":'Navigation_Path'
+  "path":'/contact'
 }
   },
   {
@@ -28,7 +28,7 @@ const erpFAQData = [
   "title": "How long does the integration process take?",
   "description": "The integration timeline depends on factors like the complexity of your ERP system, the number of integrations required, and your specific customization needs. Our agile approach ensures efficient project management and timely delivery. Get a personalized timeline and project plan!",
   "cta":'Get a Free Quote',
-  "path":'Navigation_Path'
+  "path":'/contact'
   }
   },
   {
@@ -37,7 +37,7 @@ const erpFAQData = [
   "title": "Is my data secure during the integration process?",
   "description": "Absolutely, we adhere to the highest security standards to protect your sensitive data. We use secure protocols, encryption, and access controls to ensure data integrity and confidentiality throughout the integration process. Have security concerns? We're happy to answer your questions.",
   "cta":'Talk to an Expert',
-  "path":'Navigation_Path'
+  "path":'/contact'
  }
   },
   {

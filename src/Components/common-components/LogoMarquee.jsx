@@ -57,6 +57,9 @@ const LogoMarquee = () => {
               <img
                 src={item.attributes.image?.data?.attributes?.url}
                 alt={item.attributes.image?.data?.attributes?.name}
+                loading='lazy'
+                height={"100%"}
+                width={"100%"}
                 className="max-w-[250px] h-[60px] object-contain grayscale hover:grayscale-0"
               />
             </div>

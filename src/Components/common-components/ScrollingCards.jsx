@@ -39,6 +39,7 @@ const Card = ({ content, navigate }) => {
           className="w-[170px] h-[160px] object-contain"
           height="100%"
           width="100%"
+          loading="lazy"
         />
       )}
     </div>

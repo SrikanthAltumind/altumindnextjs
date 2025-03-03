@@ -79,6 +79,7 @@ const Testimonials = () => {
                     className=" h-full w-full object-cover rounded-full"
                     src={item?.attributes?.image?.data?.attributes?.url}
                     alt={item?.attributes?.name}
+                    loading="lazy"
                   />
                   <svg
                     className="absolute bottom-1 right-2 bg-white drop-shadow-md rounded-full w-12 h-12 text-[#E42D38] p-3"

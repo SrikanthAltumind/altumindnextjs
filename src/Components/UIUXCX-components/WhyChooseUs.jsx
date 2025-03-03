@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
       else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
           apiUrl = "api/service-dsc-dee-choose-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
-          apiUrl = "api/service-dsc-dm-choose-contents?populate=*"
+          apiUrl = "api/service-dsc-dm-choose-sections?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
           apiUrl = "api/service-dsc-da-choose-contents?populate=*"
       else if(location.pathname === "/services/digital-strategy-consulting/digital-build")

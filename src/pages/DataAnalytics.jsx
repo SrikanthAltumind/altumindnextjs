@@ -76,11 +76,12 @@ const DataAnalytics = () => {
         <section id="section3" className="bg-[#F3F9FF] py-8">
           <div className="text-center font-raleway space-y-3 mb-10">
             <p className="custom-sub-heading">
-              Why Altumind Stands Out
+            Why Choose Altumind
             </p>
-            <p className=" custom-gradient-text">
-              Turning Data into Your Competitive Edge
-            </p>
+            <h2 className=" custom-gradient-text max-w-[700px]">
+              {/* Turning Data into Your Competitive Edge */}
+              Get Deep Insights with Data Analytics Consulting Services
+            </h2>
           </div>
           <WhyAltumind />
         </section>
