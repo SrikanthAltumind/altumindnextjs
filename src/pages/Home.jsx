@@ -60,12 +60,12 @@ const Home = () => {
     "https://x.com/altumind"
   ]}`}
    </script>
-   {/* <link 
+   <link 
           rel="preload" 
           as="image" 
           href="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_Desktop_Compressify_io_75ff825852.webp" 
           type="image/webp"
-        /> */}
+        />
   </Helmet>
     <div className="dark:bg-darkTheme dark:text-white font-raleway lg:space-y-24 space-y-24 w-full">
       <HomeBannerUpdated />

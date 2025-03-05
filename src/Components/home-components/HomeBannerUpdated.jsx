@@ -5,6 +5,7 @@ import desktop from '../../assets/desktop.webp'
 import mobile from '../../assets/mobile.webp'
 
 
+
 const words = ["Design", "Development", "Marketing"];
 
 const HomeBannerUpdated = () => {
@@ -13,6 +14,7 @@ const HomeBannerUpdated = () => {
   const [displayedWord, setDisplayedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  // const typingSpeed = isDeleting ? 75 : 150; // Faster deleting speed
 
   useEffect(() => {
     const currentWord = words[currentWordIndex]; 
@@ -76,8 +78,8 @@ const HomeBannerUpdated = () => {
           // className="object-contain lg:h-[650px] lg:w-[750px] md:h-[400px] h-[320px] w-[340px] "
           className='max-h-[300px] lg:max-h-[400px] h-full mx-auto object-contain'
           loading='eager'
-          height={"366"}
-          width={"536"}
+          height="100%"
+          width="100%"
         />
           </picture>
       </div>

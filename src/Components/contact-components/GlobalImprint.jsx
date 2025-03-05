@@ -1,9 +1,9 @@
 import Counter from '../common-components/Counter'
-import crownIcon from '../../assets/Crown.png'
-import clientManagementIcon from '../../assets/Client Management.png'
-import innovationIcon from '../../assets/Innovation.png'
-import itIcon from '../../assets/It.png'
-import countryIcon from '../../assets/Country.png'
+import crownIcon from '../../assets/Crown.webp'
+import clientManagementIcon from '../../assets/Client Management.webp'
+import innovationIcon from '../../assets/Innovation.webp'
+import itIcon from '../../assets/It.webp'
+import countryIcon from '../../assets/Country.webp'
 
 const ourGlobalImprintsData = [
     {id:'years', title:'Years in digital transformation', value:8, suffix:'+', countSpeed:200, imagePath:crownIcon},
@@ -22,7 +22,7 @@ const GlobalImprint = () => {
             <div className='mt-10 flex flex-wrap gap-10 justify-center'>
               {ourGlobalImprintsData?.map(stat=> (
                 <div key={stat.id} className='bg-LightBlue dark:bg-DarkBackground rounded-xl py-4 px-3 flex flex-col items-center gap-y-2 w-[155px]'>
-                   <img className='w-10 h-10 object-contain mb-1 dark:invert' src={stat.imagePath} alt={stat.title}/>
+                   <img loading="lazy" className='w-10 h-10 object-contain mb-1 dark:invert' src={stat.imagePath} alt={stat.title}/>
                    <p className='text-[#213560] dark:text-white font-medium text-3xl'>
                     <Counter value={stat.value} countSpeed={stat.countSpeed}/>
                     <span>{stat.suffix}</span>

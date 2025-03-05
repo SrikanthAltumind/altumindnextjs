@@ -115,7 +115,7 @@ const AIAndChatBotServices = () => {
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Powering Digital Innovation Across Sectors</p>
                   </div>
-                  <p className='text-xs md:text-sm font-medium'>We deliver intelligent AI solutions that revolutionize customer interactions in diverse industries.</p>
+                  <p className='text-xs md:text-sm font-medium'>Our chatbot development services focus on delivering intelligent AI solutions that revolutionize customer interactions in diverse industries.</p>
                 </div>
                 <IndustriesSlider/>
           </div>
