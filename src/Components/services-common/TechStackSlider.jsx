@@ -35,11 +35,14 @@ let uniqueQueryKey
   else if(location.pathname === "/digital-development-services/mobile-app-design-development/android-application-development-services"){
       apiUrl = "/api/service-and-stack-contents?populate=*"
       uniqueQueryKey= "android-application-development-services"}
+  else if(location.pathname === "/digital-development-services/mobile-app-design-development/hybrid-app-development-services"){
+        apiUrl = "/api/service-had-stack-contents?populate=*"
+        uniqueQueryKey= "hybrid-app-development-services"}
   else {
     apiUrl = 'API_END_POINT' //replace api end point
     uniqueQueryKey = "common"
   }
-
+ 
    const {data, isLoading, isError, error} = useFetchData(['techStackSlider', uniqueQueryKey], apiUrl, !uniqueQueryKey === "common")
    const stackData = data?.data?.data || techStack
 

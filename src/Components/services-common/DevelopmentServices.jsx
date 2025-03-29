@@ -74,7 +74,7 @@ const DevelopmentServices = () => {
          else if(location.pathname === "/digital-development-services/mobile-app-design-development/android-application-development-services")
           apiUrl = "/api/service-and-service-contents?populate=*"
          else if(location.pathname === "/digital-development-services/mobile-app-design-development/hybrid-app-development-services")
-          apiUrl = "ADD_API_URL_END_POINT"
+          apiUrl = "/api/service-had-service-contents?populate=*"
           else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services")
           apiUrl = "ADD_API_URL_END_POINT"
           else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services")

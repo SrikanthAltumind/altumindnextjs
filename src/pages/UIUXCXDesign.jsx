@@ -33,31 +33,33 @@ const sectionsMenu = [
 ]
 
 const processHeaderData = {
-  'ui-design':{title:'Our UI Design Process', heading:'Designing the Future of Your Business'},
-  'ux-design':{title:'Our UX Design Process', heading:'Integrating Art, Technology & Strategy for Exceptional Results'},
+  'ui-design-services':{title:'Our UI Design Process', heading:'Designing the Future of Your Business'},
+  'ux-design-services':{title:'Our UX Design Process', heading:'Integrating Art, Technology & Strategy for Exceptional Results'},
   'cx-design':{title:'Our CX Design Process', heading:'Life Centric Approach to Customer Experience'}
 }
 const designServicesHeaderData = {
-  'ui-design':{title:'Our UI Design Services', heading:'Smart UI Design that Builds Powerful Brand Experiences'},
-  'ux-design':{title:'Our UX Design Services', heading:'Empowering Enterprise Efficiency Through Intelligent UX Solutions'},
+  'ui-design-services':{title:'Our UI Design Services', heading:'Smart UI Design that Builds Powerful Brand Experiences'},
+  'ux-design-services':{title:'Our UX Design Services', heading:'Empowering Enterprise Efficiency Through Intelligent UX Solutions'},
   'cx-design':{title:'CX Design Services', heading:'Making Customer Experience Your Competitive Edge'}
 }
 const WhychooseUsHeaderData = {
-  'ui-design':{title:'Why Choose Altumind', heading:'Partner with the Best UI Design Company for Innovation and Growth'},
-  'ux-design':{title:'Why Choose Altumind', heading:'Elevate Experiences with an Expert UX Design Consultant'},
+  'ui-design-services':{title:'Why Choose Altumind', heading:'The Best UI Design Company as Your Partner in Strategic Design Evolution'},
+  'ux-design-services':{title:'Why Choose Altumind', heading:'Elevate Experiences with an Expert UX Design Consultant'},
   'cx-design':{title:'Why Choose Altumind', heading:'Transform Engagement ThroughDigital Customer Experience Strategy'}
 }
 const benefitsHeaderData = {
-  'ui-design':{title:'Benefits', heading:'Setting you Up for Success'},
-  'ux-design':{title:'Benefits', heading:'Setting you Up for Success'},
+  'ui-design-services':{title:'Benefits', heading:'Setting you Up for Success'},
+  'ux-design-services':{title:'Benefits', heading:'Setting you Up for Success'},
   'cx-design':{title:'Benefits', heading:'Transforming Customer Experience into Business Value'}
 }
 const insightsHeaderData = {
-  'ui-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
-  'ux-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
+  'ui-design-services':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
+  'ux-design-services':{title:'Insights', heading:'Dive into Our Latest Perspectives'},
   'cx-design':{title:'Insights', heading:'Dive into Our Latest Perspectives'}
 }
-const pageIds = ['ui-design', 'ux-design', 'cx-design']
+
+//change these ids if url needs to be changed.
+const pageIds = ['ui-design-services', 'ux-design-services', 'cx-design']
 
 const UIUXCXDesign = () => {
   const {id} = useParams()
