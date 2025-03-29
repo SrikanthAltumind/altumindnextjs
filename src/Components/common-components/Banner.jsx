@@ -1,12 +1,14 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import LoaderSpinner from "../common-components/LoaderSpinner";
+import useFetchData from "../../CustomHooks/useFetchData";
 
 const Banner = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
   const location = useLocation();
   let apiUrl;
@@ -16,25 +18,25 @@ const Banner = () => {
   else if (location.pathname === "/about/about-altumind/community-engagement")
     apiUrl = "api/community-management-banner?populate=*";
   else if (location.pathname === "/alliance") apiUrl = "api/alliance-banner?populate=*";
-  else if (location.pathname === "/services/experience-design")
+  else if (location.pathname === "/services/experience-design-services")
     apiUrl = "api/service-exp-design-banner?populate=*";
-  else if (location.pathname === "/services/ai-automation")
+  else if (location.pathname === "/services/ai-services")
     apiUrl = "api/service-ai-automation-banner?populate=*";
-  else if (location.pathname === "/services/quality-assurance")
+  else if (location.pathname === "/services/quality-assurance-services")
     apiUrl = "api/service-qa-testing-banner?populate=*";
-  else if (location.pathname === "/services/digital-marketing")
+  else if (location.pathname === "/services/digital-marketing-services")
     apiUrl = "api/service-digital-marketing-banner?populate=*";
-  else if (location.pathname === "/services/technology-and-engineering")
+  else if (location.pathname === "/services/digital-development-services")
     apiUrl = "api/service-tech-engg-banner?populate=*";
-  else if (location.pathname === "/services/data-analytics")
+  else if (location.pathname === "/services/data-analytics-services")
     apiUrl = "api/service-data-analytics-banner?populate=*";
-  else if (location.pathname === "/services/managed-operations")
+  else if (location.pathname === "/services/operations-managed-services")
     apiUrl = "api/service-managed-operation-banner?populate=*";
   else if (location.pathname === "/services")
     apiUrl = "api/service-root-overview?populate=*";
-  else if (location.pathname === "/services/digital-strategy-consulting")
+  else if (location.pathname === "/services/digital-strategy-services")
     apiUrl = "api/service-digital-strategy-consulting-banner?populate=*";
-  else if (location.pathname === "/services/cloud")
+  else if (location.pathname === "/services/cloud-strategy-engineering-services")
     apiUrl = "api/service-cloud-banner?populate=*";
   else if (location.pathname === "/about/about-altumind/alliance")
     apiUrl = "api/alliance-banner?populate=*";
@@ -52,39 +54,43 @@ const Banner = () => {
  else if(location.pathname === "/agiliti-hire-dedicated-developers")
   apiUrl = "/api/agiliti-root-banner?populate=*"
 
+
+ const {data, isLoading, isError, error} = useFetchData(['banner', location.pathname], apiUrl)
+ const bannerData = data?.data?.data?.attributes || []
+
  const scrollToForm = () => {
   const agilitiForm = document.getElementById("agiliti-form")
   agilitiForm.scrollIntoView({ behavior: "smooth" });
 };
 
-  const fetchData = () => {
-    const url = import.meta.env.VITE_APP_API_URL + apiUrl;
-    axios
-      .get(url)
-      .then((res) => {
-        setData(res?.data?.data?.attributes);
+  // const fetchData = () => {
+  //   const url = import.meta.env.VITE_APP_API_URL + apiUrl;
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       setData(res?.data?.data?.attributes);
         
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch data:", err);
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-      });
-  };
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Failed to fetch data:", err);
+  //       setError("Failed to fetch data. Please try again later.");
+  //       setLoading(false);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  if (loading) {
-    return <LoaderSpinner />;
+  if (isLoading) {
+    return <LoaderSpinner/>;
   }
 
-  if (error) {
+  if (isError) {
     return (
       <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-        {error}
+        {error.message}
       </div>
     );
   }
@@ -126,12 +132,12 @@ const Banner = () => {
       
        <div className="max-md:px-5 flex flex-col gap-3">
       <h1 className='max-w-[600px] custom-gradient-text mx-0'>
-      {data?.title} 
+      {bannerData?.title} 
       </h1>
-      <p className='max-w-[420px] mx-0 text-sm md:text-base  text-black font-medium'> {data?.description}</p>
+      <p className='max-w-[420px] mx-0 text-sm md:text-base  text-black font-medium'> {bannerData?.description}</p>
       {location.pathname === "/services" && (
         
-        <a href="/contact" className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
+        <a href="/contact" aria-label="Go to contact page" className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
           Get Started
           <svg
             className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
@@ -163,10 +169,11 @@ const Banner = () => {
       </div>
    
       <div>
-        <img className="lg:h-[260px] h-[230px] mx-auto" src={data?.image?.data?.attributes?.url} alt={data?.image?.data?.attributes?.alternativeText} />
+        <img loading="lazy" className="lg:h-[260px] h-[230px] mx-auto" src={bannerData?.image?.data?.attributes?.url} alt={bannerData?.image?.data?.attributes?.alternativeText} />
       </div>
     </div>
   );
 };
 
 export default Banner;
+

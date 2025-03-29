@@ -104,7 +104,7 @@ const AutomationTesting = () => {
                       <p className='custom-sub-heading'>Industry Expertise</p>
                       <p className='custom-gradient-text'>Precision Testing for Diverse Industry Landscapes</p>
                     </div>
-                    <p className='text-xs md:text-sm font-medium'>Leveraging domain-specific testing frameworks and deep compliance expertise to deliver industry-tailored automation testing solutions.</p>
+                    <p className='text-xs md:text-sm font-medium'>Leveraging domain-specific testing frameworks and deep compliance expertise to deliver industry-tailored automation testing services.</p>
                   </div>
                   <IndustriesSlider/>
             </div>

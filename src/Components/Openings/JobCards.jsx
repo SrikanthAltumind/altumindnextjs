@@ -71,7 +71,7 @@ const JobCards = ({jobData, jobOpeningsData}) => {
               <div
               onClick={() =>
                 navigate(
-                  `/jobs/${job?.Job_Opening_ID}/${convertToUrlFormat(job?.Job_Opening_Name)}`, {state: job}
+                  `/jobs/${job?.Job_Opening_ID}/${convertToUrlFormat(job?.Job_Opening_Name)}`,  {state: job.id}
                 )
               }
                 key={job?.Job_Opening_ID}
@@ -92,7 +92,7 @@ const JobCards = ({jobData, jobOpeningsData}) => {
                     <p className="lg:text-sm text-xs">
                       Remote 
                       </p> : <p className="lg:text-sm text-xs">
-                     {job?.city +","+ job?.country}
+                     {job?.City +", "+ job?.Country}
                       </p> 
                    }
                       ,{" "}

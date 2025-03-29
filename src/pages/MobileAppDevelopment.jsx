@@ -125,7 +125,7 @@ const MobileAppDevelopment = () => {
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Digital Disruption Across Industries</p>
                   </div>
-                  <p className='text-xs md:text-sm font-medium'>We specialize in crafting custom mobile app solutions tailored to the unique needs of businesses in key sectors, fueling innovation, profitability, and brand growth.</p>
+                  <p className='text-xs md:text-sm font-medium'>As a premier mobile app development consulting firm, We specialize in crafting custom mobile app design and development solutions tailored to the unique needs of businesses in key sectors, fueling innovation, profitability, and brand growth.</p>
                 </div>
                 <IndustriesSlider/>
           </div>

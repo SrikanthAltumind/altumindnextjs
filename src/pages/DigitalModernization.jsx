@@ -104,7 +104,7 @@ const DigitalModernization = () => {
             <div className='text-center space-y-3 mb-10 sm:mb-10'>
               <p className='custom-sub-heading'>Industry Expertise</p>
               <p className='custom-gradient-text'>Redefining Industries with Tailored Digital Modernization Services</p>
-              <p className='text-[13px] mb-5 font-medium'>Our Digital Modernization Services are designed to cater to the specific demands of diverse industries, enabling them to achieve operational excellence and future-ready technology landscapes.</p>
+              <p className='text-[13px] mb-5 font-medium'>Our Digital Modernization Services are designed to cater to the specific demands of diverse industries, enabling them to achieve operational excellence and future-ready technology landscapes. We&apos;ll help you stay ahead of the curve by modernizing technology-transform outdated systems, enhance efficiency, and future-proof your business with cutting-edge digital solutions.</p>
             </div>
           </div>
           <IndustriesSlider/>

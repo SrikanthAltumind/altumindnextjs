@@ -1,42 +1,56 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+
 
 const LifeandCareer = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
-  const fetchData = () => {
-    const url = `${
-      import.meta.env.VITE_APP_API_URL
-    }api/life-career-mains?populate=*`;
-    axios
-      .get(url)
-      .then((res) => {
-        setData(res?.data?.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch data:", err);
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-      });
-  };
+  const url = `${import.meta.env.VITE_APP_API_URL}api/life-career-mains?populate=*`;
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const {data, isLoading, isError, error} = useQuery({
+    queryKey: ["LifeCareer"],
+    queryFn: () => {
+      return  axios.get(url)
+    },
+    staleTime: 24 * 60 * 60* 1000
+  })
 
-  if (loading) {
+  console.log(data, 'query')
+
+  // const fetchData = () => {
+  //   const url = `${
+  //     import.meta.env.VITE_APP_API_URL
+  //   }api/life-career-mains?populate=*`;
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       setData(res?.data?.data);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Failed to fetch data:", err);
+  //       setError("Failed to fetch data. Please try again later.");
+  //       setLoading(false);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  if (isLoading) {
     return <LoaderSpinner />;
   }
 
-  if (error) {
+  if (isError) {
     return (
       <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-        {error}
+        {error.message}
       </div>
     );
   }
@@ -55,7 +69,7 @@ const LifeandCareer = () => {
       <p className="custom-gradient-text">Inspiring Minds, Transforming Tomorrow</p> 
       </div>
       <div className="flex justify-center md:flex-row flex-col gap-12 mb-10 mx-auto max-w-[1000px]">
-        {data?.map((item) => (
+        {data?.data?.data?.map((item) => (
           <div
             className="relative rounded-3xl overflow-hidden basis-[50%]"
             key={item.id}

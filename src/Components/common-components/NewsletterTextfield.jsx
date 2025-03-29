@@ -109,6 +109,7 @@ const NewsLetterTextfield = () => {
         <button
           type="submit"
           disabled={!formik.dirty || !formik.isValid || formik.isSubmitting}
+          aria-label="Submit"
         >
           {formik.isSubmitting ? (
             <svg

@@ -105,7 +105,7 @@ const SalesIntelligence = () => {
                   <div className='text-center space-y-3 mb-10 sm:mb-10'>
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Redefining Industries with Tailored Digital Modernization Services</p>
-                    <p className='text-[13px] mb-5 font-medium'>Our specialized Sales Intelligence services are crafted to meet the unique needs of various industries, providing businesses with real-time insights to enhance lead generation, personalize outreach, and close deals faster.</p>
+                    <p className='text-[13px] mb-5 font-medium'>Our specialized and automated sales intelligence services are crafted to meet the unique needs of various industries, providing businesses with real-time insights to enhance lead generation, personalize outreach, and close deals faster.</p>
                   </div>
                 </div>
                 <IndustriesSlider/>

@@ -50,7 +50,7 @@ const SoftwareMaintenanceSupport = () => {
         <section id='section2'>
             <div className='w-[90%] mx-auto font-raleway dark:text-white'>
               <div className='text-center mb-10 max-w-[750px] mx-auto'>
-                  <p className='custom-sub-heading'>Our Software Maintenance Services</p>
+                  <p className='custom-sub-heading'>Our Software Maintenance Support Services</p>
                   <p className='custom-gradient-text'>Maximizing Software ROI Through Strategic Maintenance</p>
               </div>
               <DevelopmentServices/>
@@ -104,7 +104,7 @@ const SoftwareMaintenanceSupport = () => {
                   <div className='text-center space-y-3 mb-10 sm:mb-10'>
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Delivering Excellence Across Sectors</p>
-                    <p className='text-[13px] mb-5 font-medium'>We provide strategic software maintenance services that ensure operational excellence across:</p>
+                    <p className='text-[13px] mb-5 font-medium'>We provide strategic software maintenance support services that ensure operational excellence across:</p>
                   </div>
                 </div>
                 <IndustriesSlider/>

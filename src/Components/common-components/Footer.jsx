@@ -42,6 +42,7 @@ const Footer = () => {
                   <a
                     href="https://www.linkedin.com/company/altumindglobal/"
                     target="_blank"
+                    aria-label="Altumind on LinkedIn"
                   >
                     <svg
                       className="w-7 h-7 dark:text-white text-gray-800 cursor-pointer hover:scale-[1.1]"
@@ -63,6 +64,7 @@ const Footer = () => {
                   <a
                     href="https://www.instagram.com/altumindglobal/"
                     target="_blank"
+                     aria-label="Altumind on Instagram"
                   >
                     <svg
                       className="w-6 h-6 dark:text-white text-gray-800 cursor-pointer hover:scale-[1.1]"
@@ -84,6 +86,7 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/AltumindGlobal"
                     target="_blank"
+                    aria-label="Altumind on Facebook"
                   >
                     <svg
                       className="w-6 h-6 dark:text-white text-gray-800 cursor-pointer hover:scale-[1.1]"
@@ -101,7 +104,7 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                  <a href="https://x.com/altumind" target="_blank">
+                  <a href="https://x.com/altumind" target="_blank"  aria-label="Altumind on X">
                     <svg
                       className="w-5 h-5 dark:text-white text-gray-800 cursor-pointer hover:scale-[1.1]"
                       aria-hidden="true"
@@ -126,41 +129,41 @@ const Footer = () => {
               <p className="text-lg font-semibold pb-2">Services</p>
               <ul className="space-y-3 dark:font-normal">
                 <li>
-                  <Link to="/services/experience-design">
+                  <Link to="/services/experience-design-services">
                     Experience Design
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/technology-and-engineering">
+                  <Link to="/services/digital-development-services">
                     Technology and Engineering
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/ai-automation">AI & Automation</Link>
+                  <Link to="/services/ai-services">AI & Automation</Link>
                 </li>
                 <li>
-                  <Link to="services/quality-assurance">
+                  <Link to="services/quality-assurance-services">
                     Quality Assurance & Testing Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/cloud">Cloud</Link>
+                  <Link to="/services/cloud-strategy-engineering-services">Cloud</Link>
                 </li>
                 <li>
-                  <Link to="/services/digital-marketing">
+                  <Link to="/services/digital-marketing-services">
                     Digital Marketing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/data-analytics">Data Analytics</Link>
+                  <Link to="/services/data-analytics-services">Data Analytics</Link>
                 </li>
                 <li>
-                  <Link to="/services/managed-operations">
+                  <Link to="/services/operations-managed-services">
                     Managed Operations
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/digital-strategy-consulting">
+                  <Link to="/services/digital-strategy-services">
                     Digital Strategy and Consulting
                   </Link>
                 </li>

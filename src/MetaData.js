@@ -147,3 +147,134 @@ export const UIUXCXMetadata = {
         canonicalUrl:'https://altumindglobal.com/services/experience-design/cx-design'
       },
     };
+
+export const L3ServicesMetaData = {
+  'responsive-web-development-services': {
+    title: "Responsive Web Development Services | AltumindGlobal",
+    ogTitle: "Responsive Web Development Services | AltumindGlobal",
+    description: "AltumindGlobal offers responsive web development services to create user-friendly websites that work seamlessly across all devices.",
+    ogDescription: "AltumindGlobal offers responsive web development services to create user-friendly websites that work seamlessly across all devices.",
+    keywords: "responsive web development services, responsive website development company",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/web-development-consulting/responsive-web-development-services'
+  },
+  'cms-development-services': {
+    title: "Expert CMS Development Services | CMS Development Company",
+    ogTitle: "Expert CMS Development Services | CMS Development Company",
+    description: "Get expert CMS development services from AltumindGlobal, providing robust solutions for efficient content management and easy updates.",
+    ogDescription: "Get expert CMS development services from AltumindGlobal, providing robust solutions for efficient content management and easy updates.",
+    keywords: "cms development services, cms development company",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/web-development-consulting/cms-development-services'
+  },
+  'progressive-web-app-development-services': {
+    title: "Progressive Web App Development Services | AltumindGlobal",
+    ogTitle: "Progressive Web App Development Services | AltumindGlobal",
+    description: "AltumindGlobal specializes in progressive web app development services to deliver fast, reliable, and engaging app experiences.",
+    ogDescription: "AltumindGlobal specializes in progressive web app development services to deliver fast, reliable, and engaging app experiences.",
+    keywords: "progressive web app development services, progressive web app development company",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/web-development-consulting/progressive-web-app-development-services'
+  },
+  'ios-development-services': {
+    title: "iOS Development Services | Leading iOS App Development Company",
+    ogTitle: "iOS Development Services | Leading iOS App Development Company",
+    description: "AltumindGlobal offers leading iOS development services to build custom apps that provide smooth, intuitive experiences for iPhone users.",
+    ogDescription: "AltumindGlobal offers leading iOS development services to build custom apps that provide smooth, intuitive experiences for iPhone users.",
+    keywords: "ios development services, ios development agency",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/mobile-app-design-development/ios-development-services'
+  },
+  'android-application-development-services': {
+    title: "Best Android Application Development Services | Altumind",
+    ogTitle: "Best Android Application Development Services | Altumind",
+    description: "Altumind provides the best Android application development services, creating high-performance apps for seamless user experiences.",
+    ogDescription: "Altumind provides the best Android application development services, creating high-performance apps for seamless user experiences.",
+    keywords: "	android application development services, best android app development company",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/mobile-app-design-development/android-application-development-services'
+  },
+  'hybrid-app-development-services': {
+    title: "Best Hybrid App Development Services | Expert Company",
+    ogTitle: "Best Hybrid App Development Services | Expert Company",
+    description: "Get reliable hybrid app development services from a leading hybrid mobile app development company. Build high-performance apps for all platforms.",
+    ogDescription: "Get reliable hybrid app development services from a leading hybrid mobile app development company. Build high-performance apps for all platforms.",
+    keywords: "hybrid app development services, hybrid mobile app development company",
+    canonicalUrl:'https://altumindglobal.com/digital-development-services/mobile-app-design-development/hybrid-app-development-services'
+  },
+  'b2b-content-marketing-services': {
+    title: "B2B Content Marketing Service | Expert Content Marketing Consultant",
+    ogTitle: "B2B Content Marketing Service | Expert Content Marketing Consultant",
+    description: "Need help with content marketing? Our B2B content marketing service and content marketing consultant create custom strategies that connect and convert.",
+    ogDescription: "Need help with content marketing? Our B2B content marketing service and content marketing consultant create custom strategies that connect and convert.",
+    keywords: "	b2b content marketing services, content marketing consultant",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services'
+  },
+  'social-media-strategy-services': {
+    title: "Social Media Strategy Services | Social Media Consultation",
+    ogTitle: "Social Media Strategy Services | Social Media Consultation",
+    description: "Need social media content service? Our social media strategy services delivers tailored strategies to boost engagement, visibility, and brand awareness.",
+    ogDescription: "Need social media content service? Our social media strategy services delivers tailored strategies to boost engagement, visibility, and brand awareness.",
+    keywords: "social media strategy services, social media consultation",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services'
+  },
+  'targeted-email-marketing-services': {
+    title: "B2B Email Marketing Services | Targeted Email Marketing Services",
+    ogTitle: "B2B Email Marketing Services | Targeted Email Marketing Services",
+    description: "Get results-driven B2B email marketing services. Our targeted email marketing services helps you design and execute campaigns that drive business growth.",
+    ogDescription: "Get results-driven B2B email marketing services. Our targeted email marketing services helps you design and execute campaigns that drive business growth.",
+    keywords: "targeted email marketing services, b2b email marketing services",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services'
+  },
+  'ecommerce-marketing-solution': {
+    title: "Ecommerce marketing solution | Top E-Commerce Marketing Companies",
+    ogTitle: "Ecommerce marketing solution | Top E-Commerce Marketing Companies",
+    description: "Increase your online sales with ecommerce marketing services. Our ecommerce marketing solution provide tailored strategies to boost traffic and conversions.",
+    ogDescription: "Increase your online sales with ecommerce marketing services. Our ecommerce marketing solution provide tailored strategies to boost traffic and conversions.",
+    keywords: "ecommerce marketing solution, ecommerce marketing expert",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution'
+  },
+  'performance-marketing-services': {
+    title: "Performance Marketing Services | Top Performance-Based Marketing Company",
+    ogTitle: "Performance Marketing Services | Top Performance-Based Marketing Company",
+    description: "Maximize your marketing impact with our performance marketing services. We’re a performance-based marketing company dedicated to driving your success.",
+    ogDescription: "Maximize your marketing impact with our performance marketing services. We’re a performance-based marketing company dedicated to driving your success.",
+    keywords: "	performance marketing services, performance based marketing company",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/performance-marketing-services'
+  },
+  'marketing-automation-strategy': {
+    title: "Marketing Automation Consulting | Marketing Automation Strategy",
+    ogTitle: "Marketing Automation Consulting | Marketing Automation Strategy",
+    description: "Need a marketing automation strategy? Our marketing automation consulting services provide tailored solutions to help you automate and optimize your marketing.",
+    ogDescription: "Need a marketing automation strategy? Our marketing automation consulting services provide tailored solutions to help you automate and optimize your marketing.",
+    keywords: "marketing automation strategy, marketing automation consulting",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy'
+  },
+  'b2b-seo-services': {
+    title: "Affordable Search Engine Ranking | b2b Seo Services",
+    ogTitle: "Affordable Search Engine Ranking | b2b Seo Services",
+    description: "Achieve better visibility with b2b seo services. Our search marketing experts help improve your SEO for higher traffic and growth.",
+    ogDescription: "Achieve better visibility with b2b seo services. Our search marketing experts help improve your SEO for higher traffic and growth.",
+    keywords: "b2b seo services, seo services for startups",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/optimization-services/b2b-seo-services'
+  },
+  'app-store-optimization-services': {
+    title: "Drive Organic Installs with Strategic App Store Optimization Services",
+    ogTitle: "Drive Organic Installs with Strategic App Store Optimization Services",
+    description: "Let us help you grow your app with expert app store optimization services. Our app store optimization services improve your rankings and help you attract more downloads.",
+    ogDescription: "Let us help you grow your app with expert app store optimization services. Our app store optimization services improve your rankings and help you attract more downloads.",
+    keywords: "app store optimization services, app store optimization company",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/optimization-services/app-store-optimization-services'
+  },
+  'orm-service': {
+    title: "Online Reputation Management Expert | ORM Service",
+    ogTitle: "Online Reputation Management Expert | ORM Service",
+    description: "Worried about your online reputation? Our Reputation Management Expert and ORM service help you boost and protect your brand’s image across the web.",
+    ogDescription: "Worried about your online reputation? Our Reputation Management Expert and ORM service help you boost and protect your brand’s image across the web.",
+    keywords: "ORM service, ORM Consultant",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/optimization-services/orm-service'
+  },
+  'cro-services': {
+    title: "Conversion Rate Optimisation Specialist | CRO Services",
+    ogTitle: "Conversion Rate Optimisation Specialist | CRO Services",
+    description: "Want to increase sales? Our CRO Services and conversion rate optimization consultant help you turn more visitors into customers with tailored strategies.",
+    ogDescription: "Want to increase sales? Our CRO Services and conversion rate optimization consultant help you turn more visitors into customers with tailored strategies.",
+    keywords: "CRO Services, Conversion Rate Optimization Specialist",
+    canonicalUrl:'https://altumindglobal.com/digital-marketing-services/optimization-services/cro-services'
+  },
+}

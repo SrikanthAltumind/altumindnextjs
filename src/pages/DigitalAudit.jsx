@@ -50,7 +50,7 @@ const DigitalAudit = () => {
   <section id='section2'>
      <div className='w-[90%] mx-auto font-raleway dark:text-white'>
         <div className='text-center mb-10 max-w-[750px] mx-auto'>
-            <p className='custom-sub-heading'>Our Digital Audits Services</p>
+            <p className='custom-sub-heading'>Our Digital Audit Services</p>
             <p className='custom-gradient-text'>Tailored Digital Audits to Optimize Your Digital Strategy</p>
         </div>
         <DevelopmentServices/>

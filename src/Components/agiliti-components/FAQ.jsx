@@ -4,6 +4,7 @@ import axios from "axios";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import { useLocation } from "react-router-dom";
 import ClipPathGroup from '../../assets/faq.svg'
+import useFetchData from "../../CustomHooks/useFetchData";
 
 const erpFAQData = [
   {
@@ -50,117 +51,154 @@ const erpFAQData = [
 ]
 
 const FAQ = () => {
-    const [data, setData] = useState();
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [data, setData] = useState();
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     const location = useLocation();
     let apiUrl;
+    let isERPIntegrationPage = false
 
     if (location.pathname === "/agiliti-hire-dedicated-developers")
       apiUrl = "/api/agiliti-root-faq-contents";
-    else if (location.pathname === "/services/experience-design/ui-design")
+    else if (location.pathname === "/experience-design-services/ui-design-services")
       apiUrl = "/api/service-exp-design-ui-faq-contents";
-    else if (location.pathname === "/services/experience-design/ux-design")
+    else if (location.pathname === "/experience-design-services/ux-design-services")
       apiUrl = "/api/service-exp-design-ux-faq-contents";
-    else if (location.pathname === "/services/experience-design/cx-design")
+    else if (location.pathname === "/experience-design-services/cx-design")
       apiUrl = "/api/service-exp-design-cx-faq-contents";
-    else if (location.pathname === "/services/technology-and-engineering/web-development")
+    else if (location.pathname === "/digital-development-services/web-development-consulting")
       apiUrl = "/api/service-tech-engg-web-faq-contents";
-    else if (location.pathname === "/services/technology-and-engineering/mobile-app-development")
+    else if (location.pathname === "/digital-development-services/mobile-app-design-development")
       apiUrl = "/api/service-tech-engg-mobile-faq-contents";
-    // else if (location.pathname === "/services/technology-and-engineering/erp-integration")
-    //   apiUrl = "/api/service-tech-engg-erp-faq-contents";
-    else if (location.pathname === "/services/technology-and-engineering/ecommerce-services")
+    else if (location.pathname === "/digital-development-services/erp-integration-service")
+      apiUrl = "/api/service-tech-engg-erp-faq-contents";
+    else if (location.pathname === "/digital-development-services/ecommerce-services")
       apiUrl = "/api/service-tech-engg-ecom-faq-contents";
-    else if (location.pathname === "/services/cloud/cloud-migration")
+    else if (location.pathname === "/cloud-strategy-engineering-services/cloud-migration-services")
       apiUrl = "/api/service-cloud-migration-faq-contents";
-    else if (location.pathname === "/services/cloud/cloud-app-services")
+    else if (location.pathname === "/cloud-strategy-engineering-services/cloud-application-development-services")
       apiUrl = "/api/service-cloud-app-faq-contents";
-    else if (location.pathname === "/services/digital-marketing/marketing-optimization")
+    else if (location.pathname === "/digital-marketing-services/optimization-services")
       apiUrl = "/api/service-dm-marketing-opt-faq-contents";
-    else if (location.pathname === "/services/digital-marketing/branding-design")
+    else if (location.pathname === "/digital-marketing-services/branding-design-services")
       apiUrl = "/api/service-dm-branding-design-faq-contents";
-    else if (location.pathname === "/services/digital-marketing/marketing-services")
+    else if (location.pathname === "/digital-marketing-services/integrated-digital-marketing-services")
       apiUrl = "/api/service-dm-ms-faq-contents";
-    else if (location.pathname === "/services/data-analytics/marketing-intelligence")
+    else if (location.pathname === "/data-analytics-services/marketing-intelligence-solutions")
       apiUrl = "/api/service-da-marketing-intelligence-faq-contents";
-    else if (location.pathname === "/services/data-analytics/business-intelligence")
+    else if (location.pathname === "/data-analytics-services/business-intelligence-consulting")
       apiUrl = "/api/service-da-business-intelligence-faq-contents";
-    else if (location.pathname === "/services/data-analytics/digital-intelligence")
+    else if (location.pathname === "/data-analytics-services/digital-intelligence-services")
       apiUrl = "/api/service-da-digital-intelligence-faq-contents";
-    else if (location.pathname === "/services/data-analytics/sales-intelligence")
+    else if (location.pathname === "/data-analytics-services/sales-intelligence-solutions")
       apiUrl = "/api/service-da-sales-intelligence-faq-contents";
-    else if(location.pathname === "/services/data-analytics/customer-360")
+    else if(location.pathname === "/data-analytics-services/customer-360-analytics")
         apiUrl = "/api/service-da-customer-360-faq-contents"
-    else if(location.pathname === "/services/managed-operations/product-innovation-management")
+    else if(location.pathname === "/operations-managed-services/product-development-and-innovation")
       apiUrl = "api/service-managed-operation-dpi-faq-contents"
-        else if(location.pathname === "/services/managed-operations/website-operations-management")
+        else if(location.pathname === "/operations-managed-services/website-management")
       apiUrl = "api/service-managed-operation-wom-faq-contents"
-    else if(location.pathname === "/services/managed-operations/cloud-management")
+    else if(location.pathname === "/operations-managed-services/cloud-management-solutions")
       apiUrl = "api/service-managed-operation-cm-faq-contents"
-        else if(location.pathname === "/services/managed-operations/software-maintenance-support")
+        else if(location.pathname === "/operations-managed-services/maintenance-support-services")
       apiUrl = "api/service-managed-operation-ssm-faq-contents"
-        else if(location.pathname === "/services/ai-automation/conversational-ai-chatbot")
+        else if(location.pathname === "/ai-services/chatbot-development-services")
           apiUrl = "api/service-ai-automation-ai-chat-faq-contents"
-        else if(location.pathname === "/services/ai-automation/rpa")
+        else if(location.pathname === "/ai-services/rpa-services")
           apiUrl = "api/service-ai-automation-rpa-faq-contents"
-        else if(location.pathname === "/services/quality-assurance/automation-testing")
+        else if(location.pathname === "/quality-assurance-services/automation-testing-services")
           apiUrl = "api/service-qat-automation-faq-contents"
-      else if(location.pathname === "/services/quality-assurance/security-testing")
+      else if(location.pathname === "/quality-assurance-services/security-testing-services")
           apiUrl = "api/service-qat-security-faq-contents"
-      else if(location.pathname === "/services/quality-assurance/performance-testing")
+      else if(location.pathname === "/quality-assurance-services/performance-testing-services")
           apiUrl = "api/service-qat-performance-faq-contents"
-      else if(location.pathname === "/services/quality-assurance/functional-testing")
+      else if(location.pathname === "/quality-assurance-services/functional-testing-services")
           apiUrl = "api/service-qat-functional-faq-contents"
-      else if(location.pathname === "/services/quality-assurance/qa-consulting")
+      else if(location.pathname === "/quality-assurance-services/quality-assurance-consulting")
           apiUrl = "api/service-qat-consulting-faq-contents"
-      else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
+      else if(location.pathname === "/digital-strategy-services/digital-experience")
           apiUrl = "api/service-dsc-dee-faq-contents"
-      else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
+      else if(location.pathname === "/digital-strategy-services/digital-modernization")
           apiUrl = "api/service-dsc-dm-faq-contents"
-      else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+      else if(location.pathname === "/digital-strategy-services/digital-audit")
           apiUrl = "api/service-dsc-da-faq-contents"
-      else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+      else if(location.pathname === "/digital-strategy-services/digital-build")
           apiUrl = "api/service-dsc-db-faq-contents"
-      else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+      else if(location.pathname === "/digital-strategy-services/product-incubation")
           apiUrl = "api/service-dsc-inp-faq-contents"
+        // L3 Pages 
+       else if(location.pathname === "/digital-development-services/web-development-consulting/responsive-web-development-services")
+        apiUrl = "/api/service-responsive-web-faq-contents?populate=*"
+       else if(location.pathname === "/digital-development-services/web-development-consulting/cms-development-services")
+        apiUrl = "/api/service-cms-faq-contents?populate=*"
+       else if(location.pathname === "/digital-development-services/web-development-consulting/progressive-web-app-development-services")
+        apiUrl = "/api/service-pwd-faq-contents?populate=*"
+       else if(location.pathname === "/digital-development-services/mobile-app-design-development/ios-development-services")
+        apiUrl = "/api/service-ios-faq-contents?populate=*"
+       else if(location.pathname === "/digital-development-services/mobile-app-design-development/android-application-development-services")
+        apiUrl = "/api/service-ios-faq-contents?populate=*"
+       else if(location.pathname === "/digital-development-services/mobile-app-design-development/hybrid-app-development-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/performance-marketing-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/b2b-seo-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/app-store-optimization-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/orm-service")
+        apiUrl = "ADD_API_URL_END_POINT"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/cro-services")
+        apiUrl = "ADD_API_URL_END_POINT"
+
+      const {data, isLoading, isError, error} = useFetchData(['faq', location.pathname], apiUrl, !isERPIntegrationPage)
+      const faqData = isERPIntegrationPage ? erpFAQData : (data?.data?.data || [])
     
-    const fetchData = () =>  {
-        const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
-        axios
-          .get(url)
-          .then((res) => {
-            setData(res?.data?.data)
-            console.log('FAQ', res?.data?.data)
-            setLoading(false);
-          })
-          .catch((err) => {
-            console.error("Failed to fetch data:", err);
-            setError("Failed to fetch data. Please try again later.");
-            setLoading(false);
-          });
-      }
+    // const fetchData = () =>  {
+    //     const url = `${import.meta.env.VITE_APP_API_URL}${apiUrl}`;
+    //     axios
+    //       .get(url)
+    //       .then((res) => {
+    //         setData(res?.data?.data)
+    //         console.log('FAQ', res?.data?.data)
+    //         setLoading(false);
+    //       })
+    //       .catch((err) => {
+    //         console.error("Failed to fetch data:", err);
+    //         setError("Failed to fetch data. Please try again later.");
+    //         setLoading(false);
+    //       });
+    //   }
     
 
-    useEffect(() => {
-      if(location.pathname === '/services/technology-and-engineering/erp-integration'){
-        setData(erpFAQData)
-        setLoading(false)
-      }
-      else{
-        fetchData();
-      }
-      }, [location.pathname]);
+    // useEffect(() => {
+    //   if(location.pathname === '/services/technology-and-engineering/erp-integration'){
+    //     setData(erpFAQData)
+    //     setLoading(false)
+    //   }
+    //   else{
+    //     fetchData();
+    //   }
+    //   }, [location.pathname]);
     
-      if (loading) {
+      if (isLoading) {
         return <LoaderSpinner />;
       }
     
-      if (error) {
+      if (isError) {
         return (
           <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-            {error}
+            {error?.message}
           </div>
         );
       }
@@ -174,12 +212,12 @@ const FAQ = () => {
             <h2 className="custom-gradient-text md:ml-0 max-md:text-center max-w-[250px]">Frenquently Asked Questions</h2>
             <img src={ClipPathGroup} className="mx-auto md:ml-0 w-[350px]" alt="FAQ" />
             </div> :
-            <p className="custom-gradient-text md:ml-0">FAQ's</p>
+            <p className="custom-gradient-text md:ml-0">FAQ&apos;s</p>
           }
         </div>
         <div className="basis-[60%]">
             {
-                  data?.map((content) => (
+                  faqData?.map((content) => (
                     <Accordion key={content.id} content={content}/>
                   ))
             }

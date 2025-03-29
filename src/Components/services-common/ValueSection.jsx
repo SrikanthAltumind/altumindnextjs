@@ -19,7 +19,7 @@ const aiAndAutomationData = {
           { id: 6, content: "Lead generation and sales assistance" },
         ],
         CTA: "Explore AI Solutions",
-        url: "/services/ai-automation/conversational-ai-chatbot",
+        url: "/ai-services/chatbot-development-services",
         image: {
           data: {
             attributes: {
@@ -43,7 +43,7 @@ const aiAndAutomationData = {
           { id: 6, content: "RPA Process Mining" },
         ],
         CTA: "Explore RPA Services",
-        url: "/services/ai-automation/rpa",
+        url: "/ai-services/rpa-services",
         image: {
           data: {
             attributes: {
@@ -74,7 +74,7 @@ const digitalMarketingData = {
         subDescription:
           "Our Branding & design approach combines creativity with strategic thinking, ensuring your brand stands out in the digital landscape while effectively communicating your values and message.",
         CTA: "Explore Branding Services",
-        url: "/services/digital-marketing/branding-design",
+        url: "/digital-marketing-services/branding-design-services",
         image: {
           data: {
             attributes: {
@@ -102,7 +102,7 @@ const digitalMarketingData = {
         subDescription:
           "We craft integrated marketing strategies that work together to create a powerful, cohesive digital presence for your brand. ",
         CTA: "Discover Marketing Solutions",
-        url: "/services/digital-marketing/marketing-services",
+        url: "/digital-marketing-services/integrated-digital-marketing-services",
         image: {
           data: {
             attributes: {
@@ -128,7 +128,7 @@ const digitalMarketingData = {
         subDescription:
           "Our team of experts continually analyzes and adjusts your marketing efforts to ensure you're always getting the best possible results in the ever-changing digital landscape.",
         CTA: "Optimize Your Marketing",
-        url: "/services/digital-marketing/marketing-optimization",
+        url: "/digital-marketing-services/optimization-services",
         image: {
           data: {
             attributes: {
@@ -161,7 +161,7 @@ const cloudServicesData = {
           { id: 4, content: "Cloud optimization and management" },
         ],
         CTA: "Explore More",
-        url: "/services/cloud/cloud-migration",
+        url: "/cloud-strategy-engineering-services/cloud-migration-services",
         image: {
           data: {
             attributes: {
@@ -187,7 +187,7 @@ const cloudServicesData = {
           { id: 6, content: "Application Performance Optimization" },
         ],
         CTA: "Explore More",
-        url: "/services/cloud/cloud-app-services",
+        url: "/cloud-strategy-engineering-services/cloud-application-development-services",
         image: {
           data: {
             attributes: {
@@ -205,11 +205,11 @@ const ValueSection = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/services/ai-automation")
+    if (location.pathname === "/services/ai-services")
       setData(aiAndAutomationData);
-    else if (location.pathname === "/services/digital-marketing")
+    else if (location.pathname === "/services/digital-marketing-services")
       setData(digitalMarketingData);
-    else if (location.pathname === "/services/cloud")
+    else if (location.pathname === "/services/cloud-strategy-engineering-services")
       setData(cloudServicesData);
   }, []);
 

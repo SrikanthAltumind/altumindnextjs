@@ -135,25 +135,25 @@ const GetStarted = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/services/experience-design") {
+    if (location.pathname === "/services/experience-design-services") {
       setData(services.experience);
-    } else if (location.pathname === "/services/digital-marketing") {
+    } else if (location.pathname === "/services/digital-marketing-services") {
       setData(services.digitalMarketingServices);
-    } else if (location.pathname === "/services/ai-automation") {
+    } else if (location.pathname === "/services/ai-services") {
       setData(services.aiAutomation);
-    } else if (location.pathname === "/services/quality-assurance") {
+    } else if (location.pathname === "/services/quality-assurance-services") {
       setData(services.qaTesting);
-    } else if (location.pathname === "/services/technology-and-engineering") {
+    } else if (location.pathname === "/services/digital-development-services") {
       setData(services.technologyEngineering);
-    } else if (location.pathname === "/services/data-analytics") {
+    } else if (location.pathname === "/services/data-analytics-services") {
       setData(services.dataAnalytics);
-    } else if (location.pathname === "/services/managed-operations") {
+    } else if (location.pathname === "/services/operations-managed-services") {
       setData(services.managedOperations);
     } else if (location.pathname === "/services") {
       setData(services.services);
-    } else if (location.pathname === "/services/digital-strategy-consulting") {
+    } else if (location.pathname === "/services/digital-strategy-services") {
       setData(services.digitalStrategy);
-    } else if (location.pathname === "/services/cloud") {
+    } else if (location.pathname === "/services/cloud-strategy-engineering-services") {
       setData(services.cloudServices);
     } else if (
       location.pathname === "/about/about-altumind/mission-and-vision"

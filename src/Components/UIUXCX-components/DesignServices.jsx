@@ -14,23 +14,23 @@ const DesignServices = () => {
 
 
     let apiUrl;
-    if(id === 'ui-design')
+    if(id === 'ui-design-services')
         apiUrl = 'api/service-exp-design-ui-service-contents?populate=*'
-    else if(id === 'ux-design')
+    else if(id === 'ux-design-services')
         apiUrl = 'api/service-exp-design-ux-service-contents?populate=*'
     else if(id === 'cx-design')
         apiUrl = 'api/service-exp-design-cx-service-contents?populate=*'
-    else if(location.pathname === "/services/technology-and-engineering/ecommerce-services")
+    else if(location.pathname === "/digital-development-services/ecommerce-services")
         apiUrl = 'api/service-tech-engg-ecom-service-contents?populate=*'
     else if(location.pathname === "/services/technology-engineering/erp-integration")
         apiUrl = 'api/service-tech-engg-erp-service-contents?populate=*'
-    else if(location.pathname === "/services/digital-marketing/marketing-optimization")
+    else if(location.pathname === "/digital-marketing-services/optimization-services")
         apiUrl = '/api/service-dm-marketing-opt-service-contents?populate=*'
-    else if(location.pathname === "/services/managed-operations/product-innovation-management")
+    else if(location.pathname === "/operations-managed-services/product-development-and-innovation")
       apiUrl = "api/service-managed-operation-dpi-service-contents?populate=*"
-          else if(location.pathname === "/services/digital-marketing/branding-design")
+          else if(location.pathname === "/digital-marketing-services/branding-design-services")
       apiUrl = "api/service-dm-branding-design-service-contents?populate=*"
-    else if(location.pathname === "/services/digital-marketing/marketing-services")
+    else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services")
             apiUrl = "api/service-dm-ms-service-contents?populate=*"
 
   

@@ -59,7 +59,7 @@ const ManagedOperations = () => {
         <section id="section2">
           <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
             <div className="space-y-3 text-center">
-              <p className="custom-sub-heading">Our Managed Operation Services</p>
+              <p className="custom-sub-heading">Our IT Management Consulting services</p>
               <p className="custom-gradient-text">
                
                   Tailored Management for

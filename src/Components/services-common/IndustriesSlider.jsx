@@ -16,11 +16,11 @@ const IndustriesSlider = () => {
     const location = useLocation()
     
     let apiUrl;
-      if(location.pathname.startsWith("/services/quality-assurance/"))
+      if(location.pathname.startsWith("/services/quality-assurance-services"))
         apiUrl = 'api/service-qat-child-industry-expertises?populate=*'
-      else if(location.pathname.startsWith("/services/managed-operations/software-maintenance-support"))
+      else if(location.pathname.startsWith("/operations-managed-services/maintenance-support-services"))
         apiUrl = 'api/service-managed-operation-ssm-ind-expertises?populate=*'
-      else if(location.pathname.startsWith("/services/managed-operations/"))
+      else if(location.pathname.startsWith("/services/operations-managed-services"))
           apiUrl = 'api/service-managed-operation-child-ind-expertises?populate=*'
       else
         apiUrl = 'api/service-tech-engg-child-industry-expertises?populate=*'

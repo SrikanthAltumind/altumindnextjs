@@ -1,26 +1,55 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LoaderSpinner from "../common-components/LoaderSpinner";
+import { useQuery } from "@tanstack/react-query";
 
 const SuccessStories = ({heading, title="Success Stories"}) => {
-  const [data, setData] = useState();
-  const fetchSuccessStoriesData = () => {
-    const url = `${
-      import.meta.env.VITE_APP_API_URL
-    }api/success-storie?populate[success_story_mains][populate]=image`;
-    axios
-      .get(url)
-      .then((response) => {
-        setData(response?.data?.data?.attributes?.success_story_mains?.data);
-      })
-      .catch(() => {
-        console.log("Error While Fetching Resources");
-      });
-  };
+  // const [data, setData] = useState();
 
-  useEffect(() => {
-    fetchSuccessStoriesData();
-  }, []);
+  const url = `${import.meta.env.VITE_APP_API_URL}api/success-storie?populate[success_story_mains][populate]=image`
+  const {data, isLoading, isError, error} = useQuery({
+    queryKey:["successStories"],
+    queryFn: () => {
+      return axios.get(url)
+    },
+    staleTime: 24 * 60 * 60 * 1000
+  })
+
+  console.log(data, 'successStoriessquery')
+
+  const storiesData = data?.data?.data?.attributes?.success_story_mains?.data || []
+
+  if(isLoading){
+    return <LoaderSpinner/>
+  }
+
+  if(isError){
+    return(
+      <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+      {error.message}
+    </div>
+    )
+  }
+
+
+  // const fetchSuccessStoriesData = () => {
+  //   const url = `${
+  //     import.meta.env.VITE_APP_API_URL
+  //   }api/success-storie?populate[success_story_mains][populate]=image`;
+  //   axios
+  //     .get(url)
+  //     .then((response) => {
+  //       setData(response?.data?.data?.attributes?.success_story_mains?.data);
+  //     })
+  //     .catch(() => {
+  //       console.log("Error While Fetching Resources");
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   fetchSuccessStoriesData();
+  // }, []);
 
   return (
     <div className="font-raleway  dark:text-white">
@@ -45,7 +74,7 @@ const SuccessStories = ({heading, title="Success Stories"}) => {
               : "sm:flex-wrap justify-between gap-y-16 lg:gap-20"
           }`}
         >
-          {data?.map((story) => (
+          {storiesData?.map((story) => (
             //   <div key={story.id} className='min-w-[210px] sm:w-[250px] md:w-[280px]  even:sm:self-end even:sm:mt-[-320px] even:md:mt-[-350px]  '>
             <div
               key={story.id}

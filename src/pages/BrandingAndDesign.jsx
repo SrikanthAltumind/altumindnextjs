@@ -94,7 +94,7 @@ const BrandingAndDesign = () => {
        <p className="custom-gradient-text">
        Tailored Branding Solutions Across Diverse Sectors
        </p>
-       <p className="text-[13px] mb-5 font-medium">Crafting distinctive visual identities that resonate with the unique challenges and opportunities of each industry.</p>
+       <p className="text-[13px] mb-5 font-medium">As a leading brand design consultation firm, we take pride in Crafting distinctive visual identities that resonate with the unique challenges and opportunities of each industry.</p>
      </div>
         <IndustryExpertise/>
      </section>
@@ -119,7 +119,7 @@ const BrandingAndDesign = () => {
        <p className="custom-gradient-text">
        Creating Strategic Brand Experiences
        </p>
-       <p className="text-[13px] mb-5 font-medium">We don&apos;t just design brands; we architect digital experiences that drive business growth. Our multidisciplinary team combines strategic thinking, technological expertise, and creative excellence to deliver brand solutions that are:</p>
+       <p className="text-[13px] mb-5 font-medium">Our branding design services don&apos;t just design brands; we architect digital experiences that drive business growth. Our multidisciplinary team combines strategic thinking, technological expertise, and creative excellence to deliver brand solutions that are:</p>
      </div>
      <OurCommitment/>
      </section>

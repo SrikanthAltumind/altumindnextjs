@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 import { AppLayout } from "./Layouts/AppLayout";
 
 import Error404 from "./pages/Error404";
-const Home = lazy(() => import("./pages/Home"));
+// const Home = lazy(() => import("./pages/Home"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Privacy = lazy(() => import("./pages/Privacy"));
@@ -77,6 +77,8 @@ import WIP from "./pages/WIP";
 import Loader from "./Components/common-components/Loader";
 import JobDetailsUpdated from "./pages/JobDetailsUpdated";
 import JobApplicationForm from "./pages/JobApplicationForm";
+import Home from "./pages/Home"
+import L3Services from "./pages/L3Services";
 
 // import DigitalCommerce from "./pages/DigitalCommerce";
 
@@ -97,48 +99,48 @@ export const routes = [
   { path: "/about/about-altumind/community-engagement", element: <CommunityEngagement /> },
   { path: "/career/life-at-altumind", element: <LifeAtAltumind /> },
   { path: "/about/about-altumind/alliance", element: <Alliance /> },
-  { path: "/services/experience-design", element: <ExperienceDesign /> },
-  { path: "/services/experience-design/:id", element: <UIUXCXDesign /> }, // Dynamic route
-  { path: "/services/technology-and-engineering/web-development", element: <WebDevelopment /> },
-  { path: "/services/technology-and-engineering/mobile-app-development", element: <MobileAppDevelopment /> },
-  { path: "/services/technology-and-engineering/erp-integration", element: <ERPIntegration /> },
-  { path: "/services/technology-and-engineering/ecommerce-services", element: <EcommerceServices /> },
+  { path: "/services/experience-design-services", element: <ExperienceDesign /> },
+  { path: "/experience-design-services/:id", element: <UIUXCXDesign /> }, // Dynamic route
+  { path: "/digital-development-services/web-development-consulting", element: <WebDevelopment /> },
+  { path: "/digital-development-services/mobile-app-design-development", element: <MobileAppDevelopment /> },
+  { path: "/digital-development-services/erp-integration-service", element: <ERPIntegration /> },
+  { path: "/digital-development-services/ecommerce-services", element: <EcommerceServices /> },
   { path: "/testing", element: <Testing /> },
-  { path: "/services/ai-automation", element: <AIandAutomation /> },
-  { path: "/services/ai-automation/conversational-ai-chatbot", element: <AIAndChatBotServices /> },
-  { path: "/services/ai-automation/rpa", element: <RPAServices /> },
-  { path: "/services/quality-assurance", element: <QAandTesting /> },
-  { path: "/services/quality-assurance/automation-testing", element: <AutomationTesting /> },
-  { path: "/services/quality-assurance/security-testing", element: <SecurityTesting /> },
-  { path: "/services/quality-assurance/performance-testing", element: <PerformanceTesting /> },
-  { path: "/services/quality-assurance/functional-testing", element: <FunctionalTesting /> },
-  { path: "/services/quality-assurance/qa-consulting", element: <QAConsultingService /> },
-  { path: "/services/digital-marketing", element: <DigitalMarketingServices /> },
-  { path: "/services/digital-marketing/marketing-optimization", element: <MarketingOptimization /> },
-  { path: "/services/digital-marketing/branding-design", element: <BrandingAndDesign /> },
-  { path: "/services/digital-marketing/marketing-services", element: <MarketingServices /> },
-  { path: "/services/technology-and-engineering", element: <TechnologyAndEngineering /> },
-  { path: "/services/data-analytics", element: <DataAnalytics /> },
-  { path: "/services/data-analytics/business-intelligence", element: <BusinessIntelligence /> },
-  { path: "/services/data-analytics/marketing-intelligence", element: <MarketingIntelligence /> },
-  { path: "/services/data-analytics/digital-intelligence", element: <DigitalIntelligence /> },
-  { path: "/services/data-analytics/customer-360", element: <Customer360 /> },
-  { path: "/services/data-analytics/sales-intelligence", element: <SalesIntelligence /> },
-  { path: "/services/managed-operations", element: <ManagedOperations /> },
-  { path: "/services/managed-operations/product-innovation-management", element: <DigitalProductInnovation /> },
-  { path: "/services/managed-operations/website-operations-management", element: <WebsiteOperationsManagement /> },
-  { path: "/services/managed-operations/cloud-management", element: <CloudManagement /> },
-  { path: "/services/managed-operations/software-maintenance-support", element: <SoftwareMaintenanceSupport /> },
+  { path: "/services/ai-services", element: <AIandAutomation /> },
+  { path: "/ai-services/chatbot-development-services", element: <AIAndChatBotServices /> },
+  { path: "/ai-services/rpa-services", element: <RPAServices /> },
+  { path: "/services/quality-assurance-services", element: <QAandTesting /> },
+  { path: "/quality-assurance-services/automation-testing-services", element: <AutomationTesting /> },
+  { path: "/quality-assurance-services/security-testing-services", element: <SecurityTesting /> },
+  { path: "/quality-assurance-services/performance-testing-services", element: <PerformanceTesting /> },
+  { path: "/quality-assurance-services/functional-testing-services", element: <FunctionalTesting /> },
+  { path: "/quality-assurance-services/quality-assurance-consulting", element: <QAConsultingService /> },
+  { path: "/services/digital-marketing-services", element: <DigitalMarketingServices /> },
+  { path: "/digital-marketing-services/optimization-services", element: <MarketingOptimization /> },
+  { path: "/digital-marketing-services/branding-design-services", element: <BrandingAndDesign /> },
+  { path: "/digital-marketing-services/integrated-digital-marketing-services", element: <MarketingServices /> },
+  { path: "/services/digital-development-services", element: <TechnologyAndEngineering /> },
+  { path: "/services/data-analytics-services", element: <DataAnalytics /> },
+  { path: "/data-analytics-services/business-intelligence-consulting", element: <BusinessIntelligence /> },
+  { path: "/data-analytics-services/marketing-intelligence-solutions", element: <MarketingIntelligence /> },
+  { path: "/data-analytics-services/digital-intelligence-services", element: <DigitalIntelligence /> },
+  { path: "/data-analytics-services/customer-360-analytics", element: <Customer360 /> },
+  { path: "/data-analytics-services/sales-intelligence-solutions", element: <SalesIntelligence /> },
+  { path: "/services/operations-managed-services", element: <ManagedOperations /> },
+  { path: "/operations-managed-services/product-development-and-innovation", element: <DigitalProductInnovation /> },
+  { path: "/operations-managed-services/website-management", element: <WebsiteOperationsManagement /> },
+  { path: "/operations-managed-services/cloud-management-solutions", element: <CloudManagement /> },
+  { path: "/operations-managed-services/maintenance-support-services", element: <SoftwareMaintenanceSupport /> },
   { path: "/services", element: <Services /> },
-  { path: "/services/digital-strategy-consulting", element: <DigitalStrategy /> },
-  { path: "/services/digital-strategy-consulting/digital-experience-engagement", element: <DigitalExperienceEngagement /> },
-  { path: "/services/digital-strategy-consulting/digital-modernization", element: <DigitalModernization /> },
-  { path: "/services/digital-strategy-consulting/digital-audits", element: <DigitalAudit /> },
-  { path: "/services/digital-strategy-consulting/incubation-products-services", element: <IncubationOfNewProducts /> },
-  { path: "/services/digital-strategy-consulting/digital-build", element: <DigitalBuild /> },
-  { path: "/services/cloud", element: <CloudServices /> },
-  { path: "/services/cloud/cloud-migration", element: <CloudMigration /> },
-  { path: "/services/cloud/cloud-app-services", element: <CloudApp /> },
+  { path: "/services/digital-strategy-services", element: <DigitalStrategy /> },
+  { path: "/digital-strategy-services/digital-experience", element: <DigitalExperienceEngagement /> },
+  { path: "/digital-strategy-services/digital-modernization", element: <DigitalModernization /> },
+  { path: "/digital-strategy-services/digital-audit", element: <DigitalAudit /> },
+  { path: "/digital-strategy-services/product-incubation", element: <IncubationOfNewProducts /> },
+  { path: "/digital-strategy-services/digital-build", element: <DigitalBuild /> },
+  { path: "/services/cloud-strategy-engineering-services", element: <CloudServices /> },
+  { path: "/cloud-strategy-engineering-services/cloud-migration-services", element: <CloudMigration /> },
+  { path: "/cloud-strategy-engineering-services/cloud-application-development-services", element: <CloudApp /> },
   { path: "/about/about-altumind/mission-and-vision", element: <MissionAndVision /> },
   { path: "/about/about-altumind/leadership", element: <Leadership /> },
   { path: "/services/it-services-consulting", element: <WIP /> },
@@ -157,6 +159,10 @@ export const routes = [
   { path: "/insights/blogs", element: <Blogs /> },
   { path: "/callback", element: <Blogs /> },
   { path: "/insights/blog/:id/:blogName", element: <IndividualBlogPage /> }, // Dynamic route
+  { path: "/digital-development-services/web-development-consulting/:pagename" , element:<L3Services/>},
+  { path: "/digital-development-services/mobile-app-design-development/:pagename" , element:<L3Services/>},
+  { path: "/digital-marketing-services/integrated-digital-marketing-services/:pagename" , element:<L3Services/>},
+  { path: "/digital-marketing-services/optimization-services/:pagename" , element:<L3Services/>},
   // not allowed to index
   { path: "*", element: <Error404 /> }
 ];
@@ -534,6 +540,8 @@ const router = createBrowserRouter([
     // ],
   },
 ]);
+
+console.log('build  deployed march 6 12:00' , )
 
 function App() {
   return <RouterProvider router={router} />;

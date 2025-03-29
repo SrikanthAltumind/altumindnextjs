@@ -13,25 +13,25 @@ const Overview = () => {
   const location = useLocation();
   let apiUrl;
 
-  if (location.pathname === "/services/experience-design")
+  if (location.pathname === "/services/experience-design-services")
     apiUrl = "api/service-exp-design-overview?populate=*";
-  else if (location.pathname === "/services/ai-automation")
+  else if (location.pathname === "/services/ai-services")
     apiUrl = "api/service-ai-auto-overview?populate=*";
-  else if (location.pathname === "/services/quality-assurance")
+  else if (location.pathname === "/services/quality-assurance-services")
     apiUrl = "api/service-qa-testing-overview?populate=*";
-  else if (location.pathname === "/services/digital-marketing")
+  else if (location.pathname === "/services/digital-marketing-services")
     apiUrl = "api/service-digital-marketing-overview?populate=*";
-  else if (location.pathname === "/services/technology-and-engineering")
+  else if (location.pathname === "/services/digital-development-services")
     apiUrl = "api/service-tech-engg-overview?populate=*";
-  else if (location.pathname === "/services/data-analytics")
+  else if (location.pathname === "/services/data-analytics-services")
     apiUrl = "api/service-data-analytics-overview?populate=*";
-  else if (location.pathname === "/services/managed-operations")
+  else if (location.pathname === "/services/operations-managed-services")
     apiUrl = "api/service-managed-operation-overview?populate=*";
   else if (location.pathname === "/services")
     apiUrl = "api/service-root-track-record?populate=*";
-  else if (location.pathname === "/services/digital-strategy-consulting")
+  else if (location.pathname === "/services/digital-strategy-services")
     apiUrl = "api/service-digital-strategy-consulting-overview?populate=*";
-  else if (location.pathname === "/services/cloud")
+  else if (location.pathname === "/services/cloud-strategy-engineering-services")
     apiUrl = "api/service-cloud-overview?populate=*";
   else if (location.pathname === "/about/about-altumind/mission-and-vision")
     apiUrl = "api/our-mission-and-vision-future?populate=*";

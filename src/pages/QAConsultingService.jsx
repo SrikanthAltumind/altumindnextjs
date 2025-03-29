@@ -52,7 +52,7 @@ const QAConsultingService = () => {
           <section id='section2'>
           <div className='w-[90%] mx-auto'>
               <div className='text-center mb-8 max-w-[800px] mx-auto font-raleway'>
-                  <h2 className='custom-sub-heading'>Our QA Consulting Services</h2>
+                  <h2 className='custom-sub-heading'>Our Quality Assurance Consulting Services</h2>
                   <p className='custom-gradient-text'>Empowering Software Reliability and Performance</p>
               </div>
             <DevelopmentServices/>
@@ -61,7 +61,7 @@ const QAConsultingService = () => {
 
           <section id='section3'>
           <div className="w-[90%] text-center font-raleway space-y-3 mb-10 max-w-[800px] mx-auto">
-              <p className='custom-sub-heading'>Our Consulting Process</p>
+              <p className='custom-sub-heading'>Our Quality Assurance Consulting Process</p>
               <p className='custom-gradient-text'>Strategic Approach to Quality Excellence</p>
             </div>
             <TimeLineFlow/>

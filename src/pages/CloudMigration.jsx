@@ -78,8 +78,7 @@ const CloudMigration = () => {
                 <div className='text-center mb-20 space-y-3 max-w-[750px] mx-auto'>
                     <p className='custom-sub-heading'>Why Choose Altumind</p>
                     <h2 className='custom-gradient-text'>
-                      {/* Your Trusted Cloud Migration Partner */}
-                      Navigate Your Cloud Journey with Cloud Migration Service Provider
+                      Your Trusted Cloud Migration Service Provider
                       </h2>
                 </div>
                 <WhyChooseUs/>
@@ -93,7 +92,7 @@ const CloudMigration = () => {
           Benefits
           </p>
           <p className="custom-gradient-text">
-          Cloud Migration That Delivers Real Value to Your Business
+          Best Cloud Migration Service Provider That Delivers Real Value to Your Business
           </p>
         </div>
             <SettingUpForSuccess/> 
@@ -106,7 +105,7 @@ const CloudMigration = () => {
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Transforming Industries with Tailored Cloud Solutions</p>
                   </div>
-                  <p className='text-[13px] mb-5 font-medium'>Delivering specialized cloud migration services designed to meet the unique needs and challenges of your industry.</p>
+                  <p className='text-[13px] mb-5 font-medium'>Altumind, as a leading cloud migration service provider, delivers specialized cloud migration services designed to meet the unique needs and challenges of your industry.</p>
                 </div>
                 <IndustriesSlider/>
           </div>

@@ -1,22 +1,56 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Markdown from 'react-markdown';
 import { useLocation , useNavigate} from 'react-router-dom'
 import { convertToUrlFormat } from '../ReactFunctions';
+import axios from 'axios';
+import LoaderSpinner from '../Components/common-components/LoaderSpinner';
 
 
 
 const JobDetailsUpdated = () => {
     const location = useLocation()
-    const jobdetails = location.state;
+    const [jobdetails, setJobdetails] = useState()
+    const [loading, setLoading] = useState()
+    const jobId = location.state;
     console.log(jobdetails,  'res')
     const navigate = useNavigate()
-  
+
+      const fetchJobDetails = () => {
+        setLoading(true)
+        axios.get(`${import.meta.env.VITE_APP_API_URL}api/zoho-recruit/job-openings/${jobId}`)
+          .then((response) => {
+            setLoading(false)
+            setJobdetails(response?.data?.data)
+            console.log(response, 'test')
+          })
+          .catch((error) => {
+            setLoading(false)
+            console.log("error while fetching jobs: ", error);
+          });
+      };
 
     useEffect(() => {
-      if(!jobdetails){
+      if(!jobId){
         navigate("/404")
       }
+      fetchJobDetails()
+      
     },[])
+
+    const mustHaveSkillsRef = useRef(null)
+    const jobDescriptionRef = useRef(null);
+    useEffect(() => {
+        if (jobDescriptionRef.current) {
+            jobDescriptionRef.current.innerHTML = jobdetails?.Job_Description || "";
+        }
+        if (mustHaveSkillsRef.current) {
+          mustHaveSkillsRef.current.innerHTML = jobdetails?.Job_details || "";
+      }
+    }, [jobdetails]);
+
+    if(loading){
+      return <LoaderSpinner/>
+    }
 
   return (
     // <div className='mx-auto w-[90%] relative pb-10'>
@@ -79,7 +113,7 @@ const JobDetailsUpdated = () => {
       <p className='font-bold text-4xl'>{jobdetails?.Job_Opening_Name}</p>
       <div className='flex-wrap flex gap-x-10 gap-y-3 text-lg'>
         <p>Experience: <span className='font-semibold'>{jobdetails?.Work_Experience}</span></p>
-        {jobdetails?.Remote_Job === true ? <p>Location: <span className='font-semibold'>Remote</span></p> : <p>Location: <span className='font-semibold'>{jobdetails?.city},{jobdetails?.country}</span></p>}    
+        {jobdetails?.Remote_Job === true ? <p>Location: <span className='font-semibold'>Remote</span></p> : <p>Location: <span className='font-semibold'>{jobdetails?.City}, {jobdetails?.Country}</span></p>}    
       </div>
       <p className='font-montserrat max-w-[90%]'>{jobdetails?.Banner_description}</p>
       <button className='px-10 py-3 rounded-md bg-secondary text-white font-semibold hover:scale-105 transition-all' onClick={()=>{navigate(`/jobs/${convertToUrlFormat(jobdetails?.Job_Opening_Name)}/ApplyNow`, {state:jobdetails})}}>Apply Now</button>
@@ -88,9 +122,10 @@ const JobDetailsUpdated = () => {
     </div>
     <div className='w-[90%] mx-auto py-10 font-montserrat'>
       <p className='text-primary text-2xl font-bold py-3 font-raleway'>Roles & Responsiblities:</p>
-      <Markdown className="markdown">{jobdetails?.Job_Description}</Markdown>
+      <div className='job-description' ref={jobDescriptionRef}></div>
       <p className='text-primary text-2xl font-bold py-3 font-raleway'>Must have Skills:</p>
-      <Markdown className="markdown">{jobdetails?.Must_Have_Skills}</Markdown>
+      {/* <Markdown className="markdown">{jobdetails?.Must_Have_Skills}</Markdown> */}
+      <div className='job-description' ref={mustHaveSkillsRef}></div>
     </div>
     <div className='bg-LightBlue mb-5'>
       <div className='w-[90%] mx-auto py-16 items-center space-y-5'>

@@ -12,25 +12,25 @@ const WhyAltumind = () => {
   const location = useLocation();
   let apiUrl;
 
-  if (location.pathname === "/services/experience-design")
+  if (location.pathname === "/services/experience-design-services")
     apiUrl = "api/service-exp-design-alt-stands?populate=*";
-  else if (location.pathname === "/services/ai-automation")
+  else if (location.pathname === "/services/ai-services")
     apiUrl = "api/service-ai-auto-stands?populate=*";
-  else if (location.pathname === "/services/quality-assurance")
+  else if (location.pathname === "/services/quality-assurance-services")
     apiUrl = "api/service-qa-testing-stands?populate=*";
-  else if (location.pathname === "/services/digital-marketing")
+  else if (location.pathname === "/services/digital-marketing-services")
     apiUrl = "api/service-digital-marketing-stands?populate=*";
-  else if (location.pathname === "/services/technology-and-engineering")
+  else if (location.pathname === "/services/digital-development-services")
     apiUrl = "api/service-tech-engg-stands?populate=*";
-  else if (location.pathname === "/services/data-analytics")
+  else if (location.pathname === "/services/data-analytics-services")
     apiUrl = "api/service-data-analytics-stands?populate=*";
-  else if (location.pathname === "/services/managed-operations")
+  else if (location.pathname === "/services/operations-managed-services")
     apiUrl = "api/service-managed-operation-stands?populate=*";
   else if (location.pathname === "/services")
     apiUrl = "api/service-root-why-choose-altuminds?populate=*";
-  else if (location.pathname === "/services/digital-strategy-consulting")
+  else if (location.pathname === "/services/digital-strategy-services")
     apiUrl = "api/service-digital-strategy-consulting-stands?populate=*";
-  else if (location.pathname === "/services/cloud")
+  else if (location.pathname === "/services/cloud-strategy-engineering-services")
     apiUrl = "api/service-cloud-stands?populate=*";
   else if (location.pathname === "/about/about-altumind/leadership")
     apiUrl = "api/leadership-philosophy-contents?populate=*";
@@ -44,7 +44,7 @@ const WhyAltumind = () => {
     apiUrl = "api/success-story-enphase-feature-contents?populate=*";
   else if (location.pathname === "/portfolio/united-finance")
     apiUrl = "api/success-story-uf-feature-contents?populate=*";
-  else if (location.pathname === "/services/ai-automation/conversational-ai-chatbot")
+  else if (location.pathname === "/ai-services/chatbot-development-services")
     apiUrl = "/api/service-ai-automation-ai-chat-impacts?populate=*";
 
   const fetchData = () => {

@@ -5,7 +5,8 @@ import ThankyouNote from "../contact-components/ThankyouNote";
 import { useContext, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 // import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const initialFormData = {
   firstName: "",
@@ -25,6 +26,14 @@ const ContactForm = ({ selectedForm }) => {
   const [presignedUrl, setPresignedUrl] = useState();
   const [initialValues, setInitialValues] = useState(initialFormData);
   const [captchaError, setCaptchaError] = useState(false)
+   const [loadCaptcha, setLoadCaptcha] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadCaptcha(true);
+    } ,5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   let toMailID = "";
 
@@ -341,6 +350,16 @@ const ContactForm = ({ selectedForm }) => {
   }, [selectedForm]);
 
   return (
+    <>
+    { loadCaptcha ? 
+    <GoogleReCaptchaProvider
+    scriptProps={{
+      async: true,
+      defer: true,
+      // explicitRender: false
+    }}
+    reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+  >
     <form
       onSubmit={formik.handleSubmit}
       className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
@@ -487,6 +506,7 @@ const ContactForm = ({ selectedForm }) => {
         </div>
         {/* How did you hear about us */}
         <div className="relative flex flex-col w-full ">
+        <label htmlFor="howDidYouHearAboutUs" className="sr-only">How did you hear about us? *</label>
           <select
             name="howDidYouHearAboutUs"
             className="cursor-pointer text-sm  lg:text-base bg-transparent outline-none border-b border-tertiary dark:border-white dark:focus:border-blue-400 "
@@ -637,6 +657,7 @@ const ContactForm = ({ selectedForm }) => {
         <button
           type="submit"
           disabled={!formik.dirty || !formik.isValid || formik.isSubmitting}
+          aria-label="Submit"
           className="disabled:bg-[#f5656f] px-9 py-2 text-sm bg-secondary hover:bg-[#e71523] text-white rounded-full"
         >
           {formik.isSubmitting ? (
@@ -663,6 +684,9 @@ const ContactForm = ({ selectedForm }) => {
       </div>
       {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
     </form>
+    </GoogleReCaptchaProvider> : <LoaderSpinner/>
+        }
+        </>
   );
 };
 

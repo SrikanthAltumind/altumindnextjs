@@ -10,15 +10,15 @@ const Spectrum = () => {
 
     let apiUrl;
 
-    if (location.pathname === "/services/quality-assurance")
+    if (location.pathname === "/services/quality-assurance-services")
       apiUrl = "api/service-qa-testing-service-contents?populate=*";
-    else if (location.pathname === "/services/technology-and-engineering")
+    else if (location.pathname === "/services/digital-development-services")
       apiUrl = "api/service-tech-engg-service-contents?populate=*";
-    else if (location.pathname === "/services/data-analytics")
+    else if (location.pathname === "/services/data-analytics-services")
       apiUrl = "api/service-data-analytics-services?populate=*";
-    else if (location.pathname === "/services/managed-operations")
+    else if (location.pathname === "/services/operations-managed-services")
       apiUrl = "api/service-managed-operation-services?populate=*";
-    else if (location.pathname === "/services/digital-strategy-consulting")
+    else if (location.pathname === "/services/digital-strategy-services")
       apiUrl = "api/service-digital-strategy-consulting-services?populate=*";
     else if (location.pathname === "/services")
       apiUrl = "api/service-root-service-contents?populate=*";

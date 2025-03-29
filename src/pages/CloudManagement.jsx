@@ -51,7 +51,7 @@ const CloudManagement = () => {
         <section id='section2'>
             <div className='w-[90%] mx-auto font-raleway dark:text-white'>
               <div className='text-center mb-10 max-w-[750px] mx-auto'>
-                  <p className='custom-sub-heading'>Our Cloud Management Services</p>
+                  <p className='custom-sub-heading'>Our Cloud Management Solutions</p>
                   <p className='custom-gradient-text'>Transforming Cloud Infrastructure into Strategic Business Assets</p>
               </div>
               <DevelopmentServices/>
@@ -105,7 +105,7 @@ const CloudManagement = () => {
                   <div className='text-center space-y-3 mb-10 sm:mb-10'>
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Delivering Excellence Across Sectors</p>
-                    <p className='text-[13px] mb-5 font-medium'>Strategic cloud operations and infrastructure management that transforms business capabilities into scalable, efficient solutions across industries.</p>
+                    <p className='text-[13px] mb-5 font-medium'>Altumind, as a premier cloud management company, provides strategic cloud operations and infrastructure management that transforms business capabilities into scalable, efficient solutions across industries.</p>
                   </div>
                 </div>
                 <IndustriesSlider/>

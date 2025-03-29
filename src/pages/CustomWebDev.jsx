@@ -70,7 +70,7 @@ const CustomWebDev = () => {
         <link rel="canonical" href="https://altumindglobal.com/custom-website-development"></link>
         {/* for google ads conversion tracker */}
         {/* <!-- Google tag (gtag.js) event - delayed navigation helper --> */}
-<script>
+{/* <script>
   {`
   // Helper function to delay opening a URL until a gtag event is sent.
   // Call it in response to an action that should navigate to a URL.
@@ -88,7 +88,7 @@ const CustomWebDev = () => {
     return false;
   }
   `}
-</script>
+</script> */}
       </Helmet>
       <div ref={bannerRef}>
       <LandingBanner/>

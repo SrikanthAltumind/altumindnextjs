@@ -105,7 +105,7 @@ const DigitalProductInnovation = () => {
                   <div className='text-center space-y-3 mb-10 sm:mb-10'>
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Driving Digital Innovation Across Sectors</p>
-                    <p className='text-[13px] mb-5 font-medium'>Designing innovative digital experiences into seamless solutions while shaping unique product identities for each market segment.</p>
+                    <p className='text-[13px] mb-5 font-medium'>Designing innovative digital experiences into seamless solutions while shaping unique product identities for each market segment. Our product innovation and design services unlock value across industry verticals</p>
                   </div>
                 </div>
                 <IndustriesSlider/>

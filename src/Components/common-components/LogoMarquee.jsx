@@ -1,35 +1,68 @@
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios'
-import { useEffect, useRef, useState } from 'react'
+// import { useEffect, useRef, useState } from 'react'
 import Marquee from "react-fast-marquee";
+import LoaderSpinner from './LoaderSpinner';
 
 
 const LogoMarquee = () => {
 
-    const [logoData, setLogoData] = useState([])
-    const containerRef = useRef(null);
-    const [containerWidth, setContainerWidth] = useState(0);
-    const [itemWidth] = useState(260); // Assuming each item is 260px wide
-    const totalItems = logoData.length * 2; // Since we're duplicating the array
+    // const [logoData, setLogoData] = useState([])
+    // const containerRef = useRef(null);
+    // const [containerWidth, setContainerWidth] = useState(0);
+    // const [itemWidth] = useState(260); // Assuming each item is 260px wide
 
-    const updateContainerWidth = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth);
-      }
-    };
+    
+    
+    const url = `${import.meta.env.VITE_APP_API_URL}api/client-images?populate=*`
+
+    const {data, isLoading, isError, error} = useQuery({
+      queryKey:["Logos"],
+      queryFn: () => {
+        return axios.get(url)
+      },
+      staleTime: 24 * 60 * 60 * 1000
+    })
+
+    console.log(data, 'querydata')
+    // let logoData = data?.data?.data
+
+    if(isLoading){
+      return <LoaderSpinner/>
+    }
+
+    if (isError) {
+      return (
+        <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+          {error.message}
+        </div>
+      );
+    }
+
+    const logoData = data?.data?.data || [];
+    // const totalItems = logoData.length * 2; // Since we're duplicating the array
 
 
-    useEffect(() => {
+
+    // const updateContainerWidth = () => {
+    //   if (containerRef.current) {
+    //     setContainerWidth(containerRef.current.offsetWidth);
+    //   }
+    // };
+
+
+    // useEffect(() => {
+    //   updateContainerWidth();
+    //   window.addEventListener("resize", updateContainerWidth);
       
-      updateContainerWidth();
-      window.addEventListener("resize", updateContainerWidth);
-      return () => window.removeEventListener("resize", updateContainerWidth);
-    }, []);
+    //   return () => window.removeEventListener("resize", updateContainerWidth);
+    // }, []);
 
-    const duration = (totalItems * itemWidth) / 100; 
+    // const duration = (totalItems * itemWidth) / 100; 
 
-    useEffect(() => {
-      fetchLogos()
-    }, []);
+    // useEffect(() => {
+    //   fetchLogos()
+    // }, []);
 
     // useEffect(() => {
     //     updateRepeatCount();
@@ -37,21 +70,22 @@ const LogoMarquee = () => {
     // }, [logoData]);
 
 
-    const fetchLogos = () => {
-        axios.get(`${import.meta.env.VITE_APP_API_URL}api/client-images?populate=*`)
-        .then((response) => {
-            setLogoData(response?.data?.data)
-        })
-        .catch((error) => {
-            console.log("response while fetching logos in logoMarquee component: ", error)
-        })
-    }
+    // const fetchLogos = () => {
+    //     axios.get(`${import.meta.env.VITE_APP_API_URL}api/client-images?populate=*`)
+    //     .then((response) => {
+    //         setLogoData(response?.data?.data)
+    //     })
+    //     .catch((error) => {
+    //         console.log("response while fetching logos in logoMarquee component: ", error)
+    //     })
+    // }
     return (
       <div className="py-5">
         <Marquee className="" gradientColor={'white'} gradient gradientWidth={80} pauseOnHover>
           {logoData?.concat(logoData)?.map((item, index) => (
             <div
-              key={`${index + item.attributes.image?.data?.attributes?.name}`}
+              // key={`${index + item.attributes.image?.data?.attributes?.name}`}
+              key={`${index || item?.id}`}
               className="p-1 max-w-[250px] mx-4"
             >
               <img

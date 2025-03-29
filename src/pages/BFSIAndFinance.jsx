@@ -21,7 +21,6 @@ import { industriesMetaData } from "../MetaData"
 import { Helmet } from "react-helmet-async"
 
 const BFSIAndFinance = () => {
-
   const [metadata, setMetaData] = useState({})
 
 

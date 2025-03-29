@@ -51,7 +51,7 @@ const Customer360 = () => {
      <section id='section2'>
         <div className='w-[90%] mx-auto font-raleway dark:text-white'>
            <div className='text-center mb-10 max-w-[750px] mx-auto'>
-               <p className='custom-sub-heading'>Our customer 360 Services</p>
+               <p className='custom-sub-heading'>Our customer 360 analytics Services</p>
                <p className='custom-gradient-text'>Comprehensive Solutions for a 360° Customer Experience</p>
            </div>
            <DevelopmentServices/>

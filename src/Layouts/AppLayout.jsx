@@ -1,22 +1,31 @@
-import { Outlet, useLocation, } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Components/common-components/Footer";
 import Navbar from "../Components/common-components/Navbar";
 import { createContext, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ThemeContext = createContext();
 
-
-
-
- 
 const AppLayout = () => {
   const [theme, setTheme] = useState("light");
   const { pathname } = useLocation();
+  const queryClient = new QueryClient()
+  // const [loadCaptcha, setLoadCaptcha] = useState(false);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoadCaptcha(true);
+  //   } ,3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   useEffect(() => {
@@ -28,13 +37,25 @@ const AppLayout = () => {
   return (
     <HelmetProvider>
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        <GoogleReCaptchaProvider
-          scriptProps={{
-            async: true,
-            defer: true,
-          }}
-          reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
-        >
+        {/* {loadCaptcha ? (
+          <GoogleReCaptchaProvider
+            scriptProps={{
+              async: true,
+              defer: true,
+              // explicitRender: false
+            }}
+            reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+          >
+            <div className="dark:bg-black bg-white w-full">
+              <main>
+                <Navbar />
+                <Outlet />
+              </main>
+              <Footer />
+            </div>
+          </GoogleReCaptchaProvider> */}
+        {/* ) : ( */}
+        <QueryClientProvider client={queryClient}>
           <div className="dark:bg-black bg-white w-full">
             <main>
               <Navbar />
@@ -42,7 +63,9 @@ const AppLayout = () => {
             </main>
             <Footer />
           </div>
-        </GoogleReCaptchaProvider>
+          <ReactQueryDevtools initialIsOpen={false}/>
+        </QueryClientProvider>
+        {/* )} */}
       </ThemeContext.Provider>
     </HelmetProvider>
   );

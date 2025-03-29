@@ -57,13 +57,13 @@ const DigitalStrategy = () => {
         <section id="section2">
           <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
             <div className="space-y-3 text-center">
-              <p className="custom-sub-heading">Our Digital Strategy & Consulting</p>
+              <p className="custom-sub-heading">Our IT Strategy Consulting Services</p>
               <p className="custom-gradient-text">
               
-                  Offering End-to-End Support
+                  Offering End-to-End IT Strategy
                   <br />
              
-                for Your Digital Visions
+                Consulting Services for Your Digital Visions
               </p>
             </div>
             <div className="w-full flex justify-center items-center">

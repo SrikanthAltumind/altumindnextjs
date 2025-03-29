@@ -58,7 +58,7 @@ const EcommerceServices = () => {
         <section id='section2'>
         <div className='w-[90%] mx-auto'>
             <div className='text-center mb-8 max-w-[800px] mx-auto font-raleway'>
-                <h2 className='custom-sub-heading'>Our E- commerce Services</h2>
+                <h2 className='custom-sub-heading'>Our eCommerce Services</h2>
                 <p className='custom-gradient-text'>Elevate Your Digital Commerce with End-to-End Solutions</p>
             </div>
            <DesignServices/> 
@@ -113,7 +113,7 @@ const EcommerceServices = () => {
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Powering E-commerce Success Across Industries</p>
                   </div>
-                  <p className='text-xs md:text-sm font-medium'>We deliver custom e-commerce solutions that address unique challenges and opportunities across various sectors, driving digital transformation and sustainable growth.</p>
+                  <p className='text-xs md:text-sm font-medium'>Altumind&apos;s custom eCommerce services deliver tailor-made solutions that address unique challenges and opportunities across various sectors, driving digital transformation and sustainable growth.</p>
                 </div>
                 <IndustriesSlider/>
           </div>

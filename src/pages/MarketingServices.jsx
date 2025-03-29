@@ -51,7 +51,7 @@ const MarketingServices = () => {
      <section id='section2'>
         <div className='w-[90%] mx-auto font-raleway dark:text-white'>
            <div className='text-center mb-10 max-w-[750px] mx-auto'>
-               <p className='custom-sub-heading'>Our Marketing Services</p>
+               <p className='custom-sub-heading'>Our Integrated Digital Marketing Services</p>
                <p className='custom-gradient-text'>Scale Smarter with Integrated Marketing Solutions</p>
            </div>
            {/* <DevelopmentServices/> */}

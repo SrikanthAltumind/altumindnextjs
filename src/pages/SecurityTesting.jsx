@@ -104,7 +104,7 @@ const SecurityTesting = () => {
                       <p className='custom-sub-heading'>Industry Expertise</p>
                       <p className='custom-gradient-text'>Sector-Specific Security Testing Solutions</p>
                     </div>
-                    <p className='text-xs md:text-sm font-medium'>We deliver targeted security testing solutions that address industry-specific threats, regulations, and compliance requirements.</p>
+                    <p className='text-xs md:text-sm font-medium'>As a leading security testing company, We deliver targeted security testing services that address industry-specific threats, regulations, and compliance requirements.</p>
                   </div>
                   <IndustriesSlider/>
             </div>

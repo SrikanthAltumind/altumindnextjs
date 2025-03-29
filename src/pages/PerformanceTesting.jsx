@@ -104,7 +104,7 @@ const PerformanceTesting = () => {
                       <p className='custom-sub-heading'>Industry Expertise</p>
                       <p className='custom-gradient-text'>Precision Performance Testing Across Diverse Sectors</p>
                     </div>
-                    <p className='text-xs md:text-sm font-medium'>Leveraging domain-specific performance testing frameworks to deliver tailored solutions for various industries.</p>
+                    <p className='text-xs md:text-sm font-medium'>Altumind performance testing services leverage domain-specific performance testing frameworks to deliver tailored solutions for various industries.</p>
                   </div>
                   <IndustriesSlider/>
             </div>

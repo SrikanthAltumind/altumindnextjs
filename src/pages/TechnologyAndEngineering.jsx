@@ -62,7 +62,7 @@ const TechnologyAndEngineering = () => {
       <section id="section2">
         <div className="w-full flex flex-col gap-3 justify-start items-center p-5 py-7 font-raleway">
           <div className="text-center space-y-3">
-            <p className="custom-sub-heading">Our Engineering Services</p>
+            <p className="custom-sub-heading">Our Digital Engineering Transformation Services</p>
             <p className="custom-gradient-text">
              Unmatched 
           

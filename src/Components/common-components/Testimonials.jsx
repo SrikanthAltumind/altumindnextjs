@@ -4,44 +4,55 @@ import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import LoaderSpinner from "../common-components/LoaderSpinner";
+import { useQuery } from "@tanstack/react-query";
 
 
 const Testimonials = () => {
   let sliderRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
-  const fetchData = () => {
-    const url = `${
-      import.meta.env.VITE_APP_API_URL
-    }api/client-testimonials?populate=*`;
-    axios
-      .get(url)
-      .then((res) => {
-        setData(res?.data?.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch data:", err);
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-      });
-  };
+  const url = `${import.meta.env.VITE_APP_API_URL}api/client-testimonials?populate=*`;
+  
+  const {data, isLoading, isError, error} = useQuery({
+    queryKey: ["Testimonials"],
+    queryFn: () => {
+      return  axios.get(url)
+    },
+    staleTime: 24 * 60 * 60* 1000
+  })
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const fetchData = () => {
+  //   const url = `${
+  //     import.meta.env.VITE_APP_API_URL
+  //   }api/client-testimonials?populate=*`;
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       setData(res?.data?.data);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Failed to fetch data:", err);
+  //       setError("Failed to fetch data. Please try again later.");
+  //       setLoading(false);
+  //     });
+  // };
 
-  if (loading) {
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  if (isLoading) {
     return <LoaderSpinner />;
   }
 
-  if (error) {
+  if (isError) {
     return (
       <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-        {error}
+        {error.message}
       </div>
     );
   }
@@ -67,7 +78,7 @@ const Testimonials = () => {
         }}
         {...settings}
       >
-        {data?.map((item, index) => {
+        {data?.data?.data?.map((item, index) => {
           return (
             <div key={item?.attributes?.name + index}>
               <div

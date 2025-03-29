@@ -50,8 +50,8 @@ const CloudApp = () => {
      <section id='section2'>
         <div className='w-[90%] mx-auto font-raleway dark:text-white'>
            <div className='text-center mb-10 max-w-[750px] mx-auto'>
-               <p className='custom-sub-heading'>Our Cloud App Services</p>
-               <p className='custom-gradient-text'>Transformative Cloud App Services for Modern Enterprises</p>
+               <p className='custom-sub-heading'>Our Cloud Application Development Services</p>
+               <p className='custom-gradient-text'>Transformative Cloud Application Development Services for Modern Enterprises</p>
            </div>
        
            <DevelopmentServices/>
@@ -106,7 +106,7 @@ const CloudApp = () => {
                  <p className='custom-sub-heading'>Industry Expertise</p>
                  <p className='custom-gradient-text'>Transforming Industries with Tailored Cloud App Servies</p>
                </div>
-               <p className='text-[13px] mb-5 font-medium'>Providing specialized cloud application services designed to address the unique challenges and needs of various industries</p>
+               <p className='text-[13px] mb-5 font-medium'>Providing specialized cloud application development services designed to address the unique challenges and needs of various industries</p>
              </div>
              <IndustriesSlider/>
        </div>

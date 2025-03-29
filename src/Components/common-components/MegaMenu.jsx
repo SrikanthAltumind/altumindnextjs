@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const MegaMenu = ({ item, onMouseLeave }) => {
   // eslint-disable-next-line react/prop-types
   const [subMenu, setSubMenu] = useState(item?.children[0]);
+  const [thirdLevelMenu, setThirdLevelMenu] = useState(null);
   return (
       <div
       className={`absolute dark:text-black mx-auto  w-[90%] ${item?.menu === 'Career' ? 'right-0': '-right-[calc(410px-50%)]'} min-w-[820px] top-[70px] z-20`}
@@ -15,20 +16,22 @@ const MegaMenu = ({ item, onMouseLeave }) => {
           <div className="flex text-[13px] font-medium justify-between w-full h-full">
             {/*  eslint-disable-next-line react/prop-types */}
             <div
-              className="basis-[70%] flex h-full"
+              className="w-full flex h-full"
               //  className="  w-full flex h-full"
               onMouseLeave={() => setSubMenu(item?.children[0])}
               // onMouseLeave={() => setSubMenu()}
             >
               {/* border-r basis-[50%] min-h-[300px]  needs to be added below when submenus are present */}
-              <div className="w-full h-full border-r basis-[50%] min-h-[300px] "> 
+              <div className="w-1/3 h-full border-r min-h-[300px] "> 
                 <ul className="text-black font-montserrat">
                   {
                     // eslint-disable-next-line react/prop-types
                     item?.children?.map((child, index) => (
                       <Link to={child?.path} key={index}>
                         <li
-                          onMouseOver={() => setSubMenu(child)}
+                          onMouseOver={() =>{ setSubMenu(child)
+                            setThirdLevelMenu(null);
+                          }}
                           onClick={onMouseLeave}
                           className={`${
                             subMenu?.innerMenu === child.innerMenu
@@ -84,19 +87,62 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                 </ul>
               </div>
 
-              <div className="basis-[50%]">
+              <div className="w-1/3 border-r">
                 <ul className="font-montserrat">
                   {subMenu?.children?.map((child, index) => (
                     <li
                       key={index}
                       className="p-2 m-2 font-medium hover:font-semibold hover:text-secondary capitalize"
                       onClick={onMouseLeave}
+                      onMouseOver={() => setThirdLevelMenu(child)}
                     >
-                      <Link to={child?.path} className="capitalize">{child.name}</Link>
+                      <Link to={child?.path} className="capitalize flex justify-between">{child.name}
+                      {
+                        child.children &&
+                        <svg
+                        className='w-5 h-5'
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m9 5 7 7-7 7"
+                        />
+                      </svg>
+                      }
+                   
+                      </Link>
+
                     </li>
                   ))}
                 </ul>
               </div>
+              {/* L3pages menu */}
+                        {/* Right Section (Third Level Menu) */}
+                        {thirdLevelMenu?.children?.length > 0 && (
+              <div className="w-1/3 pl-3">
+                <ul className="font-montserrat">
+                  {thirdLevelMenu?.children?.map((child, index) => (
+                    <li
+                      key={index}
+                      className="p-2 m-2 font-medium hover:font-semibold hover:text-secondary capitalize"
+                      onClick={onMouseLeave}
+                    >
+                      <Link to={child?.path} className="capitalize">
+                        {child.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             </div>
           </div>
         </div>

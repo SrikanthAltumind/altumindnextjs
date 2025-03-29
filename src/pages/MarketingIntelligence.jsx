@@ -51,7 +51,7 @@ const MarketingIntelligence = () => {
      <section id='section2'>
         <div className='w-[90%] mx-auto font-raleway dark:text-white'>
            <div className='text-center mb-10 max-w-[750px] mx-auto'>
-               <p className='custom-sub-heading'>Our Marketing Intelligence Services</p>
+               <p className='custom-sub-heading'>Our Marketing Intelligence Solutions</p>
                <p className='custom-gradient-text'>Unveiling Opportunities with Marketing Intelligence</p>
            </div>
            <DevelopmentServices/>
@@ -93,7 +93,7 @@ const MarketingIntelligence = () => {
        Benefits
        </p>
        <p className="custom-gradient-text">
-       Achieve More with Our Marketing Intelligence Services
+       Achieve More with Our Marketing Intelligence Solutions
        </p>
      </div>
          <SettingUpForSuccess/> 

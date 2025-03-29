@@ -105,14 +105,16 @@
 
 // export default ScrollEffectCards;
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useInView,
   stagger,
 } from "framer-motion";
-import { gradientStyle } from "../../ReactFunctions";
+// import { gradientStyle } from "../../ReactFunctions";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+import LoaderSpinner from "../common-components/LoaderSpinner";
 // import { indexOf } from "lodash";
 
 // import { useInView } from "react-intersection-observer";
@@ -163,6 +165,10 @@ const CorePillars = () => {
     margin: `0px 0px -75% 0px`,
     once: false,
   });
+
+  
+
+
   const cards = [
     {
       id: 1,
@@ -196,18 +202,44 @@ const CorePillars = () => {
 
   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
-  const [cardData, setCardData] = useState([]);
+  // const [cardData, setCardData] = useState([]);
 
-  const getCorePillarsData = () => {
-    axios
-      .get(`${import.meta.env.VITE_APP_API_URL}api/corepillar?populate=*`)
-      .then((response) => {
-        setCardData(response?.data?.data?.attributes?.core_pillars?.data);
-      })
-      .catch((error) => {
-        console.log("error while fetching core pillars data: ", error);
-      });
-  };
+  const url = `${import.meta.env.VITE_APP_API_URL}api/corepillar?populate=*`
+  const {data} = useQuery({
+    queryKey:["corePillars"],
+    queryFn: () => {
+      return axios.get(url)
+    },
+    staleTime: 24 * 60 * 60 * 1000
+  })
+
+  console.log(data, 'corePillarsquery')
+
+  const cardData = data?.data?.data?.attributes?.core_pillars?.data || []
+
+
+  // if(isPending){
+  //   return <LoaderSpinner/>
+  // }
+
+  // if(isError){
+  //   return(
+  //     <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+  //     {error.message}
+  //   </div>
+  //   )
+  // }
+
+  // const getCorePillarsData = () => {
+  //   axios
+  //     .get(`${import.meta.env.VITE_APP_API_URL}api/corepillar?populate=*`)
+  //     .then((response) => {
+  //       setCardData(response?.data?.data?.attributes?.core_pillars?.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log("error while fetching core pillars data: ", error);
+  //     });
+  // };
 
   // const staggerContainer = {
   //   hidden: { opacity: 0 },
@@ -235,9 +267,9 @@ const CorePillars = () => {
     if (isInView) setFlipCard(true);
   }, [isInView]);
 
-  useEffect(() => {
-    getCorePillarsData();
-  }, []);
+  // useEffect(() => {
+  //   getCorePillarsData();
+  // }, []);
 
   return (
     <div className="font-raleway">
@@ -275,7 +307,7 @@ const CorePillars = () => {
         // variants={staggerContainer}
         className="w-full flex justify-center items-center gap-6 mt-10 flex-wrap"
       >
-        {cards.map((card, index) => (
+        {cards?.map((card, index) => (
           <motion.div
             key={index}
             className="w-[200px] h-[250px] rounded-md"

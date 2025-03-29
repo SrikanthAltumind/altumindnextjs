@@ -11,65 +11,65 @@ const TimeLineFlow = () => {
     let apiUrl;
     if(location.pathname === '/agiliti-hire-dedicated-developers')
         apiUrl = 'api/agiliti-root-works?populate=*'
-    else if(location.pathname === '/services/experience-design/ui-design')
+    else if(location.pathname === '/experience-design-services/ui-design-services')
         apiUrl = 'api/service-exp-design-ui-process-contents?populate=*'
-    else if(location.pathname === '/services/experience-design/ux-design')
+    else if(location.pathname === '/experience-design-services/ux-design-services')
         apiUrl = 'api/service-exp-design-ux-process-contents?populate=*'
-    else if(location.pathname === '/services/experience-design/cx-design')
+    else if(location.pathname === '/experience-design-services/cx-design')
         apiUrl = 'api/service-exp-design-cx-process-contents?populate=*'
-    else if(location.pathname === '/services/technology-and-engineering/web-development')
+    else if(location.pathname === '/digital-development-services/web-development-consulting')
         apiUrl = '/api/service-tech-engg-web-process-contents?populate=*'
-     else if(location.pathname === '/services/technology-and-engineering/mobile-app-development')
+     else if(location.pathname === '/digital-development-services/mobile-app-design-development')
         apiUrl = '/api/service-tech-engg-mobile-process-contents?populate=*'
-         else if(location.pathname === '/services/cloud/cloud-migration')
+         else if(location.pathname === '/cloud-strategy-engineering-services/cloud-migration-services')
         apiUrl = '/api/service-cloud-migration-process-sections?populate=*'
-    else if(location.pathname === '/services/cloud/cloud-app-services')
+    else if(location.pathname === '/cloud-strategy-engineering-services/cloud-application-development-services')
         apiUrl = '/api/service-cloud-app-process-contents?populate=*'
-     else if(location.pathname === '/services/digital-marketing/marketing-optimization')
+     else if(location.pathname === '/digital-marketing-services/optimization-services')
         apiUrl = '/api/service-dm-marketing-opt-process-contents?populate=*'
-         else if(location.pathname === '/services/digital-marketing/branding-design')
+         else if(location.pathname === '/digital-marketing-services/branding-design-services')
         apiUrl = '/api/service-dm-branding-design-approach-contents?populate=*'
-          else if(location.pathname === '/services/digital-marketing/marketing-services')
+          else if(location.pathname === '/digital-marketing-services/integrated-digital-marketing-services')
         apiUrl = '/api/service-dm-ms-process-contents?populate=*'
-    else if(location.pathname === '/services/data-analytics/marketing-intelligence')
+    else if(location.pathname === '/data-analytics-services/marketing-intelligence-solutions')
         apiUrl = '/api/service-da-marketing-intelligence-prcs-contents?populate=*'
-    else if(location.pathname === '/services/data-analytics/business-intelligence')
+    else if(location.pathname === '/data-analytics-services/business-intelligence-consulting')
         apiUrl = '/api/service-da-business-intelligence-prcs-contents?populate=*'
-    else if(location.pathname === "/services/data-analytics/customer-360")
+    else if(location.pathname === "/data-analytics-services/customer-360-analytics")
         apiUrl = "api/service-da-customer-360-prcs-contents?populate=*"
-    else if(location.pathname === '/services/data-analytics/digital-intelligence')
+    else if(location.pathname === '/data-analytics-services/digital-intelligence-services')
         apiUrl = '/api/service-da-digital-intelligence-prcs-contents?populate=*'
-    else if(location.pathname === '/services/data-analytics/sales-intelligence')
+    else if(location.pathname === '/data-analytics-services/sales-intelligence-solutions')
         apiUrl = '/api/service-da-sales-intelligence-prcs-contents?populate=*'
-    else if(location.pathname === "/services/managed-operations/product-innovation-management")
+    else if(location.pathname === "/operations-managed-services/product-development-and-innovation")
       apiUrl = "api/service-managed-operation-dpi-process-contents?populate=*"
-        else if(location.pathname === "/services/managed-operations/website-operations-management")
+        else if(location.pathname === "/operations-managed-services/website-management")
       apiUrl = "api/service-managed-operation-wom-process-contents?populate=*"
-    else if(location.pathname === "/services/managed-operations/cloud-management")
+    else if(location.pathname === "/operations-managed-services/cloud-management-solutions")
       apiUrl = "api/service-managed-operation-cm-process-contents?populate=*"
-        else if(location.pathname === "/services/managed-operations/software-maintenance-support")
+        else if(location.pathname === "/operations-managed-services/maintenance-support-services")
       apiUrl = "api/service-managed-operation-ssm-process-contents?populate=*"
-        else if(location.pathname === '/services/ai-automation/rpa')
+        else if(location.pathname === '/ai-services/rpa-services')
             apiUrl = 'api/service-ai-automation-rpa-process-contents?populate=*'
-        else if(location.pathname === "/services/quality-assurance/automation-testing")
+        else if(location.pathname === "/quality-assurance-services/automation-testing-services")
             apiUrl = "api/service-qat-automation-process-contents?populate=*"
-        else if(location.pathname === "/services/quality-assurance/security-testing")
+        else if(location.pathname === "/quality-assurance-services/security-testing-services")
             apiUrl = "api/service-qat-security-process-contents?populate=*"
-        else if(location.pathname === "/services/quality-assurance/performance-testing")
+        else if(location.pathname === "/quality-assurance-services/performance-testing-services")
             apiUrl = "api/service-qat-performance-process-contents?populate=*"
-        else if(location.pathname === "/services/quality-assurance/functional-testing")
+        else if(location.pathname === "/quality-assurance-services/functional-testing-services")
             apiUrl = "api/service-qat-functional-process-contents?populate=*"
-        else if(location.pathname === "/services/quality-assurance/qa-consulting")
+        else if(location.pathname === "/quality-assurance-services/quality-assurance-consulting")
             apiUrl = "api/service-qat-consulting-process-contents?populate=*"
-        else if(location.pathname === "/services/digital-strategy-consulting/digital-experience-engagement")
+        else if(location.pathname === "/digital-strategy-services/digital-experience")
             apiUrl = "api/service-dsc-dee-process-contents?populate=*"
-        else if(location.pathname === "/services/digital-strategy-consulting/digital-modernization")
+        else if(location.pathname === "/digital-strategy-services/digital-modernization")
             apiUrl = "api/service-dsc-dm-process-contents?populate=*"
-        else if(location.pathname === "/services/digital-strategy-consulting/digital-audits")
+        else if(location.pathname === "/digital-strategy-services/digital-audit")
             apiUrl = "api/service-dsc-da-process-contents?populate=*"
-        else if(location.pathname === "/services/digital-strategy-consulting/incubation-products-services")
+        else if(location.pathname === "/digital-strategy-services/product-incubation")
             apiUrl = "api/service-dsc-inp-process-contents?populate=*"
-        else if(location.pathname === "/services/digital-strategy-consulting/digital-build")
+        else if(location.pathname === "/digital-strategy-services/digital-build")
             apiUrl = "api/service-dsc-db-process-contents?populate=*"
 
     const fetchTimeLineData = ()=> {

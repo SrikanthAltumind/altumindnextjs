@@ -104,7 +104,7 @@ const FunctionalTesting = () => {
                       <p className='custom-sub-heading'>Industry Expertise</p>
                       <p className='custom-gradient-text'>Sector-Specific Testing Solutions</p>
                     </div>
-                    <p className='text-xs md:text-sm font-medium'>We deliver targeted testing solutions that address industry-specific requirements and compliance needs.</p>
+                    <p className='text-xs md:text-sm font-medium'>Our functional testing services deliver targeted testing solutions that address industry-specific requirements and compliance needs.</p>
                   </div>
                   <IndustriesSlider/>
             </div>

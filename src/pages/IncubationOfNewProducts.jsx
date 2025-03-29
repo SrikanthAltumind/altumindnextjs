@@ -104,7 +104,7 @@ const IncubationOfNewProducts = () => {
             <div className='text-center space-y-3 mb-10 sm:mb-10'>
               <p className='custom-sub-heading'>Industry Expertise</p>
               <p className='custom-gradient-text'>Driving Innovation Across Industries with Tailored Product Incubation Services</p>
-              <p className='text-[13px] mb-5 font-medium'>Our product incubation services are designed to meet the unique demands of various industries, helping businesses transform their ideas into successful products that resonate with their target markets.</p>
+              <p className='text-[13px] mb-5 font-medium'>Our product incubation services are designed to meet the unique demands of various industries, helping businesses transform their ideas into successful products that resonate with their target markets. Altumind , as an agnostic technology business incubator supports businesses in all domains by providing resources, mentorship, and infrastructure to develop and scale innovative tech solutions.</p>
             </div>
           </div>
           <IndustriesSlider/>

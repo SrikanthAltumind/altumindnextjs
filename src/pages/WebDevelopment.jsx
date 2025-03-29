@@ -109,7 +109,7 @@ const WebDevelopment = () => {
                     <p className='custom-sub-heading'>Industry Expertise</p>
                     <p className='custom-gradient-text'>Digital Disruption Across Industries</p>
                   </div>
-                  <p className='text-xs md:text-sm font-medium'>Delivering specialized web solutions that align with your industry&apos;s unique demands and regulations.</p>
+                  <p className='text-xs md:text-sm font-medium'>Our web development consulting services can deliver specialized web solutions that align with your industry&apos;s unique demands and regulations.</p>
                 </div>
                 <IndustriesSlider/>
           </div>

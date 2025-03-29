@@ -8,25 +8,25 @@ const PlatformExpertise = () => {
   const [error, setError] = useState(null);
 
   let apiUrl;
-  if(location.pathname === "/services/technology-and-engineering/erp-integration")
+  if(location.pathname === "/digital-development-services/erp-integration-service")
     apiUrl = 'api/service-tech-engg-erp-support?populate=*'
-  else if(location.pathname === "/services/technology-and-engineering/ecommerce-services")
+  else if(location.pathname === "/digital-development-services/ecommerce-services")
     apiUrl = 'api/service-tech-engg-ecom-platform?populate=*'
-  else if(location.pathname === "/services/ai-automation/conversational-ai-chatbot")
+  else if(location.pathname === "/ai-services/chatbot-development-services")
     apiUrl = "api/service-ai-automation-ai-chat-ecosystem?populate=*"
-  else if(location.pathname === "/services/ai-automation/rpa")
+  else if(location.pathname === "/ai-services/rpa-services")
     apiUrl = "api/service-ai-automation-rpa-partnership?populate=*"
-  else if(location.pathname === "/services/cloud/cloud-migration")
+  else if(location.pathname === "/cloud-strategy-engineering-services/cloud-migration-services")
     apiUrl = "api/service-cloud-migration-partnership?populate=*"
-    else if(location.pathname === "/services/cloud/cloud-app-services")
+    else if(location.pathname === "/cloud-strategy-engineering-services/cloud-application-development-services")
     apiUrl = "api/service-cloud-app-partnership?populate=*"
-    else if(location.pathname === '/services/digital-marketing/marketing-optimization')
+    else if(location.pathname === '/digital-marketing-services/optimization-services')
         apiUrl = '/api/service-dm-child-tech-stack?populate=*'
-    else if(location.pathname === '/services/digital-marketing/branding-design')
+    else if(location.pathname === '/digital-marketing-services/branding-design-services')
         apiUrl = '/api/service-dm-branding-design-tech-stack?populate=*'
-    else if(location.pathname === '/services/digital-marketing/marketing-services')
+    else if(location.pathname === '/digital-marketing-services/integrated-digital-marketing-services')
         apiUrl = '/api/service-dm-ms-tech-stack?populate=*'
-    else if(location.pathname === "/services/managed-operations/cloud-management")
+    else if(location.pathname === "/operations-managed-services/cloud-management-solutions")
       apiUrl = "api/service-managed-operation-cm-stack-content?populate=*"
 
   const fetchData = ()=> {

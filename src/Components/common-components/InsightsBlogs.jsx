@@ -2,26 +2,53 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { convertToUrlFormat } from '../../ReactFunctions'
+import { useQuery } from '@tanstack/react-query'
+import LoaderSpinner from './LoaderSpinner'
 
 const InsightsBlogs = () => {
-    const [data, setData] = useState()
-    
-    const fetchResourceData = ()=> {
-    const url = `${import.meta.env.VITE_APP_API_URL}api/blog-main-cards?populate=*&pagination[limit]=3`
-        axios.get(url)
-        .then(response=> {
-            setData(response?.data)
-            console.log(data, 'insights')
-        })
-        .catch((err) => {
-            console.log('Error While Fetching Resources',err)
-        })
+    // const [data, setData] = useState()
+     const url = `${import.meta.env.VITE_APP_API_URL}api/blog-main-cards?populate=*&pagination[limit]=3`
 
+    const {data, isError, isLoading, error} = useQuery({
+      queryKey: ["InsightsBlogs"],
+      queryFn: () => {
+        return   axios.get(url)
+      },
+      staleTime: 24 * 60 * 60 * 1000
+    })
+
+    console.log(data, 'queerrryy')
+
+    if(isLoading){
+      return <LoaderSpinner/>
     }
 
-    useEffect(()=> {
-        fetchResourceData()
-    },[])
+    if(isError){
+      return (
+        <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+        {error.message}
+      </div>
+      )
+    }
+
+    const blogs = data?.data?.data || []
+    
+    // const fetchResourceData = ()=> {
+    // const url = `${import.meta.env.VITE_APP_API_URL}api/blog-main-cards?populate=*&pagination[limit]=3`
+    //     axios.get(url)
+    //     .then(response=> {
+    //         setData(response?.data)
+    //         console.log(data, 'insights')
+    //     })
+    //     .catch((err) => {
+    //         console.log('Error While Fetching Resources',err)
+    //     })
+
+    // }
+
+    // useEffect(()=> {
+    //     fetchResourceData()
+    // },[])
     return (
       <div className="mx-auto w-[90%] max-w-[950px]">
         <div className="font-raleway font-semibold text-center text-primary dark:text-white">
@@ -32,13 +59,13 @@ const InsightsBlogs = () => {
           <div
             className={`gap-10 items-start flex max-sm:flex-col max-sm:items-center
                     ${
-                      data?.length > 2
+                      blogs?.length > 2
                         ? "justify-between sm:gap-0"
                         : "justify-center sm:gap-16"
                     }
                 `}
           >
-            {data?.data?.slice(-3)?.map((card) => (
+            {blogs?.slice(-3)?.map((card) => (
               <div
                 key={card?.id}
                 className="w-[270px] sm:w-[31%] max-w-[280px] space-y-3 text-start"

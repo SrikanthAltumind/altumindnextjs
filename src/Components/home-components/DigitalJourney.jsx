@@ -1,25 +1,51 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import ScrollingCards from '../common-components/ScrollingCards'
-import { gradientStyle } from '../../ReactFunctions'
+// import { gradientStyle } from '../../ReactFunctions'
 import axios from 'axios'
+import { useQuery } from '@tanstack/react-query'
+import LoaderSpinner from '../common-components/LoaderSpinner'
 
 const DigitalJourney = () => {
-  const [scrollData, setScrollData] = useState([])
+  // const [scrollData, setScrollData] = useState([])
+  const url = `${import.meta.env.VITE_APP_API_URL}api/whatwedo?populate[whatwedo_mains][populate]=image`
+  const {data, isLoading, isError, error} = useQuery({
+    queryKey:["scrollingCards"],
+    queryFn: () => {
+      return axios.get(url)
+    },
+    staleTime: 24 * 60 * 60 * 1000
+  })
 
-  const getScrollData = () => {
-    axios
-      .get(`${import.meta.env.VITE_APP_API_URL}api/whatwedo?populate[whatwedo_mains][populate]=image`)
-      .then((response) => {
-        setScrollData(response?.data?.data?.attributes?.whatwedo_mains?.data);
-      })
-      .catch((error) => {
-        console.log("error while fetching scrolldata: ", error);
-      });
+  console.log(data, 'scrollingcardsquery')
+
+  const scrollData = data?.data?.data?.attributes?.whatwedo_mains?.data || []
+
+  if(isLoading){
+    return <LoaderSpinner/>
   }
 
-  useEffect(() => {
-    getScrollData()
-  },[])
+  if(isError){
+    return(
+      <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+      {error.message}
+    </div>
+    )
+  }
+
+  // const getScrollData = () => {
+  //   axios
+  //     .get(`${import.meta.env.VITE_APP_API_URL}api/whatwedo?populate[whatwedo_mains][populate]=image`)
+  //     .then((response) => {
+  //       setScrollData(response?.data?.data?.attributes?.whatwedo_mains?.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log("error while fetching scrolldata: ", error);
+  //     });
+  // }
+
+  // useEffect(() => {
+  //   getScrollData()
+  // },[])
 
   return (
     <div className="overflow-hidden dark:text-white relative w-full min-h-[400px] flex flex-col justify-start items-center gap-5 py-6 font-raleway">

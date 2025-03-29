@@ -50,7 +50,7 @@ const DigitalExperienceEngagement = () => {
      <section id='section2'>
         <div className='w-[90%] mx-auto font-raleway dark:text-white'>
            <div className='text-center mb-10 max-w-[750px] mx-auto'>
-               <p className='custom-sub-heading'>Our Digital Experience Services</p>
+               <p className='custom-sub-heading'>Our Digital Experience & Engagement Services</p>
                <p className='custom-gradient-text'>Immersive Digital Experiences to Captivate Your Audience</p>
            </div>
            <DevelopmentServices/>
@@ -60,7 +60,7 @@ const DigitalExperienceEngagement = () => {
        <section id='section3'>
        <div className='font-raleway dark:text-white'>
          <div className='text-center mb-8 max-w-[700px] mx-auto'>
-             <h2 className='custom-sub-heading'>Our Digital Experience Process</h2>
+             <h2 className='custom-sub-heading'>Our Digital Experience & Engagement Process</h2>
              <p className='custom-gradient-text'>A Strategic Approach to Digital Success</p>
          </div>
          <TimeLineFlow/> 
