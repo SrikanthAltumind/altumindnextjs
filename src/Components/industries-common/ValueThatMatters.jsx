@@ -14,7 +14,7 @@ const bfsi = {
     "Technical Expertise and Excellence",
     "User-Centric Approach",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Values_that_matter_image_Compressify_io_05c32869f2.webp",
+  url: "https://cdn.altumindglobal.com/Values_that_matter_image_Compressify_io_05c32869f2.webp",
 };
 
 const healthcare = {
@@ -29,7 +29,7 @@ const healthcare = {
     "AI-Driven Interoperability",
     "Patient-Centric Digital Solutions",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_matters_Compressify_io_44959e4c8e.webp",
+  url: "https://cdn.altumindglobal.com/Value_that_matters_Compressify_io_44959e4c8e.webp",
 };
 
 const internet = {
@@ -44,7 +44,7 @@ const internet = {
     "Enterprise Integration Platforms",
     "AI-Driven Marketing Automation",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_matters_Compressify_io_f350ae5a06.webp",
+  url: "https://cdn.altumindglobal.com/Value_that_matters_Compressify_io_f350ae5a06.webp",
 };
 
 const greenSustainability = {
@@ -58,7 +58,7 @@ const greenSustainability = {
     "Advanced Cloud Sustainability Platforms",
     "Environmental Policy Compliant",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_matters_Compressify_io_9610c53bb8.webp",
+  url: "https://cdn.altumindglobal.com/Value_that_matters_Compressify_io_9610c53bb8.webp",
 };
 
 const edtech = {
@@ -73,7 +73,7 @@ const edtech = {
     "Customizable LMS Solutions",
     "Interactive E-Learning Content",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_matters_Compressify_io_9c29249843.webp",
+  url: "https://cdn.altumindglobal.com/Value_that_matters_Compressify_io_9c29249843.webp",
 };
 
 const digitalEcommerce = {
@@ -87,7 +87,7 @@ const digitalEcommerce = {
     "Process Orchestration",
     "Data-Driven CX Analytics",
   ],
-  url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Value_that_Matters_Compressify_io_266e82d184.webp",
+  url: "https://cdn.altumindglobal.com/Value_that_Matters_Compressify_io_266e82d184.webp",
 };
 
 const ValueThatMatters = () => {

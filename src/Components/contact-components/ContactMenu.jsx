@@ -14,7 +14,7 @@ const contentSection = {
     caption: "start a project",
     description: `Outline your project, and we'll help you with solutions that align perfectly with your goals. `,
     imgUrl:
-      "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Projects_Compressify_io_76a2088943.webp",
+      "https://cdn.altumindglobal.com/Projects_Compressify_io_76a2088943.webp",
   },
 
   partner: {
@@ -23,7 +23,7 @@ const contentSection = {
     description: `Explore partnership opportunities with Altumind to extend your 
                 software solutions to new markets and industries.`,
     imgUrl:
-      "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Partnership_Compressify_io_c83693b19d.webp",
+      "https://cdn.altumindglobal.com/Partnership_Compressify_io_c83693b19d.webp",
   },
 
   general: {
@@ -31,13 +31,13 @@ const contentSection = {
     caption: "General Queries",
     description: `What's on your mind? Share your thoughts, and let's start a conversation that could transform your business.`,
     imgUrl:
-      "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Genral_Compressify_io_a6ea7066a4.webp",
+      "https://cdn.altumindglobal.com/Genral_Compressify_io_a6ea7066a4.webp",
   },
   // career : {
   //   title: 'Shape The Future With Us',
   //   caption:'Join altumind',
   //   description:`Explore career opportunities and become part of our innovative team.`,
-  //   imgUrl:'https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_Compressify_io_7817557ffb.webp'
+  //   imgUrl:'https://cdn.altumindglobal.com/Careers_Compressify_io_7817557ffb.webp'
   // }
 };
 

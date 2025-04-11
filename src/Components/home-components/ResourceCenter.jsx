@@ -23,7 +23,7 @@ const ResourceCenter = () => {
     // },[])
     return (
       <div  className='bg-[#F3F9FF] dark:bg-darkTheme dark:text-white py-14 dark:py-0'>
-      <div className="mx-auto w-[90%] max-w-[950px] font-raleway">
+      <div className="mx-auto w-[90%] font-raleway">
           <div className="space-y-16">
               {/* <p>Resource Center</p>
               <div className="font-extrabold text-3xl lg:text-4xl mb-10 pt-2 space-y-1">

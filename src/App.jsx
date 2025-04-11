@@ -7,12 +7,12 @@ import Error404 from "./pages/Error404";
 const Contact = lazy(() => import("./pages/Contact"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Privacy = lazy(() => import("./pages/Privacy"));
-const Insights = lazy(() => import("./pages/Insights"));
+// const Insights = lazy(() => import("./pages/Insights"));
 const Terms = lazy(() => import("./pages/Terms"));
 const CustomWebDev = lazy(() => import("./pages/CustomWebDev"));
 const SuccessStory = lazy(() => import("./pages/SuccessStory"));
-const Blogs = lazy(() => import("./pages/Blogs"));
-const IndividualBlogPage = lazy(() => import("./pages/IndividualBlogPage"));
+// const Blogs = lazy(() => import("./pages/Blogs"));
+// const IndividualBlogPage = lazy(() => import("./pages/IndividualBlogPage"));
 const Agiliti = lazy(() => import("./pages/Agiliti"));
 // Industry Routes
 const Industry = lazy(() => import("./pages/Industry"));
@@ -21,8 +21,8 @@ const BFSIAndFinance = lazy(() => import("./pages/BFSIAndFinance"));
 const Career = lazy(() => import("./pages/Career"));
 const OpenRoles = lazy(() => import("./pages/OpenRoles"));
 const LifeAtAltumind = lazy(() => import("./pages/LifeAtAltumind"));
-const JobDetails = lazy(() => import("./pages/JobDetails"));
-const ApplyNow = lazy(() => import("./pages/ApplyNow"));
+// const JobDetails = lazy(() => import("./pages/JobDetails"));
+// const ApplyNow = lazy(() => import("./pages/ApplyNow"));
 // About Routes
 const CommunityEngagement = lazy(() => import("./pages/CommunityEngagement"));
 const Alliance = lazy(() => import("./pages/Alliance"));
@@ -95,7 +95,7 @@ export const routes = [
   { path: "/career", element: <Career /> },
   { path: "/portfolio", element: <Portfolio /> },
   { path: "/career/open-roles", element: <OpenRoles /> },
-  { path: "/insights", element: <Insights /> },
+  // { path: "/insights", element: <Insights /> },
   { path: "/about/about-altumind/community-engagement", element: <CommunityEngagement /> },
   { path: "/career/life-at-altumind", element: <LifeAtAltumind /> },
   { path: "/about/about-altumind/alliance", element: <Alliance /> },
@@ -156,9 +156,9 @@ export const routes = [
   { path: "/portfolio/:storyId", element: <SuccessStory /> }, // Dynamic route
   { path: "/jobs/:jobId/:jobName", element: <JobDetailsUpdated /> }, // Dynamic route
   { path: "/jobs/:jobName/ApplyNow", element: <JobApplicationForm/> }, // Dynamic route
-  { path: "/insights/blogs", element: <Blogs /> },
-  { path: "/callback", element: <Blogs /> },
-  { path: "/insights/blog/:id/:blogName", element: <IndividualBlogPage /> }, // Dynamic route
+  // { path: "/insights/blogs", element: <Blogs /> },
+  // { path: "/callback", element: <Blogs /> },
+  // { path: "/insights/blog/:id/:blogName", element: <IndividualBlogPage /> }, // Dynamic route
   { path: "/digital-development-services/web-development-consulting/:pagename" , element:<L3Services/>},
   { path: "/digital-development-services/mobile-app-design-development/:pagename" , element:<L3Services/>},
   { path: "/digital-marketing-services/integrated-digital-marketing-services/:pagename" , element:<L3Services/>},

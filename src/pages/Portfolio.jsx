@@ -135,7 +135,7 @@ const Portfolio = () => {
     <>
       <Helmet>
     {/* For SEO  */}
-    <title>Portfolio | Proven Success Across Industries & Projects</title>
+    <meta name="title" content="Portfolio | Proven Success Across Industries & Projects" />
     <meta
       name="description"
       content="See our success stories in action. Our portfolio showcases the projects we’ve delivered, helping businesses thrive with innovative solutions."
@@ -144,7 +144,7 @@ const Portfolio = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Portfolio | Proven Success Across Industries & Projects" />
     <meta property="og:description" content="See our success stories in action. Our portfolio showcases the projects we’ve delivered, helping businesses thrive with innovative solutions." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     <meta property="og:keywords" content="" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com/portfolio" />
@@ -170,7 +170,7 @@ const Portfolio = () => {
      </div>
   
      <div>
-       <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Portfolio_1ceb081916.svg" alt="Two people collaborate at a table with a tablet, papers, a cup, and a laptop, framed by a red and blue decorative border." />
+       <img className="lg:h-[260px] h-[230px] mx-auto" src="https://cdn.altumindglobal.com/Portfolio_1ceb081916.svg" alt="Two people collaborate at a table with a tablet, papers, a cup, and a laptop, framed by a red and blue decorative border." />
      </div>
    </div>
 

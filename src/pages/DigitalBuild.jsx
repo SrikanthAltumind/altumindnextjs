@@ -30,14 +30,14 @@ const DigitalBuild = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title></title>
+        <meta name="title" content="Digital Build & Digital Genesis: Transform Your Strategy"/>
         <meta name="description" content="Transform your ideas into reality with our digital build services. We help you create custom solutions, from web and app development to seamless digital experiences." />
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="Digital Build,	Digital Genesis" />
         {/* Social Media */}
-        <meta property="og:title" content=""/>
+        <meta property="og:title" content="Digital Build & Digital Genesis: Transform Your Strategy"/>
         <meta property="og:description" content="Transform your ideas into reality with our digital build services. We help you create custom solutions, from web and app development to seamless digital experiences."/>
-        <meta property="og:keywords" content="" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:keywords" content="Digital Build,	Digital Genesis" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting/digital-build"/>
       </Helmet>

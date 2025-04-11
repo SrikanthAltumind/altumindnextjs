@@ -29,14 +29,14 @@ const CloudManagement = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Cloud Management Solutions | Trusted Cloud Management Company</title>
+        <meta name="title" content="Cloud Management Solutions | Trusted Cloud Management Company" />
         <meta name="description" content="Get the most out of your cloud with our cloud management solutions. Partner with our cloud management company to optimize performance and reduce operational costs." />
         <meta name="keywords" content="cloud management solutions, managed cloud service, cloud computing managed services, cloud management companies, cloud management company" />
         {/* Social Media */}
         <meta property="og:title" content="Cloud Management Solutions | Trusted Cloud Management Company"/>
         <meta property="og:description" content="Get the most out of your cloud with our cloud management solutions. Partner with our cloud management company to optimize performance and reduce operational costs."/>
         <meta property="og:keywords" content="cloud management solutions, managed cloud service, cloud computing managed services, cloud management companies, cloud management company" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/managed-operations/cloud-management"/>
       </Helmet>

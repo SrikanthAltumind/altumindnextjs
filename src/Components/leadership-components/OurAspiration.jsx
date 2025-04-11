@@ -73,7 +73,7 @@ const OurAspiration = () => {
       <div className="basis-[32%] bg-red-10 max-w-[320px] hidden lg:block">
         <img
           className=""
-          src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Our_Aspiration_Compressify_io_a51eef2b4f.webp"
+          src="https://cdn.altumindglobal.com/Our_Aspiration_Compressify_io_a51eef2b4f.webp"
           alt={`aspiration-section-img`}
         />
       </div>

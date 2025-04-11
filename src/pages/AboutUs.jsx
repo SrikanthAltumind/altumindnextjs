@@ -16,7 +16,7 @@ const AboutUs = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>About Altumind | IT Solutions & Technology Consulting</title>
+    <meta name="title" content="About Altumind | IT Solutions & Technology Consulting" />
     <meta
       name="description"
       content="Find out who we are, what drives us, and how we help clients achieve success with innovative and reliable solutions."
@@ -24,7 +24,7 @@ const AboutUs = () => {
     {/* For Social Media */}
     <meta property="og:title" content="About AltumindGlobal | IT Solutions & Technology Consulting" />
     <meta property="og:description" content="Find out who we are, what drives us, and how we help clients achieve success with innovative and reliable solutions." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href= "https://altumindglobal.com/about" /> 
   </Helmet>
@@ -170,7 +170,7 @@ const AboutUs = () => {
           <div className="basis-[32%] bg-red-10 max-w-[320px] lg:block">
             <img
               className=""
-              src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Our_shared_commitment_Compressify_io_e57b08a7b4.webp"
+              src="https://cdn.altumindglobal.com/Our_shared_commitment_Compressify_io_e57b08a7b4.webp"
               alt={`about-section-img`}
             />
           </div>

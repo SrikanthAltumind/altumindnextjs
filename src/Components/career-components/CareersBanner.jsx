@@ -63,7 +63,7 @@ const CareersBanner = () => {
       </div>
    
       <div>
-        <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_848045cb75.svg" alt="Illustration of a desk with a 'We are hiring!' computer screen, a red 'Vacant' office chair, and an orange background with subtle decor." />
+        <img className="lg:h-[260px] h-[230px] mx-auto" src="https://cdn.altumindglobal.com/Careers_848045cb75.svg" alt="Illustration of a desk with a 'We are hiring!' computer screen, a red 'Vacant' office chair, and an orange background with subtle decor." />
       </div>
     </div>
   );

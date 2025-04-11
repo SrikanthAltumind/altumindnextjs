@@ -12,7 +12,7 @@ const MissionAndVision = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Altumind: Our Mission & Vision | Innovative IT Solutions</title>
+    <meta name="title" content="Altumind: Our Mission & Vision | Innovative IT Solutions" />
     <meta
       name="description"
       content="Learn about our mission to inspire growth and our vision for a future built on innovation, integrity, and excellence."
@@ -20,7 +20,7 @@ const MissionAndVision = () => {
     {/* For Social Media */}
     <meta property="og:title" content="AltumindGlobal: Our Mission & Vision | Innovative IT Solutions" />
     <meta property="og:description" content="Learn about our mission to inspire growth and our vision for a future built on innovation, integrity, and excellence." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com/about/about-altumind/mission-and-vision" />
   </Helmet>
@@ -45,7 +45,7 @@ const MissionAndVision = () => {
             </div>
               <div className="basis-[50%]">
               <img
-              src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Mision_Compressify_io_ff1b861850.webp"
+              src="https://cdn.altumindglobal.com/Mision_Compressify_io_ff1b861850.webp"
               alt="msv-our-mission"
               className="w-[360px]  mx-auto"
             />
@@ -60,7 +60,7 @@ const MissionAndVision = () => {
             <div className="flex sm:flex-row flex-col gap-5 items-center">
             <div className="basis-[50%]">
                 <img
-                src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Vision_Compressify_io_6dd26e8e7e.webp"
+                src="https://cdn.altumindglobal.com/Vision_Compressify_io_6dd26e8e7e.webp"
                 alt="msv-our-mission"
                 className="w-[360px]"
                 />

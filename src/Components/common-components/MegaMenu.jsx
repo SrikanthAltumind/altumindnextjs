@@ -40,6 +40,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                           } rounded-md flex justify-between group font-semibold capitalize items-center  p-2 m-2`}
                         >
                           {child.innerMenu}
+                          {child?.children?.length > 0 &&
                           <svg
                               className='w-5 h-5'
                               aria-hidden="true"
@@ -56,7 +57,7 @@ const MegaMenu = ({ item, onMouseLeave }) => {
                                 strokeWidth="2"
                                 d="m9 5 7 7-7 7"
                               />
-                            </svg>
+                            </svg> }
                           {/* {child?.children?.length > 0 && (
                             <svg
                               className={`${

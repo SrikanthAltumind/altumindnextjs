@@ -36,14 +36,14 @@ const EcommerceServices = () => {
     <>
       <Helmet>
         {/* SEO */}
-        <title>Expert Ecommerce Services | Ecommerce Retail Specialists</title>
+        <meta name="title" content='Expert Ecommerce Services | Ecommerce Retail Specialists' />
         <meta name="description" content="Partner with ecommerce retail specialists for premium ecommerce services. We craft tailored solutions to enhance your online store's performance." />
         <meta name="keywords" content="ecommerce services, ecommerce development services, Omni commerce, Headless Ecommerce Solutions, ecommerce retail specialist, ecommerce consulting services, retail marketing solutions" />
         {/* Social Media */}
         <meta property="og:title" content="Expert Ecommerce Services | Ecommerce Retail Specialists"/>
         <meta property="og:description" content="Partner with ecommerce retail specialists for premium ecommerce services. We craft tailored solutions to enhance your online store's performance."/>
         <meta property="og:keywords" content="ecommerce services, ecommerce development services, Omni commerce, Headless Ecommerce Solutions, ecommerce retail specialist, ecommerce consulting services, retail marketing solutions" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/technology-and-engineering/ecommerce-services"/>
       </Helmet>

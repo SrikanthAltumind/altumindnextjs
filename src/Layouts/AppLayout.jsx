@@ -5,7 +5,7 @@ import { createContext, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-// import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ThemeContext = createContext();
 
@@ -13,14 +13,14 @@ const AppLayout = () => {
   const [theme, setTheme] = useState("light");
   const { pathname } = useLocation();
   const queryClient = new QueryClient()
-  // const [loadCaptcha, setLoadCaptcha] = useState(false);
+  const [loadCaptcha, setLoadCaptcha] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoadCaptcha(true);
-  //   } ,3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadCaptcha(true);
+    } ,4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   
 
@@ -37,7 +37,7 @@ const AppLayout = () => {
   return (
     <HelmetProvider>
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        {/* {loadCaptcha ? (
+        {loadCaptcha ? (
           <GoogleReCaptchaProvider
             scriptProps={{
               async: true,
@@ -46,6 +46,7 @@ const AppLayout = () => {
             }}
             reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
           >
+            <QueryClientProvider client={queryClient}>
             <div className="dark:bg-black bg-white w-full">
               <main>
                 <Navbar />
@@ -53,8 +54,10 @@ const AppLayout = () => {
               </main>
               <Footer />
             </div>
-          </GoogleReCaptchaProvider> */}
-        {/* ) : ( */}
+            <ReactQueryDevtools initialIsOpen={false}/>
+            </QueryClientProvider>
+          </GoogleReCaptchaProvider>
+        ) : (
         <QueryClientProvider client={queryClient}>
           <div className="dark:bg-black bg-white w-full">
             <main>
@@ -63,9 +66,8 @@ const AppLayout = () => {
             </main>
             <Footer />
           </div>
-          <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
-        {/* )} */}
+         )} 
       </ThemeContext.Provider>
     </HelmetProvider>
   );

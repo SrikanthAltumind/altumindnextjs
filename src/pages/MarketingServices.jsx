@@ -30,14 +30,14 @@ const MarketingServices = () => {
    <>
    <Helmet>
         {/* SEO */}
-        <title>Marketing Services | Leading Marketing Operations Consultant</title>
+        <meta name="title" content="Marketing Services | Leading Marketing Operations Consultant" />
         <meta name="description" content="Drive success with marketing as a service. Our marketing operations consultant offers strategic support to enhance your marketing processes and outcomes." />
         <meta name="keywords" content="marketing as a service, market service, international marketing services, brand marketing services, marketing operations consultant, marketing services consultant, marketing it consulting services" />
         {/* Social Media */}
         <meta property="og:title" content="Marketing Services | Leading Marketing Operations Consultant"/>
         <meta property="og:description" content="Drive success with marketing as a service. Our marketing operations consultant offers strategic support to enhance your marketing processes and outcomes."/>
         <meta property="og:keywords" content="marketing as a service, market service, international marketing services, brand marketing services, marketing operations consultant, marketing services consultant, marketing it consulting services" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-marketing/marketing-services"/>
       </Helmet>

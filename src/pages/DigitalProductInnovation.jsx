@@ -29,14 +29,14 @@ const DigitalProductInnovation = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Best Product Development and Innovation in the Industry</title>
+        <meta name="title" content="Best Product Development and Innovation in the Industry" />
         <meta name="description" content="Let’s turn your vision into reality. Our product development and innovation services help you build products that stand out and drive real business growth." />
         <meta name="keywords" content="product development and innovation, innovation and new product development, product innovation and design, innovations products, innovation in product design, innovative product design" />
         {/* Social Media */}
         <meta property="og:title" content="Best Product Development and Innovation in the Industry"/>
         <meta property="og:description" content="Let’s turn your vision into reality. Our product development and innovation services help you build products that stand out and drive real business growth."/>
         <meta property="og:keywords" content="product development and innovation, innovation and new product development, product innovation and design, innovations products, innovation in product design, innovative product design" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/managed-operations/product-innovation-management"/>
       </Helmet>

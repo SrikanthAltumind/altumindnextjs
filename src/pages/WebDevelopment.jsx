@@ -35,14 +35,14 @@ const WebDevelopment = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Web Development Services | Top Website Development Company</title>
+        <meta name="title" content="Web Development Services | Top Website Development Company" />
         <meta name="description" content="Get custom web development services from an experienced website development company, designing responsive, scalable websites that drive results." />
         <meta name="keywords" content="web development services, custom web development services, web application development services, web app development, website development company, custom website development company, web development consulting services" />
         {/* Social Media */}
         <meta property="og:title" content="Web Development Services | Top Website Development Company"/>
         <meta property="og:description" content="Get custom web development services from an experienced website development company, designing responsive, scalable websites that drive results."/>
         <meta property="og:keywords" content="web development services, custom web development services, web application development services, web app development, website development company, custom website development company, web development consulting services" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/technology-and-engineering/web-development"/>
       </Helmet>

@@ -12,7 +12,7 @@ const ContactBanner = () => {
       </div>
    
       <div>
-        <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Careers_1_e52e0f1b4a.svg" alt="Illustration of a person with a headset, smiling and holding a chart, surrounded by phone, chat, and book icons, with abstract leaf patterns in the background." />
+        <img className="lg:h-[260px] h-[230px] mx-auto" src="https://cdn.altumindglobal.com/Careers_1_e52e0f1b4a.svg" alt="Illustration of a person with a headset, smiling and holding a chart, surrounded by phone, chat, and book icons, with abstract leaf patterns in the background." />
       </div>
     </div>
   )

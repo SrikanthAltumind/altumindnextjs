@@ -8,7 +8,7 @@ const Industry = () => {
     <>
     <Helmet>
           {/* For SEO  */}
-          <title>Industries We Serve | Tailored Solutions for Every Sector</title>
+          <meta name="title" content="Industries We Serve | Tailored Solutions for Every Sector" />
           <meta
             name="description"
             content="Explore our industry-specific solutions. We provide tailored services to meet the unique needs of various sectors, driving growth and innovation across industries."
@@ -17,7 +17,7 @@ const Industry = () => {
           {/* For Social Media */}
           <meta property="og:title" content="Industries We Serve | Tailored Solutions for Every Sector" />
           <meta property="og:description" content="Explore our industry-specific solutions. We provide tailored services to meet the unique needs of various sectors, driving growth and innovation across industries." />
-          <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+          <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
           <meta property="og:keywords" content="" />
           {/* canonical */}
           <link rel="canonical" href="https://altumindglobal.com/industries" />

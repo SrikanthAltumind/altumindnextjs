@@ -11,7 +11,7 @@ const CommunityEngagement = () => {
      <>
     <Helmet>
     {/* For SEO  */}
-    <title>Explore Community Engagement | Altumind</title>
+    <meta name="title" content="Explore Community Engagement | Altumind" />
     <meta
       name="description"
       content="See how we engage with our community to drive impact, foster collaboration, and support initiatives that make a difference"
@@ -19,7 +19,7 @@ const CommunityEngagement = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Explore Community Engagement | AltumindGlobal" />
     <meta property="og:description" content="See how we engage with our community to drive impact, foster collaboration, and support initiatives that make a difference" />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href= "https://altumindglobal.com/about/about-altumind/community-engagement  " />
   </Helmet>

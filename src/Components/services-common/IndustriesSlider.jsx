@@ -22,9 +22,33 @@ const IndustriesSlider = () => {
         apiUrl = 'api/service-managed-operation-ssm-ind-expertises?populate=*'
       else if(location.pathname.startsWith("/services/operations-managed-services"))
           apiUrl = 'api/service-managed-operation-child-ind-expertises?populate=*'
+      
+      else if(location.pathname.startsWith("/digital-development-services/mobile-app-design-development/"))
+          apiUrl = '/api/service-ind-hybs?populate=*'
+         else if(location.pathname === "/digital-development-services/web-development-consulting/responsive-web-development-services")
+          apiUrl = '/api/service-ind-pros?populate=*'
+         else if(location.pathname === "/digital-development-services/web-development-consulting/cms-development-services")
+          apiUrl = '/api/service-ind-cms?populate=*'
+         else if(location.pathname === "/digital-development-services/web-development-consulting/progressive-web-app-development-services")
+          apiUrl = '/api/service-ind-pros?populate=*'
+         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services")
+          apiUrl = "/api/service-ind-emails?populate=*"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services")
+        apiUrl = "/api/service-ind-emails?populate=*"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services")
+        apiUrl = "/api/service-ind-emails?populate=*"
+        else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy")
+        apiUrl = "/api/service-ind-markets?populate=*"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/b2b-seo-services")
+        apiUrl = "/api/service-ind-cros?populate=*"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/app-store-optimization-services")
+        apiUrl = "/api/service-ind-asos?populate=*"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/orm-service")
+        apiUrl = "/api/service-ind-orms?populate=*"
+        else if(location.pathname === "/digital-marketing-services/optimization-services/cro-services")
+        apiUrl = "/api/service-ind-cros?populate=*"
       else
         apiUrl = 'api/service-tech-engg-child-industry-expertises?populate=*'
-
 
 
   const fetchData = ()=> {

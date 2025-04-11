@@ -11,7 +11,7 @@ const Alliance = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Strategic Alliances | Altumind's Technology Partnerships</title>
+    <meta name="title" content="Strategic Alliances | Altumind's Technology Partnerships" />
     <meta
       name="description"
       content="Find out how our strategic alliances empower us to offer enhanced solutions, greater value, and lasting results for our clients."
@@ -19,7 +19,7 @@ const Alliance = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Strategic Alliances | AltumindGlobal's Technology Partnerships" />
     <meta property="og:description" content="Find out how our strategic alliances empower us to offer enhanced solutions, greater value, and lasting results for our clients." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href= "https://altumindglobal.com/about/about-altumind/alliance " />
   </Helmet>

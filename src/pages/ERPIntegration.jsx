@@ -32,14 +32,14 @@ const ERPIntegration = () => {
     <>
       <Helmet>
         {/* SEO */}
-        <title>ERP Integration Services | Leading ERP Integration Platform</title>
+        <meta name="title" content='ERP Integration Services | Leading ERP Integration Platform' />
         <meta name="description" content="Enhance business efficiency with our ERP integration service. Seamlessly connect systems using our powerful ERP integration platform" />
         <meta name="keywords" content="erp integration service, erp integration, erp systems integrators, erp software integration, erp integration platform, erp integrated solutions, integrated erp" />
         {/* Social Media */}
         <meta property="og:title" content="ERP Integration Services | Leading ERP Integration Platform"/>
         <meta property="og:description" content="Enhance business efficiency with our ERP integration service. Seamlessly connect systems using our powerful ERP integration platform"/>
         <meta property="og:keywords" content="erp integration service, erp integration, erp systems integrators, erp software integration, erp integration platform, erp integrated solutions, integrated erp" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/technology-and-engineering/erp-integration"/>
       </Helmet>

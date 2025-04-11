@@ -32,7 +32,7 @@ const AIandAutomation = () => {
     <>
       <Helmet>
         {/* For SEO  */}
-        <title>Intelligent Automation Services | Expert AI Services Provider</title>
+        <meta name="title" content="Intelligent Automation Services | Expert AI Services Provider" />
         <meta
           name="description"
           content="Get AI services and intelligent automation services to automate workflows and improve efficiency. Innovate your business with cutting-edge technology."
@@ -41,7 +41,7 @@ const AIandAutomation = () => {
         {/* For Social Media */}
         <meta property="og:title" content="Intelligent Automation Services | Expert AI Services Provider" />
         <meta property="og:description" content="Get AI services and intelligent automation services to automate workflows and improve efficiency. Innovate your business with cutting-edge technology." />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         <meta property="og:keywords" content="ai services, ai professional services, ai as a service, ai consulting services, intelligent automation services, automation consulting services, automation services" />
         {/* canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/ai-automation" />

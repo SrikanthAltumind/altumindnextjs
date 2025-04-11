@@ -29,14 +29,14 @@ const DigitalModernization = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Digital Modernization | Modernizing Technology & Digital Solutions</title>
+        <meta name="title" content="Digital Modernization | Modernizing Technology & Digital Solutions" />
         <meta name="description" content="Ready to transform? Our digital modernization services help you modernizing technology, streamline operations, and stay ahead in a fast-changing world." />
         <meta name="keywords" content="modernizing technology, modernize tech, application modernization services, digital modernization, digitalization services" />
         {/* Social Media */}
         <meta property="og:title" content="Digital Modernization | Modernizing Technology & Digital Solutions"/>
         <meta property="og:description" content="Ready to transform? Our digital modernization services help you modernizing technology, streamline operations, and stay ahead in a fast-changing world."/>
         <meta property="og:keywords" content="modernizing technology, modernize tech, application modernization services, digital modernization, digitalization services" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting/digital-modernization"/>
       </Helmet>

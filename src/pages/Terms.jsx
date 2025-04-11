@@ -5,7 +5,7 @@ const Terms = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Terms and Conditions | Our Policies and User Guidelines</title>
+    <meta name="title" content="Terms and Conditions | Our Policies and User Guidelines" />
     <meta
         name="description"
         content="Check out our Terms and Conditions to learn about our rules and policies. Using our site means you accept and agree to abide by these terms."
@@ -14,7 +14,7 @@ const Terms = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Terms and Conditions | Our Policies and User Guidelines" />
     <meta property="og:description" content="Check out our Terms and Conditions to learn about our rules and policies. Using our site means you accept and agree to abide by these terms." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     <meta property="og:keywords" content="" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com/terms" />

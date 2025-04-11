@@ -24,7 +24,7 @@ const Services = () => {
     {
       title: "Dive into our latest insights and industry analyses.",
       hexvalue: "#02194A",
-      cta: "/insights",
+      cta: "https://blogs.altumindglobal.com/",
       ctaText: "Explore Our Insights",
     },
     {
@@ -46,7 +46,7 @@ const Services = () => {
      <>
     <Helmet>
     {/* For SEO  */}
-    <title>Our Services | Next-Gen Technology Solutions</title>
+    <meta name="title" content="Our Services | Next-Gen Technology Solutions" />
     <meta
       name="description"
       content="Learn about the wide range of services we offer to deliver effective solutions that support your business goals."
@@ -54,7 +54,7 @@ const Services = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Our Services | Next-Gen Technology Solutions" />
     <meta property="og:description" content="Learn about the wide range of services we offer to deliver effective solutions that support your business goals." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href= "https://altumindglobal.com/services" />
   </Helmet>

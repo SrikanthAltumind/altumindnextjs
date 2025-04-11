@@ -15,7 +15,7 @@ const Career = () => {
     <>
       <Helmet>
             {/* For SEO  */}
-            <title>Career Opportunities | Build Your Future with Us</title>
+            <meta name="title" content="Career Opportunities | Build Your Future with Us" />
             <meta
               name="description"
               content="Excited about new possibilities? Explore our career page and find a career path where your ideas and creativity can thrive in a dynamic, collaborative team."
@@ -24,7 +24,7 @@ const Career = () => {
             {/* For Social Media */}
             <meta property="og:title" content="Career Opportunities | Build Your Future with Us" />
             <meta property="og:description" content="Excited about new possibilities? Explore our career page and find a career path where your ideas and creativity can thrive in a dynamic, collaborative team." />
-            <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+            <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
             <meta property="og:keywords" content="" />
             {/* canonical */}
             <link rel="canonical" href="https://altumindglobal.com/career" />

@@ -26,7 +26,7 @@ const BFSIAndFinance = () => {
 
   const sections = [
     { id: "section-1", tabId: "tab1", name: "Segments" },
-    { id: "section-2", tabId: "tab2", name: "Value propostion" },
+    { id: "section-2", tabId: "tab2", name: "Value proposition" },
     { id: "section-3", tabId: "tab3", name: "Offerings" },
     { id: "section-4", tabId: "tab4", name: "Challenges" },
     { id: "section-5", tabId: "tab5", name: "Success" },
@@ -51,14 +51,14 @@ const BFSIAndFinance = () => {
     <>
   <Helmet>
         {/* SEO */}
-        <title>{metadata.title}</title>
+        <meta name="title" content={metadata.title} />
         <meta name="description" content={metadata.description} />
         {metadata.keywords && <meta name="keywords" content={metadata.keywords} /> }
         {/* Social Media */}
         <meta property="og:title" content={metadata.ogTitle} />
         {metadata.keywords && <meta property="og:keywords" content={metadata.keywords} /> }
         <meta property="og:description" content={metadata.ogDescription} />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href={metadata.canonicalUrl} />
       </Helmet>

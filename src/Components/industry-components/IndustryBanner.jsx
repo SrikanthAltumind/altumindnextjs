@@ -62,7 +62,7 @@ const IndustryBanner = () => {
    </div>
 
    <div>
-     <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Industries_9987cd92ec.svg" alt="Modern glass building with tall pillars, large windows reflecting sunlight, creating a warm glow on the right, and stone tile paving." />
+     <img className="lg:h-[260px] h-[230px] mx-auto" src="https://cdn.altumindglobal.com/Industries_9987cd92ec.svg" alt="Modern glass building with tall pillars, large windows reflecting sunlight, creating a warm glow on the right, and stone tile paving." />
    </div>
  </div>
   )

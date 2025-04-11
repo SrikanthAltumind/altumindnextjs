@@ -29,14 +29,14 @@ const BusinessIntelligence = () => {
     <>
       <Helmet>
         {/* SEO */}
-        <title>Business Intelligence as a Service | BI Consulting Experts</title>
+        <meta name="title" content="Business Intelligence as a Service | BI Consulting Experts" />
         <meta name="description" content="Let us help you navigate your data! With business intelligence as a service and expert business intelligence consulting, we help you for better outcomes." />
         <meta name="keywords" content="business intelligence as a service, intelligence business solutions, bi services, business intelligence consulting, business intelligence consulting company, intelligence business consulting" />
         {/* Social Media */}
         <meta property="og:title" content="Business Intelligence as a Service | BI Consulting Experts"/>
         <meta property="og:description" content="Let us help you navigate your data! With business intelligence as a service and expert business intelligence consulting, we help you for better outcomes."/>
         <meta property="og:keywords" content="business intelligence as a service, intelligence business solutions, bi services, business intelligence consulting, business intelligence consulting company, intelligence business consulting" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/data-analytics/business-intelligence"/>
       </Helmet>

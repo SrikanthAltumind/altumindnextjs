@@ -30,16 +30,18 @@ const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
         <ul className="space-y-5">
           {Navbardata?.map((item) => (
             <li key={item.menu} className="flex items-center justify-between">
-              <p
+              <Link
+                target={item.path === "https://blogs.altumindglobal.com/" ? "_blank" : ""}
+                to={item?.path}
                 className="p-1"
                 onClick={() => {
                   setShowMobileMenu(false);
-                  navigate(item.path);
+                  // navigate(item.path, {replace:true});
                 }}
               >
                 {" "}
                 {item.menu}{" "}
-              </p>
+              </Link>
               {item?.children?.length > 0 && (
                 <button
                   className="p-1 flex justify-between items-center"

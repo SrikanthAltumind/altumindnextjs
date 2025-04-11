@@ -54,14 +54,14 @@ const SuccessStory = () => {
     <>
       <Helmet>
             {/* SEO */}
-            <title>{metadata.title}</title>
+            <meta name="title" content={metadata.title} />
             <meta name="description" content={metadata.description} />
             {metadata.keywords && <meta name="keywords" content={metadata.keywords} /> }
             {/* Social Media */}
             <meta property="og:title" content={metadata.ogTitle} />
             {metadata.keywords && <meta property="og:keywords" content={metadata.keywords} /> }
             <meta property="og:description" content={metadata.ogDescription} />
-            <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+            <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
             {/* Canonical */}
             <link rel="canonical" href={metadata.canonicalUrl} />
           </Helmet>

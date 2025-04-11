@@ -29,14 +29,14 @@ const DigitalExperienceEngagement = () => {
     <>
      <Helmet>
         {/* SEO */}
-        <title>Digital Experience Platforms | Customer Engagement Management</title>
+        <meta name="title" content="Digital Experience Platforms | Customer Engagement Management" />
         <meta name="description" content="Create seamless customer journeys with our digital experience platforms and customer engagement management solutions. Boost satisfaction and drive results." />
         <meta name="keywords" content="customer engagement management, digital engagement strategist, digital audience engagement, digital client engagement, Digital Experience, digital experience platforms, digital experience solutions" />
         {/* Social Media */}
         <meta property="og:title" content="Digital Experience Platforms | Customer Engagement Management"/>
         <meta property="og:description" content="Create seamless customer journeys with our digital experience platforms and customer engagement management solutions. Boost satisfaction and drive results."/>
         <meta property="og:keywords" content="customer engagement management, digital engagement strategist, digital audience engagement, digital client engagement, Digital Experience, digital experience platforms, digital experience solutions" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting/digital-experience-engagement"/>
       </Helmet>

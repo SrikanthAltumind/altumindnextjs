@@ -31,7 +31,7 @@ const DigitalStrategy = () => {
     <>
     <Helmet>
       {/* For SEO  */}
-      <title>Digital Strategy Services | Best Digital Strategy consultant</title>
+      <meta name="title" content="Digital Strategy Services | Best Digital Strategy consultant" />
       <meta
         name="description"
         content="Need a winning digital strategy? Our digital strategy services and experienced digital strategist consultants provide the insights to grow your business online."
@@ -40,7 +40,7 @@ const DigitalStrategy = () => {
       {/* For Social Media */}
       <meta property="og:title" content="Digital Strategy Services | Best Digital Strategy consultant" />
       <meta property="og:description" content="Need a winning digital strategy? Our digital strategy services and experienced digital strategist consultants provide the insights to grow your business online." />
-      <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+      <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
       <meta property="og:keywords" content="managed application services, infrastructure managed services, operations managed services, Cloud managed services, it management consulting, it management company, it and management consulting" />
       {/* canonical */}
       <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting" />

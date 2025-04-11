@@ -30,14 +30,14 @@ const QAConsultingService = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>Quality Assurance Consultant: Ensuring Your Software’s Success</title>
+        <meta name="title" content="Quality Assurance Consultant: Ensuring Your Software’s Success" />
         <meta name="description" content="Let our quality assurance consultant guide you in delivering top-quality software, identifying issues early and ensuring seamless performance." />
         <meta name="keywords" content="quality assurance consultant, software test consultant, quality assurance consulting, quality assurance consulting companies, quality assurance consulting firms" />
         {/* Social Media */}
         <meta property="og:title" content="Quality Assurance Consultant: Ensuring Your Software’s Success"/>
         <meta property="og:description" content="Let our quality assurance consultant guide you in delivering top-quality software, identifying issues early and ensuring seamless performance."/>
         <meta property="og:keywords" content="quality assurance consultant, software test consultant, quality assurance consulting, quality assurance consulting companies, quality assurance consulting firms" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance/qa-consulting"/>
       </Helmet>

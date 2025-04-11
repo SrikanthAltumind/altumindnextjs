@@ -29,14 +29,14 @@ const DigitalAudit = () => {
    <>
    <Helmet>
         {/* SEO */}
-        <title>Digital Audit Services | Comprehensive Digital Website Audit</title>
+        <meta name="title" content="Digital Audit Services | Comprehensive Digital Website Audit" />
         <meta name="description" content="Get actionable insights with our digital audit and digital website audit services. We identify areas to enhance performance, security, and overall user experience." />
         <meta name="keywords" content="digital audit, digital website audit, digital presence audit, audit digital" />
         {/* Social Media */}
         <meta property="og:title" content="Digital Audit Services | Comprehensive Digital Website Audit"/>
         <meta property="og:description" content="Get actionable insights with our digital audit and digital website audit services. We identify areas to enhance performance, security, and overall user experience."/>
         <meta property="og:keywords" content="digital audit, digital website audit, digital presence audit, audit digital" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting/digital-audits"/>
       </Helmet>

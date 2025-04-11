@@ -33,7 +33,7 @@ const QAandTesting = () => {
     <>
      <Helmet>
             {/* For SEO  */}
-            <title>Top Quality Assurance Services | Software Testing Services Companies</title>
+            <meta name="title" content="Top Quality Assurance Services | Software Testing Services Companies" />
             <meta
               name="description"
               content="Get reliable Quality Assurance services from top software testing services companies. Ensure flawless software with expert testing and validation."
@@ -42,7 +42,7 @@ const QAandTesting = () => {
             {/* For Social Media */}
             <meta property="og:title" content="Top Quality Assurance Services | Software Testing Services Companies" />
             <meta property="og:description" content="Get reliable Quality Assurance services from top software testing services companies. Ensure flawless software with expert testing and validation." />
-            <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+            <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
             <meta property="og:keywords" content="Quality Assurance Services, quality assurance and testing services, Software testing services, Software testing services companies, quality assurance Company, quality assurance consulting services" />
             {/* canonical */}
             <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance" />

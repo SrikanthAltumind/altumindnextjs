@@ -30,14 +30,14 @@ const PerformanceTesting = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>Performance Testing Services for Faster, Smarter Software</title>
+        <meta name="title" content="Performance Testing Services for Faster, Smarter Software" />
         <meta name="description" content="Make sure your software performs flawlessly with our performance testing services, optimizing speed and reliability for the best user experience." />
         <meta name="keywords" content="quality assurance consultant, software test consultant, quality assurance consulting, quality assurance consulting companies, quality assurance consulting firms" />
         {/* Social Media */}
         <meta property="og:title" content="Performance Testing Services for Faster, Smarter Software"/>
         <meta property="og:description" content="Make sure your software performs flawlessly with our performance testing services, optimizing speed and reliability for the best user experience."/>
         <meta property="og:keywords" content="quality assurance consultant, software test consultant, quality assurance consulting, quality assurance consulting companies, quality assurance consulting firms" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance/performance-testing"/>
       </Helmet>

@@ -29,14 +29,14 @@ const MarketingIntelligence = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Top Marketing Intelligence Services | Process Expert</title>
+        <meta name="title" content="Top Marketing Intelligence Services | Process Expert" />
         <meta name="description" content="Make smarter decisions with our market intelligence services. Our proven market intelligence process provides the insights you need to stay competitive." />
         <meta name="keywords" content="market research and intelligence, marketing intelligence solutions, market intelligence services, market intelligence process, market research intelligence" />
         {/* Social Media */}
         <meta property="og:title" content="Top Marketing Intelligence Services | Process Expert"/>
         <meta property="og:description" content="Make smarter decisions with our market intelligence services. Our proven market intelligence process provides the insights you need to stay competitive."/>
         <meta property="og:keywords" content="market research and intelligence, marketing intelligence solutions, market intelligence services, market intelligence process, market research intelligence" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/data-analytics/marketing-intelligence"/>
       </Helmet>

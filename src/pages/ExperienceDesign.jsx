@@ -30,7 +30,7 @@ const ExperienceDesign = () => {
      <>
     <Helmet>
     {/* For SEO  */}
-    <title>Experience Design Services & Consulting | Altumind</title>
+    <meta name="title" content="Experience Design Services & Consulting | Altumind"  />
     <meta
       name="description"
       content="Transform your digital presence with our experience design services and experience design consulting, focused on creating seamless, user-centered solutions."
@@ -38,7 +38,7 @@ const ExperienceDesign = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Experience Design Services & Consulting | AltumindGlobal" />
     <meta property="og:description" content="Transform your digital presence with our experience design services and experience design consulting, focused on creating seamless, user-centered solutions." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com/services/experience-design" />
   </Helmet>

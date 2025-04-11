@@ -51,14 +51,14 @@ const MobileAppDevelopment = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Mobile App Development Technologies | Mobile App Consulting</title>
+        <meta name="title" content="Mobile App Development Technologies | Mobile App Consulting" />
         <meta name="description" content="Get expert mobile app development consulting and cutting-edge mobile app development technologies to create intuitive, cross-platform apps." />
         <meta name="keywords" content="mobile app development technologies, mobile design and development, mobile app development for enterprise, custom mobile app development for startups, mobile app development consulting, react native mobile app development company, mobile app consulting services" />
         {/* Social Media */}
         <meta property="og:title" content="Mobile App Development Technologies | Mobile App Consulting"/>
         <meta property="og:description" content="Get expert mobile app development consulting and cutting-edge mobile app development technologies to create intuitive, cross-platform apps."/>
         <meta property="og:keywords" content="mobile app development technologies, mobile design and development, mobile app development for enterprise, custom mobile app development for startups, mobile app development consulting, react native mobile app development company, mobile app consulting services" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/technology-and-engineering/mobile-app-development"/>
       </Helmet>

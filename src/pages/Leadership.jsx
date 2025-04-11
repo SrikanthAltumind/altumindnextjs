@@ -13,7 +13,7 @@ const Leadership = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Meet the Leadership | Altumind Technology Experts</title>
+    <meta name="title" content="Meet the Leadership | Altumind Technology Experts" />
     <meta
       name="description"
       content="Discover the visionary leaders behind our success, guiding our team with expertise, integrity, and a commitment to innovation."
@@ -21,7 +21,7 @@ const Leadership = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Meet the Leadership | AltumindGlobal Technology Experts" />
     <meta property="og:description" content="Discover the visionary leaders behind our success, guiding our team with expertise, integrity, and a commitment to innovation." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com/about/about-altumind/leadership" />
   </Helmet>

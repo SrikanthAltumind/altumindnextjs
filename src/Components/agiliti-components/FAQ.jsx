@@ -137,29 +137,29 @@ const FAQ = () => {
        else if(location.pathname === "/digital-development-services/mobile-app-design-development/ios-development-services")
         apiUrl = "/api/service-ios-faq-contents?populate=*"
        else if(location.pathname === "/digital-development-services/mobile-app-design-development/android-application-development-services")
-        apiUrl = "/api/service-ios-faq-contents?populate=*"
+        apiUrl = "/api/service-and-faq-contents?populate=*"
        else if(location.pathname === "/digital-development-services/mobile-app-design-development/hybrid-app-development-services")
         apiUrl = "/api/service-had-faq-contents?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/1?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/10?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/5?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/4?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/performance-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/8?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/6?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/b2b-seo-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/9?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/app-store-optimization-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/2?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/orm-service")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/7?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/cro-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-faqs/3?populate=*"
 
       const {data, isLoading, isError, error} = useFetchData(['faq', location.pathname], apiUrl, !isERPIntegrationPage)
       const faqData = isERPIntegrationPage ? erpFAQData : (data?.data?.data || [])

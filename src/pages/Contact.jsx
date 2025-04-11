@@ -13,7 +13,7 @@ const Contact = () => {
     <>
        <Helmet>
             {/* For SEO  */}
-            <title>Contact Us | We're Here to Help – Get in Touch Today</title>
+            <meta name="title" content="Contact Us | We're Here to Help – Get in Touch Today" />
             <meta
               name="description"
               content="Let’s talk! Whether you need support or have questions, our team is ready and eager to assist. Get in touch with us today."
@@ -22,7 +22,7 @@ const Contact = () => {
             {/* For Social Media */}
             <meta property="og:title" content="Contact Us | We're Here to Help – Get in Touch Today" />
             <meta property="og:description" content="Let’s talk! Whether you need support or have questions, our team is ready and eager to assist. Get in touch with us today." />
-            <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+            <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
             <meta property="og:keywords" content="" />
             {/* canonical */}
             <link rel="canonical" href="https://altumindglobal.com/contact" />

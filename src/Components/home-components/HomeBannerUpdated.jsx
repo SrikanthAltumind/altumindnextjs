@@ -74,7 +74,7 @@ const HomeBannerUpdated = () => {
 // },[])
 
   return (
-    <div  style={{fontFamily:"Raleway, sans-serif"}} className="h-screen sm:h-auto flex md:flex-row flex-col-reverse bg-LightBlue px-4 py-7 items-center">
+    <div  style={{fontFamily:"Raleway, sans-serif"}} className="h-auto flex md:flex-row flex-col-reverse bg-LightBlue px-4 py-7 items-center">
       <div className=" md:w-[55%] flex flex-col gap-6 p-5 lg:pl-10">
       <h1 className="font-bold md:text-4xl text-3xl">
           {/* Driving Growth through <br /> Digital Innovation in{" "} */}
@@ -117,9 +117,9 @@ const HomeBannerUpdated = () => {
       {/* <source srcSet={`https://krishna.altumindglobal.com/Homepage_mobile-(Compressify.io)%201.webp`} type="image/webp" media="(max-width: 480px)" /> */}
       {/* <source srcSet={`https://krishna.altumindglobal.com/Homepage_Desktop-(Compressify.io)%201.webp`} type="image/webp" media="(max-width: 768px)" /> */}
         <img
-          // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Banner_Image_0b6b650582.webp"
-          // src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Homepage_e48ac42265.svg"
-          src={'https://krishna.altumindglobal.com/Homepage_Desktop-(Compressify.io)%201.webp'}
+          // src="https://cdn.altumindglobal.com/Banner_Image_0b6b650582.webp"
+          // src="https://cdn.altumindglobal.com/Homepage_e48ac42265.svg"
+          src={'https://cdn.altumindglobal.com/Homepage_Desktop-(Compressify.io).webp'}
           alt="A digital integration of Earth is showcased with glowing connections, overlaid by stylized curved lines."
           // className="object-contain lg:h-[650px] lg:w-[750px] md:h-[400px] h-[320px] w-[340px] "
           loading='eager'

@@ -69,7 +69,7 @@ const OpenRoles = () => {
   ];
   
   const location = [
-    { id: "USA", name: "USA" },
+    { id: "United States", name: "USA" },
     { id: "India", name: "India" },
     { id: "Remote", name: "Remote" }
   ];
@@ -272,7 +272,7 @@ useEffect(() => {
     <>
      <Helmet>
                 {/* For SEO  */}
-                <title>Open Roles | Explore Current Job Openings & Apply Now</title>
+                <meta name="title" content="Open Roles | Explore Current Job Openings & Apply Now" />
                 <meta
                   name="description"
                   content="Ready for your next career adventure? Join our team and be part of a company that values creativity, growth, and collaboration. Explore our opportunities!"
@@ -281,7 +281,7 @@ useEffect(() => {
                 {/* For Social Media */}
                 <meta property="og:title" content="Open Roles | Explore Current Job Openings & Apply Now" />
                 <meta property="og:description" content="Ready for your next career adventure? Join our team and be part of a company that values creativity, growth, and collaboration. Explore our opportunities!" />
-                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
                 <meta property="og:keywords" content="" />
                 {/* canonical */}
                 <link rel="canonical" href="https://altumindglobal.com/career/open-roles" />
@@ -297,7 +297,7 @@ useEffect(() => {
    </div>
 
    <div>
-     <img className="lg:h-[260px] h-[230px] mx-auto" src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Open_Roles_e8e58a1cd1.svg" alt="Two people hold a 'Join Us!' sign next to a document labeled 'Candidate' with profile pictures, a red chair nearby, and a dark background." />
+     <img className="lg:h-[260px] h-[230px] mx-auto" src="https://cdn.altumindglobal.com/Open_Roles_e8e58a1cd1.svg" alt="Two people hold a 'Join Us!' sign next to a document labeled 'Candidate' with profile pictures, a red chair nearby, and a dark background." />
    </div>
  </div>
     <div className="w-full flex flex-col gap-8 justify-center items-center font-raleway dark:text-white dark:bg-[#0d1015]">

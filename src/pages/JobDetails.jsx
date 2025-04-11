@@ -114,7 +114,7 @@ const JobDetails = () => {
         <div className="w-full flex justify-center items-center py-8 font-raleway text-center">
           <div className="lg:w-[650px] md:[450px] w-[300px] lg:h-[400px] md:h-[350px] h-[320px] flex flex-col gap-4 justify-center items-center rounded-md shadow-lg">
             <img
-              src="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/5568584_2895131_1_Compressify_io_757e1ac154.webp"
+              src="https://cdn.altumindglobal.com/5568584_2895131_1_Compressify_io_757e1ac154.webp"
               alt="job-details-explore-more"
               className="lg:w-[420px]"
             />

@@ -23,7 +23,7 @@ const aiAndAutomationData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Advance_AI_and_automation_solutions_Compressify_io_99b981da92.webp",
+              url: "https://cdn.altumindglobal.com/Advance_AI_and_automation_solutions_Compressify_io_99b981da92.webp",
             },
           },
         },
@@ -47,7 +47,7 @@ const aiAndAutomationData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/RPA_solutions_Compressify_io_365f07ffb9.webp",
+              url: "https://cdn.altumindglobal.com/RPA_solutions_Compressify_io_365f07ffb9.webp",
             },
           },
         },
@@ -78,7 +78,7 @@ const digitalMarketingData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Branding_and_design_Compressify_io_d11bc71888.webp",
+              url: "https://cdn.altumindglobal.com/Branding_and_design_Compressify_io_d11bc71888.webp",
             },
           },
         },
@@ -106,7 +106,7 @@ const digitalMarketingData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_Services_Compressify_io_714e95291e.webp",
+              url: "https://cdn.altumindglobal.com/Marketing_Services_Compressify_io_714e95291e.webp",
             },
           },
         },
@@ -132,7 +132,7 @@ const digitalMarketingData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Marketing_optimization_Digital_marketing_16da877bb9.webp",
+              url: "https://cdn.altumindglobal.com/Marketing_optimization_Digital_marketing_16da877bb9.webp",
             },
           },
         },
@@ -165,7 +165,7 @@ const cloudServicesData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Cloud_Migration_Services_Compressify_io_27a955fa6a.webp",
+              url: "https://cdn.altumindglobal.com/Cloud_Migration_Services_Compressify_io_27a955fa6a.webp",
             },
           },
         },
@@ -191,7 +191,7 @@ const cloudServicesData = {
         image: {
           data: {
             attributes: {
-              url: "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Cloud_App_Services_Compressify_io_aa532cad3e.webp",
+              url: "https://cdn.altumindglobal.com/Cloud_App_Services_Compressify_io_aa532cad3e.webp",
             },
           },
         },

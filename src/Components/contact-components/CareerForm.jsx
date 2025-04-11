@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react"
 import JobApplicationForm from "../Openings/JobApplicationForm";
 import Careers from '../../assets/Careers.png'
+import { Link, useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const CareerForm = () => {
-    const [showPopup , setShowPopup] = useState(false);
+    // const [showPopup , setShowPopup] = useState(false);
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        showPopup ? document.body.style.position = "fixed" : document.body.style.position = "static"
-      },[showPopup])
+    // useEffect(() => {
+    //     showPopup ? document.body.style.position = "fixed" : document.body.style.position = "static"
+    //   },[showPopup])
   return (
     <div className="w-[90%] my-10 max-w-[1000px] mx-auto bg-LightBlue shadow-custom-shadow rounded-xl font-raleway p-12">
        <div className="flex sm:flex-row flex-col-reverse items-center justify-center">
@@ -18,7 +20,7 @@ const CareerForm = () => {
             <p className="uppercase font-semibold">Shape The Future With Us</p>
             <p className="md:max-w-[65%]">Explore career opportunities and become part of our innovative team.</p>
             </div>
-            <button onClick={() => setShowPopup(true)} className="bg-secondary px-10 py-2 rounded-full text-white ">Join Now</button>
+            <Link  to="/career/open-roles" className="bg-secondary px-10 py-2 rounded-full text-white ">Join Now</Link>
         {/* <iframe frameBorder="0" style={{height:"550px", width:"100%", border:"none",}} src="
 https://altumindglobal.zohorecruit.com/forms/abe8cbba6a90c77c4aac5394fdf9fab752ace39ffa01bb846874757ed68542db"></iframe> */}
         </div>
@@ -26,10 +28,10 @@ https://altumindglobal.zohorecruit.com/forms/abe8cbba6a90c77c4aac5394fdf9fab752a
             <img className="mx-auto w-[320px]" src={Careers} alt="career" />
         </div>
         </div>
-        {
+        {/* {
             showPopup &&
             <JobApplicationForm setShowForm={setShowPopup}/>
-        }
+        } */}
       
     </div>
   )

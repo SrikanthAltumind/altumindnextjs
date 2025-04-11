@@ -30,14 +30,14 @@ const AutomationTesting = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>Boost Efficiency with Our Expert Automation Testing Services</title>
+        <meta name="title" content="Boost Efficiency with Our Expert Automation Testing Services" />
         <meta name="description" content="Let our automation testing services take the hassle out of testing, ensuring consistent, bug-free software while saving you time and effort." />
         <meta name="keywords" content="automation testing services, automated testing as a service, automation testing service, software test automation companies, automated testing tools for web applications" />
         {/* Social Media */}
         <meta property="og:title" content="Boost Efficiency with Our Expert Automation Testing Services"/>
         <meta property="og:description" content="Let our automation testing services take the hassle out of testing, ensuring consistent, bug-free software while saving you time and effort."/>
         <meta property="og:keywords" content="automation testing services, automated testing as a service, automation testing service, software test automation companies, automated testing tools for web applications" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance/automation-testing"/>
       </Helmet>

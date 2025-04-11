@@ -33,14 +33,14 @@ const WebsiteOperationsManagement = () => {
     <>
      <Helmet>
         {/* SEO */}
-        <title>Website Management Services | Web Operations & Management</title>
+        <meta name="title" content="Website Management Services | Web Operations & Management" />
         <meta name="description" content="Looking for seamless website performance? Our website management services and web operations optimize security, speed, and functionality to keep your site running smoothly." />
         <meta name="keywords" content="website management, website management services, website management companies, Web Operations, website operations, operational website" />
         {/* Social Media */}
         <meta property="og:title" content="Website Management Services | Web Operations & Management"/>
         <meta property="og:description" content="Looking for seamless website performance? Our website management services and web operations optimize security, speed, and functionality to keep your site running smoothly."/>
         <meta property="og:keywords" content="website management, website management services, website management companies, Web Operations, website operations, operational website" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/managed-operations/website-operations-management"/>
       </Helmet>

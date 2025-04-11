@@ -29,14 +29,14 @@ const SalesIntelligence = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Sales Intelligence Solutions | Boost Intelligent Sales</title>
+        <meta name="title" content="Sales Intelligence Solutions | Boost Intelligent Sales" />
         <meta name="description" content="Take your sales to the next level with sales intelligence solutions. Our intelligent sales strategies give you the insights needed to close more deals." />
         <meta name="keywords" content="sales intelligence solutions, sales intelligence platforms, automated sales intelligence, intelligent sales, b2b sales intelligence tools" />
         {/* Social Media */}
         <meta property="og:title" content="Sales Intelligence Solutions | Boost Intelligent Sales"/>
         <meta property="og:description" content="Take your sales to the next level with sales intelligence solutions. Our intelligent sales strategies give you the insights needed to close more deals."/>
         <meta property="og:keywords" content="sales intelligence solutions, sales intelligence platforms, automated sales intelligence, intelligent sales, b2b sales intelligence tools" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/data-analytics/sales-intelligence"/>
       </Helmet>

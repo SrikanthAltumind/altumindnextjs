@@ -36,14 +36,14 @@ const AIAndChatBotServices = () => {
     <>
    <Helmet>
         {/* SEO */}
-        <title>Top Conversational AI Companies | AI Chatbot Services</title>
+        <meta name="title" content='Top Conversational AI Companies | AI Chatbot Services' />
         <meta name="description" content="Maximize efficiency with AI chatbot service. Our conversational ai automation offer automated support, faster resolutions, and improved customer satisfaction." />
         <meta name="keywords" content="chatbot services, chatbot development services, chatbot consulting services, ai chatbot service, chatbot solutions, enterprise ai chatbot solution, chatbot solution providers" />
         {/* Social Media */}
         <meta property="og:title" content="Top Conversational AI Companies | AI Chatbot Services"/>
         <meta property="og:description" content="Maximize efficiency with AI chatbot service. Our conversational ai automation offer automated support, faster resolutions, and improved customer satisfaction."/>
         <meta property="og:keywords" content="chatbot services, chatbot development services, chatbot consulting services, ai chatbot service, chatbot solutions, enterprise ai chatbot solution, chatbot solution providers" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/ai-automation/conversational-ai-chatbot"/>
       </Helmet>

@@ -29,14 +29,14 @@ const BrandingAndDesign = () => {
    <>
    <Helmet>
         {/* SEO */}
-        <title>Branding Design Services | Leading Brand Design Consultation</title>
+        <meta name="title" content="Branding Design Services | Leading Brand Design Consultation" />
         <meta name="description" content="Get expert branding design services and brand design consultation to create a powerful brand identity that stands out and drives growth." />
         <meta name="keywords" content="branding design services, brand identity services, graphic design and branding services, logo design and branding services, brand design consultation, brand consulting and design, brand strategy design consultancy" />
         {/* Social Media */}
         <meta property="og:title" content="Branding Design Services | Leading Brand Design Consultation"/>
         <meta property="og:description" content="Get expert branding design services and brand design consultation to create a powerful brand identity that stands out and drives growth."/>
         <meta property="og:keywords" content="branding design services, brand identity services, graphic design and branding services, logo design and branding services, brand design consultation, brand consulting and design, brand strategy design consultancy" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-marketing/branding-design"/>
       </Helmet>

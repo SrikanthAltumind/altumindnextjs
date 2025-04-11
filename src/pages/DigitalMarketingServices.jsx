@@ -31,7 +31,7 @@ const DigitalMarketingServices = () => {
     <>
      <Helmet>
                 {/* For SEO  */}
-                <title>Digital Marketing Services | Digital Marketing Strategy Consulting</title>
+                <meta name="title" content="Digital Marketing Services | Digital Marketing Strategy Consulting" />
                 <meta
                   name="description"
                   content="Looking for digital marketing services? Our digital marketing strategy consulting helps you build successful online campaigns and boost brand performance."
@@ -40,7 +40,7 @@ const DigitalMarketingServices = () => {
                 {/* For Social Media */}
                 <meta property="og:title" content="Digital Marketing Services | Digital Marketing Strategy Consulting" />
                 <meta property="og:description" content="Looking for digital marketing services? Our digital marketing strategy consulting helps you build successful online campaigns and boost brand performance." />
-                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
                 <meta property="og:keywords" content="digital marketing services, web marketing services, digital branding services, digital marketing services list, digital marketing strategy consulting, digital media company, digital marketing planing" />
                 {/* canonical */}
                 <link rel="canonical" href="https://altumindglobal.com/services/digital-marketing" />

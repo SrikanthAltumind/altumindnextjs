@@ -60,7 +60,7 @@ const CustomWebDev = () => {
     <div className="dark:bg-darkTheme flex flex-col gap-24 lg:gap-28">
       <Helmet>
         {/* For SEO  */}
-        <title>Tailored Custom Website Development for Your Business Success</title>
+        <meta name="title" content="Tailored Custom Website Development for Your Business Success" />
         <meta name="description" content="Your business deserves a website that works as hard as you do. Our custom website development team crafts sites that are engaging, and results-driven." />
         <meta name="keywords" content="custom website development, custom website development services, customized website development, custom web development, custom web development over wordpress, custom website development cost versus wordpress" />
         {/* For Social Media */}

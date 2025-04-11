@@ -2,11 +2,11 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 // import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import LoaderSpinner from "../common-components/LoaderSpinner";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+// import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const initialFormData = {
   firstName: "",
@@ -26,14 +26,14 @@ const ContactForm = ({ selectedForm }) => {
   const [presignedUrl, setPresignedUrl] = useState();
   const [initialValues, setInitialValues] = useState(initialFormData);
   const [captchaError, setCaptchaError] = useState(false)
-   const [loadCaptcha, setLoadCaptcha] = useState(false);
+  //  const [loadCaptcha, setLoadCaptcha] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoadCaptcha(true);
-    } ,5000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoadCaptcha(true);
+  //   } ,5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   let toMailID = "";
 
@@ -174,26 +174,26 @@ const ContactForm = ({ selectedForm }) => {
     }
   };
 
-  const getPresignedurl = async (file) => {
-    try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${
-          file.type
-        }&filename=${file.name}`,
-        { withCredentials: true }
-      );
-      console.log("getPresignedurl", response?.data?.data);
-      if (response.data && response.data.data) {
-        setPresignedUrl(response.data.data);
-        return response.data.data;
-      } else {
-        console.error("Presigned URL not found in the response.");
-        return null;
-      }
-    } catch (error) {
-      console.error("Error fetching presigned URL:", error);
-    }
-  };
+  // const getPresignedurl = async (file) => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${
+  //         file.type
+  //       }&filename=${file.name}`,
+  //       { withCredentials: true }
+  //     );
+  //     console.log("getPresignedurl", response?.data?.data);
+  //     if (response.data && response.data.data) {
+  //       setPresignedUrl(response.data.data);
+  //       return response.data.data;
+  //     } else {
+  //       console.error("Presigned URL not found in the response.");
+  //       return null;
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching presigned URL:", error);
+  //   }
+  // };
 
   //   const uploadFile = async () => {
   //     try {
@@ -351,7 +351,7 @@ const ContactForm = ({ selectedForm }) => {
 
   return (
     <>
-    { loadCaptcha ? 
+    {/* { loadCaptcha ? 
     <GoogleReCaptchaProvider
     scriptProps={{
       async: true,
@@ -359,7 +359,7 @@ const ContactForm = ({ selectedForm }) => {
       // explicitRender: false
     }}
     reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
-  >
+  > */}
     <form
       onSubmit={formik.handleSubmit}
       className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
@@ -684,8 +684,8 @@ const ContactForm = ({ selectedForm }) => {
       </div>
       {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
     </form>
-    </GoogleReCaptchaProvider> : <LoaderSpinner/>
-        }
+    {/* </GoogleReCaptchaProvider> : <LoaderSpinner/>
+        } */}
         </>
   );
 };

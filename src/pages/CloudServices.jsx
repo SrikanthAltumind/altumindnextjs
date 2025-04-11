@@ -31,7 +31,7 @@ const CloudServices = () => {
     <>
      <Helmet>
                 {/* For SEO  */}
-                <title>Cloud Consulting Services | Cloud Strategy Engineering Services</title>
+                <meta name="title" content="Cloud Consulting Services | Cloud Strategy Engineering Services" />
                 <meta
                   name="description"
                   content="Explore our cloud strategy engineering services and cloud advisory services to help your business optimize its cloud strategy and achieve lasting success."
@@ -40,7 +40,7 @@ const CloudServices = () => {
                 {/* For Social Media */}
                 <meta property="og:title" content="Cloud Consulting Services | Cloud Strategy Engineering Services" />
                 <meta property="og:description" content="Explore our cloud strategy engineering services and cloud advisory services to help your business optimize its cloud strategy and achieve lasting success." />
-                <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
                 <meta property="og:keywords" content="cloud consulting services, cloud implementation services, cloud strategy engineering services, cloud advisory services, cloud technology consultant, hybrid cloud consulting" />
                 {/* canonical */}
                 <link rel="canonical" href="https://altumindglobal.com/services/cloud" />

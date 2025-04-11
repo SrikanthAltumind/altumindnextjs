@@ -32,7 +32,7 @@ const DataAnalytics = () => {
     <>
     <Helmet>
                     {/* For SEO  */}
-                    <title>Data Analytics Company | Professional Data Analytics Services</title>
+                    <meta name="title" content="Data Analytics Company | Professional Data Analytics Services" />
                     <meta
                       name="description"
                       content="Make better decisions with data. Our data analytics services and experienced data analytics company help you turn your data into a powerful growth tool."
@@ -41,7 +41,7 @@ const DataAnalytics = () => {
                     {/* For Social Media */}
                     <meta property="og:title" content="Data Analytics Company | Professional Data Analytics Services" />
                     <meta property="og:description" content="Make better decisions with data. Our data analytics services and experienced data analytics company help you turn your data into a powerful growth tool." />
-                    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+                    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
                     <meta property="og:keywords" content="data analytics services, data analytics as a service, data analytics service providers, data analytics solution, data analytics Company, data analytics consulting services, data analytics services companies" />
                     {/* canonical */}
                     <link rel="canonical" href="https://altumindglobal.com/services/data-analytics" />
@@ -62,9 +62,8 @@ const DataAnalytics = () => {
               <p className="custom-sub-heading">Our Data Analytics Services</p>
               <p className="custom-gradient-text">
                
-                  Full Spectrum Data Analytics
+                  Full Spectrum Data Analytics Services -
                   <br />
-            
               from Insight to Impact
               </p>
             </div>

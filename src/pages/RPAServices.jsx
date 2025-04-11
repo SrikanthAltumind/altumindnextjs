@@ -34,14 +34,14 @@ const RPAServices = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>Efficient RPA Services | Robotic Process Automation Consulting</title>
+        <meta name="title" content='Efficient RPA Services | Robotic Process Automation Consulting' />
         <meta name="description" content="Boost efficiency with RPA services. Our robotic process automation consulting helps streamline operations and automate repetitive tasks." />
         <meta name="keywords" content="Automation Services, rpa services, rpa service providers, rpa implementation, robotic process automation consulting, rpa services company" />
         {/* Social Media */}
         <meta property="og:title" content="Efficient RPA Services | Robotic Process Automation Consulting"/>
         <meta property="og:description" content="Boost efficiency with RPA services. Our robotic process automation consulting helps streamline operations and automate repetitive tasks."/>
         <meta property="og:keywords" content="Automation Services, rpa services, rpa service providers, rpa implementation, robotic process automation consulting, rpa services company" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/ai-automation/rpa"/>
       </Helmet>

@@ -29,14 +29,14 @@ const SoftwareMaintenanceSupport = () => {
    <>
      <Helmet>
         {/* SEO */}
-        <title>Software Maintenance Company | Expert Maintenance Support Services</title>
+        <meta name="title" content="Software Maintenance Company | Expert Maintenance Support Services" />
         <meta name="description" content="Worry less about software issues. Our software maintenance and support services keep your software secure, up-to-date, and performing at its best." />
         <meta name="keywords" content="maintenance support services, software application maintenance, software maintenance and support services, software maintenance company, maintenance support, software support services" />
         {/* Social Media */}
         <meta property="og:title" content="Software Maintenance Company | Expert Maintenance Support Services"/>
         <meta property="og:description" content="Worry less about software issues. Our software maintenance and support services keep your software secure, up-to-date, and performing at its best."/>
         <meta property="og:keywords" content="maintenance support services, software application maintenance, software maintenance and support services, software maintenance company, maintenance support, software support services" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/managed-operations/software-maintenance-support"/>
       </Helmet>

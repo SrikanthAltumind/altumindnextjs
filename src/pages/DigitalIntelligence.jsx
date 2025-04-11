@@ -29,14 +29,14 @@ const DigitalIntelligence = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Digital Intelligence</title>
+        <meta name="title" content="Enterprise Data Solutions & Digital Intelligence Services" />
         <meta name="description" content="Unlock the power of data with our digital intelligence services. We help transform your data into actionable insights for smarter business decisions." />
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="Digital Intelligence Services,	Enterprise Data Solutions" />
         {/* Social Media */}
-        <meta property="og:title" content="Digital Intelligence"/>
+        <meta property="og:title" content="Enterprise Data Solutions & Digital Intelligence Services"/>
         <meta property="og:description" content="Unlock the power of data with our digital intelligence services. We help transform your data into actionable insights for smarter business decisions."/>
-        <meta property="og:keywords" content="" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:keywords" content="Digital Intelligence Services,	Enterprise Data Solutions" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/data-analytics/digital-intelligence"/>
       </Helmet>

@@ -30,14 +30,14 @@ const FunctionalTesting = () => {
       <>
       <Helmet>
         {/* SEO */}
-        <title>Professional Functional Testing Services for Superior Software</title>
+        <meta name="title" content="Professional Functional Testing Services for Superior Software" />
         <meta name="description" content="Ensure your software functions perfectly with our reliable functional testing services, designed to deliver smooth, bug-free performance for your users." />
         <meta name="keywords" content="functional testing services, software functional testing tools, functional testing tools, functional testing company" />
         {/* Social Media */}
         <meta property="og:title" content="Professional Functional Testing Services for Superior Software"/>
         <meta property="og:description" content="Ensure your software functions perfectly with our reliable functional testing services, designed to deliver smooth, bug-free performance for your users."/>
         <meta property="og:keywords" content="functional testing services, software functional testing tools, functional testing tools, functional testing company" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/quality-assurance/functional-testing"/>
       </Helmet>

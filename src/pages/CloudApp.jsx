@@ -29,14 +29,14 @@ const CloudApp = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Application Development in Cloud Computing | Cloud App Services</title>
+        <meta name="title" content="Application Development in Cloud Computing | Cloud App Services" />
         <meta name="description" content="Transform your infrastructure with cloud migration services. Leading cloud migration companies ensure secure, efficient, and hassle-free cloud transitions." />
         <meta name="keywords" content="application development in cloud computing, cloud-based applications, cloud technology applications, computing applications building, web-based cloud applications, cloud-based web application" />
         {/* Social Media */}
         <meta property="og:title" content="Application Development in Cloud Computing | Cloud App Services"/>
         <meta property="og:description" content="Transform your infrastructure with cloud migration services. Leading cloud migration companies ensure secure, efficient, and hassle-free cloud transitions."/>
         <meta property="og:keywords" content="application development in cloud computing, cloud-based applications, cloud technology applications, computing applications building, web-based cloud applications, cloud-based web application" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/cloud/cloud-app-services"/>
       </Helmet>

@@ -29,14 +29,14 @@ const IncubationOfNewProducts = () => {
    <>
    <Helmet>
         {/* SEO */}
-        <title>Product Incubation & Services | Business Incubator Services</title>
+        <meta name="title" content="Product Incubation & Services | Business Incubator Services" />
         <meta name="description" content="Let us help you grow. Our product incubation and business incubator services give you the support and expertise needed to turn your vision into reality." />
         <meta name="keywords" content="Product incubation, product incubation process, business incubator services, technology business incubator" />
         {/* Social Media */}
         <meta property="og:title" content="Product Incubation & Services | Business Incubator Services"/>
         <meta property="og:description" content="Let us help you grow. Our product incubation and business incubator services give you the support and expertise needed to turn your vision into reality."/>
         <meta property="og:keywords" content="Product incubation, product incubation process, business incubator services, technology business incubator" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-strategy-consulting/incubation-products-services"/>
       </Helmet>

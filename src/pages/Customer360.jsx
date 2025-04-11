@@ -29,14 +29,14 @@ const Customer360 = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Customer 360 Analytics | Enhance 360 Customer Experience</title>
+        <meta name="title" content="Customer 360 Analytics | Enhance 360 Customer Experience" />
         <meta name="description" content="Get a complete view of your customers with 360 customer experience and customer 360 analytics. Use insights to create more personalized and meaningful interactions." />
         <meta name="keywords" content="360 customer experience, 360 degree customer inc, 360 sales, customer 360 analytics, 360 customer view" />
         {/* Social Media */}
         <meta property="og:title" content="Customer 360 Analytics | Enhance 360 Customer Experience"/>
         <meta property="og:description" content="Get a complete view of your customers with 360 customer experience and customer 360 analytics. Use insights to create more personalized and meaningful interactions."/>
         <meta property="og:keywords" content="360 customer experience, 360 degree customer inc, 360 sales, customer 360 analytics, 360 customer view" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/data-analytics/customer-360"/>
       </Helmet>

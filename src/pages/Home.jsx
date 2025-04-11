@@ -27,20 +27,21 @@ const Home = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <meta name="title" content="Top Digital Innovation & Digital Integration Company | Altumind"/>
-    <meta name="description" content="Discover Altumind, a leader in digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance."/>
+    <title>Top Digital Innovation & Digital Integration Company | Altumind</title>
+    {/* <meta name="title" content="Top Digital Innovation & Digital Integration Company | Altumind"/> */}
+    <meta name="description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance."/>
     <meta name="keywords" content="Digital Integration, Digital Transformation Companies"/>
     {/* For Social Media */}
     <meta property="og:title" content="Top Digital Innovation & Digital Integration Company | Altumind" />
-    <meta property="og:description" content="Discover Altumind, a leader in digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance." />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     <meta property="og:url" content="https://altumindglobal.com" />
     <meta property="og:keywords" content="Digital Integration, Digital Transformation Companies, Digital Innovation" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com" />
     <script type="application/ld+json">
     {` {"@context": "https://schema.org","@type": "Organization","name": "Altumind",
-  "alternateName": "Altumind Digital","url": "https://altumindglobal.com/","logo": "https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png",
+  "alternateName": "Altumind Digital","url": "https://altumindglobal.com/","logo": "https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "8031405675",

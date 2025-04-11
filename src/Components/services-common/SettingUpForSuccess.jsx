@@ -112,25 +112,25 @@ const SettingUpForSuccess = () => {
        else if(location.pathname === "/digital-development-services/mobile-app-design-development/hybrid-app-development-services")
         apiUrl = "/api/service-had-benifit-contents?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/1?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/10?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/5?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/4?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/performance-marketing-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/8?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/6?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/b2b-seo-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/9?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/app-store-optimization-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/2?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/orm-service")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/7?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/cro-services")
-        apiUrl = "ADD_API_URL_END_POINT"
+        apiUrl = "/api/service-keys/3?populate=*"
 
       const {data, isLoading, isError, error} = useFetchData(['benefits', location.pathname], apiUrl)
       const benefitsData = data?.data?.data || []

@@ -1,25 +1,23 @@
-
-
 import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
 // import ThankyouNote from "../contact-components/ThankyouNote";
 import { useContext, useEffect, useState } from "react";
-import emailjs from "@emailjs/browser";
-import 'react-phone-input-2/lib/style.css'
-import PhoneInput from "react-phone-input-2";
+// import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
 import { ThemeContext } from "../Layouts/AppLayout";
 import ThankyouNote from "../Components/contact-components/ThankyouNote";
-import { navigate } from "vite-plugin-ssr/client/router";
+// import { navigate } from "vite-plugin-ssr/client/router";
+import { useNavigate } from "react-router-dom";
+import { countryCodes } from "../Utils";
 
-const initialPhoneInput = {number:'', countryCode:'', validLength:false}
+// const initialPhoneInput = {number:'', countryCode:'', validLength:false}
 const initialFormData = {
   //Basic Info
   firstName: "",
   lastName: "",
   email: "",
-  // phone: "", // seperated
+  phone: "", 
   dob:"", 
   gender:"", 
   state:"",
@@ -48,20 +46,22 @@ const initialFormData = {
 // eslint-disable-next-line react/prop-types
 const JobApplicationForm = () => {
   const location = useLocation()
+  const navigate = useNavigate()
   const jobData = location.state
-  console.log('JOB DATA', jobData)
-   const [phone, setPhone] = useState(initialPhoneInput)
-   const [userCountry, setUserCountry] = useState('in')
-   const [customError, setCustomError] = useState({})
+  //  const [phone, setPhone] = useState(initialPhoneInput)
+  const [selectedCountryCode, setSelectedCountryCode] = useState(countryCodes?.find(country=> country.code==='+91'))
+  //  const [userCountry, setUserCountry] = useState('in')
+  //  const [customError, setCustomError] = useState({})
    const [profStatus, setProfStatus] = useState('fresher')
    const [pursuing, setPursuing] = useState(false)
-   const {theme} = useContext(ThemeContext)
+  //  const {theme} = useContext(ThemeContext)
     
   const [showPopup, setShowPopup] = useState(false);
-  const [file, setFile] = useState();
-  const [coverLetter, setCoverLetter] = useState();
+  const [errorMessage, setErrorMessage] = useState()
+  // const [file, setFile] = useState();
+  // const [coverLetter, setCoverLetter] = useState();
   
-  const [presignedUrl, setPresignedUrl] = useState();
+  // const [presignedUrl, setPresignedUrl] = useState();
   const [initialValues, setInitialValues] = useState(initialFormData);
 
   let toMailID = "";
@@ -90,11 +90,9 @@ const JobApplicationForm = () => {
         /^[A-Z0-9._%+-]{3,}@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i,
         "Invalid email"
       ),
-      // phone: requiredField(true),
-        // .string(),
-      // .matches(/^[0-9 +-]+$/, "Enter a valid phone number")
-      // .length(10, "Number should have 10 digits")
-      // .min(7, "Number must be of atleast 7 characters"),
+      phone:yup.string().required('Required')
+      .matches(/^[0-9]+$/, "Please enter digits only"),
+      // .min(7, "must be of atleast 7 digits"),
     dob: yup  //New addedd
       .date()
       .required("Required")
@@ -191,7 +189,7 @@ const JobApplicationForm = () => {
     //   return file && file.size <= FILE_SIZE;
     // })
     .test("fileFormat", "Only pdf and docx are allowed", (file) => {
-      return file && ["application/pdf", "application/docx"].includes(file.type);
+      return file && ["application/pdf",  "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(file.type);
     }),
     coverLetter: yup
     .mixed()
@@ -237,26 +235,26 @@ const JobApplicationForm = () => {
 
   };
 
-  const getPresignedurl = async (file) => {
-    try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${
-          file.type
-        }&filename=${file.name}`,
-        { withCredentials: true }
-      );
-      console.log("getPresignedurl", response?.data?.data);
-      if (response.data && response.data.data) {
-        setPresignedUrl(response.data.data);
-        return response.data.data;
-      } else {
-        console.error("Presigned URL not found in the response.");
-        return null;
-      }
-    } catch (error) {
-      console.error("Error fetching presigned URL:", error);
-    }
-  };
+  // const getPresignedurl = async (file) => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${import.meta.env.VITE_APP_API_URL}api/v1/getSignedurl?contenttype=${
+  //         file.type
+  //       }&filename=${file.name}`,
+  //       { withCredentials: true }
+  //     );
+  //     console.log("getPresignedurl", response?.data?.data);
+  //     if (response.data && response.data.data) {
+  //       setPresignedUrl(response.data.data);
+  //       return response.data.data;
+  //     } else {
+  //       console.error("Presigned URL not found in the response.");
+  //       return null;
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching presigned URL:", error);
+  //   }
+  // };
 
   //   const uploadFile = async () => {
   //     try {
@@ -292,40 +290,40 @@ const JobApplicationForm = () => {
   //     }
   // };
 
-  const sendMail = (formData) => { // AGILITI service ID needs to be stored in .env file
-    const serviceID = selectedForm?.id==='agiliti' ? import.meta.env.VITE_APP_AGILITI_DATA_MAIL_SERVICE_ID : import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID; //old service_oik8vde
-    const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID; //old template_1f6ib6b
-    const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY; //old ZRpWuyBwxaFOkFcGf
+  // const sendMail = (formData) => { // AGILITI service ID needs to be stored in .env file
+  //   const serviceID = selectedForm?.id==='agiliti' ? import.meta.env.VITE_APP_AGILITI_DATA_MAIL_SERVICE_ID : import.meta.env.VITE_APP_DATA_MAIL_SERVICE_ID; //old service_oik8vde
+  //   const templateID = import.meta.env.VITE_APP_DATA_MAIL_FORMS_TEMPLATE_ID; //old template_1f6ib6b
+  //   const publicKey = import.meta.env.VITE_APP_DATA_MAIL_PUBLIC_KEY; //old ZRpWuyBwxaFOkFcGf
 
-    const templateParams = {
-      ...formData,
-      to_mail: toMailID,
-      form_name: selectedForm?.name,
-      page_url: window.location.href,
-    };
-    console.log("templateParams:", templateParams);
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(response=> {
-        if(response.status===200){
-        console.log('Data mail sent Successfully..!')
-        console.log(response)
-        // no-replay mail
-        emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
-                .then(response=> {
-                  if(response.status===200){
-                  console.log('Thank you mail sent Successfully..!')
-                  console.log(response)
-                  }
-                })
-                .catch(error=> {
-                  console.error(error)
-                })
-        }
-      })
-      .catch(error=> {
-        console.error(error)
-      })
-  };
+  //   const templateParams = {
+  //     ...formData,
+  //     to_mail: toMailID,
+  //     form_name: selectedForm?.name,
+  //     page_url: window.location.href,
+  //   };
+  //   console.log("templateParams:", templateParams);
+  //   emailjs.send(serviceID, templateID, templateParams, publicKey)
+  //     .then(response=> {
+  //       if(response.status===200){
+  //       console.log('Data mail sent Successfully..!')
+  //       console.log(response)
+  //       // no-replay mail
+  //       emailjs.send(import.meta.env.VITE_APP_THANK_YOU_MAIL_SERVICE_ID, import.meta.env.VITE_APP_THANK_YOU_MAIL_FORMS_TEMPLATE_ID, {email:formData.email, name:formData.firstName+" "+formData.lastName}, import.meta.env.VITE_APP_THANK_YOU_MAIL_PUBLIC_KEY)
+  //               .then(response=> {
+  //                 if(response.status===200){
+  //                 console.log('Thank you mail sent Successfully..!')
+  //                 console.log(response)
+  //                 }
+  //               })
+  //               .catch(error=> {
+  //                 console.error(error)
+  //               })
+  //       }
+  //     })
+  //     .catch(error=> {
+  //       console.error(error)
+  //     })
+  // };
 
   const onSubmit = async (formData, { resetForm }) => {
     // const numberInput = phone.number.substring(phone.countryCode.length)
@@ -352,7 +350,8 @@ const JobApplicationForm = () => {
         First_Name: formData.firstName.trim(),
         Last_Name: formData.lastName.trim(),
         Email: formData.email.trim(),
-        Mobile: phone.number,
+        // Mobile: phone.number,
+        Mobile: selectedCountryCode?.code+formData.phone,
         Date_of_Birth: formData.dob,
         Gender: formData.gender,
         State: formData.state.trim(),
@@ -405,14 +404,20 @@ await sendData(newFormData);
       // await sendData(formData, presignedUrlResponse.url);
 console.log("Resetting Form");
 setShowPopup(true);
-setPhone(initialPhoneInput)
+// setPhone(initialPhoneInput)
 setPursuing(false)
 resetForm();
 
     } catch (error) {
       console.error("Error submitting form:", error);
+      
       if (error.response) {
         // The request was made and the server responded with a status code
+        if(error?.response?.data?.error?.message  === "Error submitting application: Duplicate data found: duplicate data"){
+          setErrorMessage("Email already exists.")
+          } else {
+            setErrorMessage("")
+          }
         console.error("Response status:", error.response.status);
         console.error("Response data:", error.response.data);
       } else if (error.request) {
@@ -433,7 +438,10 @@ resetForm();
     validationSchema,
   });
 
-
+ const closePopup = () => {
+  setShowPopup(false)
+  navigate("/career/open-roles")
+ }
 
   useEffect(() => {
     if(pursuing){
@@ -485,7 +493,7 @@ resetForm();
           const response = await fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`);
           const data = await response.json();
           if (data.address && data.address.country_code) {
-            setUserCountry(data.address.country_code.toLowerCase());
+            // setUserCountry(data.address.country_code.toLowerCase());
             data.address?.state && formik.setFieldValue('state',  data.address.state )
             formik.setFieldValue('country', data.address.country)
             console.log('---COUNTRY DETECTED----', data);
@@ -667,7 +675,7 @@ resetForm();
           )}
         </div>
         {/* Phone Input */}
-        <div className="relative flex flex-col w-full">
+        {/* <div className="relative flex flex-col w-full">
           <PhoneInput
           countryCodeEditable={false}               
             placeholder='Phone Number'
@@ -708,6 +716,54 @@ resetForm();
               *{customError.phone}
             </p>
           )} 
+        </div> */}
+        <div className="flex w-full gap-2 items-center">
+          <label htmlFor="countryCode" className="sr-only">Select country code</label>
+          <select id="countryCode" className="disabled:text-gray-400 border-b border-black outline-none pb-1 cursor-pointer"
+                  value={selectedCountryCode?.code}
+                  onChange={(e) => {
+                    const selectedIndex = e.target.selectedIndex;
+                    const countryIndex = e.target.options[selectedIndex].getAttribute("countryindex");
+                    setSelectedCountryCode(countryCodes[parseInt(countryIndex)]);
+                  }}
+              >
+            {countryCodes?.map((country, index)=> (
+              <option key={country.code+index}
+                    value={country.code}
+                    countryindex={index}>
+                {country.code}
+              </option>
+            ))}
+          </select>
+ 
+        <div className="relative flex flex-col w-full">
+          <input
+            name="phone"
+            className="peer bg-transparent outline-none border-b border-tertiary dark:border-white"
+            type="text"
+            id="phone"
+            minLength={selectedCountryCode?.length}
+            maxLength={selectedCountryCode?.length}
+            {...formik.getFieldProps("phone")}
+          />
+          <label
+            htmlFor="phone"
+            className={`w-full absolute cursor-text bottom-1 peer-focus:text-xs ${
+              formik.values?.phone
+                ? "text-xs -translate-y-6"
+                : "text-sm lg:text-base"
+            }  peer-focus:-translate-y-6 transition-all  duration-300 peer-focus:text-primary font-medium peer-focus:dark:text-blue-400 text-gray-400`}
+          >
+            Phone
+              <span className="text-red-500">*</span>
+          </label>
+          <div className="before:content-[''] before:h-[1px] before:w-full before:bg-primary before:absolute before:bottom-0 scale-0 peer-focus:scale-100 transition-all duration-300 before:dark:bg-blue-400 ease-linear"></div>
+          {formik.touched.phone && formik.errors.phone && (
+            <p className="absolute -bottom-[18px] text-red-500 text-xs">
+              *{formik.errors.phone}
+            </p>
+          )}
+        </div>
         </div>
           
       </div>
@@ -1200,11 +1256,12 @@ resetForm();
 
       <div>
       </div>
+      <p className="text-red-500">{errorMessage}</p>
       {/* Submit Button */}
       <div className="flex items-center justify-center md:justify-start">
         <button
           type="submit"
-          disabled={!formik.dirty || !formik.isValid || formik.isSubmitting ||  !phone.validLength}
+          disabled={!formik.dirty || !formik.isValid || formik.isSubmitting}
           className="disabled:bg-[#f5656f88] px-12 py-3 text-sm bg-secondary hover:bg-[#e71523] text-white rounded-full"
         >
           {formik.isSubmitting ? (
@@ -1229,7 +1286,7 @@ resetForm();
           )}
         </button>
       </div>
-      {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
+      {showPopup && <ThankyouNote setShowPopup={closePopup} />}
     </form>
     </div>
   );

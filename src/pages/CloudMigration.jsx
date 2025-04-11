@@ -29,14 +29,14 @@ const CloudMigration = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Cloud Migration Services | Trusted Cloud Migration Companies</title>
+        <meta name="title" content="Cloud Migration Services | Trusted Cloud Migration Companies" />
         <meta name="description" content="Streamline your business with cloud migration services. Partner with reliable cloud migration companies to ensure smooth, secure cloud transitions." />
         <meta name="keywords" content="cloud migration services, cloud migration service providers, cloud migration experts, cloud migration companies, cloud migration service provider, cloud migration consultants" />
         {/* Social Media */}
         <meta property="og:title" content="Cloud Migration Services | Trusted Cloud Migration Companies"/>
         <meta property="og:description" content="Streamline your business with cloud migration services. Partner with reliable cloud migration companies to ensure smooth, secure cloud transitions."/>
         <meta property="og:keywords" content="cloud migration services, cloud migration service providers, cloud migration experts, cloud migration companies, cloud migration service provider, cloud migration consultants" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/cloud/cloud-migration"/>
       </Helmet>

@@ -1,5 +1,6 @@
-import useFetchData from '../../Hooks/useFetchData'
-import LoaderSpinner from '../common-components/LoaderSpinner'
+import useFetchData from "../../CustomHooks/useFetchData"
+import LoaderSpinner from "../common-components/LoaderSpinner"
+
 
 const metricsData = [
     {
@@ -25,21 +26,21 @@ const metricsData = [
 ]
 
 const PerformanceMetrics = () => {
-    // const apiUrl = 'ADD_API_ENDPOINT'
-    // const {data, isLoading, isError, error} = useFetchData('PerformanceMetrics', apiUrl)
-    // const metricsData = data?.data?.data || []
+    const apiUrl = '/api/service-metric-contents?populate=*'
+    const {data, isLoading, isError, error} = useFetchData('PerformanceMetrics', apiUrl)
+    const metricsData = data?.data?.data || []
 
-    // if(isLoading){
-    //     return <LoaderSpinner/>
-    // }
+    if(isLoading){
+        return <LoaderSpinner/>
+    }
     
-    // if (isError) {
-    //     return (
-    //       <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
-    //         {error?.message}
-    //       </div>
-    //     );
-    // }
+    if (isError) {
+        return (
+          <div className="dark:text-white font-raleway h-[300px] flex justify-center items-center">
+            {error?.message}
+          </div>
+        );
+    }
   return (
     <div className='w-[90%] mx-auto max-w-[800px] font-raleway'>
         <div className='text-center space-y-3'>
@@ -48,10 +49,10 @@ const PerformanceMetrics = () => {
         </div>
         <div className='mt-10 flex flex-col gap-6 max-w-[700px] mx-auto'>
             {metricsData?.map((data,index)=> (
-                <div className='space-y-1'>
+                <div key={index} className='space-y-1'>
                     <p className='text-lg text-[#EA5D66] font-medium'>{index+1}.</p>
-                    <p className='text-sm font-bold'>{data?.title}</p>
-                    <p className='text-xs sm:text-sm font-medium'>{data?.description}</p>
+                    <p className='text-sm font-bold'>{data?.attributes?.title}</p>
+                    <p className='text-xs sm:text-sm font-medium'>{data?.attributes?.description}</p>
                 </div>
             ))}
         </div>

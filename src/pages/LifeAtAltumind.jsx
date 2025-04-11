@@ -16,7 +16,7 @@ const LifeAtAltumind = () => {
     <>
      <Helmet>
         {/* For SEO  */}
-        <title>Life at Altumind | Discover Our Team, Culture, and Values</title>
+        <meta name="title" content="Life at Altumind | Discover Our Team, Culture, and Values" />
         <meta
           name="description"
           content="Wondering what it’s like to be part of the Altumind team? Experience a work culture that values creativity, collaboration, and personal growth every day."
@@ -25,7 +25,7 @@ const LifeAtAltumind = () => {
         {/* For Social Media */}
         <meta property="og:title" content="Life at Altumind | Discover Our Team, Culture, and Values" />
         <meta property="og:description" content="Wondering what it’s like to be part of the Altumind team? Experience a work culture that values creativity, collaboration, and personal growth every day." />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         <meta property="og:keywords" content="" />
         {/* canonical */}
         <link rel="canonical" href="https://altumindglobal.com/career/life-at-altumind" />

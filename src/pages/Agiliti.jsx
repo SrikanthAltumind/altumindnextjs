@@ -75,13 +75,13 @@ const Agiliti = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Hire Dedicated Developers | Expert Offshore Development Teams – Agiliti</title>
+    <meta name="title" content="Hire Dedicated Developers | Expert Offshore Development Teams – Agiliti"/>
     <meta name="description" content="Looking to hire dedicated developers for your next project? Partner with our expert offshore development teams for cost-effective and high-quality solutions. Build your dream team today!" />
     <meta name="keywords" content="hire dedicated developers, offshore development, dedicated development team, offshore developers, remote developers"/>
     {/* For Social Media */}
     <meta property="og:title" content="Hire Dedicated Developers | Expert Offshore Development Teams – Agiliti" />
     <meta property="og:description" content="Looking to hire dedicated developers for your next project? Partner with our expert offshore development teams for cost-effective and high-quality solutions. Build your dream team today!" />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/Agiliti_Logo_1_b704dfb935.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/Agiliti_Logo_1_b704dfb935.png" />
     <meta property="og:url" content="https://altumindglobal.com/agiliti-hire-dedicated-developers" />
     {/* !-- Event snippet for Agiliti_Visitors remarketing page --> */}
     <script>

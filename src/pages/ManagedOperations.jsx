@@ -33,7 +33,7 @@ const ManagedOperations = () => {
     <>
      <Helmet>
         {/* For SEO  */}
-        <title>Best IT Management Consulting | Operations Managed Services</title>
+        <meta name="title" content="Best IT Management Consulting | Operations Managed Services" />
         <meta
           name="description"
           content="Let us help you simplify your IT processes. Our operations managed services and IT management consulting help you run smoother, more efficient operations."
@@ -42,7 +42,7 @@ const ManagedOperations = () => {
         {/* For Social Media */}
         <meta property="og:title" content="Best IT Management Consulting | Operations Managed Services" />
         <meta property="og:description" content="Let us help you simplify your IT processes. Our operations managed services and IT management consulting help you run smoother, more efficient operations." />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         <meta property="og:keywords" content="managed application services, infrastructure managed services, operations managed services, Cloud managed services, it management consulting, it management company, it and management consulting" />
         {/* canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/managed-operations" />
@@ -62,7 +62,7 @@ const ManagedOperations = () => {
               <p className="custom-sub-heading">Our IT Management Consulting services</p>
               <p className="custom-gradient-text">
                
-                  Tailored Management for
+                  Tailored operations managed services for
                   <br />
            
                Every Aspect of Your Business

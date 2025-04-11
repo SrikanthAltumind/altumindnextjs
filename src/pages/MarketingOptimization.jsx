@@ -29,14 +29,14 @@ const MarketingOptimization = () => {
     <>
     <Helmet>
         {/* SEO */}
-        <title>Marketing Optimization Services | Expert Optimization Consultant</title>
+        <meta name="title" content="Marketing Optimization Services | Expert Optimization Consultant" />
         <meta name="description" content="Want to optimize your marketing? Our optimization services, led by an expert optimization consultant, help you streamline strategies and achieve better results." />
         <meta name="keywords" content="optimization services, optimization in digital marketing, optimization and marketing, internet marketing optimization company, optimization consultant" />
         {/* Social Media */}
         <meta property="og:title" content="Marketing Optimization Services | Expert Optimization Consultant"/>
         <meta property="og:description" content="Want to optimize your marketing? Our optimization services, led by an expert optimization consultant, help you streamline strategies and achieve better results."/>
         <meta property="og:keywords" content="optimization services, optimization in digital marketing, optimization and marketing, internet marketing optimization company, optimization consultant" />
-        <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+        <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
         {/* Canonical */}
         <link rel="canonical" href="https://altumindglobal.com/services/digital-marketing/marketing-optimization"/>
       </Helmet>

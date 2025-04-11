@@ -35,7 +35,7 @@ const TechnologyAndEngineering = () => {
      <>
     <Helmet>
     {/* For SEO  */}
-    <title>Digital Engineering Transformation | Digital Development Services</title>
+    <meta name="title" content="Digital Engineering Transformation | Digital Development Services" />
     <meta
       name="description"
       content="Leverage our digital engineering transformation and digital development services to drive innovation, optimize operations, and future-proof your business."
@@ -44,7 +44,7 @@ const TechnologyAndEngineering = () => {
     {/* For Social Media */}
     <meta property="og:title" content="Digital Engineering Transformation | Digital Development Services" />
     <meta property="og:description" content="Leverage our digital engineering transformation and digital development services to drive innovation, optimize operations, and future-proof your business." />
-    <meta property="og:image" content="https://alt-digital-cms.s3.ap-south-1.amazonaws.com/OG_image_sample_1_da398efc3b.png" />
+    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     <meta property="og:keywords" content="digital engineering transformation, digital development services, platform engineering services, digital platform engineering services, consulting platform engineering, engineering services and products company" />
     {/* canonical */}
     <link rel="canonical" href= "https://altumindglobal.com/services/technology-and-engineering"  />
