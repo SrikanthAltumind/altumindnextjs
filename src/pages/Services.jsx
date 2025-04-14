@@ -24,7 +24,7 @@ const Services = () => {
     {
       title: "Dive into our latest insights and industry analyses.",
       hexvalue: "#02194A",
-      cta: "https://blogs.altumindglobal.com/",
+      cta: "https://resources.altumindglobal.com/",
       ctaText: "Explore Our Insights",
     },
     {

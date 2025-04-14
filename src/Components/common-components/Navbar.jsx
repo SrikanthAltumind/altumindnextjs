@@ -423,7 +423,7 @@ export const Navbardata = [
   },
   {
     menu: "Resources",
-    path: "https://blogs.altumindglobal.com/",
+    path: "https://resources.altumindglobal.com/",
     // children: [
     //   {
     //     innerMenu: "Blogs",
@@ -526,7 +526,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
-                  target={item.path === "https://blogs.altumindglobal.com/" ? "_blank" : ""}
+                  target={item.path === "https://resources.altumindglobal.com/" ? "_blank" : ""}
                   onClick={() => setCurrentItem(null)}
                   className="h-full flex items-center px-4 border-b-4 border-transparent text-sm font-medium hover:border-secondary"
                   to={item?.path}
