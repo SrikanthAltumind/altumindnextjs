@@ -184,7 +184,7 @@ const Footer = () => {
                   <Link to="/career">Career</Link>
                 </li>
                 <li>
-                  <a href="https://resources.altumindglobal.com/" target="_blank">Resources</a>
+                  <a href="https://resources.altumindglobal.com/" >Resources</a>
                 </li>
                 <li>
                   <Link to="/portfolio">Portfolio</Link>

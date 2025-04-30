@@ -1,5 +1,38 @@
+# Global access
 User-agent: *
-Disallow: 
+Allow: /
+Allow: /index.html
+Allow: /assets/
+Allow: /static/
+Allow: /js/
+Allow: /css/
+
 Disallow: /react/
-Disallow: /assets/
-Sitemap: https://altumindglobal.com/Sitemap.xml
+Disallow: /api/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /node_modules/
+
+# Facebook OG crawler
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter OG crawler
+User-agent: Twitterbot
+Allow: /
+
+# Googlebot optimization
+User-agent: Googlebot
+Allow: /assets/
+Allow: /*.js
+Allow: /*.css
+Allow: /*.json
+
+# Bingbot optimization
+User-agent: Bingbot
+Allow: /assets/
+Allow: /*.js
+Allow: /*.css
+
+# Sitemap
+Sitemap: https://altumindglobal.com/sitemap.xml

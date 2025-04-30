@@ -1,269 +1,271 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!--  Home  -->
 <url>
-	<loc>https://altumindglobal.com/</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/</loc>
+</url>
+
+<!--  About  -->
+<url>
+<loc>https://altumindglobal.com/about</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/contact</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/about/about-altumind/mission-and-vision</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/about/about-altumind/leadership</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/bfsi-fintech</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/about/about-altumind/alliance</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/digital-commerce</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/about/about-altumind/community-engagement</loc>
+</url>
+
+<!--  Services L1  -->
+<url>
+<loc>https://altumindglobal.com/services/experience-design-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/healthcare</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/digital-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/green-sustainability</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/ai-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/edtech</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/quality-assurance-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/industries/internet-saas</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/cloud-strategy-engineering-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio/sukhiba</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/digital-marketing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio/secpod</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/data-analytics-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio/united-finance</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/operations-managed-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio/enphase</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/services/digital-strategy-services</loc>
+</url>
+
+<!--  Services L2  -->
+<url>
+<loc>https://altumindglobal.com/experience-design-services/ui-design-services/</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights/blog/4/ultimate-guide-to-app-store-optimization-strategies-to-increase-downloads</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.4</priority>
+<loc>https://altumindglobal.com/experience-design-services/ux-design-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights/blog/1/breaking-down-5-ux-design-myths-plaguing-financial-services</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.4</priority>
+<loc>https://altumindglobal.com/experience-design-services/cx-design</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights/blog/2/bridging-the-gap-humanizing-big-data-through-design-thinking</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.4</priority>
+<loc>https://altumindglobal.com/digital-development-services/web-development-consulting</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights/blog/3/how-ai-is-transforming-design-a-new-era-of-creativity-and-innovation</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.4</priority>
+<loc>https://altumindglobal.com/digital-development-services/mobile-app-design-development</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/erp-integration-service</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/career</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/ecommerce-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/career/open-roles</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/ai-services/chatbot-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/about/about-altumind/community-engagement</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.6</priority>
+<loc>https://altumindglobal.com/ai-services/rpa-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/career/life-at-altumind</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/quality-assurance-services/functional-testing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/about/about-altumind/alliance</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.6</priority>
+<loc>https://altumindglobal.com/quality-assurance-services/performance-testing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/experience-design</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/quality-assurance-services/automation-testing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/ai-automation</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/quality-assurance-services/security-testing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/quality-assurance</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/quality-assurance-services/quality-assurance-consulting</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/digital-marketing</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/cloud-strategy-engineering-services/cloud-migration-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/technology-and-engineering</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/cloud-strategy-engineering-services/cloud-application-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/data-analytics</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/branding-design-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/managed-operations</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/optimization-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/digital-strategy-consulting</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/data-analytics-services/business-intelligence-consulting</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/cloud</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/data-analytics-services/digital-intelligence-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/about/about-altumind/mission-and-vision</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.6</priority>
+<loc>https://altumindglobal.com/data-analytics-services/marketing-intelligence-solutions</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/about/about-altumind/leadership</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.6</priority>
+<loc>https://altumindglobal.com/data-analytics-services/customer-360-analytics</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/about</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/data-analytics-services/sales-intelligence-solutions</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/privacy</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/operations-managed-services/product-development-and-innovation</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/operations-managed-services/website-management</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/terms</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/operations-managed-services/cloud-management-solutions</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/agiliti-hire-dedicated-developers</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/operations-managed-services/maintenance-support-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/custom-website-development</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-strategy-services/digital-experience</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/portfolio/</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/digital-strategy-services/digital-build</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/allowElement</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-strategy-services/digital-modernization</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/allowedElements</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-strategy-services/digital-audit</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/disallowedElements</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-strategy-services/product-incubation</loc>
+</url>
+
+<!--  Services L3  -->
+<url>
+<loc>https://altumindglobal.com/digital-development-services/web-development-consulting/responsive-web-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/remarkPlugins</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/web-development-consulting/cms-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/components</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/web-development-consulting/progressive-web-app-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/children</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/mobile-app-design-development/ios-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/urlTransform</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/mobile-app-design-development/android-application-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/testing</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-development-services/mobile-app-design-development/hybrid-app-development-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/services/it-services-consulting</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/b2b-content-marketing-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/wip</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/social-media-strategy-services</loc>
 </url>
 <url>
-	<loc>https://altumindglobal.com/insights/blogs</loc>
-	<lastmod>2024-12-24T14:41:19+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/performance-marketing-services</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/integrated-digital-marketing-services/marketing-automation-strategy</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/optimization-services/b2b-seo-services</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/optimization-services/app-store-optimization-services</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/optimization-services/orm-service</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/digital-marketing-services/optimization-services/cro-services</loc>
+</url>
+
+<!--  Industries  -->
+<url>
+<loc>https://altumindglobal.com/industries</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/bfsi-fintech</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/digital-commerce</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/healthcare</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/green-sustainability</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/edtech</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/industries/internet-saas</loc>
+</url>
+
+<!--  Portfolio  -->
+<url>
+<loc>https://altumindglobal.com/portfolio</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/portfolio/sukhiba</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/portfolio/secpod</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/portfolio/united-finance</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/portfolio/enphase</loc>
+</url>
+
+<!--  Insights  -->
+<url>
+<loc>https://resources.altumindglobal.com/</loc>
+</url>
+
+<!--  Career  -->
+<url>
+<loc>https://altumindglobal.com/career</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/career/open-roles</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/career/life-at-altumind</loc>
+</url>
+
+<!--  Contact & Legal  -->
+<url>
+<loc>https://altumindglobal.com/contact</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/privacy</loc>
+</url>
+<url>
+<loc>https://altumindglobal.com/terms</loc>
 </url>
 </urlset>

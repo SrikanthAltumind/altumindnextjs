@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import Turnstile from "react-turnstile";
 
 const NewsLetterTextfield = () => {
   const [subscribed, setSubscribed] = useState(false);
@@ -57,7 +58,35 @@ const NewsLetterTextfield = () => {
       });
   };
 
-  const onSubmit = (formData, { resetForm, setSubmitting, setFieldError }) => {
+
+const [token, setToken] = useState()
+const [captchaError, setCaptchaError] = useState(false)
+const validateCaptcha = async () => {
+  try {
+    if (token) {
+      console.log('TOKEN:', token)
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/cloudflare-captcha/verify`, {token})
+      console.log(response,'success captcha')
+      setCaptchaError(false)
+      console.log('token success')
+      return true;
+    } else {
+      console.log('TOKEN-Error', token)
+      setCaptchaError(true)
+      return false;
+    }
+  } catch (error) {
+    console.log('Something went wrong:', error)
+    setCaptchaError(true)
+    return false;
+  }
+};
+
+  const onSubmit = async (formData, { resetForm, setSubmitting, setFieldError }) => {
+    setCaptchaError(false)
+    if (!await validateCaptcha()){
+      return;
+    }
     const payload = {
       data: {
         email: formData.email.trim(),
@@ -159,6 +188,18 @@ const NewsLetterTextfield = () => {
           Thankyou for subscribing!
         </p>
       )}
+      {
+        captchaError &&
+        <p className="text-red-500">Oops!! something went wrong, please try again.</p>
+      }
+      <Turnstile
+        sitekey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+        size="flexible"
+        className="opacity-0 fixed right-0 bottom-0 pointer-events-none"
+        onSuccess={(token)=>setToken(token)}
+        onExpire={() => setToken(null)}
+        onError={() => setToken(null)}
+      />
     </form>
   );
 };

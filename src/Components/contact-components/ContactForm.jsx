@@ -4,11 +4,11 @@ import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 import Turnstile from "react-turnstile";
-// import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
+
+// // import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
 // import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-// import LoaderSpinner from "../common-components/LoaderSpinner";
+// // import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const initialFormData = {
   firstName: "",
@@ -301,7 +301,8 @@ const ContactForm = ({ selectedForm }) => {
 //   }
 // };
 
-  const validateCaptcha = async () => {
+const [token, setToken] = useState()
+const validateCaptcha = async () => {
   try {
     // If token is available, proceed with form submission
     if (token) {
@@ -324,26 +325,25 @@ const ContactForm = ({ selectedForm }) => {
   }
 };
 
-const [token, setToken] = useState()
-const formDataRef = useRef()
-const turnstileRef = useRef()
-
-const handleTurnstileSuccess = (token) => {
-  setToken(token);
-  console.log('CAPTCHA loaded', token)
-  if (formDataRef.current) {
-    const { formData, actions } = formDataRef.current;
-    onSubmit(formData, actions);
-  }
-};
+// const formDataRef = useRef()
+// const turnstileRef = useRef()
+// const handleTurnstileSuccess = (newToken) => {
+//   setToken(newToken);
+//   console.log('CAPTCHA loaded', newToken)
+//   if (formDataRef.current) {
+//     const { formData, actions } = formDataRef.current;
+//     onSubmit(formData, actions);
+//   }
+// };
 
   const onSubmit = async (formData, actions) => {
+    setCaptchaError(false)
     console.log('TOKEN::::::::::', token)
-    if(!token){
-      formDataRef.current = {formData, actions}
-      turnstileRef.current?.execute();
-      return;
-    }
+    // if(!token){
+    //   formDataRef.current = {formData, actions}
+    //   turnstileRef.current?.execute();
+    //   return;
+    // }
     try {
       // const presignedUrlResponse = await getPresignedurl(file);
       // if (!presignedUrlResponse) {
@@ -357,7 +357,6 @@ const handleTurnstileSuccess = (token) => {
       if (!await validateCaptcha()){
         return;
       }
-      const {formData, actions} = formData.current
       await sendData(formData);
       sendMail(formData);
       // await sendData(formData, presignedUrlResponse.url);
@@ -405,6 +404,7 @@ const handleTurnstileSuccess = (token) => {
     reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
   > */}
     <form
+    
       onSubmit={formik.handleSubmit}
       className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
     >
@@ -728,11 +728,10 @@ const handleTurnstileSuccess = (token) => {
       </div>
       {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
       <Turnstile
-        ref={turnstileRef}
         sitekey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
-        size="invisible"
-        className="opacity-30 fixed right-0 bottom-0 pointer-events-none"
-        onSuccess={handleTurnstileSuccess}
+        size="flexible"
+        className="opacity-0 fixed right-0 bottom-0 pointer-events-none"
+        onSuccess={(token)=>setToken(token)}
         onExpire={() => setToken(null)}
         onError={() => setToken(null)}
       />

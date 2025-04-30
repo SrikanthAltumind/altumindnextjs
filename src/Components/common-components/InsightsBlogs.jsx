@@ -116,7 +116,7 @@ const InsightsBlogs = () => {
           {window.location.pathname !== "/insights" &&
             
           
-            <a target='_blank' href="https://resources.altumindglobal.com/">
+            <a href="https://resources.altumindglobal.com/">
               <button className="group text-sm font-semibold font-raleway  flex items-center gap-1">
                 <span className="border-b border-tertiary dark:border-white dark:text-white">
                   View all Insights
