@@ -37,6 +37,13 @@ const Home = () => {
     <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     <meta property="og:url" content="https://altumindglobal.com" />
     <meta property="og:keywords" content="Digital Integration, Digital Transformation Companies, Digital Innovation" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AltumindGlobal" />
+    <meta name="twitter:title" content="Top Digital Innovation & Digital Integration Company | Altumind" />
+    <meta name="twitter:description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance." />
+    <meta name="twitter:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com" />
     <script type="application/ld+json">
