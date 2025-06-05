@@ -63,14 +63,16 @@ const EcommerceSolutions = () => {
             </div>
             <div className='text-sm flex flex-col md:flex-row gap-2 md:gap-10 justify-between'>
                 <Markdown>{card?.attributes?.descriptionFour}</Markdown>
-                <Link to={card?.attributes?.path}>
-                    <button className='group md:text-nowrap text-xs sm:text-sm text-secondary font-medium flex items-center gap-1'>
-                        <span className='group-hover:underline underline-offset-2'>{card?.attributes?.CTA}</span>
-                        <svg className="w-6 h-6 group-hover:translate-x-2 duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-                        </svg>
-                    </button>
-                </Link>   
+                {card?.attributes?.CTA &&
+                  <Link to={card?.attributes?.path}>
+                      <button className='group md:text-nowrap text-xs sm:text-sm text-secondary font-medium flex items-center gap-1'>
+                          <span className='group-hover:underline underline-offset-2'>{card?.attributes?.CTA}</span>
+                          <svg className="w-6 h-6 group-hover:translate-x-2 duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                          </svg>
+                      </button>
+                  </Link>   
+                }
             </div>
           </div>
           )}

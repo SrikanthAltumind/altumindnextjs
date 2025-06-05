@@ -184,7 +184,7 @@ const Footer = () => {
                   <Link to="/career">Career</Link>
                 </li>
                 <li>
-                  <a href="https://blogs.altumindglobal.com/" target="_blank">Resources</a>
+                  <a href="https://resources.altumindglobal.com/" >Resources</a>
                 </li>
                 <li>
                   <Link to="/portfolio">Portfolio</Link>
@@ -250,7 +250,7 @@ const Footer = () => {
         </div>
         <div className="w-[95%] px-5 md:px-0 flex md:flex-row text-center gap-y-10 md:text-left flex-col font-montserrat text-sm items-center border-t-[0.6px] border-[#8A8A8A] py-7 mx-auto">
           <p className="font-medium mx-auto lg:pl-20">
-            Copyright © {new Date().getFullYear()} Altumind All rights reserved.
+            Copyright © {new Date().getFullYear()} Altumind. All rights reserved.
           </p>
           <div className="flex gap-8">
             <Link to="/privacy">

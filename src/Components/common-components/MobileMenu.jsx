@@ -31,7 +31,7 @@ const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
           {Navbardata?.map((item) => (
             <li key={item.menu} className="flex items-center justify-between">
               <Link
-                target={item.path === "https://blogs.altumindglobal.com/" ? "_blank" : ""}
+                // target={item.path === "https://resources.altumindglobal.com/" ? "_blank" : ""}
                 to={item?.path}
                 className="p-1"
                 onClick={() => {

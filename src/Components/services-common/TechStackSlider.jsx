@@ -81,12 +81,12 @@ let uniqueQueryKey
         }
 
   else {
-    apiUrl = 'API_END_POINT' //replace api end point
+    apiUrl = '/api/service-global-stack-contents?populate=*'
     uniqueQueryKey = "common"
   }
  
-   const {data, isLoading, isError, error} = useFetchData(['techStackSlider', uniqueQueryKey], apiUrl, uniqueQueryKey !== "common")
-   const stackData = data?.data?.data || techStack
+   const {data, isLoading, isError, error} = useFetchData(['techStackSlider', uniqueQueryKey], apiUrl)
+   const stackData = data?.data?.data || []
 
   // if(location.pathname.startsWith("/services/quality-assurance/")){
   //   apiUrl = 'api/service-qat-automation-stack-contents?populate=*'

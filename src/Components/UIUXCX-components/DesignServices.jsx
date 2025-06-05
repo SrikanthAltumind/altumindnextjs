@@ -11,7 +11,7 @@ const DesignServices = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const {id} = useParams()
-
+    let [lgDevice, setLgDevice] = useState(true)
 
     let apiUrl;
     if(id === 'ui-design-services')
@@ -51,6 +51,18 @@ useEffect(()=> {
     fetchData()
 },[id])
 
+useEffect(()=>{
+  setLgDevice(window.innerWidth>=1024)
+  const handleScreenResize = ()=> {
+    setLgDevice(window.innerWidth>=1024)
+  }
+
+  window.addEventListener('resize', handleScreenResize)
+  return ()=> {
+    window.removeEventListener('resize', handleScreenResize)
+  }
+},[])
+
 if(loading){
     return <LoaderSpinner/>
 }
@@ -79,8 +91,9 @@ if (error) {
                 )} */}
                 {
                   [...Array(Math.ceil(data.length/2))].map((_,index)=> {
-                    const pair = data?.slice(index*2, (index*2)+2)
-                    return <ServiceCardsPair key={index} pair={pair} index={index}/>
+                    // const pair = data?.slice(index*2, (index*2)+2)
+                    const pair = lgDevice ? [data[index], data[index + Math.ceil(data.length/2)]] : data?.slice(index*2, (index*2)+2)
+                    return <ServiceCardsPair key={index} pair={pair} index={index} lgDevice={lgDevice}/>
                   })
                 }
             </div>
@@ -91,9 +104,9 @@ export default DesignServices
 
 
 
-const ServiceCardsPair = ({pair})=> {
+const ServiceCardsPair = ({pair, lgDevice})=> {
   const [isHovered, setIsHovered] = useState(null);
-  const lgDevice = window.innerWidth>=1024
+  // const lgDevice = window.innerWidth>=1024
 
   return (
     <div className='lg:h-[530px] p-1 flex max-lg:flex-wrap justify-center max-lg:gap-10 lg:flex-col lg:justify-between'>

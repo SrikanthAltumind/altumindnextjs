@@ -71,6 +71,7 @@ const DigitalAudit = lazy(() => import("./pages/DigitalAudit"));
 const IncubationOfNewProducts = lazy(() => import("./pages/IncubationOfNewProducts"));
 const DigitalBuild = lazy(() => import("./pages/DigitalBuild"));
 const FunctionalTesting = lazy(() => import("./pages/FunctionalTesting"));
+const EnterpriseSDLandingPage = lazy(() => import("./pages/EnterpriseSDLandingPage"))
 // extra
 import Testing from "./pages/Testing";
 import WIP from "./pages/WIP";
@@ -163,6 +164,8 @@ export const routes = [
   { path: "/digital-development-services/mobile-app-design-development/:pagename" , element:<L3Services/>},
   { path: "/digital-marketing-services/integrated-digital-marketing-services/:pagename" , element:<L3Services/>},
   { path: "/digital-marketing-services/optimization-services/:pagename" , element:<L3Services/>},
+  // enterprise software development services landing page
+  {path:"/enterprise-software-development-services", element:<EnterpriseSDLandingPage/>},
   // not allowed to index
   { path: "*", element: <Error404 /> }
 ];

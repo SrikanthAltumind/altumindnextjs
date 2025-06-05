@@ -160,6 +160,9 @@ const FAQ = () => {
         apiUrl = "/api/service-faqs/7?populate=*"
         else if(location.pathname === "/digital-marketing-services/optimization-services/cro-services")
         apiUrl = "/api/service-faqs/3?populate=*"
+      //custom-landing-page (enterprise development page)
+      else if (location.pathname === "/enterprise-software-development-services")
+        apiUrl = "/api/service-landing-faqs?populate=*"
 
       const {data, isLoading, isError, error} = useFetchData(['faq', location.pathname], apiUrl, !isERPIntegrationPage)
       const faqData = isERPIntegrationPage ? erpFAQData : (data?.data?.data || [])
@@ -203,7 +206,8 @@ const FAQ = () => {
         );
       }
   return (
-    <div className="bg-LightBlue py-16 font-raleway">
+    <div className={`${location.pathname === "/enterprise-software-development-services" ? "bg-white" :
+    'bg-LightBlue'} py-16 font-raleway`}>
     <div className="flex  md:flex-row flex-col gap-5 w-[90%] mx-auto">
         <div className="basis-[40%]">
           {

@@ -22,12 +22,14 @@ import { Helmet } from "react-helmet-async"
 const Services = () => {
   const exploreFurtherData = [
     {
+      id:1,
       title: "Dive into our latest insights and industry analyses.",
       hexvalue: "#02194A",
-      cta: "https://blogs.altumindglobal.com/",
+      cta: "https://resources.altumindglobal.com/",
       ctaText: "Explore Our Insights",
     },
     {
+      id:2,
       title:
         "Curious about our industry expertise? Let’s dive in and discover how we excel across various sectors!",
       hexvalue: "#DD5143",
@@ -35,6 +37,7 @@ const Services = () => {
       ctaText: "Explore Our Industries Expertise",
     },
     {
+      id:3,
       title:
         "Discover the journey behind Altumind. From our humble beginnings to our current position.",
       hexvalue: "#5489FC",

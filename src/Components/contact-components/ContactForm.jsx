@@ -4,9 +4,11 @@ import * as yup from "yup";
 import ThankyouNote from "../contact-components/ThankyouNote";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-// import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-// import LoaderSpinner from "../common-components/LoaderSpinner";
+import Turnstile from "react-turnstile";
+
+// // import { GoogleCaptchaContext } from "../../Layouts/AppLayout";
+// import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+// // import LoaderSpinner from "../common-components/LoaderSpinner";
 
 const initialFormData = {
   firstName: "",
@@ -271,24 +273,48 @@ const ContactForm = ({ selectedForm }) => {
       })
   };
 
-  // const {validateRecaptchaToken, resetRecaptcha} = useContext(GoogleCaptchaContext)
-  const {executeRecaptcha} = useGoogleReCaptcha()
-  const validateCaptcha = async () => {
+//   // const {validateRecaptchaToken, resetRecaptcha} = useContext(GoogleCaptchaContext)
+//   const {executeRecaptcha} = useGoogleReCaptcha()
+//   const validateCaptcha = async () => {
+//   try {
+//     const token = await executeRecaptcha(); 
+//     // If token is available, proceed with form submission
+//     if (token) {
+//       // Send form data with token to your server
+//       console.log('TOKEN:', token)
+//       const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/verify-recaptcha`, {token})
+//       console.log(response,'success captcha')
+//       setCaptchaError(false)
+//       // resetRecaptcha()
+//       console.log('token success')
+//       return true;
+//     } else {
+//       console.log('TOKEN-Error', token)
+//       console.log('Ref')
+//       setCaptchaError(true)
+//       return false;
+//     }
+//   } catch (error) {
+//     console.log('Something went wrong:', error)
+//     setCaptchaError(true)
+//     return false;
+//   }
+// };
+
+const [token, setToken] = useState()
+const validateCaptcha = async () => {
   try {
-    const token = await executeRecaptcha(); 
     // If token is available, proceed with form submission
     if (token) {
       // Send form data with token to your server
       console.log('TOKEN:', token)
-      const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/verify-recaptcha`, {token})
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/cloudflare-captcha/verify`, {token})
       console.log(response,'success captcha')
       setCaptchaError(false)
-      // resetRecaptcha()
       console.log('token success')
       return true;
     } else {
       console.log('TOKEN-Error', token)
-      console.log('Ref')
       setCaptchaError(true)
       return false;
     }
@@ -299,8 +325,25 @@ const ContactForm = ({ selectedForm }) => {
   }
 };
 
+// const formDataRef = useRef()
+// const turnstileRef = useRef()
+// const handleTurnstileSuccess = (newToken) => {
+//   setToken(newToken);
+//   console.log('CAPTCHA loaded', newToken)
+//   if (formDataRef.current) {
+//     const { formData, actions } = formDataRef.current;
+//     onSubmit(formData, actions);
+//   }
+// };
 
-  const onSubmit = async (formData, { resetForm }) => {
+  const onSubmit = async (formData, actions) => {
+    setCaptchaError(false)
+    console.log('TOKEN::::::::::', token)
+    // if(!token){
+    //   formDataRef.current = {formData, actions}
+    //   turnstileRef.current?.execute();
+    //   return;
+    // }
     try {
       // const presignedUrlResponse = await getPresignedurl(file);
       // if (!presignedUrlResponse) {
@@ -318,7 +361,7 @@ const ContactForm = ({ selectedForm }) => {
       sendMail(formData);
       // await sendData(formData, presignedUrlResponse.url);
       console.log("Resetting Form");
-      resetForm();
+      actions.resetForm();
       setShowPopup(true);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -361,6 +404,7 @@ const ContactForm = ({ selectedForm }) => {
     reCaptchaKey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
   > */}
     <form
+    
       onSubmit={formik.handleSubmit}
       className="space-y-12 py-10 px-5 lg:px-10 font-montserrat font-medium dark:text-white"
     >
@@ -683,6 +727,14 @@ const ContactForm = ({ selectedForm }) => {
         </button>
       </div>
       {showPopup && <ThankyouNote setShowPopup={setShowPopup} />}
+      <Turnstile
+        sitekey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+        size="flexible"
+        className="opacity-0 fixed right-0 bottom-0 pointer-events-none"
+        onSuccess={(token)=>setToken(token)}
+        onExpire={() => setToken(null)}
+        onError={() => setToken(null)}
+      />
     </form>
     {/* </GoogleReCaptchaProvider> : <LoaderSpinner/>
         } */}

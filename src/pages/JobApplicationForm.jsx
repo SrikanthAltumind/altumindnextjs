@@ -10,6 +10,7 @@ import ThankyouNote from "../Components/contact-components/ThankyouNote";
 // import { navigate } from "vite-plugin-ssr/client/router";
 import { useNavigate } from "react-router-dom";
 import { countryCodes } from "../Utils";
+import Turnstile from "react-turnstile";
 
 // const initialPhoneInput = {number:'', countryCode:'', validLength:false}
 const initialFormData = {
@@ -325,7 +326,34 @@ const JobApplicationForm = () => {
   //     })
   // };
 
+const [token, setToken] = useState()
+const [captchaError, setCaptchaError] = useState(false)
+const validateCaptcha = async () => {
+  try {
+    if (token) {
+      console.log('TOKEN:', token)
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URL}api/cloudflare-captcha/verify`, {token})
+      console.log(response,'success captcha')
+      setCaptchaError(false)
+      console.log('token success')
+      return true;
+    } else {
+      console.log('TOKEN-Error', token)
+      setCaptchaError(true)
+      return false;
+    }
+  } catch (error) {
+    console.log('Something went wrong:', error)
+    setCaptchaError(true)
+    return false;
+  }
+};
+
   const onSubmit = async (formData, { resetForm }) => {
+    setCaptchaError(false)
+    if (!await validateCaptcha()){
+      return;
+    }
     // const numberInput = phone.number.substring(phone.countryCode.length)
     // console.log('Numnber:', phone)
     // console.log('Actual Numnber:', numberInput)
@@ -496,7 +524,6 @@ resetForm();
             // setUserCountry(data.address.country_code.toLowerCase());
             data.address?.state && formik.setFieldValue('state',  data.address.state )
             formik.setFieldValue('country', data.address.country)
-            console.log('---COUNTRY DETECTED----', data);
           }
         } catch (error) {
           console.error("Error fetching location:", error);
@@ -504,8 +531,6 @@ resetForm();
       });
     }
   }, []);
-
-  console.log('Errors', formik.errors)
   
   return (
     <div className="w-[90%] mx-auto relative flex max-md:flex-col gap-6 lg:gap-10 py-10">
@@ -1253,10 +1278,11 @@ resetForm();
           </div>
       </div>
 </div>
-
-      <div>
-      </div>
       <p className="text-red-500">{errorMessage}</p>
+      {
+        captchaError &&
+        <p className="text-red-500">Oops!! something went wrong, please try again.</p>
+      }
       {/* Submit Button */}
       <div className="flex items-center justify-center md:justify-start">
         <button
@@ -1287,6 +1313,14 @@ resetForm();
         </button>
       </div>
       {showPopup && <ThankyouNote setShowPopup={closePopup} />}
+      <Turnstile
+        sitekey={import.meta.env.VITE_APP_CAPTCHA_SITE_KEY}
+        size="flexible"
+        className="opacity-0 fixed right-0 bottom-0 pointer-events-none"
+        onSuccess={(token)=>setToken(token)}
+        onExpire={() => setToken(null)}
+        onError={() => setToken(null)}
+      />
     </form>
     </div>
   );

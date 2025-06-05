@@ -116,8 +116,7 @@ const PlatformExpertise = () => {
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/ecommerce-marketing-solution")
       apiUrl = "/api/service-expertise-contents/2?populate=*"
         else if(location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services")
-          // Please replace with correct API once provided by backend
-          apiUrl = "/api/service-expertise-contents/2?populate=*"
+          apiUrl = "/api/service-expertise-contents/3?populate=*"
 
   // const fetchData = ()=> {
   //     axios.get(`${import.meta.env.VITE_APP_API_URL}${apiUrl}`)
@@ -139,9 +138,7 @@ const PlatformExpertise = () => {
 // },[])
 
 const {data, isLoading, isError, error} = useFetchData(location.pathname, apiUrl)
-// const expertiseData = data?.data?.data || {}
-const expertiseData = location.pathname === "/digital-marketing-services/integrated-digital-marketing-services/targeted-email-marketing-services"
-                       ? EmailMarketingTempData : data?.data?.data || {}
+const expertiseData = data?.data?.data || {}
 
 if(isLoading){
   return <LoaderSpinner/>

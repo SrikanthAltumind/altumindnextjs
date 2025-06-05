@@ -27,23 +27,29 @@ const Home = () => {
     <>
     <Helmet>
     {/* For SEO  */}
-    <title>Top Digital Innovation & Digital Integration Company | Altumind</title>
-    {/* <meta name="title" content="Top Digital Innovation & Digital Integration Company | Altumind"/> */}
-    <meta name="description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance."/>
-    <meta name="keywords" content="Digital Integration, Digital Transformation Companies"/>
-    {/* For Social Media */}
-    <meta property="og:title" content="Top Digital Innovation & Digital Integration Company | Altumind" />
-    <meta property="og:description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance." />
-    <meta property="og:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
-    <meta property="og:url" content="https://altumindglobal.com" />
-    <meta property="og:keywords" content="Digital Integration, Digital Transformation Companies, Digital Innovation" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@AltumindGlobal" />
-    <meta name="twitter:title" content="Top Digital Innovation & Digital Integration Company | Altumind" />
-    <meta name="twitter:description" content="Discover Altumind, a leader in Digital innovation and Digital integration, offering cutting-edge solutions to enhance business performance." />
-    <meta name="twitter:image" content="https://cdn.altumindglobal.com/OG_image_sample_1_da398efc3b.png" />
+    {/* <!-- HTML Meta Tags -->  */}
+    <title>Trusted Partner in Digital Innovation & Digital Integration</title> 
+    <meta name="description" content="Altumind empowers businesses with future-ready digital innovation & agile tech building smart, connected ecosystems for seamless digital transformation."/> 
+    
+    {/* <!-- OG Meta Tags -->  */}
+    <meta property="og:url" content="https://altumindglobal.com/"/>
+    <meta property="og:site_name" content="Altumindglobal.com" />
+    <meta property="og:type" content="website"/> 
+    <meta property="og:title" content="Trusted Partner in Digital Innovation & Digital Integration"/> 
+    <meta property="og:description" content="Altumind empowers businesses with future-ready digital innovation & agile tech building smart, connected ecosystems for seamless digital transformation."/> 
+    <meta property="og:image" content="https://cdn.altumindglobal.com/og_Image_2.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="627"/>
+    <meta property="og:image:type" content="image/jpg"/>
+ 
+    
+    {/* <!-- Twitter Meta Tags -->  */}
+    <meta name="twitter:card" content="summary_large_image"/> 
+    <meta property="twitter:domain" content="altumindglobal.com"/> 
+    <meta property="twitter:url" content="https://altumindglobal.com/"/>
+    <meta name="twitter:title" content="Trusted Partner in Digital Innovation & Digital Integration"/> 
+    <meta name="twitter:description" content="Altumind empowers businesses with future-ready digital innovation & agile tech building smart, connected ecosystems for seamless digital transformation."/> 
+    <meta name="twitter:image" content="https://cdn.altumindglobal.com/og_Image_2.jpg"/>
     {/* canonical */}
     <link rel="canonical" href="https://altumindglobal.com" />
     <script type="application/ld+json">

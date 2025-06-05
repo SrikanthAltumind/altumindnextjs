@@ -7,7 +7,7 @@ import LoaderSpinner from './LoaderSpinner'
 const InsightsBlogs = () => {
     // const [data, setData] = useState()
     //  const url = `${import.meta.env.VITE_APP_API_URL}api/blog-main-cards?populate=*&pagination[limit]=3`
-    const url ="https://blogs.altumindglobal.com/wp-json/custom/v1/all-posts"
+    const url ="https://resources.altumindglobal.com/wp-json/custom/v1/all-posts"
 
     const {data, isError, isLoading, error} = useQuery({
       queryKey: ["InsightsBlogs"],
@@ -116,7 +116,7 @@ const InsightsBlogs = () => {
           {window.location.pathname !== "/insights" &&
             
           
-            <a target='_blank' href="https://blogs.altumindglobal.com/">
+            <a href="https://resources.altumindglobal.com/">
               <button className="group text-sm font-semibold font-raleway  flex items-center gap-1">
                 <span className="border-b border-tertiary dark:border-white dark:text-white">
                   View all Insights
