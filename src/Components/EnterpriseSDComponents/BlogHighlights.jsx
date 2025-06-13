@@ -52,19 +52,19 @@ const BlogHighlights = () => {
         <div className="flex sm:flex-row max-md:flex-wrap flex-col justify-center items-center gap-8">
             {
             blogHighlightsData?.map((item) => (
-            <div key={item?.id} className="bg-white max-sm:w-[300px] w-[320px] h-[350px] overflow-hidden rounded-xl">
-                <div>
-                    <img src={item?.attributes?.image?.data?.attributes?.url} alt={item?.attributes?.image?.data?.attributes?.alternativeText} />
+            <div key={item?.id} className="bg-white max-sm:w-[300px] max-w-[320px] min-h-[350px] h-[350px]  overflow-hidden flex flex-col shadow-md rounded-xl">
+                <div >
+                    <img src={item?.attributes?.image?.data?.attributes?.url} alt={item?.attributes?.image?.data?.attributes?.alternativeText}  />
                 </div>
-                <div className="p-3 space-y-4 h-full bg-[#f6f6f6]">
-                    <div className="flex gap-3  text-xs">
+                <div className="h-full p-3 flex flex-col justify-between gap-3 bg-[#f6f6f6]">
+                    <div className="flex gap-3 flex-wrap  text-xs">
                         {
-                            item?.attributes?.tags?.map((tag) => (
-                                <p className="bg-white rounded-full px-2 py-1" key={tag}>{tag}</p>
+                            item?.attributes?.service_landing_tags?.data?.map((tag) => (
+                                <p className="bg-white rounded-full px-2 py-1" key={tag?.id}>{tag?.attributes?.tag}</p>
                             ))
                         }
                     </div>
-                    <p className="text-lg sm:text-xl">{item?.attributes?.title}</p>
+                    <p className="text-lg sm:text-xl line-clamp-3">{item?.attributes?.title}</p>
                     <div>
                     <a href={item?.attributes?.path} target="_blank">
                         <p className="text-red-500 flex font-medium sm:text-lg gap-1 items-center">Read more  

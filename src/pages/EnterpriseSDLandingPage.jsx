@@ -30,14 +30,14 @@ const EnterpriseSDLandingPage = () => {
         <EnterpriseBanner onPopupTrigger={handleOpenPopup} onScrollToClientSuccess={handleScrollToClientSuccess}/>
         <StatsSection/>
         <CoreEnterprise/>
-        <ScheduleSection/>
+        <ScheduleSection onPopupTrigger={handleOpenPopup}/>
         <EnterpriseWhyAltumind/>
           <div ref={clientSuccessRef}>
                <ClientSuccessStories/>
           </div>
         <FutureTechnologies/>
         <EmpowerTools/>
-        <BuildWithUs/>
+        <BuildWithUs onPopupTrigger={handleOpenPopup}/>
         <TailoredSolutions/>
         <BlogHighlights/>
         <StrategicPartnerships/>
