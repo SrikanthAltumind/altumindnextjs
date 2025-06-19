@@ -79,13 +79,13 @@ const CoreEnterprise = () => {
               (item, index) => (
                 <div
                   key={index}
-                  className="bg-white w-[100px] h-[100px] shadow-sm rounded-md p-2 flex flex-col justify-around items-center"
+                  className="bg-white w-[125px] h-[125px] shadow-sm rounded-md p-2 flex flex-col justify-around items-center"
                 >
                   <img
                     src={item?.attributes?.url}
                     alt={item?.attributes?.alternativeText}
                   />
-                  <p className="text-xs text-black font-semibold font-raleway">
+                  <p className="text-xs text-center text-black font-semibold font-raleway">
                     {item?.attributes?.alternativeText}
                   </p>
                 </div>

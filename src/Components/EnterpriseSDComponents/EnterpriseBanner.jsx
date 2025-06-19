@@ -26,9 +26,9 @@ const EnterpriseBanner = ({onScrollToClientSuccess, onPopupTrigger}) => {
     <div className="bg-[#1C1C1C] text-white py-10 space-y-14">
       <div className="flex-col gap-10 md:flex-row flex items-center">
         <div className="basis-[50%] lg:basis-[40%] space-y-3 lg:space-y-8 pl-8 lg:pl-16">
-          <p className="text-2xl lg:text-4xl font-bold max-md:max-w-[80%]">
+          <h1 className="text-2xl lg:text-4xl font-bold max-md:max-w-[80%]">
             {BannerData?.attributes?.title}
-          </p>
+          </h1>
           <p className="font-montserrat text-sm lg:text-base font-light capitalize max-w-[85%]">
             {BannerData?.attributes?.description}
           </p>

@@ -85,3 +85,21 @@ margin-left: -20px;
   list-style-type: disc;
   margin-left: 25px;
 }
+
+.trustpilot-widget {
+    text-align: left;
+    /* background-color: red!important; */
+    width: 220px;
+    padding: 0px;
+    font-size: 5px;
+}
+
+.tp-widget-wrapper{
+  background-color: blue;
+}
+
+
+.trustpilot-widget .button {
+  width: 10%;
+  margin: 0px;
+}

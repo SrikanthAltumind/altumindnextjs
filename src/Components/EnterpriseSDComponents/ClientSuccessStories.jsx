@@ -3,8 +3,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import useFetchData from "../../CustomHooks/useFetchData";
 import LoaderSpinner from "../common-components/LoaderSpinner";
+import { useState } from "react";
+import ViewCaseStudyPopup from "./ViewCaseStudyPopup";
 
 const ClientSuccessStories = () => {
+const [openedCaseStudy, setOpenedCaseStudy] = useState(null)
+
   const NextArrow = ({ onClick }) => (
     <div
       className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
@@ -68,6 +72,10 @@ const ClientSuccessStories = () => {
   );
   const caseStudyData = data?.data?.data || [];
 
+  const handleViewCaseStudy = data=> {
+      setOpenedCaseStudy(data)
+    }
+
   if (isLoading) {
     return <LoaderSpinner />;
   }
@@ -122,7 +130,10 @@ const ClientSuccessStories = () => {
                     </div>
                   </div>
                   <div className="flex justify-center sm:justify-start">
-                    <button className="border rounded-full px-[16px] lg:px-8 py-[6px] lg:py-3 mt-4 lg:mt-8 font-raleway text-[13px]">
+                    <button 
+                     onClick={()=> handleViewCaseStudy(slide)}
+                    disabled={!slide?.attributes?.file?.data?.attributes?.url}
+                    className="disabled:opacity-0 border rounded-full px-[16px] lg:px-8 py-[6px] lg:py-3 mt-4 lg:mt-8 font-raleway text-[13px]">
                       {slide?.attributes?.button}
                     </button>
                   </div>
@@ -142,6 +153,9 @@ const ClientSuccessStories = () => {
           ))}
         </Slider>
       </div>
+      {!!openedCaseStudy &&
+        <ViewCaseStudyPopup openedCaseStudy={openedCaseStudy} setOpenedCaseStudy={setOpenedCaseStudy}/>
+      }
     </div>
   );
 };

@@ -22,10 +22,10 @@ const StatsSection = () => {
   return (
     <>
       <div className="font-raleway max-sm:px-10 space-y-8 py-20">
-        <p className="sm:text-3xl text-xl  font-bold text-center max-w-[650px] mx-auto">
+        <h2 className="sm:text-3xl text-xl  font-bold text-center max-w-[650px] mx-auto">
           Enterprise Software Development Company Delivering Scalable Business
           Platforms
-        </p>
+        </h2>
         <div className="space-y-5 text-center max-w-[600px] mx-auto text-sm">
           <p>
             We specialize in enterprise software development services that

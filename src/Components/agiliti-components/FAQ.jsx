@@ -216,7 +216,7 @@ const FAQ = () => {
             <h2 className="custom-gradient-text md:ml-0 max-md:text-center max-w-[250px]">Frenquently Asked Questions</h2>
             <img src={ClipPathGroup} className="mx-auto md:ml-0 w-[350px]" alt="FAQ" />
             </div> :
-            <p className="custom-gradient-text md:ml-0">FAQ&apos;s</p>
+            <p className="custom-gradient-text md:ml-0 lg:text-6xl">FAQ&apos;s</p>
           }
         </div>
         <div className="basis-[60%]">

@@ -30,16 +30,36 @@ const CertifiedLogos = () => {
         }
     ]
   return (
-    <div className="px-24 py-8 flex md:flex-row flex-col gap-10 justify-between items-center bg-gradient-to-br from-[#000731] via-[#002EB9] to-[#09D7FE]">
-        <div className="flex flex-wrap gap-x-16 gap-y-10  items-center">
+    // <div className="py-12 flex md:flex-row flex-col gap-16 md:gap-24 justify-end items-center bg-gradient-to-r from-[#000731] via-[#002EB9] to-[#09D7FE]">
+    //     <div className="flex flex-wrap justify-center gap-12 md:gap-x-24 md:gap-y-10  items-center">
+    //        {
+    //         imgData?.map((item) => <img key={item?.id} src={item?.url} alt={item?.alt} className="w-[90px]"/>)
+    //        }
+    //     </div>
+    //     <div>
+    //        <img  src="https://cdn.altumindglobal.com/image_1124_b696b6a11c.svg" alt="top-developers"  className="w-[200px]"/>
+    //     </div>
+    // </div>
+
+     <div className="px-24 py-8 flex md:flex-row flex-col gap-10 justify-center items-center bg-gradient-to-r from-[#000731] via-[#002EB9] to-[#09D7FE]">
+        <div className="flex flex-wrap gap-x-16 gap-y-10 justify-center  items-center">
            {
             imgData?.map((item) => <img key={item?.id} src={item?.url} alt={item?.alt} className="w-[90px]"/>)
            }
-        </div>
-        <div>
            <img  src="https://cdn.altumindglobal.com/image_1124_b696b6a11c.svg" alt="top-developers"  className="w-[200px]"/>
         </div>
     </div>
+
+    // <div className="py-12 flex md:flex-row flex-col gap-24 justify-end items-center bg-gradient-to-r from-[#000731] via-[#002EB9] to-[#09D7FE]">
+    //     <div className="flex flex-wrap gap-x-24 gap-y-10  items-center">
+    //        {
+    //         imgData?.map((item) => <img key={item?.id} src={item?.url} alt={item?.alt} className="w-[90px]"/>)
+    //        }
+    //     </div>
+    //     <div>
+    //        <img  src="https://cdn.altumindglobal.com/image_1124_b696b6a11c.svg" alt="top-developers"  className="w-[200px]"/>
+    //     </div>
+    // </div>
   )
 }
 

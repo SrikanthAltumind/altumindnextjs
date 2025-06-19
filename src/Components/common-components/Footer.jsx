@@ -265,7 +265,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div> 
-                <div><Link to="/contact"><button className="bg-black flex gap-2 items-center text-white rounded-full px-5 py-2">Get in Touch<svg className="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <div className="w-fit"><Link to="/contact"><button className="bg-black flex gap-2 items-center text-white rounded-full px-5 py-2">Get in Touch<svg className="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
 </svg>
 </button></Link></div>
@@ -328,7 +328,6 @@ const Footer = () => {
               </ul>
             </div>
             </div>
-
            <div className="">
               <p className="text-lg font-semibold pb-2">Services</p>
               <ul className="space-y-3 dark:font-normal">
@@ -373,7 +372,39 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          
+            <div className="flex flex-wrap  items-center gap-y-3 lg:-mt-32 mx-auto">
+              <div className="flex items-center">
+                {/* DMCA */}
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=39797e4b-da92-4d41-a6a3-c8aa1f831ef1"
+                  title="DMCA.com Protection Status"
+                  className="dmca-badge h-10">
+                  <img className="h-10" src="https://images.dmca.com/Badges/dmca-badge-w150-2x1-02.png?ID=39797e4b-da92-4d41-a6a3-c8aa1f831ef1"
+                    alt="DMCA.com Protection Status" />
+                </a>
+                {/* Clutch */}
+                <div className="clutch-widget h-10 w-[190px] scale-75"
+                  data-url="https://widget.clutch.co"
+                  data-widget-type="16"
+                  data-height="auto"
+                  data-nofollow="false"
+                  data-expandifr="true"
+                  data-scale="100"
+                  data-clutchcompany-id="2500108">
+                </div>
+              </div>
+              {/* Trust Pilot */}
+              <div className="trustpilot-widget h-9 md:-ml-5"
+                data-locale="en-US"
+                data-template-id="56278e9abfbbba0bdcd568bc"
+                data-businessunit-id="67e64871d68b154e79a07cd6"
+                data-style-height="45px"
+                data-style-width="100%">
+                <a className="text-[10px]" href="https://www.trustpilot.com/review/altumindglobal.com" target="_blank" rel="noopener noreferrer">
+                  Trustpilot
+                </a>
+              </div>
+
+            </div>
         </div>
         <div className="w-[95%] px-5 md:px-0 flex md:flex-row text-center gap-y-10 md:text-left flex-col font-montserrat text-sm items-center border-t-[0.6px] border-[#8A8A8A] py-7 mx-auto">
           <p className="font-medium mx-auto lg:pl-20">
