@@ -1,19 +1,20 @@
 
 // import axios from "axios";
 // import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 import LoaderSpinner from "../common-components/LoaderSpinner";
 import useFetchData from "../../CustomHooks/useFetchData";
+import Link from "next/link";
 
 const Banner = () => {
   // const [data, setData] = useState([]);
   // const [loading, setLoading] = useState(true);
   // const [error, setError] = useState(null);
 
-  const location = useLocation();
+  const router = useRouter();
   let apiUrl;
 
-  if (location.pathname === "/career/life-at-altumind")
+  if (router.pathname === "/career/life-at-altumind")
     apiUrl = "api/life-at-banner?populate=*";
   else if (location.pathname === "/about/about-altumind/community-engagement")
     apiUrl = "api/community-management-banner?populate=*";
@@ -135,9 +136,9 @@ const Banner = () => {
       {bannerData?.title} 
       </h1>
       <p className='max-w-[420px] mx-0 text-sm md:text-base  text-black font-medium'> {bannerData?.description}</p>
-      {location.pathname === "/services" && (
+      {router.pathname === "/services" && (
         
-        <a href="/contact" aria-label="Go to contact page" className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
+        <Link href="/contact" aria-label="Go to contact page" className="group mt-8 w-fit underline decoration-1 underline-offset-2 font-raleway  text-secondary font-semibold flex justify-center items-center gap-1">
           Get Started
           <svg
             className="w-6 h-6 group-hover:translate-x-3 transition-all duration-300"
@@ -156,11 +157,11 @@ const Banner = () => {
               d="M19 12H5m14 0-4 4m4-4-4-4"
             />
           </svg>
-        </a>
+        </Link>
       
     )}
     {
-      location.pathname === "/agiliti-hire-dedicated-developers" && (
+      router.pathname === "/agiliti-hire-dedicated-developers" && (
         <button onClick={scrollToForm} className="w-fit text-lg font-raleway text-white bg-[#DD5143] font-semibold py-2 px-8 hover:scale-105 rounded-full">
           Expand Your Crew
         </button>
